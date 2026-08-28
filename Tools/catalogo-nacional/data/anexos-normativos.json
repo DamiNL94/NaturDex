@@ -11995,7 +11995,7 @@
         "ambito": "la ZEPA «Sierra de la Almenara, Moreras y Cabo Cope» y su zona de estudio, que el propio plan cifra en unos 510 km² repartidos en cuatro unidades —Almenara 415 km², Carrasquilla 94, Sierra de las Moreras 16 y Cabo Cope 1—. Las tablas dicen «presentes en la ZEPA» y «en la zona de estudio», nunca «en este espacio»",
         "exigeConstancia": true,
         "exigeConstanciaPorque": "El ámbito del plan es DIEZ veces mayor que cualquiera de los dos espacios que lo usan, y en el caso de Cabo Cope la desproporción es extrema: el propio plan le asigna 1 km² de los ~510 que inventaría. Sin `exigeConstancia`, el nivel 1 metería en el catálogo de un macizo costero de 1 km² toda la fauna y la flora de la Sierra de la Almenara, que es otra sierra a 20 km. Es exactamente lo que pasó con el PORN de 1995 cuando los Barrancos de Gebas heredaron el inventario de Sierra Espuña: 183 fichas con el acentor alpino y el treparriscos en unas cárcavas semiáridas. El propio plan da la medida por escrito, subunidad a subunidad, así que aquí no hay que estimarla.",
-        "nota": "DE DÓNDE SALE ESTE TEXTO, que importa para saber qué vale. El PDF oficial NO se ha podido descargar: el antibot de Radware de murcianatural.carm.es y del BORM sirve un CAPTCHA para toda la IP desde el 2026-08-28. El texto transcrito procede de una recopilación de legislación ambiental que publica el articulado y los bloques del plan íntegros, y por eso `boletin` dice que el número y la fecha no están comprobados: lo que se afirma es lo que se leyó. Cotejarlo contra el BORM cuando se pueda es trabajo de una sesión, no un rehacer. || QUÉ NO TRAE EL PLAN, y conviene saberlo antes de buscarlo: su §8.3.1 y §8.3.2 dicen literalmente que en la zona de estudio NO se ha citado ninguna especie de flora de los anexos de la Directiva Hábitats ni protegida por la legislación nacional. O sea que toda la flora catalogada de este plan es regional. || LA CATEGORÍA SOLO VA EN LA FLORA. La tabla de flora del §8.3.3 es la del Catálogo Regional y da una figura limpia (EN/VU/IE). Las cuatro de fauna del §7.3 cruzan a la vez cuatro regímenes distintos en columnas —Directiva, Libro Rojo, Catálogo Nacional, Ley 7/95—, así que asignarles UNA categoría exigiría elegir cuál, y eso no lo dice la norma: se dan de alta sin `categoria` y el estado legal de cada una lo pone EIDOS, como en el resto del catálogo. || UNA ENTRADA QUE EL PROPIO PLAN MARCA COMO NO CONFIRMADA: *Enneapogon persicus* lleva en la columna de amenazas «Es posible su existencia en el ámbito de la ZEPA pues existen poblaciones muy próximas, Lomo de Bas». Se transcribe porque está en la tabla, pero con `exigeConstancia` activo no entra sin que GBIF la corrobore dentro de los polígonos, que es justo lo que corresponde a una presencia que la fuente da por posible y no por comprobada. || ERRATAS DE LA FUENTE que el cotejo tendrá que resolver con `nombreCorregido`: la norma escribe «Mauremis leprosa» (*Mauremys*), «Cheirolopus mansanetianus» (*Cheirolophus*), «Osyris lanceolada» (*lanceolata*), «Miniopterus schreibersi» y «Myotis capacinii». El verbatim NO se toca: es la cita de la norma."
+        "nota": "DE DÓNDE SALE ESTE TEXTO, que importa para saber qué vale. El PDF oficial NO se ha podido descargar: el antibot de Radware de murcianatural.carm.es y del BORM sirve un CAPTCHA para toda la IP desde el 2026-08-28. El texto transcrito procede de una recopilación de legislación ambiental que publica el articulado y los bloques del plan íntegros, y por eso `boletin` dice que el número y la fecha no están comprobados: lo que se afirma es lo que se leyó. Cotejarlo contra el BORM cuando se pueda es trabajo de una sesión, no un rehacer. || QUÉ NO TRAE EL PLAN, y conviene saberlo antes de buscarlo: su §8.3.1 y §8.3.2 dicen literalmente que en la zona de estudio NO se ha citado ninguna especie de flora de los anexos de la Directiva Hábitats ni protegida por la legislación nacional. O sea que toda la flora catalogada de este plan es regional. || LA CATEGORÍA SOLO VA EN LA FLORA. La tabla de flora del §8.3.3 es la del Catálogo Regional y da una figura limpia (EN/VU/IE). Las cuatro de fauna del §7.3 cruzan a la vez cuatro regímenes distintos en columnas —Directiva, Libro Rojo, Catálogo Nacional, Ley 7/95—, así que asignarles UNA categoría exigiría elegir cuál, y eso no lo dice la norma: se dan de alta sin `categoria` y el estado legal de cada una lo pone EIDOS, como en el resto del catálogo. || UNA ENTRADA QUE EL PROPIO PLAN MARCA COMO NO CONFIRMADA: *Enneapogon persicus* lleva en la columna de amenazas «Es posible su existencia en el ámbito de la ZEPA pues existen poblaciones muy próximas, Lomo de Bas». Se transcribe porque está en la tabla, pero con `exigeConstancia` activo no entra sin que GBIF la corrobore dentro de los polígonos, que es justo lo que corresponde a una presencia que la fuente da por posible y no por comprobada. || ERRATAS DE LA FUENTE que el cotejo tendrá que resolver con `nombreCorregido`: la norma escribe «Mauremis leprosa» (*Mauremys*), «Cheirolopus mansanetianus» (*Cheirolophus*), «Osyris lanceolada» (*lanceolata*), «Miniopterus schreibersi» y «Myotis capacinii». El verbatim NO se toca: es la cita de la norma. || CORREGIDO EL 2026-08-28, al aplicar el anexo por primera vez. (a) Los rótulos de las cuatro tablas del §7.3 estaban desplazados respecto a sus filas: la tabla de anfibios terminaba con «Testudo graeca», «Mauremis leprosa» y «Chalcides bedriagai», y la de reptiles con «Hieraaetus fasciatus», «Phalacrocorax aristotelis», «Circaetus gallicus» y «Aquila chrysaetos». Un cormorán no es un reptil: la frontera de cada tabla se ha vuelto a colocar leyendo el propio contenido, no el documento —que sigue sin poder descargarse—, y los VERBATIM no se han tocado. Ningún `grupo` de este fichero decide nada en el pipeline (el alcance lo pone la clase que devuelve EIDOS), así que esto no cambia ninguna ficha: cambia que el fichero deje de afirmar algo falso. (b) Dos de las cinco erratas que esta misma nota enumeraba seguían SIN su `nombreCorregido` —«Miniopterus schreibersi» y «Cheirolopus mansanetianus»—, que es justo el fallo en verde que la nota describía: sin esa clave el cruce no casa y la especie sale con un motivo escrito al lado que es mentira."
       },
       "especies": [
         {
@@ -12020,39 +12020,39 @@
         },
         {
           "scientificName": "Testudo graeca",
-          "grupo": "Anfibios",
-          "apartado": "7.3 catalogación de la fauna (anfibios)"
+          "grupo": "Reptiles",
+          "apartado": "7.3 catalogación de la fauna (reptiles)"
         },
         {
           "scientificName": "Mauremis leprosa",
-          "grupo": "Anfibios",
-          "apartado": "7.3 catalogación de la fauna (anfibios)",
+          "grupo": "Reptiles",
+          "apartado": "7.3 catalogación de la fauna (reptiles)",
           "nombreCorregido": "Mauremys leprosa"
         },
         {
           "scientificName": "Chalcides bedriagai",
-          "grupo": "Anfibios",
-          "apartado": "7.3 catalogación de la fauna (anfibios)"
+          "grupo": "Reptiles",
+          "apartado": "7.3 catalogación de la fauna (reptiles)"
         },
         {
           "scientificName": "Hieraaetus fasciatus",
-          "grupo": "Reptiles",
-          "apartado": "7.3 catalogación de la fauna (reptiles)"
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
         },
         {
           "scientificName": "Phalacrocorax aristotelis",
-          "grupo": "Reptiles",
-          "apartado": "7.3 catalogación de la fauna (reptiles)"
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
         },
         {
           "scientificName": "Circaetus gallicus",
-          "grupo": "Reptiles",
-          "apartado": "7.3 catalogación de la fauna (reptiles)"
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
         },
         {
           "scientificName": "Aquila chrysaetos",
-          "grupo": "Reptiles",
-          "apartado": "7.3 catalogación de la fauna (reptiles)"
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
         },
         {
           "scientificName": "Falco peregrinus",
@@ -12106,8 +12106,8 @@
         },
         {
           "scientificName": "Rhinolophus ferrumequinum",
-          "grupo": "Aves",
-          "apartado": "7.3 catalogación de la fauna (aves)"
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)"
         },
         {
           "scientificName": "Rhinolophus hipposideros",
@@ -12117,7 +12117,8 @@
         {
           "scientificName": "Miniopterus schreibersi",
           "grupo": "Mamíferos",
-          "apartado": "7.3 catalogación de la fauna (mamíferos)"
+          "apartado": "7.3 catalogación de la fauna (mamíferos)",
+          "nombreCorregido": "Miniopterus schreibersii"
         },
         {
           "scientificName": "Myotis myotis",
@@ -12190,7 +12191,8 @@
           "scientificName": "Cheirolopus mansanetianus",
           "grupo": "Flora",
           "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
-          "apartado": "8.3.3 especies protegidas a escala regional"
+          "apartado": "8.3.3 especies protegidas a escala regional",
+          "nombreCorregido": "Cheirolophus mansanetianus"
         },
         {
           "scientificName": "Dianthus charidemi",
@@ -12471,7 +12473,7 @@
         "ambito": "la ZEPA «Sierra de la Almenara, Moreras y Cabo Cope» y su zona de estudio, que el propio plan cifra en unos 510 km² repartidos en cuatro unidades —Almenara 415 km², Carrasquilla 94, Sierra de las Moreras 16 y Cabo Cope 1—. Las tablas dicen «presentes en la ZEPA» y «en la zona de estudio», nunca «en este espacio»",
         "exigeConstancia": true,
         "exigeConstanciaPorque": "El ámbito del plan es DIEZ veces mayor que cualquiera de los dos espacios que lo usan, y en el caso de Cabo Cope la desproporción es extrema: el propio plan le asigna 1 km² de los ~510 que inventaría. Sin `exigeConstancia`, el nivel 1 metería en el catálogo de un macizo costero de 1 km² toda la fauna y la flora de la Sierra de la Almenara, que es otra sierra a 20 km. Es exactamente lo que pasó con el PORN de 1995 cuando los Barrancos de Gebas heredaron el inventario de Sierra Espuña: 183 fichas con el acentor alpino y el treparriscos en unas cárcavas semiáridas. El propio plan da la medida por escrito, subunidad a subunidad, así que aquí no hay que estimarla.",
-        "nota": "DE DÓNDE SALE ESTE TEXTO, que importa para saber qué vale. El PDF oficial NO se ha podido descargar: el antibot de Radware de murcianatural.carm.es y del BORM sirve un CAPTCHA para toda la IP desde el 2026-08-28. El texto transcrito procede de una recopilación de legislación ambiental que publica el articulado y los bloques del plan íntegros, y por eso `boletin` dice que el número y la fecha no están comprobados: lo que se afirma es lo que se leyó. Cotejarlo contra el BORM cuando se pueda es trabajo de una sesión, no un rehacer. || QUÉ NO TRAE EL PLAN, y conviene saberlo antes de buscarlo: su §8.3.1 y §8.3.2 dicen literalmente que en la zona de estudio NO se ha citado ninguna especie de flora de los anexos de la Directiva Hábitats ni protegida por la legislación nacional. O sea que toda la flora catalogada de este plan es regional. || LA CATEGORÍA SOLO VA EN LA FLORA. La tabla de flora del §8.3.3 es la del Catálogo Regional y da una figura limpia (EN/VU/IE). Las cuatro de fauna del §7.3 cruzan a la vez cuatro regímenes distintos en columnas —Directiva, Libro Rojo, Catálogo Nacional, Ley 7/95—, así que asignarles UNA categoría exigiría elegir cuál, y eso no lo dice la norma: se dan de alta sin `categoria` y el estado legal de cada una lo pone EIDOS, como en el resto del catálogo. || UNA ENTRADA QUE EL PROPIO PLAN MARCA COMO NO CONFIRMADA: *Enneapogon persicus* lleva en la columna de amenazas «Es posible su existencia en el ámbito de la ZEPA pues existen poblaciones muy próximas, Lomo de Bas». Se transcribe porque está en la tabla, pero con `exigeConstancia` activo no entra sin que GBIF la corrobore dentro de los polígonos, que es justo lo que corresponde a una presencia que la fuente da por posible y no por comprobada. || ERRATAS DE LA FUENTE que el cotejo tendrá que resolver con `nombreCorregido`: la norma escribe «Mauremis leprosa» (*Mauremys*), «Cheirolopus mansanetianus» (*Cheirolophus*), «Osyris lanceolada» (*lanceolata*), «Miniopterus schreibersi» y «Myotis capacinii». El verbatim NO se toca: es la cita de la norma."
+        "nota": "DE DÓNDE SALE ESTE TEXTO, que importa para saber qué vale. El PDF oficial NO se ha podido descargar: el antibot de Radware de murcianatural.carm.es y del BORM sirve un CAPTCHA para toda la IP desde el 2026-08-28. El texto transcrito procede de una recopilación de legislación ambiental que publica el articulado y los bloques del plan íntegros, y por eso `boletin` dice que el número y la fecha no están comprobados: lo que se afirma es lo que se leyó. Cotejarlo contra el BORM cuando se pueda es trabajo de una sesión, no un rehacer. || QUÉ NO TRAE EL PLAN, y conviene saberlo antes de buscarlo: su §8.3.1 y §8.3.2 dicen literalmente que en la zona de estudio NO se ha citado ninguna especie de flora de los anexos de la Directiva Hábitats ni protegida por la legislación nacional. O sea que toda la flora catalogada de este plan es regional. || LA CATEGORÍA SOLO VA EN LA FLORA. La tabla de flora del §8.3.3 es la del Catálogo Regional y da una figura limpia (EN/VU/IE). Las cuatro de fauna del §7.3 cruzan a la vez cuatro regímenes distintos en columnas —Directiva, Libro Rojo, Catálogo Nacional, Ley 7/95—, así que asignarles UNA categoría exigiría elegir cuál, y eso no lo dice la norma: se dan de alta sin `categoria` y el estado legal de cada una lo pone EIDOS, como en el resto del catálogo. || UNA ENTRADA QUE EL PROPIO PLAN MARCA COMO NO CONFIRMADA: *Enneapogon persicus* lleva en la columna de amenazas «Es posible su existencia en el ámbito de la ZEPA pues existen poblaciones muy próximas, Lomo de Bas». Se transcribe porque está en la tabla, pero con `exigeConstancia` activo no entra sin que GBIF la corrobore dentro de los polígonos, que es justo lo que corresponde a una presencia que la fuente da por posible y no por comprobada. || ERRATAS DE LA FUENTE que el cotejo tendrá que resolver con `nombreCorregido`: la norma escribe «Mauremis leprosa» (*Mauremys*), «Cheirolopus mansanetianus» (*Cheirolophus*), «Osyris lanceolada» (*lanceolata*), «Miniopterus schreibersi» y «Myotis capacinii». El verbatim NO se toca: es la cita de la norma. || CORREGIDO EL 2026-08-28, al aplicar el anexo por primera vez. (a) Los rótulos de las cuatro tablas del §7.3 estaban desplazados respecto a sus filas: la tabla de anfibios terminaba con «Testudo graeca», «Mauremis leprosa» y «Chalcides bedriagai», y la de reptiles con «Hieraaetus fasciatus», «Phalacrocorax aristotelis», «Circaetus gallicus» y «Aquila chrysaetos». Un cormorán no es un reptil: la frontera de cada tabla se ha vuelto a colocar leyendo el propio contenido, no el documento —que sigue sin poder descargarse—, y los VERBATIM no se han tocado. Ningún `grupo` de este fichero decide nada en el pipeline (el alcance lo pone la clase que devuelve EIDOS), así que esto no cambia ninguna ficha: cambia que el fichero deje de afirmar algo falso. (b) Dos de las cinco erratas que esta misma nota enumeraba seguían SIN su `nombreCorregido` —«Miniopterus schreibersi» y «Cheirolopus mansanetianus»—, que es justo el fallo en verde que la nota describía: sin esa clave el cruce no casa y la especie sale con un motivo escrito al lado que es mentira."
       },
       "especies": [
         {
@@ -12496,39 +12498,39 @@
         },
         {
           "scientificName": "Testudo graeca",
-          "grupo": "Anfibios",
-          "apartado": "7.3 catalogación de la fauna (anfibios)"
+          "grupo": "Reptiles",
+          "apartado": "7.3 catalogación de la fauna (reptiles)"
         },
         {
           "scientificName": "Mauremis leprosa",
-          "grupo": "Anfibios",
-          "apartado": "7.3 catalogación de la fauna (anfibios)",
+          "grupo": "Reptiles",
+          "apartado": "7.3 catalogación de la fauna (reptiles)",
           "nombreCorregido": "Mauremys leprosa"
         },
         {
           "scientificName": "Chalcides bedriagai",
-          "grupo": "Anfibios",
-          "apartado": "7.3 catalogación de la fauna (anfibios)"
+          "grupo": "Reptiles",
+          "apartado": "7.3 catalogación de la fauna (reptiles)"
         },
         {
           "scientificName": "Hieraaetus fasciatus",
-          "grupo": "Reptiles",
-          "apartado": "7.3 catalogación de la fauna (reptiles)"
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
         },
         {
           "scientificName": "Phalacrocorax aristotelis",
-          "grupo": "Reptiles",
-          "apartado": "7.3 catalogación de la fauna (reptiles)"
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
         },
         {
           "scientificName": "Circaetus gallicus",
-          "grupo": "Reptiles",
-          "apartado": "7.3 catalogación de la fauna (reptiles)"
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
         },
         {
           "scientificName": "Aquila chrysaetos",
-          "grupo": "Reptiles",
-          "apartado": "7.3 catalogación de la fauna (reptiles)"
+          "grupo": "Aves",
+          "apartado": "7.3 catalogación de la fauna (aves)"
         },
         {
           "scientificName": "Falco peregrinus",
@@ -12582,8 +12584,8 @@
         },
         {
           "scientificName": "Rhinolophus ferrumequinum",
-          "grupo": "Aves",
-          "apartado": "7.3 catalogación de la fauna (aves)"
+          "grupo": "Mamíferos",
+          "apartado": "7.3 catalogación de la fauna (mamíferos)"
         },
         {
           "scientificName": "Rhinolophus hipposideros",
@@ -12593,7 +12595,8 @@
         {
           "scientificName": "Miniopterus schreibersi",
           "grupo": "Mamíferos",
-          "apartado": "7.3 catalogación de la fauna (mamíferos)"
+          "apartado": "7.3 catalogación de la fauna (mamíferos)",
+          "nombreCorregido": "Miniopterus schreibersii"
         },
         {
           "scientificName": "Myotis myotis",
@@ -12666,7 +12669,8 @@
           "scientificName": "Cheirolopus mansanetianus",
           "grupo": "Flora",
           "categoria": "Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003)",
-          "apartado": "8.3.3 especies protegidas a escala regional"
+          "apartado": "8.3.3 especies protegidas a escala regional",
+          "nombreCorregido": "Cheirolophus mansanetianus"
         },
         {
           "scientificName": "Dianthus charidemi",

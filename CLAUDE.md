@@ -68,7 +68,7 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
    deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).
 
-## 2. Veinte cosas que fallan EN VERDE
+## 2. Veintidós cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
@@ -113,7 +113,31 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   al otro, así que elegir uno tira dato en las dos direcciones y las dos salidas parecen completas.
   Por eso `atlas-hic-especies.js` admite **varios textos** y `--fusiona`: el Atlas se usa **solo en
   positivo**, y retirar un enlace porque este parser no lo ha leído es borrar un dato por una
-  limitación de herramienta.
+  limitación de herramienta. **Y `fuentes/atlas.txt` NO es reproducible, aunque este mismo
+  repositorio lo diga en tres sitios** (es el motivo por el que no se versiona): el texto de poppler
+  con el que se hizo Sierra de las Moreras el 2026-08-22 daba **631** especies características para
+  sus HIC y los dos que hoy quedan en `fuentes/` dan **494 entre los dos** — y aquí no hay poppler,
+  el `pdftotext` disponible es el de Xpdf. Regenerar leyendo un solo texto le quitaba **seis fichas**
+  con el motivo «solo GBIF: ninguna fuente documental la respalda» escrito al lado, que es mentira.
+  Desde el 2026-08-28 (b) `build-species-seleccion.js` lee también varios textos **y el índice
+  versionado del espacio** (`out/<slug>-hic-especies.json`), que es lo único del Atlas que sí está en
+  el repositorio; suma y no resta. Deuda nº 42.
+- **Un `Set` no se aplana con `.flat()`, y el puente del Atlas llevaba tres días sin tender ni uno.**
+  `porHic` es un `Map<código, Set<nombre>>` y `[...porHic.values()].flat()` devuelve la lista de
+  `Set`, no de nombres: a EIDOS se le preguntaba **una sola vez, por el literal `[object Set]`**, se
+  cacheaba su `null` y las demás se saltaban. La deuda nº 26 tenía la herramienta escrita desde el
+  2026-08-25 y estaba pagada a cero. Nada fallaba y nada podía verlo: el número de fichas aprobadas
+  no cambia por esto, solo el nivel de unas pocas. Arreglado, son **51 recombinaciones**. La lección
+  general: **una fuente que se consulta con la clave equivocada responde, y responde que no.**
+- **Un campo universal que el catálogo no trae se OMITE; escribirlo `null` deja `validate` en rojo en
+  la siguiente regeneración.** `build-species-n2.js` copiaba `u[campo] === undefined ? null : …`, y
+  con `iucnSpain` —que llegó el 2026-08-27, con los quince espacios ya escritos sin él— eso son 21
+  errores nada más regenerar un espacio: la coherencia entre parques compara con `JSON.stringify`, y
+  ahí `null` y ausente son distintos. **No lo arregla `species:apply`**, que salta a propósito los
+  campos que el catálogo no tiene; y el `species:extract` que el runbook manda pasar detrás **copia
+  esos `null` AL catálogo universal**, desde donde se repartirían a los dieciséis espacios. Es la
+  misma regla que ya tenía escrita `lista-roja-espana.js`: lo que la fuente no trae se queda **sin
+  campo**, nunca con un «No evaluada».
 - **Un `park.json` reescrito y un manifiesto sin subir de versión.** El manifiesto es lo que decide
   si un dispositivo con el espacio guardado sin conexión vuelve a descargarlo, así que una
   herramienta que escribe fichas y no toca `version` deja al usuario que ya lo tenía guardado con el

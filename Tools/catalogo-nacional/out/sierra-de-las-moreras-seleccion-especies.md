@@ -1,13 +1,19 @@
 # sierra-de-las-moreras · selección de especies
 
-Generada el 2026-08-22. **64 aprobadas** (34 aves), 62 ya fichadas en otro espacio y 2 nuevas. 266 excluidas.
+Generada el 2026-08-28. **66 aprobadas** (35 aves), 64 ya fichadas en otro espacio y 2 nuevas. 264 excluidas.
 
-Atlas 2005 consultado: 631 especies características para los HIC de este espacio.
+Atlas 2005 consultado: 529 especies características para los HIC de este espacio, 37 de ellas por alias de recombinación. La lectura es la UNIÓN de todas las fuentes y **nunca resta**: que un extractor de PDF no lea un nombre no es el Atlas negándolo.
+
+- `Tools\catalogo-nacional\fuentes\atlas-layout.txt` — texto del PDF, 344 bloques; aporta 424.
+- `Tools\catalogo-nacional\fuentes\atlas-nolayout.txt` — texto del PDF, 344 bloques; aporta 123.
+- `Tools\catalogo-nacional\out\sierra-de-las-moreras-hic-especies.json` — índice versionado, 13 enlaces; **aporta 7** que los textos no traen.
 
 
 ## Anexo normativo del espacio
 
-**NO consultado.** Este espacio no tiene entrada en `data/anexos-normativos.json`. No es que carezca de norma con anexo de especies: es que nadie la ha leído todavía, y hasta que se lea ninguna especie de este espacio tiene la evidencia más fuerte de las cuatro.
+Fuente: **Decreto n.º 299/2010, de 26 de noviembre, por el que se aprueba el Plan de gestión y conservación de la Zona de Especial Protección para las Aves (ZEPA) de Almenara, Moreras y Cabo Cope**, §7.3 «Catalogación de la fauna silvestre» —cuatro tablas, una por grupo: anfibios, reptiles, aves y mamíferos— y §8.3.3 «Especies protegidas a escala regional», que es la tabla del Catálogo Regional de Flora Silvestre Protegida (Decreto n.º 50/2003) con su figura. NO se transcriben §8.3.4 (orquídeas CITES, citadas en prosa) ni §8.3.5 (árboles monumentales, que son ejemplares concretos y no un inventario de especies del espacio). · BORM, diciembre de 2010. El número y la fecha exactos NO se han comprobado: el texto se leyó de una recopilación de legislación ambiental, no del boletín (ver `nota`) · consultado el 2026-08-28.
+
+Enumera **81 especies**; GBIF confirma **23** dentro de los polígonos de hábitat. Esas llevan evidencia `anexo_normativo` y conservan su plaza aunque tengan pocos registros.
 
 
 ## Lista oficial del sitio Red Natura 2000
@@ -47,6 +53,71 @@ El sitio las declara y el barrido no las ha encontrado dentro de ningún polígo
 | *Testudo graeca* | Reptiles | 3.3 | ES0000261 | presente |
 | *Testudo graeca* | Reptiles | 3.2 | ES6200011 | permanente, presente |
 
+### Enumeradas por la norma y sin constancia en GBIF
+
+La norma del espacio dice que están aquí; el barrido de GBIF no las ha encontrado dentro de ningún polígono de hábitat. **Se aprueban igual**: son nivel 1 y la norma es la fuente más fuerte que hay. Se listan aquí porque siguen siendo el hueco a contrastar en campo —un inventario de hace veinte años puede haber envejecido— y la lista más útil que produce esta herramienta para decidir dónde mirar.
+
+| Especie | Categoría en la norma | Nota |
+|---|---|---|
+| *Bufo bufo* | — | — |
+| *Bufo calamita* | — | — |
+| *Pleurodeles waltl* | — | — |
+| *Pelodytes punctatus* | — | — |
+| *Testudo graeca* | — | — |
+| *Mauremis leprosa* | — | — |
+| *Chalcides bedriagai* | — | — |
+| *Falco peregrinus* | — | — |
+| *Coracias garrulus* | — | — |
+| *Hieraaetus pennatus* | — | — |
+| *Rhinolophus ferrumequinum* | — | — |
+| *Rhinolophus hipposideros* | — | — |
+| *Miniopterus schreibersi* | — | — |
+| *Myotis myotis* | — | — |
+| *Myotis capacinii* | — | — |
+| *Atelerix algirus* | — | — |
+| *Genetta genetta* | — | — |
+| *Meles meles* | — | — |
+| *Martes foina* | — | — |
+| *Felis sylvestris* | — | — |
+| *Enneapogon persicus* | En Peligro de Extinción (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Allium melananthum* | Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Caralluma europaea* | Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Centaurea saxicola* | Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Chaenorhinum grandiflorum subsp. Carthaginense* | Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Cheirolopus mansanetianus* | Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Dianthus charidemi* | Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Sideritis lasiantha* | Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Ziziphus lotus* | Vulnerable (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Achillea santolinoides* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Anabasis hispanica* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Celtis australis* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Cheilanthes maderensis* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Cistus ladanifer subsp. ladanifer* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Clematis cirrosa* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Coriaria myrtifolia* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Erodium sanguis-christi* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Juniperus oxycedrus subsp. Oxycedrus* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Juniperus phoenicea subsp. Phoenicea* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Limonium cossonianum* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Lycocarpus fugax* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Myrtus communis* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Notoceras bicorne* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Ononis speciosa* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Osyris lanceolada* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Phillyrea angustifolia* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Phlomis purpurea* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Plantago notata* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Populus alba* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Populus nigra* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Quercus rotundifolia* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Rhamnus alaternus* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Salsola webbii* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Sanguisorba ancistroides* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Sarcocapnos enneaphylla subsp. Saetabensis* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Serratula mucronata* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Tamarix africana* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+| *Tamarix canariensis* | De interés especial (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia, Decreto n.º 50/2003) | — |
+
 ## Rareza
 
 Tramo 1–5 derivado **solo** de la categoría legal vigente; no interviene ninguna señal de abundancia. `rarityScore` usa únicamente el ámbito **estatal**, que es el que puede vivir en el catálogo universal. `rarityLocal` toma la categoría más grave de los dos ámbitos y es **local a este espacio**, porque el catálogo autonómico es territorial. Las de tramo ≥ 4 son las candidatas a destacadas: mírese la diferencia entre las dos columnas antes de elegir cuál gobierna las destacadas.
@@ -55,9 +126,9 @@ Tramo 1–5 derivado **solo** de la categoría legal vigente; no interviene ning
 |---:|---|---:|---:|
 | 5 | En peligro de extinción · Extinguida | 0 | 1 |
 | 4 | Vulnerable · Sensible a la alteración de su hábitat | 8 | 12 |
-| 3 | De interés especial | 0 | 13 |
+| 3 | De interés especial | 0 | 14 |
 | 2 | En régimen de protección especial (LESRPE) | 28 | 22 |
-| 1 | Sin figura de protección | 28 | 16 |
+| 1 | Sin figura de protección | 30 | 17 |
 | **≥ 4** | **candidatas a destacadas** | **8** | **13** |
 
 ## Figuras legales que no cuentan como protección
@@ -78,70 +149,72 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 
 | Especie | Clase | Occ. | Háb. | Rareza | Evidencia | Ya fichada en |
 |---|---|---:|---:|---:|---|---|
-| *Oenanthe leucura* | Aves | 44 | 8 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabezo-gordo |
-| *Galerida theklae* | Aves | 36 | 8 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabezo-gordo |
-| *Galerida cristata* | Aves | 19 | 5 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
-| *Aquila chrysaetos* | Aves | 18 | 8 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
-| *Curruca undata* | Aves | 17 | 8 | 1 | observada_gbif, lista_oficial_sitio | cabezo-gordo |
-| *Falco tinnunculus* | Aves | 14 | 5 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
-| *Saxicola rubicola* | Aves | 14 | 5 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
+| *Oenanthe leucura* | Aves | 44 | 8 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | barrancos-de-gebas |
+| *Galerida theklae* | Aves | 36 | 8 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | barrancos-de-gebas |
+| *Galerida cristata* | Aves | 19 | 5 | 2 | observada_gbif, protegida, lista_oficial_sitio | barrancos-de-gebas |
+| *Aquila chrysaetos* | Aves | 18 | 8 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | barrancos-de-gebas |
+| *Curruca undata* | Aves | 17 | 8 | 1 | observada_gbif, anexo_normativo, lista_oficial_sitio | barrancos-de-gebas |
+| *Falco tinnunculus* | Aves | 14 | 5 | 2 | observada_gbif, protegida, lista_oficial_sitio | barrancos-de-gebas |
+| *Saxicola rubicola* | Aves | 14 | 5 | 2 | observada_gbif, protegida, lista_oficial_sitio | barrancos-de-gebas |
 | *Streptopelia turtur* | Aves | 9 | 5 | 1 | observada_gbif, lista_oficial_sitio | cabo-cope-puntas-calnegre |
-| *Aquila fasciata* | Aves | 8 | 5 | 4 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
-| *Teucrium lanigerum* | Magnoliopsida | 7 | 8 | 1 | observada_gbif, protegida | cabo-cope-puntas-calnegre |
-| *Limonium insigne* | Magnoliopsida | 7 | 6 | 1 | observada_gbif, caracteristica, protegida | cabo-cope-puntas-calnegre |
-| *Burhinus oedicnemus* | Aves | 6 | 5 | 1 | observada_gbif, lista_oficial_sitio | cabezo-gordo |
-| *Pyrrhocorax pyrrhocorax* | Aves | 5 | 5 | 1 | observada_gbif, lista_oficial_sitio | cabo-cope-puntas-calnegre |
+| *Aquila fasciata* | Aves | 8 | 5 | 4 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | cabo-cope-puntas-calnegre |
+| *Teucrium lanigerum* | Magnoliopsida | 7 | 8 | 1 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
+| *Limonium insigne* | Magnoliopsida | 7 | 6 | 1 | observada_gbif, caracteristica, protegida, anexo_normativo | barrancos-de-gebas |
+| *Burhinus oedicnemus* | Aves | 6 | 5 | 1 | observada_gbif, anexo_normativo, lista_oficial_sitio | barrancos-de-gebas |
+| *Pyrrhocorax pyrrhocorax* | Aves | 5 | 5 | 1 | observada_gbif, anexo_normativo, lista_oficial_sitio | barrancos-de-gebas |
 | *Thalasseus sandvicensis* | Aves | 5 | 3 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
-| *Chamaerops humilis* | Liliopsida | 5 | 5 | 1 | observada_gbif, protegida | cabezo-gordo |
+| *Chamaerops humilis* | Liliopsida | 5 | 5 | 1 | observada_gbif, protegida, anexo_normativo | cabezo-gordo |
 | *Larus audouinii* | Aves | 5 | 6 | 4 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
-| *Lygeum spartum* | Liliopsida | 5 | 7 | 1 | observada_gbif, caracteristica | cabo-cope-puntas-calnegre |
-| *Gulosus aristotelis* | Aves | 4 | 3 | 1 | observada_gbif, lista_oficial_sitio | cabo-cope-puntas-calnegre |
+| *Lygeum spartum* | Liliopsida | 5 | 7 | 1 | observada_gbif, caracteristica | barrancos-de-gebas |
+| *Gulosus aristotelis* | Aves | 4 | 3 | 1 | observada_gbif, anexo_normativo, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Withania frutescens* | Magnoliopsida | 4 | 5 | 1 | observada_gbif, caracteristica | cabo-cope-puntas-calnegre |
 | *Acanthodactylus erythrurus* | Squamata | 4 | 6 | 2 | observada_gbif, protegida | cabo-cope-puntas-calnegre |
-| *Bubo bubo* | Aves | 3 | 3 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabezo-gordo |
-| *Upupa epops* | Aves | 3 | 3 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabezo-gordo |
+| *Bubo bubo* | Aves | 3 | 3 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | barrancos-de-gebas |
+| *Upupa epops* | Aves | 3 | 3 | 2 | observada_gbif, protegida, lista_oficial_sitio | barrancos-de-gebas |
 | *Bucanetes githagineus* | Aves | 3 | 4 | 1 | observada_gbif, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Limonium lobatum* | Magnoliopsida | 2 | 3 | 1 | observada_gbif, caracteristica | calblanque-monte-cenizas-pena-aguila |
-| *Muscicapa striata* | Aves | 2 | 5 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
-| *Lycium intricatum* | Magnoliopsida | 2 | 3 | 1 | observada_gbif, protegida | cabo-cope-puntas-calnegre |
+| *Muscicapa striata* | Aves | 2 | 5 | 2 | observada_gbif, protegida, lista_oficial_sitio | barrancos-de-gebas |
+| *Lycium intricatum* | Magnoliopsida | 2 | 3 | 1 | observada_gbif, protegida, anexo_normativo | barrancos-de-gebas |
 | *Egretta garzetta* | Aves | 2 | 5 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabezo-gordo |
-| *Psammodromus algirus* | Squamata | 2 | 4 | 2 | observada_gbif, protegida | cabezo-gordo |
-| *Salsola papillosa* | Magnoliopsida | 2 | 6 | 1 | observada_gbif, protegida | cabo-cope-puntas-calnegre |
-| *Periploca angustifolia* | Magnoliopsida | 2 | 4 | 1 | observada_gbif, caracteristica, protegida | cabezo-gordo |
+| *Rhamnus lycioides* | Magnoliopsida | 2 | 3 | 1 | observada_gbif, anexo_normativo | barrancos-de-gebas |
+| *Psammodromus algirus* | Squamata | 2 | 4 | 2 | observada_gbif, protegida | barrancos-de-gebas |
+| *Salsola papillosa* | Magnoliopsida | 2 | 6 | 1 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
+| *Periploca angustifolia* | Magnoliopsida | 2 | 4 | 1 | observada_gbif, caracteristica, protegida, anexo_normativo | cabezo-gordo |
 | *Teucrium carolipaui* | Magnoliopsida | 2 | 3 | 1 | observada_gbif, caracteristica | cabezo-gordo |
-| *Launaea lanifera* | Magnoliopsida | 2 | 6 | 1 | observada_gbif, protegida | cabo-cope-puntas-calnegre |
-| *Caprimulgus ruficollis* | Aves | 1 | 3 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
+| *Launaea lanifera* | Magnoliopsida | 2 | 6 | 1 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
+| *Caprimulgus ruficollis* | Aves | 1 | 3 | 2 | observada_gbif, protegida, lista_oficial_sitio | barrancos-de-gebas |
 | *Curruca conspicillata* | Aves | 1 | 3 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
-| *Circaetus gallicus* | Aves | 1 | 3 | 2 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
+| *Circaetus gallicus* | Aves | 1 | 3 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | barrancos-de-gebas |
 | *Atriplex glauca* | Magnoliopsida | 1 | 3 | 1 | observada_gbif, caracteristica | cabo-cope-puntas-calnegre |
 | *Plantago amplexicaulis* | Magnoliopsida | 1 | 3 | 1 | observada_gbif, caracteristica | — |
-| *Lafuentea rotundifolia* | Magnoliopsida | 1 | 3 | 1 | observada_gbif, caracteristica, protegida | cabo-cope-puntas-calnegre |
+| *Lafuentea rotundifolia* | Magnoliopsida | 1 | 3 | 1 | observada_gbif, caracteristica, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Artemisia barrelieri* | Magnoliopsida | 1 | 3 | 1 | observada_gbif, caracteristica | cabo-cope-puntas-calnegre |
-| *Teucrium freynii* | Magnoliopsida | 1 | 3 | 1 | observada_gbif, caracteristica, protegida | cabo-cope-puntas-calnegre |
-| *Tarentola mauritanica* | Squamata | 1 | 3 | 2 | observada_gbif, protegida | cabo-cope-puntas-calnegre |
+| *Teucrium freynii* | Magnoliopsida | 1 | 3 | 1 | observada_gbif, caracteristica, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
+| *Tarentola mauritanica* | Squamata | 1 | 3 | 2 | observada_gbif, protegida | barrancos-de-gebas |
 | *Lapiedra martinezii* | Liliopsida | 1 | 3 | 1 | observada_gbif, caracteristica | calblanque-monte-cenizas-pena-aguila |
+| *Corvus corax* | Aves | 1 | 3 | 1 | observada_gbif, protegida, anexo_normativo | barrancos-de-gebas |
 | *Charadrius alexandrinus* | Aves | 1 | 3 | 4 | observada_gbif, protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Chroicocephalus ridibundus* | Aves | 1 | 3 | 1 | observada_gbif, lista_oficial_sitio | cabo-cope-puntas-calnegre |
-| *Santolina viscosa* | Magnoliopsida | 1 | 3 | 1 | observada_gbif, protegida | carrascoy-y-el-valle |
+| *Santolina viscosa* | Magnoliopsida | 1 | 3 | 1 | observada_gbif, protegida, anexo_normativo | carrascoy-y-el-valle |
 | *Suaeda spicata* | Magnoliopsida | 1 | 3 | 1 | observada_gbif, caracteristica | espacios-abiertos-e-islas-del-mar-menor |
-| *Senecio flavus* | Magnoliopsida | 1 | 3 | 1 | observada_gbif, protegida | cabo-cope-puntas-calnegre |
+| *Senecio flavus* | Magnoliopsida | 1 | 3 | 1 | observada_gbif, protegida, anexo_normativo | cabo-cope-puntas-calnegre |
 | *Accipiter gentilis* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Calandrella brachydactyla* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | cabezo-gordo |
-| *Coracias garrulus* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
-| *Falco peregrinus* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
-| *Hieraaetus pennatus* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
+| *Coracias garrulus* | Aves | 0 | 0 | 2 | protegida, anexo_normativo, lista_oficial_sitio | barrancos-de-gebas |
+| *Falco peregrinus* | Aves | 0 | 0 | 2 | protegida, anexo_normativo, lista_oficial_sitio | barrancos-de-gebas |
+| *Hieraaetus pennatus* | Aves | 0 | 0 | 2 | protegida, anexo_normativo, lista_oficial_sitio | barrancos-de-gebas |
 | *Jynx torquilla* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Melanocorypha calandra* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | cabezo-gordo |
-| *Oenanthe hispanica* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | cabezo-gordo |
+| *Oenanthe hispanica* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | barrancos-de-gebas |
 | *Tachybaptus ruficollis* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
 | *Tichodroma muraria* | Aves | 0 | 0 | 2 | protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
-| *Sideritis lasiantha* | — | 0 | 0 | 1 | protegida, lista_oficial_sitio | — |
-| *Testudo graeca* | — | 0 | 0 | 4 | protegida, lista_oficial_sitio | cabo-cope-puntas-calnegre |
-| *Miniopterus schreibersii* | — | 0 | 0 | 4 | protegida, lista_oficial_sitio | cabezo-gordo |
-| *Myotis blythii* | — | 0 | 0 | 4 | protegida, lista_oficial_sitio | sierra-espuna |
-| *Myotis myotis* | — | 0 | 0 | 4 | protegida, lista_oficial_sitio | cabezo-gordo |
-| *Rhinolophus ferrumequinum* | — | 0 | 0 | 4 | protegida, lista_oficial_sitio | cabezo-gordo |
-| *Rhinolophus hipposideros* | — | 0 | 0 | 2 | protegida, lista_oficial_sitio | sierra-espuna |
+| *Sideritis lasiantha* | — | 0 | 0 | 1 | protegida, anexo_normativo, lista_oficial_sitio | — |
+| *Testudo graeca* | — | 0 | 0 | 4 | protegida, anexo_normativo, lista_oficial_sitio | cabo-cope-puntas-calnegre |
+| *Miniopterus schreibersii* | — | 0 | 0 | 4 | protegida, anexo_normativo, lista_oficial_sitio | cabezo-gordo |
+| *Myotis blythii* | — | 0 | 0 | 4 | protegida, lista_oficial_sitio | humedal-del-ajauque-y-rambla-salada |
+| *Myotis myotis* | — | 0 | 0 | 4 | protegida, anexo_normativo, lista_oficial_sitio | cabezo-gordo |
+| *Rhinolophus ferrumequinum* | — | 0 | 0 | 4 | protegida, anexo_normativo, lista_oficial_sitio | cabezo-gordo |
+| *Rhinolophus hipposideros* | — | 0 | 0 | 2 | protegida, anexo_normativo, lista_oficial_sitio | sierra-espuna |
 
 ## Excluidas
 
@@ -210,7 +283,6 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Emberiza cia* | Aves | 2 | 3 | ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo) |
 | *Spinus spinus* | Aves | 2 | 3 | ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo) |
 | *Cistus albidus* | Magnoliopsida | 2 | 3 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
-| *Rhamnus lycioides* | Magnoliopsida | 2 | 3 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
 | *Cercotrichas galactotes* | Aves | 2 | 4 | ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo) |
 | *Nemoptera bipennis* | Insecta | 2 | 3 | fuera del alcance del catálogo (clase Insecta) |
 | *Ficus carica* | Magnoliopsida | 2 | 3 | no nativa (Lista Patrón IEPNB) |
@@ -222,7 +294,7 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Scaurus rugulosus* | Insecta | 2 | 3 | fuera del alcance del catálogo (clase Insecta) |
 | *Papilio machaon* | Insecta | 2 | 6 | fuera del alcance del catálogo (clase Insecta) |
 | *Genista umbellata* | Magnoliopsida | 2 | 4 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
-| *Ballota hirsuta* | Magnoliopsida | 2 | 3 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
+| *Pseudodictamnus hirsutus* | Magnoliopsida | 2 | 3 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
 | *Zygaena lavandulae* | Insecta | 2 | 3 | fuera del alcance del catálogo (clase Insecta) |
 | *Nola subchlamydula* | Insecta | 2 | 5 | fuera del alcance del catálogo (clase Insecta) |
 | *Lycosa hispanica* | Arachnida | 2 | 3 | fuera del alcance del catálogo (clase Arachnida) |
@@ -319,7 +391,7 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Colias croceus* | Insecta | 1 | 3 | fuera del alcance del catálogo (clase Insecta) |
 | *Pieris rapae* | Insecta | 1 | 3 | fuera del alcance del catálogo (clase Insecta) |
 | *Lavandula dentata* | Magnoliopsida | 1 | 3 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
-| *Stipa capensis* | Liliopsida | 1 | 3 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
+| *Stipellula capensis* | Liliopsida | 1 | 3 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
 | *Buthus occitanus* | Arachnida | 1 | 3 | fuera del alcance del catálogo (clase Arachnida) |
 | *Eryngium campestre* | Magnoliopsida | 1 | 3 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
 | *Glaucium flavum* | Magnoliopsida | 1 | 3 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
@@ -396,7 +468,6 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Stibaromacha ratella* | Insecta | 1 | 3 | fuera del alcance del catálogo (clase Insecta) |
 | *Haplophyllum rosmarinifolium* | Magnoliopsida | 1 | 3 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
 | *Suaeda pruinosa* | Magnoliopsida | 1 | 3 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
-| *Corvus corax* | Aves | 1 | 3 | ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo) |
 | *Pyronia bathseba* | Insecta | 1 | 3 | fuera del alcance del catálogo (clase Insecta) |
 | *Pontia daplidice* | Insecta | 1 | 3 | fuera del alcance del catálogo (clase Insecta) |
 | *Brachypodium retusum* | Liliopsida | 1 | 3 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
@@ -407,7 +478,7 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Galium glaucum* | Magnoliopsida | 1 | 3 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
 | *Rhodalsine geniculata* | Magnoliopsida | 1 | 3 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
 | *Citrullus colocynthis* | Magnoliopsida | 1 | 3 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
-| *Halimione portulacoides* | Magnoliopsida | 1 | 3 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
+| *Atriplex portulacoides* | Magnoliopsida | 1 | 3 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
 | *Malephora crocea* | Magnoliopsida | 1 | 3 | no nativa (Lista Patrón IEPNB) |
 | *Atractylis humilis* | Magnoliopsida | 1 | 3 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
 | *Macrochloa tenacissima* | Liliopsida | 1 | 3 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |

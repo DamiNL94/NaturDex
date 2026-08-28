@@ -771,5 +771,3155 @@
   "Thymus vulgaris subsp. aestivus": {
     "acceptedName": "Thymus vulgaris subsp. aestivus (Willk.) A. Bolòs & O. Bolòs",
     "taxonid": 8953
+  },
+  "Acer granatense": {
+    "acceptedName": "Acer opalus subsp. granatense (Boiss.) Font Quer & Rothm.",
+    "taxonid": 1799
+  },
+  "Achillea chamaemelifolia": {
+    "acceptedName": "Achillea chamaemelifolia Pourr.",
+    "taxonid": 9821
+  },
+  "Aconitum napellus subsp. lusitanicum": {
+    "acceptedName": "Aconitum napellus subsp. lusitanicum Rouy",
+    "taxonid": 1861
+  },
+  "Adenocarpus anisochilus subsp. anisochilus": null,
+  "Adenocarpus argyrophyllus": {
+    "acceptedName": "Adenocarpus argyrophyllus (Rivas Goday) Caball.",
+    "taxonid": 1868
+  },
+  "Adenocarpus aureus subsp. aureus": null,
+  "Adenocarpus hispanicus subsp. gredensis": null,
+  "Adenocarpus hispanicus subsp. hispanicus": {
+    "acceptedName": "Adenocarpus argyrophyllus (Rivas Goday) Caball.",
+    "taxonid": 1868
+  },
+  "Adenocarpus hispanicus subsp. neilense": null,
+  "Adonis pyrenaica": {
+    "acceptedName": "Adonis pyrenaica DC.",
+    "taxonid": 1888
+  },
+  "Agrostis pourretii": {
+    "acceptedName": "Agrostis pourretii Willd.",
+    "taxonid": 33105
+  },
+  "Agrostis schleicheri": {
+    "acceptedName": "Alpagrostis schleicheri (Jord. & Verl.) P.M. Peterson, Romasch., Soreng & Sylvester",
+    "taxonid": 10320
+  },
+  "Alchemilla crenulata": {
+    "acceptedName": "Alchemilla crenulata S.E. Fröhner",
+    "taxonid": 1961
+  },
+  "Alchemilla serratisaxatilis": {
+    "acceptedName": "Alchemilla serratisaxatilis S.E. Fröhner",
+    "taxonid": 1689
+  },
+  "Alchemilla sierrae": {
+    "acceptedName": "Alchemilla sierrae Romo",
+    "taxonid": 1609
+  },
+  "Alchemilla tenerrima": {
+    "acceptedName": "Alchemilla tenerrima S.E. Fröhner",
+    "taxonid": 1616
+  },
+  "Allagopappus dichotomus": {
+    "acceptedName": "Allagopappus canariensis (Willd.) Greuter",
+    "taxonid": 31462
+  },
+  "Allium chamaemoly subsp. chamaemoly": null,
+  "Allium chamaemoly subsp. longicaulis": null,
+  "Allium chrysonemum": {
+    "acceptedName": "Allium rouyi Gaut.",
+    "taxonid": 2022
+  },
+  "Allium grossii": null,
+  "Allium scorzonerifolium": {
+    "acceptedName": "Allium scorzonerifolium DC.",
+    "taxonid": 2027
+  },
+  "Althenia orientalis subsp. betpakdalensis": null,
+  "Althenia orientalis subsp. orientalis": {
+    "acceptedName": "Althenia orientalis (Tzvelev) García-Mur. & Talavera",
+    "taxonid": 2078
+  },
+  "Alyssum cadevallianum": {
+    "acceptedName": "Hormathophylla cadevalliana (Pau) T.R. Dudley",
+    "taxonid": 5211
+  },
+  "Alyssum linifolium": {
+    "acceptedName": "Meniocus linifolius (Willd.) DC.",
+    "taxonid": 2088
+  },
+  "Alyssum reverchonii": {
+    "acceptedName": "Hormathophylla reverchonii (Degen & Hervier) Cullen & T.R. Dudley",
+    "taxonid": 5217
+  },
+  "Alyssum serpyllifolium subsp. malacitanum": {
+    "acceptedName": "Odontarrhena serpyllifolia (Desf.) Jord. & Fourr.",
+    "taxonid": 2093
+  },
+  "Ambrosia maritima": {
+    "acceptedName": "Ambrosia maritima L.",
+    "taxonid": 10340
+  },
+  "Anabasis articulata": {
+    "acceptedName": "Anabasis mucronata (Lag.) C. Vic.",
+    "taxonid": 1838
+  },
+  "Androsace elongata subsp. breistrofferi": {
+    "acceptedName": "Androsace elongata subsp. breistrofferi (Charpin & Greut.) Molero & J.M. Monts.",
+    "taxonid": 33028
+  },
+  "Androsace tum campestris 52204H. elongata subsp. breistrofferi": null,
+  "Androsace vitaliana subsp. assoana": {
+    "acceptedName": "Androsace vitaliana subsp. assoana (M. Laínz) Kress",
+    "taxonid": 2161
+  },
+  "Androsace vitaliana subsp. flosjugorum": {
+    "acceptedName": "Androsace vitaliana subsp. flosjugorum Kress",
+    "taxonid": 2163
+  },
+  "Androsace vitaliana subsp. vitaliana": null,
+  "Androsaco villosae-Festucetum hystricis 517521": null,
+  "Anemone pavoniana": {
+    "acceptedName": "Anemone pavoniana Boiss.",
+    "taxonid": 2169
+  },
+  "Anthemis tuberCoronillo minimae-Astragaletum nummularioidis culata": null,
+  "Anthoxanthum ovatum subsp. macranthum": null,
+  "Anthyllis vulneraria subsp. arundana": {
+    "acceptedName": "Anthyllis vulneraria subsp. arundana (Boiss. & Reut.) H. Lindb.",
+    "taxonid": 2195
+  },
+  "Antirrhinum asarina": {
+    "acceptedName": "Asarina procumbens Mill.",
+    "taxonid": 2372
+  },
+  "Antirrhinum braun-blanquetii": {
+    "acceptedName": "Antirrhinum braun-blanquetii Rothm.",
+    "taxonid": 2066
+  },
+  "Antirrhinum grosii": {
+    "acceptedName": "Antirrhinum grosii Font Quer",
+    "taxonid": 2199
+  },
+  "Antirrhinum linkianum subsp. cirrhigerum": null,
+  "Antirrhinum meonanthum subsp. ambiguum": null,
+  "Antirrhinum meonanthum subsp. salcedoi": {
+    "acceptedName": "Antirrhinum braun-blanquetii Rothm.",
+    "taxonid": 2066
+  },
+  "Antirrhinum valentinum": {
+    "acceptedName": "Antirrhinum valentinum Font Quer",
+    "taxonid": 2217
+  },
+  "Aquilegia pyrenaica subsp. discolor": {
+    "acceptedName": "Aquilegia pyrenaica subsp. discolor (Levier & Leresche) Pereda & M. Laínz",
+    "taxonid": 2244
+  },
+  "Arabis alpina var. cantabrica": null,
+  "Arabis soyeri": {
+    "acceptedName": "Arabis soyeri Reut. & Huet",
+    "taxonid": 2274
+  },
+  "Arenaria algarbiensis": {
+    "acceptedName": "Arenaria algarbiensis Willk.",
+    "taxonid": 2297
+  },
+  "Arenaria arcuatociliata": {
+    "acceptedName": "Arenaria arcuatociliata G. López & Nieto Fel.",
+    "taxonid": 2298
+  },
+  "Arenaria capillipes": {
+    "acceptedName": "Arenaria capillipes (Boiss.) Boiss.",
+    "taxonid": 2305
+  },
+  "Arenaria emarginata": {
+    "acceptedName": "Arenaria emarginata Brot.",
+    "taxonid": 2313
+  },
+  "Arenaria erinacea subsp. cantabrica": null,
+  "Arenaria erinacea subsp. microphylla": null,
+  "Arenaria modesta subsp. modesta": null,
+  "Arenaria oscensis": {
+    "acceptedName": "Arenaria oscensis (Pau) P. Monts.",
+    "taxonid": 2341
+  },
+  "Arenaria pomelii": {
+    "acceptedName": "Arenaria pomelii Munby",
+    "taxonid": 2342
+  },
+  "Arenaria retusa subsp. arundana": null,
+  "Arenaria retusa subsp. retusa": null,
+  "Arenaria tetraquetra": {
+    "acceptedName": "Arenaria tetraquetra L.",
+    "taxonid": 2350
+  },
+  "Arenaria valentina": {
+    "acceptedName": "Arenaria valentina Boiss.",
+    "taxonid": 2355
+  },
+  "Arenaria viridis": null,
+  "Arenaria vitoriana": {
+    "acceptedName": "Arenaria vitoriana Uribe-Ech. & Alejandre",
+    "taxonid": 2356
+  },
+  "Arenaria x decipiens": null,
+  "Argyranthemum adauctum subsp. dugourii": {
+    "acceptedName": "Argyranthemum adauctum subsp. dugourii (Bolle) Humphries",
+    "taxonid": 1179
+  },
+  "Argyranthemum coronopifolium": {
+    "acceptedName": "Argyranthemum coronopifolium (Willd.) Humphries",
+    "taxonid": 45
+  },
+  "Argyranthemum teneriffae": null,
+  "Arisarum proboscideum": {
+    "acceptedName": "Arisarum proboscideum (L.) Savi",
+    "taxonid": 2416
+  },
+  "Aristolochia baetica": {
+    "acceptedName": "Aristolochia baetica L.",
+    "taxonid": 2419
+  },
+  "Armeria bigerrensis subsp. legionensis": {
+    "acceptedName": "Armeria cantabrica Willk.",
+    "taxonid": 2452
+  },
+  "Armeria cantabrica": {
+    "acceptedName": "Armeria cantabrica Willk.",
+    "taxonid": 2452
+  },
+  "Armeria carratracensis": null,
+  "Armeria macrophylla": {
+    "acceptedName": "Armeria macrophylla Boiss. & Reut.",
+    "taxonid": 2476
+  },
+  "Armeria pinifolia": {
+    "acceptedName": "Armeria pinifolia (Brot.) Hoffmanns. & Link",
+    "taxonid": 2483
+  },
+  "Armeria platyphylla": null,
+  "Armeria pubinervis": {
+    "acceptedName": "Armeria pubinervis Boiss.",
+    "taxonid": 2486
+  },
+  "Armeria velutina": {
+    "acceptedName": "Armeria velutina Boiss. & Reut.",
+    "taxonid": 2499
+  },
+  "Arrhenatherum calderae": {
+    "acceptedName": "Arrhenatherum calderae A. Hansen",
+    "taxonid": 1192
+  },
+  "Artemisia chamaemelifolia subsp. cantabrica": {
+    "acceptedName": "Artemisia chamaemelifolia Vill.",
+    "taxonid": 9916
+  },
+  "Artemisia umbelliformis subsp. gabriellae": null,
+  "Artemisia umbelliformis subsp. umbelliformis": {
+    "acceptedName": "Artemisia umbelliformis subsp. umbelliformis Lam.",
+    "taxonid": 31493
+  },
+  "Arum cylindraceum": {
+    "acceptedName": "Arum cylindraceum Gasp.",
+    "taxonid": 2505
+  },
+  "Arum italicum subsp. italicum": {
+    "acceptedName": "Arum italicum subsp. italicum",
+    "taxonid": 82702
+  },
+  "Arum pictum subsp. sagittifolium": {
+    "acceptedName": "Arum pictum subsp. sagittifolium Rosselló & L. Sáez",
+    "taxonid": 2510
+  },
+  "Asociaciones que incluye": null,
+  "Asparagus aphyllus": {
+    "acceptedName": "Asparagus aphyllus L.",
+    "taxonid": 2379
+  },
+  "Asparagus nesiotes": {
+    "acceptedName": "Asparagus nesiotes Svent.",
+    "taxonid": 62
+  },
+  "Asparagus pastorianus": {
+    "acceptedName": "Asparagus pastorianus Webb & Berthel.",
+    "taxonid": 2397
+  },
+  "Asperula paui subsp. dianensis": {
+    "acceptedName": "Cynanchica paui subsp. dianensis (Font Quer) P.Caputo & Del Guacchio",
+    "taxonid": 2392
+  },
+  "Asperula paui subsp. paui": null,
+  "Asperula pyrenaica": {
+    "acceptedName": "Asperula pyrenaica L.",
+    "taxonid": 79986
+  },
+  "Asplenium azomanes": {
+    "acceptedName": "Asplenium azomanes Rosselló, Cubas & Rebassa",
+    "taxonid": 79983
+  },
+  "Asplenium foreziense": {
+    "acceptedName": "Asplenium forisiense Le Grand",
+    "taxonid": 2540
+  },
+  "Asplenium x krameri": null,
+  "Asplenium x sleepiae": null,
+  "Asplenium x tubalense": null,
+  "Aster willkommii subsp. catalaunicus": {
+    "acceptedName": "Galatella aragonensis (Asso) Nees",
+    "taxonid": 64
+  },
+  "Asteriscus intermedius": {
+    "acceptedName": "Asteriscus intermedius (DC.) Pit. & Proust",
+    "taxonid": 74
+  },
+  "Astragalus balearicus": {
+    "acceptedName": "Astragalus balearicus Chater",
+    "taxonid": 2572
+  },
+  "Astragalus bourgaeanus": {
+    "acceptedName": "Astragalus bourgaeanus Coss.",
+    "taxonid": 2574
+  },
+  "Astragalus cavanillesii": {
+    "acceptedName": "Astragalus cavanillesii Podlech",
+    "taxonid": 2575
+  },
+  "Astragalus clusianus": {
+    "acceptedName": "Astragalus clusianus Soldano",
+    "taxonid": 2576
+  },
+  "Astragalus cymbaecarpos": {
+    "acceptedName": "Astragalus cymbaecarpos Brot.",
+    "taxonid": 2577
+  },
+  "Astragalus echinatus": {
+    "acceptedName": "Astragalus echinatus Murray",
+    "taxonid": 2580
+  },
+  "Astragalus epiglottis": {
+    "acceptedName": "Astragalus epiglottis L.",
+    "taxonid": 2582
+  },
+  "Astragalus incanus": {
+    "acceptedName": "Astragalus incanus L.",
+    "taxonid": 2591
+  },
+  "Astragalus macrorhizus": {
+    "acceptedName": "Astragalus incanus subsp. nummularioides (Desf.) Maire",
+    "taxonid": 2593
+  },
+  "Astragalus pauciflorus": {
+    "acceptedName": "Astragalus longidentatus Chater",
+    "taxonid": 2595
+  },
+  "Astragalus scorpioides": {
+    "acceptedName": "Astragalus scorpioides Willd.",
+    "taxonid": 2607
+  },
+  "Astragalus stella": {
+    "acceptedName": "Astragalus stella L.",
+    "taxonid": 2610
+  },
+  "Astragalus turolensis": {
+    "acceptedName": "Astragalus turolensis Pau",
+    "taxonid": 2613
+  },
+  "Atalanthus capillaris": {
+    "acceptedName": "Sonchus capillaris Svent.",
+    "taxonid": 33135
+  },
+  "Atalanthus microcarpus": {
+    "acceptedName": "Sonchus microcarpus (Boulos) U. Reifenb. & A. Reifenb.",
+    "taxonid": 33137
+  },
+  "Atalanthus pinnatus": {
+    "acceptedName": "Sonchus leptocephalus Cass.",
+    "taxonid": 33136
+  },
+  "Avenula crassifolia": {
+    "acceptedName": "Helictochloa crassifolia (Font Quer) Romero Zarco",
+    "taxonid": 80479
+  },
+  "Avenula hackelii subsp. hackelii": null,
+  "Bassia prostrata": {
+    "acceptedName": "Bassia prostrata (L.) Beck",
+    "taxonid": 2747
+  },
+  "Bencomia exstipulata": {
+    "acceptedName": "Bencomia exstipulata Svent.",
+    "taxonid": 861
+  },
+  "Biarum dispar": {
+    "acceptedName": "Biarum dispar (Schott) Talavera",
+    "taxonid": 2642
+  },
+  "Borderea chouardii": {
+    "acceptedName": "Dioscorea chouardii Gausen",
+    "taxonid": 2698
+  },
+  "Brachypodium gaditanum": {
+    "acceptedName": "Brachypodium gaditanum Talavera",
+    "taxonid": 31531
+  },
+  "Brassica balearica": {
+    "acceptedName": "Brassica balearica Pers.",
+    "taxonid": 2679
+  },
+  "Brassica turbonis": null,
+  "Brimeura amethystina subsp. fontqueri": {
+    "acceptedName": "Brimeura amethystina (L.) Chouard",
+    "taxonid": 2796
+  },
+  "Bufonia macropetala subsp. willkommiana": null,
+  "Buglossoides gastonii": null,
+  "Bunium macuca subsp. balearicum": null,
+  "Bupleurum baldense": {
+    "acceptedName": "Bupleurum baldense Turra",
+    "taxonid": 2834
+  },
+  "Bupleurum barceloi": {
+    "acceptedName": "Bupleurum barceloi Willk.",
+    "taxonid": 2835
+  },
+  "Bupleurum gibraltaricum": null,
+  "Bystropogon odoratissimus": {
+    "acceptedName": "Bystropogon odoratissimus Bolle",
+    "taxonid": 1204
+  },
+  "Calicotome villosa": {
+    "acceptedName": "Cytisus lanigerus (Desf.) DC.",
+    "taxonid": 2953
+  },
+  "Callipeltis cucullaria": {
+    "acceptedName": "Callipeltis cucullaris (L.) DC.",
+    "taxonid": 2956
+  },
+  "Callitriche cribosa": null,
+  "Callitriche regis-jubae": {
+    "acceptedName": "Callitriche regis-jubae Schotsman",
+    "taxonid": 2969
+  },
+  "Callitriche stagnalis": {
+    "acceptedName": "Callitriche stagnalis Scop.",
+    "taxonid": 2970
+  },
+  "Campanula affinis": {
+    "acceptedName": "Campanula affinis Schult.",
+    "taxonid": 2987
+  },
+  "Campanula arvatica subsp. adsurgens": {
+    "acceptedName": "Campanula adsurgens Levier & Leresche",
+    "taxonid": 2986
+  },
+  "Campanula arvatica subsp. arvatica": {
+    "acceptedName": "Campanula arvatica subsp. arvatica",
+    "taxonid": 82755
+  },
+  "Campanula cochlearifolia subsp. jaubertiana": null,
+  "Campanula dichotoma subsp. A Sa Se SH h H U dichotoma": null,
+  "Campanula dichotoma subsp. afra": null,
+  "Campanula dichotoma subsp. dichotoma": null,
+  "Campanula dichotoma subsp. semisecta": null,
+  "Campanula hispanica": {
+    "acceptedName": "Campanula rotundifolia subsp. hispanica (Willk.) O. Bolòs & Vigo",
+    "taxonid": 3013
+  },
+  "Campanula macrorhiza subsp. aitanica": null,
+  "Campanula macrorhiza subsp. catalanica": {
+    "acceptedName": "Campanula macrorhiza subsp. catalanica (Podlech) Rivas Mart.",
+    "taxonid": 83416
+  },
+  "Campanula macrorhiza subsp. gypsicola": null,
+  "Campanula macrorhiza subsp. macrorhiza": {
+    "acceptedName": "Campanula macrorhiza subsp. macrorhiza",
+    "taxonid": 83417
+  },
+  "Campanula primulifolia": {
+    "acceptedName": "Campanula primulifolia Brot.",
+    "taxonid": 2988
+  },
+  "Campanula speciosa": {
+    "acceptedName": "Campanula speciosa Pourr.",
+    "taxonid": 3016
+  },
+  "Camphorosma monspeliaca": {
+    "acceptedName": "Camphorosma monspeliaca L.",
+    "taxonid": 3020
+  },
+  "Campylanthus salsoloides": {
+    "acceptedName": "Campylanthus salsoloides (L. f.) Roth",
+    "taxonid": 1212
+  },
+  "Caralluma burchardii": {
+    "acceptedName": "Apteranthes burchardii (N.E. Br.) Plowes",
+    "taxonid": 1208
+  },
+  "Cardamine resedifo lia": null,
+  "Carduncellus hispanicus subsp. macrocephalus": null,
+  "Carex brachystachys": {
+    "acceptedName": "Carex brachystachys Schrank",
+    "taxonid": 3051
+  },
+  "Carex brizoides": {
+    "acceptedName": "Carex brizoides L.",
+    "taxonid": 3053
+  },
+  "Carex punctata subsp. lainzii": null,
+  "Carex remota": {
+    "acceptedName": "Carex remota L.",
+    "taxonid": 3137
+  },
+  "Carex sempervirens": {
+    "acceptedName": "Carex sempervirens subsp. pseudotristis (Domin) Pawl.",
+    "taxonid": 3142
+  },
+  "Carex sylvatica subsp. paui": {
+    "acceptedName": "Carex paui Sennen",
+    "taxonid": 33051
+  },
+  "Carlina racemosa": {
+    "acceptedName": "Carlina racemosa L.",
+    "taxonid": 3166
+  },
+  "Catapodium rigidum subsp. spicatum": null,
+  "Centaurea alba subsp. costae": {
+    "acceptedName": "Centaurea costae Willk.",
+    "taxonid": 3248
+  },
+  "Centaurea avilae": {
+    "acceptedName": "Centaurea avilae Pau",
+    "taxonid": 3218
+  },
+  "Centaurea boissieri subsp. prostrata": {
+    "acceptedName": "Centaurea boissieri subsp. prostrata (Coss.) Dostál",
+    "taxonid": 3230
+  },
+  "Centaurea carratracensis": {
+    "acceptedName": "Centaurea carratracensis Lange",
+    "taxonid": 3237
+  },
+  "Centaurea dracunculifolia": {
+    "acceptedName": "Centaurea dracunculifolia Dufour",
+    "taxonid": 3257
+  },
+  "Centaurea emigrantis": {
+    "acceptedName": "Centaurea emigrantis Bubani",
+    "taxonid": 3258
+  },
+  "Centaurea janerii subsp. babiana": null,
+  "Centaurea lagascae": {
+    "acceptedName": "Centaurea resupinata Coss. subsp. resupinata",
+    "taxonid": 3329
+  },
+  "Centaurea mariana": {
+    "acceptedName": "Centaurea mariana Nyman",
+    "taxonid": 3299
+  },
+  "Centaurea mariolensis": {
+    "acceptedName": "Centaurea boissieri subsp. mariolensis (Rouy) Dostál",
+    "taxonid": 3228
+  },
+  "Centaurea rouyi var. macrocephala": null,
+  "Centaurea rouyi var. suffrutescens": null,
+  "Centaurea spachii": {
+    "acceptedName": "Centaurea spachii Sch.Bip. ex Willk. & Lange",
+    "taxonid": 80052
+  },
+  "Centaurea spachii var. humilis": null,
+  "Centaurium bianoris": {
+    "acceptedName": "Centaurium bianoris Herb. ex Sennen",
+    "taxonid": 80051
+  },
+  "Centaurium chloodes": {
+    "acceptedName": "Centaurium chloodes (Brot.) Samp.",
+    "taxonid": 3346
+  },
+  "Centaurium maritimum": {
+    "acceptedName": "Centaurium maritimum (L.) Janch.",
+    "taxonid": 3356
+  },
+  "Centaurium quadrifolium var. parviflorum": null,
+  "Centaurium quadrifolium var. quadrifolium": null,
+  "Centranthus nevadensis subsp. nevadensis": null,
+  "Cephalaria balearica var. balearica": null,
+  "Cephalaria balearica var. ebusitana": null,
+  "Cephalaria linearifolia": {
+    "acceptedName": "Cephalaria linearifolia Lange",
+    "taxonid": 3384
+  },
+  "Cerastium minus": null,
+  "Cerastium semidecandrum var. sennenii": null,
+  "Ceropegia dichotoma": {
+    "acceptedName": "Ceropegia dichotoma subsp. krainzii (Svent.) Bruyns",
+    "taxonid": 866
+  },
+  "Ceropegia fusca": {
+    "acceptedName": "Ceropegia fusca Bolle",
+    "taxonid": 1226
+  },
+  "Chaenorhinum formenterae": {
+    "acceptedName": "Chaenorhinum formenterae Gand.",
+    "taxonid": 3445
+  },
+  "Chaenorhinum grandiflorum subsp. carthaginense": {
+    "acceptedName": "Chaenorhinum grandiflorum subsp. carthaginense (Pau) Benedí",
+    "taxonid": 3449
+  },
+  "Chaenorhinum macropodum": {
+    "acceptedName": "Chaenorhinum macropodum (Boiss. & Reut.) Lange",
+    "taxonid": 3450
+  },
+  "Chaenorhinum minus": {
+    "acceptedName": "Chaenorhinum minus (L.) Lange",
+    "taxonid": 3453
+  },
+  "Chaenorhinum reyesii": {
+    "acceptedName": "Chaenorhinum reyesii (C. Vicioso & Pau) Benedí",
+    "taxonid": 3460
+  },
+  "Chaenorhinum rubrifolium subsp. rubrifolium": null,
+  "Chaenorhinum serpyllifolium subsp. lusitanicum": {
+    "acceptedName": "Chaenorhinum serpyllifolium subsp. lusitanicum R. Fern.",
+    "taxonid": 3469
+  },
+  "Chaenorhinum serpyllifolium subsp. serpyllifolium": null,
+  "Chaetopogon fasciculatus": {
+    "acceptedName": "Agrostis subspicata (Willd.) Raspail",
+    "taxonid": 867
+  },
+  "Chara canescens": {
+    "acceptedName": "Chara canescens Loisel.",
+    "taxonid": 80073
+  },
+  "Chara desmacantha": {
+    "acceptedName": "Chara desmacantha (H. & J.Groves) J.Groves & Bull.-Webst.",
+    "taxonid": 80071
+  },
+  "Chara galioides": {
+    "acceptedName": "Chara galioides A.P.De Candolle",
+    "taxonid": 80057
+  },
+  "Chara imperfecta": {
+    "acceptedName": "Chara imperfecta A.Braun",
+    "taxonid": 32645
+  },
+  "Chara major": {
+    "acceptedName": "Chara major (Hartm.) Hy",
+    "taxonid": 80064
+  },
+  "Chara tomentosa": null,
+  "Chara vulgaris var. vulgaris": null,
+  "Cheilanthes hispanica": {
+    "acceptedName": "Oeosporangium hispanicum (Mett.) Fraser-Jenk. & Pariyar",
+    "taxonid": 80518
+  },
+  "Cheilanthes x iberica": null,
+  "Cheilanthes x kochiana": null,
+  "Cheirolophus teydis": {
+    "acceptedName": "Cheirolophus teydis (C. Sm.) G. López",
+    "taxonid": 1232
+  },
+  "Chrysosplenium alternifolium": {
+    "acceptedName": "Chrysosplenium alternifolium L.",
+    "taxonid": 3561
+  },
+  "Cicendia filiformis": {
+    "acceptedName": "Cicendia filiformis (L.) Delarbre",
+    "taxonid": 3565
+  },
+  "Cistus creticus": {
+    "acceptedName": "Cistus creticus L.",
+    "taxonid": 3613
+  },
+  "Cistus libanotis": {
+    "acceptedName": "Cistus libanotis L.",
+    "taxonid": 3623
+  },
+  "Clematis campaniflora": {
+    "acceptedName": "Clematis campaniflora Brot.",
+    "taxonid": 3635
+  },
+  "Clypeola eriocarpa": {
+    "acceptedName": "Clypeola eriocarpa Cav.",
+    "taxonid": 3651
+  },
+  "Clypeola microcarpa": null,
+  "Cochlearia pyrenaica": {
+    "acceptedName": "Cochlearia pyrenaica DC.",
+    "taxonid": 3668
+  },
+  "Convolvulus floridus": {
+    "acceptedName": "Convolvulus floridus L. f.",
+    "taxonid": 1244
+  },
+  "Corema album": {
+    "acceptedName": "Corema album (L.) D. Don",
+    "taxonid": 3713
+  },
+  "Coronopus navasii": {
+    "acceptedName": "Lepidium navasii (Pau) Al-Shehbaz",
+    "taxonid": 3741
+  },
+  "Corynephorus macrantherus": {
+    "acceptedName": "Corynephorus macrantherus Boiss. & Reut.",
+    "taxonid": 179
+  },
+  "Cotoneaster integerrimus var. masclansii": null,
+  "Crepis albida subsp. asturica": {
+    "acceptedName": "Crepis albida Vill.",
+    "taxonid": 204
+  },
+  "Crepis triasii": {
+    "acceptedName": "Crepis triasii (Cambess.) Fr.",
+    "taxonid": 195
+  },
+  "Crypsis aculeata": {
+    "acceptedName": "Sporobolus aculeatus (L.) P.M. Peterson",
+    "taxonid": 9971
+  },
+  "Crypsis alopecuroides": {
+    "acceptedName": "Sporobolus alopecuroides (Piller & Mitterp.) P.M. Peterson",
+    "taxonid": 9976
+  },
+  "Crypsis schoenoides": {
+    "acceptedName": "Sporobolus schoenoides (L.) P.M. Peterson",
+    "taxonid": 9977
+  },
+  "Ctenidium molluscum": {
+    "acceptedName": "Ctenidium molluscum (Hedw.) Mitt.",
+    "taxonid": 36792
+  },
+  "Ctenopsis gypsophila": {
+    "acceptedName": "Festuca gypsophila Hack.",
+    "taxonid": 9979
+  },
+  "Cyperus fuscus": {
+    "acceptedName": "Cyperus fuscus L.",
+    "taxonid": 3928
+  },
+  "Cystopteris alpina": {
+    "acceptedName": "Cystopteris alpina (Lam.) Desv.",
+    "taxonid": 3801
+  },
+  "Cystopteris pseudoregia": {
+    "acceptedName": "Cystopteris pseudoregia (Rivas Mart., T.E. Díaz, Fern. Prieto, Loidi & Penas) Rivas Mart.",
+    "taxonid": 94736
+  },
+  "Cytisus cantabricus": {
+    "acceptedName": "Cytisus cantabricus (Willk.) Rchb. f. & Beck",
+    "taxonid": 3815
+  },
+  "Cytisus commutatus": {
+    "acceptedName": "Cytisus commutatus (Willk.) Briq.",
+    "taxonid": 3816
+  },
+  "Cytisus fontanesii subsp. plumosus": {
+    "acceptedName": "Cytisus fontanesii subsp. plumosus (Boiss.) Nyman",
+    "taxonid": 3821
+  },
+  "Cytisus grandiflorus subsp. cabezudoi": {
+    "acceptedName": "Cytisus grandiflorus subsp. cabezudoi Talavera",
+    "taxonid": 3937
+  },
+  "Cytisus ingramii": {
+    "acceptedName": "Cytisus commutatus (Willk.) Briq.",
+    "taxonid": 3816
+  },
+  "Cytisus malacitanus": {
+    "acceptedName": "Cytisus malacitanus Boiss.",
+    "taxonid": 3939
+  },
+  "Cytisus striatus subsp. eriocarpus": null,
+  "Cytisus striatus subsp. striatus": null,
+  "Damasonium bourgaei": {
+    "acceptedName": "Damasonium bourgaei Coss.",
+    "taxonid": 3959
+  },
+  "Daucus durieua": {
+    "acceptedName": "Daucus durieua Lange",
+    "taxonid": 3988
+  },
+  "Daucus gingidium subsp. commutatus": null,
+  "Daucus gingidium subsp. hispanicus": null,
+  "Descurainia bourgeauana": {
+    "acceptedName": "Descurainia bourgeauana (E. Fourn.) O. E. Schulz",
+    "taxonid": 1260
+  },
+  "Descurainia gilva": {
+    "acceptedName": "Descurainia gilva Svent.",
+    "taxonid": 1261
+  },
+  "Dethawia tenuifolia subsp. cantabrica": null,
+  "Dianthus algetanus subsp. algetanus": null,
+  "Dianthus anticarius subsp. subbaeticus": null,
+  "Dianthus broteri subsp. hinoxianus": {
+    "acceptedName": "Dianthus broteri subsp. hinoxianus (Gallego) Rivas Mart.",
+    "taxonid": 229
+  },
+  "Dianthus charidemi": {
+    "acceptedName": "Dianthus charidemi Pau",
+    "taxonid": 4075
+  },
+  "Dianthus costae": {
+    "acceptedName": "Dianthus costae Willk.",
+    "taxonid": 4079
+  },
+  "Dianthus multiceps subsp. multiceps": null,
+  "Dianthus pungens subsp. pungens": null,
+  "Dianthus pyrenaicus subsp. attenuatus": {
+    "acceptedName": "Dianthus pyrenaicus subsp. attenuatus (Sm.) Bernal, M. Laínz & Muñoz-Garm.",
+    "taxonid": 4093
+  },
+  "Dianthus rupicola subsp. bocchoriana": {
+    "acceptedName": "Dianthus rupicola subsp. bocchoriana L. Llorens & Gradaille",
+    "taxonid": 31665
+  },
+  "Digitalis parviflora": {
+    "acceptedName": "Digitalis parviflora Jacq.",
+    "taxonid": 4050
+  },
+  "Digitalis purpurea subsp. dubia": null,
+  "Diplotaxis lagascana subsp. intricata": null,
+  "Diplotaxis lagascana subsp. lagascana": null,
+  "Draba cantabriae subsp. cantabriae": null,
+  "Draba cantabriae subsp. izcoi": null,
+  "Draba dedeana subsp. dedeana": {
+    "acceptedName": "Draba dedeana Boiss. & Reut.",
+    "taxonid": 4008
+  },
+  "Draba diazii": null,
+  "Draba dubia subsp. laevipes": {
+    "acceptedName": "Draba dubia Suter",
+    "taxonid": 4010
+  },
+  "Draba dubia subsp. nevadensis": null,
+  "Draba lebrunii": {
+    "acceptedName": "Draba hispanica subsp. lebrunii P. Monts.",
+    "taxonid": 4146
+  },
+  "Draba tomentosa subsp. ciliigera": {
+    "acceptedName": "Draba tomentosa subsp. ciliigera (O.E. Schulz) O. Bolòs & Vigo",
+    "taxonid": 4156
+  },
+  "Draba tomentosa subsp. subnivalis": {
+    "acceptedName": "Draba subnivalis Braun-Blanq.",
+    "taxonid": 4154
+  },
+  "Dracunculus muscivorus": {
+    "acceptedName": "Helicodiceros muscivorus (L. f.) Engl.",
+    "taxonid": 5107
+  },
+  "Dryopteris carthusiana": {
+    "acceptedName": "Dryopteris carthusiana (Vill.) H.P. Fuchs",
+    "taxonid": 4178
+  },
+  "Echinospartum barnadesii": {
+    "acceptedName": "Echinospartum barnadesii (Graells) Rothm.",
+    "taxonid": 4208
+  },
+  "Echinospartum barnadesii var. hirsutum": null,
+  "Echinospartum boissieri": {
+    "acceptedName": "Echinospartum boissieri (Spach) Rothm.",
+    "taxonid": 4209
+  },
+  "Echinospartum horridum": {
+    "acceptedName": "Echinospartum horridum (Vahl) Rothm.",
+    "taxonid": 4210
+  },
+  "Echinospartum ibericum subsp. ibericum": {
+    "acceptedName": "Echinospartum ibericum Rivas Mart., Sánchez-Mata & Sancho",
+    "taxonid": 4211
+  },
+  "Echinospartum ibericum subsp. pulviniformis": {
+    "acceptedName": "Echinospartum ibericum Rivas Mart., Sánchez-Mata & Sancho",
+    "taxonid": 4211
+  },
+  "Echium auberianum": {
+    "acceptedName": "Echium auberianum Webb & Berthel.",
+    "taxonid": 1273
+  },
+  "Echium brevirame": {
+    "acceptedName": "Echium brevirame Sprague & Hutch.",
+    "taxonid": 1276
+  },
+  "Echium wildpretii": {
+    "acceptedName": "Echium wildpretii Hook. f.",
+    "taxonid": 1291
+  },
+  "Elatine alsinastrum": {
+    "acceptedName": "Elatine alsinastrum L.",
+    "taxonid": 4273
+  },
+  "Eleocharis parvula": {
+    "acceptedName": "Eleocharis parvula (Roem. & Schult.) Bluff, Nees & Schauer",
+    "taxonid": 4288
+  },
+  "Elytrigia curvifolia": null,
+  "Encalypta streptocarpa": {
+    "acceptedName": "Encalypta streptocarpa Hedw.",
+    "taxonid": 23946
+  },
+  "Ephedra distachya": {
+    "acceptedName": "Ephedra distachya L.",
+    "taxonid": 4306
+  },
+  "Ephedra nebrodensis": {
+    "acceptedName": "Ephedra major Host",
+    "taxonid": 4311
+  },
+  "Epipactis helleborine subsp. tremolsii": {
+    "acceptedName": "Epipactis tremolsii Pau",
+    "taxonid": 4348
+  },
+  "Epipactis hispanica": null,
+  "Epipactis parviflora": {
+    "acceptedName": "Epipactis kleinii M.B. Crespo, M.R. Lowe & Piera",
+    "taxonid": 4341
+  },
+  "Equisetum sylvaticum": {
+    "acceptedName": "Equisetum sylvaticum L.",
+    "taxonid": 4360
+  },
+  "Erica multiflora": {
+    "acceptedName": "Erica multiflora L.",
+    "taxonid": 4372
+  },
+  "Erica terminalis": {
+    "acceptedName": "Erica terminalis Salisb.",
+    "taxonid": 4375
+  },
+  "Ericetum multiflorae 433465": null,
+  "Erigeron cabrerae": null,
+  "Erodium cavanillesii": null,
+  "Erodium pulverulentum": null,
+  "Erodium recoderi": {
+    "acceptedName": "Erodium recoderi Auriault & Guitt.",
+    "taxonid": 80958
+  },
+  "Erodium rupicola": {
+    "acceptedName": "Erodium rupicola Boiss.",
+    "taxonid": 10007
+  },
+  "Eryngium corniculatum": {
+    "acceptedName": "Eryngium corniculatum Lam.",
+    "taxonid": 4399
+  },
+  "Eryngium dilatatum": {
+    "acceptedName": "Eryngium dilatatum Lam.",
+    "taxonid": 4400
+  },
+  "Eryngium galioides": {
+    "acceptedName": "Eryngium galioides Lam.",
+    "taxonid": 4402
+  },
+  "Eryngium grossii": null,
+  "Erysimum favargeri": {
+    "acceptedName": "Erysimum cazorlense (Heywood) Holub",
+    "taxonid": 4414
+  },
+  "Erysimum fitzii": {
+    "acceptedName": "Erysimum fitzii Polatschek",
+    "taxonid": 4418
+  },
+  "Erysimum humile subsp. pyrenaicum": null,
+  "Erysimum incanum subsp. matritense": {
+    "acceptedName": "Erysimum incanum subsp. matritense (Pau) G. López",
+    "taxonid": 4424
+  },
+  "Erysimum seipkae": {
+    "acceptedName": "Erysimum seipkae Polatschek",
+    "taxonid": 4437
+  },
+  "Euphorbia aphylla": {
+    "acceptedName": "Euphorbia aphylla Willd.",
+    "taxonid": 1297
+  },
+  "Euphorbia aragonensis subsp. aragonensis": null,
+  "Euphorbia aragonensis subsp. bolosii": null,
+  "Euphorbia balsamifera": {
+    "acceptedName": "Euphorbia balsamifera Aiton",
+    "taxonid": 1304
+  },
+  "Euphorbia berthelotii": {
+    "acceptedName": "Euphorbia berthelotii Boiss.",
+    "taxonid": 1305
+  },
+  "Euphorbia canariensis": {
+    "acceptedName": "Euphorbia canariensis L.",
+    "taxonid": 1298
+  },
+  "Euphorbia dendroides": {
+    "acceptedName": "Euphorbia dendroides L.",
+    "taxonid": 4471
+  },
+  "Euphorbia duvalii": {
+    "acceptedName": "Euphorbia duvalii Lecoq & Lamotte",
+    "taxonid": 4475
+  },
+  "Euphorbia flavicoma subsp. Om occidentalis": null,
+  "Euphorbia flavicoma subsp. occidentalis": {
+    "acceptedName": "Euphorbia flavicoma subsp. occidentalis M. Laínz",
+    "taxonid": 4495
+  },
+  "Euphorbia handiensis": {
+    "acceptedName": "Euphorbia handiensis Burchard",
+    "taxonid": 909
+  },
+  "Euphorbia lamarckii": {
+    "acceptedName": "Euphorbia lamarckii Sweet",
+    "taxonid": 1300
+  },
+  "Euphorbia maresii subsp. balearica": {
+    "acceptedName": "Euphorbia maresii subsp. balearica (Willk.) Molero, Mus, Rosselló & Vallès-Xirau",
+    "taxonid": 4503
+  },
+  "Euphorbia margalidiana": {
+    "acceptedName": "Euphorbia margalidiana Kuhbier & Lewej.",
+    "taxonid": 4504
+  },
+  "Euphorbia pedroi": {
+    "acceptedName": "Euphorbia pedroi Molero & Rovira",
+    "taxonid": 4520
+  },
+  "Euphorbia regis-jubae": {
+    "acceptedName": "Euphorbia regis-jubae J. Gay",
+    "taxonid": 1306
+  },
+  "Euphorbia sulcata": {
+    "acceptedName": "Euphorbia sulcata Loisel.",
+    "taxonid": 4537
+  },
+  "Euphorbietum balsamiferae": null,
+  "Euzomodendron bourgeanum": null,
+  "Exaculum pusillum": {
+    "acceptedName": "Exaculum pusillum (Lam.) Caruel",
+    "taxonid": 4558
+  },
+  "Festuca altopyrenaica": {
+    "acceptedName": "Festuca yvesii subsp. altopyrenaica (Fuente & Ortúñez) Mart.-Sagarra & Devesa",
+    "taxonid": 281
+  },
+  "Festuca burnatii": {
+    "acceptedName": "Festuca burnatii St.-Yves",
+    "taxonid": 284
+  },
+  "Festuca gigantea": {
+    "acceptedName": "Festuca gigantea (L.) Vill.",
+    "taxonid": 10259
+  },
+  "Festuca rivas-martinezii subsp. rectifoSm lia": null,
+  "Festuca rivas-martinezii subsp. rectifolia": {
+    "acceptedName": "Festuca rivas-martinezii subsp. rectifolia Fuente, Ortúñez & Ferrero Lom.",
+    "taxonid": 31722
+  },
+  "Filago micropodioides": {
+    "acceptedName": "Filago micropodioides Lange",
+    "taxonid": 311
+  },
+  "Fimbristylis annua": null,
+  "Fimbristylis bisumbellata": {
+    "acceptedName": "Fimbristylis bisumbellata (Forssk.) Bubani",
+    "taxonid": 4597
+  },
+  "Flueggea tinctoria": {
+    "acceptedName": "Flueggea tinctoria (L.) G.L. Webster",
+    "taxonid": 4600
+  },
+  "Frangula alnus subsp. baetica": {
+    "acceptedName": "Frangula alnus subsp. baetica (Willk. & É. Rev.) Devesa",
+    "taxonid": 4612
+  },
+  "Frankenia laevis var. marcosii": null,
+  "Frankenia thymifolia": {
+    "acceptedName": "Frankenia thymifolia Desf.",
+    "taxonid": 4620
+  },
+  "Fumana fontanesii": {
+    "acceptedName": "Fumana fontanesii Pomel",
+    "taxonid": 4653
+  },
+  "Gagea lutea subsp. lutea": null,
+  "Galium crespianum": {
+    "acceptedName": "Galium crespianum J.J. Rodr.",
+    "taxonid": 4743
+  },
+  "Galium ephedroides": {
+    "acceptedName": "Galium ephedroides Willk.",
+    "taxonid": 4745
+  },
+  "Galium erythrorrhizon": {
+    "acceptedName": "Galium erythrorrhizon Boiss. & Reut.",
+    "taxonid": 4746
+  },
+  "Genista benehoavensis": {
+    "acceptedName": "Genista benehoavensis (Svent.) del Arco",
+    "taxonid": 913
+  },
+  "Genista cinerascens": {
+    "acceptedName": "Genista cinerascens Lange",
+    "taxonid": 4882
+  },
+  "Genista delphinensis": {
+    "acceptedName": "Genista delphinensis Verl.",
+    "taxonid": 3521
+  },
+  "Genista dorycnifolia": {
+    "acceptedName": "Genista dorycnifolia subsp. grosii (Font Quer) Font Quer & Rothm.",
+    "taxonid": 325
+  },
+  "Genista florida subsp. florida": {
+    "acceptedName": "Genista florida L.",
+    "taxonid": 4886
+  },
+  "Genista florida subsp. polygaliphylla": null,
+  "Genista haenseleri": {
+    "acceptedName": "Genista haenseleri Boiss.",
+    "taxonid": 4887
+  },
+  "Genista hirsuta subsp. erioclada": {
+    "acceptedName": "Genista hirsuta subsp. erioclada (Spach) Raynaud",
+    "taxonid": 4888
+  },
+  "Genista lanuginosa": {
+    "acceptedName": "Genista hirsuta subsp. lanuginosa (Spach) Nyman",
+    "taxonid": 4889
+  },
+  "Genista legionensis": {
+    "acceptedName": "Genista legionensis (Pau) M. Laínz",
+    "taxonid": 4898
+  },
+  "Genista majorica": {
+    "acceptedName": "Genista majorica Cantó & M.J. Sánchez",
+    "taxonid": 4902
+  },
+  "Genista obtusiramea": {
+    "acceptedName": "Genista obtusiramea Spach",
+    "taxonid": 4904
+  },
+  "Genista occidentalis": {
+    "acceptedName": "Genista hispanica subsp. occidentalis Rouy",
+    "taxonid": 4894
+  },
+  "Genista polyanthos": {
+    "acceptedName": "Genista polyanthos Willk.",
+    "taxonid": 4906
+  },
+  "Genista pseudopilosa": {
+    "acceptedName": "Genista pseudopilosa Coss.",
+    "taxonid": 4907
+  },
+  "Genista pumila subsp. elias-sennenii": null,
+  "Genista teretifolia": {
+    "acceptedName": "Genista teretifolia Willk.",
+    "taxonid": 4916
+  },
+  "Genista tricuspidata subsp. lucida": null,
+  "Genista valdes-bermejoi": {
+    "acceptedName": "Genista valdesbermejoi Talavera & L. Sáez",
+    "taxonid": 4928
+  },
+  "Genista x norpaMm lentina": null,
+  "Genista x norpalentina": null,
+  "Genista x rivasgodayana": null,
+  "Gennaria diphylla": {
+    "acceptedName": "Gennaria diphylla (Link) Parl.",
+    "taxonid": 4931
+  },
+  "Gentiana clusii subsp. corbariensis": null,
+  "Gentiana clusii subsp. pyrenaica": null,
+  "Gentiana occidentalis": {
+    "acceptedName": "Gentiana occidentalis Jakow.",
+    "taxonid": 4935
+  },
+  "Geo rivales-Cirsietum rosulati": null,
+  "Geranium cataractarum": {
+    "acceptedName": "Geranium cataractarum Coss.",
+    "taxonid": 4827
+  },
+  "Glinus lotoides": {
+    "acceptedName": "Glinus lotoides L.",
+    "taxonid": 4851
+  },
+  "Globularia cambessedesii": {
+    "acceptedName": "Globularia cambessedesii Willk.",
+    "taxonid": 79947
+  },
+  "Globularia gracilis": {
+    "acceptedName": "Globularia fuxeensis Giraudias",
+    "taxonid": 4993
+  },
+  "Globularia x gallisieri": null,
+  "Glycyrrhiza glabra": {
+    "acceptedName": "Glycyrrhiza glabra L.",
+    "taxonid": 5002
+  },
+  "Guillonea scabra": {
+    "acceptedName": "Guillonea scabra (Cav.) Coss.",
+    "taxonid": 5004
+  },
+  "Gypsophila tomentosa": {
+    "acceptedName": "Gypsophila tomentosa L.",
+    "taxonid": 5028
+  },
+  "Halimium atriplicifolium subsp. serpentinicola": {
+    "acceptedName": "Cistus atriplicifolius Lam.",
+    "taxonid": 5037
+  },
+  "Halimium calycinum": {
+    "acceptedName": "Cistus calycinus L.",
+    "taxonid": 5039
+  },
+  "Halimium halimifolium": {
+    "acceptedName": "Cistus halimifolius L.",
+    "taxonid": 5040
+  },
+  "Halimium verticillatum": {
+    "acceptedName": "Cistus umbellatus subsp. viscosus (Willk.) Demoly",
+    "taxonid": 5049
+  },
+  "Halopeplis amplexicaulis": {
+    "acceptedName": "Halopeplis amplexicaulis (Vahl) Ces., Pass. & Gibelli",
+    "taxonid": 5054
+  },
+  "Hedypnois arenaria": {
+    "acceptedName": "Hedypnois arenaria DC.",
+    "taxonid": 339
+  },
+  "Hedysarum boveanum subsp. palentinum": {
+    "acceptedName": "Hedysarum boveanum subsp. palentinum Valdés",
+    "taxonid": 5074
+  },
+  "Helianthemum angustatum": {
+    "acceptedName": "Helianthemum angustatum Pomel ",
+    "taxonid": 4960
+  },
+  "Helianthemum canariense": {
+    "acceptedName": "Helianthemum canariense (Jacq.) Pers.",
+    "taxonid": 1327
+  },
+  "Helianthemum canum subsp. cantabricum": null,
+  "Helianthemum caput-felis": {
+    "acceptedName": "Helianthemum caput-felis Boiss.",
+    "taxonid": 4970
+  },
+  "Helianthemum croceum subsp. cavanillesianum": null,
+  "Helianthemum croceum subsp. molle": null,
+  "Helianthemum juliae": {
+    "acceptedName": "Helianthemum juliae Wildpret",
+    "taxonid": 919
+  },
+  "Helianthemum marifolium subsp. marifolium": null,
+  "Helianthemum nummularium Im subsp. urrielense": null,
+  "Helianthemum nummularium subsp. urrielense": null,
+  "Helianthemum oelandicum subsp. italicum": {
+    "acceptedName": "Helianthemum oelandicum subsp. italicum (L.) Font Quer & Rothm.",
+    "taxonid": 5093
+  },
+  "Helianthemum origanifolium subsp. origanifolium": {
+    "acceptedName": "Helianthemum origanifolium subsp. origanifolium",
+    "taxonid": 82960
+  },
+  "Helianthemum polygonoides": {
+    "acceptedName": "Helianthemum polygonoides Peinado, Mart. Parras, Alcaraz & Espuelas",
+    "taxonid": 5097
+  },
+  "Helianthemum rossmaessleri subsp. hieronymi": null,
+  "Helianthemum rossmaessleri subsp. rossmaessleri": null,
+  "Helichrysum ambiguum": {
+    "acceptedName": "Helichrysum crassifolium (L.) D. Don",
+    "taxonid": 31766
+  },
+  "Helictotrichon cantabricum": {
+    "acceptedName": "Helictotrichon cantabricum (Lag.) Gervais",
+    "taxonid": 355
+  },
+  "Heliosperma quadridentatum": null,
+  "Heliotropium supinum": {
+    "acceptedName": "Heliotropium supinum L.",
+    "taxonid": 5112
+  },
+  "Herniaria algarvica": {
+    "acceptedName": "Herniaria algarvica Chaudhri",
+    "taxonid": 4865
+  },
+  "Herniaria fontanesii subsp. almeriana": {
+    "acceptedName": "Herniaria fontanesii subsp. almeriana Brummitt & Heywood",
+    "taxonid": 5158
+  },
+  "Hieracium bowlesianum": {
+    "acceptedName": "Hieracium phlomoides Froel.",
+    "taxonid": 5240
+  },
+  "Hieracium carpetanum": null,
+  "Hieracium cordatum": {
+    "acceptedName": "Hieracium cordatum Costa",
+    "taxonid": 81983
+  },
+  "Hieracium eriopogum": null,
+  "Hieracium glaucocerinthe": {
+    "acceptedName": "Hieracium amplexicaule L.",
+    "taxonid": 5232
+  },
+  "Hieracium laevigatum": {
+    "acceptedName": "Hieracium laevigatum Willd.",
+    "taxonid": 5250
+  },
+  "Hieracium mariolense": null,
+  "Hieracium mixtiforme": {
+    "acceptedName": "Hieracium loretii Rouy",
+    "taxonid": 82576
+  },
+  "Hieracium phlomoides": {
+    "acceptedName": "Hieracium phlomoides Froel.",
+    "taxonid": 5240
+  },
+  "Hieracium texedense": {
+    "acceptedName": "Hieracium texedense Pau",
+    "taxonid": 376
+  },
+  "Hippocrepis balearica": {
+    "acceptedName": "Hippocrepis balearica Jacq.",
+    "taxonid": 5272
+  },
+  "Hippocrepis commutata": {
+    "acceptedName": "Hippocrepis commutata Pau",
+    "taxonid": 5278
+  },
+  "Hippocrepis fruticescens": {
+    "acceptedName": "Hippocrepis fruticescens Sennen",
+    "taxonid": 5281
+  },
+  "Hippocrepis grosii": {
+    "acceptedName": "Hippocrepis grosii (Pau) Boira, L. Gil & L. Llorens",
+    "taxonid": 5282
+  },
+  "Hippocrepis rupestris": {
+    "acceptedName": "Hippocrepis rupestris Laza",
+    "taxonid": 5287
+  },
+  "Hippocrepis salzmannii": {
+    "acceptedName": "Hippocrepis salzmannii Boiss. & Reut.",
+    "taxonid": 5288
+  },
+  "Hippocrepis scorpioides": {
+    "acceptedName": "Hippocrepis scorpioides Benth.",
+    "taxonid": 5290
+  },
+  "Hippocrepis valentina": {
+    "acceptedName": "Hippocrepis valentina Boiss.",
+    "taxonid": 5293
+  },
+  "Hohenackeria polyodon": {
+    "acceptedName": "Hohenackeria polyodon Coss. & Durieu",
+    "taxonid": 5183
+  },
+  "Holcus grandiflorus": {
+    "acceptedName": "Holcus grandiflorus Boiss. & Reut.",
+    "taxonid": 10050
+  },
+  "Homalia lusitanica": {
+    "acceptedName": "Homalia lusitanica Schimp.",
+    "taxonid": 23955
+  },
+  "Honckenya peploides var. peploides": null,
+  "Hormathophylla baetica": {
+    "acceptedName": "Hormathophylla cochleata subsp. baetica (P. Küpfer) Salmerón-Sánchez, Mota & Fuertes",
+    "taxonid": 33073
+  },
+  "Hormathophylla cadevalliana": {
+    "acceptedName": "Hormathophylla cadevalliana (Pau) T.R. Dudley",
+    "taxonid": 5211
+  },
+  "Hormathophylla pyrenaica": {
+    "acceptedName": "Hormathophylla pyrenaica (Lapeyr.) Cullen & T.R.Dudley",
+    "taxonid": 5216
+  },
+  "Hormathophylla reverchonii": {
+    "acceptedName": "Hormathophylla reverchonii (Degen & Hervier) Cullen & T.R. Dudley",
+    "taxonid": 5217
+  },
+  "Horminum pyrenaicum": {
+    "acceptedName": "Horminum pyrenaicum L.",
+    "taxonid": 5220
+  },
+  "Hyacinthoides vicentina": {
+    "acceptedName": "Hyacinthoides mauritanica (Schousb.) Speta",
+    "taxonid": 5136
+  },
+  "Hymenolobus pauciflorus": {
+    "acceptedName": "Hornungia pauciflora (W.D.J. Koch) Soldano, F. Conti, Banfi & Galasso",
+    "taxonid": 5126
+  },
+  "Hymenostylium recurvirostrum": {
+    "acceptedName": "Hymenostylium recurvirostrum (Hedw.) Dixon",
+    "taxonid": 36957
+  },
+  "Hypecoum littorale": {
+    "acceptedName": "Hypecoum littorale Wulfen",
+    "taxonid": 5167
+  },
+  "Hypericum balearicum": {
+    "acceptedName": "Hypericum balearicum L.",
+    "taxonid": 5172
+  },
+  "Hypericum hyssopifolium": {
+    "acceptedName": "Hypericum hyssopifolium Chaix",
+    "taxonid": 5310
+  },
+  "Iberis carnosa subsp. nafarroana": {
+    "acceptedName": "Iberis carnosa subsp. nafarroana Moreno",
+    "taxonid": 5338
+  },
+  "Iberis fontqueri": {
+    "acceptedName": "Iberis fontqueri Pau",
+    "taxonid": 5345
+  },
+  "Iberis microcarpa": null,
+  "Illecebrum verticillatum": {
+    "acceptedName": "Illecebrum verticillatum L.",
+    "taxonid": 5364
+  },
+  "Iris foetidissima": {
+    "acceptedName": "Iris foetidissima L.",
+    "taxonid": 3483
+  },
+  "Iris spuria subsp. maritima": {
+    "acceptedName": "Iris reichenbachiana Klatt",
+    "taxonid": 3485
+  },
+  "Isoetes duriaei": null,
+  "Isoetes histrix": {
+    "acceptedName": "Isoetes histrix Bory",
+    "taxonid": 5430
+  },
+  "Isoetes setaceum": {
+    "acceptedName": "Isoetes delilei Rothm.",
+    "taxonid": 82040
+  },
+  "Isoetes velatum subsp. velatum": null,
+  "Isolepis cernua": {
+    "acceptedName": "Isolepis cernua (Vahl) Roem. & Schult.",
+    "taxonid": 5383
+  },
+  "Isolepis pseudosetacea": {
+    "acceptedName": "Isolepis pseudosetacea (Daveau) Gand.",
+    "taxonid": 5385
+  },
+  "Isolepis setacea": {
+    "acceptedName": "Isolepis setacea (L.) R. Br.",
+    "taxonid": 5387
+  },
+  "Jasione blepharodon": {
+    "acceptedName": "Jasione blepharodon Boiss. & Reut.",
+    "taxonid": 80866
+  },
+  "Jasione cavanillesii": {
+    "acceptedName": "Jasione cavanillesii C. Vicioso",
+    "taxonid": 5434
+  },
+  "Jasione foliosa subsp. mansanetiana": null,
+  "Jasione foliosa subsp. minuta": {
+    "acceptedName": "Jasione foliosa subsp. minuta (Schult.) Font Quer",
+    "taxonid": 80867
+  },
+  "Jasione mariana": null,
+  "Jasione penicillata": {
+    "acceptedName": "Jasione penicillata Boiss.",
+    "taxonid": 5447
+  },
+  "Juncus subulatus": {
+    "acceptedName": "Juncus subulatus Forssk.",
+    "taxonid": 5491
+  },
+  "Juncus tenageia subsp. perpusillus": null,
+  "Juncus tingitanus": {
+    "acceptedName": "Juncus tingitanus Maire & Weiller",
+    "taxonid": 5494
+  },
+  "Juniperus communis notho subsp. guadarramica": null,
+  "Juniperus macrocarpa": {
+    "acceptedName": "Juniperus macrocarpa Sm.",
+    "taxonid": 5508
+  },
+  "Juniperus navicularis": {
+    "acceptedName": "Juniperus navicularis Gand.",
+    "taxonid": 5504
+  },
+  "Juniperus thurifera": {
+    "acceptedName": "Juniperus thurifera L.",
+    "taxonid": 5513
+  },
+  "Jurinea pinnata": {
+    "acceptedName": "Jurinea pinnata (Pers.) DC.",
+    "taxonid": 5519
+  },
+  "Kickxia cirrhosa": {
+    "acceptedName": "Kickxia cirrhosa (L.) Fritsch",
+    "taxonid": 5523
+  },
+  "Kickxia sagitata": null,
+  "Kickxia scoparia": {
+    "acceptedName": "Kickxia scoparia (Spreng.) G. Kunkel & Sunding",
+    "taxonid": 1013
+  },
+  "Kleinia nerifolia": null,
+  "Knautia arvensis subsp. collina": {
+    "acceptedName": "Knautia collina (Guérin) Jord.",
+    "taxonid": 5546
+  },
+  "Knautia subscaposa": {
+    "acceptedName": "Knautia subscaposa Boiss. & Reut.",
+    "taxonid": 5577
+  },
+  "Koelpinia linearis": {
+    "acceptedName": "Koelpinia linearis Pall.",
+    "taxonid": 400
+  },
+  "Krascheninnikovia ceratoides": {
+    "acceptedName": "Krascheninnikovia ceratoides (L.) Gueldenst.",
+    "taxonid": 5418
+  },
+  "Lagoecia cuminoides": {
+    "acceptedName": "Lagoecia cuminoides L.",
+    "taxonid": 5617
+  },
+  "Lamprothamnium papulosum": {
+    "acceptedName": "Lamprothamnium papulosum (K.Wallroth) J.Groves",
+    "taxonid": 32748
+  },
+  "Lasiopogon muscoides": {
+    "acceptedName": "Lasiopogon muscoides (Desf.) DC.",
+    "taxonid": 470
+  },
+  "Launaea fragilis subsp. fragilis": null,
+  "Lavandula angustifolia subsp. pyrenaica": {
+    "acceptedName": "Lavandula pyrenaica DC.",
+    "taxonid": 5730
+  },
+  "Lavandula dentata": {
+    "acceptedName": "Lavandula dentata L.",
+    "taxonid": 5731
+  },
+  "Lavandula sampaioana subsp. lusitanica": null,
+  "Leontodon farinosus": {
+    "acceptedName": "Leontodon farinosus Merino & Pau",
+    "taxonid": 31811
+  },
+  "Leontopodium alpinum": {
+    "acceptedName": "Leontopodium nivale subsp. alpinum (Cass.) Greuter",
+    "taxonid": 31815
+  },
+  "Leucanthemum favargeri": {
+    "acceptedName": "Leucanthemum favargeri Vogt",
+    "taxonid": 31820
+  },
+  "Leucanthemum gaudinii subsp. cantabricum": {
+    "acceptedName": "Leucanthemum cacuminis Vogt, Konowalik & Oberpr.",
+    "taxonid": 80499
+  },
+  "Leucanthemum graminifolium": null,
+  "Leucanthemum monspeliense": {
+    "acceptedName": "Leucanthemum delarbrei subsp. ruscinonense (Jeanb. & Timb.-Lagr.) Vogt, F. Wagner & Oberpr.",
+    "taxonid": 80714
+  },
+  "Leucanthemum pallens": {
+    "acceptedName": "Leucanthemum pallens (Perreym.) DC.",
+    "taxonid": 441
+  },
+  "Leucanthemum paludosum subsp decipiens": null,
+  "Leucanthemum vulgare subsp. eliasii": {
+    "acceptedName": "Leucanthemum eliasii (Sennen & Pau) Vogt, Konowalik & Oberpr.",
+    "taxonid": 80501
+  },
+  "Leucanthemum vulgare subsp. monserratianum": null,
+  "Leucojum valentinum": {
+    "acceptedName": "Acis valentina (Pau) Lledó, A.P. Davis & M.B. Crespo",
+    "taxonid": 5594
+  },
+  "Leysera leyseroides": {
+    "acceptedName": "Leysera leyseroides (Desf.) Maire",
+    "taxonid": 478
+  },
+  "Limonium album": {
+    "acceptedName": "Limonium album (Coincy) Sennen",
+    "taxonid": 5814
+  },
+  "Limonium algarvense": {
+    "acceptedName": "Limonium algarvense Erben",
+    "taxonid": 5816
+  },
+  "Limonium antonii-llorensii": {
+    "acceptedName": "Limonium antonii-llorensii L. Llorens",
+    "taxonid": 5818
+  },
+  "Limonium aragonense": {
+    "acceptedName": "Limonium aragonense (Debeaux) Font Quer",
+    "taxonid": 5819
+  },
+  "Limonium artruchium": {
+    "acceptedName": "Limonium artruchium Erben",
+    "taxonid": 5820
+  },
+  "Limonium balearicum": {
+    "acceptedName": "Limonium minutum (L.) Chaz.",
+    "taxonid": 5851
+  },
+  "Limonium biflorum": {
+    "acceptedName": "Limonium biflorum (Pignatti) Pignatti",
+    "taxonid": 5859
+  },
+  "Limonium boirae": {
+    "acceptedName": "Limonium boirae L. Llorens & Tébar",
+    "taxonid": 5861
+  },
+  "Limonium caprariense": {
+    "acceptedName": "Limonium caprariense subsp. caprariense",
+    "taxonid": 83021
+  },
+  "Limonium carpetanicum": {
+    "acceptedName": "Limonium carpetanicum Erben",
+    "taxonid": 5866
+  },
+  "Limonium carregadorense": {
+    "acceptedName": "Limonium pseudodictyocladum (Pignatti) L. Llorens",
+    "taxonid": 5879
+  },
+  "Limonium catalaunicum": {
+    "acceptedName": "Limonium catalaunicum (Willk. & Costa) Pignatti",
+    "taxonid": 5869
+  },
+  "Limonium cavanillesii": {
+    "acceptedName": "Limonium cavanillesii Erben",
+    "taxonid": 5870
+  },
+  "Limonium cofrentanum": {
+    "acceptedName": "Limonium cofrentanum Erben",
+    "taxonid": 5871
+  },
+  "Limonium companyonis": {
+    "acceptedName": "Limonium companyonis (Gren. & Billot) Kuntze",
+    "taxonid": 5759
+  },
+  "Limonium confusum": null,
+  "Limonium cordovillense": {
+    "acceptedName": "Limonium cordovillense Stübing & Cirujano",
+    "taxonid": 31834
+  },
+  "Limonium costae": {
+    "acceptedName": "Limonium costae (Willk.) Pignatti",
+    "taxonid": 5762
+  },
+  "Limonium daveaui": {
+    "acceptedName": "Limonium daveaui Erben",
+    "taxonid": 5763
+  },
+  "Limonium dichotomum": {
+    "acceptedName": "Limonium dichotomum (Cav.) Kuntze",
+    "taxonid": 5766
+  },
+  "Limonium diffusum": {
+    "acceptedName": "Myriolimon diffusum (Pourr.) Lledó, Erben & M.B. Crespo",
+    "taxonid": 5767
+  },
+  "Limonium dragonericum": {
+    "acceptedName": "Limonium minutum (L.) Chaz.",
+    "taxonid": 5851
+  },
+  "Limonium dufourii": {
+    "acceptedName": "Limonium dufourii (Girard) Kuntze",
+    "taxonid": 5803
+  },
+  "Limonium ebusitanum": {
+    "acceptedName": "Limonium minutum (L.) Chaz.",
+    "taxonid": 5851
+  },
+  "Limonium erectum": {
+    "acceptedName": "Limonium erectum Erben",
+    "taxonid": 5823
+  },
+  "Limonium ferulaceum": {
+    "acceptedName": "Myriolimon ferulaceum (L.) Lledó, Erben & M.B. Crespo",
+    "taxonid": 5825
+  },
+  "Limonium fontqueri": {
+    "acceptedName": "Limonium fontqueri (Pau) L. Llorens",
+    "taxonid": 5826
+  },
+  "Limonium furfuraceum": {
+    "acceptedName": "Limonium furfuraceum (Lag.) Kuntze",
+    "taxonid": 5827
+  },
+  "Limonium geronense": {
+    "acceptedName": "Limonium geronense Erben",
+    "taxonid": 5828
+  },
+  "Limonium gibertii": {
+    "acceptedName": "Limonium gibertii (Sennen) Sennen",
+    "taxonid": 5829
+  },
+  "Limonium girardianum": {
+    "acceptedName": "Limonium girardianum (Guss.) Fourr.",
+    "taxonid": 5830
+  },
+  "Limonium grosii": {
+    "acceptedName": "Limonium grosii L. Llorens",
+    "taxonid": 5831
+  },
+  "Limonium gymnesicum": {
+    "acceptedName": "Limonium majoricum Pignatti",
+    "taxonid": 5843
+  },
+  "Limonium heterospicatum": {
+    "acceptedName": "Limonium gibertii (Sennen) Sennen",
+    "taxonid": 5829
+  },
+  "Limonium hibericum": {
+    "acceptedName": "Limonium hibericum Erben",
+    "taxonid": 5834
+  },
+  "Limonium legrandii": null,
+  "Limonium lobetanicum": {
+    "acceptedName": "Limonium lobetanicum Erben",
+    "taxonid": 5840
+  },
+  "Limonium magallufianum": {
+    "acceptedName": "Limonium magallufianum L. Llorens",
+    "taxonid": 5842
+  },
+  "Limonium majoricum": {
+    "acceptedName": "Limonium majoricum Pignatti",
+    "taxonid": 5843
+  },
+  "Limonium majus": {
+    "acceptedName": "Limonium majus (Boiss.) Erben",
+    "taxonid": 5844
+  },
+  "Limonium malacitanum": {
+    "acceptedName": "Limonium malacitanum Díez Garretas",
+    "taxonid": 5845
+  },
+  "Limonium marisolii": {
+    "acceptedName": "Limonium marisolii L. Llorens",
+    "taxonid": 5846
+  },
+  "Limonium migjornense": {
+    "acceptedName": "Limonium migjornense L. Llorens",
+    "taxonid": 5847
+  },
+  "Limonium minoricense": {
+    "acceptedName": "Limonium minoricense Erben",
+    "taxonid": 5849
+  },
+  "Limonium minus": {
+    "acceptedName": "Limonium minus (Boiss.) Erben",
+    "taxonid": 5850
+  },
+  "Limonium minutum": {
+    "acceptedName": "Limonium minutum (L.) Chaz.",
+    "taxonid": 5851
+  },
+  "Limonium muradense": {
+    "acceptedName": "Limonium minutum (L.) Chaz.",
+    "taxonid": 5851
+  },
+  "Limonium pinillense": {
+    "acceptedName": "Limonium pinillense R. Roselló & Peris",
+    "taxonid": 24406
+  },
+  "Limonium portopetranum": {
+    "acceptedName": "Limonium minutum (L.) Chaz.",
+    "taxonid": 5851
+  },
+  "Limonium pseudarticulatum": {
+    "acceptedName": "Limonium pseudodictyocladum (Pignatti) L. Llorens",
+    "taxonid": 5879
+  },
+  "Limonium pseudebusitanum": {
+    "acceptedName": "Limonium minutum (L.) Chaz.",
+    "taxonid": 5851
+  },
+  "Limonium pseudodictyocladum": {
+    "acceptedName": "Limonium pseudodictyocladum (Pignatti) L. Llorens",
+    "taxonid": 5879
+  },
+  "Limonium quesadense": {
+    "acceptedName": "Limonium quesadense Erben",
+    "taxonid": 5880
+  },
+  "Limonium retusum": {
+    "acceptedName": "Limonium formenterae L. Llorens",
+    "taxonid": 31835
+  },
+  "Limonium revolutum": {
+    "acceptedName": "Limonium revolutum Erben",
+    "taxonid": 5882
+  },
+  "Limonium ruizii": {
+    "acceptedName": "Limonium ruizii (Font Quer) Fern. Casas",
+    "taxonid": 5884
+  },
+  "Limonium santapolense": {
+    "acceptedName": "Limonium santapolense Erben",
+    "taxonid": 5885
+  },
+  "Limonium saxicola": {
+    "acceptedName": "Limonium saxicola Erben",
+    "taxonid": 5886
+  },
+  "Limonium scorpioides": {
+    "acceptedName": "Limonium minutum (L.) Chaz.",
+    "taxonid": 5851
+  },
+  "Limonium soboliferum": {
+    "acceptedName": "Limonium soboliferum Erben",
+    "taxonid": 5889
+  },
+  "Limonium squarro sum": null,
+  "Limonium stenophyllum": {
+    "acceptedName": "Limonium stenophyllum Erben",
+    "taxonid": 5891
+  },
+  "Limonium sucronicum": {
+    "acceptedName": "Limonium sucronicum Erben",
+    "taxonid": 5893
+  },
+  "Limonium tenuicaule": {
+    "acceptedName": "Limonium minutum (L.) Chaz.",
+    "taxonid": 5851
+  },
+  "Limonium toletanum": {
+    "acceptedName": "Limonium toletanum Erben",
+    "taxonid": 5795
+  },
+  "Limonium tournefortii": {
+    "acceptedName": "Limonium tournefortii (Boiss.) Erben",
+    "taxonid": 5796
+  },
+  "Limonium tremolsii": {
+    "acceptedName": "Limonium tremolsii (Rouy) Guinea & Ceballos",
+    "taxonid": 5797
+  },
+  "Limonium viciosoi": {
+    "acceptedName": "Limonium viciosoi (Pau) Erben",
+    "taxonid": 5899
+  },
+  "Limonium wiedmannii": {
+    "acceptedName": "Limonium wiedmannii Erben",
+    "taxonid": 5902
+  },
+  "Linaria algarviana": {
+    "acceptedName": "Linaria algarviana Chav.",
+    "taxonid": 5911
+  },
+  "Linaria amethystea subsp. albiflora": {
+    "acceptedName": "Linaria amethystea subsp. albiflora (Boiss.) Casimiro-Sor. Solanas & Cabezudo",
+    "taxonid": 37522
+  },
+  "Linaria benitoi": {
+    "acceptedName": "Linaria oblongifolia subsp. benitoi (Fern. Casas) L. Sáez, M.B. Crespo, Juan & M. Bernal",
+    "taxonid": 5954
+  },
+  "Linaria ficalhoana": null,
+  "Linaria glauca subsp. aragonensis": {
+    "acceptedName": "Linaria oblongifolia subsp. aragonensis (Lange) D.A. Sutton",
+    "taxonid": 5953
+  },
+  "Linaria huteri": {
+    "acceptedName": "Linaria huteri Lange",
+    "taxonid": 5942
+  },
+  "Linaria micrantha": {
+    "acceptedName": "Linaria micrantha (Cav.) Hoffmanns. & Link",
+    "taxonid": 5946
+  },
+  "Linaria munbyana subsp. pygmaea": null,
+  "Linaria nigricans": {
+    "acceptedName": "Linaria nigricans Lange",
+    "taxonid": 5949
+  },
+  "Linaria oligantha": {
+    "acceptedName": "Linaria oligantha Lange",
+    "taxonid": 5956
+  },
+  "Linaria pedunculata var. lutea": null,
+  "Linaria pedunculata var. pedunculata": null,
+  "Linaria platycalyx": {
+    "acceptedName": "Linaria platycalyx Boiss.",
+    "taxonid": 5962
+  },
+  "Linaria salzmannii var. flava": null,
+  "Linaria saturejoides var. angustealata": null,
+  "Linaria saturejoides var. saturejoides": null,
+  "Linaria simplex": {
+    "acceptedName": "Linaria simplex Desf.",
+    "taxonid": 5975
+  },
+  "Linaria tursica": {
+    "acceptedName": "Linaria tursica Valdés & Cabezudo",
+    "taxonid": 5984
+  },
+  "Linaria verticillata": {
+    "acceptedName": "Linaria verticillata Boiss.",
+    "taxonid": 5985
+  },
+  "Linum campanulatum": {
+    "acceptedName": "Linum campanulatum L.",
+    "taxonid": 9849
+  },
+  "Linum suffruticosum subsp. differens": {
+    "acceptedName": "Linum suffruticosum subsp. differens (Pau) Rivas Goday & Rivas Mart.",
+    "taxonid": 80731
+  },
+  "Linum suffruticosum subsp. suffruticosum": null,
+  "Lithodora diffusa": {
+    "acceptedName": "Glandora diffusa (Lag.) D.C. Thomas",
+    "taxonid": 4985
+  },
+  "Loeflingia baetica var. tavaresiana": null,
+  "Lotus angustissimus": {
+    "acceptedName": "Lotus angustissimus L.",
+    "taxonid": 6053
+  },
+  "Lotus arenarius": {
+    "acceptedName": "Lotus arenarius Brot.",
+    "taxonid": 6054
+  },
+  "Lotus cytisoides": {
+    "acceptedName": "Lotus cytisoides L.",
+    "taxonid": 6065
+  },
+  "Lotus parviflorus": {
+    "acceptedName": "Lotus parviflorus Desf.",
+    "taxonid": 6073
+  },
+  "Ludwigia palustris": {
+    "acceptedName": "Ludwigia palustris (L.) Elliott",
+    "taxonid": 6078
+  },
+  "Lupinus micranthus": {
+    "acceptedName": "Lupinus micranthus Guss.",
+    "taxonid": 6091
+  },
+  "Luzula forsteri subsp. baetica": null,
+  "Lythrum baeticum": {
+    "acceptedName": "Lythrum baeticum Gonz. Albo",
+    "taxonid": 6117
+  },
+  "Lythrum borystenicum": null,
+  "Lythrum flexuosum": {
+    "acceptedName": "Lythrum flexuosum Lag.",
+    "taxonid": 6119
+  },
+  "Lythrum junceum": {
+    "acceptedName": "Lythrum junceum Banks & Sol.",
+    "taxonid": 6121
+  },
+  "Lythrum tribracteatum": {
+    "acceptedName": "Lythrum tribracteatum Spreng.",
+    "taxonid": 6126
+  },
+  "Malcolmia ramosissima": {
+    "acceptedName": "Marcus-Kochia ramosissima (Desf.) Al-Shehbaz",
+    "taxonid": 33092
+  },
+  "Malcolmia triloba subsp. gracillima": null,
+  "Malcolmia triloba subsp. triloba": null,
+  "Mantisalca duriaei": {
+    "acceptedName": "Mantisalca duriaei (Spach) Briq. & Cavill.",
+    "taxonid": 6213
+  },
+  "Mantisalca iserniana": null,
+  "Marsilea batardae": {
+    "acceptedName": "Marsilea batardae Launert",
+    "taxonid": 6224
+  },
+  "Medicago intertexta": {
+    "acceptedName": "Medicago intertexta (L.) Mill.",
+    "taxonid": 6271
+  },
+  "Mentha cervina": {
+    "acceptedName": "Mentha cervina L.",
+    "taxonid": 6327
+  },
+  "Microcnemum coralloides": {
+    "acceptedName": "Microcnemum coralloides (Loscos & J. Pardo) Buen",
+    "taxonid": 6179
+  },
+  "Micromeria filiformis": {
+    "acceptedName": "Micromeria filiformis (Aiton) Benth.",
+    "taxonid": 6331
+  },
+  "Micromeria fruticosa": {
+    "acceptedName": "Micromeria fruticosa (L.) Druce fruticosa",
+    "taxonid": 24931
+  },
+  "Micromeria hyssopifolia var. kuegleri": null,
+  "Micromeria teneriffae var. cordifolia": null,
+  "Minuartia mediterranea": {
+    "acceptedName": "Sabulina mediterranea (Link) Rchb.",
+    "taxonid": 6354
+  },
+  "Minuartia montana": {
+    "acceptedName": "Minuartia montana L.",
+    "taxonid": 6355
+  },
+  "Minuartia recurva var. thevenaei": null,
+  "Moehringia muscosa var. catalaunica": null,
+  "Murbeckiella boryi subsp. boryi": null,
+  "Murbeckiella boryi subsp. herminii": null,
+  "Myosurus sessilis": {
+    "acceptedName": "Myosurus sessilis S. Watson",
+    "taxonid": 6480
+  },
+  "Nanozostera noltii": {
+    "acceptedName": "Nanozostera noltei (Hornem.) Toml. & Posl.",
+    "taxonid": 9445
+  },
+  "Narcissus assoanus": {
+    "acceptedName": "Narcissus assoanus Schult. & Schult. f.",
+    "taxonid": 6423
+  },
+  "Narcissus auricolor": null,
+  "Narcissus calcicola": {
+    "acceptedName": "Narcissus calcicola Mendonça",
+    "taxonid": 6540
+  },
+  "Neckera crispa": {
+    "acceptedName": "Exsertotheca crispa (Hedw.) S.Olsson, Enroth & D.Quandt",
+    "taxonid": 36862
+  },
+  "Neochamaelea pulverulenta": {
+    "acceptedName": "Neochamaelea pulverulenta (Vent.) Erdtman",
+    "taxonid": 1374
+  },
+  "Neotorularia torulosa": {
+    "acceptedName": "Neotorularia torulosa (Desf.) Hedge & J. Léonard",
+    "taxonid": 6509
+  },
+  "Nepeta amethystina subsp. amethystina": null,
+  "Nepeta hispanica": {
+    "acceptedName": "Nepeta hispanica Boiss. & Reut.",
+    "taxonid": 6550
+  },
+  "Nepeta ucranica subsp. braunblanquetii": null,
+  "Nepeta ucranica subsp. hispanica": {
+    "acceptedName": "Nepeta hispanica Boiss. & Reut.",
+    "taxonid": 6550
+  },
+  "Nigritella nigra subsp. iberica": {
+    "acceptedName": "Nigritella austriaca subsp. iberica (Teppner & E. Klein) L. Sáez",
+    "taxonid": 6580
+  },
+  "Odontites kaliformis": {
+    "acceptedName": "Odontites kaliformis (Pourr. ex Willd.) Pau",
+    "taxonid": 6440
+  },
+  "Odontites longiflorus subsp. lateritia": null,
+  "Omphalodes commutata": {
+    "acceptedName": "Iberodes commutata (G. López) M. Serrano, R. Carbajal & S. Ortiz",
+    "taxonid": 33076
+  },
+  "Omphalodes linifolia": {
+    "acceptedName": "Iberodes linifolia (L.) M. Serrano, R. Carbajal & S. Ortiz",
+    "taxonid": 33077
+  },
+  "Onobrychis pyrenaica": {
+    "acceptedName": "Onobrychis pyrenaica (Sennen) Širj.",
+    "taxonid": 6665
+  },
+  "Onobrychis reuteri": {
+    "acceptedName": "Onobrychis reuteri Leresche",
+    "taxonid": 6666
+  },
+  "Ononis baetica var. baetica": null,
+  "Ononis baetica var. donanensis": null,
+  "Ononis broteriana": {
+    "acceptedName": "Ononis broteriana DC.",
+    "taxonid": 6677
+  },
+  "Ononis cossoniana": {
+    "acceptedName": "Ononis cossoniana Boiss. & Reut.",
+    "taxonid": 6680
+  },
+  "Ononis crispa": {
+    "acceptedName": "Ononis crispa L.",
+    "taxonid": 6681
+  },
+  "Ononis dentata": {
+    "acceptedName": "Ononis dentata Lowe",
+    "taxonid": 6683
+  },
+  "Ononis fruticosa var. microphylla": null,
+  "Ononis hackelii": {
+    "acceptedName": "Ononis hackelii Lange",
+    "taxonid": 6688
+  },
+  "Ononis pendula subsp. boissieri": {
+    "acceptedName": "Ononis pendula subsp. boissieri (Širj.) Devesa",
+    "taxonid": 6698
+  },
+  "Ononis sicula": {
+    "acceptedName": "Ononis sicula Guss.",
+    "taxonid": 6711
+  },
+  "Ononis tridentata subsp. tridentata": null,
+  "Onosma bubani": {
+    "acceptedName": "Onosma bubanii Stroh",
+    "taxonid": 6586
+  },
+  "Onosma fastigiata": {
+    "acceptedName": "Onosma fastigiata (Braun-Blanq.) Lacaita",
+    "taxonid": 6587
+  },
+  "Onosma pyrenaica": null,
+  "Ophrys bombyliflora": {
+    "acceptedName": "Ophrys bombyliflora Link",
+    "taxonid": 6606
+  },
+  "Ophrys incubacea": {
+    "acceptedName": "Ophrys incubacea Bianca",
+    "taxonid": 32807
+  },
+  "Orchis papilionacea subsp. grandiflora": {
+    "acceptedName": "Anacamptis papilionacea (L.) R.M. Bateman, Pridgeon & M.W. Chase",
+    "taxonid": 6837
+  },
+  "Oreochloa confusa": {
+    "acceptedName": "Oreochloa confusa (Coincy) Rouy",
+    "taxonid": 566
+  },
+  "Orobanche cernua": {
+    "acceptedName": "Orobanche cernua L.",
+    "taxonid": 6843
+  },
+  "Palustriella commutata": {
+    "acceptedName": "Palustriella commutata (Hedw.) Ochyra",
+    "taxonid": 37052
+  },
+  "Palustriella decipiens": {
+    "acceptedName": "Palustriella decipiens (De Not.) Ochyra",
+    "taxonid": 37053
+  },
+  "Palustriella falcata": {
+    "acceptedName": "Palustriella falcata (Brid.) Hedenäs",
+    "taxonid": 37054
+  },
+  "Pancratium canariense": {
+    "acceptedName": "Pancratium canariense Ker-Gawl.",
+    "taxonid": 6922
+  },
+  "Parolinia intermedia": {
+    "acceptedName": "Parolinia intermedia Svent. & Bramwell",
+    "taxonid": 1380
+  },
+  "Parolinia ornata": {
+    "acceptedName": "Parolinia ornata Webb",
+    "taxonid": 1381
+  },
+  "Paspalum dilatatum": {
+    "acceptedName": "Paspalum dilatatum Poir.",
+    "taxonid": 10084
+  },
+  "Paspalum distichum": {
+    "acceptedName": "Paspalum distichum L.",
+    "taxonid": 80897
+  },
+  "Paspalum vaginatum": {
+    "acceptedName": "Paspalum vaginatum Sw.",
+    "taxonid": 10086
+  },
+  "Pedicularis pyrenaica subsp. fallax": null,
+  "Pellaea calomelanos": {
+    "acceptedName": "Pellaea calomelanos (Swartz) Link",
+    "taxonid": 7028
+  },
+  "Periploca laevigata": {
+    "acceptedName": "Periploca angustifolia Labill.",
+    "taxonid": 7034
+  },
+  "Phaeoceros bulbiculosus": null,
+  "Philonotis calcarea": {
+    "acceptedName": "Philonotis calcarea (Bruch & Schimp.) Schimp.",
+    "taxonid": 23966
+  },
+  "Phlomis crinita subsp. composita": null,
+  "Phlomis purpurea subsp. purpurea": null,
+  "Pilularia minuta": {
+    "acceptedName": "Pilularia minuta Durieu",
+    "taxonid": 7108
+  },
+  "Pinus sylvestris subsp. nevadensis": {
+    "acceptedName": "Pinus sylvestris subsp. nevadensis (H. Christ) Heywood",
+    "taxonid": 31936
+  },
+  "Pinus x rhaetica notho var. borgiae": null,
+  "Pistorinia breviflora": {
+    "acceptedName": "Pistorinia breviflora Boiss.",
+    "taxonid": 7132
+  },
+  "Plantago discolor": null,
+  "Plantago loeflingii": {
+    "acceptedName": "Plantago loeflingii L.",
+    "taxonid": 7161
+  },
+  "Plantago notata": {
+    "acceptedName": "Plantago notata Lag.",
+    "taxonid": 7172
+  },
+  "Plantago ovata": {
+    "acceptedName": "Plantago ovata Forssk.",
+    "taxonid": 7173
+  },
+  "Plocama pendula": {
+    "acceptedName": "Plocama pendula Aiton",
+    "taxonid": 1413
+  },
+  "Poa minor subsp. nevadensis": {
+    "acceptedName": "Poa minor subsp. nevadensis Nannf.",
+    "taxonid": 80349
+  },
+  "Polygala rupestris": {
+    "acceptedName": "Polygala rupestris Pourr.",
+    "taxonid": 7206
+  },
+  "Polypodium x fontqueri": null,
+  "Polypodium x shivasiae": null,
+  "Polypogon viridis": {
+    "acceptedName": "Polypogon viridis (Gouan) Breistr.",
+    "taxonid": 10121
+  },
+  "Polypogon x ascendens": null,
+  "Primula acaulis subsp. balearica": {
+    "acceptedName": "Primula acaulis subsp. balearica (Willk.) Greuter & Burdet",
+    "taxonid": 7364
+  },
+  "Primula elatior": {
+    "acceptedName": "Primula elatior (L.) L.",
+    "taxonid": 7365
+  },
+  "Primula hirsuta": {
+    "acceptedName": "Primula hirsuta All.",
+    "taxonid": 7370
+  },
+  "Primula intricata subsp. intricata": null,
+  "Primula latifolia": {
+    "acceptedName": "Primula latifolia Lapeyr.",
+    "taxonid": 7373
+  },
+  "Pritzelago alpina subsp. auerswaldii": {
+    "acceptedName": "Hornungia alpina subsp. auerswaldii (Willk.) O. Appel",
+    "taxonid": 7375
+  },
+  "Prunus padus": {
+    "acceptedName": "Prunus padus L.",
+    "taxonid": 7391
+  },
+  "Pseudorlaya minuscula": {
+    "acceptedName": "Daucus minusculus Font Quer",
+    "taxonid": 7404
+  },
+  "Pseudoscabiosa grosii": {
+    "acceptedName": "Pseudoscabiosa grosii (Font Quer) Devesa",
+    "taxonid": 7407
+  },
+  "Pseudoscabiosa saxatilis": {
+    "acceptedName": "Pseudoscabiosa saxatilis (Cav.) Devesa",
+    "taxonid": 7408
+  },
+  "Pteranthus dichotomus": {
+    "acceptedName": "Pteranthus dichotomus Forssk.",
+    "taxonid": 7415
+  },
+  "Pteris vittata": {
+    "acceptedName": "Pteris vittata L.",
+    "taxonid": 7424
+  },
+  "Ptilostemon hispanicus": {
+    "acceptedName": "Ptilostemon hispanicus (Lam.) Greuter",
+    "taxonid": 7438
+  },
+  "Puccinellia caespitosa": {
+    "acceptedName": "Puccinellia caespitosa G. Monts. & J.M. Monts.",
+    "taxonid": 31949
+  },
+  "Puccinellia hispanica": {
+    "acceptedName": "Puccinellia hispanica Julià & J.M. Monts.",
+    "taxonid": 31950
+  },
+  "Puccinellia pungens": {
+    "acceptedName": "Puccinellia pungens (Pau) Paunero",
+    "taxonid": 24271
+  },
+  "Pulicaria paludosa": {
+    "acceptedName": "Pulicaria arabica subsp. hispanica (Boiss.) Murb.",
+    "taxonid": 31951
+  },
+  "Pulsatilla alpina subsp. cantabrica": {
+    "acceptedName": "Pulsatilla alpina subsp. cantabrica M. Laínz",
+    "taxonid": 7447
+  },
+  "Pycreus flavidus": {
+    "acceptedName": "Cyperus flavidus Retz.",
+    "taxonid": 80460
+  },
+  "Pyrus bourgaeana": {
+    "acceptedName": "Pyrus bourgaeana Decne.",
+    "taxonid": 7471
+  },
+  "Quercus broteroi": {
+    "acceptedName": "Quercus tlemcenensis Trab.",
+    "taxonid": 7481
+  },
+  "Quercus faginea subsp. faginea": null,
+  "Radiola linoides": {
+    "acceptedName": "Linum radiola L.",
+    "taxonid": 7485
+  },
+  "Ranunculus aquatilis": {
+    "acceptedName": "Ranunculus aquatilis L.",
+    "taxonid": 7500
+  },
+  "Ranunculus batrachioides subsp. brachypodus": {
+    "acceptedName": "Ranunculus batrachioides subsp. brachypodus G. López",
+    "taxonid": 7504
+  },
+  "Ranunculus baudotii": {
+    "acceptedName": "Ranunculus baudotii Godr.",
+    "taxonid": 7553
+  },
+  "Ranunculus lateriflorus": {
+    "acceptedName": "Ranunculus lateriflorus DC.",
+    "taxonid": 7527
+  },
+  "Ranunculus longipes": {
+    "acceptedName": "Ranunculus longipes Cutanda",
+    "taxonid": 7529
+  },
+  "Ranunculus malessanus": {
+    "acceptedName": "Ranunculus malessanus Degen & Hervier",
+    "taxonid": 7531
+  },
+  "Ranunculus nodiflorus": {
+    "acceptedName": "Ranunculus nodiflorus L.",
+    "taxonid": 7536
+  },
+  "Ranunculus peltatus": {
+    "acceptedName": "Ranunculus peltatus Schrank",
+    "taxonid": 7551
+  },
+  "Ranunculus pseudomillefoliatus": {
+    "acceptedName": "Ranunculus pseudomillefoliatus Grau",
+    "taxonid": 7558
+  },
+  "Ranunculus saniculifolius": {
+    "acceptedName": "Ranunculus saniculifolius Viv.",
+    "taxonid": 7554
+  },
+  "Ranunculus trichopyllus": null,
+  "Ranunculus tripartitus": {
+    "acceptedName": "Ranunculus tripartitus DC.",
+    "taxonid": 7573
+  },
+  "Reichardia famarae": {
+    "acceptedName": "Reichardia famarae Gallego & Talavera",
+    "taxonid": 1431
+  },
+  "Reichardia ligulata var. ligulata": null,
+  "Reseda scoparia": {
+    "acceptedName": "Reseda scoparia Willd.",
+    "taxonid": 1435
+  },
+  "Rhamnus borgiae": null,
+  "Rhamnus bourgaeanus": null,
+  "Rhamnus fontqueri": null,
+  "Ribes rubrum": {
+    "acceptedName": "Ribes rubrum L.",
+    "taxonid": 7785
+  },
+  "Riccia beyrichiana": {
+    "acceptedName": "Riccia beyrichiana Hampe ex Lehm. & Lindenb.",
+    "taxonid": 78685
+  },
+  "Riccia bifurca": {
+    "acceptedName": "Riccia bifurca Hoffm.",
+    "taxonid": 78697
+  },
+  "Riccia ciliifera": {
+    "acceptedName": "Riccia ciliifera Link ex Lindenb.",
+    "taxonid": 78616
+  },
+  "Rosmarino officinalis-": null,
+  "Rosmarinus palaui": null,
+  "Rosmarinus x mendizabali": null,
+  "Rostraria littorea subsp. salzmannii": null,
+  "Rubia agostinhoi": {
+    "acceptedName": "Rubia occidens Capelo, M. Seq. & H. Schaef.",
+    "taxonid": 37605
+  },
+  "Rubia balearica": {
+    "acceptedName": "Rubia balearica (Willk.) Porta",
+    "taxonid": 7821
+  },
+  "Rubia fruticosa subsp. melanocarpa": {
+    "acceptedName": "Rubia fruticosa subsp. melanocarpa (Bornm.) Bramwell",
+    "taxonid": 651
+  },
+  "Rumex sanguineus": {
+    "acceptedName": "Rumex sanguineus L.",
+    "taxonid": 7724
+  },
+  "Ruppia drepanensis": {
+    "acceptedName": "Ruppia drepanensis Guss.",
+    "taxonid": 7850
+  },
+  "Ruscus hypophyllum": {
+    "acceptedName": "Ruscus hypophyllum L.",
+    "taxonid": 25024
+  },
+  "Rutheopsis herbanica": {
+    "acceptedName": "Rutheopsis herbanica (Bolle) A. Hansen & G. Kunkel",
+    "taxonid": 1447
+  },
+  "Salicornia dolichostachya": {
+    "acceptedName": "Salicornia procumbens subsp. procumbens",
+    "taxonid": 83458
+  },
+  "Salicornia lutescens": {
+    "acceptedName": "Salicornia procumbens subsp. procumbens",
+    "taxonid": 83458
+  },
+  "Salicornia pusilla": null,
+  "Salicornia ramosissima": {
+    "acceptedName": "Salicornia europaea L. subsp. europaea",
+    "taxonid": 7880
+  },
+  "Salix canariensis": {
+    "acceptedName": "Salix canariensis Link",
+    "taxonid": 1448
+  },
+  "Salix neotricha": {
+    "acceptedName": "Salix neotricha Goerz",
+    "taxonid": 37609
+  },
+  "Salix salviifolia subsp. australis": {
+    "acceptedName": "Salix salviifolia Brot.",
+    "taxonid": 7905
+  },
+  "Salix salviifolia subsp. salviifolia": {
+    "acceptedName": "Salix salviifolia Brot.",
+    "taxonid": 7905
+  },
+  "Salix tarraconensis": {
+    "acceptedName": "Salix tarraconensis Pau",
+    "taxonid": 7906
+  },
+  "Salix triandra subsp. discolor": {
+    "acceptedName": "Salix triandra L.",
+    "taxonid": 7907
+  },
+  "Salix x legionensis": null,
+  "Salix x matritensis": null,
+  "Salix x paui": null,
+  "Salix x pseudosalviifolia": null,
+  "Salix x secalliana": null,
+  "Salvia blancoana subsp. blancoana": null,
+  "Salvia lavandulifolia subsp. lavandulifolia": null,
+  "Salvia lavandulifolia subsp. pyrenaeorum": {
+    "acceptedName": "Salvia lavandulifolia Vahl subsp. lavandulifolia",
+    "taxonid": 7931
+  },
+  "Salvia lavandulifolia subsp. vellerea": {
+    "acceptedName": "Salvia lavandulifolia subsp. vellerea (Cuatrec.) Rivas Goday & Rivas Mart. ",
+    "taxonid": 7929
+  },
+  "Salvia oxyodon": null,
+  "Salvia phlomoides subsp. boissieri": {
+    "acceptedName": "Salvia phlomoides subsp. boissieri (De Noé) Rosúa & Blanca",
+    "taxonid": 7936
+  },
+  "Salvia phlomoides subsp. phlomoides": null,
+  "Salvia pseudovellerea": null,
+  "Sanguisorba ancistroides subsp. parviflora": {
+    "acceptedName": "Poterium ancistroides Desf.",
+    "taxonid": 7955
+  },
+  "Saponaria glutinosa subsp. zapateri": {
+    "acceptedName": "Saponaria glutinosa M. Bieb.",
+    "taxonid": 7971
+  },
+  "Satureja fruticosa": {
+    "acceptedName": "Clinopodium marifolium (Cav.) Melnikov",
+    "taxonid": 6332
+  },
+  "Satureja graeca var. micrantha": null,
+  "Satureja intricata subsp. gracilis": {
+    "acceptedName": "Satureja intricata Lange",
+    "taxonid": 7991
+  },
+  "Satureja microphylla subsp. rodriguezii": null,
+  "Satureja montana subsp. innota": {
+    "acceptedName": "Satureja innota (Pau) Font Quer",
+    "taxonid": 7990
+  },
+  "Satureja nervosa": null,
+  "Saxifraga aizoides": {
+    "acceptedName": "Saxifraga aizoides L.",
+    "taxonid": 7706
+  },
+  "Saxifraga almeriensis": {
+    "acceptedName": "Saxifraga camposii subsp. leptophylla (Willk.) D.A. Webb",
+    "taxonid": 7997
+  },
+  "Saxifraga aretioides subsp. aretioides": null,
+  "Saxifraga aspera": {
+    "acceptedName": "Saxifraga aspera L.",
+    "taxonid": 7710
+  },
+  "Saxifraga catalaunica": {
+    "acceptedName": "Saxifraga catalaunica Boiss. & Reut.",
+    "taxonid": 8001
+  },
+  "Saxifraga conifera": {
+    "acceptedName": "Saxifraga conifera Coss. & Durieu",
+    "taxonid": 8004
+  },
+  "Saxifraga cotyledon": {
+    "acceptedName": "Saxifraga cotyledon L.",
+    "taxonid": 8007
+  },
+  "Saxifraga cuneata": {
+    "acceptedName": "Saxifraga cuneata Willd.",
+    "taxonid": 8008
+  },
+  "Saxifraga fragilis var. fragilis": null,
+  "Saxifraga fragilis var. valentina": null,
+  "Saxifraga fragosoi": {
+    "acceptedName": "Saxifraga fragosoi Sennen",
+    "taxonid": 8016
+  },
+  "Saxifraga genesiana": {
+    "acceptedName": "Saxifraga genesiana P. Vargas ",
+    "taxonid": 8018
+  },
+  "Saxifraga hariotii": {
+    "acceptedName": "Saxifraga hariotii Luizet & Soulié",
+    "taxonid": 8023
+  },
+  "Saxifraga hirsuta subsp. paucicrenata": {
+    "acceptedName": "Saxifraga hirsuta subsp. paucicrenata (Gillot) D.A. Webb",
+    "taxonid": 8026
+  },
+  "Saxifraga intricata": {
+    "acceptedName": "Saxifraga intricata Lapeyr.",
+    "taxonid": 8027
+  },
+  "Saxifraga longifolia var. aitanica": null,
+  "Saxifraga losae": {
+    "acceptedName": "Saxifraga losae Luizet",
+    "taxonid": 8032
+  },
+  "Saxifraga media": {
+    "acceptedName": "Saxifraga media Gouan",
+    "taxonid": 8033
+  },
+  "Saxifraga moncayensis": {
+    "acceptedName": "Saxifraga moncayensis D.A. Webb",
+    "taxonid": 8034
+  },
+  "Saxifraga nevadensis": {
+    "acceptedName": "Saxifraga nevadensis Boiss.",
+    "taxonid": 8036
+  },
+  "Saxifraga orogredensis": null,
+  "Saxifraga pentadactylis subsp. pentadactylis": null,
+  "Saxifraga pentadactylis subsp. willkommiana": {
+    "acceptedName": "Saxifraga pentadactylis subsp. willkommiana (Willk.) Rivas Mart.",
+    "taxonid": 8044
+  },
+  "Saxifraga pubescens": {
+    "acceptedName": "Saxifraga pubescens Pourr.",
+    "taxonid": 8046
+  },
+  "Saxifraga retusa": {
+    "acceptedName": "Saxifraga retusa Gouan",
+    "taxonid": 8049
+  },
+  "Saxifraga rigoi": {
+    "acceptedName": "Saxifraga rigoi Porta",
+    "taxonid": 8052
+  },
+  "Saxifraga trifurcata": {
+    "acceptedName": "Saxifraga trifurcata Schrad.",
+    "taxonid": 8061
+  },
+  "Saxifraga vayredana": {
+    "acceptedName": "Saxifraga vayredana Luizet",
+    "taxonid": 8063
+  },
+  "Saxifraga x alejandrei": null,
+  "Saxifraga x celtiberica": null,
+  "Saxifraga x davidis-webbii": null,
+  "Saxifraga x faucicola": null,
+  "Saxifraga x fontqueri": null,
+  "Saxifraga x luteopurpurea": null,
+  "Saxifraga x rivasmartinezii": null,
+  "Saxifraga x verguinii": null,
+  "Scabiosa columbaria subsp. cinerea. Aquilegia pyrenaica. Otras especies frecuentes son Androsace villosa": null,
+  "Scabiosa cretica": {
+    "acceptedName": "Lomelosia cretica (L.) Greuter & Burdet",
+    "taxonid": 6022
+  },
+  "Scabiosa macropoda": null,
+  "Scabiosa saxatilis": {
+    "acceptedName": "Scabiosa saxatilis",
+    "taxonid": 79575
+  },
+  "Scabiosa stellata subsp. simplex": {
+    "acceptedName": "Lomelosia simplex (Desf.) Raf.",
+    "taxonid": 6029
+  },
+  "Scilla haemorrhoidalis": {
+    "acceptedName": "Scilla haemorrhoidalis Webb & Berthel.",
+    "taxonid": 8118
+  },
+  "Scilla monophyllos": {
+    "acceptedName": "Scilla monophyllos Link",
+    "taxonid": 8122
+  },
+  "Scorzonera baetica": {
+    "acceptedName": "Pseudopodospermum boeticum (DC.) Zaika, Sukhor. & N. Kilian",
+    "taxonid": 702
+  },
+  "Scorzonera hirsuta": {
+    "acceptedName": "Gelasia hirsuta (Gouan) Zaika, Sukhor. & N. Kilian",
+    "taxonid": 703
+  },
+  "Scorzonera parviflora": {
+    "acceptedName": "Scorzonera parviflora Jacq.",
+    "taxonid": 704
+  },
+  "Scorzonera reverchonii": {
+    "acceptedName": "Pseudopodospermum reverchonii (Hervier) Zaika, Sukhor. & N. Kilian",
+    "taxonid": 705
+  },
+  "Scrophularia hirta": null,
+  "Scrophularia laevigata": {
+    "acceptedName": "Scrophularia laevigata Vahl",
+    "taxonid": 82375
+  },
+  "Scrophularia scorodonia": {
+    "acceptedName": "Scrophularia scorodonia L.",
+    "taxonid": 8170
+  },
+  "Sedum lagascae": {
+    "acceptedName": "Sedum lagascae Pau",
+    "taxonid": 8213
+  },
+  "Sedum sediforme subsp. sediforme": null,
+  "Sedum sexangulare": {
+    "acceptedName": "Sedum sexangulare L.",
+    "taxonid": 32007
+  },
+  "Sempervivum minutum": {
+    "acceptedName": "Sempervivum minutum (Willk.) Pau",
+    "taxonid": 8242
+  },
+  "Senecio auricula subsp. auricula": {
+    "acceptedName": "Jacobaea auricula (Coss.) Pelser",
+    "taxonid": 674
+  },
+  "Senecio auricula subsp. castellanus": {
+    "acceptedName": "Jacobaea auricula (Coss.) Pelser",
+    "taxonid": 674
+  },
+  "Senecio auricula subsp. sicoricus": {
+    "acceptedName": "Jacobaea auricula (Coss.) Pelser",
+    "taxonid": 674
+  },
+  "Senecio bayonensis": null,
+  "Senecio leucanthemifolius subsp. crassifolius": null,
+  "Senecio provincialis var. corbariensis": null,
+  "Serratula baetica subsp. baetica": null,
+  "Serratula baetica subsp. lusitanica var. lusitanica": null,
+  "Serratula baetica subsp. lusitanica var. sampaiana": null,
+  "Serratula leucantha subsp. neglecta": null,
+  "Serratula monardii var. algarviensis": null,
+  "Serratula monardii var. monardii": null,
+  "Seseli intricatum": {
+    "acceptedName": "Seseli intricatum Boiss.",
+    "taxonid": 8092
+  },
+  "Seseli nanum": {
+    "acceptedName": "Seseli montanum L. subsp. montanum",
+    "taxonid": 8096
+  },
+  "Seseli webbii": {
+    "acceptedName": "Rutheopsis tortuosa (Webb & Berthel.) Frank., Reyes-Bet., Reduron & Spalik",
+    "taxonid": 33047
+  },
+  "Sesleria albicans y otras": null,
+  "Sesleria argentea subsp. hispanica": null,
+  "Sesleria caerulea subsp. elegantissima": null,
+  "Sesleria insularis": {
+    "acceptedName": "Sesleria insularis Sommier",
+    "taxonid": 25059
+  },
+  "Sideritis algarbiensis subsp. lusitanica": null,
+  "Sideritis brachycalix": null,
+  "Sideritis chamaedryfolia subsp. chamaedryfolia": {
+    "acceptedName": "Sideritis chamaedryfolia subsp. chamaedryfolia Cav.",
+    "taxonid": 32020
+  },
+  "Sideritis chamaedryfolia subsp. littoralis": {
+    "acceptedName": "Sideritis chamaedryfolia subsp. littoralis M.B. Crespo, Solanas, De la Torre & Payá",
+    "taxonid": 32021
+  },
+  "Sideritis dendrochahorra": {
+    "acceptedName": "Sideritis dendrochahorra Bolle",
+    "taxonid": 750
+  },
+  "Sideritis eriocephala": {
+    "acceptedName": "Sideritis eriocephala Negrín & P. Pérez",
+    "taxonid": 1468
+  },
+  "Sideritis flaviflora": {
+    "acceptedName": "Sideritis flaviflora (Font Quer & Cuatrec.) Obón & D. Rivera",
+    "taxonid": 94584
+  },
+  "Sideritis glauca": {
+    "acceptedName": "Sideritis glauca Cav.",
+    "taxonid": 8328
+  },
+  "Sideritis grandiflora": {
+    "acceptedName": "Sideritis grandiflora Benth.",
+    "taxonid": 8329
+  },
+  "Sideritis hyssopifolia subsp. castellana": null,
+  "Sideritis hyssopifolia subsp. eynensis": null,
+  "Sideritis hyssopifolia subsp. guillonii": {
+    "acceptedName": "Sideritis hyssopifolia L.",
+    "taxonid": 8331
+  },
+  "Sideritis hyssopifolia subsp. santanderina": null,
+  "Sideritis ilicifolia subsp. cardoana": {
+    "acceptedName": "Sideritis ilicifolia Willd.",
+    "taxonid": 8333
+  },
+  "Sideritis leucantha subsp. albicaulis": null,
+  "Sideritis leucantha subsp. incana": null,
+  "Sideritis lurida subsp. relegata": null,
+  "Sideritis murgetana subsp. littoralis": {
+    "acceptedName": "Sideritis leucantha Cav.",
+    "taxonid": 8340
+  },
+  "Sideritis murgetana subsp. pauciflora": null,
+  "Sideritis osteoxyla": null,
+  "Sideritis ovata": {
+    "acceptedName": "Sideritis ovata Cav.",
+    "taxonid": 8345
+  },
+  "Sideritis perezlarae": null,
+  "Sideritis pungens subsp. pungens": null,
+  "Sideritis pusilla subsp. pusilla": {
+    "acceptedName": "Sideritis pusilla subsp. pusilla",
+    "taxonid": 83287
+  },
+  "Sideritis reverchonii": {
+    "acceptedName": "Sideritis tragoriganum subsp. reverchonii (Willk.) R. Roselló, P.P. Ferrer, Gómez Nav., Laguna & J.B. Peris",
+    "taxonid": 8349
+  },
+  "Sideritis serrata": {
+    "acceptedName": "Sideritis serrata Lag.",
+    "taxonid": 8351
+  },
+  "Sideritis stachyoides": null,
+  "Sideritis tragoriganum subsp. tragoriganum": {
+    "acceptedName": "Sideritis tragoriganum subsp. tragoriganum",
+    "taxonid": 95040
+  },
+  "Silene acutifolia": {
+    "acceptedName": "Silene acutifolia Rohrb.",
+    "taxonid": 8324
+  },
+  "Silene borderei": {
+    "acceptedName": "Silene borderei Jord.",
+    "taxonid": 8288
+  },
+  "Silene boryi subsp. barduliensis": {
+    "acceptedName": "Silene boryi Boiss.",
+    "taxonid": 8289
+  },
+  "Silene boryi subsp. penyalarensis": {
+    "acceptedName": "Silene boryi Boiss.",
+    "taxonid": 8289
+  },
+  "Silene cambessedesii": {
+    "acceptedName": "Silene cambessedesii Boiss. & Reut.",
+    "taxonid": 8290
+  },
+  "Silene ciliata subsp. arvatica": null,
+  "Silene gaditana": {
+    "acceptedName": "Silene gaditana Talavera & Bocquet",
+    "taxonid": 8392
+  },
+  "Silene germana": {
+    "acceptedName": "Silene germana J. Gay",
+    "taxonid": 8394
+  },
+  "Silene gracilis": {
+    "acceptedName": "Silene gracilis DC.",
+    "taxonid": 8395
+  },
+  "Silene hifacensis": {
+    "acceptedName": "Silene hifacensis Willk.",
+    "taxonid": 8396
+  },
+  "Silene inaperta subsp. serpentinicola": {
+    "acceptedName": "Silene inaperta subsp. serpentinicola Talavera",
+    "taxonid": 8399
+  },
+  "Silene littorea subsp. ascendens": null,
+  "Silene littorea subsp. littorea": null,
+  "Silene mollissima": {
+    "acceptedName": "Silene mollissima (L.) Pers.",
+    "taxonid": 8415
+  },
+  "Silene psammitis subsp. lasiostyla": {
+    "acceptedName": "Silene psammitis subsp. lasiostyla (Boiss.) Rivas Goday",
+    "taxonid": 8432
+  },
+  "Silene sedoides": {
+    "acceptedName": "Silene sedoides Poir.",
+    "taxonid": 8365
+  },
+  "Silene sericea var. balearica": null,
+  "Silene stockeni": {
+    "acceptedName": "Silene stockenii Chater",
+    "taxonid": 8367
+  },
+  "Sisymbrella aspera": {
+    "acceptedName": "Sisymbrella aspera (L.) Spach",
+    "taxonid": 8444
+  },
+  "Soldanella alpina subsp. cantabrica": {
+    "acceptedName": "Soldanella alpina subsp. cantabrica Kress",
+    "taxonid": 8493
+  },
+  "Solenopsis laurentia": {
+    "acceptedName": "Solenopsis laurentia (L.) C. Presl",
+    "taxonid": 8502
+  },
+  "Sonchus crassifolius": {
+    "acceptedName": "Sonchus crassifolius Willd.",
+    "taxonid": 10138
+  },
+  "Spartocytisus supranubius": {
+    "acceptedName": "Spartocytisus supranubius (L. f.) G. Kunkel",
+    "taxonid": 1354
+  },
+  "Staehelina baetica": {
+    "acceptedName": "Staehelina baetica DC.",
+    "taxonid": 8628
+  },
+  "Stauracanthus genistoides": {
+    "acceptedName": "Stauracanthus genistoides (Brot.) Samp.",
+    "taxonid": 8632
+  },
+  "Stauracanthus spectabilis subsp. spectabilis": null,
+  "Stellaria nemorum subsp. montana": {
+    "acceptedName": "Stellaria nemorum subsp. montana (Pierrat) Berher",
+    "taxonid": 8645
+  },
+  "Stemmacantha cynaroides": {
+    "acceptedName": "Rhaponticum canariense DC.",
+    "taxonid": 26765
+  },
+  "Stipa pauneroana": null,
+  "Suaeda braun-blanquetii": null,
+  "Suaeda vermiculata": {
+    "acceptedName": "Suaeda vermiculata Forssk. ex J.F.Gmel.",
+    "taxonid": 82439
+  },
+  "Suaeda x genesiana": null,
+  "Sutera canariensis": {
+    "acceptedName": "Camptoloma canariense (Webb & Berthel.) Hilliard",
+    "taxonid": 863
+  },
+  "Tamarix dalmatica": {
+    "acceptedName": "Tamarix dalmatica B.R. Baum",
+    "taxonid": 8550
+  },
+  "Tamarix gallica var. gallica": null,
+  "Taraxacum aragonicum": {
+    "acceptedName": "Taraxacum aragonicum Sahlin",
+    "taxonid": 8705
+  },
+  "Teline patens": {
+    "acceptedName": "Cytisus heterochrous Colmeiro",
+    "taxonid": 8664
+  },
+  "Tetragonolobus maritimus var. maritimus": null,
+  "Teucrium aragonense subsp. aragonense": null,
+  "Teucrium aragonense subsp. integrifolium": null,
+  "Teucrium buxifolium subsp. thymifolium": {
+    "acceptedName": "Teucrium thymifolium Schreb.",
+    "taxonid": 8844
+  },
+  "Teucrium campanulatum": {
+    "acceptedName": "Teucrium campanulatum L.",
+    "taxonid": 8783
+  },
+  "Teucrium cavanillesianum": {
+    "acceptedName": "Teucrium eriocephalum subsp. almeriense (C.E. Hubb. & Sandwith) T. Navarro & Rosúa",
+    "taxonid": 8791
+  },
+  "Teucrium charidemi": {
+    "acceptedName": "Teucrium charidemi Sandwith",
+    "taxonid": 8714
+  },
+  "Teucrium compactum subsp. rixanense": null,
+  "Teucrium eriocephalum subsp. almeriense": {
+    "acceptedName": "Teucrium eriocephalum subsp. almeriense (C.E. Hubb. & Sandwith) T. Navarro & Rosúa",
+    "taxonid": 8791
+  },
+  "Teucrium eriocephalum subsp. eriocephalum": null,
+  "Teucrium flavum": {
+    "acceptedName": "Teucrium flavum L.",
+    "taxonid": 8795
+  },
+  "Teucrium fragile": {
+    "acceptedName": "Teucrium fragile Boiss.",
+    "taxonid": 8798
+  },
+  "Teucrium hifacense": {
+    "acceptedName": "Teucrium hifacense Pau",
+    "taxonid": 8805
+  },
+  "Teucrium intricatum": {
+    "acceptedName": "Teucrium intricatum Lange",
+    "taxonid": 8807
+  },
+  "Teucrium luteum subsp. contortostylum": null,
+  "Teucrium martinii": {
+    "acceptedName": "Teucrium martinii Cirujano & al.",
+    "taxonid": 32171
+  },
+  "Teucrium marum subsp. spinescens": {
+    "acceptedName": "Teucrium subspinosum Willd.",
+    "taxonid": 8842
+  },
+  "Teucrium marum subsp. subspinosum": {
+    "acceptedName": "Teucrium subspinosum Willd.",
+    "taxonid": 8842
+  },
+  "Teucrium murcicum subsp. hieronymi": null,
+  "Teucrium rivasii": {
+    "acceptedName": "Teucrium buxifolium subsp. rivasii (Greuter & Burdet) M.B. Crespo, Mateo & Güemes",
+    "taxonid": 8832
+  },
+  "Teucrium rivasmartinezii": {
+    "acceptedName": "Teucrium rivasmartinezii Alcaraz, Garre, Mart. Parras & Peinado",
+    "taxonid": 8833
+  },
+  "Teucrium salviastrum": {
+    "acceptedName": "Teucrium salviastrum Schreb.",
+    "taxonid": 8836
+  },
+  "Teucrium scorodonia subsp. baeticum": {
+    "acceptedName": "Teucrium pseudoscorodonia Desf.",
+    "taxonid": 8824
+  },
+  "Teucrium webbianum": {
+    "acceptedName": "Teucrium webbianum Boiss.",
+    "taxonid": 8847
+  },
+  "Teucrium x coeleste": null,
+  "Teucrium x guemesii": null,
+  "Teucrium x navarroi": null,
+  "Teucrium x portusmagnii": null,
+  "Teucrium x pseudothymifolium": null,
+  "Thalictrum macrocarpum": {
+    "acceptedName": "Thalictrum macrocarpum Gren.",
+    "taxonid": 8856
+  },
+  "Thamnobryum alopecurum var. gracillimum": null,
+  "Thapsia garganica": {
+    "acceptedName": "Thapsia garganica L.",
+    "taxonid": 8867
+  },
+  "Thesium catalaunicum": {
+    "acceptedName": "Thesium catalaunicum Pedrol & M. Laínz",
+    "taxonid": 8677
+  },
+  "Thymbra capitata": {
+    "acceptedName": "Thymbra capitata (L.) Cav.",
+    "taxonid": 8692
+  },
+  "Thymelaea dioica": {
+    "acceptedName": "Thymelaea dioica (Gouan) All.",
+    "taxonid": 8700
+  },
+  "Thymelaea nivalis": {
+    "acceptedName": "Thymelaea nivalis (Ramond) Meissn.",
+    "taxonid": 8891
+  },
+  "Thymelaea pubescens subsp. pubescens": null,
+  "Thymelaea ruizii": {
+    "acceptedName": "Thymelaea ruizii Loscos",
+    "taxonid": 8883
+  },
+  "Thymelaea sanamunda": {
+    "acceptedName": "Thymelaea sanamunda All.",
+    "taxonid": 8885
+  },
+  "Thymus albicans subsp. albicans": null,
+  "Thymus albicans subsp. donyanae": null,
+  "Thymus camphoratus": {
+    "acceptedName": "Thymus camphoratus Hoffmanns. & Link",
+    "taxonid": 8900
+  },
+  "Thymus capitellatus": {
+    "acceptedName": "Thymus capitellatus Hoffmanns. & Link",
+    "taxonid": 8901
+  },
+  "Thymus clandestinus": null,
+  "Thymus fontqueri": {
+    "acceptedName": "Thymus fontqueri (Jalas) Molero & Rovira",
+    "taxonid": 8903
+  },
+  "Thymus longiflorus subsp. ciliatus": {
+    "acceptedName": "Thymus moroderi Mart. Mart.",
+    "taxonid": 8932
+  },
+  "Thymus longiflorus subsp. longiflorus": {
+    "acceptedName": "Thymus longiflorus Boiss.",
+    "taxonid": 8924
+  },
+  "Thymus lotocephalus": {
+    "acceptedName": "Thymus lotocephalus G. López & R. Morales",
+    "taxonid": 8926
+  },
+  "Thymus mastigophorus": {
+    "acceptedName": "Thymus mastigophorus Lacaita",
+    "taxonid": 8930
+  },
+  "Thymus membranaceus subsp. murcicus": null,
+  "Thymus orospedanus": {
+    "acceptedName": "Thymus orospedanus Villar",
+    "taxonid": 8934
+  },
+  "Thymus richardii var. ebusitanus": null,
+  "Thymus richardii var. richardii": null,
+  "Thymus sylvestris": null,
+  "Thymus tenuifolius": null,
+  "Thymus willkommii": {
+    "acceptedName": "Thymus willkommii Ronniger",
+    "taxonid": 8955
+  },
+  "Thymus x diazii": null,
+  "Thymus x paradoxus": null,
+  "Tolypella glomerata": null,
+  "Tolypella hispanica": {
+    "acceptedName": "Tolypella hispanica Nordst. ex T.F.Allen, 1888",
+    "taxonid": 80203
+  },
+  "Tolypella salina": {
+    "acceptedName": "Tolypella salina R.Corillion",
+    "taxonid": 32923
+  },
+  "Tortella tortuosa": {
+    "acceptedName": "Tortella tortuosa (Hedw.) Limpr.",
+    "taxonid": 37282
+  },
+  "Trifolium ornithopodioides": {
+    "acceptedName": "Trifolium ornithopodioides L.",
+    "taxonid": 9034
+  },
+  "Trifolium subterraneum subsp. subterraneum": null,
+  "Trigonella gladiata": {
+    "acceptedName": "Trigonella gladiata M. Bieb.",
+    "taxonid": 9079
+  },
+  "Trisetum cavanillesianum": {
+    "acceptedName": "Trisetum velutinum Boiss.",
+    "taxonid": 10160
+  },
+  "Trisetum dufourei": {
+    "acceptedName": "Trisetum dufourei Boiss.",
+    "taxonid": 32072
+  },
+  "Ulex australis subsp. australis": null,
+  "Ulex australis subsp. welwitschianus": {
+    "acceptedName": "Ulex australis subsp. welwitschianus (Planch.) Esp. Santo, Cubas, Lousã, C. Pardo & J.C. Costa",
+    "taxonid": 9121
+  },
+  "Ulex baeticus subsp. baeticus": null,
+  "Ulex baeticus subsp. scaber": {
+    "acceptedName": "Ulex baeticus subsp. scaber (Kunze) Cubas",
+    "taxonid": 9124
+  },
+  "Ulex densus": {
+    "acceptedName": "Ulex densus Webb",
+    "taxonid": 9127
+  },
+  "Ulex subsericeus": null,
+  "Vella lucentina": {
+    "acceptedName": "Vella lucentina M.B. Crespo",
+    "taxonid": 9262
+  },
+  "Verbena supina": {
+    "acceptedName": "Verbena supina L.",
+    "taxonid": 9307
+  },
+  "Veronica tenuifolia subsp. tenuifolia": null,
+  "Vincetoxicum hirundinaria var. apodum": null,
+  "Viola biflora": {
+    "acceptedName": "Viola biflora L.",
+    "taxonid": 9387
+  },
+  "Viola cheiranthifolia": {
+    "acceptedName": "Viola cheiranthifolia Humb. & Bonpl.",
+    "taxonid": 1509
+  },
+  "Viola palmensis": {
+    "acceptedName": "Viola palmensis Webb & Berthel.",
+    "taxonid": 1510
+  },
+  "Vitex agnus-castus": {
+    "acceptedName": "Vitex agnus-castus L.",
+    "taxonid": 9424
+  },
+  "Vulpia fontquerana": {
+    "acceptedName": "Festuca donyanae Devesa & Martínez-Sagarra",
+    "taxonid": 80569
+  },
+  "Vulpio unilateris-Minuartie- Alyssum alyssoides subsp. hispanicum": null,
+  "Wahlenbergia nutabunda": {
+    "acceptedName": "Wahlenbergia lobelioides subsp. nutabunda (Guss.) Murb.",
+    "taxonid": 9432
+  },
+  "Woodsia alpina": {
+    "acceptedName": "Woodsia alpina (Bolton) S.F. Gray",
+    "taxonid": 9451
+  },
+  "Woodsia pulchella": {
+    "acceptedName": "Woodsia pulchella (Bertol.) A. Löve & D. Löve",
+    "taxonid": 9452
+  },
+  "Cytisus intermedius": {
+    "acceptedName": "Cytisus intermedius (C. Presl) Walp.",
+    "taxonid": 2950
+  },
+  "Arthrocaulon macrostachyum": {
+    "acceptedName": "Arthrocaulon macrostachyum (Moric.) Piirainen & G.Kadereit",
+    "taxonid": 33034
+  },
+  "Petrosedum sediforme": {
+    "acceptedName": "Petrosedum sediforme (Jacq.) Grulich",
+    "taxonid": 8225
   }
 }

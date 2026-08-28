@@ -126,37 +126,6 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
-  "Achillea maritima": {
-    "commonName": "Algodonosa",
-    "kingdom": "flora",
-    "group": "Hierba",
-    "habitat": "Dunas móviles embrionarias",
-    "seasonality": "Verano",
-    "rarityScore": 1,
-    "description": "Mata blanco-lanosa de las dunas costeras (antes Otanthus maritimus), con capítulos amarillos densos y follaje algodonoso que refleja la insolación.",
-    "tips": [
-      "Toda la planta blanco-algodonosa",
-      "Capítulos amarillos en verano",
-      "Sinónimo: Otanthus maritimus"
-    ],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Asterales",
-      "family": "Asteraceae",
-      "genus": "Achillea"
-    },
-    "iucnGlobal": "LC",
-    "spainStatus": "No incluida en el LESRPE; característica de dunas litorales (HIC 2110)",
-    "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/463767986/original.jpeg",
-    "imageAttribution": "Pennyinsole (CC0) · GBIF",
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
-  },
   "Achillea odorata": {
     "commonName": "Manzanilla real",
     "kingdom": "flora",
@@ -5472,37 +5441,6 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
-  "Capparis sicula subsp. sicula": {
-    "commonName": "Alcaparra",
-    "kingdom": "flora",
-    "group": "Arbusto",
-    "habitat": "Roquedos y muros del matorral litoral",
-    "seasonality": "Verano",
-    "rarityScore": 1,
-    "description": "Arbusto de ramas colgantes que crece en roquedos y muros, con hojas redondeadas y carnosas y estípulas transformadas en espinas curvas. Sus flores, grandes y blancas con un penacho de estambres violáceos, se abren al amanecer y duran un solo día. Los botones en salmuera son las alcaparras.",
-    "tips": [
-      "Un par de espinas curvas en la base de cada hoja",
-      "Flores blancas con muchos estambres largos y violáceos",
-      "Cada flor dura un solo día"
-    ],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Brassicales",
-      "family": "Capparaceae",
-      "genus": "Capparis"
-    },
-    "iucnGlobal": "NE",
-    "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
-    "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/673180503/original.jpg",
-    "imageAttribution": "Heiko Hentschel (CC0) · GBIF · Capparis sicula (especie)",
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
-  },
   "Capparis spinosa": {
     "commonName": "Alcaparra",
     "kingdom": "flora",
@@ -5836,37 +5774,6 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
-  },
-  "Caroxylon vermiculatum": {
-    "commonName": "Sisallo",
-    "kingdom": "flora",
-    "group": "Mata",
-    "habitat": "Suelos salinos y nitrificados, ramblas, majadas y bordes de camino",
-    "seasonality": "Verano y otoño",
-    "rarityScore": 1,
-    "description": "Mata muy ramificada de hojas cortas, gruesas y algo peludas que en verano se vuelven grisáceas. Es de las mejores indicadoras de suelos con sal y con exceso de nitrógeno, como los antiguos apriscos de ganado. Al fructificar, cada semilla se rodea de alas membranosas.",
-    "tips": [
-      "Hojitas cortas, gruesas y con pelusa",
-      "Frutos con alas membranosas rosadas o pajizas",
-      "Aparece donde ha habido ganado o remoción del suelo"
-    ],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Caryophyllales",
-      "family": "Amaranthaceae",
-      "genus": "Caroxylon"
-    },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
-    "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Salsola_vermiculata.jpg?width=1280",
-    "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
   },
   "Carrichtera annua": {
     "commonName": "Cuchareta",
@@ -6252,19 +6159,21 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
-  "Centaurium rigualii": {
-    "commonName": "Centaurio de Rigual",
+  "Centaurium quadrifolium": {
+    "commonName": "Clavelina del campo",
     "kingdom": "flora",
-    "group": "Hierba",
-    "habitat": "Bordes de saladar, suelos margosos húmedos y depresiones con algo de sal",
-    "seasonality": "Primavera",
-    "rarityScore": 5,
-    "description": "Pequeña hierba anual de la familia de las gencianas, con flores rosadas de cinco pétalos abiertas en estrella. Es un endemismo muy localizado del sureste peninsular, ligado a suelos húmedos y algo salinos, un ambiente escaso y fácil de destruir.",
-    "tips": [
-      "Flores rosas de cinco pétalos, abiertas al sol",
-      "Planta anual y menuda, de pocos centímetros",
-      "Hojas opuestas en pares a lo largo del tallo"
-    ],
+    "group": null,
+    "habitat": "Centaurium quadrifolium vive en bosques, claros de matorral y pastizales secos en sustratos básicos hasta 2000 m",
+    "seasonality": "Todo el año",
+    "rarityScore": 1,
+    "rarityBasis": {
+      "categoria": "Sin figura de protección",
+      "ambito": "estatal",
+      "origen": "spainStatus del catálogo universal"
+    },
+    "description": "Presenta las hojas lineares o espatuladas, hasta con tres nervios, y lóbulos de la corola de menos de la mitad que el tubo.",
+    "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+    "tips": [],
     "taxonomy": {
       "kingdom": "Plantae",
       "phylum": "Tracheophyta",
@@ -6273,10 +6182,11 @@
       "family": "Gentianaceae",
       "genus": "Centaurium"
     },
-    "iucnGlobal": "NE",
-    "spainStatus": "Excluida del Catálogo Nacional de Especies Amenazadas (CNEA) desde el año 2000 por dudas sobre su validez taxonómica",
-    "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/498014263/original.jpeg",
-    "imageAttribution": "naturcope (CC BY-NC 4.0) · iNaturalist/GBIF · obs. Águilas (parque)"
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Centaurium_quadrifolium.jpg?width=1280",
+    "imageAttribution": "Nanosanchez (Public domain) · Wikimedia Commons",
+    "eidosTaxonId": 3358
   },
   "Centaurium tenuiflorum": {
     "commonName": "Hiel de la tierra",
@@ -7767,37 +7677,6 @@
       "origen": "spainStatus del catálogo universal"
     },
     "descriptionSource": null
-  },
-  "Citrullus colocynthis": {
-    "commonName": "Coloquíntida",
-    "kingdom": "flora",
-    "group": "Hierba",
-    "habitat": "Ramblas, arenales y suelos removidos de clima árido",
-    "seasonality": "Verano y otoño",
-    "rarityScore": 1,
-    "description": "Pariente silvestre de la sandía, de tallos rastreros y zarcillos, que extiende sus ramas por el suelo desnudo de ramblas y baldíos. Sus frutos son bolas del tamaño de una naranja, verdes jaspeadas al principio y amarillas al madurar, de pulpa amarguísima y tóxica.",
-    "tips": [
-      "Tallos tumbados por el suelo, con zarcillos",
-      "Frutos esféricos jaspeados que amarillean al madurar",
-      "Hojas profundamente lobuladas y ásperas"
-    ],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Cucurbitales",
-      "family": "Cucurbitaceae",
-      "genus": "Citrullus"
-    },
-    "iucnGlobal": "NE",
-    "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Citrullus_colocynthis_(L.)_Schrad._(31794489158).jpg?width=1280",
-    "imageAttribution": "Dinesh Valke from Thane, India (CC BY-SA 2.0) · Wikimedia Commons",
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
   },
   "Clamator glandarius": {
     "commonName": "Críalo",
@@ -10756,7 +10635,8 @@
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     },
-    "iucnSpain": "CR — En peligro crítico (Lista Roja española, 2010)"
+    "iucnSpain": "CR — En peligro crítico (Lista Roja española, 2010)",
+    "eidosTaxonId": 906
   },
   "Ephedra fragilis": {
     "commonName": "Canadillo",
@@ -11627,37 +11507,6 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Euphorbia_nicaeensis_2.jpg?width=1280",
     "imageAttribution": "Stan Shebs (CC BY-SA 3.0) · Wikimedia Commons",
     "eidosTaxonId": 4481,
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
-  },
-  "Euphorbia paralias": {
-    "commonName": "Lechetrezna de playa",
-    "kingdom": "flora",
-    "group": "Hierba",
-    "habitat": "Dunas móviles embrionarias",
-    "seasonality": "Primavera a otoño",
-    "rarityScore": 1,
-    "description": "Lechetrezna perenne, glauca y de hojas carnosas imbricadas, propia de la primera línea de playa y las dunas embrionarias; exuda un látex blanco irritante.",
-    "tips": [
-      "Hojas carnosas imbricadas",
-      "Látex blanco irritante (no manipular)",
-      "Porte erecto glauco"
-    ],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Malpighiales",
-      "family": "Euphorbiaceae",
-      "genus": "Euphorbia"
-    },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)",
-    "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Euphorbe_maritime_en_Baie_d'Authie.jpg?width=1280",
-    "imageAttribution": "JackyM59 (CC BY-SA 4.0) · Wikimedia Commons",
     "rarityBasis": {
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
@@ -13757,37 +13606,6 @@
     },
     "descriptionSource": null,
     "iucnSpain": "CR — En peligro crítico (Lista Roja española, 2010)"
-  },
-  "Hammada articulata": {
-    "commonName": "Sosa articulada",
-    "kingdom": "flora",
-    "group": "Mata",
-    "habitat": "Matorrales halo-nitrófilos",
-    "seasonality": "Verano y otoño",
-    "rarityScore": 1,
-    "description": "Mata de tallos articulados y suculentos, sin hojas visibles, con los segmentos separados por nudos bien marcados. Vive en los suelos más áridos y salinos, donde tiene poca competencia. Es una planta de raíz sahariana muy escasa en Europa.",
-    "tips": [
-      "Tallos articulados con nudos muy marcados",
-      "Sin hojas visibles, solo escamas en cada nudo",
-      "Porte bajo y ramificado, de color verde grisáceo"
-    ],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Caryophyllales",
-      "family": "Amaranthaceae",
-      "genus": "Hammada"
-    },
-    "iucnGlobal": "NE",
-    "spainStatus": "No incluida en el LESRPE; característica de matorrales halonitrófilos (HIC 1430)",
-    "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/539160949/original.jpg",
-    "imageAttribution": "yusuf_c (CC BY 4.0) · GBIF · obs. SA",
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
   },
   "Haplophyllum linifolium": {
     "commonName": "Haplophyllum linifolium",
@@ -16503,37 +16321,6 @@
     },
     "descriptionSource": null
   },
-  "Limoniastrum monopetalum": {
-    "commonName": "Salado",
-    "kingdom": "flora",
-    "group": "Arbusto",
-    "habitat": "Matorrales halófilos mediterráneos y termoatlánticos",
-    "seasonality": "Primavera y verano",
-    "rarityScore": 1,
-    "description": "Arbusto de saladar de hojas glaucas cubiertas de sales y flores rosadas; ocupa el borde interno de saladares y ramblas salinas del litoral.",
-    "tips": [
-      "Flores rosadas en espiga",
-      "Hojas con costra de sal",
-      "Marca el límite del saladar"
-    ],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Caryophyllales",
-      "family": "Plumbaginaceae",
-      "genus": "Limoniastrum"
-    },
-    "iucnGlobal": "LC",
-    "spainStatus": "No incluida en el LESRPE; característica de matorrales halófilos (HIC 1420)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Limoniastrum_monopetalum_2.JPG?width=1280",
-    "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons",
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
-  },
   "Limonium angustebracteatum": {
     "commonName": "Limonium angustebracteatum",
     "kingdom": "flora",
@@ -18077,37 +17864,6 @@
     },
     "descriptionSource": null,
     "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2002)"
-  },
-  "Malcolmia littorea": {
-    "commonName": "Alhelí de mar",
-    "kingdom": "flora",
-    "group": "Hierba",
-    "habitat": "Dunas con céspedes del Malcomietalia",
-    "seasonality": "Primavera a otoño",
-    "rarityScore": 1,
-    "description": "Crucífera de flores lilas y hojas grisáceas que crece en los claros arenosos de la duna, dando nombre a la comunidad del Malcolmietalia.",
-    "tips": [
-      "Flores lilas de cuatro pétalos",
-      "Céspedes abiertos sobre arena",
-      "Da nombre al hábitat (Malcolmietalia)"
-    ],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Brassicales",
-      "family": "Brassicaceae",
-      "genus": "Malcolmia"
-    },
-    "iucnGlobal": "LC",
-    "spainStatus": "No incluida en el LESRPE; característica del Malcolmietalia (HIC 2230)",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Malcolmia_littorea_3_(Espagne).jpg?width=1280",
-    "imageAttribution": "Ghislain118 https://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons",
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
   },
   "Malpolon monspessulanus": {
     "commonName": "Culebra bastarda",
@@ -20910,6 +20666,35 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
+  "Ononis sicula": {
+    "commonName": "Ononis sicula",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Marzo a mayo",
+    "rarityScore": 1,
+    "rarityBasis": {
+      "categoria": "Sin figura de protección",
+      "ambito": "estatal",
+      "origen": "spainStatus del catálogo universal"
+    },
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Fabales",
+      "family": "Fabaceae",
+      "genus": "Ononis"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": null,
+    "imageAttribution": null,
+    "eidosTaxonId": 6711
+  },
   "Ononis speciosa": {
     "commonName": "Rascavieja",
     "kingdom": "flora",
@@ -21292,6 +21077,35 @@
     },
     "descriptionSource": null,
     "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
+  },
+  "Orobanche cernua": {
+    "commonName": "Jopo",
+    "kingdom": "flora",
+    "group": null,
+    "habitat": null,
+    "seasonality": "Marzo a julio",
+    "rarityScore": 1,
+    "rarityBasis": {
+      "categoria": "Sin figura de protección",
+      "ambito": "estatal",
+      "origen": "spainStatus del catálogo universal"
+    },
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
+    "taxonomy": {
+      "kingdom": "Plantae",
+      "phylum": "Tracheophyta",
+      "class": "Magnoliopsida",
+      "order": "Lamiales",
+      "family": "Orobanchaceae",
+      "genus": "Orobanche"
+    },
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Orobanche_cernua_285631122.jpg?width=1280",
+    "imageAttribution": "Mikhail Nevsky (CC BY 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 6843
   },
   "Orobanche gracilis": {
     "commonName": "Jopo",
@@ -25361,37 +25175,6 @@
     },
     "descriptionSource": null
   },
-  "Rhamnus lycioides subsp. borgiae": {
-    "commonName": "Espino negro",
-    "kingdom": "flora",
-    "group": "Arbusto",
-    "habitat": "Matorral litoral y laderas secas",
-    "seasonality": "Todo el año",
-    "rarityScore": 1,
-    "description": "Arbusto muy ramificado cuyas ramillas terminan todas en una espina rígida, formando una maraña impenetrable. Sus hojas son pequeñas, estrechas y agrupadas en manojos, y sus frutos, drupas que pasan de rojo a negro y consumen muchas aves.",
-    "tips": [
-      "Todas las ramillas rematadas en espina rígida",
-      "Hojas pequeñas y estrechas agrupadas en manojitos",
-      "Frutos que viran de rojo a negro al madurar"
-    ],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Rosales",
-      "family": "Rhamnaceae",
-      "genus": "Rhamnus"
-    },
-    "iucnGlobal": "NE (no evaluada a nivel global)",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/11702748/original.jpeg",
-    "imageAttribution": "Rafael Medina (CC BY 4.0) · GBIF",
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
-  },
   "Rhamnus oleoides": {
     "commonName": "Espino morisco",
     "kingdom": "flora",
@@ -27072,19 +26855,21 @@
       "origen": "spainStatus del catálogo universal"
     }
   },
-  "Scrophularia canina": {
-    "commonName": "Escrofularia de perro",
+  "Scrophularia arguta": {
+    "commonName": "Cenizo",
     "kingdom": "flora",
-    "group": "Hierba",
-    "habitat": "Ríos mediterráneos con Glaucium flavum",
-    "seasonality": "Primavera y verano",
+    "group": null,
+    "habitat": null,
+    "seasonality": null,
     "rarityScore": 1,
-    "description": "Escrofularia perenne de tallos ramosos y flores diminutas pardo-purpúreas, típica de gravas fluviales y cauces pedregosos.",
-    "tips": [
-      "Hojas divididas",
-      "Flores diminutas pardo-rojizas",
-      "Crece en gravas de cauce"
-    ],
+    "rarityBasis": {
+      "categoria": "Sin figura de protección",
+      "ambito": "estatal",
+      "origen": "spainStatus del catálogo universal"
+    },
+    "description": null,
+    "descriptionSource": null,
+    "tips": [],
     "taxonomy": {
       "kingdom": "Plantae",
       "phylum": "Tracheophyta",
@@ -27093,15 +26878,11 @@
       "family": "Scrophulariaceae",
       "genus": "Scrophularia"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
-    "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
-    "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/636689170/original.jpg",
-    "imageAttribution": "Antón David Pérez Rodríguez (CC0) · GBIF",
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Scrophularia_arguta_kz01.jpg?width=1280",
+    "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
+    "eidosTaxonId": 8147
   },
   "Scrophularia tanacetifolia": {
     "commonName": "Scrophularia tanacetifolia",
@@ -27469,37 +27250,6 @@
     "descriptionSource": null,
     "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
   },
-  "Serratula mucronata": {
-    "commonName": "Serrátula",
-    "kingdom": "flora",
-    "group": "Hierba",
-    "habitat": "Matorral y pastizales secos",
-    "seasonality": "Verano y otoño",
-    "rarityScore": 1,
-    "description": "Compuesta de tallos erguidos y hojas de borde aserrado con cada diente rematado en una punta rígida. Sus capítulos, purpúreos y sin lígulas, recuerdan a un cardo sin espinas. Es una planta escasa y de distribución fragmentada.",
-    "tips": [
-      "Capítulos purpúreos sin pétalos radiales, como pinceles",
-      "Hojas aserradas con la punta de cada diente rígida",
-      "Tallos erguidos y poco ramificados"
-    ],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Asterales",
-      "family": "Asteraceae",
-      "genus": "Serratula"
-    },
-    "iucnGlobal": "NE",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-    "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/411165247/original.jpeg",
-    "imageAttribution": "Maël Taupin (CC BY-NC 4.0) · iNaturalist/GBIF, obs. Murcia",
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
-  },
   "Seseli montanum": {
     "commonName": "Anís silvestre",
     "kingdom": "flora",
@@ -27613,37 +27363,6 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sideritis.jpg?width=1280",
     "imageAttribution": "Elperic (CC BY-SA 3.0) · Wikimedia Commons",
     "eidosTaxonId": 8330,
-    "rarityBasis": {
-      "categoria": "Sin figura de protección",
-      "ambito": "estatal",
-      "origen": "spainStatus del catálogo universal"
-    }
-  },
-  "Sideritis ibanyezii": {
-    "commonName": "Rabogato",
-    "kingdom": "flora",
-    "group": "Mata aromática",
-    "habitat": "Tomillares y matorral raso sobre margas y suelos yesosos",
-    "seasonality": "Primavera-verano",
-    "rarityScore": 1,
-    "description": "Rabogato endémico del sureste ibérico, de tallos blanquecinos y lanudos y flores amarillentas dispuestas en verticilos a lo largo de la espiga. Bajo cada grupo de flores hay brácteas anchas y punzantes que persisten secas mucho tiempo.",
-    "tips": [
-      "Tallos y hojas cubiertos de pelusa blanca",
-      "Flores amarillentas en anillos separados a lo largo del tallo",
-      "Brácteas anchas y punzantes bajo cada verticilo"
-    ],
-    "taxonomy": {
-      "kingdom": "Plantae",
-      "phylum": "Tracheophyta",
-      "class": "Magnoliopsida",
-      "order": "Lamiales",
-      "family": "Lamiaceae",
-      "genus": "Sideritis"
-    },
-    "iucnGlobal": "NE",
-    "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008 con este nombre",
-    "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/616107243/original.jpg",
-    "imageAttribution": "Ben Jobson (CC BY 4.0) · GBIF",
     "rarityBasis": {
       "categoria": "Sin figura de protección",
       "ambito": "estatal",

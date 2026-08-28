@@ -73,12 +73,45 @@
  * especie queda escrito de qué fuente sale cada cosa, y las excluidas salen con su motivo en
  * `excluidas_detalle` para poder discutir el criterio sin volver a ejecutarlo todo.
  *
+ * EL ATLAS SE LEE EN POSITIVO, Y DE VARIAS FUENTES A LA VEZ (2026-08-28)
+ * ---------------------------------------------------------------------
+ * `fuentes/atlas.txt` no se versiona porque «es reproducible», y no lo es: de qué extractor de PDF
+ * salga cambia QUÉ especies características se leen, y ninguno cubre al otro. Medido sobre Sierra de
+ * las Moreras: la selección del 2026-08-22 vio **631** especies características para sus HIC y con
+ * los textos que hoy hay en `fuentes/` —Xpdf con `-layout` y pypdf sin él— se leen 378 y 299, con
+ * 494 de unión. El texto rico de aquel día era de `pdftotext` de poppler, que en esta máquina no
+ * está y no se puede reinstalar.
+ *
+ * La consecuencia, si se lee un solo texto y se cree lo que NO dice: regenerar la selección de un
+ * espacio ya publicado le **quita** fichas que el Atlas sí respalda. En Moreras eran seis —*Lygeum
+ * spartum*, *Withania frutescens*, *Artemisia barrelieri*, *Atriplex glauca*, *Lapiedra martinezii*
+ * y *Suaeda spicata*, todas `caracteristica` de nivel 2— y salían con el motivo «solo GBIF: ninguna
+ * fuente documental la respalda», que es falso. Sin error y sin aviso: la herramienta hace su
+ * trabajo con lo que le han dado.
+ *
+ * Por eso el Atlas entra aquí por TRES puertas que se suman y nunca se restan, que es la misma regla
+ * que ya aplica `atlas-hic-especies.js` con su `--fusiona`:
+ *
+ *   · `--atlas` admite varios textos separados por coma, y se unen;
+ *   · el índice versionado del espacio, `out/<slug>-hic-especies.json`, que SÍ está en el
+ *     repositorio y guarda lo que leyeron las extracciones de otros días. Solo contiene taxones ya
+ *     fichados en el espacio, así que no puede meter una especie nueva en el catálogo: solo impide
+ *     que una que ya está pierda su respaldo porque este parser no ha sabido leerlo.
+ *
+ * Que un extractor no vea un nombre no significa que el Atlas no lo dé. Retirar la evidencia por eso
+ * es borrar un dato por una limitación de herramienta.
+ *
  * Uso:
  *   node Tools/catalogo-nacional/build-species-seleccion.js --park <slug> \
- *        [--atlas <atlas.txt>] [--gbif <ruta>] [--out <ruta>] [--informe <ruta.md>] [--dry]
+ *        [--atlas <atlas.txt[,otro.txt]>] [--sin-indice-atlas] [--gbif <ruta>] [--out <ruta>] \
+ *        [--informe <ruta.md>] [--dry]
  *
- *   --atlas   texto del «Atlas y Manual de los Hábitats de España» (pdftotext). Sin él no hay
- *             evidencia `caracteristica` y se dice en el informe, en vez de callarlo.
+ *   --atlas   texto del «Atlas y Manual de los Hábitats de España» (pdftotext). Admite VARIOS
+ *             ficheros separados por coma. Sin él no hay evidencia `caracteristica` y se dice en el
+ *             informe, en vez de callarlo. Ver «EL ATLAS SE LEE EN POSITIVO» más abajo.
+ *   --sin-indice-atlas
+ *             no leer el índice versionado `out/<slug>-hic-especies.json`. Solo para comprobar qué
+ *             aporta un texto por sí mismo: en producción el índice va SIEMPRE.
  *   --anexos  fichero de anexos normativos (por defecto data/anexos-normativos.json). Si el espacio
  *             no tiene entrada, se dice en el informe en vez de callarlo.
  *   --ccaa    comunidad cuyo catálogo regional de especies amenazadas se consulta (por defecto,
@@ -259,7 +292,15 @@ const CACHE = fromRoot(arg('cache', path.join(OUT_DIR, `${PARK}-eidos-seleccion-
 const RUTA_GBIF = fromRoot(arg('gbif', path.join(OUT_DIR, `${PARK}-gbif.json`)));
 const RUTA_OUT = fromRoot(arg('out', path.join(OUT_DIR, `${PARK}-seleccion-especies.json`)));
 const RUTA_INFORME = fromRoot(arg('informe', path.join(OUT_DIR, `${PARK}-seleccion-especies.md`)));
-const RUTA_ATLAS = arg('atlas') ? fromRoot(arg('atlas')) : null;
+// `--atlas` admite VARIOS textos separados por coma: ningún extractor de PDF cubre al otro y el
+// Atlas se usa solo en positivo (ver la cabecera). Es la misma firma que `atlas-hic-especies.js`.
+const RUTAS_ATLAS = String(arg('atlas', '')).split(',').map(s => s.trim()).filter(Boolean).map(fromRoot);
+// El índice versionado del espacio: lo que las extracciones de otros días leyeron del Atlas para
+// este catálogo. Va por defecto porque es la única memoria que sobrevive a que `fuentes/atlas.txt`
+// se regenere con otro extractor, y su ausencia se dice en el informe en vez de callarse.
+const RUTA_ATLAS_INDICE = flag('sin-indice-atlas')
+  ? null
+  : fromRoot(arg('indice-atlas', path.join(OUT_DIR, `${PARK}-hic-especies.json`)));
 // La caché del puente de nomenclatura del Atlas. NO lleva el slug del espacio a propósito: los
 // nombres del Atlas son universales —una especie característica del 5330 lo es en Murcia y en
 // Girona—, así que el puente se comparte entre espacios y entre pases. Ver lib/atlas.js.
@@ -667,12 +708,39 @@ function yaFichadas() {
 // Se cruza contra los candidatos de GBIF, no contra el park.json: en un espacio que todavía no tiene
 // Capa 3 el catálogo está vacío, y cruzarlo con él daría cero.
 async function caracteristicasPorEspecie(codigos) {
-  if (!RUTA_ATLAS) return { mapa: new Map(), leido: false, puenteados: 0 };
-  if (!fs.existsSync(RUTA_ATLAS)) die(`No existe el texto del Atlas: ${RUTA_ATLAS}`);
-  const { porHic, bloques, bloquesConEspecies } = especiesCaracteristicas(RUTA_ATLAS, codigos);
-  if (bloques && !bloquesConEspecies) {
-    die(`El Atlas tiene ${bloques} bloques de «Especies características» y no se ha leído ninguna ` +
-        'especie. Revisa la extracción del PDF antes de seguir.');
+  const indice = indiceAtlasVersionado(codigos);
+  if (!RUTAS_ATLAS.length && !indice.total) return { mapa: new Map(), leido: false, puenteados: 0, fuentes: [] };
+
+  // La UNIÓN de todas las fuentes. Se suma y no se resta nunca: que un extractor no lea un nombre no
+  // es el Atlas negándolo (ver la cabecera).
+  const porHic = new Map();
+  for (const c of codigos) porHic.set(c, new Set());
+  const fuentes = [];
+  let bloques = 0;
+  for (const ruta of RUTAS_ATLAS) {
+    if (!fs.existsSync(ruta)) die(`No existe el texto del Atlas: ${ruta}`);
+    const leido = especiesCaracteristicas(ruta, codigos);
+    if (leido.bloques && !leido.bloquesConEspecies) {
+      die(`El Atlas de ${rel(ruta)} tiene ${leido.bloques} bloques de «Especies características» y ` +
+          'no se ha leído ninguna especie. Revisa la extracción del PDF antes de seguir.');
+    }
+    let aporta = 0;
+    for (const [codigo, especies] of leido.porHic) {
+      const destino = porHic.get(codigo);
+      if (!destino) continue;
+      for (const sp of especies) if (!destino.has(sp)) { destino.add(sp); aporta++; }
+    }
+    bloques = Math.max(bloques, leido.bloques);
+    fuentes.push({ ruta: rel(ruta), tipo: 'texto', bloques: leido.bloques, aporta });
+  }
+  if (indice.total) {
+    let aporta = 0;
+    for (const [codigo, especies] of indice.porHic) {
+      const destino = porHic.get(codigo);
+      if (!destino) continue;
+      for (const sp of especies) if (!destino.has(sp)) { destino.add(sp); aporta++; }
+    }
+    fuentes.push({ ruta: rel(RUTA_ATLAS_INDICE), tipo: 'indice', enlaces: indice.total, aporta });
   }
 
   /*
@@ -688,7 +756,12 @@ async function caracteristicasPorEspecie(codigos) {
    * es en toda la Directiva, así que el puente no depende del espacio y repetir las peticiones por
    * cada selección sería castigar al IEPNB sin motivo.
    */
-  const nombres = [...new Set([...porHic.values()].flat())];
+  // `porHic` es un Map<código, Set<nombre>>, y `[...valores].flat()` NO aplana un Set: devolvía la
+  // lista de Sets, así que a EIDOS se le preguntaba una sola vez por la cadena «[object Set]» y el
+  // puente salía vacío en todos los espacios. El código del puente estaba escrito desde el
+  // 2026-08-25 y la deuda nº 26 seguía sin pagarse por esto, sin error y sin aviso: el fallo dejaba
+  // basura en la caché compartida (`"[object Set]": null`) y ninguna especie puenteada.
+  const nombres = [...new Set([...porHic.values()].flatMap(s => [...s]))];
   const cache = readJsonIf(CACHE_ATLAS, {}) || {};
   const { mapa: puente, pedidas } = await tiendePuente(nombres, {
     resolveTaxon: (n) => eidos.resolveTaxon(n), cache, sleep, throttleMs: eidos.THROTTLE_MS,
@@ -713,7 +786,33 @@ async function caracteristicasPorEspecie(codigos) {
       if (hoy && hoy !== b) { anade(hoy, codigo); puenteados++; }
     }
   }
-  return { mapa, leido: true, bloques, puenteados, pedidas };
+  return { mapa, leido: true, bloques, puenteados, pedidas, fuentes };
+}
+
+/*
+ * El índice versionado del Atlas para ESTE espacio (`out/<slug>-hic-especies.json`), que escribe
+ * `atlas-hic-especies.js`. Es la memoria de lo que leyeron las extracciones de otros días, y es lo
+ * único del Atlas que está en el repositorio: `fuentes/atlas.txt` no se versiona.
+ *
+ * Solo enumera taxones YA fichados en el espacio (se genera como «Atlas ∩ catálogo del parque»), así
+ * que no puede meter una especie nueva en la selección. Lo que hace es impedir que una que ya está
+ * pierda su evidencia `caracteristica` porque el extractor de hoy no ha sabido leer su bloque.
+ */
+function indiceAtlasVersionado(codigos) {
+  const vacio = { porHic: new Map(), total: 0, leido: false };
+  if (!RUTA_ATLAS_INDICE || !fs.existsSync(RUTA_ATLAS_INDICE)) return vacio;
+  const doc = readJson(RUTA_ATLAS_INDICE);
+  const validos = new Set(codigos);
+  const porHic = new Map();
+  let total = 0;
+  for (const [codigo, bloque] of Object.entries(doc.hic || {})) {
+    if (!validos.has(codigo)) continue; // un HIC que ya no está en la Capa 2 no es dato que salvar
+    const especies = (bloque && bloque.especies) || [];
+    if (!especies.length) continue;
+    porHic.set(codigo, new Set(especies));
+    total += especies.length;
+  }
+  return { porHic, total, leido: true };
 }
 
 // --- Anexo normativo del espacio ---------------------------------------------------------------------
@@ -1052,8 +1151,11 @@ async function main() {
   console.log(`Candidatos de GBIF ∩ polígonos: ${deGbif.length}`);
   console.log(`Candidatos que solo aporta la legislación (nivel 1, sin registro en GBIF): ${documentales.length}`);
   console.log(atlas.leido
-    ? `Atlas 2005: ${atlas.mapa.size} especies características para estos HIC`
-    : 'Atlas 2005: NO consultado (sin --atlas) — no habrá evidencia `caracteristica`');
+    ? `Atlas 2005: ${atlas.mapa.size} especies características para estos HIC` +
+      (atlas.puenteados ? ` (${atlas.puenteados} alias por recombinación)` : '') +
+      (atlas.fuentes || []).map(f => `\n  · ${f.ruta} — aporta ${f.aporta}` +
+        (f.tipo === 'indice' ? ` (índice versionado, ${f.enlaces} enlaces)` : ` (texto, ${f.bloques} bloques)`)).join('')
+    : 'Atlas 2005: NO consultado (sin --atlas y sin índice versionado) — no habrá evidencia `caracteristica`');
   console.log(anexo.consultado
     ? `Anexo normativo: ${anexo.total} especies enumeradas (${anexo.fuente ? anexo.fuente.norma : 'sin cita'})` +
       (anexo.exigeConstancia
@@ -1614,10 +1716,22 @@ function informe(doc, atlas, conError, categoriasDescartadas) {
   l.push(`Generada el ${doc.generado}. **${doc.total} aprobadas** (${doc.aves} aves), ` +
          `${doc.reutilizables} ya fichadas en otro espacio y ${doc.nuevas} nuevas. ` +
          `${doc.excluidas} excluidas.`, '');
-  l.push(atlas.leido
-    ? `Atlas 2005 consultado: ${atlas.mapa.size} especies características para los HIC de este espacio.`
-    : '**Atlas 2005 NO consultado** (falta `--atlas`): ninguna especie tiene evidencia `caracteristica`, ' +
-      'así que las de pocos registros solo conservan su plaza si están protegidas.', '');
+  if (atlas.leido) {
+    l.push(`Atlas 2005 consultado: ${atlas.mapa.size} especies características para los HIC de este espacio` +
+           `${atlas.puenteados ? `, ${atlas.puenteados} de ellas por alias de recombinación` : ''}. ` +
+           'La lectura es la UNIÓN de todas las fuentes y **nunca resta**: que un extractor de PDF no lea ' +
+           'un nombre no es el Atlas negándolo.', '');
+    for (const f of atlas.fuentes || []) {
+      l.push(f.tipo === 'indice'
+        ? `- \`${f.ruta}\` — índice versionado, ${f.enlaces} enlaces; **aporta ${f.aporta}** que los textos no traen.`
+        : `- \`${f.ruta}\` — texto del PDF, ${f.bloques} bloques; aporta ${f.aporta}.`);
+    }
+    l.push('');
+  } else {
+    l.push('**Atlas 2005 NO consultado** (falta `--atlas` y no hay índice versionado): ninguna especie tiene ' +
+           'evidencia `caracteristica`, así que las de pocos registros solo conservan su plaza si están ' +
+           'protegidas.', '');
+  }
 
   if (doc.anexo && doc.anexo.consultado) {
     const f = doc.anexo.fuente || {};

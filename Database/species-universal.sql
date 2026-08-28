@@ -3486,829 +3486,54 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
 WHERE p.slug = 'cabezo-gordo' AND s.scientific_name = 'Tachymarptis melba';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Águila perdicera',
-  s.kingdom = 'fauna',
-  s.family = 'Ave rapaz',
-  s.primary_habitat = 'Sierras con cortados rocosos y amplias zonas abiertas de matorral y cultivo para cazar',
-  s.description = 'Águila mediana de alas largas y cola larga, con el vientre blanco finamente rayado y una mancha blanca en la espalda que se ve bien en vuelo. Caza a gran velocidad y a poca altura, sorprendiendo a perdices, conejos y palomas. Las parejas ocupan el mismo cortado durante años.',
-  s.description_source = NULL,
-  s.identification_tips = 'Mancha blanca en el centro de la espalda, visible desde arriba
-Vientre claro y muy rayado, con una banda oscura en el borde del ala
-Vuelo bajo y rápido cuando caza, no en círculos altos',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_perdicera.jpg?width=1280',
-  s.image_attribution = 'Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = 'Accipitriformes',
-  s.taxon_family = 'Accipitridae',
-  s.taxon_genus = 'Aquila',
-  s.iucn_global = 'LC (población global amplia en Asia y África pese al declive europeo)',
-  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2004)',
-  s.spain_status = 'Catálogo Español de Especies Amenazadas: Vulnerable; Libro Rojo de las Aves de España (SEO/BirdLife, 2004/2021); Directiva Aves 2009/147/CE, Anexo I',
-  s.rarity_score = 4,
-  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas: Vulnerable","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Aquila fasciata';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Ajo de flor oscura',
+  s.common_name = 'Cornical',
   s.kingdom = 'flora',
-  s.family = 'Planta bulbosa',
-  s.primary_habitat = 'Espartales, pastizales secos y claros de matorral sobre suelos margosos',
-  s.description = 'Ajo silvestre de flores de un púrpura tan oscuro que parece negro, agrupadas en una umbela apretada al final de un tallo largo y desnudo. Es un endemismo del sureste ibérico, de área muy reducida, que pasa el verano bajo tierra en forma de bulbo.',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Matorral cálido, laderas soleadas y barrancos de clima muy seco',
+  s.description = 'Arbusto de hojas estrechas y coriáceas y flores pequeñas con cinco pétalos de un pardo verdoso y aspecto aterciopelado. Sus frutos son dos vainas largas y curvas dispuestas en forma de cuerno, de donde le viene el nombre popular de cornical. Suelta látex al romperse.',
   s.description_source = NULL,
-  s.identification_tips = 'Flores de púrpura casi negro, muy oscuras
-Umbela compacta sobre un tallo largo y liso
-Huele a ajo al estrujar las hojas o el bulbo',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Allium_melananthum02.jpg?width=1280',
-  s.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Asparagales',
-  s.taxon_family = 'Amaryllidaceae',
-  s.taxon_genus = 'Allium',
-  s.iucn_global = 'NT (Casi amenazado)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Allium melananthum';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Azucena de mar',
-  s.kingdom = 'flora',
-  s.family = 'Planta bulbosa',
-  s.primary_habitat = 'Dunas y playas del litoral',
-  s.description = 'Bulbosa de dunas con flores blancas grandes, en forma de trompeta y con una corona membranosa entre los estambres. Se abren al atardecer y despiden un perfume intenso que atrae a polillas nocturnas. Sus hojas son acintadas y de un verde azulado, y a menudo se secan antes de la floración.',
-  s.description_source = NULL,
-  s.identification_tips = 'Flores blancas en trompeta con una corona membranosa dentro
-Se abren al atardecer y huelen intensamente
-Hojas acintadas y de verde azulado, saliendo de la arena',
-  s.seasonality = 'Verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pancratium_maritimum2.jpg?width=1280',
-  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Asparagales',
-  s.taxon_family = 'Amaryllidaceae',
-  s.taxon_genus = 'Pancratium',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008 (especie común pero sensible a la degradación de playas)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Pancratium maritimum';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Camachuelo trompetero',
-  s.kingdom = 'fauna',
-  s.family = 'Ave esteparia',
-  s.primary_habitat = 'Ramblas, laderas peladas y llanos pedregosos de clima muy árido',
-  s.description = 'Pequeño fringílido de aspecto discreto y pardo arenoso, con un pico corto, muy grueso y de color rojo coral en primavera. El macho tiene además el pecho y el obispillo teñidos de rosa. Su reclamo es un zumbido nasal inconfundible, como una trompeta de juguete.',
-  s.description_source = NULL,
-  s.identification_tips = 'Pico corto y muy grueso, rojo coral en primavera
-Reclamo nasal y zumbante, como una corneta pequeña
-Tonos rosados en pecho y obispillo del macho',
-  s.seasonality = 'Primavera y verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Bucanetes_githagineus_-Salinas_de_Janubio%2C_Lanzarote%2C_Spain-8.jpg?width=1280',
-  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = 'Passeriformes',
-  s.taxon_family = 'Fringillidae',
-  s.taxon_genus = 'Bucanetes',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
-  s.spain_status = 'Catalogado como Vulnerable en el Libro Rojo de las Aves de España (población ibérica escasa y localizada)',
-  s.rarity_score = 4,
-  s.rarity_basis = '{"categoria":"Catalogado como Vulnerable en el Libro Rojo de las Aves de España (población ibérica escasa y localizada)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Bucanetes githagineus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Centaurio de Rigual',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Bordes de saladar, suelos margosos húmedos y depresiones con algo de sal',
-  s.description = 'Pequeña hierba anual de la familia de las gencianas, con flores rosadas de cinco pétalos abiertas en estrella. Es un endemismo muy localizado del sureste peninsular, ligado a suelos húmedos y algo salinos, un ambiente escaso y fácil de destruir.',
-  s.description_source = NULL,
-  s.identification_tips = 'Flores rosas de cinco pétalos, abiertas al sol
-Planta anual y menuda, de pocos centímetros
-Hojas opuestas en pares a lo largo del tallo',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/498014263/original.jpeg',
-  s.image_attribution = 'naturcope (CC BY-NC 4.0) · iNaturalist/GBIF · obs. Águilas (parque)',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Gentianales',
-  s.taxon_family = 'Gentianaceae',
-  s.taxon_genus = 'Centaurium',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'Excluida del Catálogo Nacional de Especies Amenazadas (CNEA) desde el año 2000 por dudas sobre su validez taxonómica',
-  s.rarity_score = 5,
-  s.rarity_basis = NULL
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Centaurium rigualii';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Chumberillo de lobo',
-  s.kingdom = 'flora',
-  s.family = 'Planta suculenta',
-  s.primary_habitat = 'Matorral halonitrófilo costero',
-  s.description = 'Suculenta de aspecto cactiforme, con tallos carnosos de cuatro caras y dientes blandos, sin espinas verdaderas. Sus flores, en corona, son de un pardo amarillento jaspeado y desprenden olor a carroña para atraer moscas, que son sus polinizadoras.',
-  s.description_source = NULL,
-  s.identification_tips = 'Tallos carnosos de sección cuadrada, con dientes blandos
-Flores jaspeadas en pardo y amarillo, dispuestas en corona
-Olor desagradable, a carne pasada, en floración',
-  s.seasonality = 'Verano y otoño (floración)',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Caralluma_europaea45.JPG?width=1280',
-  s.image_attribution = 'Nanosanchez (Public domain) · Wikimedia Commons',
+  s.identification_tips = 'Frutos en dos vainas curvas enfrentadas, como cuernos
+Látex blanco al partir una hoja o rama
+Flores pardo verdosas con aspecto de terciopelo',
+  s.seasonality = 'Primavera y verano (floración)',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/609975159/original.jpg',
+  s.image_attribution = 'Quentin Groom (CC0) · GBIF',
   s.taxon_phylum = 'Tracheophyta',
   s.taxon_class = 'Magnoliopsida',
   s.taxon_order = 'Gentianales',
   s.taxon_family = 'Apocynaceae',
-  s.taxon_genus = 'Caralluma',
-  s.iucn_global = 'NE (no evaluada a nivel global; distribución principal fuera de Europa, en el norte de África)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'Lista Roja de la Flora Vascular Española 2008: EN (En Peligro), criterio B1ab(i,iii,iv,v)c(ii,iii,iv)+2ab(i,iii,iv,v)c(ii,iii,iv)',
-  s.rarity_score = 5,
-  s.rarity_basis = '{"categoria":"Lista Roja de la Flora Vascular Española 2008: EN (En Peligro), criterio B1ab(i,iii,iv,v)c(ii,iii,iv)+2ab(i,iii,iv,v)c(ii,iii,iv)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Caralluma europaea';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Espartilla de Persia',
-  s.kingdom = 'flora',
-  s.family = 'Gramínea',
-  s.primary_habitat = 'Litosuelos cálidos del piso termomediterráneo',
-  s.description = 'Gramínea perenne que forma pequeñas matas densas en suelos pedregosos y muy cálidos. Sus espiguillas rematan en nueve aristas plumosas, un rasgo que da nombre al género y que la distingue de cualquier otra gramínea del entorno.',
-  s.description_source = NULL,
-  s.identification_tips = 'Nueve aristas plumosas en cada espiguilla
-Mata compacta y baja, de hasta medio metro
-Tallos y hojas cubiertos de pelusa corta',
-  s.seasonality = 'Verano',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/616035449/original.jpg',
-  s.image_attribution = 'naturcope (CC BY-NC 4.0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Poales',
-  s.taxon_family = 'Poaceae',
-  s.taxon_genus = 'Enneapogon',
-  s.iucn_global = 'NE (no evaluada a nivel global; especie de amplia distribución en Asia y África, rara en el extremo de su área ibérica)',
-  s.iucn_spain = 'CR — En peligro crítico (Lista Roja española, 2010)',
-  s.spain_status = 'Lista Roja de la Flora Vascular Española 2008: CR (En Peligro Crítico)',
-  s.rarity_score = 5,
-  s.rarity_basis = '{"categoria":"Lista Roja de la Flora Vascular Española 2008: CR (En Peligro Crítico)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Enneapogon persicus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Salsola',
-  s.kingdom = 'flora',
-  s.family = 'Mata',
-  s.primary_habitat = 'Estepas salinas y suelos margosos y yesosos con sal',
-  s.description = 'Mata baja y densa de hojas cortas y carnosas cubiertas de pequeñas papilas que le dan un tacto áspero. Es un endemismo ibérico ligado a suelos salinos y margosos, con una distribución muy fragmentada, lo que la hace especialmente sensible a la roturación.',
-  s.description_source = NULL,
-  s.identification_tips = 'Superficie de las hojas rugosa, con papilas visibles de cerca
-Mata compacta y grisácea, de porte bajo
-Frutos con alas membranosas al madurar',
-  s.seasonality = 'Verano y otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Salsola_papillosa1160031.jpg?width=1280',
-  s.image_attribution = 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Amaranthaceae',
-  s.taxon_genus = 'Salsola',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Salsola papillosa';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Tortuga mora',
-  s.kingdom = 'fauna',
-  s.family = 'Reptil',
-  s.primary_habitat = 'Matorral termomediterráneo semiárido',
-  s.description = 'Tortuga terrestre de caparazón abombado con dibujo de placas amarillas y negras, la única silvestre del sureste peninsular. Se reconoce por un tubérculo córneo a cada lado de la cola —el «espolón»— y por no tener el peto articulado. Pasa el verano y el invierno inactiva, refugiada bajo matas y madrigueras.',
-  s.description_source = NULL,
-  s.identification_tips = 'Un tubérculo córneo a cada lado de la base de la cola
-Caparazón abombado con placas amarillas y negras
-Peto sin bisagra: no puede cerrarse del todo',
-  s.seasonality = 'Primavera y otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Nabeulensis_sarda.JPG?width=1280',
-  s.image_attribution = 'Gisella D. (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Reptilia',
-  s.taxon_order = 'Testudines',
-  s.taxon_family = 'Testudinidae',
-  s.taxon_genus = 'Testudo',
-  s.iucn_global = 'VU A1cd (evaluación IUCN de 1996; pendiente de reevaluación global reciente)',
-  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2002)',
-  s.spain_status = 'Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexos II y IV; Reglamento CITES (CE) 338/97, Anexo A',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Testudo graeca';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Zamarrilla lanuda',
-  s.kingdom = 'flora',
-  s.family = 'Mata aromática',
-  s.primary_habitat = 'Matorral y cerros sobre suelos calizos y margosos secos',
-  s.description = 'Mata cubierta por una lana blanca y espesa que la hace destacar en el matorral. Sus flores, rosadas o purpúreas, se agrupan en cabezuelas terminales y carecen de labio superior, con los estambres al descubierto. Es un endemismo del sureste ibérico.',
-  s.description_source = NULL,
-  s.identification_tips = 'Toda la planta cubierta de lana blanca y espesa
-Flores sin labio superior, con los estambres asomando
-Cabezuelas apretadas en el extremo de las ramas',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_lanigerum_kz01.jpg?width=1280',
-  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Lamiales',
-  s.taxon_family = 'Lamiaceae',
-  s.taxon_genus = 'Teucrium',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Teucrium lanigerum';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Abubilla',
-  s.kingdom = 'fauna',
-  s.family = 'Ave',
-  s.primary_habitat = 'Campos abiertos, dehesas, cultivos con arbolado y bordes de matorral',
-  s.description = 'Ave inconfundible de color canela con alas y cola a franjas blancas y negras, y una cresta eréctil que despliega en abanico al posarse. Sondea el suelo blando con el pico largo y curvo en busca de larvas e insectos. Su canto, un «up-up-up» sordo y repetido, se oye de lejos en primavera.',
-  s.description_source = NULL,
-  s.identification_tips = 'Vuelo ondulante y torpe, como una mariposa grande
-Cresta que abre en abanico justo al aterrizar
-Camina por el suelo clavando el pico largo y curvo',
-  s.seasonality = 'Todo el año en el sur peninsular; estival en el resto',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Wiedehopf_mit_Puppe_als_Futter.jpg?width=1280',
-  s.image_attribution = 'Sven Damerow (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = NULL,
-  s.taxon_family = NULL,
-  s.taxon_genus = 'Upupa',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Upupa epops';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Acebuche',
-  s.kingdom = 'flora',
-  s.family = 'Árbol',
-  s.primary_habitat = 'Matorral alto, laderas secas y barrancos del piso más cálido',
-  s.description = 'El acebuche es el olivo silvestre: mismo árbol, sin siglos de selección. Tiene las hojas más pequeñas y duras, las ramas jóvenes a menudo espinosas y aceitunas diminutas. Forma matorrales altos y es el árbol característico de las laderas cálidas mediterráneas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas pequeñas, verdes arriba y plateadas por debajo
-Ramillas jóvenes rígidas y a veces espinosas
-Aceitunas muy pequeñas, de poco más de un centímetro',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ullastre_vell.JPG?width=1280',
-  s.image_attribution = 'Antoni Salvà (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Lamiales',
-  s.taxon_family = 'Oleaceae',
-  s.taxon_genus = 'Olea',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Olea europaea subsp. europaea';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Acelga marina',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Playas de cantos, pie de acantilado y suelos removidos con sal cerca del mar',
-  s.description = 'Antepasada silvestre de la acelga y la remolacha, con hojas gruesas, lustrosas y algo carnosas que aguantan la sal y el viento. Crece donde el mar deja restos orgánicos acumulados. Sus flores son verdosas y pasan desapercibidas, dispuestas en largas espigas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas gruesas y brillantes, como de acelga pequeña
-Tallos rojizos tumbados en la arena o entre cantos
-Espigas largas de flores verdes sin pétalos vistosos',
-  s.seasonality = 'Primavera y verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Beta_vulgaris_maritima02.jpg?width=1280',
-  s.image_attribution = 'Meneerke bloem (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Amaranthaceae',
-  s.taxon_genus = 'Beta',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)',
-  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2010)',
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Beta maritima';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Águila calzada',
-  s.kingdom = 'fauna',
-  s.family = 'Ave rapaz',
-  s.primary_habitat = 'Bosques y sierras con arbolado, cazando sobre zonas abiertas cercanas',
-  s.description = 'Águila pequeña, del tamaño de un ratonero, con dos formas de plumaje muy distintas: una clara con el vientre blanco y otra oscura y uniforme. Nidifica en árboles dentro del bosque y caza en campo abierto lanzándose desde altura. Se identifica en vuelo por las «luces de posición»: dos manchas blancas en el arranque de las alas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Dos manchas blancas donde el ala se une al cuerpo
-Existen ejemplares claros y oscuros de la misma especie
-Cola larga y recta, sin la muesca del milano',
-  s.seasonality = 'Primavera y verano (estival); algunos ejemplares invernan',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Booted_eagle%2C_Hieraaetus_pennatus%2C_at_Kgalagadi_Transfrontier_Pa_(32334023348).jpg?width=1280',
-  s.image_attribution = 'Derek Keats from Johannesburg, South Africa (CC BY 2.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = NULL,
-  s.taxon_family = NULL,
-  s.taxon_genus = 'Hieraaetus',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Hieraaetus pennatus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Águila real',
-  s.kingdom = 'fauna',
-  s.family = 'Ave rapaz',
-  s.primary_habitat = 'Montañas y sierras con cortados rocosos y amplias zonas abiertas de caza',
-  s.description = 'La mayor de las águilas ibéricas, con casi dos metros y medio de envergadura y una nuca dorada que le da nombre. Cría en repisas de cantiles y usa territorios enormes, que una pareja defiende durante años. Planea con las alas en una «V» muy suave y bate poco, lo que la distingue de las rapaces menores.',
-  s.description_source = NULL,
-  s.identification_tips = 'Nuca y cogote de tono dorado, visibles a buena luz
-Planea con las alas en «V» muy abierta y bate poco
-Tamaño enorme: dobla al ratonero en el mismo cielo',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Maakotka_(Aquila_chrysaetos)_by_Jarkko_J%C3%A4rvinen.jpg?width=1280',
-  s.image_attribution = 'Jarkko Järvinen (CC BY-SA 2.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = NULL,
-  s.taxon_family = NULL,
-  s.taxon_genus = 'Aquila',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Aquila chrysaetos';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Albaida',
-  s.kingdom = 'flora',
-  s.family = 'Mata',
-  s.primary_habitat = 'Matorral seco y soleado sobre margas y suelos pobres',
-  s.description = 'Mata de aspecto blanquecino por la fina pelusa que cubre hojas y tallos, un recurso frente al sol y la sequía. En primavera se llena de espigas de flores amarillas que atraen a muchos insectos. Es una de las leguminosas que primero coloniza laderas degradadas y taludes.',
-  s.description_source = NULL,
-  s.identification_tips = 'Aspecto grisáceo y aterciopelado al tacto
-Flores amarillas pequeñas en espigas apretadas
-Hojas divididas en tres, la del centro más larga',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anthyllis_cytisoides.JPG?width=1280',
-  s.image_attribution = 'Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Fabales',
-  s.taxon_family = 'Fabaceae',
-  s.taxon_genus = 'Anthyllis',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Anthyllis cytisoides';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Albardín',
-  s.kingdom = 'flora',
-  s.family = 'Gramínea',
-  s.primary_habitat = 'Estepas salinas, margas y suelos yesosos secos; forma albardinales',
-  s.description = 'Gramínea perenne de hojas duras y punzantes que forma matas separadas sobre suelos salinos y margosos donde poco más prospera. Su inflorescencia es inconfundible: una espata blanca y sedosa que envuelve las flores como un capuchón de papel.',
-  s.description_source = NULL,
-  s.identification_tips = 'Espata blanca y sedosa envolviendo la espiga
-Hojas rígidas terminadas en punta punzante
-Matas espaciadas sobre suelo desnudo y claro',
-  s.seasonality = 'Todo el año (espigado en primavera)',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lygeum_spartum-1.jpg?width=1280',
-  s.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Poales',
-  s.taxon_family = 'Poaceae',
-  s.taxon_genus = 'Lygeum',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Lygeum spartum';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Albardín brezo',
-  s.kingdom = 'flora',
-  s.family = 'Mata',
-  s.primary_habitat = 'Estepas salinas, saladares y suelos margosos con sal',
-  s.description = 'Mata baja y muy ramificada, de hojas diminutas y enrolladas que a menudo aparecen cubiertas de una costra blanca: son cristales de sal que la planta expulsa por glándulas especializadas. Sus flores son rosadas y pequeñas, apiñadas en el extremo de las ramas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Costra blanca de sal cristalizada sobre las hojas
-Hojas minúsculas y enrolladas, casi como escamas
-Flores rosadas pequeñas agrupadas en el extremo',
-  s.seasonality = 'Primavera y verano',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/464713930/original.jpeg',
-  s.image_attribution = 'Rafael Medina (CC BY 4.0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Frankeniaceae',
-  s.taxon_genus = 'Frankenia',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Frankenia corymbosa';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Alcaparra',
-  s.kingdom = 'flora',
-  s.family = 'Arbusto',
-  s.primary_habitat = 'Roquedos y muros del matorral litoral',
-  s.description = 'Arbusto de ramas colgantes que crece en roquedos y muros, con hojas redondeadas y carnosas y estípulas transformadas en espinas curvas. Sus flores, grandes y blancas con un penacho de estambres violáceos, se abren al amanecer y duran un solo día. Los botones en salmuera son las alcaparras.',
-  s.description_source = NULL,
-  s.identification_tips = 'Un par de espinas curvas en la base de cada hoja
-Flores blancas con muchos estambres largos y violáceos
-Cada flor dura un solo día',
-  s.seasonality = 'Verano',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/673180503/original.jpg',
-  s.image_attribution = 'Heiko Hentschel (CC0) · GBIF · Capparis sicula (especie)',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Brassicales',
-  s.taxon_family = 'Capparaceae',
-  s.taxon_genus = 'Capparis',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Capparis sicula subsp. sicula';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Alcaraván',
-  s.kingdom = 'fauna',
-  s.family = 'Ave esteparia',
-  s.primary_habitat = 'Llanos pedregosos, cultivos de secano, ramblas y eriales con poca cobertura',
-  s.description = 'Ave de aspecto extraño y ojos amarillos enormes, adaptados a la actividad nocturna. De día permanece agachada e inmóvil, confiada en su plumaje críptico, y solo al anochecer se activa y delata con un reclamo silbado y melancólico que recuerda al del zarapito.',
-  s.description_source = NULL,
-  s.identification_tips = 'Ojos amarillos desproporcionadamente grandes
-Dos barras blancas y negras en el ala plegada
-Reclamo silbado y triste al anochecer',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Burhinus_oedicnemus_insularum_Lanzarote_1.jpg?width=1280',
-  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = 'Charadriiformes',
-  s.taxon_family = 'Burhinidae',
-  s.taxon_genus = 'Burhinus',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE; Directiva Aves 2009/147/CE, Anexo I',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Burhinus oedicnemus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Alhucema',
-  s.kingdom = 'flora',
-  s.family = 'Mata aromática',
-  s.primary_habitat = 'Matorral seco, ribazos y bordes soleados de clima cálido',
-  s.description = 'Alhucema de hojas muy divididas, casi como las de un helecho, y aspecto grisáceo. Florece durante buena parte del año en espigas azul violeta rematadas por dos brácteas alargadas. Su olor es más resinoso y menos dulce que el del espliego cultivado.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas finamente divididas, de aspecto plumoso
-Espigas azul violeta con dos brácteas en la punta
-Aroma resinoso e intenso al frotar',
-  s.seasonality = 'Casi todo el año, con máximo en primavera y otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lavandula_multifida.jpg?width=1280',
-  s.image_attribution = 'Laitche (Public domain) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Lamiales',
-  s.taxon_family = 'Lamiaceae',
-  s.taxon_genus = 'Lavandula',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Lavandula multifida';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Amapola marina',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Ríos mediterráneos con Glaucium flavum',
-  s.description = 'Amapola perenne glauca de grandes flores amarillas y cápsula muy larga, propia de gravas y cauces; es la especie que da nombre al hábitat 3250.',
-  s.description_source = NULL,
-  s.identification_tips = 'Flores amarillas grandes
-Follaje glauco y lobulado
-Fruto en cápsula muy larga',
-  s.seasonality = 'Primavera y verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Glaucium_flavum_2015-06-16_442.JPG?width=1280',
-  s.image_attribution = 'Salicyna (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Ranunculales',
-  s.taxon_family = 'Papaveraceae',
-  s.taxon_genus = 'Glaucium',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Glaucium flavum';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Anabasis',
-  s.kingdom = 'flora',
-  s.family = 'Planta suculenta',
-  s.primary_habitat = 'Suelos salinos y margosos áridos, estepas y ramblas de clima muy seco',
-  s.description = 'Mata de tallos verdes, carnosos y articulados, sin hojas visibles, muy parecida a las sosas de saladar pero de porte más rígido y ramificado. Es una planta iberoafricana que en la península solo vive en los enclaves más áridos del sureste.',
-  s.description_source = NULL,
-  s.identification_tips = 'Tallos articulados y suculentos, sin hojas
-Porte rígido y muy ramificado desde la base
-En los suelos más áridos y salinos, casi desnudos',
-  s.seasonality = 'Verano y otoño',
-  s.image_url = 'https://observation.org/photos/111149341.jpg',
-  s.image_attribution = 'Ans Gorter (CC BY-NC-ND 4.0) · observation.org / GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Amaranthaceae',
-  s.taxon_genus = 'Anabasis',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Anabasis hispanica';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Arto',
-  s.kingdom = 'flora',
-  s.family = 'Arbusto',
-  s.primary_habitat = 'Matorral árido de clima muy cálido, ramblas y glacis pedregosos',
-  s.description = 'Arbusto denso y espinoso de origen tropical africano, superviviente de climas más cálidos que el actual, que en Europa solo pervive en el extremo sureste ibérico. Sus ramas verdes acaban en pincho y sus hojas, algo carnosas, caen en los veranos más duros.',
-  s.description_source = NULL,
-  s.identification_tips = 'Ramas verdes rematadas en espina fuerte
-Hojas algo carnosas de borde finamente dentado
-Porte redondeado y muy denso, difícil de atravesar',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Arto_Negro_01.jpg?width=1280',
-  s.image_attribution = 'Eduardo Milla (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Celastrales',
-  s.taxon_family = 'Celastraceae',
-  s.taxon_genus = 'Maytenus',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Maytenus senegalensis subsp. europaea';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Aulaga',
-  s.kingdom = 'flora',
-  s.family = 'Mata',
-  s.primary_habitat = 'Matorral árido, ramblas y bordes de camino en clima muy seco',
-  s.description = 'Mata en forma de bola formada por ramas verdes, rígidas y terminadas en pincho, casi sin hojas: la fotosíntesis la hacen los propios tallos. Al romper una rama suelta un látex blanco. Sus flores amarillas recuerdan a las del diente de león en miniatura.',
-  s.description_source = NULL,
-  s.identification_tips = 'Matorral redondo de ramas verdes y espinosas, casi sin hojas
-Suelta látex blanco al partir un tallo
-Flores amarillas tipo diente de león',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Launaea_arborescens_-_Oasis_Park_botanical_garden_-_Fuerteventura_-_02.jpg?width=1280',
-  s.image_attribution = 'Norbert Nagel, Mörfelden-Walldorf, Germany (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Asterales',
-  s.taxon_family = 'Asteraceae',
-  s.taxon_genus = 'Launaea',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Launaea arborescens';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Azor común',
-  s.kingdom = 'fauna',
-  s.family = 'Ave rapaz',
-  s.primary_habitat = 'Bosques maduros y masas forestales densas con claros',
-  s.description = 'Rapaz forestal de alas cortas y anchas y cola larga, diseñada para perseguir presas entre los árboles a gran velocidad. Es esquiva y se ve casi siempre de refilón. La hembra llega a ser un tercio mayor que el macho, una diferencia poco habitual entre las aves.',
-  s.description_source = NULL,
-  s.identification_tips = 'Ceja blanca marcada sobre el ojo, como un antifaz al revés
-Vuelo de varios aleteos rápidos seguidos de un planeo corto
-Pecho finamente rayado en horizontal en los adultos',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Northern_Goshawk_ad_M2.jpg?width=1280',
-  s.image_attribution = 'Norbert Kenntner, Berlin (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = NULL,
-  s.taxon_family = NULL,
-  s.taxon_genus = 'Accipiter',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Accipiter gentilis';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Azufaifo',
-  s.kingdom = 'flora',
-  s.family = 'Arbusto',
-  s.primary_habitat = 'Matorrales arborescentes de Ziziphus',
-  s.description = 'Arbusto espinoso que forma cúpulas densas de varios metros, un microhábitat en sí mismo: bajo su copa se refugian aves, reptiles y mamíferos, y la humedad y el suelo son distintos que fuera. Sus ramas zigzaguean con dos espinas en cada nudo, una recta y otra ganchuda.',
-  s.description_source = NULL,
-  s.identification_tips = 'Ramas en zigzag con dos espinas por nudo, una recta y otra curva
-Porte en cúpula o almohadón, muy denso
-Frutos redondos que pasan de verde a pardo amarillento',
-  s.seasonality = 'Primavera a otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ziziphus_lotus_20200928_191923.jpg?width=1280',
-  s.image_attribution = 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Rosales',
-  s.taxon_family = 'Rhamnaceae',
-  s.taxon_genus = 'Ziziphus',
+  s.taxon_genus = 'Periploca',
   s.iucn_global = 'NE (no evaluada a nivel global)',
   s.iucn_spain = NULL,
   s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Ziziphus lotus';
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Periploca angustifolia';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Baladre',
-  s.kingdom = 'flora',
-  s.family = 'Arbusto',
-  s.primary_habitat = 'Cauces de rambla y ramblizos con humedad subterránea y crecidas',
-  s.description = 'Arbusto de hojas coriáceas, alargadas y opuestas, que forma masas densas en el lecho de las ramblas y aguanta las riadas gracias a su raigambre. Florece en rosa intenso durante buena parte del verano. Toda la planta es muy tóxica, savia incluida.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas duras y lanceoladas con el nervio central marcado
-Flores rosas grandes en el extremo de las ramas
-Frutos en vaina larga que se abre soltando semillas con vilano',
-  s.seasonality = 'Primavera y verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Nerium_oleander_flowers_leaves.jpg?width=1280',
-  s.image_attribution = 'Alvesgaspar (CC BY 2.5) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Gentianales',
-  s.taxon_family = 'Apocynaceae',
-  s.taxon_genus = 'Nerium',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Nerium oleander';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Barba de chivo',
-  s.kingdom = 'flora',
-  s.family = 'Gramínea',
-  s.primary_habitat = 'Pastizales anuales sobre suelos secos y pedregosos',
-  s.description = 'Gramínea anual que agosta pronto y cubre los claros de matorral de un rubio pajizo. Cada semilla lleva una arista larga y retorcida que gira con los cambios de humedad y va enroscándose hasta clavarla en el suelo. Es la responsable de las «agujas» que se enganchan en los calcetines.',
-  s.description_source = NULL,
-  s.identification_tips = 'Aristas largas y retorcidas, en espiral al secarse
-Planta anual: en verano queda seca y pajiza
-Las semillas se clavan en la ropa y el pelaje',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Stipa_capensis.JPG?width=1280',
-  s.image_attribution = 'Juanmadro (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Poales',
-  s.taxon_family = 'Poaceae',
-  s.taxon_genus = 'Stipellula',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Stipellula capensis';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Barrilla pinchosa',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Arenas y gravas del primer cordón de playa y suelos removidos salinos',
-  s.description = 'Hierba anual muy ramificada, de hojas carnosas rematadas en un pincho fino, que forma una bola. Al secarse se desprende del suelo y rueda con el viento dispersando las semillas. Coloniza la línea donde el mar deja restos de algas y madera.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas carnosas terminadas en una punta pinchuda
-Forma una mata redondeada que rueda al secarse
-Tallos con finas líneas rojizas o rosadas',
-  s.seasonality = 'Verano y otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Salsola_kali_habito.jpg?width=1280',
-  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Amaranthaceae',
-  s.taxon_genus = 'Salsola',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Salsola kali';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Bayón',
-  s.kingdom = 'flora',
-  s.family = 'Arbusto',
-  s.primary_habitat = 'Matorral alto, sabinares y laderas secas sobre suelo pedregoso',
-  s.description = 'Arbusto de ramas verdes y erguidas con hojas estrechas y coriáceas. Es hemiparásito: fabrica su propio alimento pero además conecta sus raíces a las de otras plantas para robarles agua y sales. Sus frutos son bayas rojas o anaranjadas muy vistosas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Ramas verdes y erectas, de aspecto escobiforme
-Bayas rojo anaranjado brillantes al madurar
-Hojas estrechas, duras y de punta aguda',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Osyris_lanceolata.JPG?width=1280',
-  s.image_attribution = 'Xemenendura (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Santalales',
-  s.taxon_family = 'Santalaceae',
-  s.taxon_genus = 'Osyris',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Osyris lanceolata';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Búho real',
+  s.common_name = 'Lagartija colirroja',
   s.kingdom = 'fauna',
-  s.family = 'Ave rapaz nocturna',
-  s.primary_habitat = 'Cortados rocosos, barrancos y laderas con matorral y zonas abiertas de caza',
-  s.description = 'El mayor búho de Europa, con casi dos metros de envergadura, penachos de plumas erguidos sobre la cabeza y ojos de un naranja encendido. Caza conejos, ratas e incluso otras rapaces. Su canto es un «bu-bo» profundo que se propaga kilómetros por los barrancos en las noches de invierno.',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'Lagartija de suelos arenosos, de cuerpo aplanado y dedos con escamas laterales en forma de peine que le sirven de raqueta sobre la arena suelta. Los jóvenes tienen la cola y las patas traseras de un rojo intenso que se apaga en los adultos.',
   s.description_source = NULL,
-  s.identification_tips = 'Penachos de plumas erguidos a los lados de la cabeza
-Ojos naranjas muy intensos
-Canto grave y profundo en las noches de invierno',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Bubo_bubo_sibiricus_-_01.JPG?width=1280',
-  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.identification_tips = 'Dedos con flecos de escamas a los lados, como peines
+Jóvenes con cola y patas traseras rojo intenso
+Cuerpo aplanado, con rayas y ocelos claros en el dorso',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Acanthodactylus_erythrurus.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
   s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = 'Strigiformes',
-  s.taxon_family = 'Strigidae',
-  s.taxon_genus = 'Bubo',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Lacertidae',
+  s.taxon_genus = 'Acanthodactylus',
   s.iucn_global = 'LC',
-  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE; Directiva Aves 2009/147/CE, Anexo I; Reglamento CITES (CE) 338/97, Anexo A',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
   s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Bubo bubo';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Calandria común',
-  s.kingdom = 'fauna',
-  s.family = 'Ave esteparia',
-  s.primary_habitat = 'Llanos cerealistas, pastizales y estepas de suelo profundo',
-  s.description = 'La mayor de las alondras ibéricas, robusta y de pico grueso, con una mancha negra muy marcada a cada lado del cuello. Canta en vuelo, describiendo círculos altos con un torrente de notas en el que imita a otras aves. En invierno forma bandos numerosos en los llanos.',
-  s.description_source = NULL,
-  s.identification_tips = 'Babero negro a cada lado del cuello
-Borde trasero del ala blanco y visible en vuelo
-Pico grueso y pálido, de granívora',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Melanocorypha_calandra.jpg?width=1280',
-  s.image_attribution = 'Bereşe.jpg: Dûrzan cîrano derivative work: Osado (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = NULL,
-  s.taxon_family = NULL,
-  s.taxon_genus = 'Melanocorypha',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Melanocorypha calandra';
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Acanthodactylus erythrurus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Cambrón',
@@ -4336,554 +3561,327 @@ Bayas rojas pequeñas y flores tubulares violáceas',
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Lycium intricatum';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Canadillo',
-  s.kingdom = 'flora',
-  s.family = 'Arbusto',
-  s.primary_habitat = 'Roquedos, matorral seco y pie de acantilado en clima cálido',
-  s.description = 'Arbusto de aspecto extraño: un manojo de tallos verdes, articulados y colgantes, casi sin hojas, que se quiebran con facilidad por los nudos. No es una planta con flores, sino un pariente lejano de las coníferas; sus semillas van envueltas en una cubierta roja y carnosa.',
-  s.description_source = NULL,
-  s.identification_tips = 'Tallos verdes articulados que se rompen por los nudos
-Sin hojas visibles, solo escamas en cada nudo
-Frutos rojos carnosos con una semilla dentro',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ephedra_fragilis_3.JPG?width=1280',
-  s.image_attribution = 'User:falconaumanni (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Gnetopsida',
-  s.taxon_order = 'Ephedrales',
-  s.taxon_family = 'Ephedraceae',
-  s.taxon_genus = 'Ephedra',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Ephedra fragilis';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Cantueso dentado',
+  s.common_name = 'Zamarrilla lanuda',
   s.kingdom = 'flora',
   s.family = 'Mata aromática',
-  s.primary_habitat = 'Tomillares y matorral termomediterráneo',
-  s.description = 'Lavanda de hojas estrechas con el borde recortado en dientes redondeados, muy aromática. Su espiga violácea remata en un penacho de brácteas del mismo color, más corto que el del cantueso común. Florece durante buena parte del año en clima cálido.',
+  s.primary_habitat = 'Matorral y cerros sobre suelos calizos y margosos secos',
+  s.description = 'Mata cubierta por una lana blanca y espesa que la hace destacar en el matorral. Sus flores, rosadas o purpúreas, se agrupan en cabezuelas terminales y carecen de labio superior, con los estambres al descubierto. Es un endemismo del sureste ibérico.',
   s.description_source = NULL,
-  s.identification_tips = 'Bordes de la hoja recortados en dientes romos
-Penacho de brácteas violetas en lo alto de la espiga
-Aroma intenso, entre lavanda y alcanfor',
+  s.identification_tips = 'Toda la planta cubierta de lana blanca y espesa
+Flores sin labio superior, con los estambres asomando
+Cabezuelas apretadas en el extremo de las ramas',
   s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lavandula_dentata1.jpg?width=1280',
-  s.image_attribution = 'KENPEI (CC BY-SA 3.0) · Wikimedia Commons',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_lanigerum_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
   s.taxon_phylum = 'Tracheophyta',
   s.taxon_class = 'Magnoliopsida',
   s.taxon_order = 'Lamiales',
   s.taxon_family = 'Lamiaceae',
-  s.taxon_genus = 'Lavandula',
+  s.taxon_genus = 'Teucrium',
   s.iucn_global = 'NE',
   s.iucn_spain = NULL,
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Lavandula dentata';
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Teucrium lanigerum';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Cardo amarillo de roca',
+  s.common_name = 'Teucrio de Freyn',
   s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Roquedos y fisuras calcáreas costeras',
-  s.description = 'Compuesta rupícola que crece colgando de las fisuras de los cantiles calizos, con hojas divididas y algo carnosas y capítulos amarillos rodeados de brácteas con apéndices espinosos. Es un endemismo del sureste ibérico ligado a paredes de roca costeras y de interior.',
+  s.family = 'Mata aromática',
+  s.primary_habitat = 'Roquedos, pedregales y ramblas sobre suelos calizos secos',
+  s.description = 'Teucrio endémico del sureste ibérico, de porte bajo y aspecto blanquecino, con hojas pequeñas y enrolladas y flores rosadas o blanquecinas sin labio superior. Como todas las labiadas, tiene el tallo de sección cuadrada y desprende aroma al frotarlo.',
   s.description_source = NULL,
-  s.identification_tips = 'Capítulos amarillos con brácteas de apéndice espinoso
-Hojas divididas y algo carnosas, en roseta colgante
-Crece encajada en la grieta, no en el suelo',
-  s.seasonality = 'Floración primaveral',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Centaurea_saxicola674.jpg?width=1280',
-  s.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
+  s.identification_tips = 'Flores sin labio superior, con los estambres asomando
+Tallo de sección cuadrada, típico de labiada
+Hojas pequeñas y enrolladas, de aspecto grisáceo',
+  s.seasonality = 'Primavera-verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_freynii_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
   s.taxon_phylum = 'Tracheophyta',
   s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Asterales',
-  s.taxon_family = 'Asteraceae',
-  s.taxon_genus = 'Centaurea',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Teucrium',
   s.iucn_global = 'NE',
   s.iucn_spain = NULL,
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Centaurea saxicola';
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Teucrium freynii';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Carraca europea',
-  s.kingdom = 'fauna',
-  s.family = 'Ave',
-  s.primary_habitat = 'Campos abiertos con arbolado disperso, ribazos y construcciones con huecos',
-  s.description = 'Del tamaño de una paloma y de un azul turquesa intenso que sorprende al levantar el vuelo. Caza al acecho desde cables y postes, dejándose caer sobre saltamontes y escarabajos. Cría en huecos de árboles viejos y de edificios, de ahí que dependa de que queden árboles añosos y ruinas en el campo.',
-  s.description_source = NULL,
-  s.identification_tips = 'Azul turquesa que solo se aprecia bien cuando vuela
-Espalda de color canela que contrasta con el azul
-Posada quieta en cables, oteando el suelo',
-  s.seasonality = 'Primavera y verano (estival)',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/European_roller.jpg?width=1280',
-  s.image_attribution = 'Christian Svane (CC BY-SA 2.5) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = NULL,
-  s.taxon_family = NULL,
-  s.taxon_genus = 'Coracias',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Coracias garrulus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Carrizo real',
-  s.kingdom = 'flora',
-  s.family = 'Gramínea',
-  s.primary_habitat = 'Ramblas, cauces y suelos húmedos con capa freática cercana',
-  s.description = 'Gramínea gigante que levanta cañas de dos y tres metros rematadas por penachos plumosos plateados, muy vistosos al contraluz de finales de verano. Forma matas grandes en cauces y bordes de rambla, donde sujeta el sustrato.',
-  s.description_source = NULL,
-  s.identification_tips = 'Penachos plumosos plateados en lo alto de cañas altas
-Forma matas grandes y densas, no céspedes
-Hojas largas de borde muy áspero, cortante al pasar la mano',
-  s.seasonality = 'Verano y otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Saccharum_ravennae_-_J._C._Raulston_Arboretum_-_DSC06214.JPG?width=1280',
-  s.image_attribution = 'Daderot (Public domain) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Poales',
-  s.taxon_family = 'Poaceae',
-  s.taxon_genus = 'Tripidium',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Tripidium ravennae';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Cernícalo vulgar',
-  s.kingdom = 'fauna',
-  s.family = 'Ave rapaz',
-  s.primary_habitat = 'Campos abiertos, matorral, cortados y también ciudades',
-  s.description = 'El halcón más común y fácil de ver, gracias a su costumbre de cernirse: se queda suspendido en el aire batiendo las alas con la cabeza inmóvil, buscando ratones y lagartijas. El macho tiene la cabeza gris y el dorso rojizo con puntos negros; la hembra es más parda y barrada.',
-  s.description_source = NULL,
-  s.identification_tips = 'Se queda «clavado» en el aire cerniéndose
-Dorso rojizo salpicado de puntos negros
-Cola larga con una banda negra ancha en la punta',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_kestrel_falco_tinnunculus.jpg?width=1280',
-  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = NULL,
-  s.taxon_family = NULL,
-  s.taxon_genus = 'Falco',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Falco tinnunculus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Cerrillo',
-  s.kingdom = 'flora',
-  s.family = 'Gramínea',
-  s.primary_habitat = 'Laderas secas, ribazos y pastizales sobre suelos pedregosos',
-  s.description = 'Gramínea perenne que forma matas y espiga en verano, cuando el resto del pastizal ya está agostado. Sus espiguillas van por parejas, cubiertas de pelos rojizos y con aristas retorcidas. Da al paisaje un tono dorado rojizo a final de verano.',
-  s.description_source = NULL,
-  s.identification_tips = 'Espiguillas peludas agrupadas por parejas
-Aristas retorcidas y acodadas
-Espiga en verano, cuando lo demás está seco',
-  s.seasonality = 'Verano y otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hyparrhenia_hirta_Habitus_ValledeAlcudia.jpg?width=1280',
-  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Poales',
-  s.taxon_family = 'Poaceae',
-  s.taxon_genus = 'Hyparrhenia',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Hyparrhenia hirta';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Charrán patinegro',
-  s.kingdom = 'fauna',
-  s.family = 'Ave marina',
-  s.primary_habitat = 'Costas, bahías y salinas; pesca sobre aguas someras',
-  s.description = 'Charrán grande y pálido, con un penacho negro despeinado en la nuca y un pico negro rematado en amarillo, como si lo hubiera mojado en mostaza. Pesca zambulléndose de golpe desde varios metros de altura. Fuera de la época de cría pierde el negro de la frente y queda con la coronilla blanca.',
-  s.description_source = NULL,
-  s.identification_tips = 'Punta amarilla en el pico negro
-Nuca con plumas negras erizadas, en penacho
-Se lanza al agua en picado, plegando las alas',
-  s.seasonality = 'Otoño e invierno principalmente',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/606127388/original.jpg',
-  s.image_attribution = 'Diego González Dopico (CC BY 4.0) · GBIF',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = NULL,
-  s.taxon_family = NULL,
-  s.taxon_genus = 'Thalasseus',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
-  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Thalasseus sandvicensis';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Chorlitejo patinegro',
-  s.kingdom = 'fauna',
-  s.family = 'Ave limícola',
-  s.primary_habitat = 'Playas, salinas, marismas y llanos arenosos junto al mar',
-  s.description = 'Chorlitejo pequeño y pálido, de patas oscuras, que corretea por la arena en carreras cortas seguidas de paradas bruscas. Su nido es una simple depresión en la arena con los huevos perfectamente camuflados, por lo que las puestas se pierden con facilidad bajo el pisoteo.',
-  s.description_source = NULL,
-  s.identification_tips = 'Collar oscuro interrumpido en el centro del pecho
-Corre a ratos y se para en seco, una y otra vez
-Plumaje muy pálido, del color de la arena seca',
-  s.seasonality = 'Todo el año, con máximos en primavera y verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Charadrius_alexandrinus_-_Kentish_Plover_03.jpg?width=1280',
-  s.image_attribution = 'Zeynel Cebeci (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = 'Charadriiformes',
-  s.taxon_family = 'Charadriidae',
-  s.taxon_genus = 'Charadrius',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
-  s.spain_status = 'Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; LESRPE (RD 139/2011); Ley 42/2007, Anexo IV',
-  s.rarity_score = 4,
-  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas (CEEA): Vulnerable","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Charadrius alexandrinus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Chotacabras cuellirrojo',
-  s.kingdom = 'fauna',
-  s.family = 'Ave',
-  s.primary_habitat = 'Matorral abierto, pinares aclarados, ramblas y caminos térreos',
-  s.description = 'Ave crepuscular de plumaje jaspeado que imita la hojarasca, tan mimético que de día resulta casi imposible verla posada en el suelo. Caza polillas en vuelo con la boca muy abierta. Su canto nocturno es un «cu-toc, cu-toc» repetido de forma monótona durante minutos.',
-  s.description_source = NULL,
-  s.identification_tips = 'Collar rojizo en la nuca, más marcado que en su pariente europeo
-Se levanta del camino al anochecer y vuelve a posarse unos metros más allá
-Canto nocturno monótono, como un motor lejano',
-  s.seasonality = 'Primavera y verano (estival)',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Caprimulgus_ruficollis_-Portugal-8.jpg?width=1280',
-  s.image_attribution = 'Olivença (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = NULL,
-  s.taxon_family = NULL,
-  s.taxon_genus = 'Caprimulgus',
-  s.iucn_global = 'NT (Casi amenazado)',
-  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Caprimulgus ruficollis';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Chova piquirroja',
-  s.kingdom = 'fauna',
-  s.family = 'Ave',
-  s.primary_habitat = 'Cortados rocosos, cantiles y montañas, alimentándose en pastizales cercanos',
-  s.description = 'Córvido negro y brillante con el pico rojo, largo y curvo, y las patas del mismo color encendido. Vuela en grupos acrobáticos junto a los cantiles, plegando las alas y dejándose caer por puro juego. Busca larvas hurgando en el suelo de los pastos con ese pico de sonda.',
-  s.description_source = NULL,
-  s.identification_tips = 'Pico rojo, largo y curvado hacia abajo
-Reclamo agudo, un «chiaa» nasal muy característico
-Plumas de la punta del ala muy separadas, como dedos',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pyrrhocorax_pyrrhocorax_-standing-8.jpg?width=1280',
-  s.image_attribution = 'File:Alpenkrähe.jpg: "Malte Uhl (User:Zzzip)" derivative work: Snow… (CC BY-SA 2.5) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = NULL,
-  s.taxon_family = NULL,
-  s.taxon_genus = 'Pyrrhocorax',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Pyrrhocorax pyrrhocorax';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Cinomorio',
-  s.kingdom = 'flora',
-  s.family = 'Planta parásita',
-  s.primary_habitat = 'Saladares y matorrales halonitrófilos',
-  s.description = 'Planta parásita sin clorofila, de aspecto de maza rojiza, que crece sobre las raíces de quenopodiáceas halófilas de los saladares y estepas salinas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Inflorescencia carnosa rojo-oscura en maza
-Sin hojas verdes (parásita)
-Aparece sobre raíces de plantas halófilas',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cynomorium_coccineum_vMH375.jpg?width=1280',
-  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Saxifragales',
-  s.taxon_family = 'Cynomoriaceae',
-  s.taxon_genus = 'Cynomorium',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Cynomorium coccineum';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Cogujada común',
-  s.kingdom = 'fauna',
-  s.family = 'Ave',
-  s.primary_habitat = 'Cultivos, caminos, eriales y bordes de poblado con suelo desnudo',
-  s.description = 'Alondra parda de cresta alta y puntiaguda, muy ligada a caminos, cunetas y descampados junto a los pueblos. Camina en vez de saltar y, al volar, deja ver el forro rojizo de las alas y la cola con los bordes canela.',
-  s.description_source = NULL,
-  s.identification_tips = 'Cresta larga y puntiaguda, casi siempre erguida
-Forro de las alas rojizo, visible al levantar el vuelo
-Camina por el suelo en vez de saltar',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Crested_Lark_-_Qatar.jpg?width=1280',
-  s.image_attribution = 'Ashraf Kotb (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = 'Passeriformes',
-  s.taxon_family = 'Alaudidae',
-  s.taxon_genus = 'Galerida',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Galerida cristata';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Cogujada montesina',
-  s.kingdom = 'fauna',
-  s.family = 'Ave',
-  s.primary_habitat = 'Matorral bajo, laderas pedregosas y eriales con vegetación rala',
-  s.description = 'Cogujada de cresta puntiaguda, muy parecida a la común pero de pico más corto y grueso y con el pecho más nítidamente rayado. Prefiere el matorral y las laderas pedregosas, mientras que la común busca cultivos, caminos y bordes de pueblo.',
-  s.description_source = NULL,
-  s.identification_tips = 'Cresta alta y afilada, casi triangular
-Pico más corto y romo que el de la cogujada común
-Rayado del pecho bien definido, no difuminado',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Galerida_theklae_Madrid.jpg?width=1280',
-  s.image_attribution = 'Adrian198cm (Public domain) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = 'Passeriformes',
-  s.taxon_family = 'Alaudidae',
-  s.taxon_genus = 'Galerida',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Galerida theklae';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Collalba negra',
-  s.kingdom = 'fauna',
-  s.family = 'Ave',
-  s.primary_habitat = 'Matorral litoral, laderas secas y roquedos',
-  s.description = 'La mayor de las collalbas, enteramente negra salvo el obispillo y la base de la cola, blancos. Vive en cortados y laderas rocosas, donde construye junto al nido una plataforma de piedrecitas que acarrea una a una. Su canto es potente y melodioso.',
-  s.description_source = NULL,
-  s.identification_tips = 'Cuerpo negro con obispillo blanco muy contrastado
-«T» negra invertida en la cola blanca al volar
-Montoncitos de piedrecitas junto a la grieta del nido',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Black_Wheatear%2C_Isla_Plana_3.jpg?width=1280',
-  s.image_attribution = 'Andrew Thomas from Shrewsbury, UK (CC BY-SA 2.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = 'Passeriformes',
-  s.taxon_family = 'Muscicapidae',
-  s.taxon_genus = 'Oenanthe',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Oenanthe leucura';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Collalba rubia',
-  s.kingdom = 'fauna',
-  s.family = 'Ave',
-  s.primary_habitat = 'Laderas secas y pedregosas con matorral bajo y suelo desnudo',
-  s.description = 'Collalba pequeña y contrastada: el macho es color arena claro con las alas negras y un antifaz o una garganta negros según la variedad. Como todas las collalbas, enseña al volar una cola blanca con una «T» negra invertida. Caza insectos lanzándose al suelo desde una piedra o una mata.',
-  s.description_source = NULL,
-  s.identification_tips = 'Cola blanca con una «T» negra al abrirse
-Alas negras que resaltan sobre el cuerpo color arena
-Se posa erguida en piedras y matas, muy visible',
-  s.seasonality = 'Primavera y verano (estival)',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Black-eared_Wheatear%2C_Punta_del_Sabinar%2C_Spain.jpg?width=1280',
-  s.image_attribution = 'Vince Smith from London, United Kingdom (CC BY-SA 2.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = NULL,
-  s.taxon_family = NULL,
-  s.taxon_genus = 'Oenanthe',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
-  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Oenanthe hispanica';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Colleja de arenal',
+  s.common_name = 'Siempreviva insigne',
   s.kingdom = 'flora',
   s.family = 'Hierba',
-  s.primary_habitat = 'Dunas con céspedes del Malcolmietalia',
-  s.description = 'Colleja anual muy ramificada desde la base, característica de las dunas semifijas; da nombre a la asociación Triplachno nitentis-Silenetum ramosissimae.',
+  s.primary_habitat = 'Suelos margosos y yesosos salinos, en estepas y taludes áridos',
+  s.description = 'Una de las siemprevivas más vistosas: sus inflorescencias forman un ramillete denso de un lila rosado intenso que destaca sobre el gris de las margas. Es un endemismo del sureste ibérico, ligado a suelos salinos y yesosos, y muy usado en seco como flor ornamental.',
   s.description_source = NULL,
-  s.identification_tips = 'Muy ramificada desde la base
-Cáliz inflado con nervios marcados
-Anual de vida corta',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Silene_ramosissima_2.jpg?width=1280',
-  s.image_attribution = 'bymamo (CC BY-SA 4.0) · Wikimedia Commons',
+  s.identification_tips = 'Floración densa y de lila rosado vivo, muy llamativa
+Hojas en roseta basal, gruesas y de borde ondulado
+Sobre margas y yesos claros, en terreno casi desnudo',
+  s.seasonality = 'Final de primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_insigne.jpg?width=1280',
+  s.image_attribution = 'ANE (CC BY-SA 4.0) · Wikimedia Commons',
   s.taxon_phylum = 'Tracheophyta',
   s.taxon_class = 'Magnoliopsida',
   s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Caryophyllaceae',
-  s.taxon_genus = 'Silene',
+  s.taxon_family = 'Plumbaginaceae',
+  s.taxon_genus = 'Limonium',
+  s.iucn_global = 'NE (no evaluada a nivel global; género con numerosos microendemismos ibéricos)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Limonium insigne';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jarilla de Almería',
+  s.kingdom = 'flora',
+  s.family = 'Mata',
+  s.primary_habitat = 'Tomillares y matorral abierto sobre suelos secos y pedregosos',
+  s.description = 'Jarilla enana de hojas pequeñas y blanquecinas, cubiertas de pelos que reflejan la luz y reducen la pérdida de agua. En primavera se cubre de flores blancas con el centro amarillo, cuyos pétalos duran apenas una mañana. Sus raíces se asocian con hongos comestibles del desierto.',
+  s.description_source = NULL,
+  s.identification_tips = 'Mata baja y grisácea, de hojas muy pequeñas
+Flores blancas con el centro amarillo, efímeras
+Pétalos arrugados, como de papel de seda',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_almeriense_flor.jpg?width=1280',
+  s.image_attribution = 'Retama (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Malvales',
+  s.taxon_family = 'Cistaceae',
+  s.taxon_genus = 'Helianthemum',
   s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
   s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Silene ramosissima';
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Helianthemum almeriense';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Coloquíntida',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Ramblas, arenales y suelos removidos de clima árido',
-  s.description = 'Pariente silvestre de la sandía, de tallos rastreros y zarcillos, que extiende sus ramas por el suelo desnudo de ramblas y baldíos. Sus frutos son bolas del tamaño de una naranja, verdes jaspeadas al principio y amarillas al madurar, de pulpa amarguísima y tóxica.',
-  s.description_source = NULL,
-  s.identification_tips = 'Tallos tumbados por el suelo, con zarcillos
-Frutos esféricos jaspeados que amarillean al madurar
-Hojas profundamente lobuladas y ásperas',
-  s.seasonality = 'Verano y otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Citrullus_colocynthis_(L.)_Schrad._(31794489158).jpg?width=1280',
-  s.image_attribution = 'Dinesh Valke from Thane, India (CC BY-SA 2.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Cucurbitales',
-  s.taxon_family = 'Cucurbitaceae',
-  s.taxon_genus = 'Citrullus',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Citrullus colocynthis';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Cormorán moñudo',
-  s.kingdom = 'fauna',
-  s.family = 'Ave marina',
-  s.primary_habitat = 'Costas rocosas, acantilados e islotes; pesca buceando cerca de la orilla',
-  s.description = 'Cormorán marino de plumaje negro con reflejos verdosos, más esbelto que el grande y con la frente empinada. Bucea desde la superficie con un salto característico y persigue peces bajo el agua. Se seca con las alas abiertas sobre las rocas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Salta hacia arriba antes de sumergirse
-Frente muy empinada y pico fino
-Se posa en roca con las alas abiertas al sol',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Shag_Phalacrocorax_aristotelis.jpg?width=1280',
-  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = 'Suliformes',
-  s.taxon_family = 'Phalacrocoracidae',
-  s.taxon_genus = 'Gulosus',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'Subespecie mediterránea (desmarestii) catalogada Vulnerable en el Catálogo Español de Especies Amenazadas',
-  s.rarity_score = 4,
-  s.rarity_basis = '{"categoria":"Subespecie mediterránea (desmarestii) catalogada Vulnerable en el Catálogo Español de Especies Amenazadas","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Gulosus aristotelis';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Cornical',
+  s.common_name = 'Azufaifo',
   s.kingdom = 'flora',
   s.family = 'Arbusto',
-  s.primary_habitat = 'Matorral cálido, laderas soleadas y barrancos de clima muy seco',
-  s.description = 'Arbusto de hojas estrechas y coriáceas y flores pequeñas con cinco pétalos de un pardo verdoso y aspecto aterciopelado. Sus frutos son dos vainas largas y curvas dispuestas en forma de cuerno, de donde le viene el nombre popular de cornical. Suelta látex al romperse.',
+  s.primary_habitat = 'Matorrales arborescentes de Ziziphus',
+  s.description = 'Arbusto espinoso que forma cúpulas densas de varios metros, un microhábitat en sí mismo: bajo su copa se refugian aves, reptiles y mamíferos, y la humedad y el suelo son distintos que fuera. Sus ramas zigzaguean con dos espinas en cada nudo, una recta y otra ganchuda.',
   s.description_source = NULL,
-  s.identification_tips = 'Frutos en dos vainas curvas enfrentadas, como cuernos
-Látex blanco al partir una hoja o rama
-Flores pardo verdosas con aspecto de terciopelo',
-  s.seasonality = 'Primavera y verano (floración)',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/609975159/original.jpg',
-  s.image_attribution = 'Quentin Groom (CC0) · GBIF',
+  s.identification_tips = 'Ramas en zigzag con dos espinas por nudo, una recta y otra curva
+Porte en cúpula o almohadón, muy denso
+Frutos redondos que pasan de verde a pardo amarillento',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ziziphus_lotus_20200928_191923.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons',
   s.taxon_phylum = 'Tracheophyta',
   s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Gentianales',
-  s.taxon_family = 'Apocynaceae',
-  s.taxon_genus = 'Periploca',
+  s.taxon_order = 'Rosales',
+  s.taxon_family = 'Rhamnaceae',
+  s.taxon_genus = 'Ziziphus',
   s.iucn_global = 'NE (no evaluada a nivel global)',
   s.iucn_spain = NULL,
   s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Periploca angustifolia';
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Ziziphus lotus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Coscoja',
+  s.common_name = 'Sabina negral',
   s.kingdom = 'flora',
-  s.family = 'Arbusto',
-  s.primary_habitat = 'Matorral esclerófilo y sabinar',
-  s.description = 'Arbusto esclerófilo de hoja perenne y espinosa, integrante del matorral mediterráneo denso y de las orlas del sabinar.',
+  s.family = 'Conífera',
+  s.primary_habitat = 'Roquedos, arenales, acantilados y crestas ventosas sobre suelos pobres',
+  s.description = 'Sabina de hojas diminutas en forma de escama, pegadas a la ramilla, que dan a las ramas un aspecto de cordón redondeado. Aguanta viento, sequía y salinidad como pocas plantas leñosas. Sus gálbulos —los falsos frutos— maduran de verde a un rojo pardusco en dos años.',
   s.description_source = NULL,
-  s.identification_tips = 'Hojas coriáceas con margen espinoso
-Bellota con cúpula de escamas punzantes
-Porte arbustivo denso',
+  s.identification_tips = 'Hojas en escama pegadas a la rama, no punzantes
+Ramillas cilíndricas, como cordones
+Gálbulos redondos que pasan de verde a pardo rojizo',
   s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_coccifera_1.JPG?width=1280',
-  s.image_attribution = 'User:Xemenendura (CC BY-SA 3.0) · Wikimedia Commons',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_phoenicea1.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
   s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Fagales',
-  s.taxon_family = 'Fagaceae',
-  s.taxon_genus = 'Quercus',
-  s.iucn_global = 'LC (Preocupación menor)',
+  s.taxon_class = 'Pinopsida',
+  s.taxon_order = 'Pinales',
+  s.taxon_family = 'Cupressaceae',
+  s.taxon_genus = 'Juniperus',
+  s.iucn_global = 'LC',
   s.iucn_spain = NULL,
-  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)',
+  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Quercus coccifera';
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Juniperus phoenicea';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Cuernecillo de mar',
+  s.common_name = 'Lechuguilla lanosa',
   s.kingdom = 'flora',
   s.family = 'Hierba',
-  s.primary_habitat = 'Dunas móviles embrionarias',
-  s.description = 'Leguminosa rastrera de follaje sedoso-plateado y flores amarillas, característica de las arenas litorales móviles.',
+  s.primary_habitat = 'Matorral árido y bordes de rambla',
+  s.description = 'Compuesta de aspecto blanquecino por la lana que cubre tallos y hojas, con una roseta basal y capítulos amarillos tipo diente de león. Suelta látex blanco al romperse. Es una planta iberoafricana ligada a los ambientes más áridos.',
   s.description_source = NULL,
-  s.identification_tips = 'Flores amarillas papilionadas
-Follaje sedoso-plateado
-Porte rastrero sobre arena',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/619207211/original.jpg',
-  s.image_attribution = 'Augustin Soulard (CC BY 4.0) · GBIF',
+  s.identification_tips = 'Lana blanca cubriendo tallos y base de las hojas
+Capítulos amarillos tipo diente de león
+Látex blanco al partir un tallo',
+  s.seasonality = 'Primavera-verano',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/627205605/original.jpg',
+  s.image_attribution = 'Olivier Argagnon (CC BY 4.0) · GBIF/iNaturalist',
   s.taxon_phylum = 'Tracheophyta',
   s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Fabales',
-  s.taxon_family = 'Fabaceae',
-  s.taxon_genus = 'Lotus',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Asteraceae',
+  s.taxon_genus = 'Launaea',
+  s.iucn_global = 'NE',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Launaea lanifera';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija colilarga',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'Lagartija esbelta de escamas grandes, quilladas y brillantes, con dos líneas claras muy marcadas a cada lado del dorso. La cola puede medir el doble que el cuerpo. Los machos lucen en primavera manchas azules en el hombro y las mejillas anaranjadas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dos líneas claras nítidas a lo largo de cada costado
+Escamas grandes y quilladas, de aspecto brillante
+Cola larguísima, hasta el doble que el cuerpo',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Psammodromus_algirus_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Lacertidae',
+  s.taxon_genus = 'Psammodromus',
+  s.iucn_global = 'LC',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Psammodromus algirus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Rugueta de mar',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Arena suelta de la primera línea de playa, sobre restos orgánicos del mar',
+  s.description = 'Crucífera anual y carnosa que coloniza la arena batida donde el mar deposita algas. Sus hojas son gruesas y recortadas y sus flores, lilas o blancas, tienen los cuatro pétalos en cruz de la familia. El fruto se parte en dos: una mitad queda en la planta y la otra flota y viaja por mar.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas carnosas y recortadas, algo azuladas
+Flores lilas o blancas de cuatro pétalos en cruz
+Frutos duros en dos piezas, como pequeños barrilitos',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cakile-maritima-(eurMeersenf)_1.jpg?width=1280',
+  s.image_attribution = 'Jürgen Howaldt (CC BY-SA 2.0 de) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Brassicales',
+  s.taxon_family = 'Brassicaceae',
+  s.taxon_genus = 'Cakile',
   s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)',
   s.iucn_spain = NULL,
   s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Lotus creticus';
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Cakile maritima';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Saladilla anual',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Saladares, arenas litorales y suelos salinos secos',
+  s.description = 'Saladilla anual —a diferencia de la mayoría de sus parientes, que son perennes— con una roseta de hojas lobuladas pegada al suelo y tallos alados que rematan en espigas de flores azuladas o violáceas. Sus flores conservan el color al secarse, un truco común en el género.',
+  s.description_source = NULL,
+  s.identification_tips = 'Roseta basal de hojas con lóbulos redondeados
+Tallos con alas o costillas, no cilíndricos
+Flores azuladas agrupadas en espiguillas de un solo lado',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_lobatum.jpg?width=1280',
+  s.image_attribution = 'Sf2000 (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Caryophyllales',
+  s.taxon_family = 'Plumbaginaceae',
+  s.taxon_genus = 'Limonium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Limonium lobatum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Espino negro',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = NULL,
+  s.description = 'Es un arbustillo de hasta 3 m de altura (López González, 2001), que frecuentemente tiene aspecto de mata alta o media, más o menos espinoso, de ramificación intricada y de perennifolio a semicaducifolio facultativo. Sus especímenes tienen espinas pero presentan una variabilidad: los de las regiones continentales y mediterráneas más áridas las llegan a tener en cantidad y longitud exagerada, pero otros son casi inermes. Presenta también unas ramillas laterales cortas terminadas en un fascículo de hojas. Éstas se disponen alternas, aunque a veces algunas se muestran casi opuestas; son simples, sin peciolo y con un limbo estrecho (tíìcamente menor de 0,5 cm), a veces muy corto, menor de 1,2 cm (subsp. borgiae), de trasovado-oblongo a espatulado-linear, lampiño o con un pelillo muy corto (subesp. velutina).',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_lycioides_fruits.JPG?width=1280',
+  s.image_attribution = 'איתן פרמן (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Rosales',
+  s.taxon_family = 'Rhamnaceae',
+  s.taxon_genus = 'Rhamnus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Rhamnus lycioides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Anabasis',
+  s.kingdom = 'flora',
+  s.family = 'Planta suculenta',
+  s.primary_habitat = 'Suelos salinos y margosos áridos, estepas y ramblas de clima muy seco',
+  s.description = 'Mata de tallos verdes, carnosos y articulados, sin hojas visibles, muy parecida a las sosas de saladar pero de porte más rígido y ramificado. Es una planta iberoafricana que en la península solo vive en los enclaves más áridos del sureste.',
+  s.description_source = NULL,
+  s.identification_tips = 'Tallos articulados y suculentos, sin hojas
+Porte rígido y muy ramificado desde la base
+En los suelos más áridos y salinos, casi desnudos',
+  s.seasonality = 'Verano y otoño',
+  s.image_url = 'https://observation.org/photos/111149341.jpg',
+  s.image_attribution = 'Ans Gorter (CC BY-NC-ND 4.0) · observation.org / GBIF',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Caryophyllales',
+  s.taxon_family = 'Amaranthaceae',
+  s.taxon_genus = 'Anabasis',
+  s.iucn_global = 'NE',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Anabasis hispanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Albardín brezo',
+  s.kingdom = 'flora',
+  s.family = 'Mata',
+  s.primary_habitat = 'Estepas salinas, saladares y suelos margosos con sal',
+  s.description = 'Mata baja y muy ramificada, de hojas diminutas y enrolladas que a menudo aparecen cubiertas de una costra blanca: son cristales de sal que la planta expulsa por glándulas especializadas. Sus flores son rosadas y pequeñas, apiñadas en el extremo de las ramas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Costra blanca de sal cristalizada sobre las hojas
+Hojas minúsculas y enrolladas, casi como escamas
+Flores rosadas pequeñas agrupadas en el extremo',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/464713930/original.jpeg',
+  s.image_attribution = 'Rafael Medina (CC BY 4.0) · GBIF',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Caryophyllales',
+  s.taxon_family = 'Frankeniaceae',
+  s.taxon_genus = 'Frankenia',
+  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Frankenia corymbosa';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Cuerno de cabra',
@@ -4911,54 +3909,1510 @@ Flores blanquecinas muy pequeñas, casi inapreciables',
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Notoceras bicorne';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Culebra bastarda',
+  s.common_name = 'Klasea flavescens',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Pastizales secos, claros de matorral y taludes sobre suelos margosos',
+  s.description = 'Compuesta de hojas divididas y algo espinosas, con capítulos grandes de flores amarillas rodeados de brácteas secas y brillantes. A distancia recuerda a un cardo, pero sus hojas pinchan mucho menos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Capítulos amarillos grandes y solitarios
+Brácteas secas y algo brillantes bajo la flor
+Hojas divididas, con dientes poco punzantes',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Klasea_flavescens0001_01.jpg?width=1280',
+  s.image_attribution = 'Philmarin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Asteraceae',
+  s.taxon_genus = 'Klasea',
+  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección nacional específica registrada en EIDOS',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Klasea flavescens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Aceitunilla de mar',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Vive en los fondos marinos arenosos, hasta 40 m de profundidad',
+  s.description = 'Hierba perenne, hasta de 70 cm, rizomatosa, con rizomas pelosos, comprimidos lateralmente. Hojas de 40-70 x 1 cm, acintadas. Flores que nacen en el extremo de un pedúnculo, dispuestas en varias espigas, y formadas por un estambre con dos tecas y el conectivo ensanchado como un tépalo del que sobresale un apículo, y un ovario con estigma papiloso. Frutos en drupa de 3 cm, ovoides, carnosas.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Posidonia_oceanica_(L).jpg?width=1280',
+  s.image_attribution = 'Frédéric Ducarme (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Liliopsida',
+  s.taxon_order = 'Alismatales',
+  s.taxon_family = 'Posidoniaceae',
+  s.taxon_genus = 'Posidonia',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2010)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Posidonia oceanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Leucanto litoral',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Fisuras y repisas de roquedos calizos, sobre todo en umbrías',
+  s.description = 'Margarita rupícola de hojas carnosas y recortadas que crece agarrada a las grietas de la roca. Sus flores son las clásicas cabezuelas de centro amarillo y lígulas blancas. Es un endemismo del sureste ibérico y del norte de África, de área muy pequeña.',
+  s.description_source = NULL,
+  s.identification_tips = 'Crece en grietas de pared rocosa, no en el suelo
+Hojas algo carnosas y recortadas en dientes
+Cabezuelas blancas de centro amarillo, solitarias',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/614232981/original.jpg',
+  s.image_attribution = 'faluke (CC BY-NC 4.0) · iNaturalist/GBIF',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Asteraceae',
+  s.taxon_genus = 'Mauranthemum',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Mauranthemum decipiens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Camaleón común',
   s.kingdom = 'fauna',
   s.family = 'Reptil',
-  s.primary_habitat = 'Matorral litoral y laderas secas',
-  s.description = 'La culebra más grande de la península, de hasta dos metros y medio, con un aspecto inconfundible: ojos grandes de pupila redonda bajo unas escamas salientes que le dan «cejas» y expresión de enfado. Es diurna, muy rápida y venenosa, pero con los colmillos al fondo de la boca, por lo que no supone riesgo si no se la manipula.',
+  s.primary_habitat = 'Presente en zonas de costa por lo general, a baja altitud y sobre suelos arenosos',
+  s.description = 'Especie de aspecto inconfundible: cuerpo aplanado lateralmente, ojos prominentes, cabeza con casco llamativo, cola prensil, escamas granulares y dedos distribuidos en disposición 3+2. Se registra dicromatismo sexual con un patrón de coloración corporal (o librea) muy complejo y relacionado con el sexo, estado reproductor y las necesidades de termorregulación. Longitud total máxima de 282 mm en machos y 301 en hembras.',
   s.description_source = NULL,
-  s.identification_tips = 'Escamas prominentes sobre los ojos, como cejas
-Ojo grande con pupila redonda y iris amarillento
-Adultos de dorso pardo oliváceo uniforme; jóvenes muy manchados',
-  s.seasonality = 'Primavera a otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Culebra_bastarda_(Malpolon_monspessulanus)%2C_Nig%C3%BCella%2C_Zaragoza%2C_Espa%C3%B1a%2C_2017-05-24%2C_DD_07.jpg?width=1280',
-  s.image_attribution = 'Diego Delso (CC BY-SA 4.0) · Wikimedia Commons',
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/BennyTrapp_Chamaeleo_chamaeleon_Samos_Griechenland.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
   s.taxon_phylum = 'Chordata',
   s.taxon_class = 'Reptilia',
   s.taxon_order = 'Squamata',
-  s.taxon_family = 'Lamprophiidae',
-  s.taxon_genus = 'Malpolon',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
+  s.taxon_family = 'Chamaeleonidae',
+  s.taxon_genus = 'Chamaeleo',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2012)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
   s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Malpolon monspessulanus';
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Chamaeleo chamaeleon';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Culebrera europea',
-  s.kingdom = 'fauna',
-  s.family = 'Ave rapaz',
-  s.primary_habitat = 'Sierras y llanos con matorral, ramblas y bosque abierto',
-  s.description = 'Águila grande y muy pálida por debajo, especializada en comer culebras y lagartos. Se ciñe en el aire durante largos ratos, con las patas colgando, escrutando el suelo antes de dejarse caer. La cabeza, ancha y con ojos amarillos muy frontales, le da un aire de lechuza.',
+  s.common_name = 'Cosentinia vellea',
+  s.kingdom = 'flora',
+  s.family = 'Helecho',
+  s.primary_habitat = 'Grietas de roquedos secos y soleados, paredones y pedregales',
+  s.description = 'Helecho pequeño cubierto por completo de una densa lana parda que le da aspecto afieltrado y le permite sobrevivir en roca seca y al sol. En sequía se enrolla sobre sí mismo hasta parecer muerto, y se despliega en cuanto llueve.',
   s.description_source = NULL,
-  s.identification_tips = 'Vientre y alas casi blancos vistos desde abajo
-Se mantiene cerniéndose, algo raro en un águila tan grande
-Cabeza ancha y ojos amarillos, aspecto de búho',
-  s.seasonality = 'Primavera y verano (estival)',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_culebrera_(Circaetus_gallicus).jpg?width=1280',
-  s.image_attribution = 'Paco Gómez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.identification_tips = 'Frondes cubiertas de lana parda, aspecto afieltrado
+Se enrolla en verano y revive con la lluvia
+En roca seca y soleada, no en umbrías húmedas',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cosentinia_vellea_kz02.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Polypodiopsida',
+  s.taxon_order = 'Polypodiales',
+  s.taxon_family = 'Pteridaceae',
+  s.taxon_genus = 'Cosentinia',
+  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección nacional específica registrada en EIDOS',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Cosentinia vellea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Espartilla de Persia',
+  s.kingdom = 'flora',
+  s.family = 'Gramínea',
+  s.primary_habitat = 'Litosuelos cálidos del piso termomediterráneo',
+  s.description = 'Gramínea perenne que forma pequeñas matas densas en suelos pedregosos y muy cálidos. Sus espiguillas rematan en nueve aristas plumosas, un rasgo que da nombre al género y que la distingue de cualquier otra gramínea del entorno.',
+  s.description_source = NULL,
+  s.identification_tips = 'Nueve aristas plumosas en cada espiguilla
+Mata compacta y baja, de hasta medio metro
+Tallos y hojas cubiertos de pelusa corta',
+  s.seasonality = 'Verano',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/616035449/original.jpg',
+  s.image_attribution = 'naturcope (CC BY-NC 4.0) · GBIF',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Liliopsida',
+  s.taxon_order = 'Poales',
+  s.taxon_family = 'Poaceae',
+  s.taxon_genus = 'Enneapogon',
+  s.iucn_global = 'NE (no evaluada a nivel global; especie de amplia distribución en Asia y África, rara en el extremo de su área ibérica)',
+  s.iucn_spain = 'CR — En peligro crítico (Lista Roja española, 2010)',
+  s.spain_status = 'Lista Roja de la Flora Vascular Española 2008: CR (En Peligro Crítico)',
+  s.rarity_score = 5,
+  s.rarity_basis = '{"categoria":"Lista Roja de la Flora Vascular Española 2008: CR (En Peligro Crítico)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Enneapogon persicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Filago fuscescens',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a mayo',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Asteraceae',
+  s.taxon_genus = 'Filago',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Filago fuscescens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Salamanquesa rosada',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Pendientes rocosas calcícolas con vegetación casmofítica',
+  s.description = 'Gecko pequeño y translúcido de tonos rosados, de hábitos nocturnos, que se refugia en grietas de roquedos, muros de piedra y ruinas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Piel rosada casi translúcida
+Cola con anillos espinosos
+Nocturna y discreta',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hemidactylus_turcicus_on_a_wall_in_Greece.jpg?width=1280',
+  s.image_attribution = 'Koppi2 (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Gekkonidae',
+  s.taxon_genus = 'Hemidactylus',
+  s.iucn_global = 'LC',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (RD 139/2011)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Hemidactylus turcicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Salsola',
+  s.kingdom = 'flora',
+  s.family = 'Mata',
+  s.primary_habitat = 'Estepas salinas y suelos margosos y yesosos con sal',
+  s.description = 'Mata baja y densa de hojas cortas y carnosas cubiertas de pequeñas papilas que le dan un tacto áspero. Es un endemismo ibérico ligado a suelos salinos y margosos, con una distribución muy fragmentada, lo que la hace especialmente sensible a la roturación.',
+  s.description_source = NULL,
+  s.identification_tips = 'Superficie de las hojas rugosa, con papilas visibles de cerca
+Mata compacta y grisácea, de porte bajo
+Frutos con alas membranosas al madurar',
+  s.seasonality = 'Verano y otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Salsola_papillosa1160031.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Caryophyllales',
+  s.taxon_family = 'Amaranthaceae',
+  s.taxon_genus = 'Salsola',
+  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Salsola papillosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zapatitos de la Virgen',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sarcocapnos_enneaphylla_saetabensis.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Ranunculales',
+  s.taxon_family = 'Papaveraceae',
+  s.taxon_genus = 'Sarcocapnos',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Sarcocapnos enneaphylla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Senecio flavus',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Ramblas, arenales y suelos removidos de clima árido',
+  s.description = 'Hierba anual de hojas carnosas y algo azuladas, con cabezuelas amarillas cuyas lígulas se enrollan hacia atrás al abrirse. Es una planta de estirpe sahariana que en Europa solo aparece en los rincones más áridos del sureste ibérico, tras las lluvias.',
+  s.description_source = NULL,
+  s.identification_tips = 'Lígulas amarillas enrolladas hacia atrás
+Hojas carnosas y de verde azulado
+Aparece en masa tras las lluvias y desaparece pronto',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Senecio_flavus_1.jpg?width=1280',
+  s.image_attribution = 'Gideon Pisanty (Gidip) גדעון פיזנטי (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Asteraceae',
+  s.taxon_genus = 'Senecio',
+  s.iucn_global = 'NE',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Senecio flavus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sosa fina',
+  s.kingdom = 'flora',
+  s.family = 'Mata',
+  s.primary_habitat = 'Bordes de saladar y suelos salinos algo más secos y elevados',
+  s.description = 'Mata leñosa de hojas carnosas, cilíndricas y de un verde azulado, que ocupa la orla algo más alta y seca del saladar. Se diferencia de sus vecinas en que sí tiene hojas bien visibles y no tallos articulados. Sus flores son minúsculas y verdosas, en las axilas de las hojas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas carnosas y cilíndricas, verde azuladas
+Base leñosa y ramificada, no herbácea
+En la parte más seca y alta del saladar',
+  s.seasonality = 'Verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Suaeda_vera.JPG?width=1280',
+  s.image_attribution = 'Xemenendura (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Caryophyllales',
+  s.taxon_family = 'Amaranthaceae',
+  s.taxon_genus = 'Suaeda',
+  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Suaeda vera';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Palmito',
+  s.kingdom = 'flora',
+  s.family = 'Palmera',
+  s.primary_habitat = 'Matorral cálido, laderas soleadas y acantilados del piso termomediterráneo',
+  s.description = 'La única palmera silvestre de Europa continental. Suele crecer en mata, con varios troncos cortos, aunque con los años puede levantar un tronco único. Sus hojas son abanicos rígidos con pecíolos muy espinosos. Del cogollo se sacaba el «palmito», y de las hojas, cordelería y escobas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas en abanico, rígidas y divididas en segmentos
+Pecíolos con espinas fuertes en los bordes
+Porte en mata, con varios troncos desde la base',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chamaerops_humilis_Torreblanca.jpg?width=1280',
+  s.image_attribution = 'Canaan (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Liliopsida',
+  s.taxon_order = 'Arecales',
+  s.taxon_family = 'Arecaceae',
+  s.taxon_genus = 'Chamaerops',
+  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Chamaerops humilis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Siempreviva de Cosson',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Saladares, acantilados costeros y suelos salinos margosos',
+  s.description = 'Siempreviva de roseta basal de hojas espatuladas y tallos ramificados que sostienen espiguillas de flores diminutas de color lila. Los cálices secos y papiráceos permanecen en la planta hasta el invierno siguiente, dando al saladar un tono pajizo persistente.',
+  s.description_source = NULL,
+  s.identification_tips = 'Roseta basal de hojas anchas y espatuladas
+Ramificación en zigzag, muy abierta
+Cálices secos que persisten meses tras florecer',
+  s.seasonality = 'Verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_cossonianum.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Caryophyllales',
+  s.taxon_family = 'Plumbaginaceae',
+  s.taxon_genus = 'Limonium',
+  s.iucn_global = 'NE',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Limonium cossonianum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Uña de gato',
+  s.kingdom = 'flora',
+  s.family = 'Planta suculenta',
+  s.primary_habitat = 'Prados calcáreos del Alysso-Sedion albi',
+  s.description = 'Crasulácea perenne de hojas suculentas puntiagudas y flores amarillo-verdosas, muy extendida por Murcia en repisas rocosas y prados calcáreos; especie característica del hábitat prioritario.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas carnosas puntiagudas
+Inflorescencia amarillo pálido
+Coloniza repisas y suelos esqueléticos',
+  s.seasonality = 'Verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sedum_sediforme_hojas.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Saxifragales',
+  s.taxon_family = 'Crassulaceae',
+  s.taxon_genus = 'Petrosedum',
+  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Petrosedum sediforme';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Asperilla',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = 'Vive en pastos efímeros o muros hasta 1700 m',
+  s.description = 'Es planta anual y de talla más pequeña que las anteriores, con flores sentadas, cáliz hasta de 7 mm y corola también pequeña, de unos 6 mm, azulada o blanquecina.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Campanula_erinus_3.jpg?width=1280',
+  s.image_attribution = 'Gideon Pisanty (Gidip) (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Campanulaceae',
+  s.taxon_genus = 'Campanula',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Campanula erinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Clavelina del campo',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = 'Centaurium quadrifolium vive en bosques, claros de matorral y pastizales secos en sustratos básicos hasta 2000 m',
+  s.description = 'Presenta las hojas lineares o espatuladas, hasta con tres nervios, y lóbulos de la corola de menos de la mitad que el tubo.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Centaurium_quadrifolium.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Gentianales',
+  s.taxon_family = 'Gentianaceae',
+  s.taxon_genus = 'Centaurium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Centaurium quadrifolium';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'becerrilla pequeña',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chaenorhinum_origanifolium_001.JPG?width=1280',
+  s.image_attribution = 'Johan N (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Plantaginaceae',
+  s.taxon_genus = 'Chaenorhinum',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Chaenorhinum origanifolium';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Erodio',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Litosuelos y pastizales abiertos',
+  s.description = 'Pequeña geraniácea anual de suelos abiertos y pedregosos, de floración temprana en el piso termomediterráneo semiárido.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flores rosadas pequeñas
+Fruto con pico alargado característico de Erodium
+Anual de suelos pedregosos',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/642301345/original.jpg',
+  s.image_attribution = 'Laia Lahoz (CC BY-NC 4.0) · iNaturalist/GBIF',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Geraniales',
+  s.taxon_family = 'Geraniaceae',
+  s.taxon_genus = 'Erodium',
+  s.iucn_global = 'NE',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Erodium sanguis-christi';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Algodonosa',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Pastizales anuales sobre arenas y suelos secos y sueltos',
+  s.description = 'Hierba anual pequeña, cubierta por completo de un fieltro blanco y lanoso que la protege del sol. Sus capítulos son minúsculos y se agrupan en glomérulos apretados en las horquillas del tallo, difíciles de ver si no se busca de cerca.',
+  s.description_source = NULL,
+  s.identification_tips = 'Toda la planta blanquecina y algodonosa al tacto
+Capítulos diminutos apiñados en las bifurcaciones del tallo
+Porte erguido de pocos centímetros, ramificado en horquilla',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://observation.org/photos/144643107.jpg',
+  s.image_attribution = 'Ans Gorter (CC BY-NC-ND 4.0) · observation.org / GBIF',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Asteraceae',
+  s.taxon_genus = 'Filago',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Filago mareotica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Haplophyllum linifolium',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Haplophyllum_linifolium_M1.jpg?width=1280',
+  s.image_attribution = 'Adrian198cm (CC0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Sapindales',
+  s.taxon_family = 'Rutaceae',
+  s.taxon_genus = 'Haplophyllum',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Haplophyllum linifolium';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bayón',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Matorral alto, sabinares y laderas secas sobre suelo pedregoso',
+  s.description = 'Arbusto de ramas verdes y erguidas con hojas estrechas y coriáceas. Es hemiparásito: fabrica su propio alimento pero además conecta sus raíces a las de otras plantas para robarles agua y sales. Sus frutos son bayas rojas o anaranjadas muy vistosas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ramas verdes y erectas, de aspecto escobiforme
+Bayas rojo anaranjado brillantes al madurar
+Hojas estrechas, duras y de punta aguda',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Osyris_lanceolata.JPG?width=1280',
+  s.image_attribution = 'Xemenendura (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Santalales',
+  s.taxon_family = 'Santalaceae',
+  s.taxon_genus = 'Osyris',
+  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Osyris lanceolata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zaragatona blanca',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Pastizales secos, ribazos y claros de matorral sobre suelos margosos',
+  s.description = 'Llantén de aspecto plateado, cubierto de pelos sedosos, con hojas estrechas que salen todas de la base. Levanta espigas cilíndricas y densas en las que las flores se abren de abajo arriba, dejando ver unos estambres largos y colgantes. Resiste bien el pisoteo y la sequía.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas estrechas y plateadas, todas desde la base
+Espigas cilíndricas apretadas sobre tallos largos
+Estambres largos y colgantes durante la floración',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/633859652/original.jpg',
+  s.image_attribution = 'Pavel Kúr (CC0) · GBIF',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Plantaginaceae',
+  s.taxon_genus = 'Plantago',
+  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Plantago albicans';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Plantago amplexicaulis',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Plantago_amplexicaulis_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Plantaginaceae',
+  s.taxon_genus = 'Plantago',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Plantago amplexicaulis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cenizo',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Scrophularia_arguta_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Scrophulariaceae',
+  s.taxon_genus = 'Scrophularia',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Scrophularia arguta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tortuga mora',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Tortuga terrestre de caparazón abombado con dibujo de placas amarillas y negras, la única silvestre del sureste peninsular. Se reconoce por un tubérculo córneo a cada lado de la cola —el «espolón»— y por no tener el peto articulado. Pasa el verano y el invierno inactiva, refugiada bajo matas y madrigueras.',
+  s.description_source = NULL,
+  s.identification_tips = 'Un tubérculo córneo a cada lado de la base de la cola
+Caparazón abombado con placas amarillas y negras
+Peto sin bisagra: no puede cerrarse del todo',
+  s.seasonality = 'Primavera y otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Nabeulensis_sarda.JPG?width=1280',
+  s.image_attribution = 'Gisella D. (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Testudines',
+  s.taxon_family = 'Testudinidae',
+  s.taxon_genus = 'Testudo',
+  s.iucn_global = 'VU A1cd (evaluación IUCN de 1996; pendiente de reevaluación global reciente)',
+  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2002)',
+  s.spain_status = 'Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexos II y IV; Reglamento CITES (CE) 338/97, Anexo A',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Testudo graeca';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Astragalus sesameus',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Fabales',
+  s.taxon_family = 'Fabaceae',
+  s.taxon_genus = 'Astragalus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2012)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Astragalus sesameus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chaenorhinum grandiflorum',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Enero a junio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Plantaginaceae',
+  s.taxon_genus = 'Chaenorhinum',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Chaenorhinum grandiflorum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra lisa meridional',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Se encuentra desde el nivel del mar, pero es más frecuente en claros de bosque y matorral mediterráneo en zonas de media montaña',
+  s.description = 'La culebra lisa meridional Coronella girondica es de pequeño tamaño, cabeza pequeña y cola relativamente corta. En general hay 21 hileras de dorsales aunque es frecuente observar 19 hileras en ejemplares de las cordilleras béticas. Dorso y flancos generalmente de color pardo o gris, con una hilera de manchas transversales por el dorso. En el vientre destacan unas manchas cuadradas oscuras en un diseño ajedrezado. En la parte dorsal de la cabeza hay una gran mancha en forma de U, y a ambos lados de la cabeza, una brida oscura que atraviesa el ojo y se prolonga por delante de la placa frontal uniendo las manchas de ambos lados. No hay dimorfismo sexual en la longitud cabeza-cloaca ni en la folidosis cefálica. En cambio se aprecian ligeras diferencias en el número de dorsales (19 hileras más frecuente en machos) y ventrales (más en hembras), pero sobre todo en la cola (mayor longitud relativa y mayor número de subcaudales en machos). No hay subespecies descritas, pero se aprecian diferencias poblacionales en el número de ventrales. En machos, se observa una clina latitudinal en la longitud de hocico-cloaca y número de ventrales, siendo mayores los ejemplares más septentrionales. Longitud total máxima en la Península Ibérica, 800 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/BennyTrapp_Coronella_girondica.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Colubridae',
+  s.taxon_genus = 'Coronella',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Coronella girondica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cardo mancaperros',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Pastizales secos, eriales y suelos margosos pisoteados',
+  s.description = 'Cardo corredor anual, muy espinoso y rígido, con hojas duras parecidas a las de la encina —de ahí el nombre— y cabezuelas espinosas azuladas rodeadas de brácteas punzantes. Al secarse se vuelve leñoso y persiste todo el verano pinchando a quien pase.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas rígidas y espinosas, recortadas como las de la encina
+Cabezuelas con brácteas largas y punzantes en estrella
+Tonos azulados en las brácteas durante la floración',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eryngium_ilicifolium_InflorescenceCloseup2_DehesaBoyaldePuertollano.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Apiales',
+  s.taxon_family = 'Apiaceae',
+  s.taxon_genus = 'Eryngium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Eryngium ilicifolium';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bolina',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Matorral y laderas soleadas de montaña media, sobre suelos calizos',
+  s.description = 'Retama de ramas finas, sedosas y de un verde grisáceo, sin espinas, que en floración se cubre de flores amarillas fragantes. Sus hojas son diminutas y caen pronto: la fotosíntesis la hacen los tallos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ramas finas y flexibles, sin espinas
+Aspecto grisáceo por los pelos sedosos de las ramillas
+Floración amarilla abundante y perfumada',
+  s.seasonality = 'Primavera y principio de verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Genista_cinerea26de_maig_2007_019.jpg?width=1280',
+  s.image_attribution = 'Victor M. Vicente Selvas (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Fabales',
+  s.taxon_family = 'Fabaceae',
+  s.taxon_genus = 'Genista',
+  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección nacional específica registrada en EIDOS',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Genista cinerea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Hornungia',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Prados calcáreos del Alysso-Sedion albi',
+  s.description = 'Minúsculo terófito calcícola de floración muy temprana tras las lluvias, diagnóstico de los prados pioneros del Alysso-Sedion albi sobre suelos esqueléticos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Anual diminuta primaveral
+Florece muy pronto tras las lluvias
+Fruto en silícula',
+  s.seasonality = 'Invierno y primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hornungia_petraea2_eF.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Brassicales',
+  s.taxon_family = 'Brassicaceae',
+  s.taxon_genus = 'Hornungia',
+  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Hornungia petraea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Orejilla de roca',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Roquedos y fisuras calcáreas costeras',
+  s.description = 'Planta rupícola de hojas redondeadas, dentadas y algo carnosas, que forma matas colgantes en las paredes calizas. Sus flores, blanquecinas con toques amarillos, se agrupan en racimos erguidos. Es un endemismo iberoafricano restringido al sureste peninsular y al norte de África.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas redondas y dentadas, casi como monedas
+Racimos de flores blanquecinas erguidos sobre el follaje
+Forma matas colgantes en pared caliza',
+  s.seasonality = 'Floración primaveral',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lafuentea_rotundifolia80857.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Plantaginaceae',
+  s.taxon_genus = 'Lafuentea',
+  s.iucn_global = 'NE',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Lafuentea rotundifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de cogulla occidental',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Especie relativamente termófila, normalmente solo se encuentra en el pisos bioclimáticos termo y mesomediterráneo',
+  s.description = 'Es el ofidio más pequeño que habita la Península Ibérica. Cabeza corta, aplastada, con ojos relativamente pequeños, de pupila redonda o verticalmente oval, e iris anaranjado o rojizo. Cola corta, pues en promedio representa el 14,9% de la longitud total. Normalmente posee siete supralabiales, la cuarta y quinta en contacto con el ojo, y la sexta alta y en contacto o muy próxima a la parietal. Por lo general, 21 rangos de dorsales en el centro del cuerpo. Coloración de fondo en cabeza y cuerpo gris, que tiende a marrón cuando ha mudado recientemente. El diseño de la cabeza se caracteriza porque en el píleo se encuentra el vértice de una figura en forma de V que tiene dos ramas curvas, convexas, mientras recorre las parietales. Posteriormente a la cabeza collar nucal oscuro. Longitud total máxima, 598 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Macroprotodon_brevis.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Colubridae',
+  s.taxon_genus = 'Macroprotodon',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Macroprotodon brevis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tejón',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero carnívoro',
+  s.primary_habitat = 'Bosque, matorral y ribazos con suelo blando para excavar tejoneras',
+  s.description = 'Mustélido corpulento y de patas cortas, con la cabeza blanca cruzada por dos bandas negras que pasan por los ojos. Excava madrigueras complejas —las tejoneras— que una misma familia amplía y usa durante generaciones. Es omnívoro y muy aficionado a las lombrices.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cabeza blanca con dos franjas negras longitudinales
+Tejoneras: varias bocas grandes con montones de tierra
+Letrinas en hoyos poco profundos cerca de la madriguera',
+  s.seasonality = 'Todo el año (actividad nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Badger-badger.jpg?width=1280',
+  s.image_attribution = 'BadgerHero (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Carnivora',
+  s.taxon_family = 'Mustelidae',
+  s.taxon_genus = 'Meles',
+  s.iucn_global = 'LC',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Meles meles';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Oeosporangium pteridioides',
+  s.kingdom = 'flora',
+  s.family = 'Helecho',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oeosporangium_pteridioides.jpg?width=1280',
+  s.image_attribution = 'Marc Riera (CC BY 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Polypodiopsida',
+  s.taxon_order = 'Polypodiales',
+  s.taxon_family = 'Pteridaceae',
+  s.taxon_genus = 'Oeosporangium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Oeosporangium pteridioides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ononis ornithopodioides',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Pastizales anuales y claros de matorral sobre suelos secos',
+  s.description = 'Pequeña leguminosa anual de tallos finos y glandulosos, con hojas de tres foliolos y flores amarillas diminutas. Sus legumbres, curvadas y dispuestas en grupo, recuerdan a los dedos de una pata de pájaro, lo que le da el nombre científico.',
+  s.description_source = NULL,
+  s.identification_tips = 'Legumbres curvas agrupadas, como una pata de ave
+Flores amarillas muy pequeñas
+Tallos pegajosos al tacto, con pelos glandulosos',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ononis_ornithopodioides_kz1.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Fabales',
+  s.taxon_family = 'Fabaceae',
+  s.taxon_genus = 'Ononis',
+  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección nacional específica registrada en EIDOS',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Ononis ornithopodioides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ononis sicula',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a mayo',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Fabales',
+  s.taxon_family = 'Fabaceae',
+  s.taxon_genus = 'Ononis',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Ononis sicula';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jopo',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Orobanche_cernua_285631122.jpg?width=1280',
+  s.image_attribution = 'Mikhail Nevsky (CC BY 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Orobanchaceae',
+  s.taxon_genus = 'Orobanche',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Orobanche cernua';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pino carrasco',
+  s.kingdom = 'flora',
+  s.family = 'Conífera',
+  s.primary_habitat = 'Laderas secas y soleadas sobre calizas y margas, en clima mediterráneo cálido',
+  s.description = 'Pino de copa clara e irregular y follaje de un verde pálido, el más resistente a la sequía y a los suelos pobres de los pinos ibéricos. Sus piñas, alargadas y asimétricas, quedan colgadas años en la rama y liberan las semillas tras los incendios, lo que le permite recolonizar rápido.',
+  s.description_source = NULL,
+  s.identification_tips = 'Copa irregular y poco densa, de verde claro
+Piñas asimétricas y persistentes, apuntando hacia atrás
+Corteza clara y agrietada, rojiza en las ramas jóvenes',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pino_secolare_-_Castelleone_di_Suasa.JPG?width=1280',
+  s.image_attribution = 'Accurimbono (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Pinopsida',
+  s.taxon_order = 'Pinales',
+  s.taxon_family = 'Pinaceae',
+  s.taxon_genus = 'Pinus',
+  s.iucn_global = 'LC',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No catalogada (especie forestal común)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Pinus halepensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Oreja de Liebre',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Scorpiurus_muricatus_(plant).jpg?width=1280',
+  s.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Fabales',
+  s.taxon_family = 'Fabaceae',
+  s.taxon_genus = 'Scorpiurus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Scorpiurus muricatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cerraja fina',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Muros, taludes, cunetas y pies de roca en ambientes secos y alterados',
+  s.description = 'Cerraja de hojas muy divididas en segmentos estrechos, casi filiformes, que la distinguen de sus parientes de hoja ancha. Brota en cualquier grieta o talud, suelta látex blanco al partirla y florece prácticamente todo el año en clima cálido.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas partidas en segmentos muy estrechos y separados
+Látex blanco abundante al romper el tallo
+Capítulos amarillo pálido y vilanos sedosos y blancos',
+  s.seasonality = 'Casi todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sonchus_tenerrimus_01.JPG?width=1280',
+  s.image_attribution = 'Luca Fornasari (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Asteraceae',
+  s.taxon_genus = 'Sonchus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Sonchus tenerrimus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Succowia balearica',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Succowia_balearica135.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Brassicales',
+  s.taxon_family = 'Brassicaceae',
+  s.taxon_genus = 'Succowia',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Succowia balearica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Taray canario',
+  s.kingdom = 'flora',
+  s.family = 'Árbol',
+  s.primary_habitat = 'Galerías y matorrales ribereños termomediterráneos',
+  s.description = 'Taray de floración prolongada y espigas rosadas que forma galerías y tarayales en cauces y ramblas del litoral árido.',
+  s.description_source = NULL,
+  s.identification_tips = 'Espigas rosadas abundantes
+Floración prolongada
+Forma tarayales en ramblas',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/619019413/original.jpg',
+  s.image_attribution = 'Christoph Moning (CC BY 4.0) · GBIF',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Caryophyllales',
+  s.taxon_family = 'Tamaricaceae',
+  s.taxon_genus = 'Tamarix',
+  s.iucn_global = 'LC',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No incluida en el LESRPE; formador de galerías termomediterráneas (HIC 92D0)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Tamarix canariensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'poleo amargo',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Teucrium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Teucrium carolipaui';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Trifolium scabrum',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Trifolium_scabrum1.jpg?width=1280',
+  s.image_attribution = 'No machine-readable author provided. Aroche assumed (based on copyr… (CC BY-SA 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Fabales',
+  s.taxon_family = 'Fabaceae',
+  s.taxon_genus = 'Trifolium',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2012)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Trifolium scabrum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gusanera',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, diciembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sideritis_lasiantha32.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Sideritis',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Sideritis lasiantha';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gaviota de Audouin',
+  s.kingdom = 'fauna',
+  s.family = 'Ave marina',
+  s.primary_habitat = 'Islotes y costas mediterráneas; pesca en mar abierto cerca de la orilla',
+  s.description = 'Gaviota mediterránea de tamaño medio, elegante y de aspecto más «limpio» que la patiamarilla, con el pico rojo coral anillado de negro y las patas verdosas oscuras. Pesca al vuelo rozando el agua, sobre todo de noche y de madrugada. Cría en colonias muy concentradas en islotes y salinas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Pico rojo coral con una banda negra cerca de la punta
+Patas verde oscuro, no amarillas
+Ojo oscuro que le da expresión suave',
+  s.seasonality = 'Todo el año, con concentraciones en verano',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/611415320/original.jpg',
+  s.image_attribution = 'Michael Bakker Paiva (CC BY 4.0) · GBIF',
   s.taxon_phylum = 'Chordata',
   s.taxon_class = 'Aves',
   s.taxon_order = NULL,
   s.taxon_family = NULL,
-  s.taxon_genus = 'Circaetus',
+  s.taxon_genus = 'Larus',
+  s.iucn_global = 'VU (Vulnerable)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
+  s.spain_status = 'Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; Ley 42/2007, Anexo IV',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas (CEEA): Vulnerable","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Larus audouinii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cogujada montesina',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral bajo, laderas pedregosas y eriales con vegetación rala',
+  s.description = 'Cogujada de cresta puntiaguda, muy parecida a la común pero de pico más corto y grueso y con el pecho más nítidamente rayado. Prefiere el matorral y las laderas pedregosas, mientras que la común busca cultivos, caminos y bordes de pueblo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cresta alta y afilada, casi triangular
+Pico más corto y romo que el de la cogujada común
+Rayado del pecho bien definido, no difuminado',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Galerida_theklae_Madrid.jpg?width=1280',
+  s.image_attribution = 'Adrian198cm (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Alaudidae',
+  s.taxon_genus = 'Galerida',
+  s.iucn_global = 'LC',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Galerida theklae';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chorlitejo patinegro',
+  s.kingdom = 'fauna',
+  s.family = 'Ave limícola',
+  s.primary_habitat = 'Playas, salinas, marismas y llanos arenosos junto al mar',
+  s.description = 'Chorlitejo pequeño y pálido, de patas oscuras, que corretea por la arena en carreras cortas seguidas de paradas bruscas. Su nido es una simple depresión en la arena con los huevos perfectamente camuflados, por lo que las puestas se pierden con facilidad bajo el pisoteo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Collar oscuro interrumpido en el centro del pecho
+Corre a ratos y se para en seco, una y otra vez
+Plumaje muy pálido, del color de la arena seca',
+  s.seasonality = 'Todo el año, con máximos en primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Charadrius_alexandrinus_-_Kentish_Plover_03.jpg?width=1280',
+  s.image_attribution = 'Zeynel Cebeci (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Charadriiformes',
+  s.taxon_family = 'Charadriidae',
+  s.taxon_genus = 'Charadrius',
+  s.iucn_global = 'LC',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
+  s.spain_status = 'Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; LESRPE (RD 139/2011); Ley 42/2007, Anexo IV',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas (CEEA): Vulnerable","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Charadrius alexandrinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Charrán patinegro',
+  s.kingdom = 'fauna',
+  s.family = 'Ave marina',
+  s.primary_habitat = 'Costas, bahías y salinas; pesca sobre aguas someras',
+  s.description = 'Charrán grande y pálido, con un penacho negro despeinado en la nuca y un pico negro rematado en amarillo, como si lo hubiera mojado en mostaza. Pesca zambulléndose de golpe desde varios metros de altura. Fuera de la época de cría pierde el negro de la frente y queda con la coronilla blanca.',
+  s.description_source = NULL,
+  s.identification_tips = 'Punta amarilla en el pico negro
+Nuca con plumas negras erizadas, en penacho
+Se lanza al agua en picado, plegando las alas',
+  s.seasonality = 'Otoño e invierno principalmente',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/606127388/original.jpg',
+  s.image_attribution = 'Diego González Dopico (CC BY 4.0) · GBIF',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = NULL,
+  s.taxon_family = NULL,
+  s.taxon_genus = 'Thalasseus',
   s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Thalasseus sandvicensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba negra',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral litoral, laderas secas y roquedos',
+  s.description = 'La mayor de las collalbas, enteramente negra salvo el obispillo y la base de la cola, blancos. Vive en cortados y laderas rocosas, donde construye junto al nido una plataforma de piedrecitas que acarrea una a una. Su canto es potente y melodioso.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cuerpo negro con obispillo blanco muy contrastado
+«T» negra invertida en la cola blanca al volar
+Montoncitos de piedrecitas junto a la grieta del nido',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Black_Wheatear%2C_Isla_Plana_3.jpg?width=1280',
+  s.image_attribution = 'Andrew Thomas from Shrewsbury, UK (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Oenanthe',
+  s.iucn_global = 'LC',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Oenanthe leucura';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cernícalo vulgar',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Campos abiertos, matorral, cortados y también ciudades',
+  s.description = 'El halcón más común y fácil de ver, gracias a su costumbre de cernirse: se queda suspendido en el aire batiendo las alas con la cabeza inmóvil, buscando ratones y lagartijas. El macho tiene la cabeza gris y el dorso rojizo con puntos negros; la hembra es más parda y barrada.',
+  s.description_source = NULL,
+  s.identification_tips = 'Se queda «clavado» en el aire cerniéndose
+Dorso rojizo salpicado de puntos negros
+Cola larga con una banda negra ancha en la punta',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_kestrel_falco_tinnunculus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = NULL,
+  s.taxon_family = NULL,
+  s.taxon_genus = 'Falco',
+  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Falco tinnunculus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cormorán moñudo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave marina',
+  s.primary_habitat = 'Costas rocosas, acantilados e islotes; pesca buceando cerca de la orilla',
+  s.description = 'Cormorán marino de plumaje negro con reflejos verdosos, más esbelto que el grande y con la frente empinada. Bucea desde la superficie con un salto característico y persigue peces bajo el agua. Se seca con las alas abiertas sobre las rocas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Salta hacia arriba antes de sumergirse
+Frente muy empinada y pico fino
+Se posa en roca con las alas abiertas al sol',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Shag_Phalacrocorax_aristotelis.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Suliformes',
+  s.taxon_family = 'Phalacrocoracidae',
+  s.taxon_genus = 'Gulosus',
+  s.iucn_global = 'LC',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Subespecie mediterránea (desmarestii) catalogada Vulnerable en el Catálogo Español de Especies Amenazadas',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"Subespecie mediterránea (desmarestii) catalogada Vulnerable en el Catálogo Español de Especies Amenazadas","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Gulosus aristotelis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tarabilla europea',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral bajo, herbazales, ribazos y bordes de cultivo con posaderos',
+  s.description = 'Pájaro pequeño y regordete que se posa en lo alto de las matas, muy erguido y a la vista, para lanzarse al suelo a por insectos. El macho tiene la cabeza negra, un collar blanco a los lados y el pecho naranja. Su reclamo suena como dos piedras golpeadas, de donde le viene el nombre.',
+  s.description_source = NULL,
+  s.identification_tips = 'Siempre en lo alto de una mata, bien visible
+Macho con capucha negra y medio collar blanco
+Reclamo como el chasquido de dos cantos rodados',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Malestonechatseaham_Cropped.jpg?width=1280',
+  s.image_attribution = 'derivative work: Myosotis Scorpioides (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Saxicola',
+  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Saxicola rubicola';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Garceta común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave acuática',
+  s.primary_habitat = 'Marismas, salinas, ramblas con agua, arrozales y orillas costeras',
+  s.description = 'Garza blanca y esbelta, de tamaño medio, con el pico negro y las patas negras rematadas en unos pies amarillos llamativos. Pesca removiendo el fondo con esas patas para levantar peces y camarones. En época de cría luce dos plumas largas y finas en la nuca.',
+  s.description_source = NULL,
+  s.identification_tips = 'Pies amarillos al final de patas negras
+Pico negro y fino, no amarillo
+Remueve el fondo con una pata mientras acecha',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aigrette_garzette_au_lac_sud_de_Tunis_(site_RAMSAR).jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = NULL,
+  s.taxon_family = NULL,
+  s.taxon_genus = 'Egretta',
+  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Egretta garzetta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcaraván',
+  s.kingdom = 'fauna',
+  s.family = 'Ave esteparia',
+  s.primary_habitat = 'Llanos pedregosos, cultivos de secano, ramblas y eriales con poca cobertura',
+  s.description = 'Ave de aspecto extraño y ojos amarillos enormes, adaptados a la actividad nocturna. De día permanece agachada e inmóvil, confiada en su plumaje críptico, y solo al anochecer se activa y delata con un reclamo silbado y melancólico que recuerda al del zarapito.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ojos amarillos desproporcionadamente grandes
+Dos barras blancas y negras en el ala plegada
+Reclamo silbado y triste al anochecer',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Burhinus_oedicnemus_insularum_Lanzarote_1.jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Charadriiformes',
+  s.taxon_family = 'Burhinidae',
+  s.taxon_genus = 'Burhinus',
+  s.iucn_global = 'LC',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE; Directiva Aves 2009/147/CE, Anexo I',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Burhinus oedicnemus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gaviota reidora',
+  s.kingdom = 'fauna',
+  s.family = 'Ave marina',
+  s.primary_habitat = 'Costas, salinas, embalses, ríos y campos de cultivo inundados',
+  s.description = 'Gaviota pequeña y ágil, muy común en invierno tierra adentro. En verano lleva la cabeza cubierta por una capucha de color chocolate; en invierno solo le queda una mancha oscura tras el ojo. En vuelo enseña una cuña blanca inconfundible en el borde delantero del ala.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cuña blanca en el filo delantero del ala, visible en vuelo
+En invierno, una mancha oscura como un auricular tras el ojo
+Pico y patas rojo oscuro',
+  s.seasonality = 'Otoño e invierno',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/605325270/original.jpg',
+  s.image_attribution = 'lalaia (CC BY 4.0) · GBIF',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = NULL,
+  s.taxon_family = NULL,
+  s.taxon_genus = 'Chroicocephalus',
+  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Chroicocephalus ridibundus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cogujada común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Cultivos, caminos, eriales y bordes de poblado con suelo desnudo',
+  s.description = 'Alondra parda de cresta alta y puntiaguda, muy ligada a caminos, cunetas y descampados junto a los pueblos. Camina en vez de saltar y, al volar, deja ver el forro rojizo de las alas y la cola con los bordes canela.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cresta larga y puntiaguda, casi siempre erguida
+Forro de las alas rojizo, visible al levantar el vuelo
+Camina por el suelo en vez de saltar',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Crested_Lark_-_Qatar.jpg?width=1280',
+  s.image_attribution = 'Ashraf Kotb (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Alaudidae',
+  s.taxon_genus = 'Galerida',
+  s.iucn_global = 'LC',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Circaetus gallicus';
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Galerida cristata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abubilla',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Campos abiertos, dehesas, cultivos con arbolado y bordes de matorral',
+  s.description = 'Ave inconfundible de color canela con alas y cola a franjas blancas y negras, y una cresta eréctil que despliega en abanico al posarse. Sondea el suelo blando con el pico largo y curvo en busca de larvas e insectos. Su canto, un «up-up-up» sordo y repetido, se oye de lejos en primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vuelo ondulante y torpe, como una mariposa grande
+Cresta que abre en abanico justo al aterrizar
+Camina por el suelo clavando el pico largo y curvo',
+  s.seasonality = 'Todo el año en el sur peninsular; estival en el resto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Wiedehopf_mit_Puppe_als_Futter.jpg?width=1280',
+  s.image_attribution = 'Sven Damerow (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = NULL,
+  s.taxon_family = NULL,
+  s.taxon_genus = 'Upupa',
+  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Upupa epops';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Terrera común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave esteparia',
+  s.primary_habitat = 'Llanos de cultivo, eriales y pastizales rasos con suelo desnudo',
+  s.description = 'Alondra pequeña y pálida de aspecto muy limpio, con el pecho sin apenas rayado salvo una mancha oscura a cada lado del cuello. Anida en el suelo, en cultivos y baldíos. En migración se agrupa en bandos que se levantan del suelo todos a la vez.',
+  s.description_source = NULL,
+  s.identification_tips = 'Mancha oscura a cada lado del cuello, como un botón
+Pecho limpio, sin rayado extenso
+Ceja clara y pico corto y grueso de granívora',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alondra.jpg?width=1280',
+  s.image_attribution = 'Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Alaudidae',
+  s.taxon_genus = 'Calandrella',
+  s.iucn_global = 'LC',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Calandrella brachydactyla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Camachuelo trompetero',
+  s.kingdom = 'fauna',
+  s.family = 'Ave esteparia',
+  s.primary_habitat = 'Ramblas, laderas peladas y llanos pedregosos de clima muy árido',
+  s.description = 'Pequeño fringílido de aspecto discreto y pardo arenoso, con un pico corto, muy grueso y de color rojo coral en primavera. El macho tiene además el pecho y el obispillo teñidos de rosa. Su reclamo es un zumbido nasal inconfundible, como una trompeta de juguete.',
+  s.description_source = NULL,
+  s.identification_tips = 'Pico corto y muy grueso, rojo coral en primavera
+Reclamo nasal y zumbante, como una corneta pequeña
+Tonos rosados en pecho y obispillo del macho',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Bucanetes_githagineus_-Salinas_de_Janubio%2C_Lanzarote%2C_Spain-8.jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Fringillidae',
+  s.taxon_genus = 'Bucanetes',
+  s.iucn_global = 'LC',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
+  s.spain_status = 'Catalogado como Vulnerable en el Libro Rojo de las Aves de España (población ibérica escasa y localizada)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"Catalogado como Vulnerable en el Libro Rojo de las Aves de España (población ibérica escasa y localizada)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Bucanetes githagineus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Curruca rabilarga',
@@ -5011,406 +5465,6 @@ Vive en matorral muy bajo, no en arbolado',
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Curruca conspicillata';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Eragrostis',
-  s.kingdom = 'flora',
-  s.family = 'Gramínea',
-  s.primary_habitat = 'Pastizales de la subestepa de gramíneas',
-  s.description = 'Gramínea de panícula muy abierta y ligera, con espiguillas diminutas sostenidas por ramas finísimas que tiemblan con el viento. Es una planta de estirpe saharo-arábiga que en Europa solo aparece en los enclaves más áridos del sureste ibérico.',
-  s.description_source = NULL,
-  s.identification_tips = 'Panícula muy abierta y difusa, casi transparente
-Espiguillas diminutas colgando de ramas capilares
-Mata pequeña, de menos de medio metro',
-  s.seasonality = 'Verano',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/591856810/original.jpg',
-  s.image_attribution = 'Alejandro Rodríguez Zapata (CC BY 4.0) · GBIF/iNaturalist',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Poales',
-  s.taxon_family = 'Poaceae',
-  s.taxon_genus = 'Eragrostis',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Eragrostis papposa';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Erodio',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Litosuelos y pastizales abiertos',
-  s.description = 'Pequeña geraniácea anual de suelos abiertos y pedregosos, de floración temprana en el piso termomediterráneo semiárido.',
-  s.description_source = NULL,
-  s.identification_tips = 'Flores rosadas pequeñas
-Fruto con pico alargado característico de Erodium
-Anual de suelos pedregosos',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/642301345/original.jpg',
-  s.image_attribution = 'Laia Lahoz (CC BY-NC 4.0) · iNaturalist/GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Geraniales',
-  s.taxon_family = 'Geraniaceae',
-  s.taxon_genus = 'Erodium',
-  s.iucn_global = 'NE',
-  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2010)',
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Erodium sanguis-christi';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Escrofularia de perro',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Ríos mediterráneos con Glaucium flavum',
-  s.description = 'Escrofularia perenne de tallos ramosos y flores diminutas pardo-purpúreas, típica de gravas fluviales y cauces pedregosos.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas divididas
-Flores diminutas pardo-rojizas
-Crece en gravas de cauce',
-  s.seasonality = 'Primavera y verano',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/636689170/original.jpg',
-  s.image_attribution = 'Antón David Pérez Rodríguez (CC0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Lamiales',
-  s.taxon_family = 'Scrophulariaceae',
-  s.taxon_genus = 'Scrophularia',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Scrophularia canina';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Eslizón ibérico',
-  s.kingdom = 'fauna',
-  s.family = 'Reptil',
-  s.primary_habitat = 'Matorral termomediterráneo semiárido',
-  s.description = 'Eslizón de cuerpo cilíndrico y brillante, con las patas tan reducidas que apenas se usan: se desplaza reptando y buceando entre la arena y la hojarasca. Su dorso, dorado o bronceado, lleva hileras de ocelos oscuros con el centro claro.',
-  s.description_source = NULL,
-  s.identification_tips = 'Patas diminutas, casi inútiles para caminar
-Cuerpo cilíndrico y muy brillante, como pulido
-Hileras de ocelos oscuros de centro claro en el dorso',
-  s.seasonality = 'Primavera y verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chalcides_bedriagai_01_by-dpc.jpg?width=1280',
-  s.image_attribution = 'David Perez (CC BY 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Reptilia',
-  s.taxon_order = 'Squamata',
-  s.taxon_family = 'Scincidae',
-  s.taxon_genus = 'Chalcides',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE; Directiva Hábitats 92/43/CEE, Anexo IV',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Chalcides bedriagai';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Esparraguera blanca',
-  s.kingdom = 'flora',
-  s.family = 'Arbusto',
-  s.primary_habitat = 'Matorral seco, ribazos y bajo arbustos en clima cálido',
-  s.description = 'Esparraguera de tallos blanquecinos y muy espinosos que pierde el follaje en verano y florece en otoño, al revés que casi todo el matorral. Lo que parecen hojas son ramillas finas agrupadas en haces. Sus brotes tiernos son los espárragos silvestres de recolección tradicional.',
-  s.description_source = NULL,
-  s.identification_tips = 'Tallos claros, casi blancos, con espinas fuertes
-Ramillas finas agrupadas en manojitos
-Florece en otoño, con flores blancas y olorosas',
-  s.seasonality = 'Otoño (floración)',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Art%C3%A0_-_Ermita_de_Betlem_-_Asparagus_albus_03_ies.jpg?width=1280',
-  s.image_attribution = 'Frank Vincentz (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Asparagales',
-  s.taxon_family = 'Asparagaceae',
-  s.taxon_genus = 'Asparagus',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Asparagus albus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Esparto',
-  s.kingdom = 'flora',
-  s.family = 'Gramínea',
-  s.primary_habitat = 'Laderas secas y llanos sobre suelos pobres; forma espartales extensos',
-  s.description = 'El esparto, nombrado también como Stipa tenacissima, forma matas densas y duraderas que dan nombre a los espartales, uno de los paisajes característicos del sureste ibérico. Sus hojas se enrollan sobre sí mismas en los días secos para perder menos agua y se abren tras la lluvia. Durante siglos se recolectó para hacer cuerdas, esteras y alpargatas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Matas grandes y compactas de hojas duras enrolladas
-Las hojas se abren tras la lluvia y se enrollan al secar
-Espigas altas y plateadas a final de primavera',
-  s.seasonality = 'Primavera (espigado)',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Stipa_tenacissima.jpg?width=1280',
-  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Poales',
-  s.taxon_family = 'Poaceae',
-  s.taxon_genus = 'Macrochloa',
-  s.iucn_global = 'VU (Vulnerable) (evaluación UICN 2018)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Macrochloa tenacissima';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Espino negro',
-  s.kingdom = 'flora',
-  s.family = 'Arbusto',
-  s.primary_habitat = 'Matorral litoral y laderas secas',
-  s.description = 'Arbusto muy ramificado cuyas ramillas terminan todas en una espina rígida, formando una maraña impenetrable. Sus hojas son pequeñas, estrechas y agrupadas en manojos, y sus frutos, drupas que pasan de rojo a negro y consumen muchas aves.',
-  s.description_source = NULL,
-  s.identification_tips = 'Todas las ramillas rematadas en espina rígida
-Hojas pequeñas y estrechas agrupadas en manojitos
-Frutos que viran de rojo a negro al madurar',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/11702748/original.jpeg',
-  s.image_attribution = 'Rafael Medina (CC BY 4.0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Rosales',
-  s.taxon_family = 'Rhamnaceae',
-  s.taxon_genus = 'Rhamnus',
-  s.iucn_global = 'NE (no evaluada a nivel global)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Rhamnus lycioides subsp. borgiae';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Fagonia',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Suelos pedregosos, ramblas y litosuelos de clima árido',
-  s.description = 'Planta baja y tendida, de tallos angulosos, hojas divididas en tres y estípulas convertidas en espinas finas. Sus flores tienen cinco pétalos de un lila rosado que se abren durante las horas centrales del día. Es de estirpe norteafricana y aquí vive en el extremo de su área.',
-  s.description_source = NULL,
-  s.identification_tips = 'Porte tendido y desordenado, pegado al suelo
-Hojas de tres foliolos con espinas en la base
-Flores lila con cinco pétalos bien separados',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fagonia_cretica.jpg?width=1280',
-  s.image_attribution = 'Retama (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Zygophyllales',
-  s.taxon_family = 'Zygophyllaceae',
-  s.taxon_genus = 'Fagonia',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE; elemento iberoafricano de interés biogeográfico',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Fagonia cretica';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Gamoncillo',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Pastizales secos, bordes de camino y terrenos removidos',
-  s.description = 'Gamón pequeño de hojas cilíndricas y huecas —de ahí su nombre— que salen todas de la base. Levanta un tallo ramificado con flores blancas de nervio rosado, que se abren de forma escalonada durante semanas. Es una de las primeras plantas en colonizar cunetas y baldíos.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas finas, cilíndricas y huecas por dentro
-Flores blancas con una raya rosa en cada pétalo
-Cápsulas redondas y pequeñas al fructificar',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/A._fistulosus-flor-2.JPG?width=1280',
-  s.image_attribution = 'Philmarin (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Asparagales',
-  s.taxon_family = 'Asphodelaceae',
-  s.taxon_genus = 'Asphodelus',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Asphodelus fistulosus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Garceta común',
-  s.kingdom = 'fauna',
-  s.family = 'Ave acuática',
-  s.primary_habitat = 'Marismas, salinas, ramblas con agua, arrozales y orillas costeras',
-  s.description = 'Garza blanca y esbelta, de tamaño medio, con el pico negro y las patas negras rematadas en unos pies amarillos llamativos. Pesca removiendo el fondo con esas patas para levantar peces y camarones. En época de cría luce dos plumas largas y finas en la nuca.',
-  s.description_source = NULL,
-  s.identification_tips = 'Pies amarillos al final de patas negras
-Pico negro y fino, no amarillo
-Remueve el fondo con una pata mientras acecha',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aigrette_garzette_au_lac_sud_de_Tunis_(site_RAMSAR).jpg?width=1280',
-  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = NULL,
-  s.taxon_family = NULL,
-  s.taxon_genus = 'Egretta',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Egretta garzetta';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Garduña',
-  s.kingdom = 'fauna',
-  s.family = 'Mamífero carnívoro',
-  s.primary_habitat = 'Roquedos, bosques, ruinas y construcciones rurales',
-  s.description = 'Mustélido nocturno de cuerpo alargado y cola espesa, con un babero blanco en la garganta que suele bifurcarse hacia las patas delanteras. Trepa con soltura y aprovecha desde roquedos hasta desvanes. Es omnívora: come frutos, insectos, huevos y pequeños vertebrados.',
-  s.description_source = NULL,
-  s.identification_tips = 'Babero blanco en la garganta, a menudo dividido en dos
-Excrementos retorcidos y con pelos o semillas, sobre piedras
-Rastro nocturno; muy rara vez se ve de día',
-  s.seasonality = 'Todo el año (actividad nocturna)',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Steinmarder_01.jpg?width=1280',
-  s.image_attribution = 'Zefram (CC BY 2.0 de) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Mammalia',
-  s.taxon_order = 'Carnivora',
-  s.taxon_family = 'Mustelidae',
-  s.taxon_genus = 'Martes',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
-  s.spain_status = 'No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Martes foina';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Gato montés',
-  s.kingdom = 'fauna',
-  s.family = 'Mamífero carnívoro',
-  s.primary_habitat = 'Bosque, matorral denso y roquedos con buena población de conejos y roedores',
-  s.description = 'Gato salvaje europeo, más robusto que un gato doméstico atigrado, con la cola gruesa, roma en la punta y anillada de negro. Es solitario, esquivo y sobre todo nocturno. Su mayor amenaza es la hibridación con gatos asilvestrados, que diluye la población silvestre.',
-  s.description_source = NULL,
-  s.identification_tips = 'Cola gruesa, de punta roma y con anillos negros nítidos
-Raya negra continua a lo largo del lomo
-Aspecto más recio y patilargo que un gato casero',
-  s.seasonality = 'Todo el año (actividad crepuscular y nocturna)',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Felis_silvestris_Kocka_divok%C3%A1_zoo_cropped.jpg?width=1280',
-  s.image_attribution = 'Felis_silvestris_Kočka_divoká_ZOO_Děčín.jpg: Alena Houšková derivat… (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Mammalia',
-  s.taxon_order = 'Carnivora',
-  s.taxon_family = 'Felidae',
-  s.taxon_genus = 'Felis',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2007)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo IV; Reglamento CITES (CE) 338/97, Anexo A',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Felis silvestris';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Gaviota de Audouin',
-  s.kingdom = 'fauna',
-  s.family = 'Ave marina',
-  s.primary_habitat = 'Islotes y costas mediterráneas; pesca en mar abierto cerca de la orilla',
-  s.description = 'Gaviota mediterránea de tamaño medio, elegante y de aspecto más «limpio» que la patiamarilla, con el pico rojo coral anillado de negro y las patas verdosas oscuras. Pesca al vuelo rozando el agua, sobre todo de noche y de madrugada. Cría en colonias muy concentradas en islotes y salinas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Pico rojo coral con una banda negra cerca de la punta
-Patas verde oscuro, no amarillas
-Ojo oscuro que le da expresión suave',
-  s.seasonality = 'Todo el año, con concentraciones en verano',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/611415320/original.jpg',
-  s.image_attribution = 'Michael Bakker Paiva (CC BY 4.0) · GBIF',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = NULL,
-  s.taxon_family = NULL,
-  s.taxon_genus = 'Larus',
-  s.iucn_global = 'VU (Vulnerable)',
-  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
-  s.spain_status = 'Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; Ley 42/2007, Anexo IV',
-  s.rarity_score = 4,
-  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas (CEEA): Vulnerable","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Larus audouinii';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Gaviota reidora',
-  s.kingdom = 'fauna',
-  s.family = 'Ave marina',
-  s.primary_habitat = 'Costas, salinas, embalses, ríos y campos de cultivo inundados',
-  s.description = 'Gaviota pequeña y ágil, muy común en invierno tierra adentro. En verano lleva la cabeza cubierta por una capucha de color chocolate; en invierno solo le queda una mancha oscura tras el ojo. En vuelo enseña una cuña blanca inconfundible en el borde delantero del ala.',
-  s.description_source = NULL,
-  s.identification_tips = 'Cuña blanca en el filo delantero del ala, visible en vuelo
-En invierno, una mancha oscura como un auricular tras el ojo
-Pico y patas rojo oscuro',
-  s.seasonality = 'Otoño e invierno',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/605325270/original.jpg',
-  s.image_attribution = 'lalaia (CC BY 4.0) · GBIF',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = NULL,
-  s.taxon_family = NULL,
-  s.taxon_genus = 'Chroicocephalus',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Chroicocephalus ridibundus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Gineta',
-  s.kingdom = 'fauna',
-  s.family = 'Mamífero carnívoro',
-  s.primary_habitat = 'Bosque, matorral denso, roquedos y sotos con cobertura y refugios',
-  s.description = 'Carnívoro esbelto de pelaje gris con manchas negras y una cola larguísima anillada en blanco y negro, tan larga como el resto del cuerpo. Es un trepador excelente y estrictamente nocturno. Deja sus excrementos en letrinas fijas sobre piedras y troncos, que usa durante años.',
-  s.description_source = NULL,
-  s.identification_tips = 'Cola muy larga con anillos blancos y negros bien marcados
-Pelaje gris con hileras de manchas negras
-Letrinas repetidas en el mismo punto elevado',
-  s.seasonality = 'Todo el año (actividad nocturna)',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Genetta_genetta_felina_(Wroclaw_zoo).JPG?width=1280',
-  s.image_attribution = 'Guérin Nicolas (messages) (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Mammalia',
-  s.taxon_order = 'Carnivora',
-  s.taxon_family = 'Viverridae',
-  s.taxon_genus = 'Genetta',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo V',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Genetta genetta';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Grama de mar',
-  s.kingdom = 'flora',
-  s.family = 'Gramínea',
-  s.primary_habitat = 'Dunas móviles embrionarias',
-  s.description = 'Gramínea rizomatosa y glauca que entrelaza la arena con sus largos rizomas y levanta las primeras dunas embrionarias; especie dominante de este hábitat en el Mediterráneo.',
-  s.description_source = NULL,
-  s.identification_tips = 'Rizomas largos que traban la arena
-Hojas glaucas y rígidas
-Espiga que se fragmenta al madurar',
-  s.seasonality = 'Primavera y verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Elymus_farctus_kz16.jpg?width=1280',
-  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Poales',
-  s.taxon_family = 'Poaceae',
-  s.taxon_genus = 'Elymus',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Elymus farctus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Halcón peregrino',
   s.kingdom = 'fauna',
   s.family = 'Ave rapaz',
@@ -5436,654 +5490,29 @@ Pecho claro con barrado fino en horizontal',
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Falco peregrinus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Hinojo marino',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Grietas de acantilados y rocas batidas por el salpicón del mar',
-  s.description = 'Planta carnosa de acantilado, con hojas gruesas divididas en segmentos cilíndricos que almacenan agua y toleran la sal. Sus flores, amarillo verdoso, se agrupan en umbelas planas. Se ha consumido tradicionalmente encurtida, con un sabor intenso a mar y a hinojo.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas carnosas divididas en segmentos como deditos
-Umbelas planas de florecillas verde amarillentas
-Solo en la roca costera, al alcance de la salpicadura',
-  s.seasonality = 'Verano y otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Crithmum_maritimum.jpg?width=1280',
-  s.image_attribution = 'Júlio Reis (Tintazul) (CC BY-SA 2.5) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Apiales',
-  s.taxon_family = 'Apiaceae',
-  s.taxon_genus = 'Crithmum',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Crithmum maritimum';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Hornungia',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Prados calcáreos del Alysso-Sedion albi',
-  s.description = 'Minúsculo terófito calcícola de floración muy temprana tras las lluvias, diagnóstico de los prados pioneros del Alysso-Sedion albi sobre suelos esqueléticos.',
-  s.description_source = NULL,
-  s.identification_tips = 'Anual diminuta primaveral
-Florece muy pronto tras las lluvias
-Fruto en silícula',
-  s.seasonality = 'Invierno y primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hornungia_petraea2_eF.jpg?width=1280',
-  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Brassicales',
-  s.taxon_family = 'Brassicaceae',
-  s.taxon_genus = 'Hornungia',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Hornungia petraea';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Jabalí',
+  s.common_name = 'Collalba rubia',
   s.kingdom = 'fauna',
-  s.family = 'Mamífero ungulado',
-  s.primary_habitat = 'Bosque, matorral denso y cultivos; necesita cobertura y puntos de agua',
-  s.description = 'Ungulado robusto y adaptable, con el cuerpo cubierto de cerdas ásperas y una cabeza en cuña rematada por un hocico potente con el que remueve el suelo. Los rayones —las crías— nacen con líneas claras a lo largo del lomo. Es omnívoro y ha ampliado mucho su área en las últimas décadas.',
+  s.family = 'Ave',
+  s.primary_habitat = 'Laderas secas y pedregosas con matorral bajo y suelo desnudo',
+  s.description = 'Collalba pequeña y contrastada: el macho es color arena claro con las alas negras y un antifaz o una garganta negros según la variedad. Como todas las collalbas, enseña al volar una cola blanca con una «T» negra invertida. Caza insectos lanzándose al suelo desde una piedra o una mata.',
   s.description_source = NULL,
-  s.identification_tips = 'Hozaduras: zonas de suelo removido como si lo hubieran arado
-Huellas hendidas grandes con las pezuñas laterales marcadas
-Barros y árboles con el tronco embarrado a media altura',
-  s.seasonality = 'Todo el año (actividad sobre todo nocturna)',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eberswalde_Zoo_12-2017_img2.jpg?width=1280',
-  s.image_attribution = 'A.Savin (FAL) · Wikimedia Commons',
+  s.identification_tips = 'Cola blanca con una «T» negra al abrirse
+Alas negras que resaltan sobre el cuerpo color arena
+Se posa erguida en piedras y matas, muy visible',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Black-eared_Wheatear%2C_Punta_del_Sabinar%2C_Spain.jpg?width=1280',
+  s.image_attribution = 'Vince Smith from London, United Kingdom (CC BY-SA 2.0) · Wikimedia Commons',
   s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Mammalia',
-  s.taxon_order = 'Artiodactyla',
-  s.taxon_family = 'Suidae',
-  s.taxon_genus = 'Sus',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
-  s.spain_status = 'No catalogada (especie cinegética común)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Sus scrofa';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Jarilla de Almería',
-  s.kingdom = 'flora',
-  s.family = 'Mata',
-  s.primary_habitat = 'Tomillares y matorral abierto sobre suelos secos y pedregosos',
-  s.description = 'Jarilla enana de hojas pequeñas y blanquecinas, cubiertas de pelos que reflejan la luz y reducen la pérdida de agua. En primavera se cubre de flores blancas con el centro amarillo, cuyos pétalos duran apenas una mañana. Sus raíces se asocian con hongos comestibles del desierto.',
-  s.description_source = NULL,
-  s.identification_tips = 'Mata baja y grisácea, de hojas muy pequeñas
-Flores blancas con el centro amarillo, efímeras
-Pétalos arrugados, como de papel de seda',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_almeriense_flor.jpg?width=1280',
-  s.image_attribution = 'Retama (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Malvales',
-  s.taxon_family = 'Cistaceae',
-  s.taxon_genus = 'Helianthemum',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Helianthemum almeriense';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Juncia marina',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Dunas móviles embrionarias',
-  s.description = 'Ciperácea de arenales litorales, con tallos de sección triangular y cabezuela globosa; especie característica de las dunas embrionarias mediterráneas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Tallo de sección triangular
-Inflorescencia en cabezuela apretada
-Crece sobre arena suelta',
-  s.seasonality = 'Primavera y verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cyperus_capitatus.JPG?width=1280',
-  s.image_attribution = 'Taken by Carsten Niehaus (user:Lumbar). (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Poales',
-  s.taxon_family = 'Cyperaceae',
-  s.taxon_genus = 'Cyperus',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Cyperus capitatus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Lagartija colilarga',
-  s.kingdom = 'fauna',
-  s.family = 'Reptil',
-  s.primary_habitat = 'Matorral litoral y laderas secas',
-  s.description = 'Lagartija esbelta de escamas grandes, quilladas y brillantes, con dos líneas claras muy marcadas a cada lado del dorso. La cola puede medir el doble que el cuerpo. Los machos lucen en primavera manchas azules en el hombro y las mejillas anaranjadas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Dos líneas claras nítidas a lo largo de cada costado
-Escamas grandes y quilladas, de aspecto brillante
-Cola larguísima, hasta el doble que el cuerpo',
-  s.seasonality = 'Primavera a otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Psammodromus_algirus_-_01.jpg?width=1280',
-  s.image_attribution = 'Carlos Delgado (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Reptilia',
-  s.taxon_order = 'Squamata',
-  s.taxon_family = 'Lacertidae',
-  s.taxon_genus = 'Psammodromus',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Psammodromus algirus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Lagartija colirroja',
-  s.kingdom = 'fauna',
-  s.family = 'Reptil',
-  s.primary_habitat = 'Matorral litoral y laderas secas',
-  s.description = 'Lagartija de suelos arenosos, de cuerpo aplanado y dedos con escamas laterales en forma de peine que le sirven de raqueta sobre la arena suelta. Los jóvenes tienen la cola y las patas traseras de un rojo intenso que se apaga en los adultos.',
-  s.description_source = NULL,
-  s.identification_tips = 'Dedos con flecos de escamas a los lados, como peines
-Jóvenes con cola y patas traseras rojo intenso
-Cuerpo aplanado, con rayas y ocelos claros en el dorso',
-  s.seasonality = 'Primavera a otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Acanthodactylus_erythrurus.jpg?width=1280',
-  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Reptilia',
-  s.taxon_order = 'Squamata',
-  s.taxon_family = 'Lacertidae',
-  s.taxon_genus = 'Acanthodactylus',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Acanthodactylus erythrurus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Lagarto ocelado',
-  s.kingdom = 'fauna',
-  s.family = 'Reptil',
-  s.primary_habitat = 'Matorral termomediterráneo semiárido',
-  s.description = 'El lagarto más grande de Europa, de hasta 60 cm con la cola incluida. Su dorso es verde con un fino reticulado negro y, en los costados, hileras de ocelos de un azul intenso. Los machos viejos tienen una cabeza enorme y maciza. Es diurno y muy desconfiado.',
-  s.description_source = NULL,
-  s.identification_tips = 'Ocelos azules alineados en los costados
-Dorso verde con retícula negra muy fina
-Tamaño grande y cabeza maciza en los machos adultos',
-  s.seasonality = 'Primavera a otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Jewelled_Lizard_(Timon_lepidus)_male_found_under_a_stone_by_Jean_NICOLAS_(14166347788).jpg?width=1280',
-  s.image_attribution = 'Bernard DUPONT from FRANCE (CC BY-SA 2.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Reptilia',
-  s.taxon_order = 'Squamata',
-  s.taxon_family = 'Lacertidae',
-  s.taxon_genus = 'Timon',
-  s.iucn_global = 'NT (Casi Amenazado, evaluación de 2009 por declive poblacional en parte de su área)',
-  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Timon lepidus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Lastón',
-  s.kingdom = 'flora',
-  s.family = 'Gramínea',
-  s.primary_habitat = 'Pastizales, claros de matorral y ribazos sobre suelos calizos',
-  s.description = 'Gramínea perenne y rizomatosa que forma céspedes extensos en los claros del matorral mediterráneo. Sus hojas son cortas, rígidas y de punta roma. Es de las plantas que más rápido rebrota tras un incendio, gracias a sus rizomas subterráneos.',
-  s.description_source = NULL,
-  s.identification_tips = 'Céspedes extensos y bajos, no matas aisladas
-Hojas cortas y rígidas, de punta redondeada
-Espiguillas alineadas a un lado de un eje rígido',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Brachypodium_retusum_espiga_seca.jpg?width=1280',
-  s.image_attribution = 'Pere prlpz (CC BY-SA 2.5) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Poales',
-  s.taxon_family = 'Poaceae',
-  s.taxon_genus = 'Brachypodium',
+  s.taxon_class = 'Aves',
+  s.taxon_order = NULL,
+  s.taxon_family = NULL,
+  s.taxon_genus = 'Oenanthe',
   s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Brachypodium retusum';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Lechetrezna de playa',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Dunas móviles embrionarias',
-  s.description = 'Lechetrezna perenne, glauca y de hojas carnosas imbricadas, propia de la primera línea de playa y las dunas embrionarias; exuda un látex blanco irritante.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas carnosas imbricadas
-Látex blanco irritante (no manipular)
-Porte erecto glauco',
-  s.seasonality = 'Primavera a otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Euphorbe_maritime_en_Baie_d''Authie.jpg?width=1280',
-  s.image_attribution = 'JackyM59 (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Malpighiales',
-  s.taxon_family = 'Euphorbiaceae',
-  s.taxon_genus = 'Euphorbia',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Euphorbia paralias';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Lechuguilla lanosa',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Matorral árido y bordes de rambla',
-  s.description = 'Compuesta de aspecto blanquecino por la lana que cubre tallos y hojas, con una roseta basal y capítulos amarillos tipo diente de león. Suelta látex blanco al romperse. Es una planta iberoafricana ligada a los ambientes más áridos.',
-  s.description_source = NULL,
-  s.identification_tips = 'Lana blanca cubriendo tallos y base de las hojas
-Capítulos amarillos tipo diente de león
-Látex blanco al partir un tallo',
-  s.seasonality = 'Primavera-verano',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/627205605/original.jpg',
-  s.image_attribution = 'Olivier Argagnon (CC BY 4.0) · GBIF/iNaturalist',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Asterales',
-  s.taxon_family = 'Asteraceae',
-  s.taxon_genus = 'Launaea',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Launaea lanifera';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Lentisco',
-  s.kingdom = 'flora',
-  s.family = 'Arbusto',
-  s.primary_habitat = 'Matorral mediterráneo litoral',
-  s.description = 'Arbusto perennifolio de hojas compuestas sin foliolo terminal y con el raquis alado, un detalle que lo separa de la cornicabra. Al frotarlo huele intensamente a resina. Sus frutos, en racimo, pasan de rojo a negro y son alimento clave para aves en otoño.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hoja compuesta con número par de foliolos, sin uno terminal
-Raquis de la hoja con dos alas laterales
-Olor fuerte a resina al frotar las hojas',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pistacia_lentiscus.jpg?width=1280',
-  s.image_attribution = 'Lumbar~commonswiki (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Sapindales',
-  s.taxon_family = 'Anacardiaceae',
-  s.taxon_genus = 'Pistacia',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada (especie común mediterránea)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Pistacia lentiscus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Leucanto litoral',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Fisuras y repisas de roquedos calizos, sobre todo en umbrías',
-  s.description = 'Margarita rupícola de hojas carnosas y recortadas que crece agarrada a las grietas de la roca. Sus flores son las clásicas cabezuelas de centro amarillo y lígulas blancas. Es un endemismo del sureste ibérico y del norte de África, de área muy pequeña.',
-  s.description_source = NULL,
-  s.identification_tips = 'Crece en grietas de pared rocosa, no en el suelo
-Hojas algo carnosas y recortadas en dientes
-Cabezuelas blancas de centro amarillo, solitarias',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/614232981/original.jpg',
-  s.image_attribution = 'faluke (CC BY-NC 4.0) · iNaturalist/GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Asterales',
-  s.taxon_family = 'Asteraceae',
-  s.taxon_genus = 'Mauranthemum',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2010)',
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Mauranthemum decipiens';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Loeflingia',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Dunas con céspedes del Malcolmietalia',
-  s.description = 'Planta anual diminuta, de apenas unos centímetros, con hojas lineares terminadas en punta y estípulas membranosas. Sus flores son minúsculas y verdosas. Forma parte de los pastizales efímeros que aparecen sobre arenas tras las lluvias.',
-  s.description_source = NULL,
-  s.identification_tips = 'Planta de pocos centímetros, pegada al suelo
-Hojas lineares con estípulas blancas y membranosas
-Flores verdosas minúsculas, casi sin pétalos',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/622499178/original.jpg',
-  s.image_attribution = 'Augustin Soulard (CC BY 4.0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Caryophyllaceae',
-  s.taxon_genus = 'Loeflingia',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Loeflingia hispanica';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Manrubio negro',
-  s.kingdom = 'flora',
-  s.family = 'Mata aromática',
-  s.primary_habitat = 'Ribazos, taludes y matorral nitrificado en clima seco',
-  s.description = 'Mata de la familia de la menta, cubierta por completo de una pelusa blanca y áspera que le da aspecto grisáceo. Las flores, rosadas y agrupadas en verticilos alrededor del tallo, salen de un cáliz en forma de embudo con dientes. Al frotarla desprende un olor fuerte y poco agradable.',
-  s.description_source = NULL,
-  s.identification_tips = 'Toda la planta cubierta de pelusa blanca y áspera
-Flores en anillos alrededor del tallo cuadrado
-Olor fuerte y desagradable al frotar las hojas',
-  s.seasonality = 'Primavera y verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ballota_hirsuta_1_(Espagne).jpg?width=1280',
-  s.image_attribution = 'Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Lamiales',
-  s.taxon_family = 'Lamiaceae',
-  s.taxon_genus = 'Pseudodictamnus',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Pseudodictamnus hirsutus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Maresia',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Dunas con céspedes del Malcolmietalia',
-  s.description = 'Diminuto terófito de floración efímera primaveral, diagnóstico de los céspedes anuales sobre arenas dunares del Malcolmietalia; forma la asociación Loeflingio hispanicae-Maresietum nanae.',
-  s.description_source = NULL,
-  s.identification_tips = 'Planta anual diminuta
-Flores lilas o blanquecinas
-Solo visible en primavera lluviosa',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Maresia_nana_-_Yanalot_01.jpg?width=1280',
-  s.image_attribution = 'Zeynel Cebeci (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Brassicales',
-  s.taxon_family = 'Brassicaceae',
-  s.taxon_genus = 'Maresia',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Maresia nana';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Margarita de mar',
-  s.kingdom = 'flora',
-  s.family = 'Mata',
-  s.primary_habitat = 'Playas y dunas fósiles del litoral',
-  s.description = 'Mata que forma cojines sobre la roca litoral, con hojas espatuladas, carnosas y ásperas al tacto. Sus capítulos amarillos, casi sentados sobre el follaje, están rodeados de brácteas verdes que sobresalen entre las lígulas. Florece durante casi todo el año.',
-  s.description_source = NULL,
-  s.identification_tips = 'Cojines densos sobre roca costera
-Brácteas verdes asomando entre los pétalos amarillos
-Hojas espatuladas, carnosas y ásperas',
-  s.seasonality = 'Todo el año, floración prolongada',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Asteriscus_maritimus1.jpg?width=1280',
-  s.image_attribution = 'Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Asterales',
-  s.taxon_family = 'Asteraceae',
-  s.taxon_genus = 'Asteriscus',
-  s.iucn_global = 'NE (no evaluada a nivel global)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Asteriscus maritimus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Mata del vizque',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Ríos mediterráneos con Glaucium flavum',
-  s.description = 'Compuesta blanco-tomentosa de capítulos amarillos, pionera de gravas y arenas de rambla; extendida por toda la Región de Murcia.',
-  s.description_source = NULL,
-  s.identification_tips = 'Aspecto blanco-lanoso
-Capítulos amarillos
-Coloniza gravas removidas de cauce',
-  s.seasonality = 'Primavera a otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/114Andryala_ragusina.JPG?width=1280',
-  s.image_attribution = 'Ziegler175 Rose Ziegler (CC0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Asterales',
-  s.taxon_family = 'Asteraceae',
-  s.taxon_genus = 'Andryala',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Andryala ragusina';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Mata pulguera',
-  s.kingdom = 'flora',
-  s.family = 'Mata',
-  s.primary_habitat = 'Roquedos, muros, taludes y grietas soleadas',
-  s.description = 'Mata pequeña y leñosa en la base que crece agarrada a la roca y a los muros. Sus hojas son estrechas y blanquecinas por el envés. Las cabezuelas, solitarias sobre tallos largos y desnudos, están rodeadas de brácteas secas y pardas que persisten mucho tiempo.',
-  s.description_source = NULL,
-  s.identification_tips = 'Cabezuelas pardas y secas al final de tallos largos y pelados
-Hojas estrechas, verdes arriba y blancas por debajo
-Casi siempre sobre roca, muro o talud',
-  s.seasonality = 'Primavera y verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Phagnalon_saxatile.JPG?width=1280',
-  s.image_attribution = 'Xemenendura (CC BY 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Asterales',
-  s.taxon_family = 'Asteraceae',
-  s.taxon_genus = 'Phagnalon',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Phagnalon saxatile';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Melica menor',
-  s.kingdom = 'flora',
-  s.family = 'Gramínea',
-  s.primary_habitat = 'Grietas de roquedos calizos, cornisas y pies de cantil sombreados',
-  s.description = 'Gramínea perenne y grácil que crece en repisas y fisuras de roca, formando matas laxas de hojas finas. Su inflorescencia es una panícula abierta y ligera, con espiguillas nacaradas que brillan a contraluz. Es una de las pocas gramíneas que prospera en pared vertical.',
-  s.description_source = NULL,
-  s.identification_tips = 'Panícula muy laxa, casi transparente al trasluz
-Espiguillas brillantes y algo nacaradas
-Crece en grietas de roca, colgando de la pared',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/626575126/original.jpg',
-  s.image_attribution = 'Piermario Maculan (CC0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Poales',
-  s.taxon_family = 'Poaceae',
-  s.taxon_genus = 'Melica',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Melica minuta';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Olivarda',
-  s.kingdom = 'flora',
-  s.family = 'Mata',
-  s.primary_habitat = 'Cunetas, taludes, ramblas y suelos removidos',
-  s.description = 'Mata pegajosa y de olor penetrante que florece cuando casi todo lo demás está seco, cubriéndose de cabezuelas amarillas a finales de verano. Esa floración tardía la convierte en un refugio clave para insectos. Sus hojas dejan las manos resinosas al tocarlas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas pegajosas y aromáticas al tacto
-Florece amarillo en pleno final de verano y otoño
-Abundante en cunetas y terrenos alterados',
-  s.seasonality = 'Verano y otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Inula_viscosa_flowers.jpg?width=1280',
-  s.image_attribution = 'No machine-readable author provided. Rickjpelleg assumed (based on … (CC BY 2.5) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Asterales',
-  s.taxon_family = 'Asteraceae',
-  s.taxon_genus = 'Dittrichia',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Dittrichia viscosa';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Orejilla de roca',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Roquedos y fisuras calcáreas costeras',
-  s.description = 'Planta rupícola de hojas redondeadas, dentadas y algo carnosas, que forma matas colgantes en las paredes calizas. Sus flores, blanquecinas con toques amarillos, se agrupan en racimos erguidos. Es un endemismo iberoafricano restringido al sureste peninsular y al norte de África.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas redondas y dentadas, casi como monedas
-Racimos de flores blanquecinas erguidos sobre el follaje
-Forma matas colgantes en pared caliza',
-  s.seasonality = 'Floración primaveral',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lafuentea_rotundifolia80857.jpg?width=1280',
-  s.image_attribution = 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Lamiales',
-  s.taxon_family = 'Plantaginaceae',
-  s.taxon_genus = 'Lafuentea',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Lafuentea rotundifolia';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Orgaza',
-  s.kingdom = 'flora',
-  s.family = 'Arbusto',
-  s.primary_habitat = 'Suelos salinos y nitrificados, ramblas y bordes de saladar',
-  s.description = 'Arbusto de color gris plateado, cubierto de escamas microscópicas que reflejan la luz y ayudan a expulsar sal. Sus hojas son de forma romboidal y algo carnosas. Aguanta suelos que casi ninguna otra planta tolera, por lo que se usa para restaurar terrenos degradados.',
-  s.description_source = NULL,
-  s.identification_tips = 'Follaje gris plateado, harinoso al tacto
-Hojas con forma de rombo o de punta de flecha
-Frutos rodeados de dos valvas membranosas',
-  s.seasonality = 'Verano y otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Atriplex_halimus_kz1.JPG?width=1280',
-  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Amaranthaceae',
-  s.taxon_genus = 'Atriplex',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Atriplex halimus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Oroval',
-  s.kingdom = 'flora',
-  s.family = 'Arbusto',
-  s.primary_habitat = 'Matorral cálido, roquedos y ramblas de clima muy seco',
-  s.description = 'Arbusto de la familia del tomate y la belladona, con hojas ovaladas algo carnosas y flores verdosas discretas. Los frutos son bayas rojas y brillantes envueltas en el cáliz. Es una especie de raíz norteafricana que en la península solo vive en los rincones más cálidos del sureste.',
-  s.description_source = NULL,
-  s.identification_tips = 'Bayas rojas pequeñas asomando del cáliz
-Hojas ovales, algo carnosas y de verde apagado
-Flores verde amarillentas, poco vistosas',
-  s.seasonality = 'Primavera y otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Withania_frutescens0176.jpg?width=1280',
-  s.image_attribution = 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Solanales',
-  s.taxon_family = 'Solanaceae',
-  s.taxon_genus = 'Withania',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE; elemento iberoafricano de interés biogeográfico',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Withania frutescens';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Orzaga marina',
-  s.kingdom = 'flora',
-  s.family = 'Mata',
-  s.primary_habitat = 'Saladares y marismas, en la franja que la marea o la escorrentía encharca',
-  s.description = 'Mata tendida de hojas opuestas, carnosas y de un gris azulado inconfundible, que forma alfombras en el borde de los saladares. Marca con bastante precisión la zona que se encharca con agua salada. Sus flores son diminutas y de color pardo dorado.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas opuestas, carnosas y de gris azulado
-Porte tendido, formando manchas continuas
-Siempre en el borde encharcable del saladar',
-  s.seasonality = 'Verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sea_Purslane.jpg?width=1280',
-  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Amaranthaceae',
-  s.taxon_genus = 'Atriplex',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Atriplex portulacoides';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Palmito',
-  s.kingdom = 'flora',
-  s.family = 'Palmera',
-  s.primary_habitat = 'Matorral cálido, laderas soleadas y acantilados del piso termomediterráneo',
-  s.description = 'La única palmera silvestre de Europa continental. Suele crecer en mata, con varios troncos cortos, aunque con los años puede levantar un tronco único. Sus hojas son abanicos rígidos con pecíolos muy espinosos. Del cogollo se sacaba el «palmito», y de las hojas, cordelería y escobas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas en abanico, rígidas y divididas en segmentos
-Pecíolos con espinas fuertes en los bordes
-Porte en mata, con varios troncos desde la base',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chamaerops_humilis_Torreblanca.jpg?width=1280',
-  s.image_attribution = 'Canaan (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Arecales',
-  s.taxon_family = 'Arecaceae',
-  s.taxon_genus = 'Chamaerops',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Chamaerops humilis';
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Oenanthe hispanica';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Papamoscas gris',
@@ -6111,604 +5540,79 @@ Frente y pecho con un rayado fino y difuso',
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Muscicapa striata';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Pino carrasco',
-  s.kingdom = 'flora',
-  s.family = 'Conífera',
-  s.primary_habitat = 'Laderas secas y soleadas sobre calizas y margas, en clima mediterráneo cálido',
-  s.description = 'Pino de copa clara e irregular y follaje de un verde pálido, el más resistente a la sequía y a los suelos pobres de los pinos ibéricos. Sus piñas, alargadas y asimétricas, quedan colgadas años en la rama y liberan las semillas tras los incendios, lo que le permite recolonizar rápido.',
-  s.description_source = NULL,
-  s.identification_tips = 'Copa irregular y poco densa, de verde claro
-Piñas asimétricas y persistentes, apuntando hacia atrás
-Corteza clara y agrietada, rojiza en las ramas jóvenes',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pino_secolare_-_Castelleone_di_Suasa.JPG?width=1280',
-  s.image_attribution = 'Accurimbono (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Pinopsida',
-  s.taxon_order = 'Pinales',
-  s.taxon_family = 'Pinaceae',
-  s.taxon_genus = 'Pinus',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada (especie forestal común)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Pinus halepensis';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Rabogato',
-  s.kingdom = 'flora',
-  s.family = 'Mata aromática',
-  s.primary_habitat = 'Tomillares y matorral raso sobre margas y suelos yesosos',
-  s.description = 'Rabogato endémico del sureste ibérico, de tallos blanquecinos y lanudos y flores amarillentas dispuestas en verticilos a lo largo de la espiga. Bajo cada grupo de flores hay brácteas anchas y punzantes que persisten secas mucho tiempo.',
-  s.description_source = NULL,
-  s.identification_tips = 'Tallos y hojas cubiertos de pelusa blanca
-Flores amarillentas en anillos separados a lo largo del tallo
-Brácteas anchas y punzantes bajo cada verticilo',
-  s.seasonality = 'Primavera-verano',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/616107243/original.jpg',
-  s.image_attribution = 'Ben Jobson (CC BY 4.0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Lamiales',
-  s.taxon_family = 'Lamiaceae',
-  s.taxon_genus = 'Sideritis',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008 con este nombre',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Sideritis ibanyezii';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Romerina',
-  s.kingdom = 'flora',
-  s.family = 'Mata',
-  s.primary_habitat = 'Tomillares y matorral seco sobre calizas y margas',
-  s.description = 'Jara pequeña de hojas muy estrechas y enrolladas por los bordes, verdes arriba y blancas por debajo, que a distancia recuerdan al romero. Se distingue enseguida al florecer: da grupos de flores blancas de cinco pétalos, mucho mayores que las del romero.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas estrechas enrolladas, blancas por el envés
-Flores blancas de cinco pétalos, varias juntas
-Sin el olor a romero, aunque se le parezca de lejos',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_clusii_(habitus).jpg?width=1280',
-  s.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Malvales',
-  s.taxon_family = 'Cistaceae',
-  s.taxon_genus = 'Cistus',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Cistus clusii';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Romero',
-  s.kingdom = 'flora',
-  s.family = 'Mata aromática',
-  s.primary_habitat = 'Matorral seco y soleado sobre suelos calizos y pedregosos',
-  s.description = 'Arbusto aromático de hojas estrechas como agujas, verde oscuro por el haz y blanquecinas por el envés, con los bordes enrollados hacia abajo. Florece casi todo el año en azul pálido, y en pleno invierno es una de las pocas fuentes de néctar del matorral.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas como agujas, blancas por debajo
-Olor inconfundible al frotar entre los dedos
-Flores azul claro repartidas por las ramas casi todo el año',
-  s.seasonality = 'Todo el año, con máximo de floración en invierno y primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rosemary_in_bloom.JPG?width=1280',
-  s.image_attribution = 'Margalob (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Lamiales',
-  s.taxon_family = 'Lamiaceae',
-  s.taxon_genus = 'Rosmarinus',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Rosmarinus officinalis';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Rugueta de mar',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Arena suelta de la primera línea de playa, sobre restos orgánicos del mar',
-  s.description = 'Crucífera anual y carnosa que coloniza la arena batida donde el mar deposita algas. Sus hojas son gruesas y recortadas y sus flores, lilas o blancas, tienen los cuatro pétalos en cruz de la familia. El fruto se parte en dos: una mitad queda en la planta y la otra flota y viaja por mar.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas carnosas y recortadas, algo azuladas
-Flores lilas o blancas de cuatro pétalos en cruz
-Frutos duros en dos piezas, como pequeños barrilitos',
-  s.seasonality = 'Primavera a otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cakile-maritima-(eurMeersenf)_1.jpg?width=1280',
-  s.image_attribution = 'Jürgen Howaldt (CC BY-SA 2.0 de) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Brassicales',
-  s.taxon_family = 'Brassicaceae',
-  s.taxon_genus = 'Cakile',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Cakile maritima';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Sabina negral',
-  s.kingdom = 'flora',
-  s.family = 'Conífera',
-  s.primary_habitat = 'Roquedos, arenales, acantilados y crestas ventosas sobre suelos pobres',
-  s.description = 'Sabina de hojas diminutas en forma de escama, pegadas a la ramilla, que dan a las ramas un aspecto de cordón redondeado. Aguanta viento, sequía y salinidad como pocas plantas leñosas. Sus gálbulos —los falsos frutos— maduran de verde a un rojo pardusco en dos años.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas en escama pegadas a la rama, no punzantes
-Ramillas cilíndricas, como cordones
-Gálbulos redondos que pasan de verde a pardo rojizo',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_phoenicea1.jpg?width=1280',
-  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Pinopsida',
-  s.taxon_order = 'Pinales',
-  s.taxon_family = 'Cupressaceae',
-  s.taxon_genus = 'Juniperus',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Juniperus phoenicea';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Sapo corredor',
-  s.kingdom = 'fauna',
-  s.family = 'Anfibio',
-  s.primary_habitat = 'Ramblas y zonas húmedas estacionales',
-  s.description = 'Sapo de patas cortas que corre en vez de saltar, con una línea amarilla nítida a lo largo del centro del lomo. Se reproduce en charcas efímeras que se llenan con las lluvias, y los machos forman coros de un canto vibrante y estridente que se oye a kilómetros.',
-  s.description_source = NULL,
-  s.identification_tips = 'Raya amarilla continua por el centro del lomo
-Corre a cuatro patas en vez de saltar
-Canto nocturno vibrante y muy sonoro tras las lluvias',
-  s.seasonality = 'Otoño e invierno lluviosos',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Epidalea_calamita_02_by-dpc.jpg?width=1280',
-  s.image_attribution = 'David Perez (CC BY 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Amphibia',
-  s.taxon_order = 'Anura',
-  s.taxon_family = 'Bufonidae',
-  s.taxon_genus = 'Epidalea',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE; Directiva Hábitats 92/43/CEE, Anexo IV',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Epidalea calamita';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Sedo de hojas gruesas',
-  s.kingdom = 'flora',
-  s.family = 'Planta suculenta',
-  s.primary_habitat = 'Prados calcáreos del Alysso-Sedion albi',
-  s.description = 'Crasulácea diminuta de hojas gruesas, casi esféricas y de un gris azulado, dispuestas de dos en dos y cubiertas de pelillos glandulosos que la hacen pegajosa. Forma almohadillas en grietas y muros y da flores blancas con venas rosadas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas casi esféricas, opuestas y de gris azulado
-Tacto pegajoso por los pelillos glandulosos
-Flores blancas con finas venas rosadas',
-  s.seasonality = 'Verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sedum_dasyphyllum_(1)_6.jpg?width=1280',
-  s.image_attribution = 'Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Saxifragales',
-  s.taxon_family = 'Crassulaceae',
-  s.taxon_genus = 'Sedum',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Sedum dasyphyllum';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Senecio flavus',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Ramblas, arenales y suelos removidos de clima árido',
-  s.description = 'Hierba anual de hojas carnosas y algo azuladas, con cabezuelas amarillas cuyas lígulas se enrollan hacia atrás al abrirse. Es una planta de estirpe sahariana que en Europa solo aparece en los rincones más áridos del sureste ibérico, tras las lluvias.',
-  s.description_source = NULL,
-  s.identification_tips = 'Lígulas amarillas enrolladas hacia atrás
-Hojas carnosas y de verde azulado
-Aparece en masa tras las lluvias y desaparece pronto',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Senecio_flavus_1.jpg?width=1280',
-  s.image_attribution = 'Gideon Pisanty (Gidip) גדעון פיזנטי (CC BY 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Asterales',
-  s.taxon_family = 'Asteraceae',
-  s.taxon_genus = 'Senecio',
-  s.iucn_global = 'NE',
-  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2010)',
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Senecio flavus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Serrátula',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Matorral y pastizales secos',
-  s.description = 'Compuesta de tallos erguidos y hojas de borde aserrado con cada diente rematado en una punta rígida. Sus capítulos, purpúreos y sin lígulas, recuerdan a un cardo sin espinas. Es una planta escasa y de distribución fragmentada.',
-  s.description_source = NULL,
-  s.identification_tips = 'Capítulos purpúreos sin pétalos radiales, como pinceles
-Hojas aserradas con la punta de cada diente rígida
-Tallos erguidos y poco ramificados',
-  s.seasonality = 'Verano y otoño',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/411165247/original.jpeg',
-  s.image_attribution = 'Maël Taupin (CC BY-NC 4.0) · iNaturalist/GBIF, obs. Murcia',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Asterales',
-  s.taxon_family = 'Asteraceae',
-  s.taxon_genus = 'Serratula',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Serratula mucronata';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Siempreviva de Cosson',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Saladares, acantilados costeros y suelos salinos margosos',
-  s.description = 'Siempreviva de roseta basal de hojas espatuladas y tallos ramificados que sostienen espiguillas de flores diminutas de color lila. Los cálices secos y papiráceos permanecen en la planta hasta el invierno siguiente, dando al saladar un tono pajizo persistente.',
-  s.description_source = NULL,
-  s.identification_tips = 'Roseta basal de hojas anchas y espatuladas
-Ramificación en zigzag, muy abierta
-Cálices secos que persisten meses tras florecer',
-  s.seasonality = 'Verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_cossonianum.jpg?width=1280',
-  s.image_attribution = 'Nanosanchez (CC0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Plumbaginaceae',
-  s.taxon_genus = 'Limonium',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Limonium cossonianum';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Siempreviva de saladar',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Saladares, estepas salinas y suelos margosos con sal',
-  s.description = 'Siempreviva de saladar con una roseta basal de hojas en la base y tallos muy ramificados que sostienen espiguillas de flores diminutas. Los pétalos son lilas o blanquecinos y el cáliz, seco y papiráceo, aguanta meses en la planta: de ahí el nombre de «siempreviva».',
-  s.description_source = NULL,
-  s.identification_tips = 'Roseta de hojas en la base y tallos ramificados desnudos
-Flores diminutas en espiguillas de un solo lado
-El cáliz seco persiste mucho después de la floración',
-  s.seasonality = 'Verano',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/476031749/original.jpeg',
-  s.image_attribution = 'Christoph Moning (CC BY 4.0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Plumbaginaceae',
-  s.taxon_genus = 'Limonium',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Limonium delicatulum';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Siempreviva insigne',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Suelos margosos y yesosos salinos, en estepas y taludes áridos',
-  s.description = 'Una de las siemprevivas más vistosas: sus inflorescencias forman un ramillete denso de un lila rosado intenso que destaca sobre el gris de las margas. Es un endemismo del sureste ibérico, ligado a suelos salinos y yesosos, y muy usado en seco como flor ornamental.',
-  s.description_source = NULL,
-  s.identification_tips = 'Floración densa y de lila rosado vivo, muy llamativa
-Hojas en roseta basal, gruesas y de borde ondulado
-Sobre margas y yesos claros, en terreno casi desnudo',
-  s.seasonality = 'Final de primavera y verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_insigne.jpg?width=1280',
-  s.image_attribution = 'ANE (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Plumbaginaceae',
-  s.taxon_genus = 'Limonium',
-  s.iucn_global = 'NE (no evaluada a nivel global; género con numerosos microendemismos ibéricos)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Limonium insigne';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Sisallo',
-  s.kingdom = 'flora',
-  s.family = 'Mata',
-  s.primary_habitat = 'Suelos salinos y nitrificados, ramblas, majadas y bordes de camino',
-  s.description = 'Mata muy ramificada de hojas cortas, gruesas y algo peludas que en verano se vuelven grisáceas. Es de las mejores indicadoras de suelos con sal y con exceso de nitrógeno, como los antiguos apriscos de ganado. Al fructificar, cada semilla se rodea de alas membranosas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojitas cortas, gruesas y con pelusa
-Frutos con alas membranosas rosadas o pajizas
-Aparece donde ha habido ganado o remoción del suelo',
-  s.seasonality = 'Verano y otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Salsola_vermiculata.jpg?width=1280',
-  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Amaranthaceae',
-  s.taxon_genus = 'Caroxylon',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Caroxylon vermiculatum';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Sosa alacranera',
-  s.kingdom = 'flora',
-  s.family = 'Planta suculenta',
-  s.primary_habitat = 'Saladares y marismas con encharcamiento salino prolongado',
-  s.description = 'Planta sin hojas aparentes: sus tallos son cilíndricos, carnosos y divididos en segmentos que parecen articulaciones. Vive donde la sal se acumula y en otoño se tiñe de tonos rojizos y anaranjados que cambian el color de todo el saladar.',
-  s.description_source = NULL,
-  s.identification_tips = 'Tallos carnosos articulados, como collares de cuentas
-Sin hojas visibles
-Vira a rojo y naranja en otoño',
-  s.seasonality = 'Verano y otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Arthrocnemum_macrostachyum_2LaMata.jpg?width=1280',
-  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Amaranthaceae',
-  s.taxon_genus = 'Arthrocaulon',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Arthrocaulon macrostachyum';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Sosa fina',
-  s.kingdom = 'flora',
-  s.family = 'Mata',
-  s.primary_habitat = 'Bordes de saladar y suelos salinos algo más secos y elevados',
-  s.description = 'Mata leñosa de hojas carnosas, cilíndricas y de un verde azulado, que ocupa la orla algo más alta y seca del saladar. Se diferencia de sus vecinas en que sí tiene hojas bien visibles y no tallos articulados. Sus flores son minúsculas y verdosas, en las axilas de las hojas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas carnosas y cilíndricas, verde azuladas
-Base leñosa y ramificada, no herbácea
-En la parte más seca y alta del saladar',
-  s.seasonality = 'Verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Suaeda_vera.JPG?width=1280',
-  s.image_attribution = 'Xemenendura (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Amaranthaceae',
-  s.taxon_genus = 'Suaeda',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Suaeda vera';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Sosa jabonera',
-  s.kingdom = 'flora',
-  s.family = 'Planta suculenta',
-  s.primary_habitat = 'Saladares con encharcamiento salino frecuente',
-  s.description = 'Planta de tallos suculentos y articulados, de base leñosa y porte erguido, que forma matas densas en el saladar. Como su parienta la sosa alacranera, es difícil de separar a simple vista: la clave está en el porte y en la longitud de los segmentos. En otoño toma tonos rojizos.',
-  s.description_source = NULL,
-  s.identification_tips = 'Tallos verdes articulados, erguidos y ramificados
-Base leñosa, no herbácea
-Cambia a tonos rojizos al final del verano',
-  s.seasonality = 'Verano y otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sarcocornia_fruticosa.jpg?width=1280',
-  s.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Amaranthaceae',
-  s.taxon_genus = 'Sarcocornia',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Sarcocornia fruticosa';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Tarabilla europea',
+  s.common_name = 'Chova piquirroja',
   s.kingdom = 'fauna',
   s.family = 'Ave',
-  s.primary_habitat = 'Matorral bajo, herbazales, ribazos y bordes de cultivo con posaderos',
-  s.description = 'Pájaro pequeño y regordete que se posa en lo alto de las matas, muy erguido y a la vista, para lanzarse al suelo a por insectos. El macho tiene la cabeza negra, un collar blanco a los lados y el pecho naranja. Su reclamo suena como dos piedras golpeadas, de donde le viene el nombre.',
+  s.primary_habitat = 'Cortados rocosos, cantiles y montañas, alimentándose en pastizales cercanos',
+  s.description = 'Córvido negro y brillante con el pico rojo, largo y curvo, y las patas del mismo color encendido. Vuela en grupos acrobáticos junto a los cantiles, plegando las alas y dejándose caer por puro juego. Busca larvas hurgando en el suelo de los pastos con ese pico de sonda.',
   s.description_source = NULL,
-  s.identification_tips = 'Siempre en lo alto de una mata, bien visible
-Macho con capucha negra y medio collar blanco
-Reclamo como el chasquido de dos cantos rodados',
+  s.identification_tips = 'Pico rojo, largo y curvado hacia abajo
+Reclamo agudo, un «chiaa» nasal muy característico
+Plumas de la punta del ala muy separadas, como dedos',
   s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Malestonechatseaham_Cropped.jpg?width=1280',
-  s.image_attribution = 'derivative work: Myosotis Scorpioides (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = 'Passeriformes',
-  s.taxon_family = 'Muscicapidae',
-  s.taxon_genus = 'Saxicola',
-  s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Saxicola rubicola';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Taray',
-  s.kingdom = 'flora',
-  s.family = 'Árbol',
-  s.primary_habitat = 'Saladar junto a la playa del Sombrerico',
-  s.description = 'Arbusto o arbolillo que forma los bosquetes de taray de mayor biomasa de la zona, como el rodal junto a la playa del Sombrerico.',
-  s.description_source = NULL,
-  s.identification_tips = 'Ramas finas y flexibles
-Flores rosadas en espigas
-Forma bosquetes junto a saladares',
-  s.seasonality = 'Primavera-verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tamarix_africana.jpg?width=1280',
-  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Tamaricaceae',
-  s.taxon_genus = 'Tamarix',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Tamarix africana';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Tejón',
-  s.kingdom = 'fauna',
-  s.family = 'Mamífero carnívoro',
-  s.primary_habitat = 'Bosque, matorral y ribazos con suelo blando para excavar tejoneras',
-  s.description = 'Mustélido corpulento y de patas cortas, con la cabeza blanca cruzada por dos bandas negras que pasan por los ojos. Excava madrigueras complejas —las tejoneras— que una misma familia amplía y usa durante generaciones. Es omnívoro y muy aficionado a las lombrices.',
-  s.description_source = NULL,
-  s.identification_tips = 'Cabeza blanca con dos franjas negras longitudinales
-Tejoneras: varias bocas grandes con montones de tierra
-Letrinas en hoyos poco profundos cerca de la madriguera',
-  s.seasonality = 'Todo el año (actividad nocturna)',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Badger-badger.jpg?width=1280',
-  s.image_attribution = 'BadgerHero (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Mammalia',
-  s.taxon_order = 'Carnivora',
-  s.taxon_family = 'Mustelidae',
-  s.taxon_genus = 'Meles',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
-  s.spain_status = 'No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Meles meles';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Terrera común',
-  s.kingdom = 'fauna',
-  s.family = 'Ave esteparia',
-  s.primary_habitat = 'Llanos de cultivo, eriales y pastizales rasos con suelo desnudo',
-  s.description = 'Alondra pequeña y pálida de aspecto muy limpio, con el pecho sin apenas rayado salvo una mancha oscura a cada lado del cuello. Anida en el suelo, en cultivos y baldíos. En migración se agrupa en bandos que se levantan del suelo todos a la vez.',
-  s.description_source = NULL,
-  s.identification_tips = 'Mancha oscura a cada lado del cuello, como un botón
-Pecho limpio, sin rayado extenso
-Ceja clara y pico corto y grueso de granívora',
-  s.seasonality = 'Primavera y verano (estival)',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alondra.jpg?width=1280',
-  s.image_attribution = 'Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Aves',
-  s.taxon_order = 'Passeriformes',
-  s.taxon_family = 'Alaudidae',
-  s.taxon_genus = 'Calandrella',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Calandrella brachydactyla';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Teucrio de Freyn',
-  s.kingdom = 'flora',
-  s.family = 'Mata aromática',
-  s.primary_habitat = 'Roquedos, pedregales y ramblas sobre suelos calizos secos',
-  s.description = 'Teucrio endémico del sureste ibérico, de porte bajo y aspecto blanquecino, con hojas pequeñas y enrolladas y flores rosadas o blanquecinas sin labio superior. Como todas las labiadas, tiene el tallo de sección cuadrada y desprende aroma al frotarlo.',
-  s.description_source = NULL,
-  s.identification_tips = 'Flores sin labio superior, con los estambres asomando
-Tallo de sección cuadrada, típico de labiada
-Hojas pequeñas y enrolladas, de aspecto grisáceo',
-  s.seasonality = 'Primavera-verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_freynii_kz01.jpg?width=1280',
-  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Lamiales',
-  s.taxon_family = 'Lamiaceae',
-  s.taxon_genus = 'Teucrium',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Teucrium freynii';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Tomillo de invierno',
-  s.kingdom = 'flora',
-  s.family = 'Mata aromática',
-  s.primary_habitat = 'Tomillares y matorral raso sobre suelos calizos y margosos secos',
-  s.description = 'Tomillo del sureste ibérico que florece en pleno invierno, cuando casi nada más lo hace, cubriéndose de espigas de flores blancas o rosadas. Ese calendario lo convierte en un recurso decisivo para los insectos en la estación fría y en una planta melífera muy apreciada.',
-  s.description_source = NULL,
-  s.identification_tips = 'Florece en invierno, adelantándose al resto del tomillar
-Hojas pequeñas con el borde enrollado hacia abajo
-Aroma fuerte a tomillo al frotar entre los dedos',
-  s.seasonality = 'Todo el año, con floración de invierno a primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Thymus_hyemalis_re.jpg?width=1280',
-  s.image_attribution = 'Retama (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Lamiales',
-  s.taxon_family = 'Lamiaceae',
-  s.taxon_genus = 'Thymus',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Thymus hyemalis';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Torcecuello euroasiático',
-  s.kingdom = 'fauna',
-  s.family = 'Ave',
-  s.primary_habitat = 'Bosques abiertos, sotos, huertos y arboledas con madera muerta',
-  s.description = 'Pariente de los pájaros carpinteros que ni pica la madera ni trepa por los troncos: se posa de través en las ramas y come hormigas del suelo con una lengua larguísima. Su plumaje jaspeado en grises y pardos imita la corteza. Si se le molesta en el nido, retuerce el cuello como una culebra, de ahí su nombre.',
-  s.description_source = NULL,
-  s.identification_tips = 'Plumaje veteado como corteza, difícil de ver quieto
-Se posa a lo largo de la rama, no agarrado al tronco
-Franja oscura desde la nuca hasta la mitad de la espalda',
-  s.seasonality = 'Paso migratorio e invernada',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Jinxtorquilla.jpg?width=1280',
-  s.image_attribution = 'User:Aelwyn (CC BY-SA 3.0) · Wikimedia Commons',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pyrrhocorax_pyrrhocorax_-standing-8.jpg?width=1280',
+  s.image_attribution = 'File:Alpenkrähe.jpg: "Malte Uhl (User:Zzzip)" derivative work: Snow… (CC BY-SA 2.5) · Wikimedia Commons',
   s.taxon_phylum = 'Chordata',
   s.taxon_class = 'Aves',
   s.taxon_order = NULL,
   s.taxon_family = NULL,
-  s.taxon_genus = 'Jynx',
+  s.taxon_genus = 'Pyrrhocorax',
   s.iucn_global = 'LC (Preocupación menor)',
-  s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Pyrrhocorax pyrrhocorax';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chotacabras cuellirrojo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral abierto, pinares aclarados, ramblas y caminos térreos',
+  s.description = 'Ave crepuscular de plumaje jaspeado que imita la hojarasca, tan mimético que de día resulta casi imposible verla posada en el suelo. Caza polillas en vuelo con la boca muy abierta. Su canto nocturno es un «cu-toc, cu-toc» repetido de forma monótona durante minutos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Collar rojizo en la nuca, más marcado que en su pariente europeo
+Se levanta del camino al anochecer y vuelve a posarse unos metros más allá
+Canto nocturno monótono, como un motor lejano',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Caprimulgus_ruficollis_-Portugal-8.jpg?width=1280',
+  s.image_attribution = 'Olivença (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = NULL,
+  s.taxon_family = NULL,
+  s.taxon_genus = 'Caprimulgus',
+  s.iucn_global = 'NT (Casi amenazado)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
   s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Jynx torquilla';
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Caprimulgus ruficollis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila real',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Montañas y sierras con cortados rocosos y amplias zonas abiertas de caza',
+  s.description = 'La mayor de las águilas ibéricas, con casi dos metros y medio de envergadura y una nuca dorada que le da nombre. Cría en repisas de cantiles y usa territorios enormes, que una pareja defiende durante años. Planea con las alas en una «V» muy suave y bate poco, lo que la distingue de las rapaces menores.',
+  s.description_source = NULL,
+  s.identification_tips = 'Nuca y cogote de tono dorado, visibles a buena luz
+Planea con las alas en «V» muy abierta y bate poco
+Tamaño enorme: dobla al ratonero en el mismo cielo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Maakotka_(Aquila_chrysaetos)_by_Jarkko_J%C3%A4rvinen.jpg?width=1280',
+  s.image_attribution = 'Jarkko Järvinen (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = NULL,
+  s.taxon_family = NULL,
+  s.taxon_genus = 'Aquila',
+  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Aquila chrysaetos';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Tórtola europea',
@@ -6736,104 +5640,204 @@ Arrullo ronco y vibrante, muy distinto al de la tórtola turca',
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Streptopelia turtur';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Treparriscos',
+  s.common_name = 'Carraca europea',
   s.kingdom = 'fauna',
   s.family = 'Ave',
-  s.primary_habitat = 'Paredes rocosas, cantiles y barrancos; en invierno baja a roquedos y edificios',
-  s.description = 'Pájaro de alta montaña que trepa por paredes verticales agitando las alas como una mariposa gigante, mostrando unos vistosos paneles rojos. Extrae insectos de las grietas con un pico largo y fino. En invierno desciende y puede aparecer en cortados bajos, castillos y presas.',
+  s.primary_habitat = 'Campos abiertos con arbolado disperso, ribazos y construcciones con huecos',
+  s.description = 'Del tamaño de una paloma y de un azul turquesa intenso que sorprende al levantar el vuelo. Caza al acecho desde cables y postes, dejándose caer sobre saltamontes y escarabajos. Cría en huecos de árboles viejos y de edificios, de ahí que dependa de que queden árboles añosos y ruinas en el campo.',
   s.description_source = NULL,
-  s.identification_tips = 'Manchas rojo carmín en las alas al abrirlas
-Trepa por la roca a saltos, aleteando sin parar
-Pico largo, fino y algo curvado',
-  s.seasonality = 'Otoño e invierno fuera de la alta montaña',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tichodroma_muraria02_cropped.jpg?width=1280',
-  s.image_attribution = 'derivative work: Hämbörger (talk) Tichodroma_muraria02.jpg: User:Kulac (CC BY-SA 3.0) · Wikimedia Commons',
+  s.identification_tips = 'Azul turquesa que solo se aprecia bien cuando vuela
+Espalda de color canela que contrasta con el azul
+Posada quieta en cables, oteando el suelo',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/European_roller.jpg?width=1280',
+  s.image_attribution = 'Christian Svane (CC BY-SA 2.5) · Wikimedia Commons',
   s.taxon_phylum = 'Chordata',
   s.taxon_class = 'Aves',
   s.taxon_order = NULL,
   s.taxon_family = NULL,
-  s.taxon_genus = 'Tichodroma',
+  s.taxon_genus = 'Coracias',
+  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Coracias garrulus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebrera europea',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Sierras y llanos con matorral, ramblas y bosque abierto',
+  s.description = 'Águila grande y muy pálida por debajo, especializada en comer culebras y lagartos. Se ciñe en el aire durante largos ratos, con las patas colgando, escrutando el suelo antes de dejarse caer. La cabeza, ancha y con ojos amarillos muy frontales, le da un aire de lechuza.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vientre y alas casi blancos vistos desde abajo
+Se mantiene cerniéndose, algo raro en un águila tan grande
+Cabeza ancha y ojos amarillos, aspecto de búho',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_culebrera_(Circaetus_gallicus).jpg?width=1280',
+  s.image_attribution = 'Paco Gómez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = NULL,
+  s.taxon_family = NULL,
+  s.taxon_genus = 'Circaetus',
+  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Circaetus gallicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Torcecuello euroasiático',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Bosques abiertos, sotos, huertos y arboledas con madera muerta',
+  s.description = 'Pariente de los pájaros carpinteros que ni pica la madera ni trepa por los troncos: se posa de través en las ramas y come hormigas del suelo con una lengua larguísima. Su plumaje jaspeado en grises y pardos imita la corteza. Si se le molesta en el nido, retuerce el cuello como una culebra, de ahí su nombre.',
+  s.description_source = NULL,
+  s.identification_tips = 'Plumaje veteado como corteza, difícil de ver quieto
+Se posa a lo largo de la rama, no agarrado al tronco
+Franja oscura desde la nuca hasta la mitad de la espalda',
+  s.seasonality = 'Paso migratorio e invernada',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Jinxtorquilla.jpg?width=1280',
+  s.image_attribution = 'User:Aelwyn (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = NULL,
+  s.taxon_family = NULL,
+  s.taxon_genus = 'Jynx',
+  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Jynx torquilla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila calzada',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Bosques y sierras con arbolado, cazando sobre zonas abiertas cercanas',
+  s.description = 'Águila pequeña, del tamaño de un ratonero, con dos formas de plumaje muy distintas: una clara con el vientre blanco y otra oscura y uniforme. Nidifica en árboles dentro del bosque y caza en campo abierto lanzándose desde altura. Se identifica en vuelo por las «luces de posición»: dos manchas blancas en el arranque de las alas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dos manchas blancas donde el ala se une al cuerpo
+Existen ejemplares claros y oscuros de la misma especie
+Cola larga y recta, sin la muesca del milano',
+  s.seasonality = 'Primavera y verano (estival); algunos ejemplares invernan',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Booted_eagle%2C_Hieraaetus_pennatus%2C_at_Kgalagadi_Transfrontier_Pa_(32334023348).jpg?width=1280',
+  s.image_attribution = 'Derek Keats from Johannesburg, South Africa (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = NULL,
+  s.taxon_family = NULL,
+  s.taxon_genus = 'Hieraaetus',
+  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Hieraaetus pennatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Búho real',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz nocturna',
+  s.primary_habitat = 'Cortados rocosos, barrancos y laderas con matorral y zonas abiertas de caza',
+  s.description = 'El mayor búho de Europa, con casi dos metros de envergadura, penachos de plumas erguidos sobre la cabeza y ojos de un naranja encendido. Caza conejos, ratas e incluso otras rapaces. Su canto es un «bu-bo» profundo que se propaga kilómetros por los barrancos en las noches de invierno.',
+  s.description_source = NULL,
+  s.identification_tips = 'Penachos de plumas erguidos a los lados de la cabeza
+Ojos naranjas muy intensos
+Canto grave y profundo en las noches de invierno',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Bubo_bubo_sibiricus_-_01.JPG?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Strigiformes',
+  s.taxon_family = 'Strigidae',
+  s.taxon_genus = 'Bubo',
+  s.iucn_global = 'LC',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE; Directiva Aves 2009/147/CE, Anexo I; Reglamento CITES (CE) 338/97, Anexo A',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Bubo bubo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila perdicera',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Sierras con cortados rocosos y amplias zonas abiertas de matorral y cultivo para cazar',
+  s.description = 'Águila mediana de alas largas y cola larga, con el vientre blanco finamente rayado y una mancha blanca en la espalda que se ve bien en vuelo. Caza a gran velocidad y a poca altura, sorprendiendo a perdices, conejos y palomas. Las parejas ocupan el mismo cortado durante años.',
+  s.description_source = NULL,
+  s.identification_tips = 'Mancha blanca en el centro de la espalda, visible desde arriba
+Vientre claro y muy rayado, con una banda oscura en el borde del ala
+Vuelo bajo y rápido cuando caza, no en círculos altos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_perdicera.jpg?width=1280',
+  s.image_attribution = 'Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Accipitriformes',
+  s.taxon_family = 'Accipitridae',
+  s.taxon_genus = 'Aquila',
+  s.iucn_global = 'LC (población global amplia en Asia y África pese al declive europeo)',
+  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2004)',
+  s.spain_status = 'Catálogo Español de Especies Amenazadas: Vulnerable; Libro Rojo de las Aves de España (SEO/BirdLife, 2004/2021); Directiva Aves 2009/147/CE, Anexo I',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas: Vulnerable","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Aquila fasciata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Azor común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Bosques maduros y masas forestales densas con claros',
+  s.description = 'Rapaz forestal de alas cortas y anchas y cola larga, diseñada para perseguir presas entre los árboles a gran velocidad. Es esquiva y se ve casi siempre de refilón. La hembra llega a ser un tercio mayor que el macho, una diferencia poco habitual entre las aves.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ceja blanca marcada sobre el ojo, como un antifaz al revés
+Vuelo de varios aleteos rápidos seguidos de un planeo corto
+Pecho finamente rayado en horizontal en los adultos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Northern_Goshawk_ad_M2.jpg?width=1280',
+  s.image_attribution = 'Norbert Kenntner, Berlin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = NULL,
+  s.taxon_family = NULL,
+  s.taxon_genus = 'Accipiter',
   s.iucn_global = 'LC (Preocupación menor)',
   s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
   s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000)',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Tichodroma muraria';
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Accipiter gentilis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Uña de gato',
-  s.kingdom = 'flora',
-  s.family = 'Planta suculenta',
-  s.primary_habitat = 'Prados calcáreos del Alysso-Sedion albi',
-  s.description = 'Crasulácea perenne de hojas suculentas puntiagudas y flores amarillo-verdosas, muy extendida por Murcia en repisas rocosas y prados calcáreos; especie característica del hábitat prioritario.',
+  s.common_name = 'Calandria común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave esteparia',
+  s.primary_habitat = 'Llanos cerealistas, pastizales y estepas de suelo profundo',
+  s.description = 'La mayor de las alondras ibéricas, robusta y de pico grueso, con una mancha negra muy marcada a cada lado del cuello. Canta en vuelo, describiendo círculos altos con un torrente de notas en el que imita a otras aves. En invierno forma bandos numerosos en los llanos.',
   s.description_source = NULL,
-  s.identification_tips = 'Hojas carnosas puntiagudas
-Inflorescencia amarillo pálido
-Coloniza repisas y suelos esqueléticos',
-  s.seasonality = 'Verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sedum_sediforme_hojas.jpg?width=1280',
-  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Saxifragales',
-  s.taxon_family = 'Crassulaceae',
-  s.taxon_genus = 'Petrosedum',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Petrosedum sediforme';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Uña de gato blanca',
-  s.kingdom = 'flora',
-  s.family = 'Planta suculenta',
-  s.primary_habitat = 'Prados calcáreos del Alysso-Sedion albi',
-  s.description = 'Crasulácea de hojas cilíndricas globosas y flores blancas estrelladas, componente típico de los prados pioneros del Alysso-Sedion albi sobre caliza; se enrojece al sol.',
-  s.description_source = NULL,
-  s.identification_tips = 'Flores blancas estrelladas
-Hojas pequeñas y globosas
-Se enrojece con la insolación',
-  s.seasonality = 'Verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sedum_album.jpg?width=1280',
-  s.image_attribution = 'Franz Xaver (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Saxifragales',
-  s.taxon_family = 'Crassulaceae',
-  s.taxon_genus = 'Sedum',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Sedum album';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Zamarrilla',
-  s.kingdom = 'flora',
-  s.family = 'Mata aromática',
-  s.primary_habitat = 'Tomillares y matorral raso sobre suelo calizo pedregoso',
-  s.description = 'Mata pequeña y grisácea, de hojas estrechas con el borde enrollado, que remata sus tallos en cabezuelas apretadas de flores blancas o crema. Es una de las plantas más constantes del tomillar y una fuente de néctar importante en pleno verano.',
-  s.description_source = NULL,
-  s.identification_tips = 'Cabezuelas redondas y compactas al final del tallo
-Aspecto general blanquecino o grisáceo
-Flores sin labio superior, típicas del género',
-  s.seasonality = 'Primavera y verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_capitatum2006.jpg?width=1280',
-  s.image_attribution = 'No machine-readable author provided. Víctor M. Vicente Selvas~commo… (Public domain) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Lamiales',
-  s.taxon_family = 'Lamiaceae',
-  s.taxon_genus = 'Teucrium',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Teucrium capitatum';
+  s.identification_tips = 'Babero negro a cada lado del cuello
+Borde trasero del ala blanco y visible en vuelo
+Pico grueso y pálido, de granívora',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Melanocorypha_calandra.jpg?width=1280',
+  s.image_attribution = 'Bereşe.jpg: Dûrzan cîrano derivative work: Osado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = NULL,
+  s.taxon_family = NULL,
+  s.taxon_genus = 'Melanocorypha',
+  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Melanocorypha calandra';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Zampullín común',
@@ -6861,679 +5865,29 @@ Relincho agudo y tembloroso desde la vegetación',
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Tachybaptus ruficollis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Zapatito de la Virgen',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Extraplomos y roquedos calcáreos',
-  s.description = 'Pequeña planta rupícola de extraplomos y oquedades de roquedos calcáreos, integrante de la asociación Resedo paui-Sarcocapnetum saetabensis del hábitat 8210.',
-  s.description_source = NULL,
-  s.identification_tips = 'Cuelga de extraplomos y techos rocosos
-Flores blanco-rosadas con espolón
-Hojas divididas glaucas',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Orella_de_ratol%C3%AD_(Sarcocapnos_saetabensis)_al_castell_de_X%C3%A0tiva.jpg?width=1280',
-  s.image_attribution = 'Joanbanjo (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Ranunculales',
-  s.taxon_family = 'Papaveraceae',
-  s.taxon_genus = 'Sarcocapnos',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Sarcocapnos enneaphylla subsp. saetabensis';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Zaragatona blanca',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Pastizales secos, ribazos y claros de matorral sobre suelos margosos',
-  s.description = 'Llantén de aspecto plateado, cubierto de pelos sedosos, con hojas estrechas que salen todas de la base. Levanta espigas cilíndricas y densas en las que las flores se abren de abajo arriba, dejando ver unos estambres largos y colgantes. Resiste bien el pisoteo y la sequía.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas estrechas y plateadas, todas desde la base
-Espigas cilíndricas apretadas sobre tallos largos
-Estambres largos y colgantes durante la floración',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/633859652/original.jpg',
-  s.image_attribution = 'Pavel Kúr (CC0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Lamiales',
-  s.taxon_family = 'Plantaginaceae',
-  s.taxon_genus = 'Plantago',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Plantago albicans';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Zorro',
+  s.common_name = 'Treparriscos',
   s.kingdom = 'fauna',
-  s.family = 'Mamífero carnívoro',
-  s.primary_habitat = 'Prácticamente cualquier ambiente: bosque, matorral, cultivos y periferias urbanas',
-  s.description = 'El carnívoro silvestre más adaptable y extendido: vive desde la alta montaña hasta el borde de las ciudades. Es omnívoro y oportunista, lo que explica su éxito. Se reconoce por la cola larga y espesa —la «hopa»— rematada casi siempre en blanco.',
+  s.family = 'Ave',
+  s.primary_habitat = 'Paredes rocosas, cantiles y barrancos; en invierno baja a roquedos y edificios',
+  s.description = 'Pájaro de alta montaña que trepa por paredes verticales agitando las alas como una mariposa gigante, mostrando unos vistosos paneles rojos. Extrae insectos de las grietas con un pico largo y fino. En invierno desciende y puede aparecer en cortados bajos, castillos y presas.',
   s.description_source = NULL,
-  s.identification_tips = 'Cola muy espesa con la punta blanca
-Huella alargada con las cuatro almohadillas alineadas
-Excrementos retorcidos y con pelos, sobre piedras y caminos',
-  s.seasonality = 'Todo el año (actividad sobre todo nocturna)',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Vulpes_vulpes_2.jpg?width=1280',
-  s.image_attribution = 'Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons',
+  s.identification_tips = 'Manchas rojo carmín en las alas al abrirlas
+Trepa por la roca a saltos, aleteando sin parar
+Pico largo, fino y algo curvado',
+  s.seasonality = 'Otoño e invierno fuera de la alta montaña',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tichodroma_muraria02_cropped.jpg?width=1280',
+  s.image_attribution = 'derivative work: Hämbörger (talk) Tichodroma_muraria02.jpg: User:Kulac (CC BY-SA 3.0) · Wikimedia Commons',
   s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Mammalia',
-  s.taxon_order = 'Carnivora',
-  s.taxon_family = 'Canidae',
-  s.taxon_genus = 'Vulpes',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
-  s.spain_status = 'No catalogada (especie cinegética común)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Vulpes vulpes';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Sosa jabonera',
-  s.kingdom = 'flora',
-  s.family = 'Planta suculenta',
-  s.primary_habitat = 'Saladares muy salinos con encharcamiento estacional',
-  s.description = 'Mata de tallos articulados y suculentos, con las ramas jóvenes agrupadas en apretados manojos que recuerdan a piñas diminutas, de donde le viene el nombre. Vive en los suelos más salinos del saladar, donde apenas compite con otras plantas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Ramillas agrupadas en manojos con aspecto de piña
-Tallos gruesos y articulados de color verde grisáceo
-En las zonas más saladas y desnudas del saladar',
-  s.seasonality = 'Verano y otoño',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/611359925/original.jpg',
-  s.image_attribution = 'Xavier Rufray (CC BY-NC 4.0) · iNaturalist/GBIF · obs. EAU (revisar: existe en salinas de España)',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Amaranthaceae',
-  s.taxon_genus = 'Halocnemum',
-  s.iucn_global = 'LC (amplia distribución circunmediterránea y saharo-arábiga)',
-  s.iucn_spain = 'CR — En peligro crítico (Lista Roja española, 2010)',
-  s.spain_status = 'No incluida en el LESRPE (RD 139/2011); propia de saladares prioritarios UE (HIC 1420)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Halocnemum strobilaceum';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Salado',
-  s.kingdom = 'flora',
-  s.family = 'Arbusto',
-  s.primary_habitat = 'Matorrales halófilos mediterráneos y termoatlánticos',
-  s.description = 'Arbusto de saladar de hojas glaucas cubiertas de sales y flores rosadas; ocupa el borde interno de saladares y ramblas salinas del litoral.',
-  s.description_source = NULL,
-  s.identification_tips = 'Flores rosadas en espiga
-Hojas con costra de sal
-Marca el límite del saladar',
-  s.seasonality = 'Primavera y verano',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Limoniastrum_monopetalum_2.JPG?width=1280',
-  s.image_attribution = 'Xemenendura (CC BY-SA 4.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Plumbaginaceae',
-  s.taxon_genus = 'Limoniastrum',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en el LESRPE; característica de matorrales halófilos (HIC 1420)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Limoniastrum monopetalum';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Grama de mar',
-  s.kingdom = 'flora',
-  s.family = 'Gramínea',
-  s.primary_habitat = 'Dunas móviles embrionarias',
-  s.description = 'Gramínea rastrera de rizomas punzantes que fija la arena de las primeras dunas, tolerando el enterramiento y la sal marina.',
-  s.description_source = NULL,
-  s.identification_tips = 'Puntas de hoja punzantes
-Fija la arena con rizomas
-Pionera de la duna embrionaria',
-  s.seasonality = 'Verano',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/609975695/original.jpg',
-  s.image_attribution = 'Quentin Groom (CC0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Poales',
-  s.taxon_family = 'Poaceae',
-  s.taxon_genus = 'Sporobolus',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en el LESRPE; fijadora de dunas embrionarias (HIC 2110)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Sporobolus pungens';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Mielga marina',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Dunas móviles embrionarias',
-  s.description = 'Leguminosa lanosa de color blanco-plateado que tapiza la arena de las dunas costeras con flores amarillas y frutos espiralados.',
-  s.description_source = NULL,
-  s.identification_tips = 'Aspecto blanquecino y lanoso
-Flores amarillas en primavera
-Fruto en espiral',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/609975634/original.jpg',
-  s.image_attribution = 'Quentin Groom (CC0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Fabales',
-  s.taxon_family = 'Fabaceae',
-  s.taxon_genus = 'Medicago',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en el LESRPE; amenazada solo en el límite norte de su área (Cantábrico)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Medicago marina';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Alhelí de mar',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Dunas con céspedes del Malcomietalia',
-  s.description = 'Crucífera de flores lilas y hojas grisáceas que crece en los claros arenosos de la duna, dando nombre a la comunidad del Malcolmietalia.',
-  s.description_source = NULL,
-  s.identification_tips = 'Flores lilas de cuatro pétalos
-Céspedes abiertos sobre arena
-Da nombre al hábitat (Malcolmietalia)',
-  s.seasonality = 'Primavera a otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Malcolmia_littorea_3_(Espagne).jpg?width=1280',
-  s.image_attribution = 'Ghislain118 https://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Brassicales',
-  s.taxon_family = 'Brassicaceae',
-  s.taxon_genus = 'Malcolmia',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en el LESRPE; característica del Malcolmietalia (HIC 2230)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Malcolmia littorea';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Zanahoria de mar',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Dunas con céspedes del Malcomietalia',
-  s.description = 'Pequeña umbelífera anual de las arenas litorales, con umbelas blanco-rosadas y frutos espinosos que se dispersan por la duna.',
-  s.description_source = NULL,
-  s.identification_tips = 'Umbelas blanco-rosadas
-Frutos con espinas
-Anual de dunas semifijas',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/475241861/original.jpeg',
-  s.image_attribution = 'Christoph Moning (CC BY 4.0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Apiales',
-  s.taxon_family = 'Apiaceae',
-  s.taxon_genus = 'Daucus',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en el LESRPE; anual característica del Malcolmietalia (HIC 2230)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Daucus pumilus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Cutandia marítima',
-  s.kingdom = 'flora',
-  s.family = 'Gramínea',
-  s.primary_habitat = 'Dunas con céspedes del Malcomietalia',
-  s.description = 'Gramínea anual de arenas costeras, con una panícula rígida y quebradiza cuyas ramas salen casi en ángulo recto. Se agosta pronto y sus fragmentos ruedan por la playa dispersando las semillas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Panícula rígida con ramas casi en ángulo recto
-Se quiebra con facilidad al tocarla
-Planta anual sobre arena suelta, de porte bajo',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/387794514/original.jpg',
-  s.image_attribution = 'Tim Johnson (CC BY 4.0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Poales',
-  s.taxon_family = 'Poaceae',
-  s.taxon_genus = 'Cutandia',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en el LESRPE; anual del Malcolmietalia (HIC 2230)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Cutandia maritima';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Algodonosa',
-  s.kingdom = 'flora',
-  s.family = 'Hierba',
-  s.primary_habitat = 'Dunas móviles embrionarias',
-  s.description = 'Mata blanco-lanosa de las dunas costeras (antes Otanthus maritimus), con capítulos amarillos densos y follaje algodonoso que refleja la insolación.',
-  s.description_source = NULL,
-  s.identification_tips = 'Toda la planta blanco-algodonosa
-Capítulos amarillos en verano
-Sinónimo: Otanthus maritimus',
-  s.seasonality = 'Verano',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/463767986/original.jpeg',
-  s.image_attribution = 'Pennyinsole (CC0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Asterales',
-  s.taxon_family = 'Asteraceae',
-  s.taxon_genus = 'Achillea',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en el LESRPE; característica de dunas litorales (HIC 2110)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Achillea maritima';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Aliaga morisca',
-  s.kingdom = 'flora',
-  s.family = 'Arbusto',
-  s.primary_habitat = 'Matorrales arborescentes de Ziziphus',
-  s.description = 'Retama espinosa de flores amarillas que acompaña a los azufaifares y matorrales termófilos sobre suelos pedregosos.',
-  s.description_source = NULL,
-  s.identification_tips = 'Ramas verdes muy espinosas
-Flores amarillas de leguminosa
-Acompaña al azufaifo (Ziziphus)',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/476714358/original.jpeg',
-  s.image_attribution = 'Christoph Moning (CC BY 4.0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Fabales',
-  s.taxon_family = 'Fabaceae',
-  s.taxon_genus = 'Cytisus',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en el LESRPE; acompañante de matorrales de Ziziphus (HIC 5220*, prioritario)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Cytisus intermedius';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Escobilla',
-  s.kingdom = 'flora',
-  s.family = 'Mata',
-  s.primary_habitat = 'Matorrales halo-nitrófilos',
-  s.description = 'Mata en forma de escoba, con ramas verdes, largas y erguidas, casi sin hojas, que florece a final de verano. Sus frutos van rodeados de alas membranosas rosadas que la vuelven muy vistosa en otoño. Es un endemismo del sureste ibérico.',
-  s.description_source = NULL,
-  s.identification_tips = 'Porte en escoba, con ramas verdes largas y erectas
-Hojas reducidas casi a escamas
-Frutos con alas membranosas rosadas en otoño',
-  s.seasonality = 'Verano y otoño',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/474144349/original.jpeg',
-  s.image_attribution = 'Gabriel Dixon (CC0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Amaranthaceae',
-  s.taxon_genus = 'Salsola',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en el LESRPE; endemismo ibérico del sureste árido',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Salsola genistoides';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Boja negra',
-  s.kingdom = 'flora',
-  s.family = 'Mata aromática',
-  s.primary_habitat = 'Matorrales halo-nitrófilos',
-  s.description = 'Mata aromática grisácea de las bojas del sureste árido, colonizadora de suelos alterados, bordes de camino y matorrales nitrificados.',
-  s.description_source = NULL,
-  s.identification_tips = 'Olor aromático fuerte al frotar
-Follaje gris-plateado
-Indica suelos alterados',
-  s.seasonality = 'Otoño',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/173279674/original.jpeg',
-  s.image_attribution = 'Yamil J.R (CC0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Asterales',
-  s.taxon_family = 'Asteraceae',
-  s.taxon_genus = 'Artemisia',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en el LESRPE; característica de matorrales halonitrófilos (HIC 1430)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Artemisia barrelieri';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Orgaza',
-  s.kingdom = 'flora',
-  s.family = 'Mata',
-  s.primary_habitat = 'Matorrales halo-nitrófilos',
-  s.description = 'Mata baja y extendida, de hojas pequeñas, grisáceas y cubiertas de escamas harinosas que reflejan la luz. Marca los suelos con sal y exceso de nitrógeno, como los antiguos apriscos. Sus frutos van encerrados entre dos valvas endurecidas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas pequeñas, grises y harinosas al tacto
-Porte bajo y muy extendido, casi tendido
-Frutos entre dos valvas duras y dentadas',
-  s.seasonality = 'Verano',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/611378691/original.jpg',
-  s.image_attribution = 'Michael Bakker Paiva (CC BY 4.0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Amaranthaceae',
-  s.taxon_genus = 'Atriplex',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en el LESRPE; característica de matorrales halonitrófilos (HIC 1430)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Atriplex glauca';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Sosa articulada',
-  s.kingdom = 'flora',
-  s.family = 'Mata',
-  s.primary_habitat = 'Matorrales halo-nitrófilos',
-  s.description = 'Mata de tallos articulados y suculentos, sin hojas visibles, con los segmentos separados por nudos bien marcados. Vive en los suelos más áridos y salinos, donde tiene poca competencia. Es una planta de raíz sahariana muy escasa en Europa.',
-  s.description_source = NULL,
-  s.identification_tips = 'Tallos articulados con nudos muy marcados
-Sin hojas visibles, solo escamas en cada nudo
-Porte bajo y ramificado, de color verde grisáceo',
-  s.seasonality = 'Verano y otoño',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/539160949/original.jpg',
-  s.image_attribution = 'yusuf_c (CC BY 4.0) · GBIF · obs. SA',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Amaranthaceae',
-  s.taxon_genus = 'Hammada',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en el LESRPE; característica de matorrales halonitrófilos (HIC 1430)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Hammada articulata';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Uña de gato',
-  s.kingdom = 'flora',
-  s.family = 'Planta suculenta',
-  s.primary_habitat = 'Prados calcáreos cársticos o basófilos del Alysso-Sedion albi',
-  s.description = 'Crasulácea de hojas diminutas suculentas y flores amarillo-brillantes que coloniza costras y suelos esqueléticos sobre roca caliza.',
-  s.description_source = NULL,
-  s.identification_tips = 'Hojas minúsculas y carnosas
-Flores amarillas estrelladas
-Sobre roca y suelos someros',
-  s.seasonality = 'Primavera y verano',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/665351988/original.jpg',
-  s.image_attribution = 'Santiago Martín-Bravo (CC BY 4.0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Saxifragales',
-  s.taxon_family = 'Crassulaceae',
-  s.taxon_genus = 'Sedum',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en el LESRPE; característica de prados del Alysso-Sedion (HIC 6110*, prioritario)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Sedum acre';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Taray de saladar',
-  s.kingdom = 'flora',
-  s.family = 'Árbol',
-  s.primary_habitat = 'Galerías y matorrales ribereños termomediterráneos',
-  s.description = 'Taray de saladar de flores blanco-rosadas y porte arbustivo, propio de bordes de ramblas salinas y depresiones halófilas del litoral.',
-  s.description_source = NULL,
-  s.identification_tips = 'Flores en espigas densas
-Tolera suelos muy salinos
-Bordes de rambla y saladar',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/621745664/original.jpg',
-  s.image_attribution = 'melendrete (CC BY-NC 4.0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Tamaricaceae',
-  s.taxon_genus = 'Tamarix',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en el LESRPE; formador de galerías termomediterráneas (HIC 92D0)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Tamarix boveana';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Taray canario',
-  s.kingdom = 'flora',
-  s.family = 'Árbol',
-  s.primary_habitat = 'Galerías y matorrales ribereños termomediterráneos',
-  s.description = 'Taray de floración prolongada y espigas rosadas que forma galerías y tarayales en cauces y ramblas del litoral árido.',
-  s.description_source = NULL,
-  s.identification_tips = 'Espigas rosadas abundantes
-Floración prolongada
-Forma tarayales en ramblas',
-  s.seasonality = 'Primavera y verano',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/619019413/original.jpg',
-  s.image_attribution = 'Christoph Moning (CC BY 4.0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Caryophyllales',
-  s.taxon_family = 'Tamaricaceae',
-  s.taxon_genus = 'Tamarix',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en el LESRPE; formador de galerías termomediterráneas (HIC 92D0)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Tamarix canariensis';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Esparraguera de gato',
-  s.kingdom = 'flora',
-  s.family = 'Arbusto',
-  s.primary_habitat = 'Matorrales arborescentes de Juniperus spp.',
-  s.description = 'Esparraguera muy espinosa y densa que se enreda entre el matorral y el sabinar litoral, con cladodios rígidos y punzantes.',
-  s.description_source = NULL,
-  s.identification_tips = 'Cladodios rígidos y punzantes
-Se enreda en el matorral
-Frutos negros en otoño',
-  s.seasonality = 'Otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Asparagus_stipularis_(detail).jpg?width=1280',
-  s.image_attribution = 'Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Asparagales',
-  s.taxon_family = 'Asparagaceae',
-  s.taxon_genus = 'Asparagus',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en el LESRPE; acompañante de sabinares y matorrales termófilos (HIC 5210)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Asparagus horridus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Carrizo',
-  s.kingdom = 'flora',
-  s.family = 'Gramínea',
-  s.primary_habitat = 'Ríos mediterráneos de caudal permanente con Glaucium flavum',
-  s.description = 'Carrizo alto y rizomatoso que forma carrizales densos en los tramos con agua o freático somero de ramblas y cauces litorales.',
-  s.description_source = NULL,
-  s.identification_tips = 'Cañas altas con penacho plumoso
-Indica agua o suelo húmedo
-Forma carrizales densos',
-  s.seasonality = 'Verano y otoño',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/605083728/original.jpg',
-  s.image_attribution = 'Zoltán Stekkelpak (CC0) · GBIF',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Liliopsida',
-  s.taxon_order = 'Poales',
-  s.taxon_family = 'Poaceae',
-  s.taxon_genus = 'Phragmites',
-  s.iucn_global = 'LC',
-  s.iucn_spain = NULL,
-  s.spain_status = 'No incluida en el LESRPE; helófito de cauces y ramblas (HIC 3250)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Phragmites australis';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Salamanquesa común',
-  s.kingdom = 'fauna',
-  s.family = 'Reptil',
-  s.primary_habitat = 'Pendientes rocosas calcícolas con vegetación casmofítica',
-  s.description = 'Gecko robusto de piel tuberculada, activo al anochecer sobre roquedos, muros y cortados, donde caza insectos atraídos por la luz.',
-  s.description_source = NULL,
-  s.identification_tips = 'Piel rugosa con tubérculos
-Activa al atardecer
-Trepa por rocas y muros',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/605672084/original.jpg',
-  s.image_attribution = 'jrodben (CC BY-NC 4.0) · GBIF',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Reptilia',
-  s.taxon_order = 'Squamata',
-  s.taxon_family = 'Phyllodactylidae',
-  s.taxon_genus = 'Tarentola',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (RD 139/2011)',
+  s.taxon_class = 'Aves',
+  s.taxon_order = NULL,
+  s.taxon_family = NULL,
+  s.taxon_genus = 'Tichodroma',
+  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000)',
   s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Tarentola mauritanica';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Salamanquesa rosada',
-  s.kingdom = 'fauna',
-  s.family = 'Reptil',
-  s.primary_habitat = 'Pendientes rocosas calcícolas con vegetación casmofítica',
-  s.description = 'Gecko pequeño y translúcido de tonos rosados, de hábitos nocturnos, que se refugia en grietas de roquedos, muros de piedra y ruinas.',
-  s.description_source = NULL,
-  s.identification_tips = 'Piel rosada casi translúcida
-Cola con anillos espinosos
-Nocturna y discreta',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hemidactylus_turcicus_on_a_wall_in_Greece.jpg?width=1280',
-  s.image_attribution = 'Koppi2 (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Reptilia',
-  s.taxon_order = 'Squamata',
-  s.taxon_family = 'Gekkonidae',
-  s.taxon_genus = 'Hemidactylus',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (RD 139/2011)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Hemidactylus turcicus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Culebra de herradura',
-  s.kingdom = 'fauna',
-  s.family = 'Reptil',
-  s.primary_habitat = 'Matorral termomediterráneo semiárido',
-  s.description = 'Culebra ágil y trepadora con dibujo dorsal en herradura, ligada a matorrales termófilos y roquedos soleados del sureste ibérico.',
-  s.description_source = NULL,
-  s.identification_tips = 'Manchas dorsales en herradura
-Ágil y trepadora
-Inofensiva para las personas',
-  s.seasonality = 'Primavera a otoño',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hemorrhois_hippocrepis_121004.jpg?width=1280',
-  s.image_attribution = 'Accipiter (R. Altenkamp, Berlin) (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Reptilia',
-  s.taxon_order = 'Squamata',
-  s.taxon_family = 'Colubridae',
-  s.taxon_genus = 'Hemorrhois',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Hemorrhois hippocrepis';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Conejo',
-  s.kingdom = 'fauna',
-  s.family = 'Mamífero',
-  s.primary_habitat = 'Matorral termomediterráneo semiárido',
-  s.description = 'Lagomorfo excavador que vive en madrigueras coloniales; pieza clave del ecosistema mediterráneo como presa de águila perdicera, búho real y carnívoros.',
-  s.description_source = NULL,
-  s.identification_tips = 'Excava madrigueras coloniales
-Presa clave de rapaces
-Activo al amanecer y atardecer',
-  s.seasonality = 'Todo el año',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oryctolagus_cuniculus_Tasmania_2.jpg?width=1280',
-  s.image_attribution = 'JJ Harrison (https://www.jjharrison.com.au/) (CC BY-SA 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Mammalia',
-  s.taxon_order = 'Lagomorpha',
-  s.taxon_family = 'Leporidae',
-  s.taxon_genus = 'Oryctolagus',
-  s.iucn_global = 'EN (Lista Roja mundial UICN 2019: En Peligro por declive en su área nativa)',
-  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2007)',
-  s.spain_status = 'No incluida en el LESRPE; especie cinegética y presa clave del ecosistema mediterráneo',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Oryctolagus cuniculus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Erizo moruno',
-  s.kingdom = 'fauna',
-  s.family = 'Mamífero',
-  s.primary_habitat = 'Matorral termomediterráneo semiárido',
-  s.description = 'Erizo de orejas grandes y color claro, propio del matorral árido del sureste ibérico; nocturno e insectívoro, se refugia bajo la vegetación densa.',
-  s.description_source = NULL,
-  s.identification_tips = 'Orejas grandes y tono claro
-Nocturno e insectívoro
-Se ovilla ante el peligro',
-  s.seasonality = 'Primavera a otoño (hiberna)',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Erizo_moruno_(Atelerix_algirus).jpg?width=1280',
-  s.image_attribution = 'Galanthus (CC BY 3.0) · Wikimedia Commons',
-  s.taxon_phylum = 'Chordata',
-  s.taxon_class = 'Mammalia',
-  s.taxon_order = 'Erinaceomorpha',
-  s.taxon_family = 'Erinaceidae',
-  s.taxon_genus = 'Atelerix',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
-  s.spain_status = 'LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Atelerix algirus';
-
-UPDATE species s JOIN parks p ON p.id = s.park_id SET
-  s.common_name = 'Pijolobo',
-  s.kingdom = 'flora',
-  s.family = 'Planta parásita',
-  s.primary_habitat = 'Saladares, estepas salinas y matorrales halófilos, sobre las raíces de quenopodiáceas',
-  s.description = 'Planta sin una sola hoja verde: no hace fotosíntesis y vive enganchada a las raíces de las sosas y los almajos del saladar, de los que toma agua y alimento. Todo el año es invisible bajo tierra y, en primavera, saca de golpe una espiga carnosa de hasta medio metro cubierta de grandes flores amarillas, un espectáculo desconcertante en un suelo desnudo y salado. En Águilas y su comarca se la conoce como pijolobo; en el resto del sureste, como jopo de lobo.',
-  s.description_source = NULL,
-  s.identification_tips = 'Espiga carnosa amarilla que brota directamente del suelo, sin tallo con hojas
-Escamas pardas en vez de hojas a lo largo del tallo
-Siempre al pie de una sosa, un almajo o un salado: es su hospedador',
-  s.seasonality = 'Primavera',
-  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/CistanchePhelypaea.jpg?width=1280',
-  s.image_attribution = 'Ziegler175 (Public domain) · Wikimedia Commons',
-  s.taxon_phylum = 'Tracheophyta',
-  s.taxon_class = 'Magnoliopsida',
-  s.taxon_order = 'Lamiales',
-  s.taxon_family = 'Orobanchaceae',
-  s.taxon_genus = 'Cistanche',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
-  s.spain_status = 'Sin figura de protección: no aparece en el Catálogo Español de Especies Amenazadas ni en el Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE). Comprobado en EIDOS (IEPNB), que no le registra ningún estado legal vigente.',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
-WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Cistanche phelypaea';
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Tichodroma muraria';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Lentisco',
@@ -56378,6 +54732,29 @@ Cola larguísima, hasta el doble que el cuerpo',
 WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Psammodromus algirus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Espino negro',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = NULL,
+  s.description = 'Es un arbustillo de hasta 3 m de altura (López González, 2001), que frecuentemente tiene aspecto de mata alta o media, más o menos espinoso, de ramificación intricada y de perennifolio a semicaducifolio facultativo. Sus especímenes tienen espinas pero presentan una variabilidad: los de las regiones continentales y mediterráneas más áridas las llegan a tener en cantidad y longitud exagerada, pero otros son casi inermes. Presenta también unas ramillas laterales cortas terminadas en un fascículo de hojas. Éstas se disponen alternas, aunque a veces algunas se muestran casi opuestas; son simples, sin peciolo y con un limbo estrecho (tíìcamente menor de 0,5 cm), a veces muy corto, menor de 1,2 cm (subsp. borgiae), de trasovado-oblongo a espatulado-linear, lampiño o con un pelillo muy corto (subesp. velutina).',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_lycioides_fruits.JPG?width=1280',
+  s.image_attribution = 'איתן פרמן (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Rosales',
+  s.taxon_family = 'Rhamnaceae',
+  s.taxon_genus = 'Rhamnus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Rhamnus lycioides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Salsola',
   s.kingdom = 'flora',
   s.family = 'Mata',
@@ -57414,6 +55791,29 @@ Cabeza ancha y ojos amarillos, aspecto de búho',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Circaetus gallicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cuervo grande',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'El rasgo más llamativo del cuervo es, sin duda, su colosal tamaño, que lo convierte en el representante más voluminoso del orden de los paseriformes. Dentro de su anatomía destaca sobre todo el pico, notablemente largo, robusto y grueso. Por lo demás, luce un plumaje homogéneamente negro, con algunos brillos metálicos. El vuelo de este enorme pájaro es lento y suele intercalar aleteos con largos planeos, que el ave ejecuta gracias a sus largas alas apuntadas y a su cola en forma de cuña.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Corvus_corax.001_-_Tower_of_London.JPG?width=1280',
+  s.image_attribution = 'Fernando Losada Rodríguez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Corvidae',
+  s.taxon_genus = 'Corvus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Corvus corax';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Curruca tomillera',

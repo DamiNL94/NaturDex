@@ -17,6 +17,15 @@ Cada una se paga mejor ahora que en el espacio número treinta.
    > regenerar la selección de esos dos espacios, que es la deuda nº 24; hasta entonces es respaldo
    > documental escrito, no fichas nuevas.
    >
+   > **APLICADO ese mismo día, en la sesión (b)**, que es cuando el respaldo llega a las fichas.
+   > Moreras **64 → 66** con **once especies subiendo de nivel 2 a nivel 1** y 31 con evidencia
+   > `anexo_normativo`; Cabo Cope **162 → 193** y su **primera selección versionada**. GBIF
+   > corrobora 23 de los 81 en Moreras y 39 en Cabo Cope; el resto queda en `anexo_sin_constancia`,
+   > que es lo que `exigeConstancia` tenía que hacer — **ninguna especie ha entrado por nivel 1 a
+   > secas**. Y *Enneapogon persicus*, la que el plan da por «posible», se queda fuera de Moreras y
+   > entra en Cabo Cope, donde GBIF la registra: ha decidido la puerta, no nadie. Detalle en
+   > `rollout/sesiones/2026-08-28-b.md`.
+   >
    > **El PDF oficial sigue sin bajarse** —el CAPTCHA de Radware alcanza a murcianatural y al BORM—:
    > el texto se leyó de una recopilación de legislación ambiental que publica el plan íntegro, y por
    > eso su entrada dice que el número y la fecha del boletín NO están comprobados. Cotejarlo
@@ -656,6 +665,34 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     > `--atlas` para la pasada completa. Hasta entonces la caché sirve para el puente **entre
     > parques** (un espacio ficha con el género viejo y otro con el nuevo) y las **+4 fichas** del
     > esparto siguen pendientes.
+
+    > **DESBLOQUEADA el 2026-08-28 (b) — y no estaba pendiente del PDF, estaba pendiente de una
+    > palabra.** El puente se pasó con los dos textos que hay en `fuentes/` y no tendía ni uno,
+    > porque `build-species-seleccion.js` le daba de comer objetos `Set` en vez de nombres:
+    >
+    >     const nombres = [...new Set([...porHic.values()].flat())];   // porHic: Map<código, Set>
+    >
+    > `Array.prototype.flat()` **no aplana un `Set`**, así que lo que llegaba a `tiendePuente` era la
+    > lista de `Set`. Dentro, `if (n in cache)` convierte la clave a cadena: se preguntaba a EIDOS
+    > **una sola vez, por el literal `[object Set]`**, se cacheaba su `null` y todas las demás se
+    > saltaban. Cero recombinaciones puenteadas en todos los espacios, sin error y sin aviso — el
+    > número de fichas aprobadas no cambia por esto, solo el nivel de unas pocas, así que ninguna
+    > comprobación lo veía. El único rastro era una entrada `"[object Set]": null` en la caché
+    > compartida.
+    >
+    > Corregido (`flatMap(s => [...s])`), retirada la clave basura y pasado
+    > `npm run atlas:puente --write` con los dos textos: **1.223 nombres resueltos, 51
+    > recombinaciones** y 327 que EIDOS no resuelve —alianzas fitosociológicas y géneros sueltos, no
+    > un fallo—. Segundo pase: 0 peticiones. Suben de N3 a N2 **tres fichas** en Carrascoy, Sierra de
+    > Salinas y Sierra Espuña, por *Sedum sediforme* → *Petrosedum sediforme*, *Sanguisorba
+    > ancistroides* → *Poterium ancistroides* y *Halimium atriplicifolium* → *Cistus atriplicifolius*
+    > (en Cabo Cope, además, *Arthrocnemum* → *Arthrocaulon* y *Calicotome* → *Cytisus*).
+    >
+    > **El esparto sigue sin caer, y ahora se sabe por qué: no es nomenclatura.** *Stipa tenacissima*
+    > aparece 21 veces en los dos textos y **en ningún bloque de «Especies características»
+    > atribuido a un HIC del catálogo**: su atribución vive en la parte del PDF que ni Xpdf ni pypdf
+    > colocan. Las **+4 fichas** de esta deuda se cobran con el texto de **poppler**, que en esta
+    > máquina no se puede producir (ver la nº 42). La deuda queda **desbloqueada, no cerrada**.
 27. **21 fichas se llaman con un nombre que EIDOS da por sinónimo, y 22 llevan un `eidosTaxonId` que
     no es de rango especie.** Los enumera y clasifica
     [`nomenclatura-autoridades.md`](nomenclatura-autoridades.md), que genera
@@ -1319,3 +1356,106 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     > `Database/species-universal.sql` está regenerado (2.945 `UPDATE`) y **pendiente de aplicar**.
     > Traía además dos correcciones atrasadas del 2026-08-25 (a) que nadie había volcado: el calamón
     > de Calblanque renombrado y los cuatro trinomios fundidos.
+
+41. ~~**El catálogo del piloto y su selección no se describen el uno al otro: 95 fichas se quedan
+    fuera.**~~ — **CERRADA el 2026-08-28 (b): Cabo Cope alineado con el criterio del resto, 193 → 98
+    fichas.** El espacio no tenía selección versionada —su catálogo se escribió en agosto de 2026 con
+    la regla vieja y es anterior a que la selección fuera un fichero del repositorio—, y al producir
+    la primera se quedaron **95 fichas fuera de ella**. Medido espacio a espacio antes de decidir: en
+    los otros quince la diferencia entre catálogo y selección va de **0 a 13** fichas (restos de
+    reconciliaciones de nombres); Cabo Cope estaba dos órdenes de magnitud fuera. Podado, queda en
+    **0**.
+    > **Lo que se ha ido, desglosado, porque el 95 solo no lo dice:**
+    >
+    > · **51 nunca llegaron a la puerta.** `gbifOccurrences: null` y **fuera del barrido de GBIF del
+    >   espacio**: no las rechazó ningún filtro, es que no eran candidatas. De ellas, **14 eran
+    >   características de un HIC según el Atlas, 11 las enumera el Decreto 299/2010 y 23 declaraban
+    >   figura legal** — **32 con respaldo documental escrito y cero registros dentro de los
+    >   polígonos**.
+    > · **44 eran candidatas rechazadas** por «solo GBIF». Nivel 3.
+    >
+    > **Sin respaldo de ninguna clase eran 60**, no 95. Ésas sí son el coste conocido de que el
+    > catálogo legal **no enumere lo común precisamente por ser común**: el lentisco, el romero, el
+    > esparto, el jabalí, el lagarto ocelado, la adelfa, el palmito.
+    >
+    > **Y las otras 32 se han ido igual, que es lo que hay que tener escrito**: *Arthrocaulon
+    > macrostachyum*, *Halocnemum strobilaceum*, *Limoniastrum monopetalum*, *Sarcocornia fruticosa*,
+    > los dos tarays, *Sideritis ibanyezii*, *Maytenus senegalensis* subsp. *europaea*, *Centaurea
+    > saxicola*, la culebra de herradura, el gato montés, el erizo moruno. La poda es correcta por el
+    > criterio del pipeline —el nivel 2 exige que GBIF corrobore y ahí GBIF no dice nada— **y a la
+    > vez retira fichas que una fuente oficial respalda por escrito**. Las dos cosas son verdad. No
+    > se recuperan relajando la puerta: se recuperan **completando el Atlas** (nº 42) y **cotejando
+    > los estados legales** (nº 43).
+    >
+    > **Lo que costó, en concreto:** siete eran **destacadas** y salían en la portada (*Allium
+    > melananthum*, *Centaurium rigualii*, *Caralluma europaea*, *Maytenus senegalensis* subsp.
+    > *europaea*, *Centaurea saxicola*, *Halocnemum strobilaceum*, *Tamarix boveana*) — el espacio
+    > baja de 23 destacadas a 16; **13 entradas del catálogo universal** se quedaron huérfanas y las
+    > retiró `species:poda` (1.071 → 1.058); y **8 entradas de `data/contenido/`** tienen texto
+    > redactado a mano que ya no llega a ninguna ficha, **que NO se han borrado**.
+    >
+    > **El borrado para la BD está escrito y SIN aplicar**:
+    > `Database/poda-piloto-cabo-cope-puntas-calnegre.sql`. Va después del `-n2.sql` regenerado (que
+    > da de alta las 98) y después del `poda-aves-*.sql` del 2026-08-16, que sigue pendiente. Su
+    > cabecera lleva los tres avisos: copia previa, `recalculate-account-progress.php` detrás, y las
+    > siete destacadas.
+    >
+    > **Y el N3 = 4 que queda en la medición no es un hueco de dato**: las 98 son todas nivel 1 o 2
+    > según su selección, y `mide-niveles-puerta.js` ve cuatro como N3 por límites propios — dos
+    > porque el anexo las escribe con otro nombre (*Rhamnus hispanorum*, *Serratula mucronata*) y esa
+    > clave no está en la caché offline que la herramienta puede leer, y dos porque su cruce con el
+    > Atlas va por binomio contra un solo texto.
+
+42. **`fuentes/atlas.txt` no es reproducible, aunque el repositorio diga que sí en tres sitios.**
+    El texto no se versiona «porque es reproducible». De qué extractor de PDF salga cambia QUÉ
+    especies características se leen, y **la diferencia no es de matiz**: para los HIC de Sierra de
+    las Moreras, la selección del 2026-08-22 vio **631** especies y los dos textos que hoy hay en
+    `fuentes/` dan 378 (Xpdf `-layout`) y 299 (pypdf), **494 de unión**. El texto rico de aquel día
+    era de `pdftotext` de **poppler**, que en esta máquina no está —el `pdftotext` disponible es el
+    de Xpdf 4.00 (Glyph & Cog)— y no se puede reinstalar.
+    > **Lo que costaba, medido:** regenerar Moreras leyendo un solo texto le quitaba **seis fichas**
+    > que el Atlas respalda —*Lygeum spartum*, *Withania frutescens*, *Artemisia barrelieri*,
+    > *Atriplex glauca*, *Lapiedra martinezii*, *Suaeda spicata*— con el motivo «solo GBIF: ninguna
+    > fuente documental la respalda» escrito al lado, que es falso. Sin error y sin aviso.
+    >
+    > **Tapado a medias el 2026-08-28 (b)**: `build-species-seleccion.js` lee ahora VARIOS textos
+    > (`--atlas a.txt,b.txt`, la firma que ya tenía `atlas-hic-especies.js`) **y además el índice
+    > versionado del espacio**, `out/<slug>-hic-especies.json`, que es lo único del Atlas que está
+    > en el repositorio. Las tres fuentes se suman y no se restan nunca. El índice solo contiene
+    > taxones ya fichados en el espacio, así que **no puede meter una especie nueva**: lo único que
+    > hace es impedir que una que ya está pierda su respaldo por una limitación de herramienta. En
+    > Moreras aportó exactamente las siete que los dos textos de hoy no traen.
+    >
+    > **Lo que queda es barato y tiene efecto en los dieciséis espacios**: extraer el Atlas con
+    > poppler en cualquier máquina que lo tenga y **añadir el texto a la lista** —nunca sustituir—.
+    > De ahí salen las +4 fichas del esparto de la nº 26 y parte de las 95 de la nº 41. Y una
+    > decisión que conviene tomar de paso: si el texto no es reproducible, **versionarlo** (o
+    > versionar el índice de todos los espacios) deja de ser un lujo.
+
+43. **Los estados legales del piloto están escritos a mano y contradicen a EIDOS, en las dos
+    direcciones.** Salió al desglosar la nº 41: tres fichas de Cabo Cope declaran una figura de
+    protección que la selección no ve, porque EIDOS no devuelve **ninguna** norma aplicable para su
+    `eidosTaxonId` — y no es un fallo de resolución, los identificadores son los mismos en la ficha
+    y en la selección, comprobado en vivo.
+    > | Ficha | Lo que dice su texto | Lo que devuelve EIDOS |
+    > |---|---|---|
+    > | *Malpolon monspessulanus* | «LESRPE» + Catálogo Regional de Murcia, de interés especial | nacional: **solo «CEEEI: Incluido»**, que no protege; **nada de Murcia** (sí de La Rioja, Aragón, Cataluña, Extremadura, País Vasco, C. Valenciana y Castilla-La Mancha) |
+    > | *Lavandula dentata* | Decreto 50/2003, de interés especial | **nada, en ningún ámbito** |
+    > | *Lavandula multifida* | Decreto 50/2003, de interés especial | **nada, en ningún ámbito** |
+    >
+    > La contradicción va en los dos sentidos, y por eso no se arregla eligiendo un bando: en la
+    > culebra bastarda lo que afirma la ficha **no lo sostiene ninguna fuente consultada**; en las dos
+    > lavandas es EIDOS quien no trae un Decreto que sí existe. Hay que ir al BOE y al BORM, taxón a
+    > taxón, que es la lección de la nº 4: **la etiqueta de una autoridad dice lo que opina esa
+    > autoridad, no si dos autoridades discrepan**.
+    >
+    > **Por qué no es un detalle:** `mide-niveles-puerta.js` lee la figura legal del **TEXTO de la
+    > ficha**, no de EIDOS, así que el **N2 = 47** de Cabo Cope está construido en parte sobre
+    > afirmaciones sin cotejar. Y no es solo este espacio: los textos del piloto son 85 redacciones
+    > distintas y varias traen añadidos que no son estado legal («Fauna protegida; gecko de
+    > roquedos»), como ya anotó `migra-estado-regional.js`. El barrido está **sin hacer**: solo se
+    > han mirado estas tres, y salieron de mirar otra cosa.
+    >
+    > **Las tres se fueron en la poda de la nº 41**, así que si alguna de las tres tenía razón, se ha
+    > perdido una ficha protegida. El cotejo sigue haciendo falta: decide de qué lado caen otras 23
+    > del mismo espacio.

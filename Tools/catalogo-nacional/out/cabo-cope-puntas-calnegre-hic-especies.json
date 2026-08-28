@@ -16,7 +16,7 @@
    "habitat": "matorral-halofilo",
    "especies": [
     "Sarcocornia fruticosa",
-    "Arthrocnemum macrostachyum",
+    "Arthrocaulon macrostachyum",
     "Frankenia corymbosa",
     "Halocnemum strobilaceum",
     "Suaeda vera",
@@ -55,7 +55,7 @@
   "5220": {
    "habitat": "azufaifar",
    "especies": [
-    "Calicotome intermedia",
+    "Cytisus intermedius",
     "Maytenus senegalensis subsp. europaea",
     "Periploca angustifolia"
    ]
@@ -73,14 +73,14 @@
    "especies": [
     "Sedum acre",
     "Sedum album",
-    "Sedum sediforme"
+    "Petrosedum sediforme"
    ]
   },
   "6220": {
    "habitat": "subestepa-thero-brachypodietea",
    "especies": [
     "Notoceras bicorne",
-    "Sedum sediforme",
+    "Petrosedum sediforme",
     "Hornungia petraea",
     "Plantago albicans"
    ]
@@ -160,7 +160,7 @@
   {
    "code": "5220",
    "habitat_slug": "azufaifar",
-   "scientific_name": "Calicotome intermedia",
+   "scientific_name": "Cytisus intermedius",
    "atlas_name": "Calicotome intermedia"
   },
   {
@@ -184,7 +184,7 @@
   {
    "code": "1420",
    "habitat_slug": "matorral-halofilo",
-   "scientific_name": "Arthrocnemum macrostachyum",
+   "scientific_name": "Arthrocaulon macrostachyum",
    "atlas_name": "Arthrocnemum macrostachyum"
   },
   {
@@ -244,7 +244,7 @@
   {
    "code": "6110",
    "habitat_slug": "prados-alysso-sedion",
-   "scientific_name": "Sedum sediforme",
+   "scientific_name": "Petrosedum sediforme",
    "atlas_name": "Sedum sediforme subsp. dianium"
   },
   {
@@ -262,7 +262,7 @@
   {
    "code": "6220",
    "habitat_slug": "subestepa-thero-brachypodietea",
-   "scientific_name": "Sedum sediforme",
+   "scientific_name": "Petrosedum sediforme",
    "atlas_name": "Sedum sediforme subsp. dianium"
   },
   {

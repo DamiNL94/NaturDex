@@ -12,13 +12,8 @@ Las dos columnas de la derecha son el material con el que curar **sin salirse de
 EIDOS» lista los nombres castellanos que la fuente conoce —el marcado como preferente no
 siempre es por el que se conoce a la especie: EIDOS prefiere «Aguilón» a «Alimoche común».
 
-Total: **6**.
+Total: **1**.
 
 | Especie | Campos vacíos | Otros nombres en EIDOS | Descripción en EIDOS |
 |---|---|---|---|
-| *Centaurea saxicola* | commonName, group, habitat, description, tips | — | — |
-| *Lafuentea rotundifolia* | group, habitat, description, tips | orejilla de roca (preferente) | — |
-| *Lycium intricatum* | group, habitat, description, tips | Espino<br>Cambrón<br>Cambrón<br>Espinas de cristo<br>Espinos<br>Magarda<br>Rascaviejas<br>espina santa | — |
-| *Rhamnus lycioides subsp. borgiae* | group, habitat, seasonality, rarityScore, description, image, tips | Esparraguera turca | — |
-| *Senecio flavus* | commonName, group, habitat, description, tips | — | — |
-| *Thymus hyemalis* | group, habitat, description, tips | Tomillo<br>Tomillo colorao<br>Tomillo fino<br>Tomillo negro<br>Tomillo rojo<br>Tomillo salsero | — |
+| *Enneapogon persicus* | commonName, habitat, seasonality, image, tips | — | Planta herbácea perenne, de hasta 50 cm de altura. Hojas con limbo de hasta 15 cm, enrollado; lígula pelosa. Inflorescencia en panícula densa, 120 x 20 mm, blanquecino-violácea. Espiguillas de 9-11 mm, con 2-3 flores. Lema ovado-redondeada, con 9 aristas plumosas en la base. Cariópside plumosa, hasta 10 mm de longitud (incluyendo las aristas). |

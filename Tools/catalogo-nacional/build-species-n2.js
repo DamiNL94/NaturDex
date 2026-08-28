@@ -700,7 +700,20 @@ function main() {
       gbifOccurrences: sel.gbifOccurrences,
       visible: true,
     };
-    for (const campo of UNIVERSALES) ficha[campo] = u[campo] === undefined ? null : u[campo];
+    /*
+     * Un campo universal que el catálogo NO TRAE se OMITE, no se escribe como `null`.
+     *
+     * Escribir `null` es afirmar algo —«mirado, no hay»— sobre un campo que nadie ha mirado, que es
+     * justo lo que prohíbe la cabecera de `lista-roja-espana.js` («lo que la fuente no trae se queda
+     * sin campo, nunca con un No evaluada»). Y además ROMPE `validate` en cuanto se regenera un
+     * espacio: la comprobación de coherencia entre parques compara con `JSON.stringify`, donde
+     * `null` y ausente son distintos, y `species:apply` no lo puede arreglar porque salta los campos
+     * que el catálogo no tiene. Con `iucnSpain` —que llegó el 2026-08-27, cuando los quince espacios
+     * ya estaban escritos sin él— eso eran 21 errores en Sierra de las Moreras nada más regenerarla:
+     * 22 fichas con `iucnSpain: null` frente a la misma especie sin el campo en los demás espacios.
+     * El `ORDEN` de abajo ya filtra los `undefined`, así que basta con no ponerlo.
+     */
+    for (const campo of UNIVERSALES) ficha[campo] = u[campo];
     if (antes) for (const campo of CURADOS) if (antes[campo] !== undefined) ficha[campo] = antes[campo];
 
     species.push(Object.fromEntries(ORDEN.filter(k => ficha[k] !== undefined).map(k => [k, ficha[k]])));
