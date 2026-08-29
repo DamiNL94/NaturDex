@@ -141,12 +141,23 @@ async function legalStatus(idtaxon, ccaa = null, opts = {}) {
  * la marca de preferente en `espreferente`. Pedir `select=nombre,idioma,preferente` devuelve un 400
  * de PostgREST («column does not exist»), así que esta función falló siempre desde que se escribió;
  * no se notó porque ninguna herramienta la llegó a llamar hasta el alta de fichas universales.
+ *
+ * Y EN CASTELLANO QUIERE DECIR EN CASTELLANO (2026-08-29). La última reserva de la cadena era
+ * `|| filas[0]`, o sea «si no hay ninguno en castellano, devuelve el primero de la lista **en el
+ * idioma que sea**». EIDOS sirve los nombres de las cuatro lenguas del Estado, así que esa reserva
+ * devolvía catalán —«gavó sicilià», «lletsó resedifoli», «arenària serpil.lifòlia»— y hasta euskera
+ * («hirusta» para dos tréboles distintos), y quien llamaba se creía que era castellano porque eso es
+ * lo que promete la primera línea de este comentario. Nada fallaba: un nombre es un nombre.
+ *
+ * Ahora, si no hay castellano, se devuelve `null`. El que llama ya sabe qué hacer con un hueco
+ * —`build-species-universal.js` escribe el nombre científico y lo apunta como campo que falta—, y un
+ * hueco declarado es mejor que un nombre en otro idioma que nadie va a volver a mirar.
  */
 async function commonName(idtaxon, opts = {}) {
   const filas = await rows('v_nombrescomunes',
     [`idtaxon=eq.${idtaxon}`, 'select=nombre_comun,idioma,espreferente,tiponombre'], opts);
   const es = filas.filter(r => !r.idioma || /castellano|espa/i.test(r.idioma));
-  const pref = es.find(r => r.espreferente) || es[0] || filas[0];
+  const pref = es.find(r => r.espreferente) || es[0];
   return pref ? pref.nombre_comun : null;
 }
 

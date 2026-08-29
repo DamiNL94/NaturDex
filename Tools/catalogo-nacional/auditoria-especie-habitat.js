@@ -62,7 +62,7 @@ const fs = require('fs');
 const path = require('path');
 const { arg, num, flag } = require('../lib/cli');
 const { DATABASE, OUT_DIR, readJson, writeJson, rel, fromRoot, parkFiles, escribeEspacio } = require('../lib/io');
-const { cotejaMedio, MEDIOS_EXIGENTES } = require('../lib/medios');
+const { cotejaMedio, MEDIOS_EXIGENTES, MEDIOS_EXIGENTES_FICHA } = require('../lib/medios');
 const { sqlStr } = require('../lib/sql');
 
 const PARK = arg('park');
@@ -196,8 +196,15 @@ function veredicto(especie, habitat, ctx) {
   // 2) Medio, y solo en los medios exigentes (ver lib/medios.js). Se mira antes que la constancia
   //    porque una contradicción de medio no la arregla ninguna cantidad de registros: cien
   //    ocurrencias de tomillo junto a un manantial siguen sin decir que el tomillo viva en él.
+  //    Y se mira por LOS DOS LADOS, que no es lo mismo: `MEDIOS_EXIGENTES` es la lista del lado del
+  //    HÁBITAT —el manantial con un tomillo colgado—, y con el mar el caso llega al revés, con un
+  //    hábitat terrestre perfectamente normal y la FICHA marina. Con solo el primer lado, los quince
+  //    enlaces de la *Posidonia oceanica* a matorrales, dunas y saladares de Cabo Cope y San Pedro
+  //    del Pinatar seguían sin retirarse aunque el medio ya se leyera bien. Ver `MEDIOS_EXIGENTES_FICHA`.
   const medio = cotejaMedio(hic, [especie.habitat, especie.group].filter(Boolean).join(' · '));
-  if (medio.evaluable && medio.contradice && MEDIOS_EXIGENTES.includes(medio.medioHabitat)) {
+  const exigenteHabitat = MEDIOS_EXIGENTES.includes(medio.medioHabitat);
+  const exigenteFicha = (medio.mediosFicha || []).some(m => MEDIOS_EXIGENTES_FICHA.includes(m));
+  if (medio.evaluable && medio.contradice && (exigenteHabitat || exigenteFicha)) {
     return { veredicto: 'medio-contradictorio', ocurrencias: occ ?? null, motivo: medio.motivo };
   }
 

@@ -2,7 +2,7 @@
   "slug": "cabo-cope-puntas-calnegre",
   "name": "Cabo Cope y Puntas de Calnegre",
   "apiSlug": "cabo-cope-puntas-calnegre",
-  "version": 20,
+  "version": 22,
   "updatedAt": "2026-08-28",
   "data": "Data/parks/murcia/cabo-cope-puntas-calnegre/park.json",
   "geo": {
@@ -37,7 +37,7 @@
     "builtAt": "2026-07-26"
   },
   "counts": {
-    "species": 98,
+    "species": 97,
     "habitats": 15,
     "pointsOfInterest": 15,
     "images": 6,

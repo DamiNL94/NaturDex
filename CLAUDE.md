@@ -68,7 +68,7 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
    deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).
 
-## 2. Veintidós cosas que fallan EN VERDE
+## 2. Veinticinco cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
@@ -205,6 +205,36 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   a Cabezo Gordo; quedan **110 enlaces en 106 fichas de nueve espacios** (deuda nº 32). Ojo con la
   otra mitad: **un espacio sin su `out/<slug>-hic-especies.json` no tiene Atlas**, y hasta ese día
   eso no lo decía nadie.
+- **Una fanerógama MARINA colgando de cinco matorrales, y el cotejo de medio diciendo que está bien.**
+  El vínculo especie↔hábitat se coteja con `lib/medios.js`, que compara el medio del HIC con el que
+  declara la ficha. La *Posidonia oceanica* —cuya propia ficha dice «fondos marinos arenosos, hasta
+  40 m de profundidad»— estaba enganchada a **cinco** hábitats en Cabo Cope y **diez** en San Pedro
+  del Pinatar: matorral, dunas, saladar y hasta un tarayal. Dos silencios encadenados: (1) no existía
+  el medio `marino`, y la palabra suelta «marino» del léxico COSTERO leía «fondos marinos» como
+  costa, que es compatible con matorral y con duna; (2) `MEDIOS_EXIGENTES` mira el medio del
+  **hábitat**, y aquí el hábitat es terrestre y la marina es **la ficha**, así que aunque el medio se
+  leyera bien la auditoría no retiraba nada. Tapado el 2026-08-29 con el medio `marino` y con
+  `MEDIOS_EXIGENTES_FICHA`. La lección general: **un cotejo asimétrico solo caza la mitad de los
+  casos**, y hay que preguntarse siempre por el otro lado. Y ojo, que el catálogo ya tenía escrito el
+  precedente: `data/exclusiones-especies.json` excluye la tortuga boba de Carrascoy «porque es
+  marina y este parque es de interior» — la regla existía y nadie la aplicó a la posidonia.
+- **`--sql` de la auditoría de enlaces NO es acumulativo, y por eso pierde la cola pendiente.**
+  `auditoria-especie-habitat.js --write --sql` corrige el `park.json` **y** redacta el borrado para
+  la BD. En el pase siguiente ya no ve esos enlaces —los quitó él mismo del `park.json`—, así que
+  reescribe el fichero SQL sin ellos: si el anterior no se había aplicado a la base, **desaparece de
+  la cola sin que nada lo diga**, y la BD se queda sirviendo unos enlaces que el repositorio da por
+  retirados. Detectado el 2026-08-29 al regenerarlo en Cabo Cope: se perdían **14 sentencias** de
+  doce aves. La regla es la de siempre —un fichero generado que es COLA y no espejo tiene que
+  fusionar— y hasta que se arregle: **mira el fichero viejo antes de regenerarlo**.
+- **EIDOS sirve los nombres comunes en las cuatro lenguas, y «el preferente en castellano» no lo era.**
+  `lib/eidos.js` cerraba la cadena de reservas con `|| filas[0]`: si el taxón no tiene nombre
+  castellano, devolvía **el primero en el idioma que fuera**, y quien llamaba se creía que era
+  castellano porque es lo que promete la firma. Sobre las 126 fichas del catálogo cuyo `commonName`
+  es hoy el propio nombre científico, esa reserva «recuperaba» **40 nombres, y los 40 en catalán o
+  euskera** —«gavó sicilià», «lletsó resedifoli», «hirusta»—. Con el filtro bien puesto son **0**:
+  no es que el pipeline fallara, es que esos taxones **no tienen nombre castellano en EIDOS**, y el
+  nombre científico en su ficha es el hueco honesto. Corregido el 2026-08-29; ninguna ficha ya
+  escrita lo había cogido (617 comprobadas contra la fuente).
 - **Una ocurrencia dentro de un polígono no dice que la especie viva ahí.** Es la regla con la que se
   derivan los 4.379 enlaces especie↔hábitat, y en un hábitat que es una cinta de metros —un
   manantial, una charca, un cauce— cualquier registro tomado en el sendero de al lado cae dentro. En

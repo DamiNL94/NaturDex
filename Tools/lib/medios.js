@@ -39,7 +39,8 @@
  * Un código ausente devuelve `null` y el cotejo se declara NO evaluable: exactamente lo contrario
  * de lo que pasa en `hic-nombres.json`, donde el hueco se colaba (ver runbook/TRAMPAS-CONOCIDAS.md).
  *
- * Los medios son diez y describen la CONDICIÓN que define el hábitat, no su fisonomía:
+ * Los medios son once y describen la CONDICIÓN que define el hábitat, no su fisonomía:
+ *   marino    · fondo o columna de agua MARINA, por debajo de la línea de costa
  *   acuatico  · agua libre, cauce o surgencia permanente
  *   higrofilo · suelo húmedo o freático somero: riberas, prados juncales, tarayales
  *   salino    · sustrato salino o hipersalino: saladares, estepas salinas, matorral halófilo
@@ -52,6 +53,11 @@
  *   pastizal  · pastos y prados sobre suelo seco o somero
  */
 const MEDIO_POR_HIC = {
+  // 11xx · MARINOS. La «regla marina» del rollout los retira de la Capa 2, así que hoy no hay
+  // ninguno cartografiado en ningún espacio; están aquí de todas formas porque la tabla se consulta
+  // también para decidir el medio de una FICHA, y un código ausente se declara «no evaluable» — que
+  // es justo el silencio que dejó a la *Posidonia oceanica* colgada de cinco matorrales.
+  1110: 'marino', 1120: 'marino', 1130: 'marino', 1140: 'marino', 1160: 'marino', 1170: 'marino',
   // 1xxx · costa, saladares y estepas salinas
   1150: 'salino', 1210: 'costero', 1240: 'costero', 1250: 'costero',
   1310: 'salino', 1410: 'salino', 1420: 'salino', 1430: 'salino', 1510: 'salino',
@@ -119,10 +125,18 @@ const COMPATIBLES = PARES_COMPATIBLES.reduce((acc, [a, b]) => {
  * lo que no tiene defensa posible.
  */
 const LEXICO = [
+  // `marino` va PRIMERO y es deliberadamente estrecho: solo lo que está por debajo de la línea de
+  // costa. La entrada `costero` de abajo llevaba la palabra suelta «marino», así que «fondos marinos
+  // arenosos» se leía como COSTERO —y costero es compatible con matorral, dunar y rupícola—, que es
+  // como una fanerógama marina acabó colgando de cinco hábitats terrestres sin que nada se quejara.
+  // Medido antes de tocarlo: la única ficha del catálogo que dependía de esa palabra suelta era
+  // justamente la *Posidonia*; las once aves marinas siguen leyéndose como costeras por «aguas
+  // costeras», «litoral» o «playas», que es lo que les corresponde.
+  ['marino', /fondos? marinos?|praderas? submarin|submarin|bent[óo]nic|pel[áa]gic|infralitoral|circalitoral|mar abierto|aguas marinas|medio marino/i],
   ['acuatico', /\bagua|acu[áa]tic|arroyo|r[íi]os?\b|riacho|cauce|manantial|surgencia|fuente|laguna|lagunaj|charca|balsa|estanque|embalse|tobas?\b|turber|encharca|inundad|sumergid|palustre|freát/i],
   ['higrofilo', /h[úu]med|riberen|de ribera|ribera|soto|juncal|carrizal|tarayal|choper|salguer|alamed|higr[óo]fil|vaguada|umbr[íi]a h[úu]meda|prados? h[úu]med/i],
   ['salino', /salin|salobre|saladar|hal[óo]fil|halonitr[óo]fil|marisma|almarjal|sebkha|sal\b/i],
-  ['costero', /acantilado|litoral|costa|costero|arribaz[óo]n|espray marino|primera l[íi]nea de mar|marino/i],
+  ['costero', /acantilado|litoral|costa|costero|arribaz[óo]n|espray marino|primera l[íi]nea de mar|playas?/i],
   ['dunar', /duna|arenal|arenas? litoral|arenas? m[óo]vil/i],
   ['yesos', /yeso|gips[íi]col|gipsó?f/i],
   ['rupicola', /roqued|rup[íi]col|casmof[íi]t|fisura|grieta|cortado|cantil|pedreg|pedrer|glera|canchal|cueva|sima|paredes? rocosa/i],
@@ -204,10 +218,36 @@ function cotejaMedio(code, texto) {
  * mismo *Sedum* del pastizal calcáreo de al lado. Fuera del agua, la fisonomía del hábitat y el
  * medio del taxón se solapan tanto que el cotejo deja de discriminar — y una lista de avisos que es
  * ruido en sus nueve décimas partes no la lee nadie. El agua no tiene ese problema: o hay agua o no.
+ *
+ * `marino` entra el 2026-08-29 por ese mismo argumento y no por otro: **o hay mar o no lo hay**. Una
+ * fanerógama que vive en fondos de hasta 40 m no tiene defensa posible colgando de un espartal, y
+ * aquí no hay solape de fisonomía que valga. Salió al mirarlo a mano: la *Posidonia oceanica* estaba
+ * enganchada a **cinco** hábitats terrestres en Cabo Cope y a **diez** en San Pedro del Pinatar —
+ * matorral, dunas, saladar y hasta el tarayal del 92D0—, ninguno de los dos espacios tiene un solo
+ * HIC marino cartografiado, y la auditoría no se quejaba por dos motivos encadenados: la palabra
+ * suelta «marino» del léxico costero leía «fondos marinos» como COSTERO, y costero es compatible con
+ * matorral, dunar y rupícola. Dos silencios sumados dan quince enlaces falsos que nadie podía ver.
  */
-const MEDIOS_EXIGENTES = ['acuatico'];
+const MEDIOS_EXIGENTES = ['acuatico', 'marino'];
+
+/*
+ * Y la lista simétrica, que hace falta porque el cotejo NO es simétrico en la práctica.
+ *
+ * `MEDIOS_EXIGENTES` mira el medio del HÁBITAT, y con el agua eso basta: el caso que motivó la
+ * auditoría es un manantial —hábitat acuático— con un tomillo colgado. Con el mar pasa justo al
+ * revés: el hábitat es un espartal o una duna, perfectamente terrestre, y **la que es marina es la
+ * FICHA**. Mirando solo el lado del hábitat, los quince enlaces de la *Posidonia* seguían sin
+ * retirarse aunque el medio ya se leyera bien.
+ *
+ * Solo entra `marino`, y no `acuatico`, por un motivo medido: hay fichas cuyo campo `habitat` no
+ * describe dónde vive la especie sino que trae pegado el NOMBRE de un HIC («Ríos mediterráneos con
+ * Glaucium flavum»), y por ese lado el léxico lee «acuático» sobre un texto que no habla de la
+ * especie. Retirar con esa entrada sería actuar sobre un dato corrupto. La lectura `marino`, en
+ * cambio, sale de doce fichas del catálogo y las doce son marinas de verdad.
+ */
+const MEDIOS_EXIGENTES_FICHA = ['marino'];
 
 module.exports = {
-  MEDIO_POR_HIC, COMPATIBLES, LEXICO, GENERALISTA, MEDIOS_EXIGENTES, NOMBRE_MEDIO,
+  MEDIO_POR_HIC, COMPATIBLES, LEXICO, GENERALISTA, MEDIOS_EXIGENTES, MEDIOS_EXIGENTES_FICHA, NOMBRE_MEDIO,
   medioDeHic, mediosDeTexto, sonCompatibles, cotejaMedio,
 };

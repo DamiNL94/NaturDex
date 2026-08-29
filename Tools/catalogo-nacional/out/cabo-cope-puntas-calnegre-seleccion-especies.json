@@ -2,11 +2,11 @@
   "_nota": "Selección de especies para la Capa 3 de Cabo Cope y Puntas de Calnegre. NO es park.json: es la lista aprobada y su procedencia. ORDEN DE PRIORIDAD DE LAS FUENTES: primero la LEGISLACIÓN, después EIDOS, y GBIF solo para corroborar. Nivel 1 — el anexo normativo del espacio (PORN/PRUG/decreto de declaración, evidencia `anexo_normativo`) y el Formulario Normalizado de Datos del sitio Red Natura 2000 (secciones 3.2 y 3.3, evidencia `lista_oficial_sitio`): son las únicas fuentes que afirman que la especie forma parte de ESTE espacio y entran SIN exigirles constancia en GBIF. Nivel 2 — figura legal de EIDOS y especies características del HIC según el Atlas 2005 (`caracteristica`): dicen qué es el taxón, no que esté aquí, así que necesitan al menos una ocurrencia de GBIF dentro de los polígonos que lo corrobore. Nivel 3 — solo GBIF: NO ENTRA; un avistamiento suelto no distingue lo característico del olivo de un bancal abandonado. Autoctonía: se excluye todo lo que la Lista Patrón del IEPNB marca como «Especie no nativa». Se excluye el CEEEI (RD 630/2013): es el catálogo de especies exóticas INVASORAS, no una figura de protección, y tampoco cuentan los anexos forestales (RD 159/2022, RD 289/2003) ni el anexo de explotación de la Ley 42/2007. Alcance taxonómico: flora vascular y vertebrados, que es lo que cataloga NaturDex — clases admitidas: Magnoliopsida, Liliopsida, Pinopsida, Gnetopsida, Polypodiopsida, Lycopodiopsida, Aves, Mammalia, Reptilia, Squamata, Testudines, Amphibia, Actinopterygii. Lo que el nivel 1 enumera y GBIF no confirma se aprueba igual y queda listado en `anexo_sin_constancia` y `sitio_sin_constancia`: entra en el catálogo y hay que contrastarlo en campo. CON UNA EXCEPCIÓN EN ESTE ESPACIO: el anexo normativo declara un ÁMBITO MAYOR que el espacio (la ZEPA «Sierra de la Almenara, Moreras y Cabo Cope» y su zona de estudio, que el propio plan cifra en unos 510 km² repartidos en cuatro unidades —Almenara 415 km², Carrasquilla 94, Sierra de las Moreras 16 y Cabo Cope 1—. Las tablas dicen «presentes en la ZEPA» y «en la zona de estudio», nunca «en este espacio»), así que no afirma que la especie esté AQUÍ y no da nivel 1 por sí solo: sus especies pasan a exigir corroboración de GBIF dentro de los polígonos, igual que el nivel 2. Las que no la tienen salen en `anexo_sin_constancia` como hueco, no como ficha. (3 bis) Las AVES no entran por el filtro de presencia —vuelan, sus ocurrencias caen dentro de cualquier polígono y por eso su ficha se escribe sin `habitatIds`—: exigen respaldo de sitio (formulario oficial del sitio o anexo normativo), y GBIF queda como confirmación. `rarityScore` (1–5) se deriva únicamente de la categoría legal ESTATAL más grave, con la norma que la justifica en `rarityBasis`; no interviene ninguna señal de abundancia. Generada por Tools/catalogo-nacional/build-species-seleccion.js.",
   "park": "cabo-cope-puntas-calnegre",
   "generado": "2026-08-28",
-  "total": 98,
+  "total": 97,
   "aves": 34,
-  "reutilizables": 93,
+  "reutilizables": 92,
   "nuevas": 5,
-  "excluidas": 588,
+  "excluidas": 589,
   "anexo": {
     "consultado": true,
     "fuente": {
@@ -55,14 +55,14 @@
   "aves_puerta": "respaldo de sitio",
   "rareza": {
     "1": 63,
-    "2": 31,
+    "2": 30,
     "3": 0,
     "4": 4,
     "5": 0
   },
   "rareza_local": {
     "1": 37,
-    "2": 26,
+    "2": 25,
     "3": 21,
     "4": 11,
     "5": 3
@@ -2044,39 +2044,6 @@
       },
       "eidosTaxonId": 6625,
       "nivelDeFuente": 1
-    },
-    {
-      "scientificName": "Posidonia oceanica",
-      "class": "Liliopsida",
-      "gbifOccurrences": 6,
-      "habitats": 5,
-      "evidence": [
-        "observada_gbif",
-        "protegida"
-      ],
-      "yaFichadaEn": "salinas-arenales-san-pedro-pinatar",
-      "normas": [
-        {
-          "ambito": "España",
-          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-          "categoria": "LESRPE: En régimen de protección especial"
-        }
-      ],
-      "rarityScore": 2,
-      "rarityBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
-      },
-      "rarityLocal": 2,
-      "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
-      },
-      "origen": "Especie nativa",
-      "eidosTaxonId": 7303,
-      "nivelDeFuente": 2
     },
     {
       "scientificName": "Klasea flavescens",
@@ -7340,6 +7307,39 @@
       "origen": "Especie nativa",
       "eidosTaxonId": 11370,
       "motivo": "ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo)"
+    },
+    {
+      "scientificName": "Posidonia oceanica",
+      "class": "Liliopsida",
+      "gbifOccurrences": 6,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "salinas-arenales-san-pedro-pinatar",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 7303,
+      "motivo": "excluida por decisión del espacio (2026-08-29): La posidonia es una fanerógama MARINA: su propia ficha declara que vive en fondos de hasta 40 m de profundidad, y este espacio no tiene cartografiado ni un solo HIC marino —la «regla marina» del rollout los retira de la Capa 2—. Sus ocurrencias dentro de los polígonos son registros de la línea de costa y de arribazón: hojas muertas que el mar deposita en la playa, no la planta creciendo ahí. Es el mismo caso que Caretta caretta en Carrascoy, y se ve en que estaba enganchada a matorrales, dunas y saladares a la vez. Un visitante no puede encontrarla en ninguno de esos hábitats sin meterse en el agua."
     },
     {
       "scientificName": "Rosmarinus officinalis",

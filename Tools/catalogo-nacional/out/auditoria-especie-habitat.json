@@ -1930,56 +1930,6 @@
           "motivo": "1 ocurrencias en el polígono"
         },
         {
-          "especie": "Posidonia oceanica",
-          "comun": "Aceitunilla de mar",
-          "id": 254,
-          "habitat": "azufaifar",
-          "hic": "5220",
-          "veredicto": "respaldado",
-          "ocurrencias": 5,
-          "motivo": "5 ocurrencias en el polígono"
-        },
-        {
-          "especie": "Posidonia oceanica",
-          "comun": "Aceitunilla de mar",
-          "id": 254,
-          "habitat": "matorral-semiarido",
-          "hic": "5330",
-          "veredicto": "respaldado",
-          "ocurrencias": 4,
-          "motivo": "4 ocurrencias en el polígono"
-        },
-        {
-          "especie": "Posidonia oceanica",
-          "comun": "Aceitunilla de mar",
-          "id": 254,
-          "habitat": "dunas-malcomietalia",
-          "hic": "2230",
-          "veredicto": "respaldado",
-          "ocurrencias": 3,
-          "motivo": "3 ocurrencias en el polígono"
-        },
-        {
-          "especie": "Posidonia oceanica",
-          "comun": "Aceitunilla de mar",
-          "id": 254,
-          "habitat": "dunas-embrionarias",
-          "hic": "2110",
-          "veredicto": "respaldado",
-          "ocurrencias": 1,
-          "motivo": "1 ocurrencias en el polígono"
-        },
-        {
-          "especie": "Posidonia oceanica",
-          "comun": "Aceitunilla de mar",
-          "id": 254,
-          "habitat": "veg-anual-desechos-marinos",
-          "hic": "1210",
-          "veredicto": "respaldado",
-          "ocurrencias": 1,
-          "motivo": "1 ocurrencias en el polígono"
-        },
-        {
           "especie": "Mauranthemum decipiens",
           "comun": "Leucanto litoral",
           "id": 101,
@@ -26524,16 +26474,6 @@
           "motivo": "1 ocurrencias en el polígono"
         },
         {
-          "especie": "Hornungia procumbens",
-          "comun": "mastuerzo rastrero",
-          "id": 43,
-          "habitat": "estepas-salinas-mediterraneas-1510",
-          "hic": "1510",
-          "veredicto": "sin-constancia",
-          "ocurrencias": 0,
-          "motivo": "el barrido la sitúa en el espacio pero NO en este polígono"
-        },
-        {
           "especie": "Juniperus phoenicea",
           "comun": "Sabina negral",
           "id": 44,
@@ -29870,106 +29810,6 @@
           "veredicto": "respaldado",
           "ocurrencias": 3,
           "motivo": "3 ocurrencias en el polígono"
-        },
-        {
-          "especie": "Posidonia oceanica",
-          "comun": "Aceitunilla de mar",
-          "id": 26,
-          "habitat": "matorrales-halofilos-mediterraneos-1420",
-          "hic": "1420",
-          "veredicto": "respaldado",
-          "ocurrencias": 7,
-          "motivo": "7 ocurrencias en el polígono"
-        },
-        {
-          "especie": "Posidonia oceanica",
-          "comun": "Aceitunilla de mar",
-          "id": 26,
-          "habitat": "pastizales-salinos-mediterraneos-1410",
-          "hic": "1410",
-          "veredicto": "respaldado",
-          "ocurrencias": 5,
-          "motivo": "5 ocurrencias en el polígono"
-        },
-        {
-          "especie": "Posidonia oceanica",
-          "comun": "Aceitunilla de mar",
-          "id": 26,
-          "habitat": "dunas-con-vegetacion-2260",
-          "hic": "2260",
-          "veredicto": "respaldado",
-          "ocurrencias": 4,
-          "motivo": "4 ocurrencias en el polígono"
-        },
-        {
-          "especie": "Posidonia oceanica",
-          "comun": "Aceitunilla de mar",
-          "id": 26,
-          "habitat": "acantilados-con-vegetacion-1240",
-          "hic": "1240",
-          "veredicto": "respaldado",
-          "ocurrencias": 2,
-          "motivo": "2 ocurrencias en el polígono"
-        },
-        {
-          "especie": "Posidonia oceanica",
-          "comun": "Aceitunilla de mar",
-          "id": 26,
-          "habitat": "estepas-salinas-mediterraneas-1510",
-          "hic": "1510",
-          "veredicto": "respaldado",
-          "ocurrencias": 2,
-          "motivo": "2 ocurrencias en el polígono"
-        },
-        {
-          "especie": "Posidonia oceanica",
-          "comun": "Aceitunilla de mar",
-          "id": 26,
-          "habitat": "galerias-y-matorrales-92D0",
-          "hic": "92D0",
-          "veredicto": "respaldado",
-          "ocurrencias": 2,
-          "motivo": "2 ocurrencias en el polígono"
-        },
-        {
-          "especie": "Posidonia oceanica",
-          "comun": "Aceitunilla de mar",
-          "id": 26,
-          "habitat": "matorrales-halonitrofilos-pegano-1430",
-          "hic": "1430",
-          "veredicto": "respaldado",
-          "ocurrencias": 2,
-          "motivo": "2 ocurrencias en el polígono"
-        },
-        {
-          "especie": "Posidonia oceanica",
-          "comun": "Aceitunilla de mar",
-          "id": 26,
-          "habitat": "dunas-con-cespedes-2230",
-          "hic": "2230",
-          "veredicto": "respaldado",
-          "ocurrencias": 1,
-          "motivo": "1 ocurrencias en el polígono"
-        },
-        {
-          "especie": "Posidonia oceanica",
-          "comun": "Aceitunilla de mar",
-          "id": 26,
-          "habitat": "dunas-litorales-con-2250",
-          "hic": "2250",
-          "veredicto": "respaldado",
-          "ocurrencias": 1,
-          "motivo": "1 ocurrencias en el polígono"
-        },
-        {
-          "especie": "Posidonia oceanica",
-          "comun": "Aceitunilla de mar",
-          "id": 26,
-          "habitat": "vegetacion-halonitrofila-anual-1310",
-          "hic": "1310",
-          "veredicto": "respaldado",
-          "ocurrencias": 1,
-          "motivo": "1 ocurrencias en el polígono"
         },
         {
           "especie": "Psammodromus algirus",

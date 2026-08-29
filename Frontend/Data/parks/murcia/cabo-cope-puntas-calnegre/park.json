@@ -148,8 +148,7 @@
         134,
         168,
         252,
-        253,
-        254
+        253
       ],
       "imageAttribution": "maxlbe (CC BY 4.0) · GBIF",
       "imageNote": "Portada ilustrada con Alhelí de mar (Malcolmia littorea), la especie que da nombre al hábitat."
@@ -179,8 +178,7 @@
       "speciesIds": [
         22,
         26,
-        27,
-        254
+        27
       ],
       "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons"
     },
@@ -317,7 +315,6 @@
         251,
         252,
         253,
-        254,
         255,
         256,
         257,
@@ -456,7 +453,6 @@
         251,
         252,
         253,
-        254,
         255,
         256,
         257,
@@ -717,8 +713,7 @@
         22,
         26,
         27,
-        134,
-        254
+        134
       ],
       "imageAttribution": "Taken by Carsten Niehaus (user:Lumbar). (CC BY-SA 3.0) · Wikimedia Commons"
     },
@@ -2090,62 +2085,6 @@
         "roquedos-casmofiticos",
         "subestepa-thero-brachypodietea",
         "dunas-malcomietalia"
-      ],
-      "gbifOccurrences": 6,
-      "visible": true
-    },
-    {
-      "id": 254,
-      "commonName": "Aceitunilla de mar",
-      "scientificName": "Posidonia oceanica",
-      "kingdom": "flora",
-      "group": "Hierba",
-      "habitat": "Vive en los fondos marinos arenosos, hasta 40 m de profundidad",
-      "conservationStatus": "Protegida (LESRPE)",
-      "description": "Hierba perenne, hasta de 70 cm, rizomatosa, con rizomas pelosos, comprimidos lateralmente. Hojas de 40-70 x 1 cm, acintadas. Flores que nacen en el extremo de un pedúnculo, dispuestas en varias espigas, y formadas por un estambre con dos tecas y el conectivo ensanchado como un tépalo del que sobresale un apículo, y un ovario con estigma papiloso. Frutos en drupa de 3 cm, ovoides, carnosas.",
-      "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
-      "tips": [],
-      "seasonality": "Todo el año",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Posidonia_oceanica_(L).jpg?width=1280",
-      "imageAttribution": "Frédéric Ducarme (CC BY-SA 4.0) · Wikimedia Commons",
-      "coordinates": null,
-      "rarityScore": 2,
-      "rarityBasis": {
-        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-        "ambito": "estatal",
-        "origen": "spainStatus del catálogo universal"
-      },
-      "rarityLocal": 2,
-      "rarityLocalBasis": {
-        "categoria": "En régimen de protección especial",
-        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
-        "ambito": "España"
-      },
-      "featured": false,
-      "source": "GBIF: 6 ocurrencias dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-08-28); EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
-      "taxonomy": {
-        "kingdom": "Plantae",
-        "phylum": "Tracheophyta",
-        "class": "Liliopsida",
-        "order": "Alismatales",
-        "family": "Posidoniaceae",
-        "genus": "Posidonia"
-      },
-      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
-      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2010)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
-      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
-      "regionalCcaa": "Región de Murcia",
-      "reviewNote": null,
-      "eidosTaxonId": 7303,
-      "gbifSpeciesKey": 5328663,
-      "zepaSiteCode": null,
-      "habitatIds": [
-        "azufaifar",
-        "matorral-semiarido",
-        "dunas-malcomietalia",
-        "dunas-embrionarias",
-        "veg-anual-desechos-marinos"
       ],
       "gbifOccurrences": 6,
       "visible": true

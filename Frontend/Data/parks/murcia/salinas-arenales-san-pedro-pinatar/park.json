@@ -109,7 +109,6 @@
         22,
         24,
         25,
-        26,
         27,
         28,
         29,
@@ -323,7 +322,6 @@
         23,
         24,
         25,
-        26,
         27,
         28,
         29,
@@ -443,7 +441,6 @@
         23,
         24,
         25,
-        26,
         27,
         28,
         29,
@@ -562,7 +559,6 @@
         23,
         24,
         25,
-        26,
         27,
         28,
         30,
@@ -656,7 +652,6 @@
         22,
         24,
         25,
-        26,
         27,
         28,
         30,
@@ -727,7 +722,6 @@
         22,
         24,
         25,
-        26,
         27,
         28,
         29,
@@ -817,7 +811,6 @@
       "audioTranscript": null,
       "reviewNote": "Discrepancia entre dos fuentes oficiales, anotada y NO resuelta. La Tabla 5 del §2.3.2.1 del PRUG del parque (volumen III del Decreto n.º 259/2019) enumera CATORCE tipos de hábitat de interés comunitario terrestres y no incluye este código; a cambio trae el 2240 «Dunas con céspedes del Brachypodietalia y de plantas anuales» (3,31 ha), que el Atlas de 2005 no cartografía aquí. Nuestra cartografía da quince y difiere con el plan en uno en cada sentido. Las 1,4 ha de este código salen de un único recinto del Atlas que es un MOSAICO: el mismo polígono lleva además el 1510, el 92D0 y el 1430, así que la superficie es la del recinto y no la de la comunidad de acantilado. Lo que hay que mirar en campo es si el afloramiento de calcoarenitas miocénicas de la zona de Punta de Algas y las Encañizadas —que el §2.1.4 del PRUG describe como escollos y costa baja rocosa— sostiene la comunidad de Limonium que define el 1240.",
       "speciesIds": [
-        26,
         34,
         44,
         221
@@ -846,7 +839,6 @@
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
-        26,
         34,
         44,
         147,
@@ -879,7 +871,6 @@
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
-        26,
         34,
         44,
         226,
@@ -909,7 +900,6 @@
       "audioTranscript": null,
       "reviewNote": null,
       "speciesIds": [
-        26,
         34,
         44
       ]
@@ -2520,7 +2510,7 @@
         "origen": "spainStatus del park.json"
       },
       "featured": false,
-      "source": "GBIF: 7 ocurrencias dentro de los polígonos de hábitat del espacio (10 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "source": "GBIF confirma su presencia con 7 ocurrencias dentro del espacio (barrido de 2026-08-17); un taxón volador no se adscribe a hábitats por sus ocurrencias; Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
         "phylum": "Tracheophyta",
@@ -2537,18 +2527,7 @@
       "eidosTaxonId": 7303,
       "gbifSpeciesKey": 5328663,
       "zepaSiteCode": null,
-      "habitatIds": [
-        "matorrales-halofilos-mediterraneos-1420",
-        "pastizales-salinos-mediterraneos-1410",
-        "dunas-con-vegetacion-2260",
-        "acantilados-con-vegetacion-1240",
-        "estepas-salinas-mediterraneas-1510",
-        "galerias-y-matorrales-92D0",
-        "matorrales-halonitrofilos-pegano-1430",
-        "dunas-con-cespedes-2230",
-        "dunas-litorales-con-2250",
-        "vegetacion-halonitrofila-anual-1310"
-      ],
+      "habitatIds": [],
       "gbifOccurrences": 7,
       "visible": true,
       "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2010)"

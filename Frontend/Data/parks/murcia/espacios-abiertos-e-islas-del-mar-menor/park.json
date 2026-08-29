@@ -203,7 +203,6 @@
         37,
         38,
         41,
-        43,
         44,
         45,
         46,
@@ -3548,8 +3547,7 @@
       "gbifSpeciesKey": 5376158,
       "zepaSiteCode": null,
       "habitatIds": [
-        "matorrales-termomediterraneos-y-5330",
-        "estepas-salinas-mediterraneas-1510"
+        "matorrales-termomediterraneos-y-5330"
       ],
       "gbifOccurrences": 1,
       "visible": false,

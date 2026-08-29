@@ -1,6 +1,6 @@
 # cabo-cope-puntas-calnegre · selección de especies
 
-Generada el 2026-08-28. **98 aprobadas** (34 aves), 93 ya fichadas en otro espacio y 5 nuevas. 588 excluidas.
+Generada el 2026-08-28. **97 aprobadas** (34 aves), 92 ya fichadas en otro espacio y 5 nuevas. 589 excluidas.
 
 Atlas 2005 consultado: 575 especies características para los HIC de este espacio, 42 de ellas por alias de recombinación. La lectura es la UNIÓN de todas las fuentes y **nunca resta**: que un extractor de PDF no lea un nombre no es el Atlas negándolo.
 
@@ -99,7 +99,7 @@ Tramo 1–5 derivado **solo** de la categoría legal vigente; no interviene ning
 | 5 | En peligro de extinción · Extinguida | 0 | 3 |
 | 4 | Vulnerable · Sensible a la alteración de su hábitat | 4 | 11 |
 | 3 | De interés especial | 0 | 21 |
-| 2 | En régimen de protección especial (LESRPE) | 31 | 26 |
+| 2 | En régimen de protección especial (LESRPE) | 30 | 25 |
 | 1 | Sin figura de protección | 63 | 37 |
 | **≥ 4** | **candidatas a destacadas** | **4** | **14** |
 
@@ -167,7 +167,6 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Frankenia corymbosa* | Magnoliopsida | 7 | 9 | 1 | observada_gbif, caracteristica | calblanque-monte-cenizas-pena-aguila |
 | *Anabasis hispanica* | Magnoliopsida | 7 | 7 | 1 | observada_gbif, protegida, anexo_normativo | calblanque-monte-cenizas-pena-aguila |
 | *Notoceras bicorne* | Magnoliopsida | 7 | 3 | 1 | observada_gbif, caracteristica, protegida, anexo_normativo | sierra-espuna |
-| *Posidonia oceanica* | Liliopsida | 6 | 5 | 2 | observada_gbif, protegida | salinas-arenales-san-pedro-pinatar |
 | *Klasea flavescens* | Magnoliopsida | 6 | 6 | 1 | observada_gbif, anexo_normativo | carrascoy-y-el-valle |
 | *Hieraaetus pennatus* | Aves | 6 | 6 | 2 | observada_gbif, protegida, anexo_normativo, lista_oficial_sitio | barrancos-de-gebas |
 | *Mauranthemum decipiens* | Magnoliopsida | 5 | 6 | 1 | observada_gbif, protegida | carrascoy-y-el-valle |
@@ -350,6 +349,7 @@ EIDOS devuelve, junto a las figuras de protección, listas que no protegen a nad
 | *Papilio machaon* | Insecta | 7 | 5 | fuera del alcance del catálogo (clase Insecta) |
 | *Circus aeruginosus* | Aves | 7 | 3 | ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo) |
 | *Tringa glareola* | Aves | 7 | 3 | ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo) |
+| *Posidonia oceanica* | Liliopsida | 6 | 5 | excluida por decisión del espacio (2026-08-29): La posidonia es una fanerógama MARINA: su propia ficha declara que vive en fondos de hasta 40 m de profundidad, y este espacio no tiene cartografiado ni un solo HIC marino —la «regla marina» del rollout los retira de la Capa 2—. Sus ocurrencias dentro de los polígonos son registros de la línea de costa y de arribazón: hojas muertas que el mar deposita en la playa, no la planta creciendo ahí. Es el mismo caso que Caretta caretta en Carrascoy, y se ve en que estaba enganchada a matorrales, dunas y saladares a la vez. Un visitante no puede encontrarla en ninguno de esos hábitats sin meterse en el agua. |
 | *Rosmarinus officinalis* | Magnoliopsida | 6 | 10 | solo GBIF: ninguna fuente documental la respalda (ni la norma del espacio, ni el formulario del sitio, ni una figura legal, ni el Atlas de Hábitats) |
 | *Phoenicopterus roseus* | Aves | 6 | 8 | ave sin respaldo de sitio (no figura en el formulario oficial del sitio ni en el anexo normativo) |
 | *Zygaena lavandulae* | Insecta | 6 | 2 | fuera del alcance del catálogo (clase Insecta) |

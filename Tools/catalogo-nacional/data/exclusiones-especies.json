@@ -11,11 +11,25 @@
     ]
   },
   "espacios": {
+    "cabo-cope-puntas-calnegre": [
+      {
+        "scientificName": "Posidonia oceanica",
+        "motivo": "La posidonia es una fanerógama MARINA: su propia ficha declara que vive en fondos de hasta 40 m de profundidad, y este espacio no tiene cartografiado ni un solo HIC marino —la «regla marina» del rollout los retira de la Capa 2—. Sus ocurrencias dentro de los polígonos son registros de la línea de costa y de arribazón: hojas muertas que el mar deposita en la playa, no la planta creciendo ahí. Es el mismo caso que Caretta caretta en Carrascoy, y se ve en que estaba enganchada a matorrales, dunas y saladares a la vez. Un visitante no puede encontrarla en ninguno de esos hábitats sin meterse en el agua.",
+        "decidido": "2026-08-29"
+      }
+    ],
     "carrascoy-y-el-valle": [
       {
         "scientificName": "Caretta caretta",
         "motivo": "La tortuga boba es marina y este parque es de interior. Sus ocurrencias dentro de los polígonos de hábitat son registros de telemetría por satélite (`MACHINE_OBSERVATION`) cuya trayectoria interpolada cruza tierra adentro: no son observaciones de la especie en el espacio, son puntos calculados de un animal que estaba en el mar. Aprobarla pondría en el catálogo de una sierra una especie que un visitante no puede encontrar allí.",
         "decidido": "2026-08-10 (c)"
+      }
+    ],
+    "salinas-arenales-san-pedro-pinatar": [
+      {
+        "scientificName": "Posidonia oceanica",
+        "motivo": "La posidonia es una fanerógama MARINA: su propia ficha declara que vive en fondos de hasta 40 m de profundidad, y este espacio no tiene cartografiado ni un solo HIC marino —la «regla marina» del rollout los retira de la Capa 2—. Sus ocurrencias dentro de los polígonos son registros de la línea de costa y de arribazón: hojas muertas que el mar deposita en la playa, no la planta creciendo ahí. Es el mismo caso que Caretta caretta en Carrascoy, y se ve en que estaba enganchada a matorrales, dunas y saladares a la vez. Un visitante no puede encontrarla en ninguno de esos hábitats sin meterse en el agua.",
+        "decidido": "2026-08-29"
       }
     ]
   }
