@@ -279,6 +279,21 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   comprobar con `validate`**: se queda ahí sosteniendo una decisión durante meses. Resuelto el
   2026-08-27 (deuda nº 4). La regla: **la etiqueta de una autoridad dice lo que opina esa autoridad,
   no si dos autoridades discrepan** — eso hay que ir a preguntárselo a la otra, taxón a taxón.
+- **Un campo LOCAL que en realidad no es local, y el catálogo contradiciéndose consigo mismo sin que
+  nada pudiera verlo.** `regionalStatus` guarda la figura del catálogo autonómico y es local —lo
+  lleva cada `park.json`—, así que la coherencia entre parques de `validate` no lo mira: solo compara
+  los campos UNIVERSALES. Y es correcto que sea local, porque el día que entre otra comunidad la
+  misma especie tendrá legítimamente dos estados. Pero **dentro de una misma comunidad no puede
+  tenerlos**: la Ley 7/1995 protege a la garduña en toda la Región de Murcia o en ninguna parte. Pues
+  había **nueve taxones con dos tramos distintos** según el espacio —el alcaraván, el sapo corredor,
+  la cogujada montesina, la gineta, la garduña, la collalba negra, la chova piquirroja, la coscoja y
+  la sabina negral—, y en los nueve el raro es **Sierra Espuña**, que conserva textos del piloto. No
+  fallaba nada: los dos textos son prosa bien escrita, y de esa prosa cuelgan el nivel 2 de
+  `especies:niveles` y el `rarityLocal` de `especies:rareza`. Lo caza `npm run especies:legal`
+  **sin gastar una petición** (2026-08-29, deuda nº 43), y **no se arregla por mayoría**: en la chova
+  piquirroja el texto bueno es el del espacio que va solo. La regla general: **un campo local que
+  describe algo territorial necesita su propia coherencia, agrupada por el territorio del que
+  habla** — ni por parque ni globalmente.
 
 ---
 
@@ -291,6 +306,7 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 | Dar de alta o ampliar un espacio | [`Docs/runbook/ALTA-DE-ESPACIO.md`](Docs/runbook/ALTA-DE-ESPACIO.md) + [`Docs/runbook/TRAMPAS-CONOCIDAS.md`](Docs/runbook/TRAMPAS-CONOCIDAS.md) |
 | Tocar cualquier cosa de aves | [`Docs/runbook/AVES.md`](Docs/runbook/AVES.md) — **entran por otra puerta que el resto**, y el documento dice también qué NO cubre esa puerta |
 | Dudar de si una especie pertenece al hábitat del que cuelga | [`Docs/auditoria-especie-habitat.md`](Docs/auditoria-especie-habitat.md) — el estado de los 4.379 enlaces, enlace a enlace. Lo regenera `npm run especies:habitats`; el criterio vive en la cabecera de la herramienta y en `Tools/lib/medios.js` |
+| Dudar de la figura legal que declara una ficha | [`Docs/cotejo-estado-legal.md`](Docs/cotejo-estado-legal.md) — el texto de `spainStatus` y `regionalStatus` contra EIDOS, en siete clases. Lo regenera `npm run especies:legal -- --online`; tres de las siete clases salen **sin red** |
 | Saber en qué estado está un espacio | [`Docs/rollout/ESTADO.md`](Docs/rollout/ESTADO.md) — **la tabla**. Los informes de cierre están en `Docs/rollout/sesiones/`, uno por periodo: entra solo al que haga falta |
 | Tocar el frontend | [`Frontend/Js/CLAUDE.md`](Frontend/Js/CLAUDE.md) |
 | Tocar la API | [`Backend/CLAUDE.md`](Backend/CLAUDE.md) |
@@ -323,6 +339,8 @@ npm run typecheck           # tsc --noEmit sobre AdminPanel
 npm run taxones:duplicados  # sale con código 1 mientras queden
 npm run taxones:nomenclatura # el nombre de la ficha contra EIDOS y GBIF; sin --online no gasta red
 npm run especies:habitats   # repasa los enlaces especie↔hábitat; sin --write no toca nada
+npm run especies:legal      # la figura legal que AFIRMA la ficha contra EIDOS; nunca escribe.
+                            # Sin --online salen igual las clases D, F y G (G no necesita a EIDOS)
 npm run glossary:check      # editorial, no bloquea
 ```
 

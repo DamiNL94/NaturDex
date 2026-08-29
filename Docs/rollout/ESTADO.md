@@ -163,6 +163,12 @@ delimitación regional, así que conserva el límite del MITECO y no pasa por
 Cada línea es un informe de cierre. El título dice la conclusión; entra al fichero solo si te hace
 falta el detalle.
 
+### [`sesiones/2026-08-29.md`](sesiones/2026-08-29.md)
+
+| Sesión | Qué se cerró |
+|---|---|
+| 2026-08-29 | **El barrido de la deuda nº 43, hecho: 1.058 taxones de 2.882 fichas cotejados contra EIDOS, y ni un byte de dato cambiado.** Lo hace `npm run especies:legal -- --online`, informe en `Docs/cotejo-estado-legal.md`; **no escribe nada** porque resolver cada caso exige el boletín y no una regla — la contradicción va en las dos direcciones y elegir bando sería la nº 4 otra vez. **Quince discrepancias reales**: 10 fichas que afirman una figura que EIDOS no sostiene (**once espacios** anuncian el alcaraván en el LESRPE y **seis** la gineta, y EIDOS solo trae para los dos la Ley 42/2007, que no protege), 4 que niegan teniéndola, y **una que se queda corta y es la que importa: la tortuga mora** de Cabo Cope y Moreras se anuncia LESRPE cuando el RD 139/2011 la cataloga **Vulnerable**, así que la especie emblemática del espacio no llega al umbral de destacada. **Y una clase que no estaba en el guion y no necesita a EIDOS ni existiendo: el catálogo se contradice consigo mismo.** `regionalStatus` es local, así que la coherencia entre parques de `validate` no lo mira —solo compara campos universales, y con razón—, pero dentro de una misma comunidad no puede haber dos tramos para el mismo taxón: **nueve los tienen** (alcaraván, sapo corredor, cogujada montesina, gineta, garduña, collalba negra, chova piquirroja, coscoja, sabina negral) y **en los nueve el raro es Sierra Espuña**, que conserva textos del piloto. **No se resuelve por mayoría**: en la chova piquirroja el bueno es el del espacio que va solo, y una votación habría borrado el único correcto. Con ella, dos pegotes más del piloto en el mismo espacio: **once aves de Sierra Espuña citan la ZEPA ES0000261**, que es la de Cabo Cope y no la suya (la ES0000173), y la sabina negral habla de «la población de Cabo Cope». **Su `regionalStatus` hay que rehacerlo entero**: 188 fichas con 28 redacciones. Y un error propio que se cuenta porque es la lección: la primera pasada dio **21** casos de clase A y **siete eran del filtro**, por comparar evaluaciones de la UICN y Directivas contra una vista que solo sirve normas — el cotejo asimétrico de la posidonia otra vez |
+
 ### [`sesiones/2026-08-28-b.md`](sesiones/2026-08-28-b.md)
 
 | Sesión | Qué se cerró |

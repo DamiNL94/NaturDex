@@ -63,3 +63,9 @@ Tools/catalogo-nacional/out/*-eidos-seleccion-cache.json
 # nombre de observador y coordenadas): no se versionan nunca, ni siquiera "para probar". Lo que sí
 # está versionado es el generador y la documentación de qué contiene (Docs/DARWIN-CORE.md).
 Tools/catalogo-nacional/out/dwc/
+
+# Caché de respuestas en crudo de v_estadolegal (coteja-estado-legal.js). Misma regla que las de
+# arriba: lo reproducible no se versiona, y aquí además NO conviene congelarlo — las normas cambian y
+# lo que interesa de un cotejo es lo que EIDOS dice HOY. Lo versionado es el resultado,
+# Docs/cotejo-estado-legal.md. La pasada sin red (clases D, F y G) no necesita esta caché.
+Tools/catalogo-nacional/out/estado-legal-eidos.json

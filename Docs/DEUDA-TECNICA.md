@@ -1433,7 +1433,69 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     > versionar el índice de todos los espacios) deja de ser un lujo.
 
 43. **Los estados legales del piloto están escritos a mano y contradicen a EIDOS, en las dos
-    direcciones.** Salió al desglosar la nº 41: tres fichas de Cabo Cope declaran una figura de
+    direcciones.**
+    > **EL BARRIDO ESTÁ HECHO — 2026-08-29.** Lo hace `npm run especies:legal -- --online`
+    > (`Tools/catalogo-nacional/coteja-estado-legal.js`) sobre **1.058 taxones de 2.882 fichas** en
+    > los dieciséis espacios, y el resultado vive en
+    > [`Docs/cotejo-estado-legal.md`](cotejo-estado-legal.md), caso a caso y con las dos citas al
+    > lado. **La herramienta no escribe nada**, y no por prudencia genérica: resolver cada caso exige
+    > el boletín, que es lo que este apartado ya decía.
+    >
+    > **Quince discrepancias reales**, en las tres formas que puede tomar:
+    >
+    > | Clase | Qué es | Casos |
+    > |---|---|---|
+    > | **A** · afirma sin respaldo | la ficha declara una figura y EIDOS no trae ninguna norma que proteja en ese ámbito | **10** |
+    > | **B** · niega teniéndola | la ficha dice «no incluida» y EIDOS sí trae norma vigente | **4** |
+    > | **C** · categoría distinta | las dos ven figura, con gravedad distinta | **1** |
+    >
+    > Y tres clases más que no son discrepancia pero sí hueco: **16** textos que no son un estado
+    > legal (D), **13** cuyo tramo cuelga entero de una evaluación o de una Directiva y por tanto
+    > `v_estadolegal` no puede confirmar (F), y **9** de la clase G, que es el hallazgo que no
+    > esperaba nadie.
+    >
+    > **La clase G: el catálogo se contradice consigo mismo, y para verlo no hacía falta EIDOS.** Un
+    > catálogo autonómico protege a la especie en TODA la comunidad, así que dos espacios de Murcia
+    > no pueden dar tramos distintos al mismo taxón. Pues lo hacen en nueve: el alcaraván, el sapo
+    > corredor, la cogujada montesina, la gineta, la garduña, la collalba negra, la chova
+    > piquirroja, la coscoja y la sabina negral. **En los nueve el espacio que va solo es Sierra
+    > Espuña**, que conserva textos del piloto («Catálogo Regional de Especies Amenazadas de la Fauna
+    > Silvestre de Murcia: De interés especial») mientras los otros llevan el derivado de EIDOS. Y
+    > **no se resuelve por mayoría**, que es justo lo que había que comprobar antes de escribir nada:
+    > en ocho casos la mayoría acierta, pero en la **chova piquirroja** el texto correcto es el del
+    > espacio que va solo —EIDOS la da «de interés especial» por la Ley 7/1995 y son los otros nueve
+    > espacios los que dicen «no incluida»—, así que una votación habría borrado el único bueno.
+    > `validate` no puede ver esto porque solo coteja entre parques los campos **universales**, y
+    > `regionalStatus` es local por diseño — con razón, porque el día que entre otra comunidad la
+    > misma especie tendrá legítimamente dos estados. Por eso la comprobación agrupa **por
+    > comunidad**.
+    >
+    > **Lo más caro de la clase A no es Cabo Cope.** Son **11 espacios** anunciando el alcaraván
+    > (*Burhinus oedicnemus*) en LESRPE y **6** la gineta (*Genetta genetta*): EIDOS solo trae para
+    > los dos la Ley 42/2007 —Anexo IV y Anexo VI, régimen de explotación, que no protege—. Y la
+    > culebra bastarda de este apartado aparece en **5 espacios más** de los que se contaron.
+    >
+    > **Y la clase C es una sola ficha y hay que mirarla antes que ninguna**: la **tortuga mora**
+    > (*Testudo graeca*) de Cabo Cope y Sierra de las Moreras se anuncia como LESRPE (tramo 2)
+    > cuando el RD 139/2011 la cataloga **Vulnerable** (tramo 4). Es el error de la siempreviva del
+    > §2 del `CLAUDE.md` otra vez, pero al revés: aquí la ficha se queda CORTA, así que la especie
+    > emblemática del espacio no llega al umbral de destacada.
+    >
+    > **Lo que queda, y ahora está acotado**: llevar al BOE y al BORM las quince de A/B/C y las nueve
+    > de G, y reescribir como estado legal los 16 textos de la clase D —entre ellos las **once aves
+    > de Sierra Espuña cuyo `regionalStatus` cita la ZEPA ES0000261**, que es la de Almenara,
+    > Moreras y Cabo Cope y **no la suya** (la suya es la ES0000173, y el código ajeno no aparece en
+    > ninguna otra parte de su `park.json`)—, y cinco `spainStatus` que llevan una evaluación de la
+    > UICN donde debería ir una norma, teniendo ya el campo `iucnSpain` para eso desde la nº 39.
+    >
+    > **Y hay un tercer rastro de la misma copia**, que sale en la clase B: el `regionalStatus` de la
+    > sabina negral **en Sierra Espuña** dice «población de **Cabo Cope** señalada por su interés
+    > biogeográfico». Tres pegotes del piloto en el mismo espacio —la ZEPA ajena, la población
+    > ajena y los nueve textos de la clase G— apuntan todos al mismo trabajo: **el `regionalStatus`
+    > de Sierra Espuña es el que hay que rehacer entero**, y son 188 fichas con 28 redacciones
+    > distintas.
+
+    Salió al desglosar la nº 41: tres fichas de Cabo Cope declaran una figura de
     protección que la selección no ve, porque EIDOS no devuelve **ninguna** norma aplicable para su
     `eidosTaxonId` — y no es un fallo de resolución, los identificadores son los mismos en la ficha
     y en la selección, comprobado en vivo.
