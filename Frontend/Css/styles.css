@@ -261,17 +261,25 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFo
 .park-user{display:flex;align-items:center;gap:8px}
 /* --- Reparto del ancho de .park-nav ----------------------------------------------------------
    La fila tiene CUATRO iconos desde que la descarga sin conexión dejó de ser una barra con
-   rótulo, y cuatro objetivos táctiles de 44 px (regla §D de ranger.css: se pulsan en el campo,
-   con guantes) más el botón «Parques» no caben en una barra lateral de 360 px ni, mucho menos,
-   en 320 px de móvil. Lo que cede es el TEXTO, nunca el objetivo táctil: primero se recorta el
-   nombre de usuario y, si aún falta, el rótulo del botón de volver. Los iconos no se encogen ni
-   se salen de la barra, que es lo que pasaba sin estas reglas: #profileBtn quedaba cortado por
-   el borde del panel, sin aviso de nadie. */
+   rótulo, y cuatro objetivos táctiles —44 px en el campo por la regla §D de ranger.css, 36 con
+   puntero fino— más el botón «Parques» no caben en la barra lateral. Medido: el contenido pedía
+   327 px en una columna de 320, y lo que se salía por el borde era #profileBtn, cortado y sin que
+   nada avisara. Encogerlos no es opción: el objetivo táctil no se negocia.
+   Lo que se va, entonces, es el SALUDO: el nombre de usuario no se pinta en la cabecera del
+   parque. No se pierde nada, porque el icono que tiene al lado abre «Perfil y ajustes», donde
+   está entero, y la pantalla de selección de parque —fila a ancho completo— lo sigue enseñando en
+   #userNameSelect. Repartir el hueco entre los dos rótulos en vez de quitar uno se probó y da lo
+   peor de los dos mundos: en un portátil de 1280 «Parques» se quedaba en «P.» o el nombre en un
+   guion suelto, según a quién se le diera prioridad.
+   El rótulo del botón de volver SÍ sigue pudiendo encogerse: entre 901 y ~1100 px la columna se
+   queda corta aun sin el nombre, y ahí es preferible «Parque…» a que se salga algo. Y NADA de
+   min-width:0 en .park-user: su mínimo son los iconos, y dejarla encoger por debajo devuelve
+   justo el recorte que estas reglas quitan. */
 .park-nav{gap:8px}
 .park-nav .back-btn{flex:0 1 auto;min-width:0}
 .park-nav .park-user{flex:0 1 auto;gap:6px}
 .park-nav .park-user .icon-btn{flex:0 0 auto}
-.park-nav .user-name{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.park-nav .user-name{display:none}
 
 /* Portada */
 .screen-cover{background:radial-gradient(1200px 600px at 70% -10%,#e7f2ea 0%,var(--paper) 60%)}
@@ -1034,10 +1042,10 @@ p.achievement-progress-label{margin:8px 0 0}
   .nearby-panel{top:calc(112px + env(safe-area-inset-top))}
   /* El "volver" de la barra lateral manda: es la salida del parque y tiene que verse a la primera.
      Lo que se va en pantalla estrecha es su RÓTULO, no el botón: con cuatro iconos de 44 px al otro
-     lado —el cuarto es la descarga sin conexión— y 320 px de ancho, la palabra «Parques» es lo
-     único que sobra; el chevrón, a la izquierda del todo, se sigue leyendo como la salida. Se
-     esconde con las reglas de .sr-only y NO con display:none a propósito: así el botón conserva su
-     nombre accesible («Parques») para quien no ve el icono. */
+     lado —el cuarto es la descarga sin conexión— y 320 px de ancho no cabe, ni siquiera habiendo
+     quitado ya el nombre de usuario unas líneas más arriba; el chevrón, a la izquierda del todo,
+     se sigue leyendo como la salida. Se esconde con las reglas de .sr-only y NO con display:none a
+     propósito: así el botón conserva su nombre accesible («Parques») para quien no ve el icono. */
   .park-nav .back-btn{flex:0 0 auto;width:var(--tap-min,44px);padding:0;justify-content:center}
   .park-nav .back-btn-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;
     overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
