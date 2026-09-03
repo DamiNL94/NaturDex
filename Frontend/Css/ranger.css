@@ -119,7 +119,7 @@ h1,h2{text-wrap:pretty}
 /* ===== B. Piel ================================================================================= */
 /* Forma: la estética es impresa, no de burbuja. Fuera píldoras y esquinas de 8-16px. */
 .btn-primary,.btn-secondary,.btn-danger,.icon-btn,.seen-toggle,.poi-seen-btn,.popup-enter,
-.save-offline-btn,.explorer-toggle,.layers-toggle,.nearby-item,.hint-primary,.notice-action,
+.explorer-toggle,.layers-toggle,.nearby-item,.hint-primary,.notice-action,
 .presence-action,.layers-solo,.badge,.habitat-species-chip,.habitat-filter-chip,.detail-group-link,.profile-choices,
 .profile-choice,.auth-tabs,.auth-tab,.auth-card,.segmented,.filter-button,.view-tab,
 .species-card,.habitat-card,.habitat-group-card,.summary-grid div,.achievement-card,.detail-facts div,.status-list li,
@@ -354,7 +354,7 @@ select{font-family:var(--font-ui);font-size:var(--fs-md)}
 
 /* Mapa, marcadores y controles del mapa */
 #map{background:var(--sea-tint)}
-.explorer-toggle,.layers-toggle,.save-offline-btn{background:var(--panel);color:var(--ink);
+.explorer-toggle,.layers-toggle{background:var(--panel);color:var(--ink);
   border:1px solid var(--line-strong);font-weight:700;letter-spacing:.06em;text-transform:uppercase;
   font-size:var(--fs-xs);min-height:40px}
 .explorer-toggle.active{background:var(--leaf-fill);border-color:var(--leaf-fill);color:#FBF7EE}
@@ -402,7 +402,7 @@ select{font-family:var(--font-ui);font-size:var(--fs-md)}
 .presence-bar.is-outside .presence-dot{background:var(--danger)}
 .presence-action{border-color:var(--leaf);color:var(--leaf);background:var(--panel);min-height:32px}
 .conn-status{color:var(--leaf);letter-spacing:.06em;text-transform:uppercase;font-size:var(--fs-xs)}
-.save-offline-btn.saved{background:var(--leaf-tint);border-color:var(--leaf);color:var(--leaf)}
+.offline-btn.is-saved,.offline-btn.is-saved:hover{background:var(--leaf-tint);border-color:var(--leaf);color:var(--leaf)}
 
 /* Tutorial y diálogos */
 .tutorial-card,.habitat-prompt-card{background:var(--panel);border:1px solid var(--line);
@@ -506,10 +506,9 @@ select{font-family:var(--font-ui);font-size:var(--fs-md)}
   .progress-wrap{margin-top:8px}
   .progress-label{margin-top:4px}
   .presence-bar{margin-top:8px}
-  /* «En línea» no se parte en dos líneas: el que cede ante el botón de descarga es el botón. */
+  /* La barra solo aparece sin cobertura, y entonces es lo único que lleva: no se parte en dos. */
   .offline-bar{margin-top:8px}
   .conn-status{flex:0 0 auto;white-space:nowrap}
-  .save-offline-btn{min-width:0}
   .controls{padding:10px 16px}
   .catalog-crumb{padding:10px 16px 0}
   .species-panel{flex:0 0 auto;padding:10px 16px 16px}
@@ -634,7 +633,7 @@ select{font-family:var(--font-ui);font-size:var(--fs-md)}
 :root{--tap-big:48px}
 
 .view-tab,.filter-button,.auth-tab,.habitat-all-link,.profile-choice,.notice-action,
-.explorer-toggle,.layers-toggle,.save-offline-btn,.popup-enter,.poi-seen-btn,.presence-action,
+.explorer-toggle,.layers-toggle,.popup-enter,.poi-seen-btn,.presence-action,
 .habitat-prompt-no,.habitat-prompt-yes,.hint-primary,.layers-solo,.catalog-crumb button,
 .link-btn,.habitat-species-chip,.layers-habitat-name,.layers-mini-actions button,
 .detail-group-link,.audio-block button,.sheet-grip-btn{min-height:var(--tap-min)}
@@ -642,6 +641,16 @@ select{font-family:var(--font-ui);font-size:var(--fs-md)}
 /* Controles redondos: el objetivo es 44×44, no 44 de alto. */
 .icon-btn,.hint-close,.nearby-close,.sheet-close,.achievement-toast-close{
   min-width:var(--tap-min);min-height:var(--tap-min)}
+/* Única excepción, y con motivo medido: la cabecera del parque pasó a tener CUATRO iconos cuando
+   la descarga sin conexión dejó de ser una barra con rótulo. Cuatro objetivos de 44 px más el
+   botón «Parques» no caben en una barra lateral de 27vw (346 px en un portátil de 1280), y lo que
+   se comían era el rótulo del botón de salir del parque. El objetivo de 44 px existe para el
+   campo —dedo con guante, móvil—, no para un ratón: con puntero fino bajan a 36, muy por encima
+   del mínimo de 24×24 de la WCAG 2.5.8. La condición (pointer:fine) es justo lo que separa los
+   dos casos, así que un portátil táctil los conserva en 44 y lo que cede allí es el texto. */
+@media(min-width:901px) and (pointer:fine){
+  .park-nav .icon-btn{width:36px;height:36px;min-width:36px;min-height:36px}
+}
 .hint-close,.nearby-close{width:var(--tap-min);height:var(--tap-min)}
 /* El zoom del mapa lo pinta Leaflet a 30 px. Es de los pocos controles que se pulsan con guantes
    puestos, así que también sube: el objetivo táctil manda sobre la hoja de la librería. */

@@ -36,7 +36,9 @@ fichas, con un solo modo de cerrarse. Todo encuadre pasa por `chromeInset()` en 
 
 **Sin conexión**, en tres capas (`Js/offline.js` + `sw.js`): (1) caché automática en `localStorage` de
 todo JSON descargado — visitar un espacio online **una vez** deja sus datos y sus mapas vectoriales
-disponibles; (2) botón «Guardar sin conexión», que baja además las imágenes y el paquete de teselas;
+disponibles; (2) «Guardar sin conexión» —el icono de descarga de la cabecera del parque, o su gemelo de
+«Perfil → Datos»—, que baja además las imágenes, las audioguías y el paquete de teselas, y que es la
+**única** vía por la que esos binarios llegan al dispositivo;
 (3) Service Worker con el armazón, **network-first** para que la app nunca se quede atascada en una
 versión antigua. El progreso es **local-first** con cola de pendientes idempotente.
 
