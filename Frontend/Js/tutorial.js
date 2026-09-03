@@ -55,8 +55,10 @@ const STAGES = {
     { target: '#layersToggle', mobileTab: 'map', title: 'Capas del mapa', text: 'Aquí eliges qué se pinta en el mapa: hábitats, senderos o puntos de interés. También está la leyenda de colores.' },
     { target: '#explorerToggle', mobileTab: 'map', title: 'Modo explorador', text: 'Actívalo durante la ruta. El mapa te sigue mientras caminas y te avisa de lo que tienes cerca. Si mueves el mapa a mano, este mismo botón te vuelve a centrar.' },
     { target: ['.mobile-nav-btn[data-mtab="progress"]', '.view-tab[data-view="progress"]'], title: 'Tu progreso', text: 'Aquí ves cuántas especies llevas descubiertas. Es como un álbum que se va completando.' },
-    // El botón vive en la cabecera del parque, dentro de la barra lateral: en móvil eso es la
-    // pestaña "Catálogo" (con data-mtab="map" el CSS oculta la barra entera y no se vería).
+    // El botón es el icono de descarga de .park-nav, dentro de la barra lateral: en móvil eso es
+    // la pestaña "Catálogo" (con data-mtab="map" el CSS oculta la barra entera y no se vería).
+    // Este paso es lo que hace que un icono sin rótulo se entienda, así que si alguna vez se quita
+    // el tutorial hay que darle otra explicación visible al icono.
     // El texto se calcula al mostrarlo porque el tamaño depende del parque en el que estés.
     {
       target: '#saveOfflineBtn', mobileTab: 'catalog', title: 'Llévate el parque en el bolsillo',

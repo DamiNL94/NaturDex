@@ -217,12 +217,24 @@ async function storageBlock() {
     }
   } catch (e) { /* sin API de cuota: se omite la cifra */ }
 
+  // Segunda puerta de «Guardar sin conexión». La primera es el icono de la cabecera del parque,
+  // y un icono se pasa por alto: aquí, en la pantalla donde ya se administran los parques
+  // descargados y su peso, es donde alguien va a buscar cómo descargar el que le falta. No
+  // duplica la lógica —llama a la MISMA función que el icono, confirmación de peso incluida—, y
+  // solo aparece si hay un parque abierto que todavía no está guardado: desde el selector de
+  // parques no hay nada que descargar.
+  const activo = state.activeParkSlug;
+  const puedeGuardar = !!(activo && state.manifest && !NaturDexOffline.isParkSaved(activo)
+    && typeof window.naturdexSaveParkOffline === 'function');
+  const pesoActivo = puedeGuardar ? formatBytes(NaturDexOffline.parkDownloadBytes(state.manifest)) : '';
+
   const parkList = saved.length
     ? html`<ul class="profile-list">${saved.map(slug => html`<li><span>${slug}</span><button type="button" class="link-btn danger" data-forget-park="${slug}">Eliminar descarga</button></li>`)}</ul>`
-    : html`<p class="profile-hint">Todavía no has guardado ningún parque para usarlo sin cobertura. Puedes hacerlo desde el propio parque, con «Guardar sin conexión».</p>`;
+    : html`<p class="profile-hint">Todavía no has guardado ningún parque para usarlo sin cobertura. Se hace desde dentro del parque, con el botón de descarga de la cabecera.</p>`;
 
   return html`<h4 class="profile-subtitle">Parques guardados sin conexión</h4>
     ${parkList}
+    ${puedeGuardar ? html`<button type="button" class="btn-secondary" data-action="save-park-offline">${icon('download', 15)} Guardar este parque sin conexión${pesoActivo ? ' · ' + pesoActivo : ''}</button>` : ''}
     ${usage ? html`<p class="profile-hint">Este navegador tiene ocupados unos <strong>${usage}</strong> con datos de NaturDex (fichas, mapas, fotos y audioguías descargadas).</p>` : ''}
     <h4 class="profile-subtitle">Compartir con la ciencia</h4>
     <p class="profile-hint">Cuando marcas una especie, NaturDex guarda dónde y cuándo la viste. Si lo
@@ -510,6 +522,17 @@ async function handleClick(event) {
       await renderProfile();
       setMessage('prefs', 'Ajustes restablecidos.');
       break;
+
+    case 'save-park-offline': {
+      setMessage('storage', 'Descargando el parque… puedes seguir usando la app.');
+      await window.naturdexSaveParkOffline();
+      await renderProfile();
+      // Se dice lo que HA PASADO, no lo que se esperaba: cancelar la confirmación del peso y que
+      // la descarga se corte acaban los dos aquí, y solo el segundo saca además su propio aviso.
+      const guardado = NaturDexOffline.isParkSaved(state.activeParkSlug);
+      setMessage('storage', guardado ? 'Parque guardado. Ya funciona sin cobertura.' : 'El parque no se ha guardado.', !guardado);
+      break;
+    }
 
     case 'export-local':
       downloadJson('naturdex-datos-dispositivo.json', localDataDump());

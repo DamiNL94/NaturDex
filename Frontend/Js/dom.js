@@ -61,9 +61,14 @@ export const explorerHint = document.querySelector('#explorerHint');
 export const layersToggle = document.querySelector('#layersToggle');
 export const layersPanel = document.querySelector('#layersPanel');
 
-// Barra de estado offline
+// Estado offline. El botón de descarga NO está en la barra: vive como icono en .park-nav, junto al
+// diccionario y al perfil (ver el comentario de index.html). La barra solo aparece cuando NO hay
+// conexión, y #offlineProgress es su canal para lectores de pantalla mientras se descarga: el
+// avance que se pinta dentro del icono no lo ve nadie que no mire la pantalla.
 export const saveOfflineBtn = document.querySelector('#saveOfflineBtn');
 export const connStatus = document.querySelector('#connStatus');
+export const offlineBar = document.querySelector('#offlineBar');
+export const offlineProgress = document.querySelector('#offlineProgress');
 
 // Barra de presencia verificada (¿cuenta para los logros lo que marco ahora mismo?)
 export const presenceBar = document.querySelector('#presenceBar');

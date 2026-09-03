@@ -9,6 +9,9 @@
 // API global (scripts clásicos auth.js/offline.js dependen de ella):
 //   window.startParkExperience(slug, user) — auth.js la llama al elegir parque.
 //   window.naturdexInvalidateMap()         — auth.js la llama al mostrar la pantalla del parque.
+//   window.naturdexRefreshOfflineUI()      — startParkExperience la llama al cambiar de parque.
+//   window.naturdexSaveParkOffline()       — profile.js la llama desde «Datos»: es la MISMA puerta
+//                                            que el icono, confirmación de peso incluida.
 //   window.__imgFallback / window.__habitatImgFallback — las publica render.js (onerror inline).
 // ================================================================================================
 
@@ -25,7 +28,8 @@ import {
   sidebar, speciesList, searchInput, catalogControls, catalogPanel,
   backToHabitatsBtn, catalogCrumb, catalogCrumbLabel, parkTitle, parkEyebrow, parkStats, parkProgressWrap,
   progressPanel, invasorasPanel, diccionarioPanel, basicNotice, detailPanel, sheetClose, sheetScrim,
-  saveOfflineBtn, connStatus, layersToggle, layersPanel, explorerToggle, rarityFilter
+  saveOfflineBtn, connStatus, offlineBar, offlineProgress,
+  layersToggle, layersPanel, explorerToggle, rarityFilter
 } from './dom.js';
 import { FILTROS_RAREZA } from './rareza.js';
 import {
@@ -747,7 +751,7 @@ initTutorial();
 // ningún parque cargado, igual que el progreso de cuenta.
 initProfile();
 
-// --- UI de estado offline (indicador de conexión + botón "Guardar sin conexión") -----------------
+// --- UI de estado offline (aviso de "sin conexión" + icono de descarga del parque) ----------------
 // Por encima de este umbral se pide confirmación explícita: descargar un parque entero puede irse a
 // decenas de MB y mucha gente entra al parque ya de camino, con datos móviles.
 const CONFIRM_DOWNLOAD_BYTES = 20 * 1024 * 1024;
@@ -757,66 +761,120 @@ const CONFIRM_DOWNLOAD_BYTES = 20 * 1024 * 1024;
 // ya está marcado como guardado y su manejador se corta ahí.
 let downloadParkAssets = null;
 
+/**
+ * Este es el ÚNICO disparador de la capa 2 de offline.js: las fotos, las audioguías y el .pmtiles
+ * del mapa base no llegan al dispositivo por ninguna otra vía. El Service Worker cachea de paso lo
+ * que se va viendo, pero eso ni cubre lo no visitado, ni sobrevive a un cambio de VERSION —su
+ * 'activate' borra la caché de runtime entera—, ni alcanza al mapa base, que se pide por rangos y
+ * el propio sw.js se salta a propósito. Así que la función no es redundante: sin ella, un parque
+ * sin cobertura se queda sin fotos, sin audioguías y sin mapa.
+ *
+ * Lo que sí sobraba era su tamaño. Ocupaba una barra propia bajo la cabecera, con rótulo, peso y un
+ * indicador permanente que decía "En línea" —o sea, casi siempre nada—, en la misma columna donde
+ * el catálogo se queda sin alto. Ahora:
+ *   · el estado de conexión solo se pinta cuando es ANÓMALO (sin conexión, con o sin parque
+ *     guardado); en línea, la barra desaparece entera;
+ *   · la descarga es un icono más de .park-nav, con el verbo y el peso en su rótulo accesible, que
+ *     es donde caben; y
+ *   · el avance, que antes se escribía dentro del propio botón ("Guardando… 3/57"), se pinta como un
+ *     relleno que sube por el icono y se ANUNCIA por decenas en #offlineProgress. Anunciar los 57
+ *     pasos uno a uno sería peor que no anunciar ninguno.
+ */
 function initOfflineUI() {
   const btn = saveOfflineBtn;
   const status = connStatus;
   if (!btn || !status) return;
 
+  // Peso declarado en el manifiesto: se anuncia ANTES de gastar un solo byte.
+  const sizeLabel = () => formatBytes(NaturDexOffline.parkDownloadBytes(state.manifest));
+
+  // Rótulo del icono. En 44×44 no cabe ni el verbo ni el peso, así que los carga entero el
+  // aria-label (y el title, para quien lo alcanza con el ratón): sin ellos, una flecha hacia abajo
+  // no dice ni qué se descarga ni lo que cuesta.
+  const setLabel = (texto) => { btn.title = texto; btn.setAttribute('aria-label', texto); };
+
   const refresh = () => {
     const online = NaturDexOffline.isOnline();
     const saved = NaturDexOffline.isParkSaved(state.activeParkSlug);
-    status.textContent = online ? 'En línea' : (saved ? 'Sin conexión · parque guardado' : 'Sin conexión');
+    status.textContent = saved ? 'Sin conexión · parque guardado' : 'Sin conexión';
     status.classList.toggle('offline', !online);
-    if (saved) {
-      btn.innerHTML = iconMarkup('check', 14) + ' Guardado sin conexión';
-      btn.classList.add('saved');
-    } else {
-      // El peso sale del manifiesto, así que se anuncia ANTES de gastar un solo byte.
-      const size = formatBytes(NaturDexOffline.parkDownloadBytes(state.manifest));
-      btn.innerHTML = iconMarkup('download', 14) + ' Guardar sin conexión' + (size ? ' · ' + size : '');
-      btn.classList.remove('saved');
-    }
+    if (offlineBar) offlineBar.hidden = online;
+
+    btn.classList.remove('is-saving');
+    btn.classList.toggle('is-saved', saved);
+    btn.style.removeProperty('--dl');
+    btn.innerHTML = iconMarkup(saved ? 'check' : 'download', 16);
+    const size = sizeLabel();
+    setLabel(saved
+      ? 'Parque guardado en este dispositivo: funciona sin cobertura'
+      : 'Guardar este parque sin conexión' + (size ? ' (' + size + ')' : ''));
   };
 
-  // Descarga (o repone) los activos del parque mostrando el avance en el propio botón.
+  // Descarga (o repone) los activos del parque mostrando el avance en el propio icono.
   const download = async (revalidate) => {
-    if (!state.manifest) return;
+    if (!state.manifest) return false;
     btn.disabled = true;
-    const previous = btn.innerHTML;
+    btn.classList.add('is-saving');
+    btn.classList.remove('is-saved');
+    btn.setAttribute('aria-busy', 'true');
+    btn.innerHTML = iconMarkup('download', 16);
+    let decenaDicha = -1;
     try {
       const run = revalidate ? NaturDexOffline.revalidateParkOffline : NaturDexOffline.saveParkOffline;
       const result = await run(state.manifest, (done, tot) => {
-        btn.textContent = (revalidate ? 'Actualizando… ' : 'Guardando… ') + done + '/' + tot;
+        const pct = tot ? Math.round((done / tot) * 100) : 0;
+        btn.style.setProperty('--dl', pct + '%');
+        const texto = (revalidate ? 'Actualizando… ' : 'Guardando… ') + done + ' de ' + tot;
+        setLabel(texto);
+        const decena = Math.floor(pct / 10);
+        if (offlineProgress && decena !== decenaDicha) { decenaDicha = decena; offlineProgress.textContent = texto; }
       });
       if (result.failed) {
         // Media descarga no es una descarga: el parque sigue sin marcarse como guardado y se dice.
-        btn.innerHTML = previous;
+        if (offlineProgress) offlineProgress.textContent = '';
         showNotice({
           key: 'offline-error', icon: '⚠️',
           title: 'La descarga se quedó a medias',
           text: 'Faltaron ' + result.failed + ' de ' + result.totalImages + ' archivos. Inténtalo otra vez con mejor cobertura.'
         });
+        return false;
       }
+      if (offlineProgress) {
+        offlineProgress.textContent = revalidate
+          ? 'Parque actualizado en este dispositivo.'
+          : 'Parque guardado: ya funciona sin cobertura.';
+      }
+      return true;
     } catch (e) {
       console.info('No se pudo guardar el parque sin conexión', e);
+      if (offlineProgress) offlineProgress.textContent = '';
+      return false;
     } finally {
       btn.disabled = false;
+      btn.removeAttribute('aria-busy');
       refresh();
     }
   };
   downloadParkAssets = download;
 
-  btn.addEventListener('click', () => {
-    if (!state.manifest || btn.classList.contains('saved')) return;
+  // Puerta única de la descarga a petición del usuario: por aquí pasan el icono, el aviso "¿vas a
+  // venir a este parque?" (que hace click() sobre el icono) y «Perfil → Datos». Y por tanto pasan
+  // todos por la confirmación del peso, que es lo que evita gastar datos móviles sin avisar.
+  // Devuelve si de verdad se descargó, para que quien la llame pueda decirlo.
+  const requestDownload = () => {
+    if (!state.manifest || btn.disabled || btn.classList.contains('is-saved')) return Promise.resolve(false);
     const bytes = NaturDexOffline.parkDownloadBytes(state.manifest);
     if (bytes > CONFIRM_DOWNLOAD_BYTES &&
         !window.confirm('Este parque ocupa ' + formatBytes(bytes) + ' en tu móvil.\n\n' +
-                        'Si no estás en wifi, gastarás esos datos. ¿Lo descargamos ahora?')) return;
-    download(false);
-  });
+                        'Si no estás en wifi, gastarás esos datos. ¿Lo descargamos ahora?')) return Promise.resolve(false);
+    return download(false);
+  };
+
+  btn.addEventListener('click', () => { requestDownload(); });
 
   refresh();
   window.naturdexRefreshOfflineUI = refresh; // startParkExperience la llama al cambiar de parque
+  window.naturdexSaveParkOffline = requestDownload; // profile.js, sección «Datos»
 
   // --- Puesta al día al recuperar cobertura -----------------------------------------------------
   // Antes esto solo cambiaba la etiqueta "En línea / Sin conexión". Ahora es el punto donde se
