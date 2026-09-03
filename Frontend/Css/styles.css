@@ -412,8 +412,10 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFo
   #map{width:100%;height:100%}
 
   /* Nav inferior */
-  /* Cuatro o cinco secciones según el espacio: «Migratorias» solo está donde el formulario oficial
-     declara alguna. El hueco entre botones se cierra a 2px porque con cinco no daba de sí. */
+  /* Cuatro secciones fijas, que es el techo de la Fase 1 de usabilidad (ver Js/diccionario.js).
+     Es un flex de columnas iguales (`flex:1 1 0`), así que al retirarse «Migratorias» cada botón se
+     repartió lo suyo sin tocar nada: 77px de columna a 320px de ancho, frente a los 69 de cuando
+     eran cinco. El hueco de 2px viene de entonces y se queda: con cuatro ya no aprieta. */
   .mobile-nav{position:fixed;left:0;right:0;bottom:0;z-index:800;display:flex;gap:2px;padding:6px 6px calc(6px + env(safe-area-inset-bottom));background:var(--panel);border-top:1px solid var(--line)}
   .mobile-nav-btn{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:46px;padding:0 2px;border:0;border-radius:10px;background:transparent;color:var(--muted);font-size:11px;line-height:1.1;font-weight:800;text-align:center;cursor:pointer}
   .mobile-nav-btn span{font-size:var(--fs-lg);line-height:1}
@@ -525,13 +527,6 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFo
 .habitat-goal-bar{flex:1;max-width:120px}
 .progress-row.habitat-goal.complete{border-color:#bcd6c4;background:#f2f8f3}
 
-/* Pestaña de aves migratorias. Las tarjetas son las MISMAS .species-card del catálogo a propósito:
-   una migratoria sigue siendo una ficha del catálogo (se marca vista y cuenta para el progreso),
-   solo que se lista aquí. Lo único propio es el párrafo de entrada, que dice de dónde sale la
-   clasificación, y la fila de distintivos, que puede llevar dos y necesita envolver. */
-.migratorias-intro{margin:0 0 14px;font-size:var(--fs-sm);line-height:1.55;color:var(--ink)}
-.migratoria-card .card-meta{flex-wrap:wrap}
-
 /* Pestaña de especies invasoras (apartado propio, aparte de flora/hábitats). */
 .invasoras-intro{margin:0 0 14px;font-size:var(--fs-sm);line-height:1.55;color:var(--ink)}
 .invasora-thumb{display:flex;align-items:center;justify-content:center;font-size:1.9rem;background:#f7e8e3}
@@ -552,7 +547,9 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFo
    `flex:0 0 auto` evita que el contenedor flex la encoja. */
 .invasora-detail-hero img{width:100%;flex:0 0 auto;background:#f7e8e3}
 
-/* Insignia de ave migratoria (aves de la ZEPA) en las tarjetas y fichas de fauna. */
+/* Insignia de ave migratoria en las tarjetas del catálogo y en la ficha de especie. Va por
+   `migratory` (tipo de población del formulario del sitio), NUNCA por `zepaSiteCode`, que solo dice
+   que el formulario nombra al ave: por ahí iba antes y era falsa en 154 fichas. */
 .badge.migratoria{color:#0b6b7a;background:#d9f0f2}
 
 /* Tutorial de bienvenida (tutorial.js): recorte "spotlight" sobre la UI real + tarjeta guiada.
@@ -1132,7 +1129,7 @@ p.achievement-progress-label{margin:8px 0 0}
      entre sus hijos —la cabecera perdía aire y la miga de pan se quedaba en 23 de sus 38 px, con lo
      que los filtros pegajosos se le montaban encima—. Con el scroll, lo que sobra se desliza. */
   .sidebar>*{flex:0 0 auto}
-  .species-panel,.progress-panel,.invasoras-panel,.migratorias-panel{min-height:auto;overflow:visible}
+  .species-panel,.progress-panel,.invasoras-panel{min-height:auto;overflow:visible}
   .species-list{flex:none;min-height:0;overflow:visible;padding-right:0}
 
   /* Miga de pan y filtros, pegados arriba. Los dos son sticky y van uno debajo del otro, así que el
@@ -1228,7 +1225,7 @@ body.visor-open{overflow:hidden}
    habían acabado aplicando también a párrafos enteros.
    ================================================================================================ */
 .detail-prose,.detail-body p,.detail-list,.status-list li.detail-prose,
-.fito-item .fito-read,.fito-help p,.invasoras-intro,.migratorias-intro,.review-note,.basic-notice p{
+.fito-item .fito-read,.fito-help p,.invasoras-intro,.review-note,.basic-notice p{
   font-size:var(--fs-md);line-height:1.6}
 /* Las viñetas de "cómo reconocerla" son el texto más útil de la ficha de una especie. */
 .detail-list li{line-height:1.6}

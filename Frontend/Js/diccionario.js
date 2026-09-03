@@ -14,12 +14,12 @@
 // cuatro iconos pequeños; con más, el coste no lo paga el diccionario, lo pagan el mapa y el
 // catálogo, que es lo que se usa a diario.
 //
-// Y **tampoco es pestaña en escritorio**, desde que la fila creció con «Migratorias». No por sitio:
-// por lo que la fila significa. Sus pestañas son las vistas DEL ESPACIO —su catálogo, sus aves
-// migratorias, sus invasoras, tu progreso en él— y el diccionario es nacional: se ve igual en los
-// dieciséis espacios y en uno de ficha base, donde no hay catálogo que consultar pero las palabras
-// técnicas siguen saliendo. Puesto entre las otras cuatro prometía ser una quinta sección del
-// parque, que es justo lo que no es.
+// Y **tampoco es pestaña en escritorio**, aunque la fila de pestañas se haya quedado en tres al
+// retirarse «Migratorias». No es cuestión de sitio libre: es lo que la fila significa. Sus pestañas
+// son las vistas DEL ESPACIO —su catálogo, sus invasoras, tu progreso en él— y el diccionario es
+// nacional: se ve igual en los dieciséis espacios y en uno de ficha base, donde no hay catálogo que
+// consultar pero las palabras técnicas siguen saliendo. Puesto entre las otras prometería ser una
+// sección más del parque, que es justo lo que no es.
 //
 // Así que el diccionario es una VISTA de la barra lateral, con tres puertas de entrada:
 //   · el icono de libro de la cabecera (`#diccionarioBtn`), junto al progreso estatal, que es lo

@@ -98,7 +98,7 @@ export function renderProgressTab() {
     pendiente
   ];
 
-  // Dos barras y no una, porque son dos colecciones y la de dentro es la que tiene pestaña propia:
+  // Dos barras y no una, porque son dos colecciones encajadas y la de dentro se cuenta aparte:
   //   · las aves que el formulario oficial del sitio declara — la lista cerrada y comprobable;
   //   · de ésas, las migratorias — un subconjunto, y el que obliga a venir en la temporada buena.
   // Hasta hoy había UNA barra rotulada «Aves migratorias» que contaba la primera lista entera.
@@ -108,7 +108,7 @@ export function renderProgressTab() {
     : '';
   const migratoryPct = progress.migratoryTotal ? Math.round((progress.migratorySeen / progress.migratoryTotal) * 100) : 0;
   const migratorySection = progress.migratoryTotal > 0
-    ? html`<div class="progress-section"><h3>🕊️ Aves migratorias</h3><div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${migratoryPct}" aria-label="Aves migratorias avistadas"><div class="progress-fill" style="width:${migratoryPct}%"></div></div><span class="progress-caption">${progress.migratorySeen} / ${progress.migratoryTotal} avistadas · las que no viven aquí todo el año (pestaña «Migratorias»)</span></div>`
+    ? html`<div class="progress-section"><h3>🕊️ Aves migratorias</h3><div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${migratoryPct}" aria-label="Aves migratorias avistadas"><div class="progress-fill" style="width:${migratoryPct}%"></div></div><span class="progress-caption">${progress.migratorySeen} / ${progress.migratoryTotal} avistadas · las que no viven aquí todo el año, con el distintivo 🕊️ en el catálogo</span></div>`
     : '';
 
   /*

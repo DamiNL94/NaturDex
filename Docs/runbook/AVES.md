@@ -182,13 +182,18 @@ En este orden, y ninguno de los tres es «bajar el umbral»:
 - **`migratory` / `sitePresence`** — la **fenología**, derivada del `species_type` del formulario
   por `Tools/lib/fenologia.js`. Migratoria = el formulario la declara y **ninguna** de sus entradas
   es de población permanente; basta una permanente para que no lo sea, porque significa que aquí hay
-  población todo el año. Gobierna la pestaña «Migratorias» de la app y su barra de progreso.
+  población todo el año. En la app es el distintivo **🕊️ Migratoria** de la tarjeta del catálogo y
+  de la ficha, y la barra de progreso del mismo nombre. Pestaña propia tuvo entre el 2026-08-24 y el
+  2026-09-03; ahora las migratorias se listan con el resto de la fauna.
 
   Los tres estados importan, y el tercero es el que no se puede aplanar: **campo ausente** = ningún
   formulario nombra al ave. Eso no es «no es migratoria», es que no hay fuente, y esas fichas se
   quedan en el catálogo general. Son **591 de las 1.150 fichas de ave** publicadas, incluidos los
-  cuatro espacios cuyo FND no lista ni un ave (Barrancos de Gebas, Monte Arabí, Cabezo Gordo y
-  Cañaverosa: allí la pestaña lo dice en vez de enseñar una lista vacía).
+  **cinco** espacios cuyo FND no lista ni un ave: Barrancos de Gebas, Monte Arabí, Cabezo Gordo,
+  **Sierra de El Carche** y Cañaverosa. Este documento decía «cuatro» y se dejaba El Carche fuera;
+  comprobado el 2026-09-03 contra los dieciséis `out/<slug>-rn2000-sitio.json`, el suyo solo trae
+  invertebrados, mamíferos y plantas. Allí la app lo dice en la lista **«Sin hábitat asignado»**, que
+  es donde caen todas las aves del espacio (`render/catalogo.js · faltaFormularioDeAves`).
 
   Antes de esto la app rotulaba «🕊️ Ave migratoria» por `zepaSiteCode`, que dice otra cosa: que el
   formulario la nombra. **154 aves de población permanente** —el búho real y la perdiz roja de
@@ -249,6 +254,15 @@ En este orden, y ninguno de los tres es «bajar el umbral»:
   (`--online`): **de 53 huecos quedan 29** y las migratorias suben de **405 a 420**. Las 29 restantes
   son aves declaradas por el formulario y no fichadas en el catálogo del espacio —doce en Sierra de la
   Pila—: ahí no falta una equivalencia, falta una ficha.
+
+- **2026-09-03** — la pestaña «Migratorias» se retira y las aves vuelven al catálogo, con el
+  distintivo 🕊️ y su clase de migración en la tarjeta. Cambio de PRESENTACIÓN: `migratory`,
+  `sitePresence`, `is_migratory`, el pipeline y el backend no se tocan, y la barra de progreso y el
+  logro «Vigía de la migración» siguen contando lo mismo. El motivo es que partir la fauna en dos
+  obligaba a saber de antemano si el ave que se busca migra o no —que es justo lo que se viene a
+  averiguar— y en un humedal dejaba la mitad del catálogo fuera del sitio donde se busca (96 de 204
+  fichas visibles en Calblanque). Al medirlo salió además el error de recuento de arriba: los
+  espacios sin aves en su FND son cinco, no cuatro.
 
 - **2026-08-15** — se cablea `especies-sitio-rn2000.js` (la lista oficial nunca había estado
   conectada: `zepaSiteCode` salía del `zepa.geojson` del propio espacio) y se escribe el filtro 3 bis

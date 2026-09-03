@@ -31,7 +31,7 @@ export const state = {
   rarityFilter: 'all',
   query: '',
   selectedId: null,
-  // 'catalog' | 'migratorias' | 'invasoras' | 'progress' | 'diccionario'.
+  // 'catalog' | 'invasoras' | 'progress' | 'diccionario'.
   view: 'catalog',
   // Nivel del catálogo en el que está el usuario. Son tres, de fuera hacia dentro:
   //   'groups'   → los grupos de hábitats (habitat-groups.js): el nivel de entrada.
@@ -95,28 +95,33 @@ export const state = {
  *
  * `=== true` y no un booleano a secas porque el campo tiene TRES estados y el tercero importa: la
  * API sirve `null` y el park.json omite el campo cuando ningún formulario nombra al ave (591 de las
- * fichas de ave del catálogo). Eso no es «no es migratoria», es que no hay fuente, y esas fichas se
- * quedan en el catálogo general en vez de repartirse a ojo.
+ * fichas de ave del catálogo). Eso no es «no es migratoria», es que no hay fuente, y una ficha así
+ * no lleva distintivo: rotularla en un sentido o en el otro sería rellenar el dato a ojo.
+ *
+ * Es un DISTINTIVO, no una puerta: lo leen la tarjeta del catálogo y la ficha (render/catalogo.js,
+ * render/detalle.js), la barra de progreso y el logro «Vigía de la migración» (render/progreso.js).
+ * No recorta ninguna lista.
  */
 export function esMigratoria(species) {
   return !!species && species.migratory === true;
 }
 
-/** Las migratorias del espacio, ya ordenadas como el resto del catálogo. */
-export function migratorySpecies() {
-  return (state.data.species || []).filter(esMigratoria).sort(comparaEspecies);
-}
-
 /**
- * Las especies del CATÁLOGO: todas menos las migratorias, que tienen pestaña propia. Sin esta
- * resta las 405 migratorias saldrían dos veces —en «Ver todas las especies» y en su pestaña—, que
- * es justo lo que hace que separarlas no sirva de nada.
+ * Las especies del CATÁLOGO, que son TODAS las del espacio.
  *
- * Siguen siendo especies del parque a todos los demás efectos: cuentan en `speciesTotal`, se marcan
- * como vistas, entran en el medallero y en los logros. Lo único que cambia es dónde se listan.
+ * Esta función restaba las migratorias, porque tenían pestaña propia y sin la resta habrían salido
+ * dos veces —en «Ver todas las especies» y en su pestaña—. La pestaña ya no está: partir la fauna en
+ * dos obligaba a saber de antemano si el ave que se busca migra o no, que es justo lo que el usuario
+ * viene a averiguar, y en un humedal dejaba la mitad del catálogo fuera del sitio donde se busca
+ * (96 de 204 fichas en Calblanque, 100 de 250 en el Mar Menor). La fenología se dice ahora donde se
+ * está mirando el ave: un distintivo en su tarjeta y el bloque de presencia de su ficha.
+ *
+ * Se conserva como función, en vez de leer `state.data.species` a pelo, porque es EL punto donde el
+ * catálogo decide qué lista: si algún día vuelve a recortarse algo, se recorta aquí y las tres
+ * puertas —«todas», «sin hábitat» y los filtros— siguen sin poder discrepar entre ellas.
  */
 export function catalogSpecies() {
-  return (state.data.species || []).filter(s => !esMigratoria(s));
+  return state.data.species || [];
 }
 
 /*
@@ -137,7 +142,8 @@ export function catalogSpecies() {
  *
  *   · las AVES, que el catálogo decide a propósito no adscribir a ningún polígono: vuelan, y un
  *     registro en vuelo cae dentro de cualquier recinto (regla nº 8 del CLAUDE.md raíz). Son la
- *     mayoría, y en un espacio sin pestaña de migratorias no tenían ninguna otra puerta;
+ *     mayoría, y ésta es su única puerta propia: el catálogo se recorre por hábitats y las aves no
+ *     cuelgan de ninguno;
  *   · el RESTO, que la norma del espacio enumera y que GBIF no ha registrado dentro de sus
  *     polígonos de hábitat. Ahí el hueco es real y está documentado: el vínculo especie↔hábitat es
  *     derivado y sin señal no se inventa (regla nº 1).
@@ -248,8 +254,9 @@ export function computeProgress() {
   const zepaSpecies = species.filter(s => s.zepaSiteCode);
   const zepaTotal = zepaSpecies.length;
   const zepaSeen = zepaSpecies.filter(s => state.seenSpecies.has(s.id)).length;
-  // Y dentro de esa lista, la colección de migratorias: su propia pestaña merece su propia barra.
-  // Es un SUBCONJUNTO del anterior —toda migratoria la declara un formulario—, no otra cosa.
+  // Y dentro de esa lista, la colección de migratorias: merece barra propia porque es la única del
+  // espacio que obliga a venir en una temporada concreta. Es un SUBCONJUNTO del anterior —toda
+  // migratoria la declara un formulario—, no otra cosa, y sigue contando sin pestaña que la liste.
   const migratorias = species.filter(esMigratoria);
   const migratoryTotal = migratorias.length;
   const migratorySeen = migratorias.filter(s => state.seenSpecies.has(s.id)).length;

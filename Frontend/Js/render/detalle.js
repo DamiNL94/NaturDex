@@ -168,7 +168,7 @@ function markVerificationNote(type, id) {
  * otras cuatro citas y en mitad de una frase.
  *
  * Se pinta también cuando el ave NO es migratoria: «residente todo el año» es la misma afirmación
- * oficial, y es la que explica por qué esa ficha está en el catálogo y no en la otra pestaña.
+ * oficial, y es la que explica por qué esta ficha no lleva el distintivo que llevan las de al lado.
  */
 function bloquePresenciaSitio(species) {
   const p = species.sitePresence;
@@ -178,7 +178,7 @@ function bloquePresenciaSitio(species) {
     <li class="detail-prose"><span>Población</span>${p.etiqueta}</li>
     </ul>
     <p class="detail-source">${esMigratoria(species)
-      ? 'No vive aquí todo el año: por eso aparece en la pestaña «Migratorias».'
+      ? 'No vive aquí todo el año: por eso su tarjeta del catálogo lleva el distintivo de migratoria.'
       : 'Aquí hay población todo el año, así que no cuenta como migratoria en este espacio.'} Fuente: ${p.fuente}</p>`;
 }
 

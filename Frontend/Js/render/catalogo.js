@@ -7,7 +7,7 @@
 import { backToHabitatsBtn, catalogCrumb, catalogCrumbLabel, catalogTitle, rarityFilterGroup, resultCount, searchInput, searchLabel, speciesFilterGroup, speciesList } from '../dom.js';
 import { groupSwatch, groupedHabitats, habitatGroup, habitatGroupById, habitatsOfGroup } from '../habitat-groups.js';
 import { TRAMOS, TRAMO_AMENAZA, estrellas, tramoDe } from '../rareza.js';
-import { catalogSpecies, getFilteredHabitats, getFilteredSpecies, habitatSpeciesSeenCount, isHabitatComplete, speciesSinHabitat, state } from '../state.js';
+import { catalogSpecies, esMigratoria, getFilteredHabitats, getFilteredSpecies, habitatSpeciesSeenCount, isHabitatComplete, speciesSinHabitat, state } from '../state.js';
 import { html, icon, raw, speciesImageSrc } from '../util.js';
 
 /*
@@ -83,6 +83,28 @@ export function renderHabitatGroups() {
  * evidencia. Sin esto, en Cañaverosa el catálogo enseña cuatro grupos con 41 fichas y esconde 181
  * detrás de un enlace que no dice cuántas hay.
  */
+/*
+ * ¿Consta la fenología de las aves de este espacio, o no hay fuente que consultar?
+ *
+ * `migratory` tiene tres estados y el tercero —ausente— no es «no migra»: es que ningún Formulario
+ * Normalizado de Datos de la Red Natura 2000 nombra a esa ave. Si NINGUNA ficha del espacio trae uno
+ * de los dos primeros, ese formulario no existe o no enumera aves. Son cinco de los dieciséis
+ * espacios publicados: Barrancos de Gebas, Cabezo Gordo, Monte Arabí, Sierra de El Carche y
+ * Cañaverosa.
+ *
+ * Lo decía la pestaña «Migratorias», que era el único sitio de la app donde se podía leer «aquí no
+ * hay lista oficial de aves». Quitada la pestaña, ese hueco se quedaba sin quien lo contara, y
+ * callarlo se lee como que el espacio no tiene ninguna migratoria — justo lo contrario de lo que
+ * consta. Se dice aquí, en «Sin hábitat asignado», porque es la lista donde caen TODAS las aves del
+ * espacio (no se adscriben a ningún polígono) y por tanto la única cuyo lector está mirando aves.
+ * En la ficha de cada ave sería la misma frase repetida 118 veces en Cañaverosa.
+ */
+function faltaFormularioDeAves() {
+  const sp = state.data.species || [];
+  return sp.some(s => (s.taxonomy || {}).class === 'Aves')
+    && !sp.some(s => s.migratory === true || s.migratory === false);
+}
+
 function sinHabitatCard() {
   const sin = speciesSinHabitat();
   if (!sin.length) return '';
@@ -135,12 +157,22 @@ export function renderSpeciesList() {
       : (state.data.species || []).length);
   const recorte = species.length < total ? ` de ${total}` : '';
   resultCount.textContent = (species.length === 1 ? '1 resultado' : species.length + ' resultados') + recorte;
-  // Sin distintivo de «migratoria»: ésas tienen pestaña propia y `getFilteredSpecies` ya las quita
-  // de aquí. El que había iba por `zepaSiteCode`, que dice otra cosa (que el formulario oficial del
-  // sitio la nombra, población permanente incluida), así que sobre esta lista era falso siempre.
+  // El distintivo de «migratoria» está de vuelta en la tarjeta, y esta vez dice lo que afirma. El
+  // que hubo iba por `zepaSiteCode`, que dice otra cosa —que el formulario oficial del sitio nombra
+  // al ave, población permanente incluida—, y era falso en 154 fichas; por eso se quitó. Ahora va
+  // por `esMigratoria()`, o sea por `migratory`, derivado del TIPO DE POBLACIÓN de ese mismo
+  // formulario (Tools/lib/fenologia.js).
+  //
+  // Con él va la etiqueta de `sitePresence`, que dice de qué clase es la migración —cría aquí,
+  // inverna o solo pasa—, porque «migratoria» a secas no responde a la pregunta que se hace quien
+  // la lee, que es cuándo hay que venir. Las dos SOLO en las aves que migran: en una residente la
+  // etiqueta diría «Residente todo el año», que es lo mismo que no llevar distintivo, y en las 591
+  // fichas de ave que ningún formulario nombra no hay nada que afirmar (ver `esMigratoria`).
   const cards = species.map(item => {
     const seen = state.seenSpecies.has(item.id);
-    return html`<button class="species-card ${item.id === state.selectedId ? 'active' : ''}${seen ? ' seen' : ''}" type="button" data-id="${item.id}"${item.id === state.selectedId ? html` aria-current="true"` : ''}><span class="card-thumb"><img src="${speciesImageSrc(item)}" alt="" loading="lazy" onerror="window.__imgFallback(this,${item.id})">${seen ? html`<span class="seen-badge" aria-hidden="true">${icon('check', 12)}</span>` : ''}</span><span><span class="card-meta"><span class="badge ${item.kingdom}">${item.kingdom}</span>${item.featured ? html`<span class="badge alert">prioritaria</span>` : ''}${rarezaBadge(item)}${item.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}</span><h3>${item.commonName}</h3><em>${item.scientificName}</em>${seen ? html`<span class="sr-only">Especie vista.</span>` : ''}</span></button>`;
+    const migra = esMigratoria(item);
+    const fenologia = (migra && item.sitePresence && item.sitePresence.etiqueta) || '';
+    return html`<button class="species-card ${item.id === state.selectedId ? 'active' : ''}${seen ? ' seen' : ''}" type="button" data-id="${item.id}"${item.id === state.selectedId ? html` aria-current="true"` : ''}><span class="card-thumb"><img src="${speciesImageSrc(item)}" alt="" loading="lazy" onerror="window.__imgFallback(this,${item.id})">${seen ? html`<span class="seen-badge" aria-hidden="true">${icon('check', 12)}</span>` : ''}</span><span><span class="card-meta"><span class="badge ${item.kingdom}">${item.kingdom}</span>${migra ? html`<span class="badge migratoria">🕊️ Migratoria</span>` : ''}${fenologia ? html`<span class="badge">${fenologia}</span>` : ''}${item.featured ? html`<span class="badge alert">prioritaria</span>` : ''}${rarezaBadge(item)}${item.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}</span><h3>${item.commonName}</h3><em>${item.scientificName}</em>${seen ? html`<span class="sr-only">Especie vista.</span>` : ''}</span></button>`;
   });
   // Una lista vacía sin explicación se lee como un fallo de la app. Con el filtro de rareza puesto
   // es además el caso NORMAL: en un hábitat corriente no hay ninguna especie en peligro, y eso es
@@ -153,7 +185,11 @@ export function renderSpeciesList() {
         Las <strong>aves</strong> no se adscriben a ninguno a propósito: vuelan, y un registro en vuelo cae dentro de
         cualquier recinto. Las <strong>demás</strong> están en el catálogo del espacio por una fuente oficial, pero no
         hay ningún registro suyo dentro de sus polígonos de hábitat: el vínculo especie–hábitat es derivado y sin señal
-        no se da por hecho. Cada ficha dice en su apartado de fuentes de dónde sale.</span></p>`
+        no se da por hecho. Cada ficha dice en su apartado de fuentes de dónde sale.${faltaFormularioDeAves()
+          ? html` Y de las aves de este espacio <strong>no hay lista oficial</strong>: su Formulario Normalizado de Datos de
+        la Red Natura 2000 no enumera ninguna, así que no consta cuáles migran y cuáles no. Clasificarlas a ojo sería
+        inventarlo, y por eso ninguna lleva distintivo de migratoria aquí.`
+          : ''}</span></p>`
     : '';
   speciesList.innerHTML = cards.length
     ? html`${intro}${cards}`

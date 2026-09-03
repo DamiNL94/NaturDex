@@ -522,9 +522,11 @@ select{font-family:var(--font-ui);font-size:var(--fs-md)}
   /* Nav inferior: cartel oscuro, no barra blanca de app genérica */
   .mobile-nav{z-index:800;background:var(--bark);border-top:0;
     border-bottom:0;box-shadow:0 -2px 0 var(--brass) inset;gap:0;padding:4px 6px calc(4px + env(safe-area-inset-bottom))}
-  /* Sin caja alta ni tracking desde que la nav tiene cinco secciones: «MIGRATORIAS» en versalitas
-     espaciadas mide 99px y su columna da 69, así que se salía del botón. Encogerlo por debajo de
-     10px lo metía dentro pero dejaba de leerse; en caja mixta y a 11px mide 60 y entra con aire. */
+  /* Sin caja alta ni tracking. Vino de cuando la nav tenía cinco secciones —«MIGRATORIAS» en
+     versalitas espaciadas medía 99px y su columna daba 69— y NO se revierte al quedarse en cuatro,
+     aunque la columna suba a 77px: vuelto a medir ahí, «INVASORAS» en versalitas espaciadas mide 73
+     sobre los 73 útiles del botón, o sea justo al filo y sin aire para una etiqueta más larga. En
+     caja mixta y a 11px mide 50 y entra holgada. */
   .mobile-nav-btn{color:#D9CDB6;border-radius:var(--radius-sm);min-height:var(--tap-min);
     font-size:11px;font-weight:700;letter-spacing:normal;text-transform:none}
   .mobile-nav-btn.active{background:rgba(255,255,255,.08);color:#FFFFFF;
