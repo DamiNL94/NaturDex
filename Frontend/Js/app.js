@@ -605,11 +605,6 @@ syncMobileNav('catalog'); // pestaña inicial
 
 // --- Delegación de eventos ------------------------------------------------------------------------------
 speciesList.addEventListener('click', event => {
-  // El desplegable «+N datos» vive DENTRO de la tarjeta, que por eso dejó de ser un <button> y pasó
-  // a ser un <div> con un botón principal dentro (render/catalogo.js). El precio de tenerlo dentro
-  // es esta salida: sin ella, el clic en su <summary> burbujea hasta la tarjeta y abre la ficha en
-  // la misma pulsación con la que se estaba desplegando. Va la PRIMERA, antes de cualquier closest.
-  if (event.target.closest('details')) return;
   const card = event.target.closest('.species-card');
   if (card) { selectSpecies(card.dataset.id); return; }
   const groupCard = event.target.closest('[data-habitat-group]');
@@ -622,7 +617,6 @@ speciesList.addEventListener('click', event => {
 
 // Tarjetas de invasoras: abren su ficha en el panel de detalle de la derecha.
 if (invasorasPanel) invasorasPanel.addEventListener('click', event => {
-  if (event.target.closest('details')) return; // igual que en el catálogo: desplegar no es abrir
   const card = event.target.closest('[data-invasora]');
   if (card) selectInvasora(card.dataset.invasora);
 });
