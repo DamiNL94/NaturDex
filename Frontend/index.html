@@ -173,20 +173,36 @@
                         <p class="eyebrow" id="parkEyebrow">NaturDex piloto</p>
                         <h1 id="parkTitle">Cabo Cope y Puntas de Calnegre</h1>
                     </div>
-                    <p id="parkSummary">Guía viva de especies, hábitats y puntos de observación.</p>
-                    <!-- Las tres cosas que se coleccionan en un parque, y solo esas: hábitats,
-                         especies y puntos de interés. Antes la tercera casilla eran los km de costa,
-                         un dato que ni se colecciona ni existe en los espacios de interior. -->
-                    <div class="summary-grid" id="parkStats" aria-label="Resumen del parque">
-                        <div><strong id="habitatCount">0</strong><span>hábitats</span></div>
-                        <div><strong id="speciesCount">0</strong><span>especies</span></div>
-                        <!-- "puntos" a secas en pantalla: el rótulo completo parte la casilla en dos
-                             líneas y estira toda la fila. Los lectores de pantalla sí lo leen entero. -->
-                        <div><strong id="poiCount">0</strong><span>puntos<span class="sr-only"> de interés</span></span></div>
+                    <!-- Fila que se ve SIEMPRE, plegada la cabecera o no: el progreso del parque y el
+                         botón que pliega el resto. Van juntos a propósito. La cabecera se llevaba 375
+                         de los 720 px de un portátil y ahogaba al catálogo, pero el progreso es lo que
+                         esta app viene a contar y no puede esconderse detrás de un plegado; y darle
+                         fila propia al botón habría devuelto la mitad de lo ganado, así que el botón
+                         se sienta en la fila que ya existía. Lo que se pliega es la descripción y las
+                         tres casillas de recuento: lo que se lee UNA vez al entrar, no lo que se
+                         consulta mientras se recorre la lista. Quien lo pliega, app.js · initParkFold. -->
+                    <div class="park-fold-bar" id="parkFoldBar">
+                        <div class="progress-wrap" id="parkProgressWrap" aria-label="Progreso de descubrimiento">
+                            <div id="progressTrack" class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-labelledby="progressLabel"><div id="progressFill" class="progress-fill"></div></div>
+                            <span id="progressLabel" class="progress-label">0 / 0 especies descubiertas</span>
+                        </div>
+                        <!-- El verbo va en aria-label y en title, como en el icono de descarga: en
+                             44x44 no cabe una palabra, y una flecha sola no dice qué pliega. El
+                             estado lo lleva aria-expanded, que es además lo que gira el chevrón. -->
+                        <button type="button" id="parkFoldToggle" class="icon-btn park-fold-toggle" aria-expanded="true" aria-controls="parkFold" title="Plegar los datos del parque" aria-label="Plegar los datos del parque"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="18 15 12 9 6 15"/></svg></button>
                     </div>
-                    <div class="progress-wrap" id="parkProgressWrap" aria-label="Progreso de descubrimiento">
-                        <div id="progressTrack" class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-labelledby="progressLabel"><div id="progressFill" class="progress-fill"></div></div>
-                        <span id="progressLabel" class="progress-label">0 / 0 especies descubiertas</span>
+                    <div id="parkFold" class="park-fold">
+                        <p id="parkSummary">Guía viva de especies, hábitats y puntos de observación.</p>
+                        <!-- Las tres cosas que se coleccionan en un parque, y solo esas: hábitats,
+                             especies y puntos de interés. Antes la tercera casilla eran los km de costa,
+                             un dato que ni se colecciona ni existe en los espacios de interior. -->
+                        <div class="summary-grid" id="parkStats" aria-label="Resumen del parque">
+                            <div><strong id="habitatCount">0</strong><span>hábitats</span></div>
+                            <div><strong id="speciesCount">0</strong><span>especies</span></div>
+                            <!-- "puntos" a secas en pantalla: el rótulo completo parte la casilla en dos
+                                 líneas y estira toda la fila. Los lectores de pantalla sí lo leen entero. -->
+                            <div><strong id="poiCount">0</strong><span>puntos<span class="sr-only"> de interés</span></span></div>
+                        </div>
                     </div>
                     <!-- Presencia verificada: dice si lo que marcas está contando para los logros.
                          Sin esta barra, el usuario no tendría forma de saber por qué su avistamiento
