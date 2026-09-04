@@ -41,6 +41,16 @@
   --sea:#2E6D8E;
   --sea-tint:#DCE6E9;
 
+  /* Tinte de la tarjeta por tramo de rareza (styles.css los define; aquí se rebajan a la paleta
+     de tierra de esta capa, que es más apagada que la original). El 2 y el 3 son el mismo verde
+     en dos intensidades porque son el mismo hecho —protegida sin amenaza— en dos grados. */
+  --rareza-1-bg:var(--surface);
+  --rareza-2-bg:#EFF3E4;
+  --rareza-3-bg:#E3EAD3;
+  --rareza-4-bg:#FBF1DF;
+  --rareza-5-bg:#F7E9E2;
+  --rareza-nd-bg:#E8EEF0;
+
   --sun:#C4762A;            /* el ámbar de styles.css pasa a ser el ámbar de aviso del cartel */
   --warn:#C4762A;
   --warn-ink:#96601F;
@@ -90,6 +100,13 @@
   --brass-ink:#EBD9A8;
   --sea:#6FA9C4;
   --sea-tint:#1D2A30;
+
+  --rareza-1-bg:var(--surface);
+  --rareza-2-bg:#212A1D;
+  --rareza-3-bg:#263021;
+  --rareza-4-bg:#2A2417;
+  --rareza-5-bg:#331F17;
+  --rareza-nd-bg:#1D2A30;
 
   --sun:#E8B45A;
   --warn:#C4762A;
@@ -231,7 +248,12 @@ select{font-family:var(--font-ui);font-size:var(--fs-md)}
   border-left:var(--rule) solid var(--line-strong)}
 .species-card:hover,.habitat-card:hover,.habitat-group-card:hover{transform:none;box-shadow:var(--shadow-sm);
   border-color:var(--line-strong)}
-.species-card.seen,.habitat-card.complete,.habitat-group-card.complete{border-left-color:var(--leaf);background:var(--panel)}
+.habitat-card.complete,.habitat-group-card.complete{border-left-color:var(--leaf);background:var(--panel)}
+/* La tarjeta de ESPECIE se sale de la regla de arriba: su fondo lo ocupa ahora el tramo de rareza
+   (bloque `--rareza-*`), así que «vista» no puede seguir pidiéndolo. No se pierde nada — lo que
+   distinguía una ficha vista era un matiz de blanco frente a otro, y le quedan el filete verde de
+   la izquierda y la insignia del ✓ sobre la miniatura, que se ven mucho antes. */
+.species-card.seen{border-left-color:var(--leaf)}
 .habitat-group-card.complete{border-color:var(--line)}
 /* La cabecera de grupo del panel de capas y la del progreso, con las versalitas de la casa. */
 .layers-group-name{font-weight:700}
@@ -591,9 +613,23 @@ select{font-family:var(--font-ui);font-size:var(--fs-md)}
 :root[data-theme="dark"] .achievement-card,
 :root[data-theme="dark"] .nearby-item,
 :root[data-theme="dark"] .audio-block{background:var(--surface)}
-:root[data-theme="dark"] .species-card.seen,
 :root[data-theme="dark"] .habitat-group-card.complete,
 :root[data-theme="dark"] .habitat-card.complete{background:var(--panel);border-color:var(--line)}
+/* Misma salvedad que en claro, más un arreglo que venía de antes: esta regla le devolvía el borde
+   ENTERO a --line, incluido el izquierdo, así que en oscuro una ficha vista se quedaba sin filete
+   verde y sin ninguna otra marca en el propio recuadro. Ahora el filete se pide aparte. */
+:root[data-theme="dark"] .species-card.seen{border-color:var(--line);border-left-color:var(--leaf)}
+
+/* El tinte de rareza, reafirmado. Tiene que ir DETRÁS de las dos reglas de arriba y de
+   `.species-card.seen` del bloque claro: las tres fijan el fondo de la tarjeta con la misma
+   especificidad que estas seis, así que aquí manda el orden, y el fichero se carga después de
+   styles.css. Los valores no se repiten — son los tokens `--rareza-*` de la paleta de esta capa. */
+:root .species-card.rareza-1{background:var(--rareza-1-bg)}
+:root .species-card.rareza-2{background:var(--rareza-2-bg)}
+:root .species-card.rareza-3{background:var(--rareza-3-bg)}
+:root .species-card.rareza-4{background:var(--rareza-4-bg)}
+:root .species-card.rareza-5{background:var(--rareza-5-bg)}
+:root .species-card.rareza-nd{background:var(--rareza-nd-bg)}
 
 /* Parches de mérito y avisos: filete lateral de color, sin bloque ámbar */
 :root[data-theme="dark"] .achievement-card.unlocked{background:var(--panel);border-color:var(--line);
@@ -637,7 +673,7 @@ select{font-family:var(--font-ui);font-size:var(--fs-md)}
 .habitat-prompt-no,.habitat-prompt-yes,.hint-primary,.layers-solo,.catalog-crumb button,
 .link-btn,.habitat-species-chip,.layers-habitat-name,.layers-mini-actions button,
 .detail-group-link,.audio-block button,.sheet-grip-btn,
-.plegable>summary,.fito-help>summary{min-height:var(--tap-min)}
+.plegable>summary,.fito-help>summary,.proteccion-pautas>summary{min-height:var(--tap-min)}
 
 /* Controles redondos: el objetivo es 44×44, no 44 de alto. */
 .icon-btn,.hint-close,.nearby-close,.sheet-close,.achievement-toast-close{

@@ -6,7 +6,7 @@
 
 import { backToHabitatsBtn, catalogCrumb, catalogCrumbLabel, catalogTitle, rarityFilterGroup, resultCount, searchInput, searchLabel, speciesFilterGroup, speciesList } from '../dom.js';
 import { groupSwatch, groupedHabitats, habitatGroup, habitatGroupById, habitatsOfGroup } from '../habitat-groups.js';
-import { TRAMOS, TRAMO_AMENAZA, estrellas, tramoDe } from '../rareza.js';
+import { TRAMOS, TRAMO_AMENAZA, claseRareza, estrellas, tramoDe } from '../rareza.js';
 import { catalogSpecies, esMigratoria, getFilteredHabitats, getFilteredSpecies, habitatSpeciesSeenCount, isHabitatComplete, speciesSinHabitat, state } from '../state.js';
 import { html, icon, raw, speciesImageSrc } from '../util.js';
 
@@ -175,7 +175,10 @@ export function renderSpeciesList() {
     const seen = state.seenSpecies.has(item.id);
     const migra = esMigratoria(item);
     const fenologia = (migra && item.sitePresence && item.sitePresence.etiqueta) || '';
-    return html`<button class="species-card ${item.id === state.selectedId ? 'active' : ''}${seen ? ' seen' : ''}" type="button" data-id="${item.id}"${item.id === state.selectedId ? html` aria-current="true"` : ''}><span class="card-thumb"><img src="${speciesImageSrc(item)}" alt="" loading="lazy" onerror="window.__imgFallback(this,${item.id})">${seen ? html`<span class="seen-badge" aria-hidden="true">${icon('check', 12)}</span>` : ''}</span><span><span class="card-meta"><span class="badge ${item.kingdom}">${item.kingdom}</span>${migra ? html`<span class="badge migratoria">🕊️ Migratoria</span>` : ''}${fenologia ? html`<span class="badge">${fenologia}</span>` : ''}${item.featured ? html`<span class="badge alert">prioritaria</span>` : ''}${rarezaBadge(item)}${item.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}</span><h3>${item.commonName}</h3><em>${item.scientificName}</em>${seen ? html`<span class="sr-only">Especie vista.</span>` : ''}</span></button>`;
+    // El tinte de fondo sale de `claseRareza()`: la escalera vive en rareza.js, aquí solo se pega
+    // la clase. Va la primera de las tres para que el estado —`active`, `seen`— se escriba después
+    // en la hoja y siga ganando el filete y el borde, que es lo que distingue una ficha ya vista.
+    return html`<button class="species-card ${claseRareza(item)}${item.id === state.selectedId ? ' active' : ''}${seen ? ' seen' : ''}" type="button" data-id="${item.id}"${item.id === state.selectedId ? html` aria-current="true"` : ''}><span class="card-thumb"><img src="${speciesImageSrc(item)}" alt="" loading="lazy" onerror="window.__imgFallback(this,${item.id})">${seen ? html`<span class="seen-badge" aria-hidden="true">${icon('check', 12)}</span>` : ''}</span><span><span class="card-meta"><span class="badge ${item.kingdom}">${item.kingdom}</span>${migra ? html`<span class="badge migratoria">🕊️ Migratoria</span>` : ''}${fenologia ? html`<span class="badge">${fenologia}</span>` : ''}${item.featured ? html`<span class="badge alert">prioritaria</span>` : ''}${rarezaBadge(item)}${item.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}</span><h3>${item.commonName}</h3><em>${item.scientificName}</em>${tramoDe(item) === null ? html`<span class="sr-only">Sin tramo de protección calculado.</span>` : ''}${seen ? html`<span class="sr-only">Especie vista.</span>` : ''}</span></button>`;
   });
   // Una lista vacía sin explicación se lee como un fallo de la app. Con el filtro de rareza puesto
   // es además el caso NORMAL: en un hábitat corriente no hay ninguna especie en peligro, y eso es

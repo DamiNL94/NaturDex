@@ -1,4 +1,19 @@
 :root{--ink:#17211b;--muted:#637064;--line:#dbe4d7;--paper:#f7f8f2;--panel:#fff;--leaf:#2f6f4e;--sea:#1f6f8b;--sun:#d89b30;--danger:#b8533f;--shadow:0 18px 60px rgba(23,33,27,.14)}
+/* Tinte de fondo de la tarjeta de especie por tramo de rareza legal (Js/rareza.js · claseRareza).
+   Es una escalera, no una paleta suelta: verde para lo protegido SIN amenaza (2 y 3, el más oscuro
+   es el más protegido), ámbar y rojo para las dos categorías de AMENAZA (4 y 5) —los mismos dos
+   colores con los que la ficha pinta su cartel de advertencia—, y azul de dato informativo para el
+   tramo que nadie ha calculado, que no es lo mismo que «sin figura». El tramo 1 se queda con el
+   fondo normal de la tarjeta: teñir 478 de 1.161 fichas para decir «sin protección» convierte la
+   lista en un semáforo y no añade nada. */
+:root{
+  --rareza-1-bg:var(--panel);
+  --rareza-2-bg:#eff6f0;
+  --rareza-3-bg:#ddece1;
+  --rareza-4-bg:#fbf3de;
+  --rareza-5-bg:#f7e8e3;
+  --rareza-nd-bg:#e8f2f6;
+}
 /* ================================================================================================
    Escala tipográfica
    ------------------------------------------------------------------------------------------------
@@ -890,7 +905,14 @@ p.achievement-progress-label{margin:8px 0 0}
   --leaf:#63b085;--sea:#6cb6d2;--sun:#e3b463;--danger:#e59279;--danger-ink:#f0a68f;
   --shadow:0 18px 60px rgba(0,0,0,.55);--shadow-sm:0 4px 14px rgba(0,0,0,.45);
   /* Superficie elevada sobre --panel (tarjetas dentro de tarjetas, campos, chips). */
-  --tint:#1f2a23
+  --tint:#1f2a23;
+  /* El mismo orden de la escalera, con los fondos teñidos que ya usan los avisos de este tema. */
+  --rareza-1-bg:var(--panel);
+  --rareza-2-bg:#1d2a22;
+  --rareza-3-bg:#22332a;
+  --rareza-4-bg:#2b2415;
+  --rareza-5-bg:#33201a;
+  --rareza-nd-bg:#152a33
 }
 /* Superficies que eran blancas. */
 :root[data-theme="dark"] .detail-panel,
@@ -1476,12 +1498,35 @@ body.visor-open{overflow:hidden}
 .badge.rareza{color:var(--muted);background:#eef1ea;letter-spacing:.04em}
 .badge.rareza.amenazada{color:var(--danger);background:#f7e8e3}
 
+/* El tinte de la tarjeta. Los selectores llevan `:root` delante a propósito: sin él se quedan en
+   la misma especificidad que `.species-card.seen` y que el bloque de tema oscuro, y el tinte
+   dependería del orden en que se cargan las dos hojas. El estado «vista» no se pierde por esto: lo
+   dicen el filete verde de la izquierda, el borde y la insignia del ✓, que son suyos y no del
+   tramo. */
+:root .species-card.rareza-1{background:var(--rareza-1-bg)}
+:root .species-card.rareza-2{background:var(--rareza-2-bg)}
+:root .species-card.rareza-3{background:var(--rareza-3-bg)}
+:root .species-card.rareza-4{background:var(--rareza-4-bg)}
+:root .species-card.rareza-5{background:var(--rareza-5-bg)}
+:root .species-card.rareza-nd{background:var(--rareza-nd-bg)}
+
 .proteccion-aviso{margin:14px 0;padding:12px 14px;border:1px solid var(--line);border-left-width:5px;border-radius:8px;background:#fbf3de}
 .proteccion-aviso p{margin:0 0 8px}
 .proteccion-titulo{font-size:var(--fs-md);font-weight:800;line-height:1.35}
 .proteccion-entrada{font-size:var(--fs-sm);line-height:1.5}
 .proteccion-consejos{display:grid;gap:6px;margin:0 0 8px;padding-left:18px;font-size:var(--fs-sm);line-height:1.5}
 .proteccion-nota{margin:0;font-size:var(--fs-xs);line-height:1.45;opacity:.85}
+/* Las pautas y la nota legal, plegadas (Js/rareza.js · cartelAdvertencia). El desplegable NO usa la
+   clase `.plegable` de las demás secciones de la ficha: aquélla se pinta con su propia caja y su
+   rótulo verde, y aquí el bloque ya tiene caja y color de alarma — otra caja dentro y un verde de
+   enlace en mitad de un cartel rojo lo apagarían. Hereda `currentColor`, que es el tono del nivel.
+   El rótulo va subrayado porque en un bloque de color el subrayado es lo que lo distingue del texto
+   de al lado, y NO se le toca el `display`: en cuanto un `<summary>` deja de ser `list-item` pierde
+   el triángulo, y sin triángulo el rótulo se lee como un enlace y no como algo que se abre. */
+.proteccion-pautas{margin-top:2px}
+.proteccion-pautas>summary{padding:4px 0;color:inherit;font-size:var(--fs-sm);font-weight:800;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.proteccion-pautas[open]>summary{margin-bottom:8px}
+.proteccion-pautas>summary::marker{font-size:.8em}
 /* Tramo 5: el rojo de peligro. Tramo 4: el ámbar de los avisos. Sin tramo calculado: el azul de lo
    informativo, que dice «esto no se ha comprobado» sin gritar lo que no consta. */
 .proteccion-aviso.critico{border-color:#e3b6ac;border-left-color:var(--danger);background:#f7e8e3;color:#7a2e1c}

@@ -303,8 +303,10 @@ function renderSpeciesDetail() {
    * debajo de los datos de campo— y bajan aquí, que es donde se busca lo que se consulta una vez.
    * Lo que NO baja es el cartel de advertencia de una especie amenazada (rareza.js ·
    * cartelAdvertencia, regla nº 9 del CLAUDE.md raíz): ése dice que se tiene delante algo protegido,
-   * y un aviso escondido no es un aviso. Las estrellas siguen a la vista en los datos de campo; lo
-   * que se pliega es de dónde salen.
+   * y un aviso escondido no es un aviso. El cartel pliega POR DENTRO desde el 2026-09-04 —sus pautas
+   * y su nota legal, que son las mismas en todas las fichas de su clase—, pero su cabecera, con el
+   * icono, el título y la cita de la categoría y la norma, se queda fuera del plegado y a la vista.
+   * Las estrellas siguen a la vista en los datos de campo; lo que se pliega es de dónde salen.
    */
   const fuentes = html`${species.reviewNote ? html`<div class="review-note"><strong>Pendiente de revisión:</strong> ${species.reviewNote}</div>` : ''}${rareza === null
       ? html`<p class="detail-source">La rareza sale de la <strong>categoría legal de protección</strong>, no de lo difícil que sea encontrarla. Esta ficha todavía no la tiene calculada.</p>`

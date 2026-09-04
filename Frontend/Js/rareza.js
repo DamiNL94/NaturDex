@@ -26,6 +26,15 @@
 // calculado, aquí se enseña el aviso de precaución. Publicar de menos se corrige; acercarse de más,
 // no.
 //
+// EL TRAMO TAMBIÉN TIÑE LA TARJETA DEL CATÁLOGO
+// El distintivo de rareza dice el tramo, pero hay que leerlo: en una lista de doscientas fichas no
+// se ve de un vistazo dónde está lo protegido. `claseRareza()` da la clase con la que la tarjeta se
+// pinta de fondo, y el degradado no es decorativo — es la misma escalera: verde para lo protegido
+// sin amenaza, ámbar y rojo para las dos categorías de amenaza, azul para lo que nadie ha mirado y
+// ningún tinte para el tramo 1. El tinte NUNCA es el único portador del dato: del 2 para arriba lo
+// dice el distintivo, y en el tramo sin calcular lo dice `render/catalogo.js` con un texto para
+// lector de pantalla. Color solo, sin texto, no es información.
+//
 // El vocabulario y los cinco tramos son los mismos que `Tools/lib/rareza.js`, con los mismos textos:
 // son la misma escalera vista desde los dos lados del repositorio.
 // ================================================================================================
@@ -72,6 +81,20 @@ export function tramoDe(species) {
 export function estrellas(tramo) {
   const n = Number.isFinite(tramo) ? tramo : 0;
   return '★'.repeat(n) + '☆'.repeat(5 - n);
+}
+
+/**
+ * La clase CSS con la que la tarjeta del catálogo se tiñe de su tramo. Vive aquí, y no en
+ * `render/catalogo.js`, por el mismo motivo que el filtro y el cartel: la escalera es una sola, y
+ * quien la cambie tiene que encontrarla entera en un fichero.
+ *
+ * `rareza-nd` es el tramo que NO se ha calculado, y es una clase propia a propósito: pintarlo del
+ * color del tramo 1 afirmaría «sin figura de protección», que es justo lo que no consta. Es el
+ * mismo criterio con el que `avisoDeInteraccion` le da cartel a esas fichas.
+ */
+export function claseRareza(species) {
+  const tramo = tramoDe(species);
+  return tramo === null ? 'rareza-nd' : 'rareza-' + tramo;
 }
 
 /**
@@ -154,15 +177,37 @@ export function avisoDeInteraccion(species) {
     };
 }
 
-/** El cartel entero, listo para insertar en la ficha. Cadena vacía si la especie no lleva aviso. */
+/**
+ * El cartel entero, listo para insertar en la ficha. Cadena vacía si la especie no lleva aviso.
+ *
+ * SE PLIEGA, PERO NO ENTERO, Y LA COSTURA ESTÁ ELEGIDA
+ * El cartel se llevaba media pantalla de móvil entre el nombre de la especie y su descripción, y
+ * lo que lo hace largo son las pautas y la nota legal, que son las MISMAS en todas las fichas de
+ * su clase: se leen una vez y a partir de ahí estorban. Lo que cambia ficha a ficha es la cabecera
+ * —el icono, el título y la cita de la categoría con su norma—, y eso NO se pliega: es lo único
+ * que dice qué se tiene delante, y un aviso escondido no es un aviso.
+ *
+ * Por eso el `<details>` va DENTRO del `<aside>` y envuelve solo las pautas. Tres consecuencias, y
+ * ninguna casual: el bloque conserva su color de alarma y su filete esté abierto o cerrado; el
+ * rótulo del control es corto y dice cuántas pautas guarda, en vez de que el lector de pantalla
+ * anuncie el párrafo entero como nombre de un botón; y quien no lo abra sigue leyendo la figura
+ * legal, que es el dato crítico.
+ *
+ * Arranca CERRADO en los tres niveles. Abrirlo de oficio en `critico` se planteó y se descartó:
+ * dejaría dos fichas seguidas con el mismo cartel en dos estados distintos, y la cabecera avisa
+ * igual de fuerte con las pautas plegadas.
+ */
 export function cartelAdvertencia(species) {
   const aviso = avisoDeInteraccion(species);
   if (!aviso) return '';
   return html`<aside class="proteccion-aviso ${aviso.nivel}" role="note" aria-label="Aviso de interacción con la especie">
     <p class="proteccion-titulo"><span aria-hidden="true">${aviso.icono}</span> ${aviso.titulo}</p>
     <p class="proteccion-entrada">${aviso.entrada}</p>
+    <details class="proteccion-pautas">
+    <summary>Cómo comportarse ante ella (${aviso.consejos.length} pautas)</summary>
     <ul class="proteccion-consejos">${aviso.consejos.map(c => html`<li>${c}</li>`)}</ul>
     <p class="proteccion-nota">${aviso.nota}</p>
+    </details>
     </aside>`;
 }
 
