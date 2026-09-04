@@ -34,6 +34,14 @@ export const poiCount = document.querySelector('#poiCount');
 export const parkSummary = document.querySelector('#parkSummary');
 export const parkStats = document.querySelector('#parkStats');
 export const parkProgressWrap = document.querySelector('#parkProgressWrap');
+// Plegado de la cabecera. #parkFold es lo que se esconde (descripción + recuentos); la barra lleva
+// el progreso, que NO se pliega, y el botón que lo pliega. En un espacio de ficha base se apaga la
+// BARRA entera —no hay recuentos ni progreso que plegar— y el bloque se fuerza desplegado, porque
+// el estado es global y si no la descripción se quedaría escondida sin botón (app.js ·
+// applyParkLevel e initParkFold).
+export const parkFold = document.querySelector('#parkFold');
+export const parkFoldBar = document.querySelector('#parkFoldBar');
+export const parkFoldToggle = document.querySelector('#parkFoldToggle');
 export const progressTrack = document.querySelector('#progressTrack');
 export const progressFill = document.querySelector('#progressFill');
 export const progressLabel = document.querySelector('#progressLabel');

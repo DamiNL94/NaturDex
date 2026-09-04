@@ -503,7 +503,7 @@ select{font-family:var(--font-ui);font-size:var(--fs-md)}
   .summary-grid{gap:6px;margin-top:6px;grid-template-columns:repeat(3,1fr)}
   .summary-grid div{padding:6px 8px}
   .summary-grid strong{font-size:var(--fs-md)}
-  .progress-wrap{margin-top:8px}
+  .park-fold-bar{margin-top:8px}
   .progress-label{margin-top:4px}
   .presence-bar{margin-top:8px}
   /* La barra solo aparece sin cobertura, y entonces es lo único que lleva: no se parte en dos. */
