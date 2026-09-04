@@ -23,13 +23,7 @@ export function renderInvasoras() {
   const list = invasorasForPark();
   // Tarjetas compactas y clicables (como las de especies): miniatura de la foto —que es justo lo
   // que hay que reconocer en el campo— y, si la foto falla, la portada con el emoji del grupo.
-  //
-  // Comparten la estructura de .species-card, que dejó de ser un <button> para poder llevar dentro
-  // el desplegable «+N datos» (ver render/catalogo.js): la caja es el <div> y lo que se pulsa es el
-  // .species-card-main de dentro. Aquí NO hay desplegable, y no por olvido: una invasora lleva
-  // siempre exactamente dos distintivos —«Invasora» y su grupo—, que es justo el máximo, así que no
-  // hay nada que esconder. El día que se le añada un tercero, éste es el sitio.
-  const cards = list.map(i => html`<div class="species-card invasora-card${i.scientificName === state.selectedInvasora ? ' active' : ''}" data-invasora="${i.scientificName}"><button class="species-card-main" type="button"${i.scientificName === state.selectedInvasora ? html` aria-current="true"` : ''}><span class="card-thumb invasora-thumb"><img src="${invasoraImageSrc(i)}" alt="" loading="lazy" data-group="${i.group || ''}" onerror="window.__invThumbFallback(this)"></span><span><span class="card-meta"><span class="badge alert">Invasora</span><span class="badge">${i.group || ''}</span></span><h3>${i.commonName || i.scientificName}</h3><em>${i.scientificName}</em></span></button></div>`);
+  const cards = list.map(i => html`<button class="species-card invasora-card${i.scientificName === state.selectedInvasora ? ' active' : ''}" type="button" data-invasora="${i.scientificName}"${i.scientificName === state.selectedInvasora ? html` aria-current="true"` : ''}><span class="card-thumb invasora-thumb"><img src="${invasoraImageSrc(i)}" alt="" loading="lazy" data-group="${i.group || ''}" onerror="window.__invThumbFallback(this)"></span><span><span class="card-meta"><span class="badge alert">Invasora</span><span class="badge">${i.group || ''}</span></span><h3>${i.commonName || i.scientificName}</h3><em>${i.scientificName}</em></span></button>`);
   const intro = list.length
     ? html`<p class="invasoras-intro">Especies exóticas <strong>invasoras</strong> registradas en ${region || 'esta zona'} (Catálogo Español de EEI, RD 630/2013). No son parte de la fauna y flora del parque: apréndelas a reconocer y <strong>no las plantes, transportes ni sueltes</strong> en el medio natural. Pulsa una para ver su ficha.</p>`
     : html`<p class="invasoras-intro">No hay invasoras catalogadas para esta zona todavía.</p>`;
@@ -70,7 +64,7 @@ export function renderInvasoraDetail() {
     <li><span>Catálogo oficial</span>${inv.catalogo || 'Catálogo Español de EEI (RD 630/2013)'}</li>
     <li><span>Presencia en ${inv.ccaa || 'la zona'}</span>${inv.gbifOccurrences ? inv.gbifOccurrences + ' registros (GBIF)' : 'Registrada'}</li>
     </ul>`)}
-    ${plegable('Fuentes y crédito de la foto', html`${hasPhoto && inv.imageAttribution ? html`<p class="detail-source">Foto: ${inv.imageAttribution}</p>` : ''}${inv.source ? html`<p class="detail-source">Fuente: ${inv.source}</p>` : ''}`)}
+    ${plegable('Fuentes y más información', html`${hasPhoto && inv.imageAttribution ? html`<p class="detail-source">Foto: ${inv.imageAttribution}</p>` : ''}${inv.source ? html`<p class="detail-source">Fuente: ${inv.source}</p>` : ''}`)}
     </div>`;
   highlightGlossary(detailPanel);
 }

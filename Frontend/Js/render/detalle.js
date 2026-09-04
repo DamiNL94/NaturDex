@@ -92,11 +92,31 @@ function renderHabitatDetail() {
   // mapa se sube a sus vecinos de tipo sin volver al principio del catálogo.
   const group = habitatGroup(habitat);
   const groupSize = habitatsOfGroup(group.id).length;
-  // En orden alfabético, el mismo que la lista del catálogo (ver state.speciesOfHabitat).
-  const chips = speciesOfHabitat(habitat).map(s => {
+  /*
+   * Las especies del hábitat, en dos desplegables: FAUNA y FLORA.
+   *
+   * Era una parrilla única de chips, y en un hábitat corriente son decenas —el sabinar de Cabo Cope
+   * pasa de cien—: esa mancha se comía la ficha entera y empujaba la asociación fitosociológica y
+   * las fuentes fuera de la pantalla. Separadas por reino, además, la lista responde a la pregunta
+   * con la que se entra —«¿qué plantas hay aquí?»— sin hacer leer cien nombres para descartar bichos.
+   *
+   * El reparto va por `kingdom`, que es el campo con el que la app filtra el catálogo (el segmentado
+   * Fauna/Flora de encima de la lista), y cae a la taxonomía como reserva: una ficha puede no traer
+   * `kingdom` y sí `taxonomy.kingdom`. Dentro de cada uno, el orden alfabético del catálogo (ver
+   * state.speciesOfHabitat).
+   */
+  const chip = s => {
     const wasSeen = state.seenSpecies.has(s.id);
     return html`<button type="button" class="habitat-species-chip${wasSeen ? ' seen' : ''}" data-species-chip="${s.id}"><span aria-hidden="true">${kingdomEmoji(s)}</span>${s.commonName}${wasSeen ? html` <span aria-hidden="true">✓</span><span class="sr-only">(vista)</span>` : ''}</button>`;
-  });
+  };
+  const esFlora = s => s.kingdom === 'flora' || (s.taxonomy || {}).kingdom === 'Plantae';
+  const delHabitat = speciesOfHabitat(habitat);
+  const flora = delHabitat.filter(esFlora);
+  const fauna = delHabitat.filter(s => !esFlora(s));
+  // El rótulo lleva la cuenta: un desplegable cerrado que no dice cuánto guarda obliga a abrirlo
+  // para saber si merece la pena. Y el que se quede vacío no se pinta —`plegable()` devuelve cadena
+  // vacía sin contenido—, que en un fondo marino o en un matorral pasa la mitad de las veces.
+  const listaEspecies = html`${plegable(`Fauna (${fauna.length})`, fauna.length ? html`<div class="habitat-species-chips">${fauna.map(chip)}</div>` : '')}${plegable(`Flora (${flora.length})`, flora.length ? html`<div class="habitat-species-chips">${flora.map(chip)}</div>` : '')}`;
   detailPanel.innerHTML = html`<div class="detail-image-wrap habitat-detail-image">
     <img src="${habitatImageSrc(habitat)}" alt="${habitat.name}" onerror="window.__habitatImgFallback(this,'${habitat.id}')"${atributosAmpliar(hayFotoPropia(habitat), habitat.name, creditoFoto(habitat))}>
     <span class="habitat-detail-kind">Hábitat</span>
@@ -111,12 +131,6 @@ function renderHabitatDetail() {
     </span>
     <button type="button" class="detail-group-link" data-habitat-group-link="${group.id}" title="Ver los hábitats de este grupo">${raw(groupSwatch(group, 18))}${group.name}${groupSize > 1 ? html` · ${groupSize} hábitats` : ''}</button>
     <h2>${habitat.name}</h2>
-    ${/*
-      * El `reviewNote` sube hasta aquí, igual que en la ficha de especie: es un aviso sobre TODA la
-      * ficha, y al final —ahora, entre los desplegables— quedaba escondido de hecho aunque no
-      * estuviera plegado. Y nunca se pliega (regla nº 2 del CLAUDE.md raíz).
-      */''}
-    ${habitat.reviewNote ? html`<div class="review-note"><strong>Pendiente de revisión:</strong> ${habitat.reviewNote}</div>` : ''}
     <p class="detail-prose">${habitat.description}</p>
     ${audioBlock(habitat, 'Audioguía del hábitat')}
     <div class="detail-facts">
@@ -128,15 +142,16 @@ function renderHabitatDetail() {
     <div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}" aria-label="Especies vistas en este hábitat"><div class="progress-fill" style="width:${pct}%"></div></div>
     <span class="progress-caption">${seen} / ${total} especies vistas en este hábitat</span>
     </div>
-    ${total > 0 ? html`<h3 class="detail-subtitle">Especies de este hábitat</h3><div class="habitat-species-chips">${chips}</div>` : ''}
+    ${total > 0 ? html`<h3 class="detail-subtitle">Especies de este hábitat</h3>${listaEspecies}` : ''}
     <button class="seen-toggle" type="button" data-view-habitat-species="${habitat.id}">Ver ${total === 1 ? 'la especie' : 'las ' + total + ' especies'} en el catálogo</button>
     ${plegable('Asociación fitosociológica', fitosociologiaBlock(habitat))}
     ${/*
-      * El crédito de la foto se pliega con las fuentes, y no es un descuido de licencia: sigue
-      * saliendo, sin plegar, en el visor a pantalla completa (util.js · atributosAmpliar se lo pasa
-      * a visor.js), que es el momento en el que la foto de verdad se está mirando.
+      * «Fuentes y más información» recoge lo que se consulta una vez y no con el hábitat delante: el
+      * aviso de revisión, el crédito de la foto y la procedencia. Que el crédito se pliegue no es un
+      * descuido de licencia: sigue saliendo, sin plegar, en el visor a pantalla completa (util.js ·
+      * atributosAmpliar se lo pasa a visor.js), que es cuando la foto de verdad se está mirando.
       */''}
-    ${plegable('Fuentes y crédito de la foto', habitat.image && habitat.imageAttribution ? html`<p class="detail-source">Foto: ${habitat.imageAttribution}${habitat.imageNote ? ' — ' + habitat.imageNote : ''}</p>` : '')}
+    ${plegable('Fuentes y más información', html`${habitat.reviewNote ? html`<div class="review-note"><strong>Pendiente de revisión:</strong> ${habitat.reviewNote}</div>` : ''}${habitat.image && habitat.imageAttribution ? html`<p class="detail-source">Foto: ${habitat.imageAttribution}${habitat.imageNote ? ' — ' + habitat.imageNote : ''}</p>` : ''}`)}
     </div>`;
 }
 
@@ -166,9 +181,9 @@ function renderPoiDetail() {
     <button class="seen-toggle ${seen ? 'is-seen' : ''}" type="button" data-toggle-poi="${poi.id}" aria-pressed="${seen ? 'true' : 'false'}">${seen ? '✓ Visitado' : 'Marcar como visitado'}</button>
     ${seen ? markVerificationNote('poi', poi.id) : ''}
     ${/*
-      * «Fuentes» a secas y no «Fuentes y crédito de la foto» como en las otras fichas: la de un
-      * punto de interés no pinta crédito de foto —solo lo lleva el visor—, así que prometer uno
-      * sería un rótulo que no cumple lo que dice.
+      * «Fuentes» a secas y no «Fuentes y más información» como en las otras fichas: la de un punto
+      * de interés no tiene nada más que enseñar —ni crédito de foto, que solo lo lleva el visor, ni
+      * aviso de revisión— y prometerlo sería un rótulo que no cumple lo que dice.
       */''}
     ${plegable('Fuentes', poi.source ? html`<p class="detail-source">Fuente: ${poi.source}</p>` : '')}
     </div>`;
@@ -219,14 +234,13 @@ function bloquePresenciaSitio(species) {
  * Qué NO se pliega, y no por gusto:
  *   · el cartel de advertencia de rareza.js — regla nº 9 del CLAUDE.md raíz: una especie amenazada,
  *     o SIN tramo calculado, avisa. Un aviso escondido no es un aviso.
- *   · el `reviewNote`, que además SUBE hasta junto al cartel. Es el hueco documentado, que aquí vale
- *     más que un campo relleno a ojo (regla nº 2), y es un aviso sobre TODA la ficha: dejarlo al
- *     final, ahora entre desplegables, lo escondía de hecho aunque no estuviera plegado.
  *   · el botón de marcar visto, su recordatorio de advertencia y la nota de verificación. Suben
  *     detrás de los datos de campo: es lo que se viene a hacer, y no se pide bajar hasta el final.
- *   · la línea que explica las estrellas. Cita una norma, sí, pero no es una fuente bibliográfica:
- *     es la LEYENDA del dato que hay justo encima. Cinco estrellas sin nada que diga de dónde salen
- *     son exactamente el dato sin procedencia que este repositorio no admite.
+ *
+ * El `reviewNote` y la línea que explica las estrellas SÍ se pliegan, juntos, en «Fuentes y más
+ * información»: son lo que se consulta una vez, no lo que se mira con la especie delante. Ninguno
+ * de los dos es el que avisa de que la especie está protegida —de eso se encarga el cartel de
+ * advertencia, que sigue sin plegarse—, y las estrellas se quedan a la vista en los datos de campo.
  *
  * El estado abierto/cerrado NO se recuerda entre fichas, y son dos motivos: el panel se repinta
  * entero cada vez que se marca algo —así que habría que sostenerlo aparte— y una ficha que abriera
@@ -282,7 +296,19 @@ function renderSpeciesDetail() {
     <li class="detail-prose"><span>${species.regionalCcaa || 'Comunidad autónoma'}</span>${species.regionalStatus || 'Sin dato'}</li>
     </ul>`;
 
-  const fuentes = html`${species.image && species.imageAttribution ? html`<p class="detail-source">Foto: ${species.imageAttribution}</p>` : ''}${species.source ? html`<p class="detail-source">Fuente: ${species.source}</p>` : ''}`;
+  /*
+   * «Fuentes y más información»: el aviso de revisión, la leyenda de las estrellas y la procedencia.
+   *
+   * Los dos primeros estaban sueltos en el cuerpo —el `reviewNote` junto al rótulo y la leyenda
+   * debajo de los datos de campo— y bajan aquí, que es donde se busca lo que se consulta una vez.
+   * Lo que NO baja es el cartel de advertencia de una especie amenazada (rareza.js ·
+   * cartelAdvertencia, regla nº 9 del CLAUDE.md raíz): ése dice que se tiene delante algo protegido,
+   * y un aviso escondido no es un aviso. Las estrellas siguen a la vista en los datos de campo; lo
+   * que se pliega es de dónde salen.
+   */
+  const fuentes = html`${species.reviewNote ? html`<div class="review-note"><strong>Pendiente de revisión:</strong> ${species.reviewNote}</div>` : ''}${rareza === null
+      ? html`<p class="detail-source">La rareza sale de la <strong>categoría legal de protección</strong>, no de lo difícil que sea encontrarla. Esta ficha todavía no la tiene calculada.</p>`
+      : html`<p class="detail-source">Rareza = <strong>${TRAMOS[rareza].significado}</strong>. Sale de la categoría legal vigente${base ? html`: ${base.categoria}${base.norma ? ' — ' + base.norma : ''}` : ', aunque esta ficha no guarda la norma que la justifica'}.</p>`}${species.image && species.imageAttribution ? html`<p class="detail-source">Foto: ${species.imageAttribution}</p>` : ''}${species.source ? html`<p class="detail-source">Fuente: ${species.source}</p>` : ''}`;
 
   detailPanel.innerHTML = html`<div class="detail-image-wrap">
     <img src="${speciesImageSrc(species)}" alt="${species.commonName}" onerror="window.__imgFallback(this,${species.id})"${atributosAmpliar(hayFotoPropia(species), species.commonName, creditoFoto(species))}>
@@ -295,7 +321,6 @@ function renderSpeciesDetail() {
     </span>
     <h2>${species.commonName}</h2><em>${species.scientificName}</em>
     ${cartelAdvertencia(species)}
-    ${species.reviewNote ? html`<div class="review-note"><strong>Pendiente de revisión:</strong> ${species.reviewNote}</div>` : ''}
     <p class="detail-prose">${species.description}</p>
     <ul class="detail-list detail-prose">${species.tips.map(tip => html`<li>${tip}</li>`)}</ul>
     <div class="detail-facts">
@@ -305,9 +330,6 @@ function renderSpeciesDetail() {
       ? 'Sin calcular'
       : html`<span role="img" aria-label="${rareza} de 5">${estrellas(rareza)}</span>`}</strong></div>
     </div>
-    ${rareza === null
-      ? html`<p class="detail-source">La rareza sale de la <strong>categoría legal de protección</strong>, no de lo difícil que sea encontrarla. Esta ficha todavía no la tiene calculada.</p>`
-      : html`<p class="detail-source">Rareza = <strong>${TRAMOS[rareza].significado}</strong>. Sale de la categoría legal vigente${base ? html`: ${base.categoria}${base.norma ? ' — ' + base.norma : ''}` : ', aunque esta ficha no guarda la norma que la justifica'}.</p>`}
     ${recordatorioAdvertencia(species)}
     <button class="seen-toggle ${seen ? 'is-seen' : ''}" type="button" data-toggle-seen="${species.id}" aria-pressed="${seen ? 'true' : 'false'}">${seen ? '✓ Visto' : 'Marcar como visto'}</button>
     ${seen ? markVerificationNote('species', species.id) : ''}
@@ -317,6 +339,6 @@ function renderSpeciesDetail() {
     ${plegable('Taxonomía', taxonomia)}
     ${plegable('Estado de conservación', conservacion)}
     ${plegable('Presencia en este espacio', bloquePresenciaSitio(species))}
-    ${plegable('Fuentes y crédito de la foto', fuentes)}
+    ${plegable('Fuentes y más información', fuentes)}
     </div>`;
 }
