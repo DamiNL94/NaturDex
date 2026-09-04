@@ -1,5 +1,5 @@
 // ================================================================================================
-// ./achievements/eventos.js — los eventos que alimentan el progreso de cuenta; los llaman app.js y glossary.js
+// ./achievements/eventos.js — los eventos que alimentan el progreso de cuenta; los llaman app.js, glossary.js y diccionario.js
 // ------------------------------------------------------------------------------------------------
 // Trozo de achievements.js. El índice de la carpeta está en Frontend/Js/CLAUDE.md.
 // ================================================================================================
@@ -10,7 +10,7 @@ import { normalize } from '../util.js';
 import { addLocalParkIndex, getJSON, lsKey, recordLocalActivity, setJSON } from './almacen.js';
 import { handleServerNewlyUnlocked, refreshLocal } from './sincronizacion.js';
 
-// --- Eventos que alimentan el progreso de cuenta (los llama app.js/glossary.js) ------------------
+// --- Eventos que alimentan el progreso de cuenta (los llaman app.js, glossary.js y diccionario.js) ------------------
 export function noteParkActivity(parkSlug) {
   if (!parkSlug) return;
   addLocalParkIndex(parkSlug);

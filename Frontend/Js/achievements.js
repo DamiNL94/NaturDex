@@ -8,7 +8,7 @@
 //   achievements/agregacion.js     espejo local de computeAccountAggregates() del backend
 //   achievements/celebracion.js    la cola del cartel animado (autocontenida, crea su propio DOM)
 //   achievements/sincronizacion.js recalcula, evalúa y sincroniza con el servidor
-//   achievements/eventos.js        lo que llaman app.js y glossary.js cuando pasa algo
+//   achievements/eventos.js        lo que llaman app.js, glossary.js y diccionario.js cuando pasa algo
 //   achievements/arranque.js       migración invitado → cuenta e init
 //
 // El ámbito de almacenamiento es LA CUENTA, no el parque: esta capa agrega sobre todos los espacios.
