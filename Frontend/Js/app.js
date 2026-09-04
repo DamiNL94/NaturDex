@@ -27,6 +27,7 @@ import {
 import {
   sidebar, speciesList, searchInput, catalogControls, catalogPanel,
   backToHabitatsBtn, catalogCrumb, catalogCrumbLabel, parkTitle, parkEyebrow, parkStats, parkProgressWrap,
+  parkFold, parkFoldBar, parkFoldToggle,
   progressPanel, invasorasPanel, diccionarioPanel, basicNotice, detailPanel, sheetClose, sheetScrim,
   saveOfflineBtn, connStatus, offlineBar, offlineProgress,
   layersToggle, layersPanel, explorerToggle, rarityFilter
@@ -430,6 +431,12 @@ function applyParkLevel(level) {
   // Contadores y barra de progreso: sin catálogo no hay nada que contar, así que se ocultan.
   if (parkStats) parkStats.hidden = basic;
   if (parkProgressWrap) parkProgressWrap.hidden = basic;
+  // Y con ellos se va la fila que los lleva, botón de plegar incluido: sin recuentos ni progreso, lo
+  // único que quedaría dentro del plegado es la descripción, y la cabecera de un espacio N1 ya es
+  // corta. Se fuerza además DESPLEGADO, porque el estado es global: entrar aquí con la cabecera
+  // plegada de otro parque escondería la descripción sin dejar botón con el que sacarla.
+  if (parkFoldBar) parkFoldBar.hidden = basic;
+  if (basic) { if (parkFold) parkFold.hidden = false; } else { restauraParkFold(); }
   // La pestaña de progreso mediría una colección que todavía no existe (y el modo explorador
   // descubriría especies y POIs que aún no están cargados): se ocultan mientras el espacio sea N1.
   document.querySelectorAll('.view-tab[data-view="progress"], .mobile-nav-btn[data-mtab="progress"]')
@@ -756,6 +763,57 @@ initTutorial();
 // Perfil y ajustes (profile.js): delegación de eventos de su pantalla. No depende de que haya
 // ningún parque cargado, igual que el progreso de cuenta.
 initProfile();
+
+// --- Cabecera del parque, plegable --------------------------------------------------------------
+// El problema medido (1280x720, Sierra Espuña): la cabecera del parque ocupaba 375 px de una
+// columna de 720 y no se podía apartar. Ya se había compactado dos veces —de 498 a 372— y no
+// llegaba: hay cosas ahí que se leen UNA vez al entrar (qué es este sitio, cuántos hábitats tiene)
+// y siguen ocupando sitio las dos horas siguientes, mientras se recorre la lista. Con el botón, la
+// cabecera sube a 388 px desplegada y baja a 232 plegada: se pagan 13 px una vez —la fila del
+// progreso pasa de 31 a 44 para que el objetivo táctil quepa— y se recuperan 156 cada vez.
+//
+// Se pliegan esas dos: la descripción del espacio y las tres casillas de recuento. NO se pliegan:
+//   · el cartel del parque (rótulo y figura de protección), que es dónde estás;
+//   · el progreso, que es lo que esta app viene a contar — se queda en su fila, con el botón;
+//   · la barra de presencia, que avisa de si lo que marcas cuenta para los logros. Escondida detrás
+//     de un plegado, el usuario no tendría forma de saber por qué su avistamiento no suma nada, así
+//     que se queda FUERA del bloque plegable (ver presence.js y el marcado de index.html);
+//   · la barra de "sin conexión", por lo mismo: solo aparece cuando pasa algo.
+//
+// El estado se recuerda en localStorage y es GLOBAL, no por parque: es una preferencia sobre cuánto
+// sitio quiere uno para la lista, no un dato del espacio. Quien la pliega en Sierra Espuña la quiere
+// plegada también en Calblanque, y guardarlo por parque obligaría a repetir el gesto dieciséis
+// veces. Por defecto, desplegada: la primera vez que se entra a un espacio hay que poder leer qué
+// es. El plegado no se anima: animar el alto de un bloque de contenido variable exige medirlo desde
+// JS, y lo único que se mueve es el chevrón (las dos reglas globales de "menos movimiento" ya lo
+// dejan quieto para quien lo pide).
+const PARK_FOLD_KEY = 'naturdex.cabeceraPlegada';
+
+// La restauración vuelve a hacer falta al CAMBIAR de parque: applyParkLevel fuerza el desplegado en
+// los espacios de ficha base, así que al entrar luego en uno completo hay que devolverle su estado.
+let restauraParkFold = () => {};
+
+function initParkFold() {
+  if (!parkFold || !parkFoldToggle) return;
+  const aplica = (plegada) => {
+    parkFold.hidden = plegada;
+    parkFoldToggle.setAttribute('aria-expanded', plegada ? 'false' : 'true');
+    const rotulo = plegada ? 'Desplegar los datos del parque' : 'Plegar los datos del parque';
+    parkFoldToggle.title = rotulo;
+    parkFoldToggle.setAttribute('aria-label', rotulo);
+  };
+  const guardado = () => {
+    try { return localStorage.getItem(PARK_FOLD_KEY) === '1'; } catch (e) { return false; }
+  };
+  restauraParkFold = () => aplica(guardado());
+  restauraParkFold();
+  parkFoldToggle.addEventListener('click', () => {
+    const plegada = !parkFold.hidden;
+    aplica(plegada);
+    try { localStorage.setItem(PARK_FOLD_KEY, plegada ? '1' : '0'); } catch (e) { /* sin localStorage: se recuerda solo esta sesión */ }
+  });
+}
+initParkFold();
 
 // --- UI de estado offline (aviso de "sin conexión" + icono de descarga del parque) ----------------
 // Por encima de este umbral se pide confirmación explícita: descargar un parque entero puede irse a

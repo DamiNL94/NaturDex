@@ -64,7 +64,7 @@ conexión.
 
 ---
 
-## `app.js` — el orquestador (1102 líneas, **a propósito en un solo fichero**)
+## `app.js` — el orquestador (1160 líneas, **a propósito en un solo fichero**)
 
 Se estudió partirlo y **no se partió**: sus secciones se llaman entre sí en ambos sentidos
 (navegación ↔ vistas ↔ pestañas móviles, arranque ↔ UI de offline). Partirlo produciría media docena
@@ -73,24 +73,25 @@ secciones cumple la misma función: abre solo el rango que necesites.
 
 | Líneas | Sección |
 |---|---|
-| 58–66 | Pila de navegación (`nav.js`) |
-| 67–100 | **Empezar por arriba**: `vistaArriba()` y `estrenaFicha()`. Toda vista o ficha que se abre arranca por su encabezado, no por donde se quedó la anterior |
-| 101–302 | Navegación del catálogo: entrar en grupo/hábitat/especie/POI/invasora, volver atrás |
-| 303–419 | Marcar visto / visitado, captura de avistamiento, aviso de «sin verificar» |
-| 420–439 | Nivel de dato del espacio: ficha base vs. catálogo completo |
-| 440–479 | Vistas (catálogo / invasoras / progreso / diccionario) |
-| 480–598 | Vistas móviles: nav inferior y ficha como *bottom-sheet* |
-| 599–733 | Delegación de eventos (**todos los clicks entran por aquí**), incluida la foto que abre el visor y las puertas del diccionario. Empieza por una salida: un clic dentro de un `<details>` NO abre la ficha. Las tarjetas del catálogo llevan ahora dentro su desplegable «+N datos», y sin eso el clic en su `<summary>` burbujeaba hasta la tarjeta y abría la ficha en la misma pulsación con la que se desplegaba |
-| 734–759 | Modo explorador (`explorer.js`) |
-| 760–983 | UI de estado offline. **Es el único disparador de la capa 2 de `offline.js`**: fotos, audioguías y mapa base no llegan al dispositivo por ninguna otra vía, así que la función no sobra (el SW cachea de paso lo que se va viendo, pero eso no cubre lo no visitado, se borra al subir `VERSION` y no alcanza al `.pmtiles`, que se pide por rangos). Lo que sobraba era su tamaño: el estado de conexión **solo se pinta cuando es anómalo** y la descarga es un icono de `.park-nav`, con el peso en su rótulo accesible y el avance como relleno del propio icono |
-| 984–1102 | Arranque de la experiencia de un parque (`startParkExperience`) |
+| 59–67 | Pila de navegación (`nav.js`) |
+| 68–101 | **Empezar por arriba**: `vistaArriba()` y `estrenaFicha()`. Toda vista o ficha que se abre arranca por su encabezado, no por donde se quedó la anterior |
+| 102–303 | Navegación del catálogo: entrar en grupo/hábitat/especie/POI/invasora, volver atrás |
+| 304–420 | Marcar visto / visitado, captura de avistamiento, aviso de «sin verificar» |
+| 421–446 | Nivel de dato del espacio: ficha base vs. catálogo completo. Es además donde se retira el plegado de la cabecera: sin recuentos ni progreso no hay nada que plegar |
+| 447–486 | Vistas (catálogo / invasoras / progreso / diccionario) |
+| 487–605 | Vistas móviles: nav inferior y ficha como *bottom-sheet* |
+| 606–740 | Delegación de eventos (**todos los clicks entran por aquí**), incluida la foto que abre el visor y las puertas del diccionario. Empieza por una salida: un clic dentro de un `<details>` NO abre la ficha. Las tarjetas del catálogo llevan ahora dentro su desplegable «+N datos», y sin eso el clic en su `<summary>` burbujeaba hasta la tarjeta y abría la ficha en la misma pulsación con la que se desplegaba |
+| 741–766 | Modo explorador (`explorer.js`) |
+| 767–817 | **Cabecera del parque, plegable** (`initParkFold`). La cabecera se llevaba 388 de los 720 px de un portátil; se pliegan la descripción del espacio y las tres casillas de recuento —lo que se lee una vez al entrar—, y se quedan fuera el cartel del parque, el progreso y la barra de presencia, que es la que avisa de si lo que marcas cuenta para los logros. El estado se recuerda en `localStorage` y es **global**, no por parque: es una preferencia sobre cuánto sitio quiere uno para la lista |
+| 818–1041 | UI de estado offline. **Es el único disparador de la capa 2 de `offline.js`**: fotos, audioguías y mapa base no llegan al dispositivo por ninguna otra vía, así que la función no sobra (el SW cachea de paso lo que se va viendo, pero eso no cubre lo no visitado, se borra al subir `VERSION` y no alcanza al `.pmtiles`, que se pide por rangos). Lo que sobraba era su tamaño: el estado de conexión **solo se pinta cuando es anómalo** y la descarga es un icono de `.park-nav`, con el peso en su rótulo accesible y el avance como relleno del propio icono |
+| 1042–1160 | Arranque de la experiencia de un parque (`startParkExperience`) |
 
 ## Resto de módulos ES
 
 | Módulo | Líneas | Qué resuelve |
 |---|---|---|
 | `state.js` | 275 | Única fuente de verdad del estado + selectores derivados y constantes. **`speciesSinHabitat()`** es lo que alimenta la tarjeta «Sin hábitat asignado» del catálogo, y `state.sinHabitatFocus` el nivel al que lleva. **`catalogSpecies()` no resta nada**: devuelve todas las especies del espacio. Restaba las migratorias mientras tuvieron pestaña propia, y al volver éstas al catálogo (2026-09-03) la resta habría escondido fauna que ya no se lista en ninguna otra parte. `esMigratoria()` sigue, pero como **distintivo**, no como puerta. **Los selectores del catálogo devuelven la lista ya ordenada alfabéticamente**: el dato llega en un orden desde el `park.json` (por `id`) y en otro desde la API (`is_featured DESC, common_name ASC`), y ordenar aquí es lo que hace que el mismo parque se vea igual con y sin cobertura |
-| `dom.js` | 82 | Referencias centralizadas a los nodos del DOM del parque |
+| `dom.js` | 90 | Referencias centralizadas a los nodos del DOM del parque |
 | `data.js` | 297 | Registro, manifiesto, datos y geo + progreso local-first. **Todo lo que habla con red o caché pasa por aquí.** La API tiene prioridad sobre el `park.json` |
 | `api.js` | 82 | **Único** punto de contacto con `Backend/Api/`: corte por tiempo, errores, `apiSignal()` |
 | `util.js` | 343 | Helpers puros: sin estado, sin DOM, sin Leaflet. Aquí viven la plantilla `` html`` ``, el **colador alfabético español** —que ordena el catálogo, las chips de hábitat y el diccionario— y `plegable()`, el `<details>` con el que las cuatro fichas esconden su aparato científico. Está aquí y no en `render/detalle.js` porque la ficha de invasora la pinta otro módulo, al que `detalle.js` ya importa: tenerlo allí habría cerrado un ciclo |

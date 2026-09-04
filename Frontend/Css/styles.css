@@ -238,6 +238,25 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFo
 /* El primer hijo trae su propio margen superior (.detail-facts son 14px) y dentro de la caja se
    suma al padding: sin esto, el desplegable abre con un hueco de treinta y tantos píxeles. */
 .plegable-cuerpo>*:first-child{margin-top:0}
+/* --- Cabecera del parque, plegable ------------------------------------------------------------
+   .park-fold-bar es la fila que no se pliega nunca: el progreso a la izquierda, ocupando lo que
+   sobra, y el botón de plegar a la derecha. El botón vale 44x44 —es un objetivo táctil de campo,
+   como el resto de .icon-btn— y por eso esta fila mide 44 px donde antes el progreso solo medía
+   31. Los 13 px de más se pagan una vez y se recuperan con creces: plegar quita 139.
+   El bloque plegable (#parkFold) se apaga con el atributo `hidden`, y por eso su clase NO lleva
+   ningún `display`: en cuanto se le escribe uno, gana al del atributo y el bloque se queda pintado
+   (le pasó a .summary-grid y a .offline-bar, las dos lo documentan aquí al lado). La fila sí
+   declara display, así que lleva su regla [hidden] explícita — y se apaga ella, no el botón: en un
+   espacio de ficha base se van los dos juntos y basta con esconder al que los contiene. */
+.park-fold-bar{display:flex;align-items:center;gap:8px;margin-top:10px}
+.park-fold-bar[hidden]{display:none}
+.park-fold-bar .progress-wrap{flex:1 1 auto;min-width:0;margin-top:0}
+.park-fold-toggle{flex:0 0 auto}
+/* El chevrón apunta arriba cuando hay algo desplegado que recoger, y abajo cuando hay algo que
+   sacar. Gira desde el propio aria-expanded para que el estado visible y el anunciado no puedan
+   discrepar: no hay una clase aparte que se olvide de cambiar. */
+.park-fold-toggle .icon{transition:transform .18s ease}
+.park-fold-toggle[aria-expanded="false"] .icon{transform:rotate(180deg)}
 
 /* --- Estado de conexión y descarga del parque -------------------------------------------------
    La barra ya no lleva botón: la descarga es el icono .offline-btn de .park-nav. Y aquí solo se
@@ -395,7 +414,9 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFo
 .summary-grid div{padding:8px 10px}
 .summary-grid strong{font-size:var(--fs-md)}
 .summary-grid span{font-size:var(--fs-xs)}
-.progress-wrap{margin-top:8px}
+/* El hueco lo pone la FILA, que es lo que se separa del cartel; el progreso que lleva dentro ya no
+   tiene margen propio (styles.css · .park-fold-bar .progress-wrap). */
+.park-fold-bar{margin-top:8px}
 .progress-label,.progress-caption{font-size:var(--fs-xs)}
 .offline-bar{margin-top:8px}
 
@@ -1178,16 +1199,28 @@ p.achievement-progress-label{margin:8px 0 0}
 .progress-group-count{margin-left:auto;font-size:var(--fs-xs)}
 
 /* ===================== Escritorio: recorrer el catálogo con tranquilidad ====================== */
-/* EL PROBLEMA (medido en 1280x720, con el parque piloto abierto):
-     park-nav 54 + park-summary 372 + view-tabs 53 + miga 31 + filtros 90 = 600 px de cabecera fija,
-     y a la LISTA del catálogo le quedaban 96 px de alto para 985 px de tarjetas. Se recorrían 175
-     especies por una ventanita de dos tarjetas y media. El pase anterior ya compactó la cabecera
-     (de 498 px a 372) y aun así no llegaba: el problema no es cuánto mide la cabecera, es que sea
-     INAMOVIBLE mientras la lista se ahoga debajo.
+/* EL PROBLEMA: la cabecera del parque se come la columna y no se puede apartar. Ya se compactó dos
+   veces —de 498 px a 372— y no llegaba: el problema no era cuánto medía, era que fuese INAMOVIBLE
+   mientras la lista se ahogaba debajo. Con 600 px de cabecera fija a la lista le quedaban 96 px de
+   alto para 985 de tarjetas: 175 especies por una ventanita de dos tarjetas y media.
    LA SOLUCIÓN: en escritorio la barra lateral scrollea como UNA columna, igual que ya hacía en
    móvil. La cabecera del parque se aparta al deslizar y la lista dispone de la columna entera; la
    miga de pan y el buscador se quedan pegados arriba, que son los dos controles que hay que tener
-   siempre a mano mientras se recorre el catálogo. */
+   siempre a mano mientras se recorre el catálogo.
+
+   REMEDIDO el 2026-09-04 (1280x720, Sierra Espuña), porque la cifra de 600 px ya no valía: la
+   cabecera había crecido y, sobre todo, ahora se PLIEGA (.park-fold-bar, aquí arriba). Los dos
+   niveles del catálogo, desplegada / plegada:
+     · grupos de hábitat  → nav 54 + resumen 388 + pestañas 55 + miga 0  + filtros 96  = 593 / 437
+     · todas las especies → nav 54 + resumen 388 + pestañas 55 + miga 38 + filtros 241 = 776 / 620
+   El plegado quita 156 px de la cabecera del parque (388 → 232), los mismos en los dos niveles
+   porque lo que se pliega vive todo dentro de .park-summary. No se comparan con los 600 de la
+   medición vieja: aquélla no dejó escrito en qué nivel del catálogo estaba, y sus dos cifras
+   (miga 31, filtros 90) no salen de ninguno de los dos de hoy. Lo que sí se puede comparar es lo
+   que se ve SIN deslizar nada, en la lista de grupos: desplegada asoma una tarjeta y no cabe
+   entera ninguna; plegada asoman dos y cabe una completa. En «todas las especies», con la miga y
+   los tres filtros puestos, ni plegando cabe una entera — y ahí es el scroll de esta sección, no
+   el plegado, lo que salva la vista. */
 @media(min-width:901px){
   /* Ancho fluido: con 420 + 460 px fijos, en un portátil de 1024 px al mapa le quedaban 144 px y
      las tres columnas iban apretadas. Ahora ceden a la vez y el mapa conserva su sitio. */
