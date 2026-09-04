@@ -27,6 +27,50 @@ function rarezaBadge(species) {
   return html`<span class="${clase}" title="${TRAMOS[tramo].significado}"><span aria-hidden="true">${estrellas(tramo)} ${TRAMOS[tramo].corto}</span><span class="sr-only">Rareza ${tramo} de 5: ${TRAMOS[tramo].significado}.</span></span>`;
 }
 
+/*
+ * Los distintivos de una tarjeta de especie, EN ORDEN DE PRIORIDAD: se pintan los DOS primeros que
+ * existan y el resto se va al desplegable «+N datos» de la propia tarjeta.
+ *
+ * El problema era de ruido: la fila podía llevar seis a la vez —reino, migratoria, la etiqueta de
+ * presencia, «prioritaria», la rareza con sus cinco estrellas y la categoría legal, y «a revisar»—,
+ * partirse en tres líneas y empujar el nombre de la especie, que es lo que de verdad se está
+ * buscando, hasta abajo del todo. Medido sobre las 2.882 fichas de los dieciséis espacios: el
+ * 75,6 % lleva dos distintivos o menos y NO estrena desplegable; solo lo llevan las 704 (24,4 %)
+ * que de verdad tienen algo que esconder.
+ *
+ * El orden no es arbitrario:
+ *   1. «a revisar» — el hueco documentado vale más que un dato relleno a ojo (regla nº 2 del
+ *      CLAUDE.md raíz), y la ficha tampoco lo pliega nunca: un aviso escondido no es un aviso.
+ *   2. rareza — es lo que explica el filtro del catálogo. Sin ella, filtrar por «amenazadas»
+ *      devuelve una lista que no se distingue de la anterior (ver rarezaBadge, aquí arriba).
+ *   3. «prioritaria» — la especie que el propio espacio destaca.
+ *   4. «migratoria» — la fenología en una palabra. Va por `esMigratoria()`, o sea por `migratory`,
+ *      derivado del TIPO DE POBLACIÓN del Formulario Normalizado de Datos (Tools/lib/fenologia.js).
+ *      El distintivo que hubo antes iba por `zepaSiteCode`, que dice otra cosa —que el formulario
+ *      nombra al ave, población permanente incluida— y era falso en 154 fichas; por eso se quitó.
+ *   5. la etiqueta de `sitePresence` — dice de qué clase es la migración (cría aquí, inverna o solo
+ *      pasa). Matiza a la anterior y es la más larga de todas, así que cede antes que ella. Las dos
+ *      SOLO en las aves que migran: en una residente diría «Residente todo el año», que es lo mismo
+ *      que no llevar distintivo, y en las aves que ningún formulario nombra no hay nada que afirmar.
+ *   6. el reino — lo dicen ya la foto de la tarjeta y el segmentado Fauna/Flora que hay encima.
+ *
+ * Devuelve un array de fragmentos ya escapados. El filtro descarta tanto los `null` de los
+ * ternarios como la cadena vacía que devuelve rarezaBadge cuando no hay tramo que enseñar: un
+ * html`` vacío es un objeto SafeHtml, que es "truthy", así que no basta con Boolean.
+ */
+function distintivosEspecie(item) {
+  const migra = esMigratoria(item);
+  const fenologia = (migra && item.sitePresence && item.sitePresence.etiqueta) || '';
+  return [
+    item.reviewNote ? html`<span class="badge review">a revisar</span>` : null,
+    rarezaBadge(item),
+    item.featured ? html`<span class="badge alert">prioritaria</span>` : null,
+    migra ? html`<span class="badge migratoria">🕊️ Migratoria</span>` : null,
+    fenologia ? html`<span class="badge">${fenologia}</span>` : null,
+    item.kingdom ? html`<span class="badge ${item.kingdom}">${item.kingdom}</span>` : null
+  ].filter(b => b && String(b));
+}
+
 // --- Catálogo ---------------------------------------------------------------------------------------
 // Tres niveles: grupos de hábitats → hábitats del grupo → especies del hábitat. Ver state.catalogMode.
 
@@ -157,22 +201,13 @@ export function renderSpeciesList() {
       : (state.data.species || []).length);
   const recorte = species.length < total ? ` de ${total}` : '';
   resultCount.textContent = (species.length === 1 ? '1 resultado' : species.length + ' resultados') + recorte;
-  // El distintivo de «migratoria» está de vuelta en la tarjeta, y esta vez dice lo que afirma. El
-  // que hubo iba por `zepaSiteCode`, que dice otra cosa —que el formulario oficial del sitio nombra
-  // al ave, población permanente incluida—, y era falso en 154 fichas; por eso se quitó. Ahora va
-  // por `esMigratoria()`, o sea por `migratory`, derivado del TIPO DE POBLACIÓN de ese mismo
-  // formulario (Tools/lib/fenologia.js).
-  //
-  // Con él va la etiqueta de `sitePresence`, que dice de qué clase es la migración —cría aquí,
-  // inverna o solo pasa—, porque «migratoria» a secas no responde a la pregunta que se hace quien
-  // la lee, que es cuándo hay que venir. Las dos SOLO en las aves que migran: en una residente la
-  // etiqueta diría «Residente todo el año», que es lo mismo que no llevar distintivo, y en las 591
-  // fichas de ave que ningún formulario nombra no hay nada que afirmar (ver `esMigratoria`).
   const cards = species.map(item => {
     const seen = state.seenSpecies.has(item.id);
-    const migra = esMigratoria(item);
-    const fenologia = (migra && item.sitePresence && item.sitePresence.etiqueta) || '';
-    return html`<button class="species-card ${item.id === state.selectedId ? 'active' : ''}${seen ? ' seen' : ''}" type="button" data-id="${item.id}"${item.id === state.selectedId ? html` aria-current="true"` : ''}><span class="card-thumb"><img src="${speciesImageSrc(item)}" alt="" loading="lazy" onerror="window.__imgFallback(this,${item.id})">${seen ? html`<span class="seen-badge" aria-hidden="true">${icon('check', 12)}</span>` : ''}</span><span><span class="card-meta"><span class="badge ${item.kingdom}">${item.kingdom}</span>${migra ? html`<span class="badge migratoria">🕊️ Migratoria</span>` : ''}${fenologia ? html`<span class="badge">${fenologia}</span>` : ''}${item.featured ? html`<span class="badge alert">prioritaria</span>` : ''}${rarezaBadge(item)}${item.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}</span><h3>${item.commonName}</h3><em>${item.scientificName}</em>${seen ? html`<span class="sr-only">Especie vista.</span>` : ''}</span></button>`;
+    const distintivos = distintivosEspecie(item);
+    const visibles = distintivos.slice(0, 2);
+    const ocultos = distintivos.slice(2);
+    const activa = item.id === state.selectedId;
+    return html`<div class="species-card ${activa ? 'active' : ''}${seen ? ' seen' : ''}" data-id="${item.id}"><button class="species-card-main" type="button" data-id="${item.id}"${activa ? html` aria-current="true"` : ''}><span class="card-thumb"><img src="${speciesImageSrc(item)}" alt="" loading="lazy" onerror="window.__imgFallback(this,${item.id})">${seen ? html`<span class="seen-badge" aria-hidden="true">${icon('check', 12)}</span>` : ''}</span><span><span class="card-meta">${visibles}</span><h3>${item.commonName}</h3><em>${item.scientificName}</em>${seen ? html`<span class="sr-only">Especie vista.</span>` : ''}</span></button>${ocultos.length ? html`<details class="card-mas"><summary>${ocultos.length === 1 ? '+1 dato' : '+' + ocultos.length + ' datos'}<span class="sr-only"> de ${item.commonName}</span></summary><span class="card-meta">${ocultos}</span></details>` : ''}</div>`;
   });
   // Una lista vacía sin explicación se lee como un fallo de la app. Con el filtro de rareza puesto
   // es además el caso NORMAL: en un hábitat corriente no hay ninguna especie en peligro, y eso es

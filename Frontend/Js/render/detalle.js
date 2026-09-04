@@ -12,7 +12,7 @@ import { groupSwatch, habitatGroup, habitatsOfGroup } from '../habitat-groups.js
 import { isMarkVerifiedLocally } from '../presence.js';
 import { TRAMOS, baseDe, cartelAdvertencia, estrellas, recordatorioAdvertencia, tramoDe } from '../rareza.js';
 import { esMigratoria, habitatAreaLabel, habitatSpeciesSeenCount, isHabitatComplete, speciesOfHabitat, state } from '../state.js';
-import { atributosAmpliar, habitatImageSrc, html, kingdomEmoji, poiImageSrc, raw, speciesImageSrc } from '../util.js';
+import { atributosAmpliar, habitatImageSrc, html, kingdomEmoji, plegable, poiImageSrc, raw, speciesImageSrc } from '../util.js';
 import { renderInvasoraDetail } from './invasoras.js';
 
 // --- Panel de detalle (ficha de especie o de hábitat) ------------------------------------------------
@@ -46,6 +46,13 @@ export function renderDetail() {
 // es el dato oficial y la referencia bibliográfica, y que por eso nunca se recorta ni se sustituye.
 // Sin diccionario cargado (sin conexión y sin caché aún) se degrada a la cita sola, que es como se
 // mostraba antes: se pierde la explicación, nunca el dato. Ver Frontend/Js/fitosociologia.js.
+//
+// Devuelve el CUERPO de un <details> —el rótulo lo pone su <summary>, en renderHabitatDetail—, y
+// por eso ya no trae su propio <h3>. El bloque entero es lo más técnico de la ficha de un hábitat y
+// no lo entiende quien no es botánico, así que se pliega; la CITA, que es el dato oficial, queda a
+// UN clic. La ayuda de «¿cómo se lee el nombre?» sigue anidada dentro, a dos, y ahí sí está bien:
+// es una explicación de la nomenclatura, no el dato, y desplegada siempre son cinco párrafos y una
+// lista de terminaciones en mitad de la ficha.
 function fitosociologiaBlock(habitat) {
   const citas = habitat.fitosociologia || [];
   if (!citas.length) return '';
@@ -60,8 +67,7 @@ function fitosociologiaBlock(habitat) {
       <p class="fito-cite"><em>${a.latino}</em>${a.autoria ? html` <span class="fito-author">${a.autoria}</span>` : ''}</p>
       </li>`;
   });
-  return html`<h3 class="detail-subtitle">Asociación fitosociológica</h3>
-    <ul class="fito-list">${items}</ul>
+  return html`<ul class="fito-list">${items}</ul>
     ${ayuda ? html`<details class="fito-help">
       <summary>¿Qué es esto y cómo se lee el nombre?</summary>
       <p class="detail-prose">${ayuda.texto}</p>
@@ -105,6 +111,12 @@ function renderHabitatDetail() {
     </span>
     <button type="button" class="detail-group-link" data-habitat-group-link="${group.id}" title="Ver los hábitats de este grupo">${raw(groupSwatch(group, 18))}${group.name}${groupSize > 1 ? html` · ${groupSize} hábitats` : ''}</button>
     <h2>${habitat.name}</h2>
+    ${/*
+      * El `reviewNote` sube hasta aquí, igual que en la ficha de especie: es un aviso sobre TODA la
+      * ficha, y al final —ahora, entre los desplegables— quedaba escondido de hecho aunque no
+      * estuviera plegado. Y nunca se pliega (regla nº 2 del CLAUDE.md raíz).
+      */''}
+    ${habitat.reviewNote ? html`<div class="review-note"><strong>Pendiente de revisión:</strong> ${habitat.reviewNote}</div>` : ''}
     <p class="detail-prose">${habitat.description}</p>
     ${audioBlock(habitat, 'Audioguía del hábitat')}
     <div class="detail-facts">
@@ -112,15 +124,19 @@ function renderHabitatDetail() {
     ${habitat.hicSubtipos && habitat.hicSubtipos.length > 1 ? html`<div><span>Subtipos HIC</span><strong>${habitat.hicSubtipos.join(', ')}</strong></div>` : ''}
     <div><span>Superficie en el parque</span><strong>${area || 'Sin cartografiar'}</strong></div>
     </div>
-    ${fitosociologiaBlock(habitat)}
     <div class="habitat-detail-progress">
     <div class="progress-track big" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}" aria-label="Especies vistas en este hábitat"><div class="progress-fill" style="width:${pct}%"></div></div>
     <span class="progress-caption">${seen} / ${total} especies vistas en este hábitat</span>
     </div>
     ${total > 0 ? html`<h3 class="detail-subtitle">Especies de este hábitat</h3><div class="habitat-species-chips">${chips}</div>` : ''}
-    ${habitat.reviewNote ? html`<div class="review-note"><strong>Pendiente de revisión:</strong> ${habitat.reviewNote}</div>` : ''}
-    ${habitat.image && habitat.imageAttribution ? html`<p class="detail-source">Foto: ${habitat.imageAttribution}${habitat.imageNote ? ' — ' + habitat.imageNote : ''}</p>` : ''}
     <button class="seen-toggle" type="button" data-view-habitat-species="${habitat.id}">Ver ${total === 1 ? 'la especie' : 'las ' + total + ' especies'} en el catálogo</button>
+    ${plegable('Asociación fitosociológica', fitosociologiaBlock(habitat))}
+    ${/*
+      * El crédito de la foto se pliega con las fuentes, y no es un descuido de licencia: sigue
+      * saliendo, sin plegar, en el visor a pantalla completa (util.js · atributosAmpliar se lo pasa
+      * a visor.js), que es el momento en el que la foto de verdad se está mirando.
+      */''}
+    ${plegable('Fuentes y crédito de la foto', habitat.image && habitat.imageAttribution ? html`<p class="detail-source">Foto: ${habitat.imageAttribution}${habitat.imageNote ? ' — ' + habitat.imageNote : ''}</p>` : '')}
     </div>`;
 }
 
@@ -138,12 +154,23 @@ function renderPoiDetail() {
     <div class="detail-body">
     <span class="card-meta"><span class="badge">${poi.type || 'Punto de interés'}</span>${poi.approx ? html`<span class="badge review">ubicación aproximada</span>` : ''}${seen ? html`<span class="badge">visitado ✓</span>` : ''}</span>
     <h2>${poi.name}</h2>
+    ${/*
+      * El aviso de «ubicación aproximada» sube junto al rótulo y NO se pliega: es lo que evita que
+      * alguien se meta campo a través buscando un punto que está donde el mapa dice más o menos.
+      * Es la misma regla que el `reviewNote` de las otras fichas —un aviso escondido no es un
+      * aviso— y estaba debajo de la audioguía, que en un punto con audio es bastante abajo.
+      */''}
+    ${poi.approx ? html`<div class="review-note">La posición de este punto en el mapa es <strong>aproximada</strong>: sigue las indicaciones del terreno y los senderos señalizados.</div>` : ''}
     <p class="detail-prose">${poi.description || ''}</p>
     ${audioBlock(poi, 'Audioguía del punto de interés')}
-    ${poi.approx ? html`<div class="review-note">La posición de este punto en el mapa es <strong>aproximada</strong>: sigue las indicaciones del terreno y los senderos señalizados.</div>` : ''}
-    ${poi.source ? html`<p class="detail-source">Fuente: ${poi.source}</p>` : ''}
     <button class="seen-toggle ${seen ? 'is-seen' : ''}" type="button" data-toggle-poi="${poi.id}" aria-pressed="${seen ? 'true' : 'false'}">${seen ? '✓ Visitado' : 'Marcar como visitado'}</button>
     ${seen ? markVerificationNote('poi', poi.id) : ''}
+    ${/*
+      * «Fuentes» a secas y no «Fuentes y crédito de la foto» como en las otras fichas: la de un
+      * punto de interés no pinta crédito de foto —solo lo lleva el visor—, así que prometer uno
+      * sería un rótulo que no cumple lo que dice.
+      */''}
+    ${plegable('Fuentes', poi.source ? html`<p class="detail-source">Fuente: ${poi.source}</p>` : '')}
     </div>`;
 }
 
@@ -173,8 +200,7 @@ function markVerificationNote(type, id) {
 function bloquePresenciaSitio(species) {
   const p = species.sitePresence;
   if (!p || !p.etiqueta) return '';
-  return html`<h3 class="detail-subtitle">Presencia en este espacio</h3>
-    <ul class="status-list">
+  return html`<ul class="status-list">
     <li class="detail-prose"><span>Población</span>${p.etiqueta}</li>
     </ul>
     <p class="detail-source">${esMigratoria(species)
@@ -182,6 +208,31 @@ function bloquePresenciaSitio(species) {
       : 'Aquí hay población todo el año, así que no cuenta como migratoria en este espacio.'} Fuente: ${p.fuente}</p>`;
 }
 
+/*
+ * La ficha de una especie abre por lo que sirve para RECONOCERLA delante: foto, nombres, el aviso
+ * si lo lleva, la descripción, las pistas de identificación y los tres datos de campo (dónde,
+ * cuándo y cómo de rara). El aparato científico —taxonomía, categorías legales, presencia declarada
+ * en el sitio Red Natura 2000 y fuentes— va detrás de cuatro <details> cerrados. Antes iba todo
+ * seguido y en el mismo tono, y el botón de marcar visto quedaba debajo de cuatro apartados de
+ * nomenclatura: la acción principal de la app, al final de todo.
+ *
+ * Qué NO se pliega, y no por gusto:
+ *   · el cartel de advertencia de rareza.js — regla nº 9 del CLAUDE.md raíz: una especie amenazada,
+ *     o SIN tramo calculado, avisa. Un aviso escondido no es un aviso.
+ *   · el `reviewNote`, que además SUBE hasta junto al cartel. Es el hueco documentado, que aquí vale
+ *     más que un campo relleno a ojo (regla nº 2), y es un aviso sobre TODA la ficha: dejarlo al
+ *     final, ahora entre desplegables, lo escondía de hecho aunque no estuviera plegado.
+ *   · el botón de marcar visto, su recordatorio de advertencia y la nota de verificación. Suben
+ *     detrás de los datos de campo: es lo que se viene a hacer, y no se pide bajar hasta el final.
+ *   · la línea que explica las estrellas. Cita una norma, sí, pero no es una fuente bibliográfica:
+ *     es la LEYENDA del dato que hay justo encima. Cinco estrellas sin nada que diga de dónde salen
+ *     son exactamente el dato sin procedencia que este repositorio no admite.
+ *
+ * El estado abierto/cerrado NO se recuerda entre fichas, y son dos motivos: el panel se repinta
+ * entero cada vez que se marca algo —así que habría que sostenerlo aparte— y una ficha que abriera
+ * con la taxonomía desplegada empujaría la descripción hacia abajo justo en la siguiente, que es
+ * donde el usuario vuelve a necesitarla arriba. Cerrados siempre.
+ */
 function renderSpeciesDetail() {
   const species = state.data.species.find(item => item.id === state.selectedId) ?? state.data.species[0];
   if (!species) { detailPanel.innerHTML = ''; return; }
@@ -195,41 +246,20 @@ function renderSpeciesDetail() {
   // Js/rareza.js.
   const rareza = tramoDe(species);
   const base = baseDe(species);
-  detailPanel.innerHTML = html`<div class="detail-image-wrap">
-    <img src="${speciesImageSrc(species)}" alt="${species.commonName}" onerror="window.__imgFallback(this,${species.id})"${atributosAmpliar(hayFotoPropia(species), species.commonName, creditoFoto(species))}>
-    </div>
-    <div class="detail-body">
-    <span class="card-meta"><span class="badge ${species.kingdom}">${species.kingdom}</span>
-    <span class="badge alert">${species.conservationStatus}</span>
-    ${esMigratoria(species) ? html`<span class="badge migratoria">🕊️ Ave migratoria</span>` : ''}
-    ${species.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}
-    </span>
-    <h2>${species.commonName}</h2><em>${species.scientificName}</em>
-    ${cartelAdvertencia(species)}
-    <p class="detail-prose">${species.description}</p>
-    <ul class="detail-list detail-prose">${species.tips.map(tip => html`<li>${tip}</li>`)}</ul>
-    <div class="detail-facts">
-    <div><span>Hábitat</span><strong>${species.habitat}</strong></div>
-    <div><span>Temporada</span><strong>${species.seasonality}</strong></div>
-    <div><span>Grupo</span><strong>${species.group}</strong></div>
-    <div><span>Rareza</span><strong>${rareza === null
-      ? 'Sin calcular'
-      : html`<span role="img" aria-label="${rareza} de 5">${estrellas(rareza)}</span>`}</strong></div>
-    </div>
-    ${rareza === null
-      ? html`<p class="detail-source">La rareza sale de la <strong>categoría legal de protección</strong>, no de lo difícil que sea encontrarla. Esta ficha todavía no la tiene calculada.</p>`
-      : html`<p class="detail-source">Rareza = <strong>${TRAMOS[rareza].significado}</strong>. Sale de la categoría legal vigente${base ? html`: ${base.categoria}${base.norma ? ' — ' + base.norma : ''}` : ', aunque esta ficha no guarda la norma que la justifica'}.</p>`}
-    <h3 class="detail-subtitle">Taxonomía</h3>
-    <div class="detail-facts detail-taxonomy">
+
+  // «Grupo» («Ave», «Flora»…) se va con la taxonomía: es una clasificación, no un dato de campo, y
+  // los tres que quedan fuera responden a las tres preguntas de quien tiene la especie delante.
+  const taxonomia = html`<div class="detail-facts detail-taxonomy">
     ${renderTaxonomyRow('Reino', tx.kingdom)}
     ${renderTaxonomyRow('Filo/División', tx.phylum)}
     ${renderTaxonomyRow('Clase', tx.class)}
     ${renderTaxonomyRow('Orden', tx.order)}
     ${renderTaxonomyRow('Familia', tx.family)}
     ${renderTaxonomyRow('Género', tx.genus)}
-    </div>
-    <h3 class="detail-subtitle">Estado de conservación</h3>
-    <ul class="status-list">
+    ${renderTaxonomyRow('Grupo', species.group)}
+    </div>`;
+
+  const conservacion = html`<ul class="status-list">
     <li class="detail-prose"><span>UICN (global)</span>${species.iucnGlobal || 'No evaluada'}</li>
     ${/*
       * La Lista Roja ESPAÑOLA es otra evaluación de la UICN, no un matiz de la mundial: una especie
@@ -250,16 +280,43 @@ function renderSpeciesDetail() {
       * es lo único cierto cuando el dato no lo aclara.
       */''}
     <li class="detail-prose"><span>${species.regionalCcaa || 'Comunidad autónoma'}</span>${species.regionalStatus || 'Sin dato'}</li>
-    </ul>
-    ${bloquePresenciaSitio(species)}
+    </ul>`;
+
+  const fuentes = html`${species.image && species.imageAttribution ? html`<p class="detail-source">Foto: ${species.imageAttribution}</p>` : ''}${species.source ? html`<p class="detail-source">Fuente: ${species.source}</p>` : ''}`;
+
+  detailPanel.innerHTML = html`<div class="detail-image-wrap">
+    <img src="${speciesImageSrc(species)}" alt="${species.commonName}" onerror="window.__imgFallback(this,${species.id})"${atributosAmpliar(hayFotoPropia(species), species.commonName, creditoFoto(species))}>
+    </div>
+    <div class="detail-body">
+    <span class="card-meta"><span class="badge ${species.kingdom}">${species.kingdom}</span>
+    <span class="badge alert">${species.conservationStatus}</span>
+    ${esMigratoria(species) ? html`<span class="badge migratoria">🕊️ Ave migratoria</span>` : ''}
+    ${species.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}
+    </span>
+    <h2>${species.commonName}</h2><em>${species.scientificName}</em>
+    ${cartelAdvertencia(species)}
     ${species.reviewNote ? html`<div class="review-note"><strong>Pendiente de revisión:</strong> ${species.reviewNote}</div>` : ''}
-    ${species.image && species.imageAttribution ? html`<p class="detail-source">Foto: ${species.imageAttribution}</p>` : ''}
-    ${species.source ? html`<p class="detail-source">Fuente: ${species.source}</p>` : ''}
+    <p class="detail-prose">${species.description}</p>
+    <ul class="detail-list detail-prose">${species.tips.map(tip => html`<li>${tip}</li>`)}</ul>
+    <div class="detail-facts">
+    <div><span>Hábitat</span><strong>${species.habitat}</strong></div>
+    <div><span>Temporada</span><strong>${species.seasonality}</strong></div>
+    <div><span>Rareza</span><strong>${rareza === null
+      ? 'Sin calcular'
+      : html`<span role="img" aria-label="${rareza} de 5">${estrellas(rareza)}</span>`}</strong></div>
+    </div>
+    ${rareza === null
+      ? html`<p class="detail-source">La rareza sale de la <strong>categoría legal de protección</strong>, no de lo difícil que sea encontrarla. Esta ficha todavía no la tiene calculada.</p>`
+      : html`<p class="detail-source">Rareza = <strong>${TRAMOS[rareza].significado}</strong>. Sale de la categoría legal vigente${base ? html`: ${base.categoria}${base.norma ? ' — ' + base.norma : ''}` : ', aunque esta ficha no guarda la norma que la justifica'}.</p>`}
     ${recordatorioAdvertencia(species)}
     <button class="seen-toggle ${seen ? 'is-seen' : ''}" type="button" data-toggle-seen="${species.id}" aria-pressed="${seen ? 'true' : 'false'}">${seen ? '✓ Visto' : 'Marcar como visto'}</button>
     ${seen ? markVerificationNote('species', species.id) : ''}
     ${seen ? html`<p class="detail-source">${state.sightings.has(species.id)
       ? '📍 Ya está en el mapa, en el punto exacto que registró tu GPS al marcarla.'
       : '📍 Ya está en el mapa, en su ubicación aproximada del catálogo (no había GPS al marcarla).'}</p>` : ''}
+    ${plegable('Taxonomía', taxonomia)}
+    ${plegable('Estado de conservación', conservacion)}
+    ${plegable('Presencia en este espacio', bloquePresenciaSitio(species))}
+    ${plegable('Fuentes y crédito de la foto', fuentes)}
     </div>`;
 }

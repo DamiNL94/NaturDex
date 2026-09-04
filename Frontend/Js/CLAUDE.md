@@ -21,10 +21,10 @@ usuario**: eso es de `app.js`.
 
 | Trozo | Líneas | Qué pinta |
 |---|---|---|
-| `render/catalogo.js` | 240 | Catálogo en tres niveles: grupos de hábitats → hábitats → especies. El nivel de entrada lleva además la tarjeta **«Sin hábitat asignado»**, que es el tercer destino del nivel de especies junto a «un hábitat» y «todas»: las fichas que no cuelgan de ningún polígono. Existe porque son MAYORÍA en varios espacios —181 de 209 en Cañaverosa— y solo se llegaba a ellas por «Ver todas las especies», mezcladas y sin que nada dijera cuántas eran. Dice de qué están hechas, y son dos cosas distintas: las AVES no se adscriben a ningún polígono a propósito (regla nº 8 del `CLAUDE.md` raíz) y el resto es un hueco de evidencia. Es también donde se dice, cuando toca, que **el formulario del sitio no enumera ni un ave** en este espacio: lo decía la pestaña «Migratorias» y al retirarse el hueco se quedaba sin quien lo contara (`faltaFormularioDeAves`). Y la tarjeta de especie lleva el distintivo **🕊️ Migratoria** con la clase de migración al lado, por `migratory`, nunca por `zepaSiteCode` |
+| `render/catalogo.js` | 275 | Catálogo en tres niveles: grupos de hábitats → hábitats → especies. El nivel de entrada lleva además la tarjeta **«Sin hábitat asignado»**, que es el tercer destino del nivel de especies junto a «un hábitat» y «todas»: las fichas que no cuelgan de ningún polígono. Existe porque son MAYORÍA en varios espacios —181 de 209 en Cañaverosa— y solo se llegaba a ellas por «Ver todas las especies», mezcladas y sin que nada dijera cuántas eran. Dice de qué están hechas, y son dos cosas distintas: las AVES no se adscriben a ningún polígono a propósito (regla nº 8 del `CLAUDE.md` raíz) y el resto es un hueco de evidencia. Es también donde se dice, cuando toca, que **el formulario del sitio no enumera ni un ave** en este espacio: lo decía la pestaña «Migratorias» y al retirarse el hueco se quedaba sin quien lo contara (`faltaFormularioDeAves`). **La tarjeta de especie enseña DOS distintivos como máximo** y manda el resto a un `<details>` propio, «+N datos» (`distintivosEspecie` fija el orden de prioridad y lo justifica uno a uno): la fila podía llevar seis a la vez, partirse en tres líneas y empujar hacia abajo el nombre de la especie, que es lo que se está buscando. Medido sobre las 2.882 fichas de los dieciséis espacios, el **75,6 % no estrena desplegable**. Para poder llevarlo dentro, **la tarjeta dejó de ser un `<button>`**: es un `<div>` con la caja de siempre y un `.species-card-main` dentro que es lo que se pulsa (`<details>` anidado en un botón es HTML inválido). El distintivo **🕊️ Migratoria** sigue, con la clase de migración al lado, por `migratory` y nunca por `zepaSiteCode` |
 | `render/resumen.js` | 119 | Cabecera del parque, ficha base (`status: basic`) y barra de progreso |
-| `render/detalle.js` | 265 | Ficha de especie, de hábitat y de punto de interés. La de especie abre con el **cartel de advertencia** (`rareza.js`) cuando el taxón está amenazado o no tiene tramo calculado |
-| `render/invasoras.js` | 66 | Pestaña de invasoras y su ficha |
+| `render/detalle.js` | 322 | Ficha de especie, de hábitat y de punto de interés. **Abren por lo que sirve para reconocer lo que se tiene delante** —foto, nombres, avisos, descripción, pistas y los datos de campo— y dejan el aparato científico detrás de `<details>` cerrados: taxonomía, categorías legales, presencia en el sitio Natura 2000, asociación fitosociológica y fuentes. **Nunca se pliegan** el cartel de advertencia (`rareza.js`, regla nº 9 del `CLAUDE.md` raíz), el `reviewNote` —que además sube junto al rótulo, porque es un aviso sobre toda la ficha— ni el botón de marcar visto con su nota de verificación, que suben por delante de los desplegables: es lo que se viene a hacer. La línea que explica las estrellas tampoco: no es una fuente bibliográfica, es la leyenda del dato que tiene encima |
+| `render/invasoras.js` | 76 | Pestaña de invasoras y su ficha. Sus tarjetas comparten la estructura de `.species-card` pero **no llevan desplegable**: siempre son exactamente dos distintivos, que es el máximo. La ficha sí: «Por qué es un problema» y «Cómo llegó» se quedan visibles —son el motivo de la pestaña— y se pliegan la ficha administrativa y las fuentes |
 | `render/progreso.js` | 313 | Progreso del parque, **medallero** de cuenta (rareza a la vista y techo del catálogo) e historial de salidas verificadas. Bajo las filas de hábitat va la línea que **reconcilia las dos barras**: «Especies» cuenta todo el catálogo y las filas de hábitat solo lo que cuelga de un polígono (28 de 209 en Cañaverosa), y sin decirlo eso se lee como que la app ha perdido la cuenta |
 | `render/fallbacks.js` | 64 | Sustitutos de imagen rota (`window.__*Fallback`, los invoca el `onerror` del HTML generado). Sin exports |
 
@@ -64,7 +64,7 @@ conexión.
 
 ---
 
-## `app.js` — el orquestador (1096 líneas, **a propósito en un solo fichero**)
+## `app.js` — el orquestador (1102 líneas, **a propósito en un solo fichero**)
 
 Se estudió partirlo y **no se partió**: sus secciones se llaman entre sí en ambos sentidos
 (navegación ↔ vistas ↔ pestañas móviles, arranque ↔ UI de offline). Partirlo produciría media docena
@@ -80,10 +80,10 @@ secciones cumple la misma función: abre solo el rango que necesites.
 | 420–439 | Nivel de dato del espacio: ficha base vs. catálogo completo |
 | 440–479 | Vistas (catálogo / invasoras / progreso / diccionario) |
 | 480–598 | Vistas móviles: nav inferior y ficha como *bottom-sheet* |
-| 599–727 | Delegación de eventos (**todos los clicks entran por aquí**), incluida la foto que abre el visor y las puertas del diccionario |
-| 728–753 | Modo explorador (`explorer.js`) |
-| 754–977 | UI de estado offline. **Es el único disparador de la capa 2 de `offline.js`**: fotos, audioguías y mapa base no llegan al dispositivo por ninguna otra vía, así que la función no sobra (el SW cachea de paso lo que se va viendo, pero eso no cubre lo no visitado, se borra al subir `VERSION` y no alcanza al `.pmtiles`, que se pide por rangos). Lo que sobraba era su tamaño: el estado de conexión **solo se pinta cuando es anómalo** y la descarga es un icono de `.park-nav`, con el peso en su rótulo accesible y el avance como relleno del propio icono |
-| 978–1096 | Arranque de la experiencia de un parque (`startParkExperience`) |
+| 599–733 | Delegación de eventos (**todos los clicks entran por aquí**), incluida la foto que abre el visor y las puertas del diccionario. Empieza por una salida: un clic dentro de un `<details>` NO abre la ficha. Las tarjetas del catálogo llevan ahora dentro su desplegable «+N datos», y sin eso el clic en su `<summary>` burbujeaba hasta la tarjeta y abría la ficha en la misma pulsación con la que se desplegaba |
+| 734–759 | Modo explorador (`explorer.js`) |
+| 760–983 | UI de estado offline. **Es el único disparador de la capa 2 de `offline.js`**: fotos, audioguías y mapa base no llegan al dispositivo por ninguna otra vía, así que la función no sobra (el SW cachea de paso lo que se va viendo, pero eso no cubre lo no visitado, se borra al subir `VERSION` y no alcanza al `.pmtiles`, que se pide por rangos). Lo que sobraba era su tamaño: el estado de conexión **solo se pinta cuando es anómalo** y la descarga es un icono de `.park-nav`, con el peso en su rótulo accesible y el avance como relleno del propio icono |
+| 984–1102 | Arranque de la experiencia de un parque (`startParkExperience`) |
 
 ## Resto de módulos ES
 
@@ -93,7 +93,7 @@ secciones cumple la misma función: abre solo el rango que necesites.
 | `dom.js` | 82 | Referencias centralizadas a los nodos del DOM del parque |
 | `data.js` | 297 | Registro, manifiesto, datos y geo + progreso local-first. **Todo lo que habla con red o caché pasa por aquí.** La API tiene prioridad sobre el `park.json` |
 | `api.js` | 82 | **Único** punto de contacto con `Backend/Api/`: corte por tiempo, errores, `apiSignal()` |
-| `util.js` | 320 | Helpers puros: sin estado, sin DOM, sin Leaflet. Aquí viven la plantilla `` html`` `` y el **colador alfabético español**, que ordena el catálogo, las chips de hábitat y el diccionario |
+| `util.js` | 343 | Helpers puros: sin estado, sin DOM, sin Leaflet. Aquí viven la plantilla `` html`` ``, el **colador alfabético español** —que ordena el catálogo, las chips de hábitat y el diccionario— y `plegable()`, el `<details>` con el que las cuatro fichas esconden su aparato científico. Está aquí y no en `render/detalle.js` porque la ficha de invasora la pinta otro módulo, al que `detalle.js` ya importa: tenerlo allí habría cerrado un ciclo |
 | `rareza.js` | 190 | La escalera de rareza **legal** en la app: el filtro del catálogo y el **cartel de advertencia** de las especies amenazadas. Misma escalera que `Tools/lib/rareza.js`, vista desde el otro lado. El cartel cita siempre la categoría y la norma, y una ficha **sin tramo calculado también avisa** (regla nº 9 del `CLAUDE.md` raíz) |
 | `layers.js` | 279 | Panel de capas propio (sustituye al control nativo de Leaflet) |
 | `habitat-groups.js` | 212 | **Los siete grupos de hábitat**, ordenados del mar hacia dentro. Trama y tinta idénticas en mapa, leyenda y catálogo. Criterio: código HIC |

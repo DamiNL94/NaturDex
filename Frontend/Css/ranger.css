@@ -636,7 +636,8 @@ select{font-family:var(--font-ui);font-size:var(--fs-md)}
 .explorer-toggle,.layers-toggle,.popup-enter,.poi-seen-btn,.presence-action,
 .habitat-prompt-no,.habitat-prompt-yes,.hint-primary,.layers-solo,.catalog-crumb button,
 .link-btn,.habitat-species-chip,.layers-habitat-name,.layers-mini-actions button,
-.detail-group-link,.audio-block button,.sheet-grip-btn{min-height:var(--tap-min)}
+.detail-group-link,.audio-block button,.sheet-grip-btn,
+.card-mas>summary,.plegable>summary,.fito-help>summary{min-height:var(--tap-min)}
 
 /* Controles redondos: el objetivo es 44×44, no 44 de alto. */
 .icon-btn,.hint-close,.nearby-close,.sheet-close,.achievement-toast-close{

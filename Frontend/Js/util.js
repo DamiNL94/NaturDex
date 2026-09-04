@@ -34,6 +34,29 @@ export function html(strings, ...values) {
 export function raw(value) { return new SafeHtml(String(value)); }
 
 /**
+ * Un apartado plegado de una ficha: lo que hay que leer una vez delante y no cada vez que se abre.
+ *
+ * <details>/<summary> NATIVO y sin una línea de JavaScript: así funciona sin conexión, el navegador
+ * ya anuncia su estado a los lectores de pantalla y no añade nada al armazón que hay que precachear.
+ * Vive aquí, en los helpers puros, y no en `render/detalle.js`, porque lo usan las cuatro fichas
+ * —especie, hábitat, punto de interés e invasora— y la de invasora la pinta otro módulo, al que
+ * `detalle.js` ya importa: tenerlo allí habría cerrado un ciclo de importaciones.
+ *
+ * Devuelve cadena vacía si no hay contenido, y esa comprobación no puede ser `if (!contenido)`: un
+ * html`` vacío es un objeto SafeHtml, que es "truthy". Sin el String() de por medio, una ficha sin
+ * fuentes ni crédito de foto estrenaría un desplegable vacío.
+ *
+ * El rótulo va como texto del <summary> y NO como un <h3> dentro: un encabezado metido en un
+ * control de apertura lo anuncian de forma desigual unos lectores de pantalla y otros. Se pierden
+ * los saltos por encabezado dentro de la ficha y se gana un control que dice si está abierto o
+ * cerrado, que es lo que hay que saber aquí.
+ */
+export function plegable(titulo, contenido) {
+  if (!contenido || !String(contenido)) return '';
+  return html`<details class="plegable"><summary>${titulo}</summary><div class="plegable-cuerpo">${contenido}</div></details>`;
+}
+
+/**
  * Atributos que convierten la foto de portada de una ficha en un control que abre el visor a
  * pantalla completa (Js/visor.js). Se devuelven VACÍOS si no hay foto real: sobre una portada
  * generada —el emoji del grupo, el degradado del hábitat— no hay nada que ampliar, y un control
