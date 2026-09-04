@@ -35,12 +35,12 @@ Orden de dependencia, de más básico a más alto. **Las acciones de la app las 
 
 | Trozo | Líneas | Qué resuelve |
 |---|---|---|
-| `map/core.js` | 274 | La instancia `map`, capas base (OSM/PNOA/`.pmtiles` del parque), planos propios y **`chromeInset()`** |
-| `map/iconos.js` | 30 | Iconos DIV de especie, POI y posición del usuario |
-| `map/tramas.js` | 64 | SVG a pelo: tramas por grupo de hábitat y recortes al propio recinto |
-| `map/camara.js` | 145 | Encuadre (`focusOn`/`fitOn`/`revealOn`), entrada escalonada, punto azul, tamaño del contenedor |
-| `map/marcadores.js` | 65 | Marcadores de especies y de puntos de interés |
-| `map/capas.js` | 318 | Zonas protegidas, senderos, zonas de hábitat, resaltado y visibilidad por hábitat y por grupo |
+| `map/core.js` | 281 | La instancia `map`, capas base (OSM/PNOA/`.pmtiles` del parque), planos propios y **`chromeInset()`** |
+| `map/iconos.js` | 38 | Iconos DIV de especie, POI y posición del usuario |
+| `map/tramas.js` | 71 | SVG a pelo: tramas por grupo de hábitat y recortes al propio recinto |
+| `map/camara.js` | 154 | Encuadre (`focusOn`/`fitOn`/`revealOn`), entrada escalonada, punto azul, tamaño del contenedor |
+| `map/marcadores.js` | 75 | Marcadores de especies y de puntos de interés |
+| `map/capas.js` | 331 | Zonas protegidas, senderos, zonas de hábitat, resaltado y visibilidad por hábitat y por grupo |
 
 > **Todo encuadre pasa por `chromeInset()`.** El `autoPan` de Leaflet solo garantiza que el globo
 > entre en el *contenedor*, que en móvil está tapado arriba y abajo. Las etiquetas del mapa son
@@ -58,9 +58,9 @@ conexión.
 | `achievements/almacen.js` | 223 | Catálogo de logros, almacenamiento local por cuenta, clave canónica de especie, semana ISO |
 | `achievements/agregacion.js` | 148 | El espejo local del agregado del backend |
 | `achievements/celebracion.js` | 257 | La cola del cartel animado. Autocontenida: crea su propio DOM la primera vez |
-| `achievements/sincronizacion.js` | 93 | Recalcula (local u online), evalúa y refresca `state.account` |
-| `achievements/eventos.js` | 38 | Lo que llaman `app.js` y `glossary.js` cuando pasa algo |
-| `achievements/arranque.js` | 42 | Migración invitado → cuenta registrada e `init` |
+| `achievements/sincronizacion.js` | 105 | Recalcula (local u online), evalúa y refresca `state.account` |
+| `achievements/eventos.js` | 62 | Lo que llaman `app.js`, `glossary.js` y `diccionario.js` cuando pasa algo |
+| `achievements/arranque.js` | 50 | Migración invitado → cuenta registrada e `init` |
 
 ---
 
@@ -95,13 +95,13 @@ secciones cumple la misma función: abre solo el rango que necesites.
 | `data.js` | 297 | Registro, manifiesto, datos y geo + progreso local-first. **Todo lo que habla con red o caché pasa por aquí.** La API tiene prioridad sobre el `park.json` |
 | `api.js` | 82 | **Único** punto de contacto con `Backend/Api/`: corte por tiempo, errores, `apiSignal()` |
 | `util.js` | 343 | Helpers puros: sin estado, sin DOM, sin Leaflet. Aquí viven la plantilla `` html`` ``, el **colador alfabético español** —que ordena el catálogo, las chips de hábitat y el diccionario— y `plegable()`, el `<details>` con el que las cuatro fichas esconden su aparato científico. Está aquí y no en `render/detalle.js` porque la ficha de invasora la pinta otro módulo, al que `detalle.js` ya importa: tenerlo allí habría cerrado un ciclo |
-| `rareza.js` | 190 | La escalera de rareza **legal** en la app: el filtro del catálogo y el **cartel de advertencia** de las especies amenazadas. Misma escalera que `Tools/lib/rareza.js`, vista desde el otro lado. El cartel cita siempre la categoría y la norma, y una ficha **sin tramo calculado también avisa** (regla nº 9 del `CLAUDE.md` raíz) |
+| `rareza.js` | 198 | La escalera de rareza **legal** en la app: el filtro del catálogo y el **cartel de advertencia** de las especies amenazadas. Misma escalera que `Tools/lib/rareza.js`, vista desde el otro lado. El cartel cita siempre la categoría y la norma, y una ficha **sin tramo calculado también avisa** (regla nº 9 del `CLAUDE.md` raíz) |
 | `layers.js` | 279 | Panel de capas propio (sustituye al control nativo de Leaflet) |
 | `habitat-groups.js` | 212 | **Los siete grupos de hábitat**, ordenados del mar hacia dentro. Trama y tinta idénticas en mapa, leyenda y catálogo. Criterio: código HIC |
 | `presence.js` | 469 | **Presencia verificada**: la prueba de que estás dentro del espacio. Es lo que hace que los logros signifiquen algo |
 | `explorer.js` | 365 | Modo explorador: GPS continuo, panel «cerca de ti», descubrimiento por proximidad |
 | `profile.js` | 605 | Pantalla «Perfil y ajustes». Único sitio donde el usuario administra su cuenta. Su sección «Datos» es la **segunda puerta** de «Guardar sin conexión» —la primera es el icono de la cabecera del parque, y un icono se pasa por alto—; no duplica lógica, llama a la misma función |
-| `tutorial.js` | 433 | Onboarding por pasos (*spotlight*). Dos tramos: `select` y `park`. **Bloqueante**: el fondo es inerte y solo se sale confirmando |
+| `tutorial.js` | 439 | Onboarding por pasos (*spotlight*). Dos tramos: `select` y `park`. **Bloqueante**: el fondo es inerte y solo se sale confirmando |
 | `glossary.js` | 220 | Resalta tecnicismos en las descripciones y muestra su definición en llano. El popover **sigue** a su palabra al desplazarse, no se cierra |
 | `diccionario.js` | 216 | El glosario entero como vista propia: alfabético, buscable y filtrable. **No tiene pestaña**: es nacional, no del espacio, y la fila de pestañas es la de las vistas del parque. Se entra por el icono de libro de la cabecera (`#diccionarioBtn`), por el enlace de los filtros en móvil y por el popover del glosario. La cabecera del módulo explica por qué |
 | `visor.js` | 309 | La foto de la ficha a pantalla completa, con pellizco, doble toque y rueda. Solo sobre fotos reales: sobre un sustituto generado no abre |
@@ -117,7 +117,7 @@ motivo**: cada uno tiene una razón para no serlo.
 | Fichero | Líneas | Por qué es clásico |
 |---|---|---|
 | `auth.js` | 617 | IIFE. Flujo de pantallas y autenticación; expone `window.naturdexShowScreen` y llama a `window.startParkExperience` de `app.js`. Es la frontera entre el selector de parque (ligero) y la experiencia del parque (pesada) |
-| `prefs.js` | 230 | Va en el `<head>`: tiene que aplicar el tema **antes del primer pintado** |
+| `prefs.js` | 235 | Va en el `<head>`: tiene que aplicar el tema **antes del primer pintado** |
 | `nav.js` | 253 | Pila de navegación y botón «atrás» del móvil. El historial se actualiza al final del turno, en microtarea: `history.go()` es asíncrono |
 | `offline.js` | 297 | Almacenamiento local y funcionamiento sin cobertura |
 | `../sw.js` | — | Service Worker **network-first**, para que la app nunca se atasque en una versión antigua |
