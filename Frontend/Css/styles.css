@@ -13,6 +13,16 @@
   --rareza-4-bg:#fbf3de;
   --rareza-5-bg:#f7e8e3;
   --rareza-nd-bg:#e8f2f6;
+  /* El mismo color, saturado, para el MARCO de la ficha (`.ficha-tramo`). Un tinte de fondo y un
+     borde piden dos intensidades distintas: lo que a 3 px se lee bien, extendido a toda una tarjeta
+     la vuelve ilegible. El tramo 1 se marca con la línea normal, que es tanto como no marcarlo:
+     mismo criterio que su fondo. */
+  --rareza-1-borde:var(--line);
+  --rareza-2-borde:#a9cdb4;
+  --rareza-3-borde:#5f9c7a;
+  --rareza-4-borde:var(--sun);
+  --rareza-5-borde:var(--danger);
+  --rareza-nd-borde:var(--sea);
 }
 /* ================================================================================================
    Escala tipográfica
@@ -912,7 +922,13 @@ p.achievement-progress-label{margin:8px 0 0}
   --rareza-3-bg:#22332a;
   --rareza-4-bg:#2b2415;
   --rareza-5-bg:#33201a;
-  --rareza-nd-bg:#152a33
+  --rareza-nd-bg:#152a33;
+  --rareza-1-borde:var(--line);
+  --rareza-2-borde:#3f6b4f;
+  --rareza-3-borde:#57916b;
+  --rareza-4-borde:var(--sun);
+  --rareza-5-borde:var(--danger);
+  --rareza-nd-borde:var(--sea)
 }
 /* Superficies que eran blancas. */
 :root[data-theme="dark"] .detail-panel,
@@ -1509,6 +1525,19 @@ body.visor-open{overflow:hidden}
 :root .species-card.rareza-4{background:var(--rareza-4-bg)}
 :root .species-card.rareza-5{background:var(--rareza-5-bg)}
 :root .species-card.rareza-nd{background:var(--rareza-nd-bg)}
+
+/* El marco de la ficha (render/detalle.js · `.ficha-tramo`). Envuelve la foto y el cuerpo, así que
+   el color rodea la ficha entera y no solo el texto. Va a 3 px porque a 1 px, contra el borde del
+   propio panel, no se distingue de la línea de siempre; y sin `border-radius`, porque el panel
+   tampoco lo tiene y una esquina redonda dentro de una recta se ve como un fallo de encaje.
+   `overflow:hidden` es lo que impide que la foto, que va a sangre, se coma el marco por arriba. */
+.ficha-tramo{border:3px solid var(--line);overflow:hidden}
+:root .ficha-tramo.rareza-1{border-color:var(--rareza-1-borde)}
+:root .ficha-tramo.rareza-2{border-color:var(--rareza-2-borde)}
+:root .ficha-tramo.rareza-3{border-color:var(--rareza-3-borde)}
+:root .ficha-tramo.rareza-4{border-color:var(--rareza-4-borde)}
+:root .ficha-tramo.rareza-5{border-color:var(--rareza-5-borde)}
+:root .ficha-tramo.rareza-nd{border-color:var(--rareza-nd-borde)}
 
 .proteccion-aviso{margin:14px 0;padding:12px 14px;border:1px solid var(--line);border-left-width:5px;border-radius:8px;background:#fbf3de}
 .proteccion-aviso p{margin:0 0 8px}

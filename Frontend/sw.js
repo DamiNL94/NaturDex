@@ -34,11 +34,13 @@
 //      las especies amenazadas). Lo importan state.js, render/catalogo.js, render/detalle.js y
 //      app.js, así que sin precachearlo la app NO ARRANCA sin cobertura: los cuatro resolverían a
 //      un 404. Es exactamente el fallo del que avisa el comentario de arriba.
-// v67: la tarjeta del catálogo se tiñe según el tramo de rareza y el cartel de advertencia de la
-//      ficha pliega sus pautas. Toca Css/styles.css, Css/ranger.css, Js/rareza.js y
-//      Js/render/catalogo.js, los cuatro precacheados: sin subir la versión, un dispositivo con el
+// v67: la rareza legal pasa a verse en el COLOR. La tarjeta del catálogo se tiñe de fondo según su
+//      tramo, la ficha va enmarcada en ese mismo color y el cartel de advertencia pliega sus
+//      pautas. Toca Css/styles.css, Css/ranger.css, Js/rareza.js, Js/render/catalogo.js y
+//      Js/render/detalle.js, los cinco precacheados: sin subir la versión, un dispositivo con el
 //      armazón guardado seguiría pintando la hoja vieja sobre el marcado nuevo, que es una tarjeta
-//      con clase de tramo y sin color y un <details> sin estilo dentro del cartel.
+//      con clase de tramo y sin color, una ficha sin marco y un <details> sin estilo dentro del
+//      cartel.
 var VERSION = 'v67';
 var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 

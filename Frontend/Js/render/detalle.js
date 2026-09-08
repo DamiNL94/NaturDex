@@ -10,7 +10,7 @@ import { explicaAsociacion, explicacionFitosociologia } from '../fitosociologia.
 import { highlightGlossary } from '../glossary.js';
 import { groupSwatch, habitatGroup, habitatsOfGroup } from '../habitat-groups.js';
 import { isMarkVerifiedLocally } from '../presence.js';
-import { TRAMOS, baseDe, cartelAdvertencia, estrellas, recordatorioAdvertencia, tramoDe } from '../rareza.js';
+import { TRAMOS, baseDe, cartelAdvertencia, claseRareza, estrellas, recordatorioAdvertencia, tramoDe } from '../rareza.js';
 import { esMigratoria, habitatAreaLabel, habitatSpeciesSeenCount, isHabitatComplete, speciesOfHabitat, state } from '../state.js';
 import { atributosAmpliar, habitatImageSrc, html, kingdomEmoji, plegable, poiImageSrc, raw, speciesImageSrc } from '../util.js';
 import { renderInvasoraDetail } from './invasoras.js';
@@ -312,7 +312,19 @@ function renderSpeciesDetail() {
       ? html`<p class="detail-source">La rareza sale de la <strong>categoría legal de protección</strong>, no de lo difícil que sea encontrarla. Esta ficha todavía no la tiene calculada.</p>`
       : html`<p class="detail-source">Rareza = <strong>${TRAMOS[rareza].significado}</strong>. Sale de la categoría legal vigente${base ? html`: ${base.categoria}${base.norma ? ' — ' + base.norma : ''}` : ', aunque esta ficha no guarda la norma que la justifica'}.</p>`}${species.image && species.imageAttribution ? html`<p class="detail-source">Foto: ${species.imageAttribution}</p>` : ''}${species.source ? html`<p class="detail-source">Fuente: ${species.source}</p>` : ''}`;
 
-  detailPanel.innerHTML = html`<div class="detail-image-wrap">
+  /*
+   * La ficha entera va dentro de un marco del color de su tramo (`.ficha-tramo` + la clase de
+   * `claseRareza()`, la misma que tiñe la tarjeta del catálogo). Cierra el circuito: se ve el color
+   * en la lista, se pulsa, y la ficha que se abre lleva el mismo color — sin eso, el tinte se
+   * quedaba en un adorno de la lista que desaparecía justo al entrar en lo que describe.
+   *
+   * El marco lo lleva un envoltorio DENTRO del `innerHTML`, y no el propio `#detailPanel`, a
+   * propósito: el panel lo reescriben seis sitios —hábitat, punto de interés, invasora, ficha base—
+   * y una clase puesta en el contenedor habría que quitarla en los seis. Aquí se va con el
+   * contenido, que es lo que se reemplaza entero en cada pintado.
+   */
+  detailPanel.innerHTML = html`<div class="ficha-tramo ${claseRareza(species)}">
+    <div class="detail-image-wrap">
     <img src="${speciesImageSrc(species)}" alt="${species.commonName}" onerror="window.__imgFallback(this,${species.id})"${atributosAmpliar(hayFotoPropia(species), species.commonName, creditoFoto(species))}>
     </div>
     <div class="detail-body">
@@ -342,5 +354,6 @@ function renderSpeciesDetail() {
     ${plegable('Estado de conservación', conservacion)}
     ${plegable('Presencia en este espacio', bloquePresenciaSitio(species))}
     ${plegable('Fuentes y más información', fuentes)}
+    </div>
     </div>`;
 }

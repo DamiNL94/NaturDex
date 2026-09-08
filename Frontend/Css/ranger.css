@@ -50,6 +50,13 @@
   --rareza-4-bg:#FBF1DF;
   --rareza-5-bg:#F7E9E2;
   --rareza-nd-bg:#E8EEF0;
+  /* El marco de la ficha, en los verdes y tierras de esta capa. */
+  --rareza-1-borde:var(--line-strong);
+  --rareza-2-borde:#A8BE96;
+  --rareza-3-borde:#5F8560;
+  --rareza-4-borde:var(--warn);
+  --rareza-5-borde:var(--danger);
+  --rareza-nd-borde:var(--sea);
 
   --sun:#C4762A;            /* el ámbar de styles.css pasa a ser el ámbar de aviso del cartel */
   --warn:#C4762A;
@@ -107,6 +114,12 @@
   --rareza-4-bg:#2A2417;
   --rareza-5-bg:#331F17;
   --rareza-nd-bg:#1D2A30;
+  --rareza-1-borde:var(--line-strong);
+  --rareza-2-borde:#4A6B4C;
+  --rareza-3-borde:var(--leaf);
+  --rareza-4-borde:var(--warn-ink);
+  --rareza-5-borde:var(--danger);
+  --rareza-nd-borde:var(--sea);
 
   --sun:#E8B45A;
   --warn:#C4762A;

@@ -26,14 +26,17 @@
 // calculado, aquí se enseña el aviso de precaución. Publicar de menos se corrige; acercarse de más,
 // no.
 //
-// EL TRAMO TAMBIÉN TIÑE LA TARJETA DEL CATÁLOGO
+// EL TRAMO TAMBIÉN SE VE EN COLOR: LA TARJETA Y LA FICHA
 // El distintivo de rareza dice el tramo, pero hay que leerlo: en una lista de doscientas fichas no
-// se ve de un vistazo dónde está lo protegido. `claseRareza()` da la clase con la que la tarjeta se
-// pinta de fondo, y el degradado no es decorativo — es la misma escalera: verde para lo protegido
+// se ve de un vistazo dónde está lo protegido. `claseRareza()` da la clase con la que la tarjeta del
+// catálogo se pinta de fondo y con la que la ficha se enmarca —el mismo color en los dos sitios, o
+// el color de la lista se quedaría en un adorno que desaparece justo al entrar en lo que describe—,
+// y el degradado no es decorativo: es la misma escalera. Verde para lo protegido
 // sin amenaza, ámbar y rojo para las dos categorías de amenaza, azul para lo que nadie ha mirado y
-// ningún tinte para el tramo 1. El tinte NUNCA es el único portador del dato: del 2 para arriba lo
+// ningún color para el tramo 1. El color NUNCA es el único portador del dato: del 2 para arriba lo
 // dice el distintivo, y en el tramo sin calcular lo dice `render/catalogo.js` con un texto para
-// lector de pantalla. Color solo, sin texto, no es información.
+// lector de pantalla; en la ficha lo dicen las estrellas y el cartel. Color solo, sin texto, no es
+// información.
 //
 // El vocabulario y los cinco tramos son los mismos que `Tools/lib/rareza.js`, con los mismos textos:
 // son la misma escalera vista desde los dos lados del repositorio.
