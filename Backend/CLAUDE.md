@@ -21,6 +21,7 @@ preflight, sesión, `respond()`); si escribes uno nuevo, empieza por ahí.
 | `account-progress.php` | 68 | Progreso de **cuenta** (ámbito estatal) + logros. Complementa a `progress.php`, no lo sustituye |
 | `presence.php` | 69 | **El único sitio por el que entra una posición del GPS** |
 | `admin.php` | 432 | CRUD del contenido ambiental para el AdminPanel |
+| `tiempo.php` | 42 | Predicción de AEMET para el municipio de referencia de un espacio (`?municipio=<INE de 5 dígitos>`). **Es la única llamada saliente del backend**, y existe para que la `api_key` de AEMET no tenga que estar en `Frontend/` (donde la publicaría el servidor estático y la cachearía el SW). Forma en `Lib/tiempo_payload.php` |
 
 ## `Lib/` — lógica compartida
 
@@ -37,10 +38,18 @@ preflight, sesión, `respond()`); si escribes uno nuevo, empieza por ahí.
 | `geo.php` | 199 | Geometría oficial del lado servidor: punto-en-polígono contra el límite |
 | `dwc.php` | 250 | **El vocabulario Darwin Core**: columna ↔ término ↔ URI, identificadores y reglas de sensibilidad. Puro (sin BD), para poder probarlo con `npm test` |
 | `occurrences.php` | 300 | Escritura y lectura de `user_occurrences`. Lo llaman `progress.php`, `presence.php` y `account-progress.php`; lo lee `Tools/export-dwc.php` |
+| `tiempo_payload.php` | 300 | **El tiempo, y sus tres trampas.** (1) El flujo de AEMET son DOS peticiones y el `estado` del JSON de control **no es el código HTTP**: una URL de datos caducada responde HTTP 200 con `estado: 404` dentro, y sin `api_key` AEMET devuelve **200 con el cuerpo vacío**. (2) La respuesta de datos llega en **ISO-8859-15**: se convierte antes de `json_decode`, y comprobando la codificación en vez de a ciegas. (3) Se cachea en disco por código INE (1 h fresca, 12 h de reserva) y ante un fallo o un 429 se sirve lo guardado **marcado como viejo**, nunca un error. Emite forma propia, no el JSON de AEMET, y lleva la atribución literal que exige su nota legal |
 
 ## `Config/`
 
 `db.php` — conexión MySQL desde variables de entorno (Docker/producción), con caída a XAMPP local.
+Su `naturdex_env()` es también la puerta de `AEMET_API_KEY`: **ninguna credencial se lee de otro
+sitio**.
+
+## `Data/` — estado de runtime (fuera del webroot, no versionado)
+
+`tiempo/<ine>.json` es la caché de servidor de la predicción de AEMET. La carpeta la bloquea
+`docker/apache.conf` y la hace escribible el `Dockerfile`.
 
 ## Cuidado con
 
@@ -53,5 +62,9 @@ preflight, sesión, `respond()`); si escribes uno nuevo, empieza por ahí.
   falla, el progreso del usuario ya está a salvo. Ver [`Docs/DARWIN-CORE.md`](../Docs/DARWIN-CORE.md).
 - `murcia_status` está atado a Murcia y toca `Lib/park_payload.php` y `Api/admin.php` (3 sentencias).
   Deuda nº 1: ver [`Docs/DEUDA-TECNICA.md`](../Docs/DEUDA-TECNICA.md).
+- **`tiempo.php` llama a `apiBoot()` y NO usa la conexión.** Se hace igual porque es la convención de
+  la casa y porque garantiza las mismas cabeceras, CORS y corte del preflight que el resto. La
+  consecuencia, escrita para que no sorprenda: con MySQL caído este endpoint responde 500 y el widget
+  del tiempo no se pinta — que es su degradación de diseño, no una avería nueva.
 
 Pruebas sin BD: `npm test` → `Tools/test-presence-rules.php` + `Tools/test-dwc-rules.php`.

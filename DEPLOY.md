@@ -65,6 +65,53 @@ docker compose exec -T db sh -c 'mysql -u root -p"$MYSQL_ROOT_PASSWORD" --defaul
 
 O, para empezar de cero: `docker compose down -v && docker compose up -d --build`.
 
+## El tiempo del espacio (AEMET OpenData) — opcional
+
+La cabecera de cada espacio puede mostrar la predicción de AEMET para el municipio de referencia del
+espacio. **Es una mejora, no un requisito**: sin configurar nada, `Backend/Api/tiempo.php` responde
+503 y el widget simplemente no se pinta. Ni error, ni hueco, ni «no disponible» permanente.
+
+Para encenderlo hacen falta dos cosas, y son independientes:
+
+**1. La clave.** Se pide gratis con un correo electrónico en
+[opendata.aemet.es](https://opendata.aemet.es/centrodedescargas/obtencionAPIKey) y AEMET la envía por
+email (es un JWT largo). Va en `.env`:
+
+```bash
+AEMET_API_KEY=eyJhbGciOi...
+```
+
+> **La clave NUNCA va en `Frontend/`.** Esa carpeta la sirve un servidor estático y encima la cachea
+> el Service Worker: una clave ahí es una clave publicada. Vive solo en el entorno del contenedor
+> web, y el navegador únicamente habla con `Backend/Api/tiempo.php`.
+
+**2. El código INE de cada espacio.** AEMET identifica los municipios por su código INE de 5 dígitos
+y el catálogo guarda nombres, así que hay que resolverlos una vez contra el maestro del propio AEMET:
+
+```bash
+AEMET_API_KEY=... node Tools/resuelve-municipio-aemet.js --write --sql Database/parks-tiempo.sql
+```
+
+Escribe `park.weather` en cada `park.json` y deja el SQL para la base. **La API tiene prioridad sobre
+el `park.json` empaquetado**, así que en un despliegue con backend hay que aplicar también el SQL o
+el widget no aparecerá aunque el código esté en el repositorio:
+
+```bash
+docker compose exec -T db sh -c 'mysql -u root -p"$MYSQL_ROOT_PASSWORD" --default-character-set=utf8mb4 naturadex' < Database/migrations.sql
+docker compose exec -T db sh -c 'mysql -u root -p"$MYSQL_ROOT_PASSWORD" --default-character-set=utf8mb4 naturadex' < Database/parks-tiempo.sql
+```
+
+Un espacio cuyo municipio no case se queda **sin código**, y ahí no se pinta el widget: es un hueco
+declarado, no un fallo. La herramienta los enumera al terminar.
+
+**Requisitos del servidor**: la extensión `curl` de PHP (ya incluida en la imagen del `Dockerfile`) y
+salida a `opendata.aemet.es`. La predicción se cachea en el servidor (`Backend/Data/tiempo/`) una
+hora, y ante un fallo de AEMET o un 429 se sirve la última buena marcada como vieja hasta doce horas.
+
+**Atribución**: el widget cita a AEMET con la fórmula literal que exige su nota legal («Información
+elaborada por la Agencia Estatal de Meteorología») y la hora de elaboración de la predicción. No se
+puede quitar: es la condición de uso del dato.
+
 ## Seguridad aplicada
 
 El despliegue ya incluye estas medidas:

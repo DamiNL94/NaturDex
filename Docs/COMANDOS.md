@@ -42,6 +42,7 @@
 | `npm run park:sql -- --park <slug>` | Vuelca el **N2 completo** —fila de `parks`, hábitats con geometría, especies y vínculos— → `Database/<slug>-n2.sql`. **Va antes que `pois:sql`**: sin fila en `parks`, todo lo demás carga cero filas en silencio |
 | `npm run tiles:build <slug>` | Paquete de mapa base offline |
 | `npm run trails:build <slug>` | Senderos señalizados (GR, PR, SL) que pasan por el parque |
+| `npm run tiempo:municipios [-- --write --sql Database/parks-tiempo.sql]` | **El municipio de referencia de cada espacio para la predicción de AEMET, con su código INE.** Sin `--write` solo informa. Necesita `AEMET_API_KEY` en el entorno (`--cache` reutiliza el maestro ya descargado y no la necesita). **La API manda sobre el paquete**: sin aplicar el `--sql`, un despliegue con backend no pinta el widget del tiempo aunque el código esté en el repositorio. Lo que no case se queda **sin código y sin widget**, enumerado al final |
 | `npm run export:park / :glossary / :invasoras` | Regenera los JSON empaquetados desde la BD |
 | `npm run export:dwc` | **Darwin Core Archive** de los avistamientos (`occurrence.txt` + `meta.xml` + `eml.xml`). Solo salen los usuarios que han dado su consentimiento, y las coordenadas de los taxones amenazados salen generalizadas. `-- --usuario <id\|correo>`, `-- --salida <ruta>`, `-- --zip`. Ver [DARWIN-CORE.md](DARWIN-CORE.md) |
 | `npm run db:status / :pull / :push / :backup` | Sincronización con el MySQL del contenedor |
