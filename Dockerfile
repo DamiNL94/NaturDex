@@ -11,6 +11,13 @@ FROM alpine:3.22
 #   opcache   -> rendimiento
 #   mbstring  -> slugify() en admin.php usa mb_strtolower(); en Alpine, a diferencia de json/filter,
 #                mbstring NO va compilado en el core de PHP 8 y necesita este paquete aparte.
+#                Lo usa también tiempo.php: la respuesta de datos de AEMET llega en ISO-8859-15 y
+#                hay que comprobar y convertir su codificación antes de json_decode.
+#   curl      -> la ÚNICA llamada saliente del backend: la predicción de AEMET (Api/tiempo.php).
+#                Se usa cURL y no los envoltorios https:// de PHP porque da un corte por tiempo de
+#                verdad (CURLOPT_TIMEOUT + CONNECTTIMEOUT), que es lo que impide que una AEMET lenta
+#                se convierta en la latencia de la app. Si falta el paquete, el endpoint responde
+#                503 y el widget del tiempo no se pinta: nada más deja de funcionar.
 RUN apk add --no-cache \
         apache2 \
         php82-apache2 \
@@ -18,6 +25,7 @@ RUN apk add --no-cache \
         php82-session \
         php82-opcache \
         php82-mbstring \
+        php82-curl \
     && mkdir -p /run/apache2
 
 # Config de Apache (DocumentRoot, redirección a /Frontend/, reglas de seguridad) y de PHP

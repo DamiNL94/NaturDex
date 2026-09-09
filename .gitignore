@@ -9,6 +9,9 @@ node_modules/
 
 # estado de progreso del usuario (se regenera en tiempo de ejecución)
 Backend/Data/progress.json
+# Caché de servidor de la predicción de AEMET (Backend/Lib/tiempo_payload.php). Es dato perecedero
+# de una fuente externa: se regenera solo y no tiene por qué viajar en el repositorio.
+Backend/Data/tiempo/
 
 # logs
 *.log
