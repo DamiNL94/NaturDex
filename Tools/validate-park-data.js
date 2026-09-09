@@ -286,6 +286,36 @@ function validateTiles(scope, manifest) {
     ok('mapa sin conexión: ' + mbOf(realBytes) + ' de teselas · ' + mbOf(total) + ' en total (tope ' + mbOf(MAX_TOTAL_BYTES) + ')');
 }
 
+/**
+ * `park.weather` — el municipio de referencia para la predicción de AEMET.
+ *
+ * Es OPCIONAL y su ausencia no se avisa: un espacio sin código simplemente no pinta el widget del
+ * tiempo, que es la degradación de diseño. Lo que sí se comprueba, cuando está, es que el código no
+ * sea un número suelto:
+ *   · cinco dígitos (provincia + municipio, sin dígito de control), que es lo que pide AEMET;
+ *   · el municipio tiene que ser UNO DE LOS QUE EL ESPACIO DECLARA. Esta es la comprobación que de
+ *     verdad importa: un código copiado del espacio de al lado —o el que quede tras renombrar un
+ *     municipio en `municipalities`— no falla en ninguna parte, la app pide la predicción, AEMET la
+ *     sirve, y el widget enseña con toda tranquilidad el tiempo de otro sitio;
+ *   · y la PROCEDENCIA (`distanciaKm` + `fuente`) va con el código, porque un código sin ella es un
+ *     número puesto a ojo (regla nº 1 del CLAUDE.md raíz).
+ * Lo escribe Tools/resuelve-municipio-aemet.js contra el maestro del propio AEMET.
+ */
+function validateWeather(scope, p) {
+  const w = p.weather;
+  if (w === undefined || w === null) return;
+  if (typeof w !== 'object' || Array.isArray(w)) { err(scope, 'park.weather no es un objeto'); return; }
+  if (!/^\d{5}$/.test(String(w.ine || '')))
+    err(scope, 'park.weather.ine="' + w.ine + '" no es un código INE de 5 dígitos (lo exige AEMET)');
+  const municipios = p.municipalities || [];
+  if (!w.municipio) err(scope, 'park.weather sin `municipio`: el widget lo enseña, no puede ir en blanco');
+  else if (municipios.length && !municipios.includes(w.municipio))
+    err(scope, 'park.weather.municipio="' + w.municipio + '" no está en park.municipalities (' + municipios.join(', ') + '): ¿código de otro espacio?');
+  if (typeof w.distanciaKm !== 'number' || !(w.distanciaKm >= 0))
+    err(scope, 'park.weather.distanciaKm ausente o no numérica: es la procedencia del código, no un adorno');
+  if (!w.fuente) err(scope, 'park.weather.fuente vacía: hay que decir de dónde salió el código');
+}
+
 function validateBasicPark(entry) {
   console.log('\n\x1b[1m▶ ' + entry.slug + '\x1b[0m (' + entry.name + ') \x1b[36m· ficha base\x1b[0m');
   const scope = entry.slug;
@@ -312,6 +342,7 @@ function validateBasicPark(entry) {
     err(scope, 'park.center fuera de España: [' + p.center.join(', ') + '] (se espera [lat, lng] en WGS84)');
   if (entry.category && p.category && entry.category !== p.category)
     warn(scope, 'la figura del registro ("' + entry.category + '") no coincide con park.category ("' + p.category + '")');
+  validateWeather(scope, p);
 
   // 2) Límite oficial: es lo único que esta ficha promete, así que se exige ------------------------
   const boundaryRel = manifest.geo && manifest.geo.parque;
@@ -649,6 +680,7 @@ function validatePark(entry) {
   // Además del formato se comprueba el encuadre: un [0, 0] es sintácticamente válido pero cae en el
   // golfo de Guinea, y así es como se colaban los POIs sin ubicar (NULL en la BD casteado a 0.0).
   if (badCoord(park.park && park.park.center)) err(scope, 'park.center mal formado');
+  validateWeather(scope, park.park || {});
   const checkCoord = (c, what) => {
     if (badCoord(c)) { err(scope, 'coordinates de ' + what + ' mal formadas'); return; }
     if (outsideSpain(c)) err(scope, 'coordinates de ' + what + ' fuera de España: [' + c.join(', ') + ']');

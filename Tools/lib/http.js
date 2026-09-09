@@ -106,12 +106,15 @@ function unaPeticion(host, pathQuery, headers, timeoutMs) {
       let recibido = 0;
       res.on('data', (c) => { trozos.push(c); recibido += c.length; });
       res.on('end', () => {
-        const body = Buffer.concat(trozos).toString('utf8');
+        const buffer = Buffer.concat(trozos);
         if (res.statusCode < 200 || res.statusCode >= 300) {
-          falla(new HttpError(res.statusCode, host, pathQuery, body));
+          falla(new HttpError(res.statusCode, host, pathQuery, buffer.toString('utf8')));
           return;
         }
-        ok({ status: res.statusCode, headers: res.headers, body });
+        // Se devuelven el Buffer Y su lectura en utf8: casi todas las fuentes emiten utf8 y quieren
+        // `body`, pero AEMET OpenData sirve sus ficheros de datos en ISO-8859-15 y necesita los
+        // bytes sin decodificar (ver getBuffer).
+        ok({ status: res.statusCode, headers: res.headers, buffer, body: buffer.toString('utf8') });
       });
       // El cuerpo se cortó antes de llegar entero. Se dice cuánto llegó y cuánto se esperaba: la
       // diferencia es lo que distingue un corte de red de una respuesta legítimamente vacía.
@@ -131,6 +134,23 @@ function unaPeticion(host, pathQuery, headers, timeoutMs) {
     req.on('close', () => falla(new Error(
       `conexión cerrada sin respuesta de ${host}${String(pathQuery).slice(0, 120)}`)));
   });
+}
+
+/**
+ * GET que devuelve los BYTES sin decodificar.
+ *
+ * Existe por AEMET OpenData, que sirve sus ficheros de datos en ISO-8859-15: decodificarlos como
+ * utf8 —lo que hace getText, y lo que hacen bien todas las demás fuentes— no falla, deja los
+ * acentos rotos («Águilas» → «�guilas») y no lo avisa nadie. Con los bytes en la mano, quien
+ * llama decodifica con el juego que declare la fuente:
+ *
+ *     const { buffer } = await getBuffer(host, ruta);
+ *     const texto = new TextDecoder('iso-8859-15').decode(buffer);
+ *
+ * @returns {Promise<{status:number, headers:object, buffer:Buffer}>}
+ */
+async function getBuffer(host, pathQuery, options = {}) {
+  return getText(host, pathQuery, options);
 }
 
 /**
@@ -164,4 +184,4 @@ async function pool(items, n, fn) {
   return out;
 }
 
-module.exports = { getText, getJson, pool, HttpError, UA_BASE };
+module.exports = { getText, getBuffer, getJson, pool, HttpError, UA_BASE };

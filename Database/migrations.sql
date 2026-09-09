@@ -371,6 +371,22 @@ UPDATE parks p
 -- ------------------------------------------------------------------------------------------------
 CALL naturdex_add_column('users', 'prefs', 'JSON NULL');
 
+-- ------------------------------------------------------------------------------------------------
+-- Municipio de referencia para la predicción del tiempo (AEMET OpenData).
+-- ------------------------------------------------------------------------------------------------
+-- AEMET pide un código INE de 5 dígitos y aquí `municipality` guarda NOMBRES, así que el código se
+-- resuelve una vez contra el maestro del propio AEMET (Tools/resuelve-municipio-aemet.js) y se
+-- guarda. Las cuatro columnas van juntas porque las tres últimas son la PROCEDENCIA del código:
+-- de qué municipio es, a qué distancia del centro del espacio queda su capital y con qué se
+-- resolvió. Sin ellas el código sería un número sin defensa.
+--
+-- Estas columnas SOLO las rellena el .sql que genera esa herramienta (Database/parks-tiempo.sql):
+-- la migración las crea vacías. Un espacio sin código no pinta el widget, que es lo correcto.
+CALL naturdex_add_column('parks', 'weather_ine_code',     'VARCHAR(5) NULL');
+CALL naturdex_add_column('parks', 'weather_municipality', 'VARCHAR(120) NULL');
+CALL naturdex_add_column('parks', 'weather_distance_km',  'DECIMAL(6,2) NULL');
+CALL naturdex_add_column('parks', 'weather_source',       'VARCHAR(255) NULL');
+
 -- Limpieza de los procedimientos auxiliares.
 DROP PROCEDURE IF EXISTS naturdex_add_column;
 DROP PROCEDURE IF EXISTS naturdex_add_index;
