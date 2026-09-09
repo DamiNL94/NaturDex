@@ -36,8 +36,9 @@ import { FILTROS_RAREZA } from './rareza.js';
 import {
   renderHabitatGroups, renderHabitatCatalog, renderSpeciesList, renderCatalogBody,
   renderSummary, renderProgress, renderDetail, renderProgressTab, renderInvasoras,
-  renderBasicPark, renderAccountProgress
+  renderBasicPark, renderAccountProgress, renderTiempo
 } from './render.js';
+import { cargaTiempo } from './tiempo.js';
 import {
   map, setMapHandlers, ensureMapSized, soloHabitat, setupParkBaseLayer, applyBaseChoice, focusOn,
   revealOn, renderMarkers, renderPoiMarkers, renderTrails, renderProtectedAreas, renderHabitatZones,
@@ -766,7 +767,17 @@ initProfile();
 // cabecera sube a 388 px desplegada y baja a 232 plegada: se pagan 13 px una vez —la fila del
 // progreso pasa de 31 a 44 para que el objetivo táctil quepa— y se recuperan 156 cada vez.
 //
-// Se pliegan esas dos: la descripción del espacio y las tres casillas de recuento. NO se pliegan:
+// REMEDIDO el 2026-09-09, al entrar el widget del tiempo (AEMET) en el bloque plegable: desplegada
+// pasa de 388 a **518** px en el caso normal (542 con los dos avisos, y 575 con el cartel de
+// «predicción guardada»), y **plegada sigue midiendo 232**, que es la mitad que importa. El widget
+// se pliega porque cumple el criterio de esta sección al pie de la letra: se lee UNA vez, antes de
+// salir, para decidir si se va. Quien quiera la lista pliega una vez y no lo vuelve a ver —el estado
+// es global— y en escritorio la cabecera además se aparta al deslizar (la barra lateral scrollea
+// como una columna, ver Css/styles.css §escritorio), así que lo que cuesta desplegada es scroll, no
+// lista perdida. Un espacio sin código INE de AEMET no pinta el widget y sigue en 388.
+//
+// Se pliegan esas dos, y desde el 2026-09-09 el tiempo: la descripción del espacio, las tres
+// casillas de recuento y la predicción. NO se pliegan:
 //   · el cartel del parque (rótulo y figura de protección), que es dónde estás;
 //   · el progreso, que es lo que esta app viene a contar — se queda en su fila, con el botón;
 //   · la barra de presencia, que avisa de si lo que marcas cuenta para los logros. Escondida detrás
@@ -1092,6 +1103,18 @@ async function startParkExperience(slug, user) {
   // salida: OSM/PNOA no pintarían nada y el usuario vería la geometría flotando sobre el vacío.
   if (setupParkBaseLayer(manifest) && !NaturDexOffline.isOnline()) applyBaseChoice('parque', false);
   renderSummary();
+  // El tiempo del espacio. NO se espera (`await`): es una mejora y no puede retrasar ni un
+  // milisegundo la entrada al parque, que es lo que esta función viene a hacer. Se pinta solo
+  // cuando llega —o al instante, si hay una lectura guardada—, y si no llega nada no se pinta y ya
+  // está. Se apaga primero: al CAMBIAR de espacio, el widget del anterior seguiría en pantalla
+  // anunciando el tiempo de otro municipio mientras se resuelve el nuevo.
+  // Y se pinta contra el espacio que lo pidió: cambiar de parque mientras la petición está en vuelo
+  // dejaría al nuevo enseñando la predicción del anterior, sin error y sin que nada lo delate.
+  renderTiempo(null);
+  const slugDelTiempo = state.activeParkSlug;
+  cargaTiempo(state.data.park, (datos) => {
+    if (state.activeParkSlug === slugDelTiempo) renderTiempo(datos);
+  });
   renderProtectedAreas();
   renderTrails();
   renderHabitatZones();

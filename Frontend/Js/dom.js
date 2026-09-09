@@ -40,6 +40,11 @@ export const parkProgressWrap = document.querySelector('#parkProgressWrap');
 // el estado es global y si no la descripción se quedaría escondida sin botón (app.js ·
 // applyParkLevel e initParkFold).
 export const parkFold = document.querySelector('#parkFold');
+// El tiempo del espacio (AEMET). Vive DENTRO de #parkFold, así que se pliega con la descripción y
+// los recuentos: ver el porqué en el marcado de index.html. Nace `hidden` y lo enciende
+// render/tiempo.js solo cuando hay dato — sin backend, sin conexión o sin municipio resuelto se
+// queda apagado y la cabecera mide exactamente lo que medía antes.
+export const parkWeather = document.querySelector('#parkWeather');
 export const parkFoldBar = document.querySelector('#parkFoldBar');
 export const parkFoldToggle = document.querySelector('#parkFoldToggle');
 export const progressTrack = document.querySelector('#progressTrack');

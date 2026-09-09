@@ -15,7 +15,7 @@
  * @return array|null  El payload, o null si el parque no existe.
  */
 function buildParkPayload($conn, $parkSlug) {
-    $parkStmt = $conn->prepare("SELECT id, slug, name, category, region, province, municipality, description, coastline_km, latitude, longitude FROM parks WHERE slug = ? LIMIT 1");
+    $parkStmt = $conn->prepare("SELECT id, slug, name, category, region, province, municipality, description, coastline_km, latitude, longitude, weather_ine_code, weather_municipality, weather_distance_km, weather_source FROM parks WHERE slug = ? LIMIT 1");
     $parkStmt->bind_param("s", $parkSlug);
     $parkStmt->execute();
     $park = $parkStmt->get_result()->fetch_assoc();
@@ -221,6 +221,18 @@ function buildParkPayload($conn, $parkSlug) {
             "center" => [(float) $park["latitude"], (float) $park["longitude"]],
             "coastlineKm" => (float) $park["coastline_km"],
             "summary" => $park["description"],
+            // Municipio de referencia para la predicción del tiempo (AEMET). Sin código resuelto el
+            // bloque ENTERO es null, nunca un objeto con el código a null: «no lo tenemos» y «no se
+            // ha podido resolver» son la misma cosa para quien pinta —el widget no se pinta— y dos
+            // formas de decir que no obligarían al frontend a distinguirlas sin motivo.
+            // `distanciaKm` y `fuente` son la PROCEDENCIA del código y viajan con él: un código sin
+            // ellas es un número sin defensa (regla nº 1 del CLAUDE.md raíz).
+            "weather" => $park["weather_ine_code"] ? [
+                "municipio" => $park["weather_municipality"],
+                "ine" => $park["weather_ine_code"],
+                "distanciaKm" => $park["weather_distance_km"] !== null ? (float) $park["weather_distance_km"] : null,
+                "fuente" => $park["weather_source"],
+            ] : null,
             "boundary" => $parkBoundary,
             "boundaryNote" => $parkBoundaryNote
         ],

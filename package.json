@@ -22,6 +22,7 @@
     "db:backup": "node Tools/db-sync/db-sync.js backup",
     "hooks:install": "git config core.hooksPath .githooks",
     "red:check": "node Tools/check-egress.js",
+    "tiempo:municipios": "node Tools/resuelve-municipio-aemet.js",
     "test": "php Tools/test-presence-rules.php && php Tools/test-dwc-rules.php",
     "typecheck": "cd AdminPanel && npx tsc --noEmit",
     "tiles:build": "node Tools/build-park-tiles.js",

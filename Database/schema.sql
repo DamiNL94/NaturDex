@@ -33,6 +33,16 @@ CREATE TABLE IF NOT EXISTS parks (
     -- Todo espacio nace 'basic' y asciende cuando se le hace el catálogo. Es un ENUM para que la
     -- propia base de datos rechace un valor que el frontend no sabría interpretar.
     status ENUM('basic','available','planned') NOT NULL DEFAULT 'basic',
+    -- Municipio de referencia para la predicción del tiempo (AEMET OpenData). AEMET pide un código
+    -- INE de 5 dígitos y `municipality` guarda NOMBRES, así que el código se resuelve una vez contra
+    -- el maestro del propio AEMET (Tools/resuelve-municipio-aemet.js) y se guarda aquí.
+    -- Un espacio son varios municipios y no tiene «un tiempo»: se elige el de capital más cercana al
+    -- centro del espacio, se guarda esa distancia para poder revisarla y el widget enseña el nombre.
+    -- NULL = no se ha podido resolver, y entonces el widget NO se pinta en ese espacio.
+    weather_ine_code VARCHAR(5),
+    weather_municipality VARCHAR(120),
+    weather_distance_km DECIMAL(6,2),
+    weather_source VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     INDEX idx_parks_status (status)

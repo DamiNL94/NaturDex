@@ -46,6 +46,12 @@ const HOSTS = [
   // es nacional y lo publica MITECO en este mismo host (2026-08-15).
   ['iepnb.gob.es',                 'EIDOS (taxonomía, UICN y estado legal) y Red Natura 2000 (especies oficiales por sitio)'],
   ['geoportal.imida.es',           'límites oficiales de los espacios (n1:build, n1:refina)'],
+  // La ÚNICA fuente que consulta el backend en vivo: todo lo demás de esta lista lo llama el
+  // tooling. Cerrado, se caen dos cosas distintas: `tiempo:municipios` no puede resolver el código
+  // INE de ningún espacio (y sin código no hay widget), y Backend/Api/tiempo.php responde 503, con
+  // lo que el widget del tiempo no se pinta. Ninguna de las dos rompe nada más: el tiempo es una
+  // mejora y la app funciona igual sin él. Necesita AEMET_API_KEY, que no da esta comprobación.
+  ['opendata.aemet.es',            'predicción municipal del espacio (Api/tiempo.php) y el maestro de municipios con los códigos INE'],
   // Faltaba desde el principio, y es la fuente de la Capa 2 entera: de aquí salen el shapefile del
   // Atlas de Hábitats 2005 y su tabla de datos, una descarga por provincia. Sin él, `habitats:build`
   // no tiene con qué trabajar y el informe daba «todo abierto» igualmente (destapado el 2026-08-15,

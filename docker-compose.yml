@@ -55,6 +55,10 @@ services:
       # La app se conecta con un usuario dedicado (no root) con privilegios solo sobre su BD.
       DB_USER: ${DB_USER:-naturdex}
       DB_PASS: ${DB_PASSWORD:?Define DB_PASSWORD en .env}
+      # Clave de AEMET OpenData para el widget del tiempo (Backend/Api/tiempo.php). OPCIONAL, a
+      # diferencia de las de la BD: `:-` y no `:?`, para que un despliegue sin ella arranque igual.
+      # Sin clave el endpoint responde 503 y el widget no se pinta, que es su degradación de diseño.
+      AEMET_API_KEY: ${AEMET_API_KEY:-}
     # El puerto NO se publica aquí: en local lo publica docker-compose.override.yml (8080→80) y en
     # producción no se publica en absoluto (solo Caddy es accesible desde fuera, ver
     # docker-compose.prod.yml).

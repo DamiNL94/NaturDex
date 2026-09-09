@@ -14,20 +14,10 @@
 // del proyecto. Cuando se deje de usar Railway se pueden borrar sin tocar nada más: la precedencia
 // hace que DB_* siempre gane, así que Docker y XAMPP se comportan igual con o sin ellos.
 
-/**
- * Devuelve el valor de la primera variable de entorno definida y no vacía.
- *
- * Se consultan getenv(), $_ENV y $_SERVER porque, según cómo se pase la variable al proceso
- * (entorno del contenedor, SetEnv/PassEnv de Apache, php-fpm...), acaba en unos sitios u otros.
- */
-function naturdex_env(array $names) {
-    foreach ($names as $name) {
-        foreach ([getenv($name), $_ENV[$name] ?? false, $_SERVER[$name] ?? false] as $value) {
-            if (is_string($value) && $value !== "") return $value;
-        }
-    }
-    return null;
-}
+// `naturdex_env()` vive en Config/env.php desde que hubo un segundo consumidor (AEMET_API_KEY):
+// incluir ESTE fichero solo para leer una variable de entorno abriría la conexión a MySQL de
+// propina. Aquí se sigue usando igual que siempre.
+require_once __DIR__ . "/env.php";
 
 // --- [RAILWAY] Cadena de conexión única -------------------------------------------------------
 // Railway publica MYSQL_URL (mysql://usuario:contraseña@host:puerto/base). Si está definida se usa
