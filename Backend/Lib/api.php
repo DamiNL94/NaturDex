@@ -32,6 +32,16 @@ require_once __DIR__ . "/api_cors.php";
  *                                     solo mismo origen y no debe anunciar nada.
  *   session (bool, por defecto false) abre la sesión con naturdexSessionStart() (recupera además
  *                                     la sesión desde el token de "seguir conectado").
+ *   db      (bool, por defecto true)  abre la conexión a MySQL. `false` en los endpoints que NO
+ *                                     tocan la base (hoy solo tiempo.php, que es un proxy a AEMET).
+ *
+ * Por qué existe `db`: sin ella, un endpoint que no consulta nada de la base MUERE con la base.
+ * `Config/db.php` responde 500 y termina el proceso si no puede conectar, así que `tiempo.php`
+ * —que solo habla con AEMET— devolvía «Database connection error» con MySQL parado. La alternativa
+ * era no llamar a apiBoot() en ese endpoint, y eso es peor: se perderían las cabeceras, el CORS y
+ * el corte del preflight, que es exactamente la repetición que este fichero vino a quitar. Con la
+ * opción, la convención «todo endpoint arranca por apiBoot()» sigue valiendo para todos.
+ * Devuelve null cuando `db` es false: un endpoint que la pide es que la usa.
  */
 function apiBoot(array $options = []) {
     header("Content-Type: application/json; charset=utf-8");
@@ -41,6 +51,14 @@ function apiBoot(array $options = []) {
         // El preflight se corta ANTES de tocar la base de datos: es una pregunta sobre cabeceras,
         // no una petición de datos, y abrir la conexión para contestarla es trabajo tirado.
         if (($_SERVER["REQUEST_METHOD"] ?? "") === "OPTIONS") { http_response_code(204); exit; }
+    }
+
+    if (!($options["db"] ?? true)) {
+        // Sin base, pero con `naturdex_env()` disponible: es la única puerta a las credenciales del
+        // entorno (AEMET_API_KEY entre ellas). Config/env.php la trae SIN conectar a nada, que es
+        // para lo que se separó de db.php.
+        require_once __DIR__ . "/../Config/env.php";
+        return null;
     }
 
     // `global $conn` va ANTES del require, no después: un fichero incluido hereda el ámbito de
