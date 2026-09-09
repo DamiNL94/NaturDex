@@ -41,7 +41,13 @@
 //      armazón guardado seguiría pintando la hoja vieja sobre el marcado nuevo, que es una tarjeta
 //      con clase de tramo y sin color, una ficha sin marco y un <details> sin estilo dentro del
 //      cartel.
-var VERSION = 'v67';
+// v68: entra el tiempo del espacio (AEMET). Dos módulos nuevos que precachear —Js/tiempo.js y
+//      Js/render/tiempo.js— y, sobre todo, un cambio en el `fetch` de más abajo: `Api/tiempo.php`
+//      se EXCLUYE de la caché de runtime. El tiempo es dato perecedero y su única copia guardada
+//      tiene que ser la de Js/tiempo.js en localStorage, que va con su hora y sabe cuándo caduca;
+//      dejando que el SW guarde además la respuesta se tendrían DOS copias con dos edades y solo
+//      una de ellas sabría la suya. También cambian index.html, Css/styles.css y Css/ranger.css.
+var VERSION = 'v68';
 var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 
 // Armazón mínimo que se intenta precachear en la instalación (best-effort).
@@ -79,12 +85,13 @@ var SHELL_ASSETS = [
   'Js/util.js', 'Js/state.js', 'Js/api.js', 'Js/habitat-groups.js', 'Js/dom.js', 'Js/data.js',
   'Js/layers.js', 'Js/explorer.js', 'Js/audio.js', 'Js/glossary.js', 'Js/fitosociologia.js',
   'Js/tutorial.js', 'Js/presence.js', 'Js/notice.js', 'Js/profile.js', 'Js/visor.js',
-  'Js/diccionario.js', 'Js/rareza.js', 'Js/app.js',
+  'Js/diccionario.js', 'Js/rareza.js', 'Js/tiempo.js', 'Js/app.js',
 
   // Barriles + sus trozos. El barril solo reexporta: SIN los trozos la app no arranca offline.
   'Js/render.js',
   'Js/render/fallbacks.js', 'Js/render/catalogo.js', 'Js/render/resumen.js',
   'Js/render/detalle.js', 'Js/render/invasoras.js', 'Js/render/progreso.js',
+  'Js/render/tiempo.js',
 
   'Js/map.js',
   'Js/map/core.js', 'Js/map/iconos.js', 'Js/map/tramas.js',
@@ -131,6 +138,15 @@ self.addEventListener('fetch', function (event) {
   var url = new URL(req.url);
   // Peticiones a otros dominios (teselas del mapa, CDN de Leaflet): directas a la red, sin gestionar.
   if (url.origin !== self.location.origin) return;
+
+  // La predicción del tiempo NO se cachea aquí. Es el único dato PERECEDERO que sirve esta API, y
+  // este `fetch` guarda en la caché de runtime toda respuesta 200 del mismo origen: sin esta
+  // excepción, sin cobertura el navegador serviría desde la caché del armazón una predicción de
+  // hace días como si acabara de llegar, y encima habría DOS copias del dato —ésta y la de
+  // localStorage— con dos edades distintas y solo una capaz de decir la suya. La copia buena es la
+  // de Js/tiempo.js, que se guarda con su hora y deja de pintarse cuando ninguno de sus días es hoy.
+  // Aquí, sin red, el fetch falla y ese módulo cae solo a lo que tiene guardado.
+  if (url.pathname.indexOf('/Api/tiempo.php') !== -1) return;
 
   // El armazón (HTML/CSS/JS) se revalida SIEMPRE contra el servidor (cache: 'no-cache'): sin esto,
   // la caché HTTP del navegador del móvil podía seguir sirviendo un styles.css / app.js viejo aunque

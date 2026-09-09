@@ -11,6 +11,7 @@
 //   render/detalle.js     ficha de especie, de hábitat y de POI
 //   render/invasoras.js   pestaña de invasoras
 //   render/progreso.js    progreso del parque, progreso de cuenta, historial de salidas
+//   render/tiempo.js      el tiempo del espacio en la cabecera (AEMET)
 //
 // Reglas que siguen valiendo para todos ellos: leen el estado (state.js), escriben en los nodos
 // (dom.js) y SIEMPRE generan HTML con la plantilla html`` de util.js (escapado automático,
@@ -26,3 +27,4 @@ export { renderBasicPark, renderProgress, renderSummary } from './render/resumen
 export { renderDetail } from './render/detalle.js';
 export { renderInvasoras } from './render/invasoras.js';
 export { renderAccountProgress, renderProgressTab } from './render/progreso.js';
+export { renderTiempo } from './render/tiempo.js';

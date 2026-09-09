@@ -243,6 +243,10 @@ select{font-family:var(--font-ui);font-size:var(--fs-md)}
 .park-sign #parkTitle{margin:0;color:#FBF7EE}
 #parkTitle{font-family:var(--font-display)}
 .summary-grid div{background:var(--surface);border-color:var(--line)}
+/* El tiempo del espacio: mismo tratamiento que las casillas de recuento de al lado —con las que
+   comparte fila plegable— y por el mismo motivo, que styles.css escribe ahí un crema literal y aquí
+   los colores salen de los tokens, que es lo que hace que el tema oscuro funcione solo. */
+.park-weather{background:var(--surface);border-color:var(--line)}
 .summary-grid span{color:var(--muted-2);letter-spacing:.06em;text-transform:uppercase;font-size:var(--fs-xs)}
 
 /* Pestañas y filtros: subrayado de latón en vez de relleno oscuro */
@@ -538,6 +542,12 @@ select{font-family:var(--font-ui);font-size:var(--fs-md)}
   .summary-grid{gap:6px;margin-top:6px;grid-template-columns:repeat(3,1fr)}
   .summary-grid div{padding:6px 8px}
   .summary-grid strong{font-size:var(--fs-md)}
+  /* En móvil la cabecera es lo que le quita pantalla al catálogo, así que el widget se aprieta
+     igual que las casillas de recuento. El icono baja de tamaño pero no desaparece: es refuerzo,
+     nunca el portador del dato (Js/render/tiempo.js). */
+  .park-weather{margin-top:6px;padding:7px 9px}
+  .weather-icon{font-size:1.3rem}
+  .weather-row{gap:8px}
   .park-fold-bar{margin-top:8px}
   .progress-label{margin-top:4px}
   .presence-bar{margin-top:8px}

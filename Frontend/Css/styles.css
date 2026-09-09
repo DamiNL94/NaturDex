@@ -271,6 +271,44 @@ body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFo
 .park-fold-toggle .icon{transition:transform .18s ease}
 .park-fold-toggle[aria-expanded="false"] .icon{transform:rotate(180deg)}
 
+/* --- El tiempo del espacio (AEMET) -------------------------------------------------------------
+   Vive DENTRO de #parkFold (ver el marcado de index.html) y se apaga con `hidden`, así que —igual
+   que .summary-grid y .offline-bar, que lo documentan aquí al lado— su clase NO puede declarar
+   `display`: en cuanto se le escribiera uno ganaría al atributo y el widget se quedaría pintado
+   vacío en todos los espacios sin dato, que es justo el hueco permanente que no se quiere.
+   El punto medio que separa las piezas de cada línea lo pone el CSS y no el marcado: así el
+   separador no lo lee un lector de pantalla como si fuera contenido, y una pieza que no exista
+   (por ejemplo, una predicción sin probabilidad de lluvia) no deja un « · » suelto.
+   NO es interactivo: sin cursor de mano, sin :hover que invite a tocar. */
+.park-weather{margin-top:10px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;
+  background:#fbfcf8}
+.weather-row{display:flex;align-items:flex-start;gap:9px}
+.weather-icon{flex:0 0 auto;font-size:1.5rem;line-height:1.15}
+.weather-body{flex:1 1 auto;min-width:0}
+/* TODO lo de dentro va prefijado por `.park-weather`, y no es manía de especificidad: el widget
+   vive dentro de .park-summary, que unas líneas más arriba pinta `.park-summary p` en el gris de
+   metadato con un margen inferior de 18 px. Ese selector es MÁS específico que `.weather-today`, así
+   que sin el prefijo el dato principal salía en gris de metadato, el aviso ámbar no llegaba a
+   aplicarse nunca y cada párrafo arrastraba 18 px de margen — y nada de eso da error: se ve, se lee,
+   y parece una decisión de diseño. */
+.park-weather p{margin:0;color:var(--ink)}
+.park-weather .weather-place{font-size:var(--fs-xs);font-weight:800;text-transform:uppercase;
+  letter-spacing:.04em;color:var(--muted)}
+.park-weather .weather-today,.park-weather .weather-tomorrow{font-size:var(--fs-sm);line-height:1.4}
+.park-weather .weather-today{font-weight:600}
+.park-weather .weather-tomorrow{margin-top:1px;color:var(--muted);font-weight:400}
+.park-weather .weather-when{font-weight:700}
+.park-weather .weather-today>span+span::before,
+.park-weather .weather-tomorrow>span+span::before{content:" · ";font-weight:400;color:var(--muted)}
+.park-weather .weather-alert,
+.park-weather .weather-old{margin-top:5px;font-size:var(--fs-xs);font-weight:700;
+  color:var(--warn-ink,#96601F)}
+/* La hora es obligatoria y por eso no se esconde ni se encoge hasta lo ilegible: es metadato, sí,
+   pero es el que separa una predicción de hoy de una de anteayer. Cabe en una línea porque el
+   crédito visible es «© AEMET», que es una de las dos fórmulas que admite su nota legal. */
+.park-weather .weather-foot{margin-top:5px;color:var(--muted);font-size:var(--fs-xs);line-height:1.4}
+.park-weather .weather-foot a{color:inherit}
+
 /* --- Estado de conexión y descarga del parque -------------------------------------------------
    La barra ya no lleva botón: la descarga es el icono .offline-btn de .park-nav. Y aquí solo se
    pinta lo ANÓMALO —sin conexión, con o sin parque guardado—, así que la barra pasa la mayor
@@ -1240,7 +1278,19 @@ p.achievement-progress-label{margin:8px 0 0}
      · grupos de hábitat  → nav 54 + resumen 388 + pestañas 55 + miga 0  + filtros 96  = 593 / 437
      · todas las especies → nav 54 + resumen 388 + pestañas 55 + miga 38 + filtros 241 = 776 / 620
    El plegado quita 156 px de la cabecera del parque (388 → 232), los mismos en los dos niveles
-   porque lo que se pliega vive todo dentro de .park-summary. No se comparan con los 600 de la
+   porque lo que se pliega vive todo dentro de .park-summary.
+
+   REMEDIDO otra vez el 2026-09-09: el widget del tiempo (AEMET) entra DENTRO del bloque plegable y
+   la cabecera desplegada pasa de 388 a 518 px en el caso normal —el widget mide 120, o 144 con los
+   dos avisos y 187 cuando además avisa de que la predicción está guardada—. Plegada sigue en 232,
+   así que el plegado pasa a quitar 286 px. Las dos cifras de arriba, con el tiempo puesto:
+     · grupos de hábitat  → nav 54 + resumen 518 + pestañas 55 + miga 0  + filtros 96  = 723 / 437
+     · todas las especies → nav 54 + resumen 518 + pestañas 55 + miga 38 + filtros 241 = 906 / 620
+   Desplegada, en la lista de grupos ya no asoma ninguna tarjeta sin deslizar (antes asomaba una sin
+   caber entera). Se acepta porque es EXACTAMENTE lo que esta sección resuelve: aquí la cabecera no
+   es fija, se aparta al deslizar, y quien prefiera la lista pliega una vez —el estado es global— y
+   recupera los 286. Un espacio sin código INE de AEMET no pinta el widget y se queda en 388.
+   No se comparan con los 600 de la
    medición vieja: aquélla no dejó escrito en qué nivel del catálogo estaba, y sus dos cifras
    (miga 31, filtros 90) no salen de ninguno de los dos de hoy. Lo que sí se puede comparar es lo
    que se ve SIN deslizar nada, en la lista de grupos: desplegada asoma una tarjeta y no cabe

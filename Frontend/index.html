@@ -203,6 +203,22 @@
                                  líneas y estira toda la fila. Los lectores de pantalla sí lo leen entero. -->
                             <div><strong id="poiCount">0</strong><span>puntos<span class="sr-only"> de interés</span></span></div>
                         </div>
+                        <!-- El tiempo del espacio (AEMET). Lo pinta Js/render/tiempo.js y el dato lo
+                             trae Js/tiempo.js; nace `hidden` y solo se enciende cuando HAY dato, así
+                             que sin backend, sin conexión o sin municipio resuelto la cabecera queda
+                             igual que antes de que esto existiera: ni hueco ni error permanente.
+
+                             VA EN LA PARTE PLEGABLE, y esa es la decisión. El criterio del plegado
+                             (app.js · initParkFold) es «lo que se lee UNA vez al entrar se pliega; lo
+                             que hay que tener siempre delante mientras se recorre la lista, no», y el
+                             tiempo es de lo primero: se consulta ANTES de la excursión, para decidir
+                             si salir, y no se vuelve a mirar en las dos horas siguientes. Fuera del
+                             plegado estaría además en mala compañía —el progreso y la barra de
+                             presencia son «qué llevas hecho» y «lo que marcas ahora cuenta o no»,
+                             que es otra pregunta— y le sumaría alto fijo a una cabecera que se acaba
+                             de reducir de 375 px justamente para que respire el catálogo.
+                             Consecuencia buena: la cabecera PLEGADA sigue midiendo lo mismo. -->
+                        <div class="park-weather" id="parkWeather" hidden></div>
                     </div>
                     <!-- Presencia verificada: dice si lo que marcas está contando para los logros.
                          Sin esta barra, el usuario no tendría forma de saber por qué su avistamiento
