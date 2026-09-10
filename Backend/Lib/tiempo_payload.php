@@ -13,16 +13,24 @@
 //      de datos caducada responde **HTTP 200** con `{"descripcion":"datos expirados","estado":404}`
 //      en el cuerpo, y sin api_key AEMET contesta **HTTP 200 con el cuerpo VACÍO**. Quien mire solo
 //      el código HTTP se cree que tiene la predicción y lo que tiene es un `null`.
-//   2. LA SEGUNDA RESPUESTA NO ES UTF-8. AEMET la sirve en ISO-8859-15; si se pasa tal cual a
-//      json_decode, los acentos y los nombres de municipio salen rotos y no lo avisa nadie. Aquí se
-//      convierte ANTES de decodificar, y se hace COMPROBANDO la codificación en vez de convertir a
-//      ciegas: el día que AEMET emita UTF-8, convertir «por si acaso» rompería lo que hoy funciona.
-//   3. EL CUPO. La predicción municipal se emite unas pocas veces al día y el límite es de ~50
-//      peticiones por minuto para toda la clave: pegarle a AEMET en cada visita a un espacio es
-//      tirar el cupo y meter la latencia de AEMET en el arranque de la app. Se cachea en disco por
-//      código INE, y ante un fallo o un 429 se sirve lo cacheado MARCADO COMO VIEJO en vez de
-//      devolver un error — el criterio del repo: una fuente que no se ha podido consultar no dice
-//      que no.
+//   2. LAS RESPUESTAS NO TIENEN UNA CODIFICACIÓN: LA MEZCLAN. Lo que se da por sabido es «AEMET
+//      sirve ISO-8859-15», y es verdad a medias: el maestro de municipios y el JSON de control de
+//      un 429 son Latin-9, pero en la predicción municipal el nombre del municipio llega ya en
+//      UTF-8 y el pie legal del bloque `origen` no, aunque la cabecera declare ISO-8859-15 para
+//      todo el cuerpo. Tratar el cuerpo entero como una sola cosa
+//      —en cualquiera de los dos sentidos— rompe la otra mitad sin avisar: pasó con la primera
+//      predicción real, que dejó «Ãguilas» en la caché (2026-09-10). Se repara secuencia a
+//      secuencia en `aemetUtf8()`, cuya cabecera explica por qué eso no es ambiguo en castellano.
+//   3. EL CUPO, que es MÁS ESTRECHO de lo que se suele decir. La cifra que circula es «~50
+//      peticiones por minuto» y esta misma cabecera la repetía; medido el 2026-09-10 con la clave
+//      del proyecto, AEMET respondió **HTTP 429 a las ~18 peticiones en un minuto** (dos pases del
+//      maestro de municipios más siete predicciones de dos peticiones cada una). Y el cupo es de la
+//      CLAVE, no de este servidor: lo gastan igual el endpoint, Tools/resuelve-municipio-aemet.js y
+//      cualquier prueba a mano. Por eso la predicción se cachea en disco por código INE y nunca se
+//      pide en cada visita; con dieciséis espacios sobre trece municipios, la caché de una hora
+//      deja el gasto muy por debajo del límite en uso normal. Ante un 429 o un fallo se sirve lo
+//      cacheado MARCADO COMO VIEJO en vez de devolver un error — el criterio del repo: una fuente
+//      que no se ha podido consultar no dice que no.
 //
 // La forma que sale de aquí es PROPIA, no el JSON de AEMET en crudo. Si mañana se añade la
 // observación de estación o se cambia de proveedor, el frontend no se entera.
@@ -113,19 +121,50 @@ function aemetGet($url, $apiKey = null) {
 }
 
 /**
- * Decodifica un cuerpo de AEMET a array de PHP, convirtiendo la codificación si hace falta.
- *
- * Ver la trampa nº 2 de la cabecera: la respuesta de datos llega en ISO-8859-15. Se COMPRUEBA en
- * vez de convertir a ciegas, porque una conversión incondicional rompería el día que AEMET emita
- * UTF-8 (y el JSON de control ya lo es hoy).
+ * Decodifica un cuerpo de AEMET a array de PHP. La codificación se arregla en `aemetUtf8()`.
  */
 function aemetDecode($cuerpo) {
     if ($cuerpo === null || trim($cuerpo) === "") return null;   // sin api_key AEMET devuelve 200 y cuerpo vacío
-    if (!mb_check_encoding($cuerpo, "UTF-8")) {
-        $cuerpo = mb_convert_encoding($cuerpo, "UTF-8", "ISO-8859-15");
-    }
-    $datos = json_decode($cuerpo, true);
+    $datos = json_decode(aemetUtf8($cuerpo), true);
     return is_array($datos) ? $datos : null;
+}
+
+// Una secuencia UTF-8 VÁLIDA (grupo 1) o un byte alto SUELTO (grupo 2). Es la tabla de rangos del
+// RFC 3629: excluye los inicios C0/C1 y las secuencias sobrelargas o de sustitutos. En modo byte (sin
+// el modificador `u`) a propósito: con `u`, PCRE rechazaría la entrada entera por no ser UTF-8, que es
+// justo el caso que hay que tratar.
+const AEMET_SECUENCIA = '/([\xC2-\xDF][\x80-\xBF]|\xE0[\xA0-\xBF][\x80-\xBF]|[\xE1-\xEC\xEE\xEF][\x80-\xBF]{2}'
+    . '|\xED[\x80-\x9F][\x80-\xBF]|\xF0[\x90-\xBF][\x80-\xBF]{2}|[\xF1-\xF3][\x80-\xBF]{3}'
+    . '|\xF4[\x80-\x8F][\x80-\xBF]{2})|([\x80-\xFF])/';
+
+/**
+ * Un cuerpo de AEMET → UTF-8, SECUENCIA A SECUENCIA y no de golpe.
+ *
+ * ESTO ERA UN FALLO EN VERDE, y lo destapó la primera predicción real (2026-09-10). La versión
+ * anterior miraba el cuerpo ENTERO —¿es UTF-8 válido?— y si no lo era lo convertía entero desde
+ * ISO-8859-15. Pero AEMET no emite ni lo uno ni lo otro: una misma respuesta MEZCLA las dos
+ * codificaciones. Medido sobre la predicción de Águilas (13.752 bytes): el campo `nombre` llega en
+ * UTF-8 («Á» = C3 81) y hay exactamente CINCO bytes Latin-9 sueltos, los cinco en el bloque `origen`
+ * —el pie legal: «Meteorología», «España», «©», «información», «reproducción»—. Esos cinco
+ * bastaban para que el cuerpo entero se diera por Latin-9: la
+ * conversión volvía a codificar la «Á» buena y la caché guardó «Ãguilas» y «Fuente Ãlamo de
+ * Murcia». No fallaba nada: json_decode lo aceptaba, el widget lo habría pintado.
+ * Y LA CABECERA NO SIRVE PARA DECIDIRLO: las dos respuestas declaran `charset=ISO-8859-15` para el
+ * cuerpo entero, y es falso para el nombre. Hacerle caso rompería lo mismo por el otro lado.
+ * Las otras respuestas tampoco se ponen de acuerdo: el maestro de municipios es Latin-9 de
+ * principio a fin, y el JSON de control de un 429 también («l\xEDmites»).
+ *
+ * Así que se deja pasar tal cual cada secuencia UTF-8 válida y se convierte desde Latin-9 SOLO el
+ * byte suelto. Para texto en castellano no hay ambigüedad posible: «Á» en Latin-9 es 0xC1, que
+ * nunca puede empezar una secuencia UTF-8; y el resto de vocales acentuadas y la «ñ» solo se
+ * leerían como UTF-8 si fueran seguidas de uno o dos bytes del rango 0x80-0xBF, que en Latin-9 son
+ * signos sueltos (¡ ¿ º ª « » °) que no aparecen pegados a una letra.
+ */
+function aemetUtf8($texto) {
+    if (mb_check_encoding($texto, "UTF-8")) return $texto;   // el caso bueno, sin coste
+    return preg_replace_callback(AEMET_SECUENCIA, function ($m) {
+        return (isset($m[2]) && $m[2] !== "") ? mb_convert_encoding($m[2], "UTF-8", "ISO-8859-15") : $m[1];
+    }, $texto);
 }
 
 /**
