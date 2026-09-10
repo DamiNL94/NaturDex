@@ -1,0 +1,123 @@
+{
+  "criterio": "visible !== false; N1 respaldo documental, N2 figura legal (texto) o Atlas, N3 resto",
+  "porParque": {
+    "barrancos-de-gebas": {
+      "visibles": 85,
+      "n1": 69,
+      "n2": 12,
+      "n3": 4,
+      "atlasSinN1": []
+    },
+    "cabezo-gordo": {
+      "visibles": 53,
+      "n1": 48,
+      "n2": 4,
+      "n3": 1,
+      "atlasSinN1": []
+    },
+    "cabo-cope-puntas-calnegre": {
+      "visibles": 81,
+      "n1": 55,
+      "n2": 8,
+      "n3": 18,
+      "atlasSinN1": []
+    },
+    "calblanque-monte-cenizas-pena-aguila": {
+      "visibles": 182,
+      "n1": 135,
+      "n2": 26,
+      "n3": 21,
+      "atlasSinN1": []
+    },
+    "carrascoy-y-el-valle": {
+      "visibles": 218,
+      "n1": 44,
+      "n2": 41,
+      "n3": 133,
+      "atlasSinN1": []
+    },
+    "cuatro-calas": {
+      "visibles": 93,
+      "n1": 18,
+      "n2": 14,
+      "n3": 61,
+      "atlasSinN1": []
+    },
+    "espacios-abiertos-e-islas-del-mar-menor": {
+      "visibles": 215,
+      "n1": 194,
+      "n2": 4,
+      "n3": 17,
+      "atlasSinN1": []
+    },
+    "humedal-del-ajauque-y-rambla-salada": {
+      "visibles": 175,
+      "n1": 154,
+      "n2": 11,
+      "n3": 10,
+      "atlasSinN1": []
+    },
+    "monte-arabi": {
+      "visibles": 63,
+      "n1": 58,
+      "n2": 1,
+      "n3": 4,
+      "atlasSinN1": []
+    },
+    "salinas-arenales-san-pedro-pinatar": {
+      "visibles": 248,
+      "n1": 231,
+      "n2": 7,
+      "n3": 10,
+      "atlasSinN1": []
+    },
+    "sierra-de-el-carche": {
+      "visibles": 189,
+      "n1": 174,
+      "n2": 1,
+      "n3": 14,
+      "atlasSinN1": []
+    },
+    "sierra-de-la-pila": {
+      "visibles": 160,
+      "n1": 98,
+      "n2": 9,
+      "n3": 53,
+      "atlasSinN1": []
+    },
+    "sierra-de-las-moreras": {
+      "visibles": 61,
+      "n1": 49,
+      "n2": 6,
+      "n3": 6,
+      "atlasSinN1": []
+    },
+    "sierra-de-salinas": {
+      "visibles": 91,
+      "n1": 77,
+      "n2": 1,
+      "n3": 13,
+      "atlasSinN1": []
+    },
+    "sierra-espuna": {
+      "visibles": 187,
+      "n1": 67,
+      "n2": 52,
+      "n3": 68,
+      "atlasSinN1": []
+    },
+    "sotos-y-bosques-de-ribera-de-canaverosa": {
+      "visibles": 209,
+      "n1": 192,
+      "n2": 11,
+      "n3": 6,
+      "atlasSinN1": []
+    }
+  },
+  "total": {
+    "visibles": 2310,
+    "n1": 1663,
+    "n2": 208,
+    "n3": 439
+  }
+}

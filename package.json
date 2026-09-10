@@ -59,6 +59,7 @@
     "especies:habitats": "node Tools/catalogo-nacional/auditoria-especie-habitat.js",
     "especies:habitats:aplica": "node Tools/catalogo-nacional/auditoria-especie-habitat.js --write",
     "especies:niveles": "node Tools/catalogo-nacional/mide-niveles-puerta.js",
+    "especies:biodiversidad": "node Tools/catalogo-nacional/build-biodiversidad-stats.js",
     "especies:legal": "node Tools/catalogo-nacional/coteja-estado-legal.js",
     "images:species": "node Tools/catalogo-nacional/wikimedia-images.js --canonicalize --missing --write",
     "images:habitats": "node Tools/catalogo-nacional/habitat-images.js --write --sql Database/habitats-imagenes.sql",
