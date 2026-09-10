@@ -2,8 +2,8 @@
   "slug": "sierra-de-la-pila",
   "name": "Sierra de la Pila",
   "apiSlug": "sierra-de-la-pila",
-  "version": 23,
-  "updatedAt": "2026-08-27",
+  "version": 24,
+  "updatedAt": "2026-09-10",
   "data": "Data/parks/murcia/sierra-de-la-pila/park.json",
   "geo": {
     "parque": "Data/parks/murcia/sierra-de-la-pila/geo/parque.geojson",

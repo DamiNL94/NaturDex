@@ -85,6 +85,19 @@ AEMET_API_KEY=eyJhbGciOi...
 > el Service Worker: una clave ahí es una clave publicada. Vive solo en el entorno del contenedor
 > web, y el navegador únicamente habla con `Backend/Api/tiempo.php`.
 
+> **LA CLAVE CADUCA A LOS 100 DÍAS, y eso es un fallo en verde.** Es un JWT con fecha de caducidad
+> dentro (campo `exp`); la del proyecto se emitió el 2026-09-10 y **caduca el 2026-12-19**. Ese día
+> AEMET empieza a responder 401, el servidor sirve lo que tenga en caché marcado como viejo durante
+> doce horas y después el widget **desaparece de todos los espacios sin un solo error visible**: es
+> exactamente la degradación de diseño, así que nada avisa. El único rastro es una línea en el log de
+> PHP: `NaturDex/tiempo: AEMET no disponible … (HTTP 401 …)`. Pide la clave nueva **antes** de esa
+> fecha en el mismo formulario y cambia `AEMET_API_KEY`; los códigos INE de los espacios no hay que
+> volver a resolverlos. Para ver cuándo caduca una clave:
+>
+> ```bash
+> node -e "console.log(new Date(JSON.parse(Buffer.from(process.argv[1].split('.')[1],'base64url')).exp*1000))" "$AEMET_API_KEY"
+> ```
+
 **2. El código INE de cada espacio.** AEMET identifica los municipios por su código INE de 5 dígitos
 y el catálogo guarda nombres, así que hay que resolverlos una vez contra el maestro del propio AEMET:
 
