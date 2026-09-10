@@ -4,8 +4,8 @@
 // llegar hasta él (AEMET OpenData).
 // ------------------------------------------------------------------------------------------------
 // EL PROBLEMA QUE RESUELVE: la pregunta que se hace alguien antes de coger el coche es «¿salgo hoy
-// a este espacio?», y la app no sabía contestarla. Contestarla con AEMET tiene tres trampas que no
-// se ven hasta que muerden, y las tres se tapan aquí para que el endpoint quede en diez líneas:
+// a este espacio?», y la app no sabía contestarla. Contestarla con AEMET tiene cuatro trampas que no
+// se ven hasta que muerden, y las cuatro se tapan aquí para que el endpoint quede en diez líneas:
 //
 //   1. EL FLUJO SON DOS PETICIONES. La primera devuelve un JSON de CONTROL
 //      ({descripcion, estado, datos, metadatos}) y el dato de verdad está en la URL del campo
@@ -21,7 +21,11 @@
 //      —en cualquiera de los dos sentidos— rompe la otra mitad sin avisar: pasó con la primera
 //      predicción real, que dejó «Ãguilas» en la caché (2026-09-10). Se repara secuencia a
 //      secuencia en `aemetUtf8()`, cuya cabecera explica por qué eso no es ambiguo en castellano.
-//   3. EL CUPO, que es MÁS ESTRECHO de lo que se suele decir. La cifra que circula es «~50
+//   3. EN EL DÍA DE HOY, «EL DÍA ENTERO» MIENTE. Pasada la mañana, AEMET deja a CERO —no en blanco—
+//      el tramo 00-24 de la probabilidad de lluvia, y cogerlo daba «Lluvia 0 %» con un 95 % previsto
+//      para la tarde (Águilas, 2026-09-10). La lluvia y la racha salen del máximo de sus tramos, con
+//      el tramo del que sale: ver `aemetMaximo()`.
+//   4. EL CUPO, que es MÁS ESTRECHO de lo que se suele decir. La cifra que circula es «~50
 //      peticiones por minuto» y esta misma cabecera la repetía; medido el 2026-09-10 con la clave
 //      del proyecto, AEMET respondió **HTTP 429 a las ~18 peticiones en un minuto** (dos pases del
 //      maestro de municipios más siete predicciones de dos peticiones cada una). Y el cupo es de la
@@ -233,14 +237,51 @@ function aemetEntero($valor) {
 }
 
 /**
+ * El valor MÁXIMO de un array de tramos de AEMET, con el tramo del que sale.
+ * Devuelve ["valor" => int|null, "periodo" => string|null].
+ *
+ * ESTO ERA EL PEOR FALLO EN VERDE DEL MÓDULO, porque enseñaba lo contrario de lo que hay. Para la
+ * probabilidad de lluvia se cogía el tramo del día entero («00-24») de `aemetTramo()`, que se salta
+ * los tramos VACÍOS. Pero en el día de HOY, en cuanto la mañana ha pasado, AEMET no vacía los tramos
+ * que ya no predice: los deja a CERO. La predicción real de Águilas elaborada el 2026-09-10 a las
+ * 13:23 traía `00-24: 0`, `12-24: 95`, `12-18: 90`, y el widget decía «Lluvia 0 %» con un 95 %
+ * previsto para la tarde. Con el cielo no pasa porque AEMET lo deja en blanco (`""`), y por eso la
+ * trampa solo mordía la mitad de los campos: es el cotejo asimétrico del CLAUDE.md raíz.
+ *
+ * Así que para los dos campos con los que se DECIDE o se AVISA —la lluvia y la racha— se toma el
+ * máximo de todos los tramos, que ignora solo los ceros de los tramos pasados, y se dice de qué
+ * tramo sale: «Lluvia 95 % de 12 a 24 h» es la predicción de AEMET tal cual, con su franja, no una
+ * cifra nuestra. En un empate se queda el tramo más estrecho, que es el que más dice. Un 0 que es
+ * el único valor del día sigue siendo 0; ningún valor, null.
+ */
+function aemetMaximo($lista) {
+    $mejor = ["valor" => null, "periodo" => null];
+    if (!is_array($lista)) return $mejor;
+    $ancho = function ($p) {
+        return preg_match('/^(\d{2})-(\d{2})$/', (string) $p, $m) ? (int) $m[2] - (int) $m[1] : 99;
+    };
+    foreach ($lista as $tramo) {
+        $valor = aemetEntero(is_array($tramo) ? ($tramo["value"] ?? null) : null);
+        if ($valor === null) continue;
+        $periodo = $tramo["periodo"] ?? null;
+        if ($mejor["valor"] === null || $valor > $mejor["valor"]
+            || ($valor === $mejor["valor"] && $ancho($periodo) < $ancho($mejor["periodo"]))) {
+            $mejor = ["valor" => $valor, "periodo" => $periodo];
+        }
+    }
+    return $mejor;
+}
+
+/**
  * Un día de la predicción diaria de AEMET → la forma de NaturDex.
  * Lo que la fuente no trae se queda SIN campo con valor: `null`, nunca un «no disponible» inventado.
+ * La lluvia y la racha salen de `aemetMaximo()`, no de `aemetTramo()`: ver su cabecera.
  */
 function normalizaDia($dia) {
     $cielo = aemetTramo($dia["estadoCielo"] ?? null);
     $viento = aemetTramo($dia["viento"] ?? null);
-    $racha = aemetTramo($dia["rachaMax"] ?? null);
-    $lluvia = aemetTramo($dia["probPrecipitacion"] ?? null);
+    $racha = aemetMaximo($dia["rachaMax"] ?? null);
+    $lluvia = aemetMaximo($dia["probPrecipitacion"] ?? null);
 
     return [
         // `fecha` llega como "2026-09-09T00:00:00"; el día es lo único que importa aquí.
@@ -252,11 +293,14 @@ function normalizaDia($dia) {
             "texto" => ($cielo["descripcion"] ?? "") !== "" ? $cielo["descripcion"] : null,
             "codigo" => ($cielo["value"] ?? "") !== "" ? (string) $cielo["value"] : null,
         ],
-        "probPrecipitacion" => aemetEntero($lluvia["value"] ?? null),
+        // El máximo de los tramos del día y el tramo del que sale: ver aemetMaximo(). Sin la franja,
+        // un 95 % de tarde se leería como el del día entero.
+        "probPrecipitacion" => $lluvia["valor"],
+        "probPrecipitacionPeriodo" => $lluvia["periodo"],
         "viento" => [
             "direccion" => ($viento["direccion"] ?? "") !== "" ? $viento["direccion"] : null,
             "velocidadKmh" => aemetEntero($viento["velocidad"] ?? null),
-            "rachaMaxKmh" => aemetEntero($racha["value"] ?? null),
+            "rachaMaxKmh" => $racha["valor"],
         ],
         // El índice UV solo viene en los primeros días de la predicción: su ausencia es normal.
         "uvMax" => aemetEntero($dia["uvMax"] ?? null),

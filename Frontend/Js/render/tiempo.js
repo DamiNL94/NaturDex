@@ -69,6 +69,19 @@ function temperaturas(dia) {
 }
 
 /**
+ * « de 12 a 24 h» para el tramo de AEMET del que sale la lluvia, o nada si es el día entero.
+ *
+ * La probabilidad que llega es el MÁXIMO de los tramos del día (Backend/Lib/tiempo_payload.php ·
+ * aemetMaximo), y sin su franja se leería como la del día entero, que es justo lo que no es: el 95 %
+ * de una tarde de tormenta no dice nada de la mañana, y quien sale temprano necesita saberlo.
+ */
+function tramoHorario(periodo) {
+  const m = /^(\d{2})-(\d{2})$/.exec(periodo || '');
+  if (!m || (m[1] === '00' && m[2] === '24')) return '';
+  return ' de ' + Number(m[1]) + ' a ' + Number(m[2]) + ' h';
+}
+
+/**
  * Las piezas de un día, ya separadas (el punto medio lo pone el CSS). El cielo va SIEMPRE con su
  * texto. `conLluvia` es false para MAÑANA: la columna del catálogo mide unos 295 px y cada pieza de
  * más es una línea de más en la cabecera. Hoy es el día con el que se decide y lleva la
@@ -80,7 +93,9 @@ function lineaDia(dia, conLluvia) {
   if (dia.cielo && dia.cielo.texto) piezas.push(html`<span>${dia.cielo.texto}</span>`);
   const temp = temperaturas(dia);
   if (temp) piezas.push(temp);
-  if (conLluvia && dia.probPrecipitacion != null) piezas.push(html`<span>Lluvia ${String(dia.probPrecipitacion)} %</span>`);
+  if (conLluvia && dia.probPrecipitacion != null) {
+    piezas.push(html`<span>Lluvia ${String(dia.probPrecipitacion)} %${tramoHorario(dia.probPrecipitacionPeriodo)}</span>`);
+  }
   return piezas;
 }
 

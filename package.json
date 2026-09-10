@@ -23,7 +23,7 @@
     "hooks:install": "git config core.hooksPath .githooks",
     "red:check": "node Tools/check-egress.js",
     "tiempo:municipios": "node Tools/resuelve-municipio-aemet.js",
-    "test": "php Tools/test-presence-rules.php && php Tools/test-dwc-rules.php",
+    "test": "php Tools/test-presence-rules.php && php Tools/test-dwc-rules.php && php Tools/test-tiempo-rules.php",
     "typecheck": "cd AdminPanel && npx tsc --noEmit",
     "tiles:build": "node Tools/build-park-tiles.js",
     "trails:build": "node Tools/build-park-trails.js",

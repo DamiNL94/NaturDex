@@ -38,13 +38,14 @@ preflight, sesión, `respond()`); si escribes uno nuevo, empieza por ahí.
 | `geo.php` | 199 | Geometría oficial del lado servidor: punto-en-polígono contra el límite |
 | `dwc.php` | 250 | **El vocabulario Darwin Core**: columna ↔ término ↔ URI, identificadores y reglas de sensibilidad. Puro (sin BD), para poder probarlo con `npm test` |
 | `occurrences.php` | 300 | Escritura y lectura de `user_occurrences`. Lo llaman `progress.php`, `presence.php` y `account-progress.php`; lo lee `Tools/export-dwc.php` |
-| `tiempo_payload.php` | 300 | **El tiempo, y sus tres trampas.** (1) El flujo de AEMET son DOS peticiones y el `estado` del JSON de control **no es el código HTTP**: una URL de datos caducada responde HTTP 200 con `estado: 404` dentro, y sin `api_key` AEMET devuelve **200 con el cuerpo vacío**. (2) **Una misma respuesta MEZCLA UTF-8 y Latin-9** —en la predicción, el nombre del municipio llega en UTF-8 y otro texto del cuerpo no—, así que tratar el cuerpo entero como una sola codificación rompe la otra mitad en silencio: la primera predicción real dejó «Ãguilas» en la caché (2026-09-10). Se repara secuencia a secuencia en `aemetUtf8()`. (3) Se cachea en disco por código INE (1 h fresca, 12 h de reserva) y ante un fallo o un 429 se sirve lo guardado **marcado como viejo**, nunca un error. Emite forma propia, no el JSON de AEMET, y lleva la atribución literal que exige su nota legal |
+| `tiempo_payload.php` | 300 | **El tiempo, y sus cuatro trampas.** (1) El flujo de AEMET son DOS peticiones y el `estado` del JSON de control **no es el código HTTP**: una URL de datos caducada responde HTTP 200 con `estado: 404` dentro, y sin `api_key` AEMET devuelve **200 con el cuerpo vacío**. (2) **Una misma respuesta MEZCLA UTF-8 y Latin-9** —en la predicción, el nombre del municipio llega en UTF-8 y otro texto del cuerpo no—, así que tratar el cuerpo entero como una sola codificación rompe la otra mitad en silencio: la primera predicción real dejó «Ãguilas» en la caché (2026-09-10). Se repara secuencia a secuencia en `aemetUtf8()`. (3) **En el día de HOY, pasada la mañana, AEMET deja a 0 —no vacío— el tramo 00-24 de la probabilidad de lluvia**: cogerlo daba «Lluvia 0 %» con un 95 % previsto para la tarde. La lluvia y la racha salen del MÁXIMO de sus tramos, con el tramo del que sale (`aemetMaximo()`). (4) Se cachea en disco por código INE (1 h fresca, 12 h de reserva) y ante un fallo o un 429 se sirve lo guardado **marcado como viejo**, nunca un error. Emite forma propia, no el JSON de AEMET, y lleva la atribución literal que exige su nota legal |
 
 ## `Config/`
 
 `db.php` — conexión MySQL desde variables de entorno (Docker/producción), con caída a XAMPP local.
-Su `naturdex_env()` es también la puerta de `AEMET_API_KEY`: **ninguna credencial se lee de otro
-sitio**.
+`env.php` — `naturdex_env()`, **la única lectura de credenciales del entorno** (las de la BD y
+`AEMET_API_KEY`). Se separó de `db.php` porque incluir éste para leer una variable abre la conexión
+a MySQL de propina.
 
 ## `Data/` — estado de runtime (fuera del webroot, no versionado)
 
@@ -62,9 +63,9 @@ sitio**.
   falla, el progreso del usuario ya está a salvo. Ver [`Docs/DARWIN-CORE.md`](../Docs/DARWIN-CORE.md).
 - `murcia_status` está atado a Murcia y toca `Lib/park_payload.php` y `Api/admin.php` (3 sentencias).
   Deuda nº 1: ver [`Docs/DEUDA-TECNICA.md`](../Docs/DEUDA-TECNICA.md).
-- **`tiempo.php` llama a `apiBoot()` y NO usa la conexión.** Se hace igual porque es la convención de
-  la casa y porque garantiza las mismas cabeceras, CORS y corte del preflight que el resto. La
-  consecuencia, escrita para que no sorprenda: con MySQL caído este endpoint responde 500 y el widget
-  del tiempo no se pinta — que es su degradación de diseño, no una avería nueva.
+- **`tiempo.php` es el único endpoint que arranca con `apiBoot(["db" => false])`.** No consulta
+  MySQL, y con la conexión puesta moría con la base (probado: «Database connection error» con MySQL
+  parado). Sigue pasando por `apiBoot()` —cabeceras, CORS, preflight—: lo que se apaga es la
+  conexión, no el prólogo común.
 
-Pruebas sin BD: `npm test` → `Tools/test-presence-rules.php` + `Tools/test-dwc-rules.php`.
+Pruebas sin BD: `npm test` → `Tools/test-presence-rules.php` + `Tools/test-dwc-rules.php` + `Tools/test-tiempo-rules.php` (las dos trampas de AEMET que ya fallaron en verde: la codificación mezclada y el 0 del tramo 00-24; `validate` no puede verlas, porque es dato en vivo que no se escribe en ningún `park.json`).
