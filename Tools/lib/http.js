@@ -139,7 +139,7 @@ function unaPeticion(host, pathQuery, headers, timeoutMs) {
 /**
  * GET que devuelve los BYTES sin decodificar.
  *
- * Existe por AEMET OpenData, que sirve sus ficheros de datos en ISO-8859-15: decodificarlos como
+ * Existe por AEMET OpenData, que sirve su maestro de municipios en ISO-8859-15: decodificarlo como
  * utf8 —lo que hace getText, y lo que hacen bien todas las demás fuentes— no falla, deja los
  * acentos rotos («Águilas» → «�guilas») y no lo avisa nadie. Con los bytes en la mano, quien
  * llama decodifica con el juego que declare la fuente:

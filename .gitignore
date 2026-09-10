@@ -12,6 +12,10 @@ Backend/Data/progress.json
 # Caché de servidor de la predicción de AEMET (Backend/Lib/tiempo_payload.php). Es dato perecedero
 # de una fuente externa: se regenera solo y no tiene por qué viajar en el repositorio.
 Backend/Data/tiempo/
+# El maestro de municipios de AEMET (3 MB) que descarga Tools/resuelve-municipio-aemet.js. Es una
+# DESCARGA reproducible con la clave, no un registro: lo que se versiona es su resultado, el
+# park.weather de cada espacio con su fuente y fecha.
+Tools/catalogo-nacional/out/aemet-municipios.json
 
 # logs
 *.log

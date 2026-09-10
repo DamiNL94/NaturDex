@@ -17,7 +17,13 @@
       -1.54939
     ],
     "summary": "El gran bosque de la Región: pinar repoblado hace más de un siglo, barrancos, umbrías frescas y los pozos de la nieve en lo alto del Morrón.",
-    "boundaryNote": "Límite oficial servido en geo/parque.geojson, descargado del geoportal del IMIDA/CARM (servicio PROYECTOS/OISMA, capa de Parque Regional, registros con Caracter «Firme»), identificador interno ENP000001. Código ENP oficial ES620013, superficie oficial 17.693,2 ha según el Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Geometría en WGS84, sin generalizar (6329 vértices, superficie resultante 17.729,9 ha, desviación del 0,21 %). Sustituye a la delimitación de la capa ENP nacional del MITECO, que es un producto generalizado. Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM. Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico» (código y superficie oficiales) e IMIDA/CARM (geometría)."
+    "boundaryNote": "Límite oficial servido en geo/parque.geojson, descargado del geoportal del IMIDA/CARM (servicio PROYECTOS/OISMA, capa de Parque Regional, registros con Caracter «Firme»), identificador interno ENP000001. Código ENP oficial ES620013, superficie oficial 17.693,2 ha según el Banco de Datos de la Naturaleza (MITECO, diciembre de 2025). Geometría en WGS84, sin generalizar (6329 vértices, superficie resultante 17.729,9 ha, desviación del 0,21 %). Sustituye a la delimitación de la capa ENP nacional del MITECO, que es un producto generalizado. Municipios obtenidos por intersección geométrica contra los límites municipales del CNIG servidos por el IMIDA/CARM. Fuente: «© Ministerio para la Transición Ecológica y el Reto Demográfico» (código y superficie oficiales) e IMIDA/CARM (geometría).",
+    "weather": {
+      "municipio": "Aledo",
+      "ine": "30006",
+      "distanciaKm": 8.8,
+      "fuente": "AEMET OpenData · /api/maestro/municipios «Aledo» (resuelto el 2026-09-10)"
+    }
   },
   "habitats": [
     {
