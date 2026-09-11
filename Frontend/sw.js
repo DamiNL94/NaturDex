@@ -47,7 +47,15 @@
 //      tiene que ser la de Js/tiempo.js en localStorage, que va con su hora y sabe cuándo caduca;
 //      dejando que el SW guarde además la respuesta se tendrían DOS copias con dos edades y solo
 //      una de ellas sabría la suya. También cambian index.html, Css/styles.css y Css/ranger.css.
-var VERSION = 'v68';
+// v69: entra la pestaña «Biodiversidad» — analítica agregada (hábitats, especies, rareza legal y,
+//      si existe, el reparto de evidencia documental) por espacio, más la comparativa entre
+//      espacios en el popup del mapa de España. Un módulo nuevo que precachear —
+//      Js/render/biodiversidad.js— y un dato nuevo, Data/parks-biodiversidad.json (lo genera `npm
+//      run especies:biodiversidad`, no se edita a mano): sin los dos, la pestaña nueva resuelve a
+//      404 sin cobertura y el selector de parque se queda sin las cifras del popup. También cambian
+//      index.html, Css/styles.css, Js/app.js, Js/dom.js, Js/data.js, Js/render.js,
+//      Js/render/progreso.js y Js/auth.js.
+var VERSION = 'v69';
 var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 
 // Armazón mínimo que se intenta precachear en la instalación (best-effort).
@@ -91,7 +99,7 @@ var SHELL_ASSETS = [
   'Js/render.js',
   'Js/render/fallbacks.js', 'Js/render/catalogo.js', 'Js/render/resumen.js',
   'Js/render/detalle.js', 'Js/render/invasoras.js', 'Js/render/progreso.js',
-  'Js/render/tiempo.js',
+  'Js/render/tiempo.js', 'Js/render/biodiversidad.js',
 
   'Js/map.js',
   'Js/map/core.js', 'Js/map/iconos.js', 'Js/map/tramas.js',
@@ -102,7 +110,8 @@ var SHELL_ASSETS = [
   'Js/achievements/sincronizacion.js', 'Js/achievements/eventos.js', 'Js/achievements/arranque.js',
 
   // Datos del armazón
-  'Data/glosario.json', 'Data/fitosociologia.json', 'Data/invasoras.json', 'Data/achievements.json'
+  'Data/glosario.json', 'Data/fitosociologia.json', 'Data/invasoras.json', 'Data/achievements.json',
+  'Data/parks-biodiversidad.json'
 ];
 
 self.addEventListener('install', function (event) {

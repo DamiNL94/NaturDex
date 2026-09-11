@@ -327,17 +327,26 @@
     }
   }
 
-  function initSpainMap(reg) {
+  async function initSpainMap(reg) {
     if (spainMap) return;
     spainMap = L.map('spain-map', { zoomControl: true, scrollWheelZoom: true }).setView([40.0, -3.7], 5);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors', maxZoom: 19, className: 'tile-osm' }).addTo(spainMap);
+    // Cifras de biodiversidad (Tools/catalogo-nacional/build-biodiversidad-stats.js): la comparativa
+    // entre espacios que pide el selector, sin una pantalla nueva que mantener. Sin red ni caché el
+    // popup se queda como estaba, sin la línea de cifras — nunca rompe el mapa de España.
+    var biodiv = {};
+    try { biodiv = (await NaturDexOffline.fetchJsonCached('Data/parks-biodiversidad.json')).data.porParque || {}; }
+    catch (e) { /* sin estadísticas: el popup sigue funcionando sin ellas */ }
     availableParks(reg).forEach(function (item) {
       var c = item.park.center;
       if (!c) return;
       var marker = L.marker(c).addTo(spainMap);
       var basic = item.park.status === 'basic';
+      var stats = biodiv[item.park.slug];
+      var statsLine = (!basic && stats) ? '<p>🌿 ' + stats.especies.total + ' especies · ' + stats.habitats.total + ' hábitats</p>' : '';
       marker.bindPopup('<strong>' + item.park.name + '</strong><br><span class="popup-type">' + (item.park.category || '') + ' · ' + item.province + '</span>'
         + (basic ? '<p>Ficha base: límite oficial y Red Natura 2000. Catálogo de especies y hábitats en preparación.</p>' : '')
+        + statsLine
         + '<br><button type="button" class="popup-enter" data-slug="' + item.park.slug + '">Entrar al parque</button>');
       marker.on('click', function () { choosePark(item.park.slug); });
     });
@@ -507,7 +516,7 @@
     if (search) search.value = '';
     $('#parkSearchCount').hidden = true;
     buildParkDropdown(registry);
-    initSpainMap(registry);
+    await initSpainMap(registry);
     // Preselección: si solo hay un parque disponible, dejarlo elegido.
     var avail = availableParks(registry);
     if (avail.length === 1) choosePark(avail[0].park.slug);

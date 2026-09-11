@@ -36,6 +36,22 @@ export async function loadManifest(parkEntry) {
   return res.data;
 }
 
+// --- Biodiversidad agregada (comparativa entre espacios) ------------------------------------------
+// Estadísticas de Tools/catalogo-nacional/build-biodiversidad-stats.js. Fichero NACIONAL, no por
+// parque como el manifiesto: un único parks-biodiversidad.json con la entrada de todos los espacios.
+// A propósito NO pasa por species.php ni vive dentro de park.json —ver la cabecera de ese script—,
+// así que aquí no hay fusión con la API: se lee tal cual, cacheado para offline igual que
+// Data/achievements.json o Data/glosario.json. Nunca lanza: sin red y sin caché, la pestaña de
+// biodiversidad se queda sin datos en vez de romper la carga del parque.
+export async function loadBiodiversidad() {
+  try {
+    const res = await NaturDexOffline.fetchJsonCached('Data/parks-biodiversidad.json');
+    return (res.data && res.data.porParque) || {};
+  } catch (error) {
+    return {};
+  }
+}
+
 // Especies con `visible: false` (evidencia insuficiente: pocas ocurrencias GBIF y sin figura en
 // ningún catálogo/anexo oficial) no se listan ni cuentan en el catálogo público, aunque el dato
 // sigue documentado en el JSON/BD para no perder el trabajo de curación. Se retiran también de

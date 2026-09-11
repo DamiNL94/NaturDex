@@ -53,3 +53,14 @@ que viaja en el propio manifiesto para poder pintarla sin red. Presupuesto por e
 límite oficial y la visita solo se marca `verified` con presencia sostenida. No se guarda la traza del
 paseo, solo el agregado. Ver `Docs/VERIFICACION-Y-ANTITRAMPAS.md`.
 
+**Biodiversidad, agregada y aparte** (`Js/render/biodiversidad.js` +
+`Tools/catalogo-nacional/build-biodiversidad-stats.js`). Hábitats, riqueza de especies y rareza legal
+por espacio, comparados entre los dieciséis ya dados de alta. El dato vive en
+`Data/parks-biodiversidad.json`, **fuera** de cada `park.json`: `data.js::loadData()` sustituye
+`state.data` entero en cuanto hay backend accesible, así que un campo nuevo ahí desaparecería sin
+aviso en cuanto hubiera backend desplegado. En móvil no hay un quinto icono en la nav inferior —ya
+tiene cuatro—: se entra por un enlace dentro de Progreso, el mismo patrón que ya usa el Diccionario.
+En escritorio sí es pestaña, y con ella son cuatro: la fila pasó a repartirse en dos filas de dos
+(`.view-tabs{flex-wrap:wrap}`), porque en una sola línea el rótulo más largo se cortaba a media
+palabra dentro de la columna izquierda.
+

@@ -28,7 +28,7 @@ import {
   sidebar, speciesList, searchInput, catalogControls, catalogPanel,
   backToHabitatsBtn, catalogCrumb, catalogCrumbLabel, parkTitle, parkEyebrow, parkStats, parkProgressWrap,
   parkFold, parkFoldBar, parkFoldToggle,
-  progressPanel, invasorasPanel, diccionarioPanel, basicNotice, detailPanel, sheetClose, sheetScrim,
+  progressPanel, invasorasPanel, diccionarioPanel, biodiversidadPanel, basicNotice, detailPanel, sheetClose, sheetScrim,
   saveOfflineBtn, connStatus, offlineBar, offlineProgress,
   layersToggle, layersPanel, explorerToggle, rarityFilter
 } from './dom.js';
@@ -36,7 +36,7 @@ import { FILTROS_RAREZA } from './rareza.js';
 import {
   renderHabitatGroups, renderHabitatCatalog, renderSpeciesList, renderCatalogBody,
   renderSummary, renderProgress, renderDetail, renderProgressTab, renderInvasoras,
-  renderBasicPark, renderAccountProgress, renderTiempo
+  renderBasicPark, renderAccountProgress, renderTiempo, renderBiodiversidadTab
 } from './render.js';
 import { cargaTiempo } from './tiempo.js';
 import {
@@ -79,7 +79,7 @@ function navClose(key) { return nav ? nav.close(key) : false; }
 // contenedores que scrollean por su cuenta, porque cuál de ellos lo hace depende del ancho: en
 // escritorio son las listas; en móvil, la barra lateral entera.
 function vistaArriba() {
-  [sidebar, speciesList, progressPanel, invasorasPanel, diccionarioPanel]
+  [sidebar, speciesList, progressPanel, invasorasPanel, diccionarioPanel, biodiversidadPanel]
     .forEach(el => { if (el) el.scrollTop = 0; });
 }
 
@@ -440,7 +440,7 @@ function applyParkLevel(level) {
   if (basic) { if (parkFold) parkFold.hidden = false; } else { restauraParkFold(); }
   // La pestaña de progreso mediría una colección que todavía no existe (y el modo explorador
   // descubriría especies y POIs que aún no están cargados): se ocultan mientras el espacio sea N1.
-  document.querySelectorAll('.view-tab[data-view="progress"], .mobile-nav-btn[data-mtab="progress"]')
+  document.querySelectorAll('.view-tab[data-view="progress"], .mobile-nav-btn[data-mtab="progress"], .view-tab[data-view="biodiversidad"]')
     .forEach(btn => { btn.hidden = basic; });
   if (explorerToggle) explorerToggle.hidden = basic;
 }
@@ -448,7 +448,7 @@ function applyParkLevel(level) {
 // --- Vistas (catálogo / progreso) ---------------------------------------------------------------------
 function setView(view) {
   const basic = state.parkLevel === 'basic';
-  if (basic && view === 'progress') view = 'catalog'; // la pestaña está oculta; por si acaso
+  if (basic && (view === 'progress' || view === 'biodiversidad')) view = 'catalog'; // las dos pestañas están ocultas; por si acaso
   state.view = view;
   document.querySelectorAll('.view-tab').forEach(btn => {
     const active = btn.dataset.view === view;
@@ -472,11 +472,13 @@ function setView(view) {
   if (catalogCrumb && view !== 'catalog') catalogCrumb.hidden = true;
   if (basicNotice) basicNotice.hidden = !basic || view !== 'catalog';
   progressPanel.hidden = view !== 'progress';
+  if (biodiversidadPanel) biodiversidadPanel.hidden = view !== 'biodiversidad';
   if (invasorasPanel) invasorasPanel.hidden = view !== 'invasoras';
   // El diccionario es nacional, no del parque: se ve igual en un espacio de ficha base, donde no
   // hay catálogo que consultar pero las palabras técnicas siguen saliendo en la ficha del espacio.
   if (diccionarioPanel) diccionarioPanel.hidden = view !== 'diccionario';
   if (view === 'progress') renderProgressTab();
+  else if (view === 'biodiversidad') renderBiodiversidadTab();
   else if (view === 'invasoras') showInvasoras();
   else if (view === 'diccionario') abreDiccionario();
   else if (basic) renderBasicPark();
@@ -620,6 +622,14 @@ speciesList.addEventListener('click', event => {
 if (invasorasPanel) invasorasPanel.addEventListener('click', event => {
   const card = event.target.closest('[data-invasora]');
   if (card) selectInvasora(card.dataset.invasora);
+});
+
+// Enlace "Ver estadísticas de biodiversidad" al final de la pestaña de Progreso (mismo patrón que
+// vaAlDiccionario más abajo: en móvil pasa por la nav inferior, en escritorio por la pestaña).
+if (progressPanel) progressPanel.addEventListener('click', event => {
+  const btn = event.target.closest('[data-open-biodiversidad]');
+  if (!btn) return;
+  if (mobileMedia.matches) setMobileTab('biodiversidad'); else setView('biodiversidad');
 });
 
 detailPanel.addEventListener('click', event => {

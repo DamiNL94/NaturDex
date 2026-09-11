@@ -58,6 +58,7 @@ export const basicNotice = document.querySelector('#basicNotice');
 export const progressPanel = document.querySelector('#progressPanel');
 export const invasorasPanel = document.querySelector('#invasorasPanel');
 export const diccionarioPanel = document.querySelector('#diccionarioPanel');
+export const biodiversidadPanel = document.querySelector('#biodiversidadPanel');
 export const detailPanel = document.querySelector('#detailPanel');
 export const sheetClose = document.querySelector('#sheetClose'); // cierre de la bottom-sheet (móvil)
 export const sheetScrim = document.querySelector('#sheetScrim'); // velo tras la bottom-sheet (móvil)

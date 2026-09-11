@@ -51,7 +51,11 @@
    Slab vendorizadas en Vendor/fonts/). Aquí solo queda la reserva del sistema, por si alguna vez se
    quitara esa hoja: antes esta línea pedía `Inter`, que no se carga en ninguna parte de la app. */
 body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);font-size:var(--fs-md);line-height:1.5}button,input{font:inherit}.app-shell{height:100vh;overflow:hidden;display:grid;grid-template-columns:minmax(360px,420px) 1fr}.sidebar{height:100%;min-height:0;overflow:hidden;display:flex;flex-direction:column;border-right:1px solid var(--line);background:var(--panel)}.park-summary{padding:28px 28px 22px;border-bottom:1px solid var(--line)}.eyebrow{margin:0 0 8px;color:var(--sea);font-size:var(--fs-xs);font-weight:800;text-transform:uppercase}h1,h2,h3,p{margin-top:0}h1{margin-bottom:12px;font-size:clamp(2rem,4vw,3.4rem);line-height:.96}.park-summary p{margin-bottom:18px;color:var(--muted);line-height:1.5}.summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.summary-grid div{padding:12px;border:1px solid var(--line);border-radius:8px;background:#fbfcf8}.summary-grid strong{display:block;font-size:var(--fs-xl)}.summary-grid span{display:block;color:var(--muted);font-size:var(--fs-xs)}.controls{padding:18px 28px;border-bottom:1px solid var(--line)}.controls label{display:block;margin-bottom:8px;color:var(--muted);font-size:var(--fs-sm);font-weight:700}.controls input{width:100%;height:42px;padding:0 12px;border:1px solid var(--line);border-radius:8px}.progress-wrap{margin-top:14px}.progress-track{height:8px;border-radius:999px;background:#e4ece0;overflow:hidden}.progress-track.big{height:12px}.progress-fill{height:100%;width:0;background:var(--leaf);border-radius:999px;transition:width .3s ease}.progress-label,.progress-caption{display:block;margin-top:6px;color:var(--muted);font-size:var(--fs-xs)}.segmented{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:12px;padding:4px;border:1px solid var(--line);border-radius:8px;background:#eef4ec}
-.view-tabs{display:flex;gap:6px;padding:14px 28px 0}.view-tab{flex:1 1 auto;min-width:0;min-height:38px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--muted);font-weight:800;cursor:pointer}.view-tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+/* Cuatro pestañas (Catálogo / Invasoras / Progreso / Biodiversidad) no caben en una fila dentro
+   de la columna izquierda: en una sola línea el rótulo más largo se cortaba a media palabra. Con
+   `flex-wrap` y una base del 50 % se reparten en dos filas de dos, y en los espacios `basic` —donde
+   app.js apaga Progreso y Biodiversidad— las dos que quedan siguen ocupando una sola fila. */
+.view-tabs{display:flex;flex-wrap:wrap;gap:6px;padding:14px 28px 0}.view-tab{flex:1 1 calc(50% - 3px);min-width:0;min-height:38px;padding:0 8px;font-size:var(--fs-sm);border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--muted);font-weight:800;cursor:pointer}.view-tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
 .habitat-filter-chip{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:10px;padding:8px 10px;border-radius:8px;background:#eef4ec;color:var(--leaf);font-size:var(--fs-xs);font-weight:700}.habitat-filter-chip[hidden]{display:none}.habitat-filter-chip button{border:0;background:transparent;color:var(--leaf);font-weight:800;cursor:pointer}
 .progress-panel{flex:1;min-height:0;overflow:auto;padding:18px 18px 18px 28px;display:flex;flex-direction:column;gap:20px}.species-panel[hidden],.progress-panel[hidden],.controls[hidden]{display:none}.progress-section h3{margin:0 0 8px;font-size:var(--fs-md);color:var(--ink)}.progress-list{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}.progress-row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font-size:var(--fs-sm)}.progress-row.complete{border-color:var(--leaf);background:#eef6ef}.progress-row-label{display:flex;align-items:center;gap:8px}.progress-row .dot{display:inline-block;width:10px;height:10px;border-radius:999px}.progress-row-value{font-weight:800;color:var(--muted)}.progress-row.complete .progress-row-value{color:var(--leaf)}
 .achievement-card{display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:10px;border:1px solid var(--line);background:#fbfcf8}.achievement-card.locked{opacity:.6}.achievement-card.unlocked{border-color:var(--sun);background:#fff8e8}.achievement-card.just-unlocked{animation:achievement-pulse 1.2s ease}.achievement-icon{font-size:2rem;line-height:1}.achievement-card strong{display:block;margin-bottom:4px;font-size:var(--fs-md)}.achievement-card p{margin:0;color:var(--muted);font-size:var(--fs-xs);line-height:1.45}
@@ -1452,9 +1456,9 @@ body.visor-open{overflow:hidden}
 .glossary-popover-link{display:block;margin-top:10px;padding:6px 0;border:0;background:transparent;color:var(--leaf);font-weight:800;font-size:var(--fs-sm);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 /* El enlace de la cabecera del catálogo es SOLO para móvil: en escritorio ya hay pestaña propia y
    sería el mismo destino dos veces en la misma columna. */
-.dicc-link{display:block;width:100%;margin-top:12px;min-height:var(--tap-min,44px);border:1px dashed var(--line);border-radius:var(--radius-md,8px);background:transparent;color:var(--leaf);font-weight:700;font-size:var(--fs-sm);cursor:pointer}
-.dicc-link:hover{background:var(--tint,#eef4ec)}
-@media(min-width:901px){.dicc-link{display:none}}
+.dicc-link,.panel-link{display:block;width:100%;margin-top:12px;min-height:var(--tap-min,44px);border:1px dashed var(--line);border-radius:var(--radius-md,8px);background:transparent;color:var(--leaf);font-weight:700;font-size:var(--fs-sm);cursor:pointer}
+.dicc-link:hover,.panel-link:hover{background:var(--tint,#eef4ec)}
+@media(min-width:901px){.dicc-link,.panel-link{display:none}}
 @media(max-width:900px){
   .dicc-panel{flex:none;min-height:auto;overflow:visible;padding:10px 16px 16px}
   /* Con la columna entera deslizándose, la letra pegajosa se colaría por debajo del buscador. */
@@ -1575,6 +1579,15 @@ body.visor-open{overflow:hidden}
 :root .species-card.rareza-4{background:var(--rareza-4-bg)}
 :root .species-card.rareza-5{background:var(--rareza-5-bg)}
 :root .species-card.rareza-nd{background:var(--rareza-nd-bg)}
+
+/* Mismo tinte en las filas de la pestaña Biodiversidad (render/biodiversidad.js), reutilizando las
+   MISMAS variables --rareza-N-bg de arriba: es la misma escalera de color, no una paleta nueva. */
+:root .progress-row.rareza-1{background:var(--rareza-1-bg)}
+:root .progress-row.rareza-2{background:var(--rareza-2-bg)}
+:root .progress-row.rareza-3{background:var(--rareza-3-bg)}
+:root .progress-row.rareza-4{background:var(--rareza-4-bg)}
+:root .progress-row.rareza-5{background:var(--rareza-5-bg)}
+:root .progress-row.rareza-nd{background:var(--rareza-nd-bg)}
 
 /* El marco de la ficha (render/detalle.js · `.ficha-tramo`). Envuelve la foto y el cuerpo, así que
    el color rodea la ficha entera y no solo el texto. Va a 3 px porque a 1 px, contra el borde del

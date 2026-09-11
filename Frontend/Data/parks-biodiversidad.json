@@ -1,0 +1,824 @@
+{
+  "_comment": "Generado por Tools/catalogo-nacional/build-biodiversidad-stats.js (npm run especies:biodiversidad). No editar a mano.",
+  "porParque": {
+    "barrancos-de-gebas": {
+      "habitats": {
+        "total": 3,
+        "prioritarios": 1,
+        "prioritariosPct": 33.3
+      },
+      "especies": {
+        "total": 85,
+        "flora": 9,
+        "fauna": 76,
+        "porGrupo": {
+          "Arbusto": 3,
+          "Reptil": 6,
+          "Conífera": 1,
+          "Planta parásita": 1,
+          "Gramínea": 2,
+          "Hierba": 2,
+          "Ave": 55,
+          "Ave rapaz": 9,
+          "Ave rapaz nocturna": 2,
+          "Ave esteparia": 1,
+          "Ave limícola": 2,
+          "Ave acuática": 1
+        }
+      },
+      "rareza": {
+        "tramos": {
+          "1": 8,
+          "2": 65,
+          "3": 10,
+          "4": 1,
+          "5": 1,
+          "sinCalcular": 0
+        },
+        "conProteccionPct": 90.6,
+        "amenazadasPct": 2.4
+      },
+      "evidencia": {
+        "n1": 69,
+        "n2": 12,
+        "n3": 4,
+        "visibles": 85
+      }
+    },
+    "cabezo-gordo": {
+      "habitats": {
+        "total": 4,
+        "prioritarios": 2,
+        "prioritariosPct": 50
+      },
+      "especies": {
+        "total": 53,
+        "flora": 10,
+        "fauna": 43,
+        "porGrupo": {
+          "Arbusto": 3,
+          "Helecho": 1,
+          "Mata": 2,
+          "Reptil": 4,
+          "Mamífero": 1,
+          "Planta suculenta": 1,
+          "Hierba": 1,
+          "Palmera": 1,
+          "Ave": 21,
+          "Ave acuática": 1,
+          "Roedor": 1,
+          "Anfibio": 1,
+          "Ave esteparia": 3,
+          "Murciélago": 8,
+          "Mamífero carnívoro": 1,
+          "Árbol": 1,
+          "Ave rapaz nocturna": 2
+        }
+      },
+      "rareza": {
+        "tramos": {
+          "1": 4,
+          "2": 33,
+          "3": 6,
+          "4": 8,
+          "5": 2,
+          "sinCalcular": 0
+        },
+        "conProteccionPct": 92.5,
+        "amenazadasPct": 18.9
+      },
+      "evidencia": {
+        "n1": 48,
+        "n2": 4,
+        "n3": 1,
+        "visibles": 53
+      }
+    },
+    "cabo-cope-puntas-calnegre": {
+      "habitats": {
+        "total": 15,
+        "prioritarios": 4,
+        "prioritariosPct": 26.7
+      },
+      "especies": {
+        "total": 81,
+        "flora": 39,
+        "fauna": 42,
+        "porGrupo": {
+          "Arbusto": 6,
+          "Reptil": 7,
+          "Mata aromática": 2,
+          "Hierba": 17,
+          "Mata": 4,
+          "Conífera": 2,
+          "Planta suculenta": 2,
+          "Helecho": 1,
+          "Gramínea": 1,
+          "Palmera": 1,
+          "Sin grupo": 2,
+          "Mamífero carnívoro": 1,
+          "Árbol": 1,
+          "Ave marina": 4,
+          "Ave": 15,
+          "Ave limícola": 1,
+          "Ave rapaz": 7,
+          "Ave acuática": 2,
+          "Ave esteparia": 4,
+          "Ave rapaz nocturna": 1
+        }
+      },
+      "rareza": {
+        "tramos": {
+          "1": 18,
+          "2": 30,
+          "3": 20,
+          "4": 11,
+          "5": 2,
+          "sinCalcular": 0
+        },
+        "conProteccionPct": 77.8,
+        "amenazadasPct": 16
+      },
+      "evidencia": {
+        "n1": 55,
+        "n2": 8,
+        "n3": 18,
+        "visibles": 81
+      }
+    },
+    "calblanque-monte-cenizas-pena-aguila": {
+      "habitats": {
+        "total": 18,
+        "prioritarios": 5,
+        "prioritariosPct": 27.8
+      },
+      "especies": {
+        "total": 182,
+        "flora": 55,
+        "fauna": 127,
+        "porGrupo": {
+          "Arbusto": 12,
+          "Palmera": 1,
+          "Reptil": 10,
+          "Conífera": 3,
+          "Planta suculenta": 6,
+          "Árbol": 4,
+          "Mata": 8,
+          "Hierba": 10,
+          "Mata aromática": 3,
+          "Sin grupo": 5,
+          "Anfibio": 1,
+          "Planta parásita": 1,
+          "Gramínea": 2,
+          "Planta bulbosa": 1,
+          "Mamífero": 2,
+          "Ave acuática": 30,
+          "Mamífero carnívoro": 4,
+          "Ave limícola": 31,
+          "Ave marina": 8,
+          "Ave rapaz": 10,
+          "Ave": 25,
+          "Ave esteparia": 3,
+          "Ave rapaz nocturna": 2
+        }
+      },
+      "rareza": {
+        "tramos": {
+          "1": 47,
+          "2": 78,
+          "3": 25,
+          "4": 22,
+          "5": 10,
+          "sinCalcular": 0
+        },
+        "conProteccionPct": 74.2,
+        "amenazadasPct": 17.6
+      },
+      "evidencia": {
+        "n1": 135,
+        "n2": 26,
+        "n3": 21,
+        "visibles": 182
+      }
+    },
+    "carrascoy-y-el-valle": {
+      "habitats": {
+        "total": 15,
+        "prioritarios": 5,
+        "prioritariosPct": 33.3
+      },
+      "especies": {
+        "total": 218,
+        "flora": 154,
+        "fauna": 64,
+        "porGrupo": {
+          "Mamífero ungulado": 2,
+          "Mamífero carnívoro": 1,
+          "Mata": 20,
+          "Conífera": 4,
+          "Arbusto": 32,
+          "Mata aromática": 11,
+          "Hierba": 39,
+          "Árbol": 9,
+          "Planta suculenta": 3,
+          "Roedor": 1,
+          "Palmera": 1,
+          "Gramínea": 9,
+          "Reptil": 13,
+          "Trepadora": 2,
+          "Anfibio": 3,
+          "Sin grupo": 13,
+          "Helecho": 5,
+          "Planta bulbosa": 4,
+          "Planta parásita": 1,
+          "Orquídea": 1,
+          "Mamífero": 2,
+          "Ave": 25,
+          "Ave rapaz": 13,
+          "Ave rapaz nocturna": 2,
+          "Ave esteparia": 2
+        }
+      },
+      "rareza": {
+        "tramos": {
+          "1": 134,
+          "2": 44,
+          "3": 22,
+          "4": 11,
+          "5": 7,
+          "sinCalcular": 0
+        },
+        "conProteccionPct": 38.5,
+        "amenazadasPct": 8.3
+      },
+      "evidencia": {
+        "n1": 44,
+        "n2": 41,
+        "n3": 133,
+        "visibles": 218
+      }
+    },
+    "cuatro-calas": {
+      "habitats": {
+        "total": 7,
+        "prioritarios": 3,
+        "prioritariosPct": 42.9
+      },
+      "especies": {
+        "total": 93,
+        "flora": 73,
+        "fauna": 20,
+        "porGrupo": {
+          "Mata": 18,
+          "Hierba": 23,
+          "Arbusto": 6,
+          "Gramínea": 7,
+          "Reptil": 2,
+          "Planta suculenta": 8,
+          "Mata aromática": 4,
+          "Planta bulbosa": 3,
+          "Planta parásita": 1,
+          "Árbol": 3,
+          "Ave marina": 17,
+          "Ave acuática": 1
+        }
+      },
+      "rareza": {
+        "tramos": {
+          "1": 64,
+          "2": 11,
+          "3": 10,
+          "4": 6,
+          "5": 2,
+          "sinCalcular": 0
+        },
+        "conProteccionPct": 31.2,
+        "amenazadasPct": 8.6
+      },
+      "evidencia": {
+        "n1": 18,
+        "n2": 14,
+        "n3": 61,
+        "visibles": 93
+      }
+    },
+    "espacios-abiertos-e-islas-del-mar-menor": {
+      "habitats": {
+        "total": 19,
+        "prioritarios": 5,
+        "prioritariosPct": 26.3
+      },
+      "especies": {
+        "total": 215,
+        "flora": 45,
+        "fauna": 170,
+        "porGrupo": {
+          "Arbusto": 7,
+          "Palmera": 1,
+          "Gramínea": 3,
+          "Planta suculenta": 6,
+          "Reptil": 10,
+          "Mata aromática": 2,
+          "Mata": 6,
+          "Helecho": 2,
+          "Hierba": 10,
+          "Planta parásita": 1,
+          "Anfibio": 1,
+          "Conífera": 1,
+          "Árbol": 3,
+          "Ave marina": 9,
+          "Planta bulbosa": 1,
+          "Sin grupo": 3,
+          "Mamífero": 1,
+          "Ave acuática": 30,
+          "Ave": 63,
+          "Murciélago": 5,
+          "Ave limícola": 33,
+          "Ave rapaz": 10,
+          "Ave esteparia": 4,
+          "Ave rapaz nocturna": 3
+        }
+      },
+      "rareza": {
+        "tramos": {
+          "1": 46,
+          "2": 114,
+          "3": 25,
+          "4": 19,
+          "5": 11,
+          "sinCalcular": 0
+        },
+        "conProteccionPct": 78.6,
+        "amenazadasPct": 14
+      },
+      "evidencia": {
+        "n1": 194,
+        "n2": 4,
+        "n3": 17,
+        "visibles": 215
+      }
+    },
+    "humedal-del-ajauque-y-rambla-salada": {
+      "habitats": {
+        "total": 10,
+        "prioritarios": 3,
+        "prioritariosPct": 30
+      },
+      "especies": {
+        "total": 175,
+        "flora": 20,
+        "fauna": 155,
+        "porGrupo": {
+          "Planta suculenta": 5,
+          "Conífera": 1,
+          "Mata": 2,
+          "Reptil": 10,
+          "Arbusto": 4,
+          "Árbol": 2,
+          "Mata aromática": 2,
+          "Hierba": 2,
+          "Sin grupo": 1,
+          "Mamífero": 1,
+          "Palmera": 1,
+          "Planta parásita": 1,
+          "Anfibio": 3,
+          "Mamífero carnívoro": 2,
+          "Murciélago": 8,
+          "Ave": 66,
+          "Ave limícola": 19,
+          "Ave acuática": 25,
+          "Ave esteparia": 3,
+          "Ave rapaz": 10,
+          "Ave marina": 5,
+          "Ave rapaz nocturna": 2
+        }
+      },
+      "rareza": {
+        "tramos": {
+          "1": 32,
+          "2": 103,
+          "3": 21,
+          "4": 12,
+          "5": 7,
+          "sinCalcular": 0
+        },
+        "conProteccionPct": 81.7,
+        "amenazadasPct": 10.9
+      },
+      "evidencia": {
+        "n1": 154,
+        "n2": 11,
+        "n3": 10,
+        "visibles": 175
+      }
+    },
+    "monte-arabi": {
+      "habitats": {
+        "total": 2,
+        "prioritarios": 0,
+        "prioritariosPct": 0
+      },
+      "especies": {
+        "total": 63,
+        "flora": 14,
+        "fauna": 49,
+        "porGrupo": {
+          "Mamífero ungulado": 2,
+          "Mamífero carnívoro": 1,
+          "Conífera": 2,
+          "Mata": 3,
+          "Arbusto": 5,
+          "Mata aromática": 1,
+          "Árbol": 1,
+          "Planta bulbosa": 1,
+          "Reptil": 1,
+          "Planta suculenta": 1,
+          "Ave": 39,
+          "Ave rapaz": 4,
+          "Ave rapaz nocturna": 1,
+          "Ave esteparia": 1
+        }
+      },
+      "rareza": {
+        "tramos": {
+          "1": 21,
+          "2": 33,
+          "3": 8,
+          "4": 0,
+          "5": 1,
+          "sinCalcular": 0
+        },
+        "conProteccionPct": 66.7,
+        "amenazadasPct": 1.6
+      },
+      "evidencia": {
+        "n1": 58,
+        "n2": 1,
+        "n3": 4,
+        "visibles": 63
+      }
+    },
+    "salinas-arenales-san-pedro-pinatar": {
+      "habitats": {
+        "total": 15,
+        "prioritarios": 3,
+        "prioritariosPct": 20
+      },
+      "especies": {
+        "total": 248,
+        "flora": 100,
+        "fauna": 148,
+        "porGrupo": {
+          "Reptil": 13,
+          "Planta bulbosa": 3,
+          "Planta suculenta": 6,
+          "Mata": 12,
+          "Conífera": 4,
+          "Arbusto": 8,
+          "Gramínea": 11,
+          "Hierba": 44,
+          "Planta parásita": 2,
+          "Sin grupo": 6,
+          "Mamífero": 3,
+          "Árbol": 4,
+          "Ave": 55,
+          "Murciélago": 8,
+          "Mata aromática": 2,
+          "Ave limícola": 28,
+          "Ave marina": 8,
+          "Ave acuática": 20,
+          "Ave rapaz": 5,
+          "Ave esteparia": 3,
+          "Ave rapaz nocturna": 3
+        }
+      },
+      "rareza": {
+        "tramos": {
+          "1": 109,
+          "2": 101,
+          "3": 14,
+          "4": 14,
+          "5": 10,
+          "sinCalcular": 0
+        },
+        "conProteccionPct": 56,
+        "amenazadasPct": 9.7
+      },
+      "evidencia": {
+        "n1": 231,
+        "n2": 7,
+        "n3": 10,
+        "visibles": 248
+      }
+    },
+    "sierra-de-el-carche": {
+      "habitats": {
+        "total": 11,
+        "prioritarios": 5,
+        "prioritariosPct": 45.5
+      },
+      "especies": {
+        "total": 189,
+        "flora": 100,
+        "fauna": 89,
+        "porGrupo": {
+          "Mamífero ungulado": 2,
+          "Mamífero carnívoro": 6,
+          "Conífera": 4,
+          "Mata aromática": 6,
+          "Árbol": 3,
+          "Mata": 18,
+          "Arbusto": 17,
+          "Planta suculenta": 5,
+          "Hierba": 26,
+          "Sin grupo": 10,
+          "Helecho": 5,
+          "Mamífero": 4,
+          "Anfibio": 3,
+          "Reptil": 7,
+          "Roedor": 6,
+          "Planta bulbosa": 3,
+          "Gramínea": 2,
+          "Palmera": 1,
+          "Ave": 53,
+          "Ave rapaz": 5,
+          "Ave rapaz nocturna": 2,
+          "Ave esteparia": 1
+        }
+      },
+      "rareza": {
+        "tramos": {
+          "1": 103,
+          "2": 63,
+          "3": 19,
+          "4": 2,
+          "5": 2,
+          "sinCalcular": 0
+        },
+        "conProteccionPct": 45.5,
+        "amenazadasPct": 2.1
+      },
+      "evidencia": {
+        "n1": 174,
+        "n2": 1,
+        "n3": 14,
+        "visibles": 189
+      }
+    },
+    "sierra-de-la-pila": {
+      "habitats": {
+        "total": 10,
+        "prioritarios": 4,
+        "prioritariosPct": 40
+      },
+      "especies": {
+        "total": 160,
+        "flora": 73,
+        "fauna": 87,
+        "porGrupo": {
+          "Mamífero ungulado": 1,
+          "Mamífero carnívoro": 6,
+          "Conífera": 4,
+          "Mata aromática": 5,
+          "Mata": 16,
+          "Arbusto": 19,
+          "Mamífero": 5,
+          "Sin grupo": 4,
+          "Gramínea": 3,
+          "Planta bulbosa": 2,
+          "Árbol": 4,
+          "Planta suculenta": 2,
+          "Anfibio": 2,
+          "Hierba": 5,
+          "Reptil": 13,
+          "Helecho": 6,
+          "Orquídea": 1,
+          "Roedor": 3,
+          "Planta parásita": 2,
+          "Murciélago": 1,
+          "Ave": 45,
+          "Ave rapaz": 8,
+          "Ave rapaz nocturna": 3
+        }
+      },
+      "rareza": {
+        "tramos": {
+          "1": 70,
+          "2": 66,
+          "3": 18,
+          "4": 5,
+          "5": 1,
+          "sinCalcular": 0
+        },
+        "conProteccionPct": 56.3,
+        "amenazadasPct": 3.8
+      },
+      "evidencia": {
+        "n1": 98,
+        "n2": 9,
+        "n3": 53,
+        "visibles": 160
+      }
+    },
+    "sierra-de-las-moreras": {
+      "habitats": {
+        "total": 9,
+        "prioritarios": 5,
+        "prioritariosPct": 55.6
+      },
+      "especies": {
+        "total": 61,
+        "flora": 17,
+        "fauna": 44,
+        "porGrupo": {
+          "Hierba": 5,
+          "Mata aromática": 3,
+          "Palmera": 1,
+          "Gramínea": 1,
+          "Reptil": 4,
+          "Arbusto": 4,
+          "Mata": 3,
+          "Murciélago": 5,
+          "Ave": 16,
+          "Ave rapaz": 7,
+          "Ave esteparia": 4,
+          "Ave marina": 4,
+          "Ave rapaz nocturna": 1,
+          "Ave acuática": 2,
+          "Ave limícola": 1
+        }
+      },
+      "rareza": {
+        "tramos": {
+          "1": 6,
+          "2": 27,
+          "3": 14,
+          "4": 13,
+          "5": 1,
+          "sinCalcular": 0
+        },
+        "conProteccionPct": 90.2,
+        "amenazadasPct": 23
+      },
+      "evidencia": {
+        "n1": 49,
+        "n2": 6,
+        "n3": 6,
+        "visibles": 61
+      }
+    },
+    "sierra-de-salinas": {
+      "habitats": {
+        "total": 7,
+        "prioritarios": 1,
+        "prioritariosPct": 14.3
+      },
+      "especies": {
+        "total": 91,
+        "flora": 25,
+        "fauna": 66,
+        "porGrupo": {
+          "Conífera": 2,
+          "Mata aromática": 1,
+          "Mata": 4,
+          "Arbusto": 9,
+          "Árbol": 3,
+          "Hierba": 3,
+          "Sin grupo": 1,
+          "Reptil": 1,
+          "Planta bulbosa": 1,
+          "Gramínea": 1,
+          "Ave": 55,
+          "Ave rapaz": 7,
+          "Ave rapaz nocturna": 2,
+          "Ave esteparia": 1
+        }
+      },
+      "rareza": {
+        "tramos": {
+          "1": 23,
+          "2": 52,
+          "3": 13,
+          "4": 1,
+          "5": 2,
+          "sinCalcular": 0
+        },
+        "conProteccionPct": 74.7,
+        "amenazadasPct": 3.3
+      },
+      "evidencia": {
+        "n1": 77,
+        "n2": 1,
+        "n3": 13,
+        "visibles": 91
+      }
+    },
+    "sierra-espuna": {
+      "habitats": {
+        "total": 13,
+        "prioritarios": 3,
+        "prioritariosPct": 23.1
+      },
+      "especies": {
+        "total": 187,
+        "flora": 120,
+        "fauna": 67,
+        "porGrupo": {
+          "Conífera": 4,
+          "Mamífero ungulado": 2,
+          "Mata aromática": 9,
+          "Mamífero carnívoro": 5,
+          "Arbusto": 31,
+          "Mata": 16,
+          "Gramínea": 4,
+          "Hierba": 26,
+          "Árbol": 14,
+          "Planta bulbosa": 5,
+          "Anfibio": 2,
+          "Helecho": 2,
+          "Planta suculenta": 1,
+          "Roedor": 1,
+          "Orquídea": 7,
+          "Planta parásita": 1,
+          "Ave rapaz": 12,
+          "Ave rapaz nocturna": 2,
+          "Ave esteparia": 2,
+          "Ave": 31,
+          "Murciélago": 9,
+          "Reptil": 1
+        }
+      },
+      "rareza": {
+        "tramos": {
+          "1": 71,
+          "2": 34,
+          "3": 45,
+          "4": 25,
+          "5": 12,
+          "sinCalcular": 0
+        },
+        "conProteccionPct": 62,
+        "amenazadasPct": 19.8
+      },
+      "evidencia": {
+        "n1": 67,
+        "n2": 52,
+        "n3": 68,
+        "visibles": 187
+      }
+    },
+    "sotos-y-bosques-de-ribera-de-canaverosa": {
+      "habitats": {
+        "total": 6,
+        "prioritarios": 2,
+        "prioritariosPct": 33.3
+      },
+      "especies": {
+        "total": 209,
+        "flora": 43,
+        "fauna": 166,
+        "porGrupo": {
+          "Roedor": 2,
+          "Reptil": 10,
+          "Arbusto": 8,
+          "Planta bulbosa": 1,
+          "Mata": 6,
+          "Anfibio": 4,
+          "Árbol": 13,
+          "Mata aromática": 1,
+          "Hierba": 8,
+          "Mamífero carnívoro": 7,
+          "Sin grupo": 7,
+          "Conífera": 3,
+          "Ave rapaz": 11,
+          "Ave": 86,
+          "Ave limícola": 4,
+          "Ave acuática": 10,
+          "Mamífero": 5,
+          "Ave rapaz nocturna": 4,
+          "Mamífero ungulado": 3,
+          "Helecho": 1,
+          "Murciélago": 15
+        }
+      },
+      "rareza": {
+        "tramos": {
+          "1": 39,
+          "2": 105,
+          "3": 32,
+          "4": 21,
+          "5": 12,
+          "sinCalcular": 0
+        },
+        "conProteccionPct": 81.3,
+        "amenazadasPct": 15.8
+      },
+      "evidencia": {
+        "n1": 192,
+        "n2": 11,
+        "n3": 6,
+        "visibles": 209
+      }
+    }
+  }
+}
