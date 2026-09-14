@@ -56,6 +56,24 @@ errores de red que no explican nada, `npm run red:check` lo aclara en diez segun
 desde la BD (la lógica vive en `Backend/Lib/`). `import-sql.php` ejecuta volcados contra MySQL
 remoto. `recalculate-account-progress.php` recalcula progreso y logros de todos los usuarios.
 
+**`import-sql.php` tiene dos formas de no aplicar nada**, y una de ellas no se veía. Conecta **sin
+base seleccionada** a propósito (`schema.sql` hace su propio `CREATE DATABASE` + `USE`), así que un
+fichero de `Database/` tal cual falla con «No database selected» — eso se ve. Lo que no se veía: un
+fallo de sintaxis **a la mitad** rompe el hilo de `multi_query`, `next_result()` devuelve false y el
+bucle salía por la condición del `while` sin mirar el errno, imprimiendo «OK · N sentencias
+ejecutadas» y saliendo con código 0 con todo lo de detrás sin ejecutar. Tapado el 2026-09-14; ver
+[`Docs/runbook/APLICAR-A-RAILWAY.md`](../Docs/runbook/APLICAR-A-RAILWAY.md).
+
+`contenido-sql.js` (`npm run contenido:sql`) es el **camino de vuelta** de las dos tablas de
+contenido transversal: `export-glossary.php` y `export-invasoras.php` van BD → JSON y no había nada
+que fuera JSON → BD, así que los términos añadidos desde el piloto nunca llegaban a la base
+desplegada (**86 de 219** términos y **25 de 26** invasoras el 2026-09-14, con los dos endpoints
+respondiendo 200 y sirviendo lo viejo; no falla porque la PWA cae al fichero empaquetado). Escribe
+`Database/glosario.sql` e `invasoras.sql` con `ON DUPLICATE KEY UPDATE` sobre la clave única de cada
+tabla: **suma y no retira**. Ojo con la clave única de texto, que es `utf8mb4_unicode_ci` y por tanto
+ignora los acentos: dos términos que el JSON distingue pueden ser una sola fila (pasó con
+«foliolo»/«folíolo»), así que **hay que contar las filas después de cargar**.
+
 `export-dwc.php` (`npm run export:dwc`) genera el **Darwin Core Archive** de los avistamientos:
 `occurrence.txt` + `meta.xml` + `eml.xml`. Aplica dos reglas que no se pueden delegar en quien reciba
 el fichero —el **consentimiento** del observador y la **generalización** de las coordenadas de los

@@ -35,6 +35,8 @@ silencio.
 | `parks-tiempo.sql` | 4 K | `npm run tiempo:municipios -- --write --sql Database/parks-tiempo.sql` (`Tools/resuelve-municipio-aemet.js`). Rellena las cuatro columnas `weather_*` de `parks`: el código INE del municipio de referencia para la predicción de AEMET y su procedencia. **Sin aplicarlo, un despliegue con backend no pinta el widget del tiempo** aunque el código esté en los `park.json`: la API manda sobre el paquete. Va DESPUÉS de `migrations.sql`, que es quien crea las columnas. Idempotente (un `UPDATE` por espacio) |
 | `retira-conservation-status.sql` | 4 K | Escrito a mano el 2026-09-14. `ALTER TABLE species DROP COLUMN conservation_status` — **borra dato**. Es el mismo DROP que lleva `migrations.sql`, suelto y **sin `DELIMITER`**, porque `import-sql.php` manda el fichero con `multi_query` y `DELIMITER` es una directiva del cliente `mysql`, no del servidor: los procedimientos auxiliares de la migración **no pasan por esa vía**. Idempotente (comprueba `information_schema`). Va DESPUÉS de los `<slug>-n2.sql` regenerados |
 | `renombra-poi-playa-charco.sql` | 4 K | Escrito a mano el 2026-08-25 (b). `playa-Charco` → `playa-charco` en la fila viva (deuda nº 18). **Hace falta porque `build-poi-sql.js` hace UPSERT por `slug`**: aplicar el N3 con el slug nuevo no renombraría nada, daría de alta un SEGUNDO POI. Va ANTES de cualquier `n3-pois-cabo-cope-puntas-calnegre.sql` posterior. Idempotente |
+| `glosario.sql` | 40 K | `npm run contenido:sql` (`Tools/contenido-sql.js`), desde `Frontend/Data/glosario.json`. Existe porque las dos tablas de contenido transversal solo viajaban BD → JSON y lo añadido desde el piloto nunca llegaba a la base desplegada: Railway servía **86 de 219** términos el 2026-09-14, respondiendo 200 y sin que fallara nada (la PWA cae al fichero empaquetado). **Aditivo**: `ON DUPLICATE KEY UPDATE` sobre `term`, no retira. Ojo, que esa clave única es `utf8mb4_unicode_ci` y **ignora los acentos**: dos términos del JSON pueden ser una sola fila, así que cuenta las filas después |
+| `invasoras.sql` | 69 K | `npm run contenido:sql`, desde `Frontend/Data/invasoras.json`. Las 26 fichas completas, aditivas sobre `(scientific_name, ccaa)`. Es lo que dio de alta el arruí (*Ammotragus lervia*), que solo estaba en el JSON. No sustituye a `invasoras-contenido.sql` ni a `invasoras-imagenes.sql`, que son UPDATE de campos concretos |
 | `seed.sql` | 692 K | Volcado de datos de arranque |
 | `snapshot.sql` | 692 K | Volcado completo de la BD viva. **Trae su propio `CREATE TABLE`**, así que sigue nombrando `murcia_status`: es el retrato de una base anterior al renombrado del 2026-08-27 y no se toca. Restaurarlo y pasarle después `migrations.sql` deja la columna con el nombre nuevo y los datos intactos. `seed.sql` **sí** se renombró, porque NO trae DDL: se carga sobre las tablas de `schema.sql` y con el nombre viejo abortaría con ERROR 1054 |
 
@@ -88,6 +90,11 @@ docker exec -i naturdex-db-1 sh -c 'MYSQL_PWD="$MYSQL_ROOT_PASSWORD" mysql --def
 php Tools/import-sql.php <fichero>.sql          # contra una BD remota
 npm run db:status / :pull / :push / :backup     # sincronización con el contenedor
 ```
+
+**Por la vía remota hay que anteponer `USE \`naturadex\`;`**: `import-sql.php` conecta sin base
+seleccionada a propósito y ningún fichero de esta carpeta la nombra, así que tal cual falla con «No
+database selected». La secuencia entera, con el orden y las comprobaciones, está en
+[`Docs/runbook/APLICAR-A-RAILWAY.md`](../Docs/runbook/APLICAR-A-RAILWAY.md).
 
 > Los volcados grandes (`seed`, `snapshot`, `species-universal`, `*-n2`) están excluidos de la
 > búsqueda en `.ignore`: son datos, no código. `schema.sql` y `migrations.sql` **sí** se buscan.

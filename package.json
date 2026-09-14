@@ -15,6 +15,7 @@
     "export:glossary": "php Tools/export-glossary.php",
     "glossary:check": "node Tools/glossary-coverage.js",
     "export:invasoras": "php Tools/export-invasoras.php",
+    "contenido:sql": "node Tools/contenido-sql.js",
     "export:dwc": "php Tools/export-dwc.php",
     "db:status": "node Tools/db-sync/db-sync.js status",
     "db:pull": "node Tools/db-sync/db-sync.js pull",

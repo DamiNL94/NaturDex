@@ -135,6 +135,19 @@ foreach ($args as $file) {
         }
     } while ($conn->more_results() && $conn->next_result());
 
+    // El error de la sentencia que ROMPE el hilo no lo ve el bucle: `next_result()` devuelve false y
+    // se sale por la condición del while, con el errno puesto en la conexión y nadie mirándolo. Sin
+    // esta comprobación, un fichero con un fallo de sintaxis a la mitad imprimía
+    // «OK · N sentencias ejecutadas», salía con código 0 y dejaba SIN EJECUTAR todo lo que venía
+    // detrás — que por la vía remota es la forma más silenciosa posible de no aplicar una corrección
+    // (detectado el 2026-09-14 aplicando `Database/glosario.sql`: decía OK y no escribía una fila).
+    if ($conn->errno) {
+        fwrite(STDERR, "  FALLO tras la sentencia #$statements: {$conn->error}\n");
+        fwrite(STDERR, "  Lo que venía DETRÁS no se ha ejecutado.\n");
+        $failed = true;
+        break;
+    }
+
     printf("  OK · %d sentencias ejecutadas.\n\n", $statements);
 }
 

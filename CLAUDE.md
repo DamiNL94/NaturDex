@@ -68,7 +68,7 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
    deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).
 
-## 2. Veinticinco cosas que fallan EN VERDE
+## 2. Veintinueve cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
@@ -279,6 +279,32 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   comprobar con `validate`**: se queda ahí sosteniendo una decisión durante meses. Resuelto el
   2026-08-27 (deuda nº 4). La regla: **la etiqueta de una autoridad dice lo que opina esa autoridad,
   no si dos autoridades discrepan** — eso hay que ir a preguntárselo a la otra, taxón a taxón.
+- **La herramienta con la que se aplica TODO a la base decía «OK» habiendo escrito la mitad.**
+  `Tools/import-sql.php` manda el fichero entero con `multi_query`, y un fallo de sintaxis a la mitad
+  rompe el hilo: `next_result()` devuelve false, el bucle sale por la condición del `while` **con el
+  errno puesto en la conexión y nadie mirándolo**, y la salida era «OK · N sentencias ejecutadas» con
+  código 0. Todo lo que venía detrás no se ejecutaba y nada lo decía; así se aplicó un
+  `Database/glosario.sql` que no escribió una fila. No es la única forma de no aplicar nada por esa
+  vía: **conecta sin base seleccionada a propósito** y la URL de Railway apunta a `railway`, así que
+  el comando que el propio runbook documentaba fallaba con «No database selected» — ése al menos se
+  ve. Tapado el 2026-09-14 con la comprobación del errno detrás del bucle; la regla que queda es la
+  de siempre: **cuenta las filas después de aplicar**, que es lo único que no depende de que la
+  herramienta se entere. [`Docs/runbook/APLICAR-A-RAILWAY.md`](Docs/runbook/APLICAR-A-RAILWAY.md).
+- **Un `-n2.sql` versionado puede ir por detrás de su propio `park.json`, y aplicarlo escribe el dato
+  viejo.** El de Ajauque se había generado ANTES del `species:apply` que repartió la taxonomía, así
+  que traía `NULL, NULL` donde el paquete ya decía «Falconiformes, Falconidae»: diez fichas. No lo ve
+  nadie —`validate` coteja el `park.json` con su manifiesto y con el geojson, **no con el SQL**— y la
+  carga sale en verde, porque el fichero es válido. Se caza regenerando los dieciséis y mirando
+  `git status Database/`: el que salga modificado es el que iba atrasado. La otra mitad del mismo
+  problema es de medición: el inventario que compara el n2 nuevo con el VIEJO no ve este caso (los
+  dos ficheros coinciden), así que **la cifra buena se mide contra la BASE** y no contra el fichero
+  anterior — ahí eran 178 fichas y no 168.
+- **Una clave única de texto en MySQL ignora los acentos, así que dos filas del fichero son UNA en la
+  tabla.** `glosario.term` es `UNIQUE` con `utf8mb4_unicode_ci`: «foliolo» y «folíolo» son el mismo
+  término para la base. El seed declaraba 219 y la tabla se quedaba en 218, sin un solo error, con la
+  segunda definición pisando a la primera. Estaban duplicados en el origen —cada entrada citaba a la
+  otra como alias— y se fundieron el 2026-09-14. La regla: al cargar una tabla con clave única de
+  texto, **cuenta las filas después y compáralas con las del fichero**.
 - **Un campo LOCAL que en realidad no es local, y el catálogo contradiciéndose consigo mismo sin que
   nada pudiera verlo.** `regionalStatus` guarda la figura del catálogo autonómico y es local —lo
   lleva cada `park.json`—, así que la coherencia entre parques de `validate` no lo mira: solo compara

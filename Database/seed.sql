@@ -1472,7 +1472,7 @@ INSERT INTO glosario (term, definition, category, aliases, source) VALUES
   ('bráctea', 'Hoja modificada, a veces coloreada, situada junto a las flores.', 'botánica', '["brácteas"]', 'NaturDex (divulgacion)'),
   ('peciolo', 'El rabillo que une la hoja al tallo.', 'botánica', '["peciolos","pecíolo","pecíolos"]', 'NaturDex (divulgacion)'),
   ('sésil', 'Que carece de rabillo y se une directamente al tallo (hoja o flor).', 'botánica', '["sésiles"]', 'NaturDex (divulgacion)'),
-  ('foliolo', 'Cada una de las piezas en que se divide una hoja compuesta.', 'botánica', '["foliolos","folíolo","folíolos"]', 'NaturDex (divulgacion)'),
+  ('foliolo', 'Cada una de las hojitas independientes en que se divide una hoja compuesta.', 'botánica', '["foliolos","folíolo","folíolos"]', 'NaturDex (divulgacion)'),
   ('pinnado', '(Hoja) dividida en foliolos dispuestos a ambos lados del nervio, como una pluma.', 'botánica', '["pinnada","pinnados","pinnadas"]', 'NaturDex (divulgacion)'),
   ('palmeado', '(Hoja) dividida en lóbulos que salen de un mismo punto, como los dedos de una mano.', 'botánica', '["palmeada","palmeados","palmeadas"]', 'NaturDex (divulgacion)'),
   ('lanceolado', '(Hoja) estrecha y puntiaguda, con forma de punta de lanza.', 'botánica', '["lanceolada","lanceolados","lanceoladas"]', 'NaturDex (divulgacion)'),
@@ -1623,7 +1623,6 @@ INSERT INTO glosario (term, definition, category, aliases, source) VALUES
   ('gallinácea', 'Ave del grupo de la perdiz, la codorniz y el faisán: cuerpo rechoncho, patas fuertes y vuelo corto y ruidoso.', 'zoología', '["gallináceas","gallináceo"]', 'NaturDex (divulgacion)'),
   -- Ampliación (2026-08-01): vocabulario de las fichas del matorral semiárido litoral y de las aves
   -- marinas de la Red Natura 2000. Ver Docs/glosario-divulgativo.md.
-  ('folíolo', 'Cada una de las hojitas independientes en que se divide una hoja compuesta.', 'botánica', '["folíolos","foliolo","foliolos"]', 'NaturDex (divulgacion)'),
   ('papila', 'Abultamiento diminuto de la superficie de una hoja o un tallo; cuando están llenas de agua brillan al sol como gotas.', 'botánica', '["papilas","papiloso","papilosa","papilosos","papilosas"]', 'NaturDex (divulgacion)'),
   ('glomérulo', 'Grupo compacto de flores o de capítulos apretados unos contra otros.', 'botánica', '["glomérulos"]', 'NaturDex (divulgacion)'),
   ('ovoide', 'Con forma de huevo.', 'botánica', '["ovoides","obovoide","obovoides"]', 'NaturDex (divulgacion)'),
