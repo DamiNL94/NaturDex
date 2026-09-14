@@ -2,7 +2,7 @@
   "slug": "sierra-espuna",
   "name": "Sierra Espuña",
   "apiSlug": "sierra-espuna",
-  "version": 19,
+  "version": 23,
   "updatedAt": "2026-09-14",
   "data": "Data/parks/murcia/sierra-espuna/park.json",
   "geo": {
@@ -15,7 +15,7 @@
   "images": [],
   "audio": [],
   "counts": {
-    "species": 188,
+    "species": 250,
     "habitats": 13,
     "pointsOfInterest": 13,
     "images": 0,

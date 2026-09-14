@@ -265,17 +265,28 @@ function identificadorReutilizado(mapa, dudosos, sci, campo) {
  * *Rhamnus lycioides*; escribirlo como especie nueva lo pone dos veces en el mismo catálogo, y ni
  * `taxones:duplicados` ni el cruce por binomio lo ven.
  *
- * La subespecie NOMINAL sí cuenta como el mismo taxón (el tercer epíteto repite el segundo: es la
- * regla de `funde-trinomios-nominales.js`). Una subespecie DISTINTA no: colgar de la ficha de la
- * especie un infrataxón que no es el suyo es la deuda nº 36, y por eso «Teucrium buxifolium subsp.
- * rivasii» NO casa con la ficha «Teucrium buxifolium».
+ * Hay que mirar el RANGO de los dos lados, no solo el del aceptado:
+ *
+ *   · el aceptado no baja de especie          → lo que sobra es autoría y es el mismo taxón;
+ *   · la ficha ya está en ese rango           → vale si es la MISMA subespecie
+ *     («Saxifraga camposii subsp. leptophylla» ya fichada, y EIDOS devuelve ese mismo nombre con su
+ *     autor detrás: es la ficha que ya está, no una nueva);
+ *   · la ficha es la especie y el aceptado un infrataxón → solo vale la subespecie **NOMINAL** (el
+ *     tercer epíteto repite el segundo, la regla de `funde-trinomios-nominales.js`). Colgar de la
+ *     ficha de la especie un infrataxón que no es el suyo es la deuda nº 36, y por eso «Teucrium
+ *     buxifolium subsp. rivasii» NO casa con la ficha «Teucrium buxifolium».
  */
+const infraEpiteto = (n) => {
+  const m = /\b(?:subsp|ssp|var|f)\.\s+([a-z-]+)/i.exec(String(n));
+  return m ? m[1].toLowerCase() : null;
+};
 function mismoTaxonQueFicha(aceptadoEidos, nombreFicha) {
   if (!nameMatches(aceptadoEidos, nombreFicha)) return false;
-  const infra = /\b(?:subsp|ssp|var|f)\.\s+([a-z-]+)/i.exec(aceptadoEidos);
-  if (!infra) return true;                        // lo que sobra es solo autoría
-  const epiteto = String(nombreFicha).split(/\s+/)[1] || '';
-  return infra[1].toLowerCase() === epiteto.toLowerCase();
+  const infraAceptado = infraEpiteto(aceptadoEidos);
+  if (!infraAceptado) return true;
+  const infraFicha = infraEpiteto(nombreFicha);
+  if (infraFicha) return infraFicha === infraAceptado;
+  return infraAceptado === String(nombreFicha).split(/\s+/)[1].toLowerCase();
 }
 
 function resolverNombre(sel, fichadas, universal) {
@@ -530,6 +541,25 @@ function main() {
 
   const habitatsDelParque = new Set((doc.habitats || []).map(h => h.id));
   const previas = new Map((doc.species || []).map(s => [s.scientificName, s]));
+
+  /*
+   * En modo `--altas`, el propio espacio cuenta para resolver el nombre.
+   *
+   * `cargarFichadas()` salta a propósito el parque que se está escribiendo: cuando se regenera
+   * entero, sus fichas se van a reescribir y mirarlas sería mirarse al espejo. Pero aquí no se
+   * regenera nada, y la pregunta es justo la contraria: **¿esta alta es una ficha que este espacio
+   * ya tiene con otro nombre?** Sin esto, *Saxifraga almeriensis* —que EIDOS da por sinónimo de
+   * *S. camposii* subsp. *leptophylla*, la ficha que Sierra Espuña ya publica— entraba como especie
+   * nueva, y ningún guardián lo veía: otro epíteto, otro binomio, otro `eidosTaxonId`.
+   */
+  if (ALTAS) {
+    for (const sp of doc.species || []) {
+      if (!fichadas.has(sp.scientificName)) fichadas.set(sp.scientificName, { eidos: new Map(), gbif: new Map() });
+      const e = fichadas.get(sp.scientificName);
+      if (sp.eidosTaxonId != null) e.eidos.set(sp.eidosTaxonId, PARK);
+      if (sp.gbifSpeciesKey != null) e.gbif.set(sp.gbifSpeciesKey, PARK);
+    }
+  }
 
   console.log(`\nEspacio: ${entrada.name} (${PARK})`);
   console.log(`Selección aprobada: ${seleccion.doc.total} especies · ${rel(seleccion.ruta)}`);

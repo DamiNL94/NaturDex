@@ -6069,18 +6069,22 @@
   "Caroxylon vermiculatum": {
     "commonName": "Caramillo",
     "kingdom": "flora",
-    "group": null,
-    "habitat": null,
-    "seasonality": "Todo el año",
+    "group": "Mata",
+    "habitat": "Suelos salinos y nitrificados, ramblas, majadas y bordes de camino",
+    "seasonality": "Verano y otoño",
     "rarityScore": 1,
     "rarityBasis": {
       "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     },
-    "description": null,
+    "description": "Mata muy ramificada de hojas cortas, gruesas y algo peludas que en verano se vuelven grisáceas. Es de las mejores indicadoras de suelos con sal y con exceso de nitrógeno, como los antiguos apriscos de ganado. Al fructificar, cada semilla se rodea de alas membranosas.",
     "descriptionSource": null,
-    "tips": [],
+    "tips": [
+      "Hojitas cortas, gruesas y con pelusa",
+      "Frutos con alas membranosas rosadas o pajizas",
+      "Aparece donde ha habido ganado o remoción del suelo"
+    ],
     "taxonomy": {
       "kingdom": "Plantae",
       "phylum": "Tracheophyta",
