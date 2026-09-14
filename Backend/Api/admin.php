@@ -168,7 +168,7 @@ if ($method === "GET" && $action === "list") {
         respond(["items" => $stmt->get_result()->fetch_all(MYSQLI_ASSOC)]);
     }
     if ($resource === "species") {
-        $stmt = $conn->prepare("SELECT id, common_name, scientific_name, kingdom, family, primary_habitat, conservation_status, description, identification_tips, seasonality, image_url, latitude, longitude, rarity_score, is_featured, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, iucn_spain, spain_status, regional_status, regional_ccaa, review_note FROM species WHERE park_id = ? ORDER BY common_name");
+        $stmt = $conn->prepare("SELECT id, common_name, scientific_name, kingdom, family, primary_habitat, description, identification_tips, seasonality, image_url, latitude, longitude, rarity_score, is_featured, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, iucn_spain, spain_status, regional_status, regional_ccaa, review_note FROM species WHERE park_id = ? ORDER BY common_name");
         $stmt->bind_param("i", $parkId);
         $stmt->execute();
         $items = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
@@ -244,7 +244,7 @@ if ($method === "POST" && $action === "save") {
         $rarity = (int) ($item["rarity_score"] ?? 1);
         if ($rarity < 1 || $rarity > 5) respond(["error" => "La rareza debe estar entre 1 y 5."], 400);
         $family = sOrNull($item, "family"); $pHab = sOrNull($item, "primary_habitat");
-        $status = sOrNull($item, "conservation_status"); $desc = sOrNull($item, "description");
+        $desc = sOrNull($item, "description");
         $tips = sOrNull($item, "identification_tips"); $season = sOrNull($item, "seasonality");
         $img = sOrNull($item, "image_url");
         $lat = numOrNull($item, "latitude"); $lng = numOrNull($item, "longitude");
@@ -259,13 +259,13 @@ if ($method === "POST" && $action === "save") {
 
         $conn->begin_transaction();
         if ($id > 0) {
-            $stmt = $conn->prepare("UPDATE species SET common_name=?, scientific_name=?, kingdom=?, family=?, primary_habitat=?, conservation_status=?, description=?, identification_tips=?, seasonality=?, image_url=?, latitude=?, longitude=?, rarity_score=?, is_featured=?, source=?, taxon_phylum=?, taxon_class=?, taxon_order=?, taxon_family=?, taxon_genus=?, iucn_global=?, iucn_spain=?, spain_status=?, regional_status=?, regional_ccaa=?, review_note=? WHERE id=? AND park_id=?");
-            // Tipos: 10 textos + lat/lng + rareza/destacada + 12 textos + id/park_id
-            $stmt->bind_param("ssssssssssddiissssssssssssii", $common, $sci, $kingdom, $family, $pHab, $status, $desc, $tips, $season, $img, $lat, $lng, $rarity, $featured, $source, $tPhy, $tCla, $tOrd, $tFam, $tGen, $iucn, $iucnEs, $esp, $mur, $ccaa, $note, $id, $parkId);
+            $stmt = $conn->prepare("UPDATE species SET common_name=?, scientific_name=?, kingdom=?, family=?, primary_habitat=?, description=?, identification_tips=?, seasonality=?, image_url=?, latitude=?, longitude=?, rarity_score=?, is_featured=?, source=?, taxon_phylum=?, taxon_class=?, taxon_order=?, taxon_family=?, taxon_genus=?, iucn_global=?, iucn_spain=?, spain_status=?, regional_status=?, regional_ccaa=?, review_note=? WHERE id=? AND park_id=?");
+            // Tipos: 9 textos + lat/lng + rareza/destacada + 12 textos + id/park_id
+            $stmt->bind_param("sssssssssddiissssssssssssii", $common, $sci, $kingdom, $family, $pHab, $desc, $tips, $season, $img, $lat, $lng, $rarity, $featured, $source, $tPhy, $tCla, $tOrd, $tFam, $tGen, $iucn, $iucnEs, $esp, $mur, $ccaa, $note, $id, $parkId);
         } else {
-            $stmt = $conn->prepare("INSERT INTO species (park_id, common_name, scientific_name, kingdom, family, primary_habitat, conservation_status, description, identification_tips, seasonality, image_url, latitude, longitude, rarity_score, is_featured, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, iucn_spain, spain_status, regional_status, regional_ccaa, review_note) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-            // Tipos: park_id + 10 textos + lat/lng + rareza/destacada + 12 textos
-            $stmt->bind_param("issssssssssddiissssssssssss", $parkId, $common, $sci, $kingdom, $family, $pHab, $status, $desc, $tips, $season, $img, $lat, $lng, $rarity, $featured, $source, $tPhy, $tCla, $tOrd, $tFam, $tGen, $iucn, $iucnEs, $esp, $mur, $ccaa, $note);
+            $stmt = $conn->prepare("INSERT INTO species (park_id, common_name, scientific_name, kingdom, family, primary_habitat, description, identification_tips, seasonality, image_url, latitude, longitude, rarity_score, is_featured, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, iucn_spain, spain_status, regional_status, regional_ccaa, review_note) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            // Tipos: park_id + 9 textos + lat/lng + rareza/destacada + 12 textos
+            $stmt->bind_param("isssssssssddiissssssssssss", $parkId, $common, $sci, $kingdom, $family, $pHab, $desc, $tips, $season, $img, $lat, $lng, $rarity, $featured, $source, $tPhy, $tCla, $tOrd, $tFam, $tGen, $iucn, $iucnEs, $esp, $mur, $ccaa, $note);
         }
         if (!$stmt->execute()) { $conn->rollback(); respond(["error" => "No se pudo guardar la especie: " . $conn->error], 500); }
         $speciesId = $id > 0 ? $id : $conn->insert_id;

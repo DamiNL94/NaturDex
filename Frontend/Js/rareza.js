@@ -115,6 +115,124 @@ export function baseDe(species) {
   return { categoria: limpia(base.categoria), norma: limpia(base.norma) || null, ambito: base.ambito || null };
 }
 
+/*
+ * LA CATEGORÍA QUE ENSEÑA LA TARJETA, Y POR QUÉ NO SALE DEL `basis`
+ *
+ * La ficha pertenece a un PARQUE, y quien la lee está dentro de esa comunidad: en la tarjeta manda la
+ * categoría del catálogo AUTONÓMICO; si ahí no la cataloga nada, la estatal; y si tampoco, la Lista
+ * Roja mundial de la UICN (decisión del 2026-09-12).
+ *
+ * Ese orden es el del territorio, no el de la gravedad, así que `rarityLocalBasis` no sirve para
+ * resolverlo: ese campo guarda la categoría más GRAVE de los dos ámbitos, y cuando la estatal gana
+ * —46 fichas de 2.882— la autonómica no queda escrita en ninguna parte. Hay que leer los dos textos.
+ *
+ * El vocabulario es el de `Tools/lib/rareza.js` (ESCALERA, EVALUACIONES, NEGACION, INDETERMINADO) y
+ * el de `Tools/lib/uicn.js` (las nueve categorías), con los mismos textos: es la misma escalera vista
+ * desde los dos lados del repositorio, igual que ya lo son `TRAMOS` y su `significado`. Si cambia
+ * allí, cambia aquí. Lo que NO se copia es `NO_SON_PROTECCION`: allí solo sirve para distinguir «leído
+ * y descartado» de «no lo he entendido», y ninguna de sus fórmulas nombra una categoría de la
+ * escalera, así que no puede cambiar el tramo que se lee.
+ */
+const ESCALERA_TEXTO = [
+  [5, /en\s+peligro\s+de\s+extinci[óo]n|\bextinguid[ao]\b/i],
+  [4, /\bvulnerable\b|sensible\s+a\s+la\s+alteraci[óo]n/i],
+  [3, /(especies?\s+)?de\s+inter[ée]s\s+especial/i],
+  [2, /r[ée]gimen\s+de\s+protecci[óo]n\s+especial|\bLESRPE\b|Directiva\s+Aves/i],
+];
+// La Lista Roja y el Libro Rojo son evaluación científica, no norma, y cuentan por decisión explícita
+// (Tools/lib/rareza.js). Sin esto, la flora amenazada que ninguna norma nombra —la Caralluma de
+// Cabezo Gordo, «Lista Roja 2008: EN»— caería a la UICN mundial, que no la evalúa, y su tarjeta
+// perdería la única categoría que tiene.
+const EVALUACIONES_TEXTO = [
+  [5, /(Lista\s+Roja|Libro\s+Rojo)[^:]*:\s*(CR|EN)\b|En\s+Peligro\s+Cr[íi]tico/i],
+  [5, /(Lista|Libro)\s+Rojo?a?[^.;·]*\ben\s+peligro\b/i],
+  [4, /(Lista\s+Roja|Libro\s+Rojo)[^:]*:\s*VU\b/i],
+  [4, /\bvulnerable\b[^.;·]*(Lista\s+Roja|Libro\s+Rojo)|(Lista\s+Roja|Libro\s+Rojo)[^.;·]*\bvulnerable\b/i],
+];
+// «No incluida en la Lista Roja … ni en el LESRPE» CONTIENE la palabra LESRPE: sin esto, una ficha
+// puntuaría 2 justo por decir que no está catalogada.
+const NEGACION_TEXTO = /^\s*(no\s+(incluid[ao]|catalogad[ao]|localizad[ao]|figura|consta|evaluad[ao])|sin\s+(figura|categor[íi]a|protecci[óo]n)|excluid[ao]\s+del)/i;
+const INDETERMINADO_TEXTO = /pendiente\s+de\s+(confirmar|contrastar|comprobar)|categor[íi]a\s+exacta|no\s+confirmada|dudas\s+sobre/i;
+
+/** El tramo que afirma UN texto de estado legal, leído segmento a segmento. 1 = no dice ninguno. */
+function tramoDeTexto(texto) {
+  const t = String(texto || '').trim();
+  if (!t || t === '—') return 1;
+  let mejor = 1;
+  for (const seg of t.split(/\s*[;·]\s*/).filter(Boolean)) {
+    // El orden importa, y es el de Tools/lib/rareza.js: «categoría exacta pendiente de confirmar»
+    // nombra la fuente, y mirado después de la escalera puntuaría como si la categoría constara.
+    if (INDETERMINADO_TEXTO.test(seg) || NEGACION_TEXTO.test(seg)) continue;
+    for (const [valor, re] of [...EVALUACIONES_TEXTO, ...ESCALERA_TEXTO]) {
+      if (!re.test(seg)) continue;
+      if (valor > mejor) mejor = valor;
+      break;
+    }
+  }
+  return mejor;
+}
+
+/** Las nueve categorías de la UICN, como las escribe `Tools/lib/uicn.js`. */
+const CATEGORIA_UICN = {
+  EX: 'Extinta', EW: 'Extinta en estado silvestre', CR: 'En peligro crítico', EN: 'En peligro',
+  VU: 'Vulnerable', NT: 'Casi amenazada', LC: 'Preocupación menor', DD: 'Datos insuficientes',
+  NE: 'No evaluada',
+};
+// Las que son AMENAZA. «Preocupación menor» es la categoría de lo común: en la tarjeta etiquetaría
+// como novedad lo normal —358 fichas de 2.882— y taparía a las 24 que sí lo son. «Datos
+// insuficientes» y «No evaluada» dicen que no se sabe, que no es una categoría que enseñar.
+const AMENAZA_UICN = new Set(['EX', 'EW', 'CR', 'EN', 'VU', 'NT']);
+
+/** El código de dos letras con el que empieza una etiqueta de la UICN, o `null`. */
+function codigoUicn(texto) {
+  const m = /^([A-Z]{2})(?![A-Za-z])/.exec(String(texto || '').trim());
+  return m && CATEGORIA_UICN[m[1]] ? m[1] : null;
+}
+
+/**
+ * La categoría de conservación de la TARJETA: la del ámbito más cercano que catalogue la especie.
+ *
+ * Devuelve `null` cuando ninguno de los tres la cataloga —lo normal en más de un tercio del
+ * catálogo—, y entonces la tarjeta no lleva distintivo: un «sin figura de protección» repetido en
+ * novecientas tarjetas es ruido, no información.
+ *
+ * NO es el tramo de rareza. Las estrellas, el color de la tarjeta, el cartel de advertencia y el
+ * filtro siguen saliendo de `tramoDe()`, que toma la categoría más grave de los dos ámbitos legales.
+ * Cuando la estatal es más grave que la autonómica —34 fichas—, la tarjeta enseña la autonómica y las
+ * estrellas siguen marcando el tramo: el ámbito escrito al lado es lo que evita leer una por otra.
+ *
+ * @returns {{etiqueta:string, ambito:string, titulo:string, amenaza:boolean}|null}
+ */
+export function categoriaConservacion(species) {
+  if (!species) return null;
+  const autonomico = tramoDeTexto(species.regionalStatus);
+  if (autonomico >= 2) {
+    return {
+      etiqueta: TRAMOS[autonomico].corto,
+      // Sin `regionalCcaa` no se pone una comunidad por defecto: se dice «comunidad autónoma» a
+      // secas, que es lo único cierto cuando el dato no lo aclara (la misma regla que la ficha).
+      ambito: species.regionalCcaa || 'comunidad autónoma',
+      titulo: species.regionalStatus,
+      amenaza: autonomico >= TRAMO_AMENAZA,
+    };
+  }
+  const estatal = tramoDeTexto(species.spainStatus);
+  if (estatal >= 2) {
+    return { etiqueta: TRAMOS[estatal].corto, ambito: 'España', titulo: species.spainStatus, amenaza: estatal >= TRAMO_AMENAZA };
+  }
+  const cod = codigoUicn(species.iucnGlobal);
+  if (cod && AMENAZA_UICN.has(cod)) {
+    return {
+      etiqueta: CATEGORIA_UICN[cod] + ' (' + cod + ')',
+      ambito: 'UICN',
+      titulo: species.iucnGlobal,
+      // NT es «todavía no amenazada»: se enseña, pero no con el rojo de las dos categorías de amenaza.
+      amenaza: cod !== 'NT',
+    };
+  }
+  return null;
+}
+
 // Los consejos cambian según lo que se tenga delante: a una planta no se la persigue y a un
 // vertebrado no se le arrancan esquejes. Se escriben en imperativo y en negativo porque es lo que
 // se lee de un vistazo con el móvil en la mano y el animal a la vista.

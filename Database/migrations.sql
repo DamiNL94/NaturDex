@@ -28,6 +28,7 @@ USE naturadex;
 DROP PROCEDURE IF EXISTS naturdex_add_column;
 DROP PROCEDURE IF EXISTS naturdex_add_index;
 DROP PROCEDURE IF EXISTS naturdex_rename_column;
+DROP PROCEDURE IF EXISTS naturdex_drop_column;
 
 DELIMITER $$
 
@@ -88,6 +89,29 @@ END$$
 --   p_table:      nombre de la tabla
 --   p_index:      nombre del índice (el que se comprueba en information_schema.statistics)
 --   p_definition: cláusula ADD completa, p. ej. 'UNIQUE INDEX unique_x (a, b)' o 'INDEX idx_y (c)'
+-- Retira una columna solo si todavía existe. Es el simétrico de naturdex_add_column y hace falta
+-- por lo mismo: `DROP COLUMN IF EXISTS` no está en Oracle MySQL, así que una segunda pasada sobre
+-- una base ya migrada abortaría con ERROR 1091 y dejaría a medias todo lo que viniera detrás.
+--
+-- Esto BORRA DATO y no se puede deshacer: úsese solo con la decisión escrita al lado de la llamada.
+CREATE PROCEDURE naturdex_drop_column(
+    IN p_table VARCHAR(64),
+    IN p_column VARCHAR(64)
+)
+BEGIN
+    IF EXISTS (
+        SELECT 1 FROM information_schema.columns
+        WHERE table_schema = DATABASE()
+          AND table_name   = p_table
+          AND column_name  = p_column
+    ) THEN
+        SET @ddl = CONCAT('ALTER TABLE `', p_table, '` DROP COLUMN `', p_column, '`');
+        PREPARE stmt FROM @ddl;
+        EXECUTE stmt;
+        DEALLOCATE PREPARE stmt;
+    END IF;
+END$$
+
 CREATE PROCEDURE naturdex_add_index(
     IN p_table VARCHAR(64),
     IN p_index VARCHAR(64),
@@ -387,10 +411,31 @@ CALL naturdex_add_column('parks', 'weather_municipality', 'VARCHAR(120) NULL');
 CALL naturdex_add_column('parks', 'weather_distance_km',  'DECIMAL(6,2) NULL');
 CALL naturdex_add_column('parks', 'weather_source',       'VARCHAR(255) NULL');
 
+-- ------------------------------------------------------------------------------------------------
+-- Retirada de `species.conservation_status` (2026-09-14). BORRA DATO.
+-- ------------------------------------------------------------------------------------------------
+-- Era una etiqueta DERIVADA que producía `build-species-n2.js` a partir de la figura legal, y cuyo
+-- último caso por defecto era el bug: sin norma, escribía el código de la UICN en el campo que
+-- Docs/arquitectura/PROCEDENCIA-DE-CAMPOS.md reserva a la figura legal. La auditoría del catálogo lo
+-- midió en las 2.882 fichas: 21 anunciaban una protección que su propia ficha niega (el romero
+-- «Protegida (LESRPE)» con tramo 1, la aulaga «En Peligro de Extinción») y 570 llevaban un código de
+-- la UICN. Ningún guardián lo miraba: `especies:legal` coteja `spain_status` y `regional_status`, y
+-- a éste no le preguntaba nadie.
+--
+-- El 2026-09-14 la PWA dejó de leerlo en las dos puntas —la tarjeta del catálogo y la ficha de
+-- detalle pintan ahora un distintivo DERIVADO (`categoriaConservacion()` de Frontend/Js/rareza.js)—,
+-- y con él salieron el park.json de los dieciséis espacios, el payload de la API, el formulario del
+-- AdminPanel y el generador de SQL. La columna es lo único que quedaba.
+--
+-- No se pierde nada recuperable: el dato bueno —la categoría con su norma y su ámbito— sigue entero
+-- en `spain_status`, `regional_status`, `regional_ccaa`, `iucn_global` e `iucn_spain`.
+CALL naturdex_drop_column('species', 'conservation_status');
+
 -- Limpieza de los procedimientos auxiliares.
 DROP PROCEDURE IF EXISTS naturdex_add_column;
 DROP PROCEDURE IF EXISTS naturdex_add_index;
 DROP PROCEDURE IF EXISTS naturdex_rename_column;
+DROP PROCEDURE IF EXISTS naturdex_drop_column;
 
 -- Limpieza de coordenadas de especies: la localización la aporta el usuario (GPS).
 UPDATE species SET latitude = NULL, longitude = NULL;

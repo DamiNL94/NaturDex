@@ -10,7 +10,7 @@ import { explicaAsociacion, explicacionFitosociologia } from '../fitosociologia.
 import { highlightGlossary } from '../glossary.js';
 import { groupSwatch, habitatGroup, habitatsOfGroup } from '../habitat-groups.js';
 import { isMarkVerifiedLocally } from '../presence.js';
-import { TRAMOS, baseDe, cartelAdvertencia, claseRareza, estrellas, recordatorioAdvertencia, tramoDe } from '../rareza.js';
+import { TRAMOS, baseDe, cartelAdvertencia, categoriaConservacion, claseRareza, estrellas, recordatorioAdvertencia, tramoDe } from '../rareza.js';
 import { esMigratoria, habitatAreaLabel, habitatSpeciesSeenCount, isHabitatComplete, speciesOfHabitat, state } from '../state.js';
 import { atributosAmpliar, habitatImageSrc, html, kingdomEmoji, plegable, poiImageSrc, raw, speciesImageSrc } from '../util.js';
 import { renderInvasoraDetail } from './invasoras.js';
@@ -19,6 +19,35 @@ import { renderInvasoraDetail } from './invasoras.js';
 function renderTaxonomyRow(label, value) {
   if (!value) return '';
   return html`<div><span>${label}</span><strong>${value}</strong></div>`;
+}
+
+/*
+ * El distintivo de conservación de la ficha, DERIVADO — y por qué ya no se pinta el campo que había.
+ *
+ * Hasta el 2026-09-14 esto era `<span class="badge alert">${species.conservationStatus}</span>`: el
+ * campo tal cual venía. Ese campo es una **etiqueta derivada sin guardián** —`especies:legal` coteja
+ * `spainStatus` y `regionalStatus`, y a él no lo mira nadie—, y la auditoría del catálogo lo midió:
+ *
+ *   · **21 fichas afirmaban una protección que la propia ficha niega** dos campos más abajo (el
+ *     romero anunciado «Protegida (LESRPE)» con su `spainStatus` diciendo que no lo está, la aulaga
+ *     «En Peligro de Extinción» con tramo 1). Las 21 en Cuatro Calas, el espacio piloto.
+ *   · **570 de las 2.882 llevaban un código de la UICN** —`LC`, `NE`, `VU`— en el campo que
+ *     `PROCEDENCIA-DE-CAMPOS.md:52` reserva a la figura **legal**: los dos ejes mezclados, que es lo
+ *     que esa misma línea avisa que no se haga.
+ *
+ * La tarjeta del catálogo ya había dejado de leerlo el 2026-09-12 (`render/catalogo.js`), y usa
+ * `categoriaConservacion()`, que saca la categoría del ámbito más cercano —comunidad autónoma →
+ * España → UICN— de los textos que **sí** tienen cotejo. Esto hace lo mismo, así que las dos puntas
+ * dicen lo mismo y el criterio vive en un solo sitio (`Js/rareza.js`).
+ *
+ * Cuando no hay ninguna figura ni amenaza, no se pinta nada: un «sin figura de protección» en la
+ * mitad de las fichas es ruido. La categoría con su norma sigue estando entera abajo, en el cartel
+ * de advertencia y en «Fuentes y más información».
+ */
+function insigniaConservacion(species) {
+  const cat = categoriaConservacion(species);
+  if (!cat) return '';
+  return html`<span class="badge ${cat.amenaza ? 'alert' : 'rareza'}" title="${cat.titulo || ''}">${cat.etiqueta} · ${cat.ambito}</span>`;
 }
 
 // ¿La portada de esta ficha es una foto de verdad o una imagen generada? De ello dependen dos
@@ -329,7 +358,7 @@ function renderSpeciesDetail() {
     </div>
     <div class="detail-body">
     <span class="card-meta"><span class="badge ${species.kingdom}">${species.kingdom}</span>
-    <span class="badge alert">${species.conservationStatus}</span>
+    ${insigniaConservacion(species)}
     ${esMigratoria(species) ? html`<span class="badge migratoria">🕊️ Ave migratoria</span>` : ''}
     ${species.reviewNote ? html`<span class="badge review">a revisar</span>` : ''}
     </span>

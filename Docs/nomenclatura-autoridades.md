@@ -1,32 +1,21 @@
 # Cotejo de nomenclatura contra EIDOS y GBIF
 
-Generado por `npm run taxones:nomenclatura`. Fichas con hallazgo: 68.
+Generado por `npm run taxones:nomenclatura`. Fichas con hallazgo: 65.
 
 La regla que se comprueba: `scientificName`, `eidosTaxonId` y `taxonomy` los manda **EIDOS**
 (nombre aceptado); `gbifSpeciesKey` la manda **GBIF** (key aceptada de su backbone, que es la
 que lleva las ocurrencias). Que las dos autoridades usen géneros distintos no es un error.
 
-## El nombre de la ficha es un SINÓNIMO para EIDOS (hay que renombrar) — 28
+## El nombre de la ficha es un SINÓNIMO para EIDOS (hay que renombrar) — 26
 
-- **Centaurium rigualii** (cabo-cope-puntas-calnegre)
-  - EIDOS da «Centaurium rigualii» por Sinónimo; acepta «Centaurium barrelieri (Dufour) Font Quer & Rothm.» (taxonid 3360, Species)
-  - propuesta: `Centaurium barrelieri`
 - **Anabasis hispanica** (cabo-cope-puntas-calnegre, calblanque-monte-cenizas-pena-aguila, cuatro-calas, espacios-abiertos-e-islas-del-mar-menor, humedal-del-ajauque-y-rambla-salada)
   - EIDOS da «Anabasis hispanica» por Sinónimo; acepta «Anabasis mucronata (Lag.) C. Vic.» (taxonid 1838, Species)
   - propuesta: `Anabasis mucronata`
-- **Maytenus senegalensis subsp. europaea** (cabo-cope-puntas-calnegre, calblanque-monte-cenizas-pena-aguila, espacios-abiertos-e-islas-del-mar-menor)
-  - EIDOS da «Maytenus senegalensis subsp. europaea» por Sinónimo; acepta «Gymnosporia senegalensis subsp. europaea (Boiss.) Rivas Goday & Rivas Mart.» (taxonid 6258, Subspecies). **El aceptado es de rango Subspecies**: adoptarlo cambia el rango de la ficha, no solo el nombre, así que no se propone un binomio truncado
-- **Elymus farctus** (cabo-cope-puntas-calnegre, salinas-arenales-san-pedro-pinatar)
-  - EIDOS da «Elymus farctus» por Sinónimo; acepta «Thinopyrum junceum (L.) Á. Löve» (taxonid 9567, Species)
-  - propuesta: `Thinopyrum junceum`
-- **Serratula mucronata** (cabo-cope-puntas-calnegre)
-  - EIDOS da «Serratula mucronata» por Sinónimo; acepta «Klasea flavescens subsp. mucronata (Desf.) Cantó & Rivas Mart.» (taxonid 5538, Subspecies). **El aceptado es de rango Subspecies**: adoptarlo cambia el rango de la ficha, no solo el nombre, así que no se propone un binomio truncado
-- **Sarcocornia fruticosa** (cabo-cope-puntas-calnegre, calblanque-monte-cenizas-pena-aguila, espacios-abiertos-e-islas-del-mar-menor, humedal-del-ajauque-y-rambla-salada, salinas-arenales-san-pedro-pinatar)
+- **Sarcocornia fruticosa** (calblanque-monte-cenizas-pena-aguila, espacios-abiertos-e-islas-del-mar-menor, humedal-del-ajauque-y-rambla-salada, salinas-arenales-san-pedro-pinatar)
   - EIDOS da «Sarcocornia fruticosa» por Sinónimo; acepta «Salicornia lagascae (Fuente, Rufo & Sánchez Mata) Piirainen & G. Kadereit» (taxonid 33125, Species)
   - propuesta: `Salicornia lagascae`
-- **Sarcocapnos enneaphylla subsp. saetabensis** (cabo-cope-puntas-calnegre, sotos-y-bosques-de-ribera-de-canaverosa)
-  - EIDOS da «Sarcocapnos enneaphylla subsp. saetabensis» por Sinónimo; acepta «Sarcocapnos saetabensis Mateo & Figuerola» (taxonid 31994, Species)
-  - propuesta: `Sarcocapnos saetabensis`
+- **Maytenus senegalensis subsp. europaea** (calblanque-monte-cenizas-pena-aguila, espacios-abiertos-e-islas-del-mar-menor)
+  - EIDOS da «Maytenus senegalensis subsp. europaea» por Sinónimo; acepta «Gymnosporia senegalensis subsp. europaea (Boiss.) Rivas Goday & Rivas Mart.» (taxonid 6258, Subspecies). **El aceptado es de rango Subspecies**: adoptarlo cambia el rango de la ficha, no solo el nombre, así que no se propone un binomio truncado
 - **Olea europaea subsp. sylvestris** (calblanque-monte-cenizas-pena-aguila)
   - EIDOS da «Olea europaea subsp. sylvestris» por Sinónimo; acepta «Olea europaea L. subsp. europaea» (taxonid 6645, Subspecies). **El aceptado es de rango Subspecies**: adoptarlo cambia el rango de la ficha, no solo el nombre, así que no se propone un binomio truncado
 - **Satureja cuneifolia** (carrascoy-y-el-valle, sierra-de-el-carche)
@@ -51,6 +40,9 @@ que lleva las ocurrencias). Que las dos autoridades usen géneros distintos no e
 - **Dactylis glomerata subsp. hispanica** (salinas-arenales-san-pedro-pinatar)
   - EIDOS da «Dactylis glomerata subsp. hispanica» por Sinónimo; acepta «Dactylis glomerata L.» (taxonid 9983, Species)
   - propuesta: `Dactylis glomerata`
+- **Elymus farctus** (salinas-arenales-san-pedro-pinatar)
+  - EIDOS da «Elymus farctus» por Sinónimo; acepta «Thinopyrum junceum (L.) Á. Löve» (taxonid 9567, Species)
+  - propuesta: `Thinopyrum junceum`
 - **Salicornia patula** (salinas-arenales-san-pedro-pinatar)
   - EIDOS da «Salicornia patula» por Sinónimo; acepta «Salicornia perennans Willd. subsp. perennans» (taxonid 80172, Subspecies). **El aceptado es de rango Subspecies**: adoptarlo cambia el rango de la ficha, no solo el nombre, así que no se propone un binomio truncado
 - **Sarcocornia perennis subsp. alpini** (salinas-arenales-san-pedro-pinatar)
@@ -79,22 +71,23 @@ que lleva las ocurrencias). Que las dos autoridades usen géneros distintos no e
   - EIDOS da «Pulicaria paludosa» por Sinónimo; acepta «Pulicaria arabica subsp. hispanica (Boiss.) Murb.» (taxonid 31951, Subspecies). **El aceptado es de rango Subspecies**: adoptarlo cambia el rango de la ficha, no solo el nombre, así que no se propone un binomio truncado
 - **Regulus ignicapillus** (sotos-y-bosques-de-ribera-de-canaverosa)
   - EIDOS da «Regulus ignicapillus» por Sinónimo; acepta «Regulus ignicapilla balearicus Jordans, 1923» (taxonid 23782, Subspecies). **El aceptado es de rango Subspecies**: adoptarlo cambia el rango de la ficha, no solo el nombre, así que no se propone un binomio truncado
+- **Sarcocapnos enneaphylla subsp. saetabensis** (sotos-y-bosques-de-ribera-de-canaverosa)
+  - EIDOS da «Sarcocapnos enneaphylla subsp. saetabensis» por Sinónimo; acepta «Sarcocapnos saetabensis Mateo & Figuerola» (taxonid 31994, Species)
+  - propuesta: `Sarcocapnos saetabensis`
 - **Senecio auricula subsp. auricula** (sotos-y-bosques-de-ribera-de-canaverosa)
   - EIDOS da «Senecio auricula subsp. auricula» por Sinónimo; acepta «Jacobaea auricula (Coss.) Pelser» (taxonid 674, Species)
   - propuesta: `Jacobaea auricula`
 
-## El eidosTaxonId no es de rango especie (hay que reanclar) — 42
+## El eidosTaxonId no es de rango especie (hay que reanclar) — 41
 
 - **Motacilla cinerea** (barrancos-de-gebas, espacios-abiertos-e-islas-del-mar-menor, humedal-del-ajauque-y-rambla-salada, salinas-arenales-san-pedro-pinatar)
   - el eidosTaxonId 10897 es de rango Subspecies («Motacilla cinerea subsp. canariensis Tunstall, 1771»), pero la ficha declara un binomio de especie
 - **Bufo bufo** (cabezo-gordo, sotos-y-bosques-de-ribera-de-canaverosa)
   - el eidosTaxonId 93827 es de rango Subspecies («Bufo bufo bufo Linnaeus, 1758»), pero la ficha declara un binomio de especie
-- **Caralluma europaea** (cabezo-gordo, cabo-cope-puntas-calnegre, calblanque-monte-cenizas-pena-aguila, espacios-abiertos-e-islas-del-mar-menor)
+- **Caralluma europaea** (cabezo-gordo, calblanque-monte-cenizas-pena-aguila, espacios-abiertos-e-islas-del-mar-menor)
   - el eidosTaxonId 80097 es de rango Variety («Caralluma europaea var. maroccana (Hook. fil.) A. Berger»), pero la ficha declara un binomio de especie
 - **Bucanetes githagineus** (cabo-cope-puntas-calnegre, sierra-de-las-moreras)
   - el eidosTaxonId 11363 es de rango Subspecies («Bucanetes githagineus subsp. zedlitzi»), pero la ficha declara un binomio de especie
-- **Serratula mucronata** (cabo-cope-puntas-calnegre)
-  - el eidosTaxonId 5538 es de rango Subspecies («Klasea flavescens subsp. mucronata (Desf.) Cantó & Rivas Mart.»), pero la ficha declara un binomio de especie
 - **Phalacrocorax carbo** (calblanque-monte-cenizas-pena-aguila, espacios-abiertos-e-islas-del-mar-menor, humedal-del-ajauque-y-rambla-salada, salinas-arenales-san-pedro-pinatar, sotos-y-bosques-de-ribera-de-canaverosa)
   - el eidosTaxonId 10965 es de rango Subspecies («Phalacrocorax carbo subsp. sinensis (Linnaeus, 1758)»), pero la ficha declara un binomio de especie
 - **Ovis aries** (carrascoy-y-el-valle)
@@ -183,30 +176,28 @@ que lleva las ocurrencias). Que las dos autoridades usen géneros distintos no e
 - **Senecio auricula subsp. auricula** (sotos-y-bosques-de-ribera-de-canaverosa)
   - taxonomy.genus «Jacobaea» ≠ género del nombre «Senecio»
 
-## gbifSpeciesKey apunta a un sinónimo HETEROTÍPICO (NO se toca: cambia el taxón) — 8
+## gbifSpeciesKey apunta a un sinónimo HOMOTÍPICO de GBIF (corregible: pierde ocurrencias) — 1
 
-- **Caralluma europaea** (cabezo-gordo, cabo-cope-puntas-calnegre, calblanque-monte-cenizas-pena-aguila, espacios-abiertos-e-islas-del-mar-menor)
+- **Curruca conspicillata** (cabo-cope-puntas-calnegre, carrascoy-y-el-valle, espacios-abiertos-e-islas-del-mar-menor, humedal-del-ajauque-y-rambla-salada, sierra-de-el-carche, sierra-de-las-moreras, sierra-espuna)
+  - gbifSpeciesKey 9868071 («Curruca conspicillata (Temminck, 1820)») es HOMOTYPIC_SYNONYM en el backbone; el aceptado es «Sylvia conspicillata Temminck, 1820» (key 2492959)
+  - propuesta: `2492959`
+
+## gbifSpeciesKey apunta a un sinónimo HETEROTÍPICO (NO se toca: cambia el taxón) — 4
+
+- **Caralluma europaea** (cabezo-gordo, calblanque-monte-cenizas-pena-aguila, espacios-abiertos-e-islas-del-mar-menor)
   - gbifSpeciesKey 3578145 («Caralluma europaea (Guss.) N.E.Br.») es SYNONYM en el backbone; el aceptado es «Ceropegia europaea (Guss.) Bruyns» (key 9245056)
-- **Centaurium rigualii** (cabo-cope-puntas-calnegre)
-  - gbifSpeciesKey 5596459 («Centaurium rigualii Esteve») es SYNONYM en el backbone; el aceptado es «Centaurium quadrifolium subsp. quadrifolium» (key 7270624)
-- **Capparis sicula subsp. sicula** (cabo-cope-puntas-calnegre)
-  - gbifSpeciesKey 7273402 («Capparis sicula subsp. sicula») es SYNONYM en el backbone; el aceptado es «Capparis spinosa var. canescens Coss.» (key 5602120)
-- **Maytenus senegalensis subsp. europaea** (cabo-cope-puntas-calnegre, calblanque-monte-cenizas-pena-aguila, espacios-abiertos-e-islas-del-mar-menor)
-  - gbifSpeciesKey 3793958 («Maytenus senegalensis subsp. europaeus (Boiss.) Rivas Mart. ex Güemes & M.B.Crespo») es SYNONYM en el backbone; el aceptado es «Gymnosporia senegalensis var. europaea (Boiss.) Jahand. & Maire» (key 7452556)
-- **Elymus farctus** (cabo-cope-puntas-calnegre, salinas-arenales-san-pedro-pinatar)
-  - gbifSpeciesKey 5289901 («Elymus farctus (Viv.) Runemark ex Melderis») es SYNONYM en el backbone; el aceptado es «Thinopyrum junceum (L.) Á.Löve» (key 8395719)
-- **Serratula mucronata** (cabo-cope-puntas-calnegre)
-  - gbifSpeciesKey 5692462 («Serratula mucronata Desf.») es SYNONYM en el backbone; el aceptado es «Klasea flavescens subsp. mucronata (Desf.) Cantó & Rivas Mart.» (key 4217535)
-- **Caroxylon vermiculatum** (cabo-cope-puntas-calnegre)
-  - gbifSpeciesKey 3083954 («Salsola vermiculata L.») es HETEROTYPIC_SYNONYM en el backbone; el aceptado es «Nitrosalsola vermiculata (L.) Theodorova» (key 9465030)
-- **Sarcocornia fruticosa** (cabo-cope-puntas-calnegre, calblanque-monte-cenizas-pena-aguila, espacios-abiertos-e-islas-del-mar-menor, humedal-del-ajauque-y-rambla-salada, salinas-arenales-san-pedro-pinatar)
+- **Sarcocornia fruticosa** (calblanque-monte-cenizas-pena-aguila, espacios-abiertos-e-islas-del-mar-menor, humedal-del-ajauque-y-rambla-salada, salinas-arenales-san-pedro-pinatar)
   - gbifSpeciesKey 3083613 («Sarcocornia fruticosa (L.) A.J.Scott») es SYNONYM en el backbone; el aceptado es «Salicornia fruticosa (L.) L.» (key 5567884)
+- **Maytenus senegalensis subsp. europaea** (calblanque-monte-cenizas-pena-aguila, espacios-abiertos-e-islas-del-mar-menor)
+  - gbifSpeciesKey 3793958 («Maytenus senegalensis subsp. europaeus (Boiss.) Rivas Mart. ex Güemes & M.B.Crespo») es SYNONYM en el backbone; el aceptado es «Gymnosporia senegalensis var. europaea (Boiss.) Jahand. & Maire» (key 7452556)
+- **Elymus farctus** (salinas-arenales-san-pedro-pinatar)
+  - gbifSpeciesKey 5289901 («Elymus farctus (Viv.) Runemark ex Melderis») es SYNONYM en el backbone; el aceptado es «Thinopyrum junceum (L.) Á.Löve» (key 8395719)
 
 ## GBIF marca la key como DOUBTFUL y no da aceptado (no hay nada que corregir) — 4
 
 - **Aegithalos caudatus** (barrancos-de-gebas, humedal-del-ajauque-y-rambla-salada, monte-arabi, sierra-de-el-carche, sierra-de-la-pila, sierra-de-salinas, sotos-y-bosques-de-ribera-de-canaverosa)
   - gbifSpeciesKey 2495000 («Aegithalos caudatus (Linnaeus, 1758)») es DOUBTFUL en el backbone; GBIF no da un aceptado
-- **Eryngium ilicifolium** (calblanque-monte-cenizas-pena-aguila, carrascoy-y-el-valle, cuatro-calas, espacios-abiertos-e-islas-del-mar-menor)
+- **Eryngium ilicifolium** (cabo-cope-puntas-calnegre, calblanque-monte-cenizas-pena-aguila, carrascoy-y-el-valle, cuatro-calas, espacios-abiertos-e-islas-del-mar-menor)
   - gbifSpeciesKey 3630524 («Eryngium ilicifolium Lam.») es DOUBTFUL en el backbone; GBIF no da un aceptado
 - **Asparagus arborescens** (carrascoy-y-el-valle)
   - gbifSpeciesKey 7871847 («Asparagus arborescens Willd.») es DOUBTFUL en el backbone; GBIF no da un aceptado

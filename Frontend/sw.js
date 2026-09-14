@@ -55,7 +55,16 @@
 //      404 sin cobertura y el selector de parque se queda sin las cifras del popup. También cambian
 //      index.html, Css/styles.css, Js/app.js, Js/dom.js, Js/data.js, Js/render.js,
 //      Js/render/progreso.js y Js/auth.js.
-var VERSION = 'v69';
+// v70: el distintivo de la tarjeta del catálogo pasa a decir la categoría de conservación del
+//      ámbito más CERCANO —catálogo autonómico → España → Lista Roja mundial de la UICN—, con el
+//      ámbito escrito al lado, en vez de la categoría más grave de los dos ámbitos legales. La
+//      ficha pertenece a un parque y quien la lee está en esa comunidad. Las estrellas, el color de
+//      la tarjeta, el cartel de advertencia y el filtro NO cambian: siguen saliendo del tramo de
+//      rareza. El desplegable «Estado de conservación» de la ficha sigue enseñando los tres ámbitos.
+//      No hay módulos nuevos: cambian Js/rareza.js (`categoriaConservacion()`) y
+//      Js/render/catalogo.js, los dos ya precacheados, y por eso hace falta subir la versión — si no,
+//      el dispositivo que ya tenía la app guardada seguiría pintando el distintivo viejo.
+var VERSION = 'v70';
 var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 
 // Armazón mínimo que se intenta precachear en la instalación (best-effort).

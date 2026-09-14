@@ -77,7 +77,7 @@ const CURADOS = ['coordinates', 'featured', 'visible', 'hiddenReason', 'reviewNo
 // Orden de las claves de la ficha. Fijarlo importa: sin él, dos ejecuciones que producen los mismos
 // datos generan diffs distintos según el orden en que se hayan ido asignando las propiedades.
 const ORDEN = ['id', 'commonName', 'scientificName', 'kingdom', 'group', 'habitat',
-  'conservationStatus', 'description', 'descriptionSource', 'tips', 'seasonality', 'image', 'imageAttribution',
+  'description', 'descriptionSource', 'tips', 'seasonality', 'image', 'imageAttribution',
   'coordinates', 'rarityScore', 'rarityBasis', 'rarityLocal', 'rarityLocalBasis', 'featured', 'source', 'taxonomy', 'iucnGlobal', 'iucnSpain', 'spainStatus',
   'regionalStatus', 'regionalCcaa', 'reviewNote', 'eidosTaxonId', 'gbifSpeciesKey', 'zepaSiteCode', 'migratory', 'sitePresence', 'habitatIds',
   'gbifOccurrences', 'visible', 'hiddenReason', 'audio', 'audioTranscript'];
@@ -91,10 +91,6 @@ const GRAVEDAD = {
   'Especies de interés especial': 1, 'De interés especial': 1,
 };
 const masGrave = (a, b) => ((GRAVEDAD[b] || 0) > (GRAVEDAD[a] || 0) ? b : a);
-
-// Etiqueta corta de la tarjeta a partir de la categoría legal. `conservation_status` es derivado y,
-// en flora, refleja el estado LEGAL y no la evaluación UICN (Docs/arquitectura/PROCEDENCIA-DE-CAMPOS.md).
-const ETIQUETA_CORTA = { 'Especies de interés especial': 'Interés especial', 'De interés especial': 'Interés especial' };
 
 // --- lectura de las fuentes -----------------------------------------------------------------------
 
@@ -327,19 +323,6 @@ function estadoAutonomico(normas, comunidad, catalogos) {
   // «de la Andalucía» no, y este texto tiene que servir para las diecisiete.
   const nombres = [...new Set(ficha.catalogos.map(c => c.nombre))];
   return `No incluida en ${nombres.length === 1 ? 'el ' + nombres[0] : nombres.join(' ni en ')} (${comunidad})`;
-}
-
-/** Etiqueta corta de la tarjeta: estado legal si lo hay, y si no la evaluación UICN. */
-function etiquetaConservacion(normas, iucnGlobal) {
-  const auto = categoriaDe(normas, false);
-  if (auto) return ETIQUETA_CORTA[auto.categoria] || auto.categoria;
-  const nacional = categoriaDe(normas, true);
-  if (nacional) {
-    if (/^En régimen de protección especial$/i.test(nacional.categoria)) return 'Protegida (LESRPE)';
-    return ETIQUETA_CORTA[nacional.categoria] || nacional.categoria;
-  }
-  const codigo = String(iucnGlobal || '').match(/^[A-Z]{2}/);
-  return codigo ? codigo[0] : 'No catalogada';
 }
 
 /*
@@ -674,7 +657,6 @@ function main() {
     const ficha = {
       id: antes ? antes.id : siguienteId++,
       scientificName: sci,
-      conservationStatus: etiquetaConservacion(sel.normas, u.iucnGlobal),
       coordinates: null,
       // `undefined` y no `null`: ORDEN filtra los `undefined`, así que la ficha OMITE el campo en vez
       // de escribir un hueco. Son dos cosas distintas y la app las distingue.

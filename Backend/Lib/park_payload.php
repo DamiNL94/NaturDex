@@ -86,7 +86,7 @@ function buildParkPayload($conn, $parkSlug) {
     }
 
     // --- Especies ---------------------------------------------------------------------------------
-    $speciesStmt = $conn->prepare("SELECT id, common_name, scientific_name, kingdom, family, primary_habitat, conservation_status, description, identification_tips, seasonality, image_url, image_attribution, description_source, latitude, longitude, rarity_score, rarity_basis, rarity_local, rarity_local_basis, is_featured, is_visible, hidden_reason, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, iucn_spain, spain_status, regional_status, regional_ccaa, review_note, eidos_taxonid, gbif_species_key, gbif_occurrences, zepa_site_code, is_migratory, site_presence FROM species WHERE park_id = ? ORDER BY is_featured DESC, common_name ASC");
+    $speciesStmt = $conn->prepare("SELECT id, common_name, scientific_name, kingdom, family, primary_habitat, description, identification_tips, seasonality, image_url, image_attribution, description_source, latitude, longitude, rarity_score, rarity_basis, rarity_local, rarity_local_basis, is_featured, is_visible, hidden_reason, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, iucn_spain, spain_status, regional_status, regional_ccaa, review_note, eidos_taxonid, gbif_species_key, gbif_occurrences, zepa_site_code, is_migratory, site_presence FROM species WHERE park_id = ? ORDER BY is_featured DESC, common_name ASC");
     $speciesStmt->bind_param("i", $park["id"]);
     $speciesStmt->execute();
     $result = $speciesStmt->get_result();
@@ -99,7 +99,6 @@ function buildParkPayload($conn, $parkSlug) {
             "kingdom" => $row["kingdom"],
             "group" => $row["family"],
             "habitat" => $row["primary_habitat"],
-            "conservationStatus" => $row["conservation_status"],
             "description" => $row["description"],
             // De dónde sale el texto: EIDOS o redacción propia. NULL en las heredadas sin trazar.
             "descriptionSource" => $row["description_source"] ?? null,

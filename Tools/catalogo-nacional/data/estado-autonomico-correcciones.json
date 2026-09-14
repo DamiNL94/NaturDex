@@ -1,0 +1,26 @@
+{
+  "_nota": "Correcciones de `regionalStatus` —el campo LOCAL que guarda la figura del catálogo autonómico— cuando el cotejo contra EIDOS (`npm run especies:legal`, clases A/B/C) demuestra que el texto de la ficha no dice lo que dice la norma. Lo aplica `Tools/catalogo-nacional/corrige-estado-autonomico.js`. NO editar el texto a ojo: cada entrada cita la norma y el cotejo que la respalda, y el tramo lo recalcula después `npm run especies:rareza`, que lee este mismo texto.",
+  "_esquema": {
+    "scientificName": "clave; se corrige en TODOS los park.json donde el taxón esté fichado y cuyo `regionalCcaa` coincida con `ccaa`",
+    "ccaa": "la comunidad de la que habla el texto. Un `regionalStatus` describe algo territorial, así que la corrección solo alcanza a los espacios de ESA comunidad (CLAUDE.md §2, la trampa nº 25)",
+    "regionalStatus": "el texto que debe quedar, con la norma dentro: es de donde `rareza-legal.js` saca el tramo",
+    "porque": "qué cotejo lo demuestra y qué decía antes la ficha",
+    "fuente": "la norma, citada para poder volver a comprobarlo"
+  },
+  "correcciones": [
+    {
+      "scientificName": "Pyrrhocorax pyrrhocorax",
+      "ccaa": "Región de Murcia",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
+      "porque": "Clase B de `npm run especies:legal` en NUEVE de los diez espacios donde está fichada: la ficha decía «No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)» y EIDOS devuelve «Especies de interés especial — Ley 7/1995». Es el hallazgo C5 de la auditoría del catálogo, cerrado en el diagnóstico el 2026-09-13 tras cotejar los diez. El texto que aquí se copia es el de Sierra Espuña, el único espacio que lo tenía bien, y EIDOS lo confirma. Barrancos de Gebas lo remacha: comparte el MISMO PORN que Espuña y tenía el texto malo, así que el error es de redacción de ficha, no de interpretación de la norma. Sube de tramo local 2 a 3.",
+      "fuente": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia · EIDOS (IEPNB), v_estadolegal, ámbito autonómico"
+    },
+    {
+      "scientificName": "Gulosus aristotelis",
+      "ccaa": "Región de Murcia",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): Vulnerable",
+      "porque": "Clase B de `npm run especies:legal` en los DOS espacios donde está fichado (Cabo Cope y Sierra de las Moreras): la ficha NIEGA por escrito la protección —«No incluida en Catálogo Regional… ni en Catálogo Regional…»— y EIDOS devuelve «Vulnerable — Ley 7/1995». El tramo local ya era 4, pero por la vía ESTATAL (la subespecie mediterránea en el CEEA), así que lo que se corrige es el texto, no el número: hoy la ficha afirma que no está protegida en Murcia y sí lo está.",
+      "fuente": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia · EIDOS (IEPNB), v_estadolegal, ámbito autonómico"
+    }
+  ]
+}
