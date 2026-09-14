@@ -1,0 +1,262 @@
+{
+  "sci:Accipiter gentilis": {
+    "taxonid": 11351,
+    "motivo": null,
+    "fila": {
+      "taxonid": 11351,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Accipitriformes",
+      "family": "Accipitridae",
+      "genus": "Accipiter"
+    }
+  },
+  "sci:Aquila chrysaetos": {
+    "taxonid": 10888,
+    "motivo": null,
+    "fila": {
+      "taxonid": 10888,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Accipitriformes",
+      "family": "Accipitridae",
+      "genus": "Aquila"
+    }
+  },
+  "sci:Caprimulgus ruficollis": {
+    "taxonid": 12122,
+    "motivo": null,
+    "fila": {
+      "taxonid": 12122,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Caprimulgiformes",
+      "family": "Caprimulgidae",
+      "genus": "Caprimulgus"
+    }
+  },
+  "sci:Chroicocephalus ridibundus": {
+    "taxonid": 16356,
+    "motivo": null,
+    "fila": {
+      "taxonid": 16356,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Charadriiformes",
+      "family": "Laridae",
+      "genus": "Larus"
+    }
+  },
+  "sci:Circaetus gallicus": {
+    "taxonid": 11336,
+    "motivo": null,
+    "fila": {
+      "taxonid": 11336,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Accipitriformes",
+      "family": "Accipitridae",
+      "genus": "Circaetus"
+    }
+  },
+  "sci:Coracias garrulus": {
+    "taxonid": 11339,
+    "motivo": null,
+    "fila": {
+      "taxonid": 11339,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Coraciiformes",
+      "family": "Coraciidae",
+      "genus": "Coracias"
+    }
+  },
+  "sci:Egretta garzetta": {
+    "taxonid": 11340,
+    "motivo": null,
+    "fila": {
+      "taxonid": 11340,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Pelecaniformes",
+      "family": "Ardeidae",
+      "genus": "Egretta"
+    }
+  },
+  "sci:Falco tinnunculus": {
+    "taxonid": 12321,
+    "motivo": null,
+    "fila": {
+      "taxonid": 12321,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Falconiformes",
+      "family": "Falconidae",
+      "genus": "Falco"
+    }
+  },
+  "sci:Hieraaetus pennatus": {
+    "taxonid": 11959,
+    "motivo": null,
+    "fila": {
+      "taxonid": 11959,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Accipitriformes",
+      "family": "Accipitridae",
+      "genus": "Hieraaetus"
+    }
+  },
+  "sci:Jynx torquilla": {
+    "taxonid": 12326,
+    "motivo": null,
+    "fila": {
+      "taxonid": 12326,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Piciformes",
+      "family": "Picidae",
+      "genus": "Jynx"
+    }
+  },
+  "sci:Larus audouinii": {
+    "taxonid": 14053,
+    "motivo": null,
+    "fila": {
+      "taxonid": 14053,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Charadriiformes",
+      "family": "Laridae",
+      "genus": "Larus"
+    }
+  },
+  "sci:Melanocorypha calandra": {
+    "taxonid": 10937,
+    "motivo": null,
+    "fila": {
+      "taxonid": 10937,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Passeriformes",
+      "family": "Alaudidae",
+      "genus": "Melanocorypha"
+    }
+  },
+  "sci:Muscicapa striata": {
+    "taxonid": 12250,
+    "motivo": null,
+    "fila": {
+      "taxonid": 12250,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Passeriformes",
+      "family": "Muscicapidae",
+      "genus": "Muscicapa"
+    }
+  },
+  "sci:Oenanthe hispanica": {
+    "taxonid": 11453,
+    "motivo": null,
+    "fila": {
+      "taxonid": 11453,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Passeriformes",
+      "family": "Muscicapidae",
+      "genus": "Oenanthe"
+    }
+  },
+  "sci:Pyrrhocorax pyrrhocorax": {
+    "taxonid": 12063,
+    "motivo": null,
+    "fila": {
+      "taxonid": 12063,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Passeriformes",
+      "family": "Corvidae",
+      "genus": "Pyrrhocorax"
+    }
+  },
+  "sci:Streptopelia turtur": {
+    "taxonid": 12356,
+    "motivo": null,
+    "fila": {
+      "taxonid": 12356,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Columbiformes",
+      "family": "Columbidae",
+      "genus": "Streptopelia"
+    }
+  },
+  "sci:Tachybaptus ruficollis": {
+    "taxonid": 12121,
+    "motivo": null,
+    "fila": {
+      "taxonid": 12121,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Podicipediformes",
+      "family": "Podicipedidae",
+      "genus": "Tachybaptus"
+    }
+  },
+  "sci:Thalasseus sandvicensis": {
+    "taxonid": 12147,
+    "motivo": null,
+    "fila": {
+      "taxonid": 12147,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Charadriiformes",
+      "family": "Laridae",
+      "genus": "Sterna"
+    }
+  },
+  "sci:Tichodroma muraria": {
+    "taxonid": 11796,
+    "motivo": null,
+    "fila": {
+      "taxonid": 11796,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Passeriformes",
+      "family": "Tichodromidae",
+      "genus": "Tichodroma"
+    }
+  },
+  "sci:Upupa epops": {
+    "taxonid": 11211,
+    "motivo": null,
+    "fila": {
+      "taxonid": 11211,
+      "kingdom": "Animalia",
+      "phylum": "Chordata",
+      "class": "Aves",
+      "ordertaxonomic": "Bucerotiformes",
+      "family": "Upupidae",
+      "genus": "Upupa"
+    }
+  }
+}
