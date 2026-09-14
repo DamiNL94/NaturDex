@@ -314,7 +314,7 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 | Tocar SQL | [`Database/CLAUDE.md`](Database/CLAUDE.md) — qué fichero es fuente y cuál es generado |
 | Llevar a la base lo corregido en el repo | [`Docs/runbook/APLICAR-A-RAILWAY.md`](Docs/runbook/APLICAR-A-RAILWAY.md) — las dos vías, el orden, la cola pendiente y qué mirar antes de pulsar |
 | Tocar avistamientos, ocurrencias o su exportación | [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md) — término a término, qué se generaliza y por qué |
-| Elegir el siguiente trabajo | [`Docs/DEUDA-TECNICA.md`](Docs/DEUDA-TECNICA.md), por orden de rentabilidad |
+| Elegir el siguiente trabajo | [`Docs/DEUDA-TECNICA.md`](Docs/DEUDA-TECNICA.md), por orden de rentabilidad, y [`Docs/auditoria-consolidado.md`](Docs/auditoria-consolidado.md) — los 2.159 hallazgos de la auditoría del catálogo convertidos en **733 correcciones** distintas, por colas y con lo ya hecho marcado. Lo regenera `npm run auditoria:consolida` |
 | Recordar un comando | [`Docs/COMANDOS.md`](Docs/COMANDOS.md) |
 
 ## 4. Búsqueda: lo que está excluido a propósito
