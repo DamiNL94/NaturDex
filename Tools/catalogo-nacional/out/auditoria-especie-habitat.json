@@ -1,5 +1,5 @@
 {
-  "generado": "2026-08-28",
+  "generado": "2026-09-14",
   "umbral": 1,
   "aplicado": false,
   "espacios": [
@@ -32990,6 +32990,346 @@
           "veredicto": "caracteristica",
           "motivo": "el Atlas la da como característica del HIC 92D0",
           "ocurrencias": null
+        },
+        {
+          "especie": "Lysimachia arvensis",
+          "comun": "Murajes",
+          "id": 355,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 3,
+          "motivo": "3 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lysimachia arvensis",
+          "comun": "Murajes",
+          "id": 355,
+          "habitat": "pastizales-salinos-mediterraneos-1410",
+          "hic": "1410",
+          "veredicto": "respaldado",
+          "ocurrencias": 3,
+          "motivo": "3 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lysimachia arvensis",
+          "comun": "Murajes",
+          "id": 355,
+          "habitat": "vegetacion-halonitrofila-anual-1310",
+          "hic": "1310",
+          "veredicto": "respaldado",
+          "ocurrencias": 2,
+          "motivo": "2 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Lysimachia arvensis",
+          "comun": "Murajes",
+          "id": 355,
+          "habitat": "dunas-con-vegetacion-2260",
+          "hic": "2260",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Macrochloa tenacissima",
+          "comun": "Esparto",
+          "id": 356,
+          "habitat": "dunas-con-cespedes-2230",
+          "hic": "2230",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Macrochloa tenacissima",
+          "comun": "Esparto",
+          "id": 356,
+          "habitat": "dunas-con-vegetacion-2260",
+          "hic": "2260",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Macrochloa tenacissima",
+          "comun": "Esparto",
+          "id": 356,
+          "habitat": "dunas-litorales-con-2250",
+          "hic": "2250",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Macrochloa tenacissima",
+          "comun": "Esparto",
+          "id": 356,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Macrochloa tenacissima",
+          "comun": "Esparto",
+          "id": 356,
+          "habitat": "pastizales-salinos-mediterraneos-1410",
+          "hic": "1410",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Malva multiflora",
+          "comun": "flores de jabón",
+          "id": 357,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Malva multiflora",
+          "comun": "flores de jabón",
+          "id": 357,
+          "habitat": "pastizales-salinos-mediterraneos-1410",
+          "hic": "1410",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Malva multiflora",
+          "comun": "flores de jabón",
+          "id": 357,
+          "habitat": "vegetacion-halonitrofila-anual-1310",
+          "hic": "1310",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limbarda crithmoides",
+          "comun": "Hierba del cólico",
+          "id": 370,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 20,
+          "motivo": "20 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limbarda crithmoides",
+          "comun": "Hierba del cólico",
+          "id": 370,
+          "habitat": "pastizales-salinos-mediterraneos-1410",
+          "hic": "1410",
+          "veredicto": "respaldado",
+          "ocurrencias": 20,
+          "motivo": "20 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limbarda crithmoides",
+          "comun": "Hierba del cólico",
+          "id": 370,
+          "habitat": "dunas-con-vegetacion-2260",
+          "hic": "2260",
+          "veredicto": "respaldado",
+          "ocurrencias": 14,
+          "motivo": "14 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limbarda crithmoides",
+          "comun": "Hierba del cólico",
+          "id": 370,
+          "habitat": "dunas-con-cespedes-2230",
+          "hic": "2230",
+          "veredicto": "respaldado",
+          "ocurrencias": 10,
+          "motivo": "10 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limbarda crithmoides",
+          "comun": "Hierba del cólico",
+          "id": 370,
+          "habitat": "dunas-litorales-con-2250",
+          "hic": "2250",
+          "veredicto": "respaldado",
+          "ocurrencias": 9,
+          "motivo": "9 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limbarda crithmoides",
+          "comun": "Hierba del cólico",
+          "id": 370,
+          "habitat": "vegetacion-halonitrofila-anual-1310",
+          "hic": "1310",
+          "veredicto": "respaldado",
+          "ocurrencias": 6,
+          "motivo": "6 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limbarda crithmoides",
+          "comun": "Hierba del cólico",
+          "id": 370,
+          "habitat": "acantilados-con-vegetacion-1240",
+          "hic": "1240",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limbarda crithmoides",
+          "comun": "Hierba del cólico",
+          "id": 370,
+          "habitat": "dunas-fijas-de-2210",
+          "hic": "2210",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limbarda crithmoides",
+          "comun": "Hierba del cólico",
+          "id": 370,
+          "habitat": "dunas-moviles-de-2120",
+          "hic": "2120",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limbarda crithmoides",
+          "comun": "Hierba del cólico",
+          "id": 370,
+          "habitat": "dunas-moviles-embrionarias-2110",
+          "hic": "2110",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limbarda crithmoides",
+          "comun": "Hierba del cólico",
+          "id": 370,
+          "habitat": "estepas-salinas-mediterraneas-1510",
+          "hic": "1510",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limbarda crithmoides",
+          "comun": "Hierba del cólico",
+          "id": 370,
+          "habitat": "galerias-y-matorrales-92D0",
+          "hic": "92D0",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limbarda crithmoides",
+          "comun": "Hierba del cólico",
+          "id": 370,
+          "habitat": "matorrales-halonitrofilos-pegano-1430",
+          "hic": "1430",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Limbarda crithmoides",
+          "comun": "Hierba del cólico",
+          "id": 370,
+          "habitat": "vegetacion-anual-sobre-1210",
+          "hic": "1210",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Schenkia spicata",
+          "comun": "Hiel de la tierra",
+          "id": 371,
+          "habitat": "dunas-con-cespedes-2230",
+          "hic": "2230",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Schenkia spicata",
+          "comun": "Hiel de la tierra",
+          "id": 371,
+          "habitat": "dunas-fijas-de-2210",
+          "hic": "2210",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Schenkia spicata",
+          "comun": "Hiel de la tierra",
+          "id": 371,
+          "habitat": "dunas-moviles-de-2120",
+          "hic": "2120",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Schenkia spicata",
+          "comun": "Hiel de la tierra",
+          "id": 371,
+          "habitat": "dunas-moviles-embrionarias-2110",
+          "hic": "2110",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Schenkia spicata",
+          "comun": "Hiel de la tierra",
+          "id": 371,
+          "habitat": "matorrales-halofilos-mediterraneos-1420",
+          "hic": "1420",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Schenkia spicata",
+          "comun": "Hiel de la tierra",
+          "id": 371,
+          "habitat": "pastizales-salinos-mediterraneos-1410",
+          "hic": "1410",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Schenkia spicata",
+          "comun": "Hiel de la tierra",
+          "id": 371,
+          "habitat": "vegetacion-anual-sobre-1210",
+          "hic": "1210",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
+        },
+        {
+          "especie": "Schenkia spicata",
+          "comun": "Hiel de la tierra",
+          "id": 371,
+          "habitat": "vegetacion-halonitrofila-anual-1310",
+          "hic": "1310",
+          "veredicto": "respaldado",
+          "ocurrencias": 1,
+          "motivo": "1 ocurrencias en el polígono"
         }
       ]
     },

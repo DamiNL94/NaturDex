@@ -37,9 +37,9 @@
  * empaquetado, así que sin él la app seguiría enseñando la ficha vacía.
  */
 
-const fs = require('fs');
+const path = require('path');
 const { arg, flag } = require('../lib/cli');
-const { readJson, rel, parkFiles } = require('../lib/io');
+const { readJson, rel, parkFiles, escribeEspacio } = require('../lib/io');
 
 const PARK = arg('park');
 const DRY = flag('dry');
@@ -60,7 +60,7 @@ function main() {
 
   let ocultadas = 0, mostradas = 0, yaOcultas = 0, ajenas = 0;
 
-  for (const { slug, file } of objetivo) {
+  for (const { slug, dir, file } of objetivo) {
     const doc = readJson(file);
     const species = doc.species || [];
     if (!species.length) continue;
@@ -94,11 +94,26 @@ function main() {
     }
 
     if (!cambios.length) continue;
-    const texto = JSON.stringify(doc, null, 2) + '\n';
-    const previo = fs.readFileSync(file, 'utf8');
-    if (previo === texto) continue;
-    if (!DRY) fs.writeFileSync(file, texto, 'utf8');
-    console.log(`${DRY ? '~' : '+'} ${rel(file)}  (${slug})`);
+    /*
+     * Se escribe por `escribeEspacio()`, que sube la `version` del manifiesto en el mismo paso.
+     *
+     * Hasta el 2026-09-15 esto hacía su propio `writeFileSync` y anunciaba «el manifiesto NO se ha
+     * tocado: los contadores no cambian» — y los contadores es verdad que no cambian, pero la
+     * `version` no habla de contadores: es lo que decide si un dispositivo que tiene el espacio
+     * guardado sin conexión vuelve a descargarlo. Ocultar una ficha SÍ cambia lo que ese dispositivo
+     * debe ver, así que el que ya la tenía seguía enseñándola, sin error y con el dato bien en el
+     * repositorio. Es la trampa nº 11 del CLAUDE.md, y la razón por la que `escribeEspacio` existe.
+     * Sube la versión solo si el paquete cambió, así que la idempotencia se conserva.
+     */
+    const { lineas } = escribeEspacio({
+      file, manifestFile: path.join(dir, 'manifest.json'), doc, write: !DRY,
+      counts: {
+        species: (doc.species || []).length,
+        habitats: (doc.habitats || []).length,
+        pointsOfInterest: (doc.pointsOfInterest || []).length,
+      },
+    });
+    console.log(lineas.map(l => '  ' + l).join('\n') + `  (${slug})`);
     cambios.forEach(c => console.log('   ' + c));
   }
 
@@ -106,7 +121,8 @@ function main() {
   if (yaOcultas) console.log(`${yaOcultas} ya estaban ocultas por este mismo motivo (nada que hacer)`);
   if (ajenas) console.log(`⚠ ${ajenas} sin texto y ocultas por OTRO motivo: no se ha tocado su \`hiddenReason\``);
   if (ocultadas || mostradas) {
-    console.log('\nEl manifiesto NO se ha tocado: la ficha sigue en el park.json y los contadores no cambian.');
+    console.log('\nLa `version` del manifiesto sube con el paquete: sin eso, el dispositivo que ya tenía');
+    console.log('el espacio guardado sin conexión seguiría enseñando la ficha que se acaba de ocultar.');
     console.log('Con backend desplegado hace falta además regenerar y aplicar el SQL del espacio.');
   }
   if (DRY) console.log('\nSimulación: no se ha escrito nada.');

@@ -65,7 +65,9 @@
         37,
         56,
         60,
-        64
+        64,
+        370,
+        371
       ],
       "imageAttribution": "Jürgen Howaldt (CC BY-SA 2.0 de) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Rugueta de mar (Cakile maritima), la especie que da nombre al hábitat."
@@ -140,7 +142,10 @@
         73,
         77,
         86,
-        91
+        91,
+        356,
+        370,
+        371
       ],
       "imageAttribution": "bymamo (CC BY-SA 4.0) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Colleja de arenal (Silene ramosissima), la especie que da nombre al hábitat."
@@ -187,7 +192,9 @@
         60,
         64,
         100,
-        138
+        138,
+        370,
+        371
       ]
     },
     {
@@ -230,7 +237,9 @@
         32,
         37,
         60,
-        64
+        64,
+        370,
+        371
       ],
       "imageAttribution": "Lumbar~commonswiki (CC BY-SA 3.0) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Lentisco (Pistacia lentiscus), la especie que da nombre al hábitat."
@@ -276,7 +285,9 @@
         32,
         37,
         60,
-        64
+        64,
+        370,
+        371
       ],
       "imageAttribution": "Jürgen Howaldt (CC BY-SA 2.0 de) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Rugueta de mar (Cakile maritima), la especie que da nombre al hábitat."
@@ -395,7 +406,12 @@
         94,
         95,
         170,
-        194
+        194,
+        355,
+        356,
+        357,
+        370,
+        371
       ],
       "imageAttribution": "Kenraiz, Krzysztof Ziarnek (CC BY-SA 4.0) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con juncia bastarda (Schoenus nigricans), la especie que da nombre al hábitat."
@@ -515,7 +531,12 @@
         94,
         95,
         149,
-        153
+        153,
+        355,
+        356,
+        357,
+        370,
+        371
       ],
       "imageAttribution": "Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Sosa jabonera (Sarcocornia fruticosa), la especie que da nombre al hábitat."
@@ -611,7 +632,11 @@
         93,
         94,
         95,
-        212
+        212,
+        355,
+        357,
+        370,
+        371
       ],
       "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Sosa fina (Suaeda vera), la especie que da nombre al hábitat."
@@ -680,7 +705,9 @@
         73,
         77,
         86,
-        91
+        91,
+        356,
+        370
       ],
       "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Sabina negral (Juniperus phoenicea), la especie que da nombre al hábitat."
@@ -761,7 +788,10 @@
         86,
         88,
         90,
-        91
+        91,
+        355,
+        356,
+        370
       ],
       "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
       "imageNote": "Portada ilustrada con Helianthemum marminorense (Helianthemum marminorense), la especie que da nombre al hábitat."
@@ -819,7 +849,8 @@
       "speciesIds": [
         34,
         44,
-        221
+        221,
+        370
       ]
     },
     {
@@ -851,7 +882,8 @@
         157,
         165,
         166,
-        167
+        167,
+        370
       ]
     },
     {
@@ -880,7 +912,8 @@
         34,
         44,
         226,
-        227
+        227,
+        370
       ]
     },
     {
@@ -907,7 +940,8 @@
       "reviewNote": null,
       "speciesIds": [
         34,
-        44
+        44,
+        370
       ]
     }
   ],
@@ -20693,6 +20727,1036 @@
       "gbifOccurrences": 1,
       "visible": true,
       "iucnSpain": "DD — Datos insuficientes (Lista Roja española, 2004)"
+    },
+    {
+      "id": 355,
+      "commonName": "Murajes",
+      "scientificName": "Lysimachia arvensis",
+      "kingdom": "flora",
+      "group": "Hierba",
+      "habitat": "Cultivos, cunetas, claros y suelos removidos",
+      "description": "Hierbecilla tendida de tallos cuadrangulares y hojas enfrentadas, con flores solitarias que salen de la axila de cada hoja. Las hay de color naranja asalmonado y de color azul intenso, y ambas cierran los pétalos cuando el cielo se nubla, de ahí que se la llamara «hierba del buen tiempo».",
+      "tips": [
+        "Flores solitarias sobre un pedúnculo largo y fino",
+        "Tallos de sección cuadrada, tendidos por el suelo",
+        "Pétalos que se cierran al nublarse o a media tarde"
+      ],
+      "seasonality": "Primavera",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A._arvensis-flor-1.JPG?width=1280",
+      "imageAttribution": "Philmarin (CC BY-SA 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF: 3 ocurrencias dentro de los polígonos de hábitat del espacio (4 hábitats; barrido de 2026-09-13); Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Anagallis arvensis»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "taxonomy": {
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Magnoliopsida",
+        "order": "Ericales",
+        "family": "Primulaceae",
+        "genus": "Lysimachia"
+      },
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 80964,
+      "gbifSpeciesKey": 8184903,
+      "zepaSiteCode": null,
+      "habitatIds": [
+        "matorrales-halofilos-mediterraneos-1420",
+        "pastizales-salinos-mediterraneos-1410",
+        "vegetacion-halonitrofila-anual-1310",
+        "dunas-con-vegetacion-2260"
+      ],
+      "gbifOccurrences": 3,
+      "visible": true
+    },
+    {
+      "id": 356,
+      "commonName": "Esparto",
+      "scientificName": "Macrochloa tenacissima",
+      "kingdom": "flora",
+      "group": "Gramínea",
+      "habitat": "Laderas secas y llanos sobre suelos pobres; forma espartales extensos",
+      "description": "El esparto, nombrado también como Stipa tenacissima, forma matas densas y duraderas que dan nombre a los espartales, uno de los paisajes característicos del sureste ibérico. Sus hojas se enrollan sobre sí mismas en los días secos para perder menos agua y se abren tras la lluvia. Durante siglos se recolectó para hacer cuerdas, esteras y alpargatas.",
+      "descriptionSource": null,
+      "tips": [
+        "Matas grandes y compactas de hojas duras enrolladas",
+        "Las hojas se abren tras la lluvia y se enrollan al secar",
+        "Espigas altas y plateadas a final de primavera"
+      ],
+      "seasonality": "Primavera (espigado)",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stipa_tenacissima.jpg?width=1280",
+      "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (5 hábitats; barrido de 2026-09-13); Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Stipa tenacissima»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "taxonomy": {
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Liliopsida",
+        "order": "Poales",
+        "family": "Poaceae",
+        "genus": "Macrochloa"
+      },
+      "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2018)",
+      "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 27376,
+      "gbifSpeciesKey": 4127897,
+      "zepaSiteCode": null,
+      "habitatIds": [
+        "dunas-con-cespedes-2230",
+        "dunas-con-vegetacion-2260",
+        "dunas-litorales-con-2250",
+        "matorrales-halofilos-mediterraneos-1420",
+        "pastizales-salinos-mediterraneos-1410"
+      ],
+      "gbifOccurrences": 1,
+      "visible": true
+    },
+    {
+      "id": 357,
+      "commonName": "flores de jabón",
+      "scientificName": "Malva multiflora",
+      "kingdom": "flora",
+      "group": null,
+      "habitat": null,
+      "description": null,
+      "descriptionSource": null,
+      "tips": [],
+      "seasonality": "Febrero a junio",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lavatera_April_2010-1.jpg?width=1280",
+      "imageAttribution": "Alvesgaspar (CC BY-SA 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF: 1 ocurrencia dentro de los polígonos de hábitat del espacio (3 hábitats; barrido de 2026-09-13); Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Lavatera cretica»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "taxonomy": {
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Magnoliopsida",
+        "order": "Malvales",
+        "family": "Malvaceae",
+        "genus": "Malva"
+      },
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 80875,
+      "gbifSpeciesKey": 3933415,
+      "zepaSiteCode": null,
+      "habitatIds": [
+        "matorrales-halofilos-mediterraneos-1420",
+        "pastizales-salinos-mediterraneos-1410",
+        "vegetacion-halonitrofila-anual-1310"
+      ],
+      "gbifOccurrences": 1,
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
+    },
+    {
+      "id": 358,
+      "commonName": "Sapo corredor",
+      "scientificName": "Epidalea calamita",
+      "kingdom": "fauna",
+      "group": "Anfibio",
+      "habitat": "Ramblas y zonas húmedas estacionales",
+      "description": "Sapo de patas cortas que corre en vez de saltar, con una línea amarilla nítida a lo largo del centro del lomo. Se reproduce en charcas efímeras que se llenan con las lluvias, y los machos forman coros de un canto vibrante y estridente que se oye a kilómetros.",
+      "descriptionSource": null,
+      "tips": [
+        "Raya amarilla continua por el centro del lomo",
+        "Corre a cuatro patas en vez de saltar",
+        "Canto nocturno vibrante y muy sonoro tras las lluvias"
+      ],
+      "seasonality": "Otoño e invierno lluviosos",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Epidalea_calamita_02_by-dpc.jpg?width=1280",
+      "imageAttribution": "David Perez (CC BY 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "LESRPE",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-09-13); Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Bufo calamita»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Amphibia",
+        "order": "Anura",
+        "family": "Bufonidae",
+        "genus": "Epidalea"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)",
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)",
+      "spainStatus": "LESRPE; Directiva Hábitats 92/43/CEE, Anexo IV",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 24327,
+      "gbifSpeciesKey": 2422507,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": true
+    },
+    {
+      "id": 359,
+      "commonName": "Cerrillo",
+      "scientificName": "Hyparrhenia hirta",
+      "kingdom": "flora",
+      "group": "Gramínea",
+      "habitat": "Laderas secas, ribazos y pastizales sobre suelos pedregosos",
+      "description": "Gramínea perenne que forma matas y espiga en verano, cuando el resto del pastizal ya está agostado. Sus espiguillas van por parejas, cubiertas de pelos rojizos y con aristas retorcidas. Da al paisaje un tono dorado rojizo a final de verano.",
+      "descriptionSource": null,
+      "tips": [
+        "Espiguillas peludas agrupadas por parejas",
+        "Aristas retorcidas y acodadas",
+        "Espiga en verano, cuando lo demás está seco"
+      ],
+      "seasonality": "Verano y otoño",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hyparrhenia_hirta_Habitus_ValledeAlcudia.jpg?width=1280",
+      "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-09-13); Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Hyparrhenia pubescens»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "taxonomy": {
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Liliopsida",
+        "order": "Poales",
+        "family": "Poaceae",
+        "genus": "Hyparrhenia"
+      },
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 10047,
+      "gbifSpeciesKey": 2703243,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": true
+    },
+    {
+      "id": 360,
+      "commonName": "Lastón",
+      "scientificName": "Oloptum miliaceum",
+      "kingdom": "flora",
+      "group": "Gramínea",
+      "habitat": "Vive en pastizales ruderalizados, cunetas algo húmedas y claros de bosque, hasta 1300 m",
+      "description": "Planta perenne, multicaule, con tallos hasta de 1 m, erecto-ascendentes, glabros. Hojas con vaina glabra, limbo hasta de 50 x 1 cm. Inflorescencia en panícula muy laxa, hasta de 40 cm, péndula en la parte superior; con ramas verticiladas erecto-patentes, flexuosas y muy finas; muy numerosas y todas fértiles en los verticilos inferiores. Espiguillas muy pequeñas, unifloras, de 2,5-3,5 mm, comprimidas dorsalmente, verdosas o violáceas; lema con arista de 2-4 mm. Fruto en cariopsis elipsoide.",
+      "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+      "tips": [],
+      "seasonality": "Todo el año",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Piptatherummiliaceum.jpg?width=1280",
+      "imageAttribution": "Stickpen (Public domain) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-09-13); Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Piptatherum miliaceum»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "taxonomy": {
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Liliopsida",
+        "order": "Poales",
+        "family": "Poaceae",
+        "genus": "Oloptum"
+      },
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 82594,
+      "gbifSpeciesKey": 8335191,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": true
+    },
+    {
+      "id": 361,
+      "commonName": "Rana común",
+      "scientificName": "Pelophylax perezi",
+      "kingdom": "fauna",
+      "group": "Anfibio",
+      "habitat": "Charcas, balsas, acequias y tramos remansados con vegetación",
+      "description": "La rana verde ibérica, la más común y adaptable de nuestros anfibios: coloniza desde ramblas y balsas de riego hasta fuentes urbanas. Su canto es un cacareo entrecortado que forma coros al atardecer. Salta al agua al menor movimiento en la orilla.",
+      "descriptionSource": null,
+      "tips": [
+        "Línea clara a lo largo del centro del lomo en muchos ejemplares",
+        "Canto entrecortado, como una risa o un cacareo",
+        "Salta al agua desde la orilla al notar movimiento"
+      ],
+      "seasonality": "Primavera a otoño",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pelophylax_perezi_by-dpc.jpg?width=1280",
+      "imageAttribution": "David Perez (CC BY 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-09-13); Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Rana perezi»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Amphibia",
+        "order": "Anura",
+        "family": "Ranidae",
+        "genus": "Pelophylax"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)",
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)",
+      "spainStatus": "Anexo VI (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); UICN España: LC (Preocupación menor) (2002)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 11964,
+      "gbifSpeciesKey": 2426658,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": true
+    },
+    {
+      "id": 362,
+      "commonName": "Taraje",
+      "scientificName": "Tamarix gallica",
+      "kingdom": "flora",
+      "group": "Árbol",
+      "habitat": "Ramblas, cauces salinos, márgenes de saladar y arenas húmedas",
+      "description": "Arbolillo de porte ligero y ramas colgantes cubiertas de hojas escamosas diminutas, con un follaje que de lejos parece humo verde. Tolera la sal como pocos árboles: la excreta por sus hojas, y sus espigas rosadas de flores minúsculas cubren la copa en primavera.",
+      "descriptionSource": null,
+      "tips": [
+        "Hojas escamosas de un par de milímetros, pegadas a la ramilla",
+        "Ramas finas y péndulas, de aspecto plumoso",
+        "Espigas densas de florecillas rosadas o blanquecinas"
+      ],
+      "seasonality": "Floración de primavera a verano",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tamarix_gallica_-_Villa_Taranto_(Verbania)_-_DSC03778.JPG?width=1280",
+      "imageAttribution": "Daderot (Public domain) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-09-13); Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000175 (Salinas y Arenales de San Pedro del Pinatar), sección 3.3, que la cita como «Tamarix canariensis auct., non Willd.»; Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Tamarix canariensis», con la categoría «De Interés Especial»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Magnoliopsida",
+        "order": "Caryophyllales",
+        "family": "Tamaricaceae",
+        "genus": "Tamarix"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
+      "spainStatus": "ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestales de reproducción (Catálogo Nacional de Materiales de Base))",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 8551,
+      "gbifSpeciesKey": 8380575,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": true
+    },
+    {
+      "id": 363,
+      "commonName": "Culebra de escalera",
+      "scientificName": "Zamenis scalaris",
+      "kingdom": "fauna",
+      "group": "Reptil",
+      "habitat": "Ocupa todo tipo de suelos en ambientes mediterráneos de matorral y borde de bosque, pues precisa de cierta cobertura vegetal y de lugares relativamente húmedos",
+      "description": "Longitud hocico-cloaca media de 720 mm (rango 233-1.385 mm), cola relativamente corta. Cabeza algo pequeña, con hocico agudo, que sobrepasa netamente el extremo anterior de la mandíbula. 27 rangos de escamas dorsales. Color de fondo amarillento, con diseño de manchas dorsales en escalera en los ejemplares pequeños, y dos líneas dorsolaterales en los ejemplares de mayor tamaño. Longitud total máxima, 1.650 mm.",
+      "descriptionSource": null,
+      "tips": [],
+      "seasonality": "Febrero a noviembre",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rhinechis_scalaris_cropped.jpg?width=1280",
+      "imageAttribution": "Benny_Trapp_Rhinechis_scalaris_Portugal.jpg: Benny Trapp derivative… (CC BY 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-09-13); Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Rhinechis scalaris»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Reptilia",
+        "order": "Squamata",
+        "family": "Colubridae",
+        "genus": "Zamenis"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 33095,
+      "gbifSpeciesKey": 9416124,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": true
+    },
+    {
+      "id": 364,
+      "commonName": "Curruca cabecinegra",
+      "scientificName": "Curruca melanocephala",
+      "kingdom": "fauna",
+      "group": "Ave",
+      "habitat": "Matorral mediterráneo denso, setos y bordes de arbolado",
+      "description": "La curruca más común del matorral mediterráneo. El macho tiene la cabeza negra hasta por debajo del ojo, la garganta blanca y un llamativo anillo ocular rojo. Es ruidosa y territorial: su reclamo de alarma es un traqueteo seco que delata su presencia constantemente.",
+      "descriptionSource": null,
+      "tips": [
+        "Capucha negra que baja por debajo del ojo",
+        "Anillo ocular rojo intenso",
+        "Reclamo de alarma como una carraca seca"
+      ],
+      "seasonality": "Todo el año",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sardinian_Warbler.jpg?width=1280",
+      "imageAttribution": "Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE (RD 139/2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF confirma su presencia con 760 ocurrencias dentro del espacio (barrido de 2026-09-13); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Sylvia melanocephala»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Passeriformes",
+        "family": "Sylviidae",
+        "genus": "Curruca"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
+      "iucnSpain": "DD — Datos insuficientes (Lista Roja española, 2004)",
+      "spainStatus": "LESRPE (RD 139/2011)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": "GBIF sirve este taxón bajo más de un nombre: además del registro que se ha usado (el de la selección aprobada), hay *Sylvia melanocephala* (clave 2492962, 45 ocurrencias). El recuento de ocurrencias de esta ficha se queda por tanto CORTO respecto a la presencia real en el espacio.",
+      "eidosTaxonId": 80929,
+      "gbifSpeciesKey": 9990095,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 760,
+      "visible": true
+    },
+    {
+      "id": 365,
+      "commonName": "Pardillo común",
+      "scientificName": "Linaria cannabina",
+      "kingdom": "fauna",
+      "group": "Ave",
+      "habitat": null,
+      "description": "El pardillo es un pájaro estilizado, delgado, de pico corto y con cola larga y escotada. Su plumaje tiene color pardo en el dorso y ocre muy pálido en los flancos y el vientre. Presenta pintas alargadas o estrías, mucho más abundantes y visibles en las hembras. Además, los machos resultan inconfundibles en primavera, pues lucen un llamativo color carmín en la frente y el pecho. En vuelo, ambos sexos y los jóvenes del año muestran una débil pero perceptible mancha blanca, que destaca sobre el color negruzco de sus alas. Asimismo, el par de plumas externo de la cola es de color blanco. Tanto las hembras como los jóvenes del año, por su plumaje poco llamativo, se pueden confundir con bisbitas pratenses o con hembras y jóvenes de escribanos. No obstante, los bisbitas tienen un pico fino y largo y —más importante— “caminan”, mientras que los pardillos, como el resto de los fringílidos, “saltan” cuando se desplazan por el suelo. A su vez, la costumbre de los pardillos de buscar el alimento en el suelo los diferencia de los escribanos, a los que se observa habitualmente posados en ramas de arbustos. Los escribanos, son, además, de talla mayor y menos gregarios que los pardillos. Fuera de la época reproductora, el pardillo común se mueve en grandes bandos, que muchas veces son mixtos, pues se mezcla con otros fringílidos, como verdecillos, jilgueros, verderones comunes, lúganos, etc.",
+      "descriptionSource": null,
+      "tips": [],
+      "seasonality": "Todo el año",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Linnet-Mindaugas_Urbonas-3.jpg?width=1280",
+      "imageAttribution": "Mindaugas Urbonas from Lithuanian wikipedia (Profile, Homepage, E-m… (CC BY-SA 2.5) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF confirma su presencia con 122 ocurrencias dentro del espacio (barrido de 2026-09-13); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Carduelis cannabina»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Passeriformes",
+        "family": "Fringillidae",
+        "genus": "Linaria"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
+      "iucnSpain": "DD — Datos insuficientes (Lista Roja española, 2004)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 33088,
+      "gbifSpeciesKey": 8104397,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 122,
+      "visible": true
+    },
+    {
+      "id": 366,
+      "commonName": "Pito ibérico",
+      "scientificName": "Picus sharpei",
+      "kingdom": "fauna",
+      "group": "Ave",
+      "habitat": null,
+      "description": "Es un pájaro carpintero grande y robusto, de aspecto inconfundible, en cuyo plumaje dominan claramente los tonos verdosos, más intensos en las regiones dorsales, ligeramente grisáceos en las ventrales y con matices amarillentos en el obispillo. Carece de moteados y listas —salvo, tenuemente, en la región anal—, pero luce un llamativo patrón de coloración en la cabeza, donde el píleo es rojo y los ojos, amarillentos, aparecen enmarcados por un antifaz negro. Los machos y los jóvenes presentan una bigotera negra y roja, que es exclusivamente negra en las hembras. El plumaje juvenil se caracteriza por ser fuertemente moteado, especialmente en las partes inferiores, aunque, en conjunto, su coloración es más apagada que la del adulto, no presentan antifaz y poseen un iris más oscuro. Su vuelo es muy característico, con una trayectoria ondulatoria en la que el ave combina tramos en los que bate las alas con otros en que las pliega.",
+      "descriptionSource": null,
+      "tips": [],
+      "seasonality": "Todo el año",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Iberian_Green_Woodpecker_(Pito_Ib%C3%A9rico)_(Picus_sharpei)_-_Torrevieja%2C_Spain_2024-02-04.jpg?width=1280",
+      "imageAttribution": "Ryan Hodnett (CC BY-SA 4.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF confirma su presencia con 18 ocurrencias dentro del espacio (barrido de 2026-09-13); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Picus viridis»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Piciformes",
+        "family": "Picidae",
+        "genus": "Picus"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)",
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": "GBIF sirve este taxón bajo más de un nombre: además del registro que se ha usado (el de la selección aprobada), hay *Picus viridis* (clave 2478523, 3 ocurrencias). El recuento de ocurrencias de esta ficha se queda por tanto CORTO respecto a la presencia real en el espacio.",
+      "eidosTaxonId": 33014,
+      "gbifSpeciesKey": 9029556,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 18,
+      "visible": true
+    },
+    {
+      "id": 367,
+      "commonName": "Curruca tomillera",
+      "scientificName": "Curruca conspicillata",
+      "kingdom": "fauna",
+      "group": "Ave",
+      "habitat": "Matorral bajo y abierto, tomillares y saladares con arbustos dispersos",
+      "description": "Curruca menuda de matorral raso, gris en la cabeza, parda en el dorso y con las plumas del ala ribeteadas de castaño encendido. El anillo blanco del ojo le da el aire de «gafas» que le da nombre. Es inquieta y suele delatarse por su reclamo antes de dejarse ver.",
+      "descriptionSource": null,
+      "tips": [
+        "Anillo blanco alrededor del ojo bien marcado",
+        "Panel castaño vivo en el ala plegada",
+        "Vive en matorral muy bajo, no en arbolado"
+      ],
+      "seasonality": "Todo el año en el sureste; parcialmente migradora",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_%C3%A0_lunettes_Aqueduc_de_Zaghouan.jpg?width=1280",
+      "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF confirma su presencia con 6 ocurrencias dentro del espacio (barrido de 2026-09-13); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000175 (Salinas y Arenales de San Pedro del Pinatar), sección 3.2, que la cita como «Sylvia conspicillata»: población en concentración, presente; Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Sylvia conspicillata»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Passeriformes",
+        "family": "Sylviidae",
+        "genus": "Curruca"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2004)",
+      "spainStatus": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 80923,
+      "gbifSpeciesKey": 2492959,
+      "zepaSiteCode": "ES0000175",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000175",
+            "name": "Salinas y Arenales de San Pedro del Pinatar",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000175 (Salinas y Arenales de San Pedro del Pinatar), sección 3.2"
+      },
+      "habitatIds": [],
+      "gbifOccurrences": 6,
+      "visible": true
+    },
+    {
+      "id": 368,
+      "commonName": "Golondrina dáurica",
+      "scientificName": "Cecropis daurica",
+      "kingdom": "fauna",
+      "group": "Ave",
+      "habitat": "Desde parameras secas hasta altas cumbres.Nidos bajo puentes,riscos,acantilados,zonas llanas bajas",
+      "description": "De apariencia similar a la golondrina común, exhibe dorso negro, con reflejos azulados, y vientre blanco sucio, con flancos anaranjados y algunas rayas tenues. Los rasgos más característicos de la especie son la nuca y la cara anaranjadas, del mismo color que el obispillo. Las alas, largas y apuntadas, también muestran tonos naranjas en la parte inferior delantera. Posee una cola muy larga y muy ahorquillada,de color negro uniforme, tanto por arriba como por abajo. Tiene patas cortas sin emplumar, boca muy ancha, y pico corto, plano y negro. Ambos sexos son iguales. Los jóvenes presentan en el dorso plumaje negro mate, con plumas ribeteadas en blanco, siendo las zonas naranjas de menor intensidad; incluso el obispillo parece blanco en ocasiones. Esta ave se observa frecuentemente cerca de puentes y roquedos, y exhibe un vuelo ágil, rápido y acrobático.",
+      "descriptionSource": null,
+      "tips": [],
+      "seasonality": "Abril a septiembre",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Golondrina_d%C3%A1urica_Cecropis_daurica_1.jpg?width=1280",
+      "imageAttribution": "Agustín Povedano from El Puerto de Santa María, Extremadura y Andal… (CC BY 2.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF confirma su presencia con 3 ocurrencias dentro del espacio (barrido de 2026-09-13); las aves no se adscriben a hábitats; Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Hirundo daurica»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Passeriformes",
+        "family": "Hirundinidae",
+        "genus": "Cecropis"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 11132,
+      "gbifSpeciesKey": 9717283,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 3,
+      "visible": true
+    },
+    {
+      "id": 369,
+      "commonName": "Curruca carrasqueña",
+      "scientificName": "Curruca cantillans",
+      "kingdom": "fauna",
+      "group": "Ave",
+      "habitat": "Matorral alto, jarales, encinares aclarados y bordes de bosque",
+      "description": "Curruca de tamaño medio, con el macho de dorso gris, garganta y pecho color teja y un bigote blanco muy nítido que separa ambos. El anillo ocular es rojo. Canta desde el interior del matorral y hace vuelos cortos de exhibición sobre las matas.",
+      "descriptionSource": null,
+      "tips": [
+        "Bigote blanco que bordea la garganta rojiza",
+        "Anillo ocular rojo anaranjado",
+        "Prefiere matorral alto, no el raso"
+      ],
+      "seasonality": "Primavera y verano (estival)",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9A%CE%BF%CE%BA%CE%BA%CE%B9%CE%BD%CE%BF%CF%84%CF%83%CE%B9%CF%81%CE%BF%CE%B2%CE%AC%CE%BA%CE%BF%CF%82.jpg?width=1280",
+      "imageAttribution": "Antonios Tsaknakis (CC BY-SA 4.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-09-13); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000175 (Salinas y Arenales de San Pedro del Pinatar), sección 3.2, que la cita como «Sylvia cantillans ([excluding subalpina])»: población en concentración, presente; Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Sylvia cantillans»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Passeriformes",
+        "family": "Sylviidae",
+        "genus": "Curruca"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 80920,
+      "gbifSpeciesKey": 2492950,
+      "zepaSiteCode": "ES0000175",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000175",
+            "name": "Salinas y Arenales de San Pedro del Pinatar",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000175 (Salinas y Arenales de San Pedro del Pinatar), sección 3.2"
+      },
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": true
+    },
+    {
+      "id": 370,
+      "commonName": "Hierba del cólico",
+      "scientificName": "Limbarda crithmoides",
+      "kingdom": "flora",
+      "group": null,
+      "habitat": null,
+      "description": null,
+      "descriptionSource": null,
+      "tips": [],
+      "seasonality": "Todo el año",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Inula_crithmoides_Flowers_Closeup3_LagunadelaMata.jpg?width=1280",
+      "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF: 21 ocurrencias dentro de los polígonos de hábitat del espacio (14 hábitats; barrido de 2026-09-13); Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Inula crithmoides»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "taxonomy": {
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Magnoliopsida",
+        "order": "Asterales",
+        "family": "Asteraceae",
+        "genus": "Limbarda"
+      },
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 37515,
+      "gbifSpeciesKey": 3088761,
+      "zepaSiteCode": null,
+      "habitatIds": [
+        "matorrales-halofilos-mediterraneos-1420",
+        "pastizales-salinos-mediterraneos-1410",
+        "dunas-con-vegetacion-2260",
+        "dunas-con-cespedes-2230",
+        "dunas-litorales-con-2250",
+        "vegetacion-halonitrofila-anual-1310",
+        "acantilados-con-vegetacion-1240",
+        "dunas-fijas-de-2210",
+        "dunas-moviles-de-2120",
+        "dunas-moviles-embrionarias-2110",
+        "estepas-salinas-mediterraneas-1510",
+        "galerias-y-matorrales-92D0",
+        "matorrales-halonitrofilos-pegano-1430",
+        "vegetacion-anual-sobre-1210"
+      ],
+      "gbifOccurrences": 21,
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
+    },
+    {
+      "id": 371,
+      "commonName": "Hiel de la tierra",
+      "scientificName": "Schenkia spicata",
+      "kingdom": "flora",
+      "group": null,
+      "habitat": null,
+      "description": null,
+      "descriptionSource": null,
+      "tips": [],
+      "seasonality": "Mayo a octubre",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Centaurium_spicatum.jpg?width=1280",
+      "imageAttribution": "Tigerente (CC BY-SA 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF: 2 ocurrencias dentro de los polígonos de hábitat del espacio (8 hábitats; barrido de 2026-09-13); Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Centaurium spicatum»; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "taxonomy": {
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Magnoliopsida",
+        "order": "Gentianales",
+        "family": "Gentianaceae",
+        "genus": "Schenkia"
+      },
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 8086,
+      "gbifSpeciesKey": 5595243,
+      "zepaSiteCode": null,
+      "habitatIds": [
+        "dunas-con-cespedes-2230",
+        "dunas-fijas-de-2210",
+        "dunas-moviles-de-2120",
+        "dunas-moviles-embrionarias-2110",
+        "matorrales-halofilos-mediterraneos-1420",
+        "pastizales-salinos-mediterraneos-1410",
+        "vegetacion-anual-sobre-1210",
+        "vegetacion-halonitrofila-anual-1310"
+      ],
+      "gbifOccurrences": 2,
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
+    },
+    {
+      "id": 372,
+      "commonName": "Caramillo",
+      "scientificName": "Caroxylon vermiculatum",
+      "kingdom": "flora",
+      "group": null,
+      "habitat": null,
+      "description": null,
+      "descriptionSource": null,
+      "tips": [],
+      "seasonality": "Todo el año",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Salsola_vermiculata.jpg?width=1280",
+      "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-09-13); Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, que la cita como «Salsola flavescens» (necesita DOS saltos y por eso se deja escrito el camino entero: GBIF resuelve el verbatim EXACT a «Nitrosalsola vermiculata», nombre que EIDOS no conoce; y GBIF resuelve «Caroxylon vermiculatum» —que EIDOS sí acepta— EXACT al MISMO nombre); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "taxonomy": {
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Magnoliopsida",
+        "order": "Caryophyllales",
+        "family": "Amaranthaceae",
+        "genus": "Caroxylon"
+      },
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 1341,
+      "gbifSpeciesKey": null,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
+    },
+    {
+      "id": 373,
+      "commonName": "algodonosa",
+      "scientificName": "Otanthus maritimus",
+      "kingdom": "flora",
+      "group": null,
+      "habitat": null,
+      "description": null,
+      "descriptionSource": null,
+      "tips": [],
+      "seasonality": "Todo el año",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Otanthus_maritimus_1.JPG?width=1280",
+      "imageAttribution": "Gideon Pisanty (Gidip) גדעון פיזנטי (CC BY 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-09-13); Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG, con la categoría «De Interés Especial»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Magnoliopsida",
+        "order": "Asterales",
+        "family": "Asteraceae",
+        "genus": "Achillea"
+      },
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 10444,
+      "gbifSpeciesKey": null,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": false,
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
     }
   ]
 }

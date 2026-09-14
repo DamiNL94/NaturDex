@@ -2,7 +2,7 @@
   "slug": "sierra-de-el-carche",
   "name": "Sierra de El Carche",
   "apiSlug": "sierra-de-el-carche",
-  "version": 25,
+  "version": 30,
   "updatedAt": "2026-09-14",
   "data": "Data/parks/murcia/sierra-de-el-carche/park.json",
   "geo": {
@@ -13,7 +13,7 @@
   "images": [],
   "audio": [],
   "counts": {
-    "species": 303,
+    "species": 365,
     "habitats": 11,
     "pointsOfInterest": 10,
     "images": 0,

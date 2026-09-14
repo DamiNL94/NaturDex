@@ -68,7 +68,7 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
    deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).
 
-## 2. Veintinueve cosas que fallan EN VERDE
+## 2. Treinta cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
@@ -279,6 +279,22 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   comprobar con `validate`**: se queda ahí sosteniendo una decisión durante meses. Resuelto el
   2026-08-27 (deuda nº 4). La regla: **la etiqueta de una autoridad dice lo que opina esa autoridad,
   no si dos autoridades discrepan** — eso hay que ir a preguntárselo a la otra, taxón a taxón.
+- **Dar de alta una ficha que el espacio YA tiene con otro nombre, y que ningún guardián puede ver.**
+  El anexo de un plan enumera *Rhamnus hispanorum* y el catálogo ficha ese mismo espino negro en
+  siete espacios como *Rhamnus lycioides*; el anexo enumera *Gymnosporia senegalensis* y Calblanque
+  ya la ficha como *Maytenus senegalensis* subsp. *europaea*. No lo caza nada: `taxones:duplicados`
+  compara `eidosTaxonId` y son distintos (la especie y su subespecie, 6257 y 6258), y el cruce por
+  binomio no casa porque **cambia el género**. La primera trampa es de comparación —`resolverNombre()`
+  de `build-species-n2.js` comparaba el nombre aceptado de EIDOS **por igualdad**, y EIDOS lo escribe
+  **con autor** («Rhamnus lycioides L. subsp. lycioides»), así que no casaba nunca y el renombrado se
+  convertía en alta—; se arregla con `nameMatches()` de `lib/eidos.js` y la guarda de la subespecie
+  **nominal** (el tercer epíteto repite el segundo; una subespecie distinta NO es el mismo taxón, que
+  sería la deuda nº 36). La segunda no tiene arreglo automático y hay que mirarla: de 456 altas, el
+  cruce por **epíteto + familia** deja **cinco** parejas y acierta en dos. Y el peor caso es el que
+  ni eso ve: *Scilla autumnalis* y *Prospero autumnale* son la misma planta y **EIDOS devuelve las
+  dos como aceptadas**, con taxonid distinto. La regla: **antes de dar de alta, pregúntale al espacio
+  si ya la tiene con otro nombre** — y lo que se decida se escribe en `data/exclusiones-especies.json`,
+  que es lo único que sobrevive a la siguiente regeneración.
 - **La herramienta con la que se aplica TODO a la base decía «OK» habiendo escrito la mitad.**
   `Tools/import-sql.php` manda el fichero entero con `multi_query`, y un fallo de sintaxis a la mitad
   rompe el hilo: `next_result()` devuelve false, el bucle sale por la condición del `while` **con el

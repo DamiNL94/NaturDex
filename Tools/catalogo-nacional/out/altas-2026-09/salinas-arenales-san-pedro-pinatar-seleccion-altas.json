@@ -1,0 +1,866 @@
+{
+  "_nota": "Extracto de la selección que la auditoría del catálogo pasó EN VIVO el 2026-09-13. Contiene SOLO las especies que esa criba aprueba y que el espacio no tiene fichadas: son las «altas» de la cola 4 del consolidado (Docs/auditoria-consolidado.md). No es la selección aprobada del espacio y no la sustituye — la de la auditoría difiere de la versionada en las dos direcciones, y adoptarla entera daría por no respaldadas fichas que sí lo están. Lo escribe build-species-n2.js --altas, que conserva intacto todo lo ya publicado.",
+  "park": "salinas-arenales-san-pedro-pinatar",
+  "generado": "2026-09-13",
+  "origen": "auditoría del catálogo, criba en vivo (pinatar-seleccion-vivo.json)",
+  "total": 19,
+  "especies": [
+    {
+      "scientificName": "Curruca melanocephala",
+      "class": "Aves",
+      "gbifOccurrences": 760,
+      "habitats": 10,
+      "evidence": [
+        "observada_gbif",
+        "protegida",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "barrancos-de-gebas",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Sylvia melanocephala",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+          "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+          "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+          "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+          "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+          "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+          "consultado": "2026-08-17",
+          "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+        }
+      },
+      "eidosTaxonId": 80929,
+      "sinonimosFusionados": [
+        "Sylvia melanocephala"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Linaria cannabina",
+      "class": "Aves",
+      "gbifOccurrences": 122,
+      "habitats": 10,
+      "evidence": [
+        "observada_gbif",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "espacios-abiertos-e-islas-del-mar-menor",
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Carduelis cannabina",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+          "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+          "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+          "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+          "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+          "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+          "consultado": "2026-08-17",
+          "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+        }
+      },
+      "eidosTaxonId": 33088,
+      "sinonimosFusionados": [
+        "Carduelis cannabina"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Limbarda crithmoides",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 21,
+      "habitats": 14,
+      "evidence": [
+        "observada_gbif",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": null,
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Inula crithmoides",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+          "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+          "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+          "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+          "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+          "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+          "consultado": "2026-08-17",
+          "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+        }
+      },
+      "eidosTaxonId": 37515,
+      "sinonimosFusionados": [
+        "Inula crithmoides"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Picus sharpei",
+      "class": "Aves",
+      "gbifOccurrences": 18,
+      "habitats": 10,
+      "evidence": [
+        "observada_gbif",
+        "protegida",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "barrancos-de-gebas",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Picus viridis",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+          "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+          "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+          "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+          "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+          "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+          "consultado": "2026-08-17",
+          "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+        }
+      },
+      "eidosTaxonId": 33014,
+      "sinonimosFusionados": [
+        "Picus viridis"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Curruca conspicillata",
+      "class": "Aves",
+      "gbifOccurrences": 6,
+      "habitats": 6,
+      "evidence": [
+        "observada_gbif",
+        "protegida",
+        "anexo_normativo",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "cabo-cope-puntas-calnegre",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa (verificado por el nombre aceptado: Curruca conspicillata (Temminck, 1820))",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Sylvia conspicillata",
+          "siteCode": "ES0000175",
+          "siteName": "Salinas y Arenales de San Pedro del Pinatar",
+          "seccion": "3.2",
+          "tipoPoblacion": "en concentración",
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "anexoNormativo": {
+        "citadaComo": "Sylvia conspicillata",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+          "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+          "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+          "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+          "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+          "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+          "consultado": "2026-08-17",
+          "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+        }
+      },
+      "nombreAceptadoEidos": "Curruca conspicillata (Temminck, 1820)",
+      "eidosTaxonId": 80923,
+      "sinonimosFusionados": [
+        "Sylvia conspicillata"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Lysimachia arvensis",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 3,
+      "habitats": 4,
+      "evidence": [
+        "observada_gbif",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "cuatro-calas",
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Anagallis arvensis",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+          "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+          "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+          "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+          "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+          "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+          "consultado": "2026-08-17",
+          "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+        }
+      },
+      "eidosTaxonId": 80964,
+      "sinonimosFusionados": [
+        "Anagallis arvensis"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Cecropis daurica",
+      "class": "Aves",
+      "gbifOccurrences": 3,
+      "habitats": 3,
+      "evidence": [
+        "observada_gbif",
+        "protegida",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "espacios-abiertos-e-islas-del-mar-menor",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Hirundo daurica",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+          "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+          "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+          "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+          "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+          "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+          "consultado": "2026-08-17",
+          "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+        }
+      },
+      "eidosTaxonId": 11132,
+      "sinonimosFusionados": [
+        "Hirundo daurica"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Schenkia spicata",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 2,
+      "habitats": 8,
+      "evidence": [
+        "observada_gbif",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": null,
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Centaurium spicatum",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+          "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+          "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+          "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+          "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+          "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+          "consultado": "2026-08-17",
+          "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+        }
+      },
+      "eidosTaxonId": 8086,
+      "sinonimosFusionados": [
+        "Centaurium spicatum"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Macrochloa tenacissima",
+      "class": "Liliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "carrascoy-y-el-valle",
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Stipa tenacissima",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+          "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+          "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+          "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+          "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+          "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+          "consultado": "2026-08-17",
+          "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+        }
+      },
+      "eidosTaxonId": 27376,
+      "sinonimosFusionados": [
+        "Stipa tenacissima"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Malva multiflora",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 3,
+      "evidence": [
+        "observada_gbif",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "carrascoy-y-el-valle",
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Lavatera cretica",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+          "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+          "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+          "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+          "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+          "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+          "consultado": "2026-08-17",
+          "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+        }
+      },
+      "eidosTaxonId": 80875,
+      "sinonimosFusionados": [
+        "Lavatera cretica"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Hyparrhenia hirta",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "barrancos-de-gebas",
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa (verificado por el nombre aceptado: Hyparrhenia hirta (L.) Stapf)",
+      "anexoNormativo": {
+        "citadaComo": "Hyparrhenia pubescens",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+          "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+          "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+          "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+          "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+          "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+          "consultado": "2026-08-17",
+          "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+        }
+      },
+      "nombreAceptadoEidos": "Hyparrhenia hirta (L.) Stapf",
+      "eidosTaxonId": 10047,
+      "sinonimosFusionados": [
+        "Hyparrhenia pubescens"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Otanthus maritimus",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa (verificado por el nombre aceptado: Achillea maritima (L.) Ehrend. & Y.P. Guo)",
+      "anexoNormativo": {
+        "citadaComo": "Otanthus maritimus",
+        "categoria": "De Interés Especial",
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+          "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+          "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+          "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+          "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+          "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+          "consultado": "2026-08-17",
+          "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+        }
+      },
+      "nombreAceptadoEidos": "Achillea maritima (L.) Ehrend. & Y.P. Guo",
+      "eidosTaxonId": 10444,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Oloptum miliaceum",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "carrascoy-y-el-valle",
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa (verificado por el nombre aceptado: Oloptum miliaceum (L.) Röser & Hamasha)",
+      "anexoNormativo": {
+        "citadaComo": "Piptatherum miliaceum",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+          "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+          "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+          "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+          "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+          "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+          "consultado": "2026-08-17",
+          "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+        }
+      },
+      "nombreAceptadoEidos": "Oloptum miliaceum (L.) Röser & Hamasha",
+      "eidosTaxonId": 82594,
+      "sinonimosFusionados": [
+        "Piptatherum miliaceum"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Caroxylon vermiculatum",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": null,
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "anexoNormativo": {
+        "citadaComo": "Salsola flavescens",
+        "categoria": null,
+        "nota": "Necesita DOS saltos y por eso se deja escrito el camino entero: GBIF resuelve el verbatim EXACT a «Nitrosalsola vermiculata», nombre que EIDOS no conoce; y GBIF resuelve «Caroxylon vermiculatum» —que EIDOS sí acepta— EXACT al MISMO nombre. Son el mismo taxón según GBIF y el catálogo lo ficha con el género que usa EIDOS. No es una equivalencia por parecido de epíteto: la cierran las dos autoridades. Verificado el 2026-08-17.",
+        "fuente": {
+          "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+          "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+          "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+          "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+          "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+          "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+          "consultado": "2026-08-17",
+          "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+        }
+      },
+      "eidosTaxonId": 1341,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Curruca cantillans",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "anexo_normativo",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "carrascoy-y-el-valle",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa (verificado por el nombre aceptado: Curruca cantillans (Pallas, 1764))",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Sylvia cantillans ([excluding subalpina])",
+          "siteCode": "ES0000175",
+          "siteName": "Salinas y Arenales de San Pedro del Pinatar",
+          "seccion": "3.2",
+          "tipoPoblacion": "en concentración",
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "anexoNormativo": {
+        "citadaComo": "Sylvia cantillans",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+          "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+          "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+          "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+          "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+          "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+          "consultado": "2026-08-17",
+          "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+        }
+      },
+      "nombreAceptadoEidos": "Curruca cantillans (Pallas, 1764)",
+      "eidosTaxonId": 80920,
+      "sinonimosFusionados": [
+        "Sylvia cantillans"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Epidalea calamita",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "cabezo-gordo",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa (verificado por el nombre aceptado: Epidalea calamita (Laurenti, 1768))",
+      "anexoNormativo": {
+        "citadaComo": "Bufo calamita",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+          "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+          "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+          "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+          "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+          "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+          "consultado": "2026-08-17",
+          "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+        }
+      },
+      "nombreAceptadoEidos": "Epidalea calamita (Laurenti, 1768)",
+      "eidosTaxonId": 24327,
+      "sinonimosFusionados": [
+        "Bufo calamita"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Pelophylax perezi",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "carrascoy-y-el-valle",
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa (verificado por el nombre aceptado: Pelophylax perezi (Seoane, 1885))",
+      "anexoNormativo": {
+        "citadaComo": "Rana perezi",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+          "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+          "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+          "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+          "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+          "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+          "consultado": "2026-08-17",
+          "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+        }
+      },
+      "nombreAceptadoEidos": "Pelophylax perezi (Seoane, 1885)",
+      "eidosTaxonId": 11964,
+      "sinonimosFusionados": [
+        "Rana perezi"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Zamenis scalaris",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "anexo_normativo"
+      ],
+      "yaFichadaEn": "cabezo-gordo",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa (verificado por el nombre aceptado: Zamenis scalaris (Schinz, 1822))",
+      "anexoNormativo": {
+        "citadaComo": "Rhinechis scalaris",
+        "categoria": null,
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+          "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+          "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+          "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+          "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+          "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+          "consultado": "2026-08-17",
+          "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+        }
+      },
+      "nombreAceptadoEidos": "Zamenis scalaris (Schinz, 1822)",
+      "eidosTaxonId": 33095,
+      "sinonimosFusionados": [
+        "Rhinechis scalaris"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Tamarix gallica",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "anexo_normativo",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "cuatro-calas",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa (verificado por el nombre aceptado: Tamarix gallica L. )",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Tamarix canariensis auct., non Willd.",
+          "siteCode": "ES0000175",
+          "siteName": "Salinas y Arenales de San Pedro del Pinatar",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": null
+        }
+      ],
+      "anexoNormativo": {
+        "citadaComo": "Tamarix canariensis",
+        "categoria": "De Interés Especial",
+        "nota": null,
+        "fuente": {
+          "norma": "Decreto n.º 259/2019, de 10 de octubre, de declaración de Zonas Especiales de Conservación (ZEC) y de aprobación del Plan de gestión integral de los espacios protegidos del Mar Menor y la franja litoral mediterránea de la Región de Murcia. Su Volumen III ES el Plan Rector de Uso y Gestión (PRUG) del Parque Regional «Salinas y Arenales de San Pedro del Pinatar».",
+          "boletin": "BORM n.º 242, de 19 de octubre de 2019, suplemento n.º 7, anuncio 6450",
+          "url": "https://www.borm.es/services/anuncio/ano/2019/numero/6450/pdf",
+          "anexo": "Volumen III (PRUG), §2.3.1.2 «Inventario florístico» —Tabla 1, 226 taxones con nombre común y categoría del Catálogo Regional de Flora Silvestre Protegida— y §2.3.3.2 «Inventario faunístico» —Tabla 9, 167 entradas numeradas por grupo (aves, mamíferos, peces, anfibios, reptiles, invertebrados) con nombre común y su situación en las dos Directivas, el Listado de Protección Especial, el Catálogo regional y los tres libros rojos—. Las especies que la norma declara exóticas en su Tabla 3 (§2.3.1.3) y en su §2.3.3.3 están recogidas aparte, en `noNativas`.",
+          "cita": "Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019)",
+          "ambito": "el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG",
+          "consultado": "2026-08-17",
+          "nota": "Primer espacio del rollout cuyo inventario normativo es del PROPIO espacio y no de un sitio Red Natura 2000 que lo solapa sin coincidir, porque el volumen III de este plan es su PRUG. La transcripción cuadra con lo que declara el propio texto: «14 especies incluidas en el Catálogo Regional de Flora Silvestre Protegida: 1 En Peligro de Extinción; 5 Vulnerable; y 8 De Interés Especial», y salen exactamente 1 + 5 + 8. De las 167 entradas numeradas de fauna, DOS no dan de alta ninguna especie porque la norma solo cita el género («Nebrioporus sp», «Ochthebius sp», los nº 162 y 163). SEIS entradas de aves llevan paréntesis y son la trampa de este anexo: la norma escribe «Larus audouinii (=Ichthyaetus audouinii)» dando el sinónimo entre paréntesis, pero cuál de los dos acepta EIDOS hoy CAMBIA de caso a caso —tres veces el de fuera y dos el de dentro—, así que no hay regla mecánica y los seis se resolvieron uno a uno contra EIDOS. El séptimo, «Phoenicopterus (roseus) ruber», ni siquiera es un binomio y lo desambigua el nombre castellano que escribe la norma. Se lee del PDF con `pdftotext -layout`; OJO con la Tabla 3, cuya capa de texto viene con una codificación de fuente desplazada 29 posiciones en ASCII («$FDFLDUHWLQRLGHV» = «Acacia retinoides»), que no afecta a las Tablas 1 y 9. El PORN del espacio es ANTERIOR y distinto: Decreto n.º 44/1995, de 26 de mayo (BORM n.º 151, de 1 de julio de 1995), hermano del de Calblanque; sin transcribir."
+        }
+      },
+      "nombreAceptadoEidos": "Tamarix gallica L. ",
+      "eidosTaxonId": 8551,
+      "sinonimosFusionados": [
+        "Tamarix canariensis auct., non"
+      ],
+      "nivelDeFuente": 1
+    }
+  ]
+}

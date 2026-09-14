@@ -1,6 +1,6 @@
 # Auditoría de los enlaces especie↔hábitat
 
-_Generado por `npm run especies:habitats` el 2026-08-28. No se edita a mano: se regenera._
+_Generado por `npm run especies:habitats` el 2026-09-14. No se edita a mano: se regenera._
 
 El vínculo especie↔hábitat es el único dato **derivado** del modelo, y hasta ahora se derivaba
 de una sola señal: una ocurrencia de GBIF dentro del polígono. Esta auditoría lo repasa enlace a
@@ -23,16 +23,16 @@ anota, está en la cabecera de `Tools/catalogo-nacional/auditoria-especie-habita
 | espacios-abiertos-e-islas-del-mar-menor | 343 | — | — | — | — | 2 | 46 | 295 | sí |
 | humedal-del-ajauque-y-rambla-salada | 64 | — | — | — | — | 4 | 14 | 46 | sí |
 | monte-arabi | 24 | — | — | — | — | — | 3 | 21 | sí |
-| salinas-arenales-san-pedro-pinatar | 487 | — | — | — | — | 6 | 30 | 451 | sí |
+| salinas-arenales-san-pedro-pinatar | 521 | — | — | — | — | 6 | 30 | 485 | sí |
 | sierra-de-el-carche | 1105 | — | — | — | — | — | 39 | 1066 | sí |
 | sierra-de-la-pila | 689 | — | — | — | — | — | 34 | 655 | sí |
 | sierra-de-las-moreras | 106 | — | — | — | — | — | 14 | 92 | sí |
 | sierra-de-salinas | 179 | — | — | — | — | — | 8 | 171 | sí |
 | sierra-espuna | 697 | — | — | — | — | 2 | 47 | 648 | sí |
 | sotos-y-bosques-de-ribera-de-canaverosa | 49 | — | — | — | — | — | 20 | 29 | sí |
-| **total** | **6118** | **0** | **0** | **0** | **0** | **19** | **391** | **5708** | |
+| **total** | **6152** | **0** | **0** | **0** | **0** | **19** | **391** | **5742** | |
 
-**Se retiran 0 enlaces de 6118.** Los 19 no evaluables **no se tocan**:
+**Se retiran 0 enlaces de 6152.** Los 19 no evaluables **no se tocan**:
 quedan aquí escritos como hueco a contrastar, que es lo que manda la regla nº 2 del `CLAUDE.md`.
 
 > Este informe es **el estado de hoy, no un histórico**: se regenera entero en cada pasada, igual
@@ -60,14 +60,14 @@ así se reparte hoy:
 | espacios-abiertos-e-islas-del-mar-menor | 295 | 187 | 71 | 28 | 7 | 2 | 63 % |
 | humedal-del-ajauque-y-rambla-salada | 46 | 33 | 10 | 1 | 2 | 0 | 72 % |
 | monte-arabi | 21 | 10 | 4 | 4 | 1 | 2 | 48 % |
-| salinas-arenales-san-pedro-pinatar | 451 | 210 | 69 | 65 | 71 | 36 | 47 % |
+| salinas-arenales-san-pedro-pinatar | 485 | 235 | 70 | 67 | 73 | 40 | 48 % |
 | sierra-de-el-carche | 1066 | 700 | 171 | 65 | 56 | 74 | 66 % |
 | sierra-de-la-pila | 655 | 145 | 238 | 127 | 88 | 57 | 22 % |
 | sierra-de-las-moreras | 92 | 55 | 17 | 16 | 4 | 0 | 60 % |
 | sierra-de-salinas | 171 | 58 | 63 | 22 | 23 | 5 | 34 % |
 | sierra-espuna | 648 | 2 | 97 | 158 | 212 | 179 | 0 % |
 | sotos-y-bosques-de-ribera-de-canaverosa | 29 | 20 | 6 | 2 | 1 | 0 | 69 % |
-| **total** | **5708** | **2203** | **1210** | **929** | **770** | **596** | **39 %** |
+| **total** | **5742** | **2228** | **1211** | **931** | **772** | **600** | **39 %** |
 
 Subir el listón a dos ocurrencias es una decisión de producto, no de auditoría: dejaría sin
 ningún hábitat del que colgar a más de la mitad del catálogo de El Carche, y una especie sin
