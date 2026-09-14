@@ -44,6 +44,7 @@
     "species:seleccion": "node Tools/catalogo-nacional/build-species-seleccion.js",
     "aves:poda": "node Tools/catalogo-nacional/poda-aves-sin-respaldo.js",
     "especies:exclusiones": "node Tools/catalogo-nacional/aplica-exclusiones.js",
+    "auditoria:consolida": "node Tools/catalogo-nacional/auditoria-consolida-hallazgos.js",
     "aves:fenologia": "node Tools/catalogo-nacional/aplica-fenologia-aves.js",
     "species:build": "node Tools/catalogo-nacional/build-species-n2.js",
     "taxones:reconcilia": "node Tools/catalogo-nacional/reconcile-taxa.js",
