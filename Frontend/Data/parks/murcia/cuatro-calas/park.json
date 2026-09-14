@@ -564,7 +564,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Matorral árido, ramblas y bordes de camino en clima muy seco",
-      "conservationStatus": "En Peligro de Extinción",
       "description": "Mata en forma de bola formada por ramas verdes, rígidas y terminadas en pincho, casi sin hojas: la fotosíntesis la hacen los propios tallos. Al romper una rama suelta un látex blanco. Sus flores amarillas recuerdan a las del diente de león en miniatura.",
       "tips": [
         "Matorral redondo de ramas verdes y espinosas, casi sin hojas",
@@ -586,7 +585,7 @@
         "family": "Asteraceae",
         "genus": "Launaea"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -623,7 +622,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Ramblas, taludes y matorrales sobre suelos salinos o removidos, en clima muy seco",
-      "conservationStatus": "No amenazada",
       "description": "Mata leñosa y ramosa, de hasta metro y medio, con hojas carnosas cortas y opuestas —de ahí el nombre— que dan a la planta un aspecto de escobilla gris azulada. Aguanta suelos salinos y alterados donde casi nada más prospera, y sus flores, diminutas, se reconocen porque el fruto queda envuelto en un ala membranosa circular.",
       "tips": [
         "Hojas carnosas y cortas dispuestas por pares, una frente a otra",
@@ -675,7 +673,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Matorral costero y semiárido, arenas y suelos pedregosos con influencia marina",
-      "conservationStatus": "No amenazada",
       "description": "Mata de ramas largas y flexibles cubiertas de hojitas escamosas, apretadas contra el tallo como las tejas de un tejado, con el envés blanco y peludo. Las flores son verdosas y pasan desapercibidas, pero su corteza es tan fibrosa y resistente que se ha usado tradicionalmente como cuerda.",
       "tips": [
         "Hojas minúsculas y solapadas, cubriendo el tallo como escamas",
@@ -734,7 +731,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Suelos removidos, cunetas, ramblas y bordes de saladar en clima árido",
-      "conservationStatus": "No amenazada",
       "description": "Hierba perenne de tallos gruesos y quebradizos con hojas carnosas partidas en dos folíolos redondeados, como dos gotas verdes enfrentadas. Coloniza suelos pisoteados y salinos, y sus frutos alargados, en forma de cápsula estriada, cuelgan durante buena parte del verano.",
       "tips": [
         "Hojas de solo dos folíolos carnosos y redondeados",
@@ -793,7 +789,6 @@
       "kingdom": "flora",
       "group": "Arbusto",
       "habitat": "Matorral cálido, laderas soleadas y barrancos de clima muy seco",
-      "conservationStatus": "Vulnerable (Región de Murcia)",
       "description": "Arbusto de hojas estrechas y coriáceas y flores pequeñas con cinco pétalos de un pardo verdoso y aspecto aterciopelado. Sus frutos son dos vainas largas y curvas dispuestas en forma de cuerno, de donde le viene el nombre popular de cornical. Suelta látex al romperse.",
       "tips": [
         "Frutos en dos vainas curvas enfrentadas, como cuernos",
@@ -815,7 +810,7 @@
         "family": "Apocynaceae",
         "genus": "Periploca"
       },
-      "iucnGlobal": "NE (no evaluada a nivel global)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
       "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
@@ -847,7 +842,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Bordes de saladar y suelos salinos algo más secos y elevados",
-      "conservationStatus": "Sensible a la alteración de su hábitat",
       "description": "Mata leñosa de hojas carnosas, cilíndricas y de un verde azulado, que ocupa la orla algo más alta y seca del saladar. Se diferencia de sus vecinas en que sí tiene hojas bien visibles y no tallos articulados. Sus flores son minúsculas y verdosas, en las axilas de las hojas.",
       "tips": [
         "Hojas carnosas y cilíndricas, verde azuladas",
@@ -869,7 +863,7 @@
         "family": "Amaranthaceae",
         "genus": "Suaeda"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -900,7 +894,6 @@
       "kingdom": "flora",
       "group": "Arbusto",
       "habitat": "Matorral costero y suelos salinos y nitrificados de clima cálido",
-      "conservationStatus": "Especies de interés especial",
       "description": "Arbusto de ramas enmarañadas y espinosas, con hojitas carnosas agrupadas en manojos. Sus flores son pequeñas, tubulares y de color violeta pálido, y da bayas rojas que comen muchas aves. Forma setos impenetrables que dan refugio a pájaros y reptiles.",
       "tips": [
         "Ramas enredadas entre sí y terminadas en espina",
@@ -922,7 +915,7 @@
         "family": "Solanaceae",
         "genus": "Lycium"
       },
-      "iucnGlobal": "NE (no evaluada a nivel global)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
@@ -959,7 +952,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Suelos margosos y yesosos salinos, en estepas y taludes áridos",
-      "conservationStatus": "Especies de interés especial",
       "description": "Una de las siemprevivas más vistosas: sus inflorescencias forman un ramillete denso de un lila rosado intenso que destaca sobre el gris de las margas. Es un endemismo del sureste ibérico, ligado a suelos salinos y yesosos, y muy usado en seco como flor ornamental.",
       "tips": [
         "Floración densa y de lila rosado vivo, muy llamativa",
@@ -981,7 +973,7 @@
         "family": "Plumbaginaceae",
         "genus": "Limonium"
       },
-      "iucnGlobal": "NE (no evaluada a nivel global; género con numerosos microendemismos ibéricos)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
@@ -1012,7 +1004,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Matorrales abiertos y pastizales sobre suelos margosos y yesosos del sureste árido",
-      "conservationStatus": "No amenazada",
       "description": "Jarilla pequeña y grisácea, de hojas estrechas cubiertas de pelo blanquecino que reflejan la luz y le ahorran agua. Es un endemismo del sureste ibérico de área muy reducida, ligado a los suelos margosos de las zonas más áridas de la península.",
       "tips": [
         "Mata baja de aspecto plateado por el fieltro de pelos",
@@ -1070,7 +1061,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Arena suelta de la primera línea de playa, sobre restos orgánicos del mar",
-      "conservationStatus": "No amenazada",
       "description": "Crucífera anual y carnosa que coloniza la arena batida donde el mar deposita algas. Sus hojas son gruesas y recortadas y sus flores, lilas o blancas, tienen los cuatro pétalos en cruz de la familia. El fruto se parte en dos: una mitad queda en la planta y la otra flota y viaja por mar.",
       "tips": [
         "Hojas carnosas y recortadas, algo azuladas",
@@ -1092,7 +1082,7 @@
         "family": "Brassicaceae",
         "genus": "Cakile"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -1129,7 +1119,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Playas y dunas fósiles del litoral",
-      "conservationStatus": "No amenazada",
       "description": "Mata que forma cojines sobre la roca litoral, con hojas espatuladas, carnosas y ásperas al tacto. Sus capítulos amarillos, casi sentados sobre el follaje, están rodeados de brácteas verdes que sobresalen entre las lígulas. Florece durante casi todo el año.",
       "tips": [
         "Cojines densos sobre roca costera",
@@ -1151,7 +1140,7 @@
         "family": "Asteraceae",
         "genus": "Asteriscus"
       },
-      "iucnGlobal": "NE (no evaluada a nivel global)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -1187,7 +1176,6 @@
       "kingdom": "flora",
       "group": "Gramínea",
       "habitat": "Estepas salinas, margas y suelos yesosos secos; forma albardinales",
-      "conservationStatus": "No amenazada",
       "description": "Gramínea perenne de hojas duras y punzantes que forma matas separadas sobre suelos salinos y margosos donde poco más prospera. Su inflorescencia es inconfundible: una espata blanca y sedosa que envuelve las flores como un capuchón de papel.",
       "tips": [
         "Espata blanca y sedosa envolviendo la espiga",
@@ -1240,7 +1228,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Tomillares y matorral abierto sobre suelos secos y pedregosos",
-      "conservationStatus": "No amenazada",
       "description": "Jarilla enana de hojas pequeñas y blanquecinas, cubiertas de pelos que reflejan la luz y reducen la pérdida de agua. En primavera se cubre de flores blancas con el centro amarillo, cuyos pétalos duran apenas una mañana. Sus raíces se asocian con hongos comestibles del desierto.",
       "tips": [
         "Mata baja y grisácea, de hojas muy pequeñas",
@@ -1262,7 +1249,7 @@
         "family": "Cistaceae",
         "genus": "Helianthemum"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -1299,7 +1286,6 @@
       "kingdom": "fauna",
       "group": "Reptil",
       "habitat": "Matorral litoral y laderas secas",
-      "conservationStatus": "Vulnerable",
       "description": "Lagartija de suelos arenosos, de cuerpo aplanado y dedos con escamas laterales en forma de peine que le sirven de raqueta sobre la arena suelta. Los jóvenes tienen la cola y las patas traseras de un rojo intenso que se apaga en los adultos.",
       "tips": [
         "Dedos con flecos de escamas a los lados, como peines",
@@ -1321,7 +1307,7 @@
         "family": "Lacertidae",
         "genus": "Acanthodactylus"
       },
-      "iucnGlobal": "LC",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -1359,7 +1345,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Estepas salinas y suelos margosos y yesosos con sal",
-      "conservationStatus": "Vulnerable (Región de Murcia)",
       "description": "Mata baja y densa de hojas cortas y carnosas cubiertas de pequeñas papilas que le dan un tacto áspero. Es un endemismo ibérico ligado a suelos salinos y margosos, con una distribución muy fragmentada, lo que la hace especialmente sensible a la roturación.",
       "tips": [
         "Superficie de las hojas rugosa, con papilas visibles de cerca",
@@ -1381,7 +1366,7 @@
         "family": "Amaranthaceae",
         "genus": "Salsola"
       },
-      "iucnGlobal": "LC (Preocupación menor)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
@@ -1412,7 +1397,6 @@
       "kingdom": "flora",
       "group": "Planta suculenta",
       "habitat": "Saladares muy salinos con encharcamiento estacional",
-      "conservationStatus": "En peligro de extinción",
       "description": "Mata de tallos articulados y suculentos, con las ramas jóvenes agrupadas en apretados manojos que recuerdan a piñas diminutas, de donde le viene el nombre. Vive en los suelos más salinos del saladar, donde apenas compite con otras plantas.",
       "tips": [
         "Ramillas agrupadas en manojos con aspecto de piña",
@@ -1466,7 +1450,6 @@
       "kingdom": "flora",
       "group": "Gramínea",
       "habitat": "Laderas secas y llanos sobre suelos pobres; forma espartales extensos",
-      "conservationStatus": "Vulnerable",
       "description": "El esparto, nombrado también como Stipa tenacissima, forma matas densas y duraderas que dan nombre a los espartales, uno de los paisajes característicos del sureste ibérico. Sus hojas se enrollan sobre sí mismas en los días secos para perder menos agua y se abren tras la lluvia. Durante siglos se recolectó para hacer cuerdas, esteras y alpargatas.",
       "tips": [
         "Matas grandes y compactas de hojas duras enrolladas",
@@ -1488,7 +1471,7 @@
         "family": "Poaceae",
         "genus": "Macrochloa"
       },
-      "iucnGlobal": "VU (Vulnerable) (evaluación UICN 2018)",
+      "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -1521,7 +1504,6 @@
       "kingdom": "flora",
       "group": "Planta suculenta",
       "habitat": "Saladares y marismas con encharcamiento salino prolongado",
-      "conservationStatus": "Sensible a la alteración de su hábitat",
       "description": "Planta sin hojas aparentes: sus tallos son cilíndricos, carnosos y divididos en segmentos que parecen articulaciones. Vive donde la sal se acumula y en otoño se tiñe de tonos rojizos y anaranjados que cambian el color de todo el saladar.",
       "tips": [
         "Tallos carnosos articulados, como collares de cuentas",
@@ -1543,7 +1525,7 @@
         "family": "Amaranthaceae",
         "genus": "Arthrocaulon"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -1574,7 +1556,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Estepas salinas, saladares y suelos margosos con sal",
-      "conservationStatus": "No amenazada",
       "description": "Mata baja y muy ramificada, de hojas diminutas y enrolladas que a menudo aparecen cubiertas de una costra blanca: son cristales de sal que la planta expulsa por glándulas especializadas. Sus flores son rosadas y pequeñas, apiñadas en el extremo de las ramas.",
       "tips": [
         "Costra blanca de sal cristalizada sobre las hojas",
@@ -1596,7 +1577,7 @@
         "family": "Frankeniaceae",
         "genus": "Frankenia"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -1627,7 +1608,6 @@
       "kingdom": "flora",
       "group": "Mata aromática",
       "habitat": "Matorral y cerros sobre suelos calizos y margosos secos",
-      "conservationStatus": "Especies de interés especial",
       "description": "Mata cubierta por una lana blanca y espesa que la hace destacar en el matorral. Sus flores, rosadas o purpúreas, se agrupan en cabezuelas terminales y carecen de labio superior, con los estambres al descubierto. Es un endemismo del sureste ibérico.",
       "tips": [
         "Toda la planta cubierta de lana blanca y espesa",
@@ -1649,7 +1629,7 @@
         "family": "Lamiaceae",
         "genus": "Teucrium"
       },
-      "iucnGlobal": "NE",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
@@ -1680,7 +1660,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Pastizales anuales, claros de matorral y suelos margosos secos",
-      "conservationStatus": "No amenazada",
       "description": "Umbelífera anual diminuta, de pocos centímetros, con hojas estrechas de un verde azulado y umbelas tan pequeñas que parecen botones. Es una de esas plantas efímeras que germinan con las lluvias, florecen deprisa y desaparecen antes del verano.",
       "tips": [
         "Planta anual muy pequeña, de aspecto rígido y verde azulado",
@@ -1739,7 +1718,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Dunas móviles embrionarias",
-      "conservationStatus": "No amenazada",
       "description": "Leguminosa rastrera de follaje sedoso-plateado y flores amarillas, característica de las arenas litorales móviles.",
       "tips": [
         "Flores amarillas papilionadas",
@@ -1761,7 +1739,7 @@
         "family": "Fabaceae",
         "genus": "Lotus"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -1798,7 +1776,6 @@
       "kingdom": "flora",
       "group": "Planta suculenta",
       "habitat": "Suelos salinos y margosos áridos, estepas y ramblas de clima muy seco",
-      "conservationStatus": "Especies de interés especial",
       "description": "Mata de tallos verdes, carnosos y articulados, sin hojas visibles, muy parecida a las sosas de saladar pero de porte más rígido y ramificado. Es una planta iberoafricana que en la península solo vive en los enclaves más áridos del sureste.",
       "tips": [
         "Tallos articulados y suculentos, sin hojas",
@@ -1851,7 +1828,6 @@
       "kingdom": "flora",
       "group": "Arbusto",
       "habitat": "Matorrales arborescentes de Juniperus spp.",
-      "conservationStatus": "No amenazada",
       "description": "Esparraguera muy espinosa y densa que se enreda entre el matorral y el sabinar litoral, con cladodios rígidos y punzantes.",
       "tips": [
         "Cladodios rígidos y punzantes",
@@ -1906,7 +1882,6 @@
       "kingdom": "flora",
       "group": "Planta bulbosa",
       "habitat": "Dunas y playas del litoral",
-      "conservationStatus": "No amenazada",
       "description": "Bulbosa de dunas con flores blancas grandes, en forma de trompeta y con una corona membranosa entre los estambres. Se abren al atardecer y despiden un perfume intenso que atrae a polillas nocturnas. Sus hojas son acintadas y de un verde azulado, y a menudo se secan antes de la floración.",
       "tips": [
         "Flores blancas en trompeta con una corona membranosa dentro",
@@ -1961,7 +1936,6 @@
       "kingdom": "flora",
       "group": "Mata aromática",
       "habitat": "Matorral seco y soleado sobre suelos calizos y pedregosos",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Arbusto aromático de hojas estrechas como agujas, verde oscuro por el haz y blanquecinas por el envés, con los bordes enrollados hacia abajo. Florece casi todo el año en azul pálido, y en pleno invierno es una de las pocas fuentes de néctar del matorral.",
       "tips": [
         "Hojas como agujas, blancas por debajo",
@@ -1983,7 +1957,7 @@
         "family": "Lamiaceae",
         "genus": "Rosmarinus"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -2016,7 +1990,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Saladares, arenas litorales y suelos salinos secos",
-      "conservationStatus": "En Peligro de Extinción",
       "description": "Saladilla anual —a diferencia de la mayoría de sus parientes, que son perennes— con una roseta de hojas lobuladas pegada al suelo y tallos alados que rematan en espigas de flores azuladas o violáceas. Sus flores conservan el color al secarse, un truco común en el género.",
       "tips": [
         "Roseta basal de hojas con lóbulos redondeados",
@@ -2072,7 +2045,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Suelos arenosos, ramblas y terrenos removidos en clima cálido y seco",
-      "conservationStatus": "No amenazada",
       "description": "Hierba anual de aspecto lampiño con capítulos amarillos que llevan en el centro una mancha oscura, casi negra, como un ojo. Al cortar el tallo suelta látex blanco, rasgo compartido con las cerrajas y los dientes de león.",
       "tips": [
         "Capítulo amarillo con el centro oscuro, casi negro",
@@ -2127,7 +2099,6 @@
       "kingdom": "flora",
       "group": "Planta parásita",
       "habitat": "Saladares y matorrales halonitrófilos",
-      "conservationStatus": "Vulnerable",
       "description": "Planta parásita sin clorofila, de aspecto de maza rojiza, que crece sobre las raíces de quenopodiáceas halófilas de los saladares y estepas salinas.",
       "tips": [
         "Inflorescencia carnosa rojo-oscura en maza",
@@ -2149,7 +2120,7 @@
         "family": "Cynomoriaceae",
         "genus": "Cynomorium"
       },
-      "iucnGlobal": "NE",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
@@ -2184,7 +2155,6 @@
       "kingdom": "flora",
       "group": "Planta suculenta",
       "habitat": "Saladares, arenas litorales y suelos salinos removidos",
-      "conservationStatus": "No amenazada",
       "description": "Planta rastrera de hojas cilíndricas y carnosas cubiertas de papilas que brillan al sol como gotas de agua. Acumula sal en sus tejidos y, al secarse en verano, toma tonos rojizos que tiñen el suelo del saladar; se quemaba para obtener sosa, de ahí su nombre.",
       "tips": [
         "Hojas gruesas, cilíndricas y con aspecto escarchado",
@@ -2243,7 +2213,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Arenas y gravas del primer cordón de playa y suelos removidos salinos",
-      "conservationStatus": "No amenazada",
       "description": "Hierba anual muy ramificada, de hojas carnosas rematadas en un pincho fino, que forma una bola. Al secarse se desprende del suelo y rueda con el viento dispersando las semillas. Coloniza la línea donde el mar deja restos de algas y madera.",
       "tips": [
         "Hojas carnosas terminadas en una punta pinchuda",
@@ -2265,7 +2234,7 @@
         "family": "Amaranthaceae",
         "genus": "Salsola"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -2302,7 +2271,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Dunas con céspedes del Malcomietalia",
-      "conservationStatus": "No amenazada",
       "description": "Pequeña umbelífera anual de las arenas litorales, con umbelas blanco-rosadas y frutos espinosos que se dispersan por la duna.",
       "tips": [
         "Umbelas blanco-rosadas",
@@ -2324,7 +2292,7 @@
         "family": "Apiaceae",
         "genus": "Daucus"
       },
-      "iucnGlobal": "LC",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "No incluida en el LESRPE; anual característica del Malcolmietalia (HIC 2230)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -2361,7 +2329,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Pastizales anuales sobre arenas y suelos secos y sueltos",
-      "conservationStatus": "No amenazada",
       "description": "Hierba anual pequeña, cubierta por completo de un fieltro blanco y lanoso que la protege del sol. Sus capítulos son minúsculos y se agrupan en glomérulos apretados en las horquillas del tallo, difíciles de ver si no se busca de cerca.",
       "tips": [
         "Toda la planta blanquecina y algodonosa al tacto",
@@ -2415,7 +2382,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Matorrales secos y soleados sobre suelos pobres del sureste ibérico",
-      "conservationStatus": "Casi amenazada",
       "description": "Mata en forma de bola, densa y ramosa, con ramillas finas y estriadas que hacen la fotosíntesis porque las hojas duran muy poco. En pleno invierno se cubre de flores amarillas agrupadas en el extremo de las ramas, en umbelas apretadas.",
       "tips": [
         "Mata redondeada de ramillas verdes, finas y sin espinas",
@@ -2473,7 +2439,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Pastizales anuales, eriales y suelos margosos removidos en clima árido",
-      "conservationStatus": "No amenazada",
       "description": "Crucífera anual de flores blanquecinas con nervios violáceos, inconfundible por su fruto: una vainita corta rematada por una lengüeta plana y curvada que recuerda a una cuchara. Los frutos secos persisten sobre la planta y son la mejor pista para identificarla.",
       "tips": [
         "Frutos con una pala plana en el extremo, como cucharillas",
@@ -2532,7 +2497,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Suelos pedregosos, ramblas y litosuelos de clima árido",
-      "conservationStatus": "No amenazada",
       "description": "Planta baja y tendida, de tallos angulosos, hojas divididas en tres y estípulas convertidas en espinas finas. Sus flores tienen cinco pétalos de un lila rosado que se abren durante las horas centrales del día. Es de estirpe norteafricana y aquí vive en el extremo de su área.",
       "tips": [
         "Porte tendido y desordenado, pegado al suelo",
@@ -2554,7 +2518,7 @@
         "family": "Zygophyllaceae",
         "genus": "Fagonia"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE; elemento iberoafricano de interés biogeográfico",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -2587,7 +2551,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Matorrales y pastizales pedregosos sobre calizas, en solanas secas",
-      "conservationStatus": "No amenazada",
       "description": "Matita leñosa de hojas estrechas y punzantes parecidas a las del brezo, de donde le viene el nombre. Sus flores amarillas, de cinco pétalos delicados, se abren por la mañana y pierden los pétalos el mismo día.",
       "tips": [
         "Hojas lineares, rígidas y puntiagudas, como agujas cortas",
@@ -2642,7 +2605,6 @@
       "kingdom": "flora",
       "group": "Planta suculenta",
       "habitat": "Prados calcáreos del Alysso-Sedion albi",
-      "conservationStatus": "No amenazada",
       "description": "Crasulácea perenne de hojas suculentas puntiagudas y flores amarillo-verdosas, muy extendida por Murcia en repisas rocosas y prados calcáreos; especie característica del hábitat prioritario.",
       "tips": [
         "Hojas carnosas puntiagudas",
@@ -2664,7 +2626,7 @@
         "family": "Crassulaceae",
         "genus": "Petrosedum"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -2698,7 +2660,6 @@
       "kingdom": "flora",
       "group": "Mata aromática",
       "habitat": "Tomillares y matorral termomediterráneo",
-      "conservationStatus": "No amenazada",
       "description": "Lavanda de hojas estrechas con el borde recortado en dientes redondeados, muy aromática. Su espiga violácea remata en un penacho de brácteas del mismo color, más corto que el del cantueso común. Florece durante buena parte del año en clima cálido.",
       "tips": [
         "Bordes de la hoja recortados en dientes romos",
@@ -2720,7 +2681,7 @@
         "family": "Lamiaceae",
         "genus": "Lavandula"
       },
-      "iucnGlobal": "NE",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -2752,7 +2713,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Tomillares y matorral seco sobre calizas y margas",
-      "conservationStatus": "No amenazada",
       "description": "Jara pequeña de hojas muy estrechas y enrolladas por los bordes, verdes arriba y blancas por debajo, que a distancia recuerdan al romero. Se distingue enseguida al florecer: da grupos de flores blancas de cinco pétalos, mucho mayores que las del romero.",
       "tips": [
         "Hojas estrechas enrolladas, blancas por el envés",
@@ -2774,7 +2734,7 @@
         "family": "Cistaceae",
         "genus": "Cistus"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -2807,7 +2767,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Matorrales áridos y espartales sobre suelos pobres del sureste ibérico",
-      "conservationStatus": "No amenazada",
       "description": "Mata blanquecina, cubierta de pelos sedosos, con las flores agrupadas de tres en tres a lo largo de las ramas, que es lo que le da nombre. Es una leguminosa del extremo árido del sureste peninsular y del norte de África, adaptada a suelos yesosos y margas.",
       "tips": [
         "Flores en grupos de tres, dispuestas a lo largo de la rama",
@@ -2862,7 +2821,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Matorrales halo-nitrófilos",
-      "conservationStatus": "No amenazada",
       "description": "Mata en forma de escoba, con ramas verdes, largas y erguidas, casi sin hojas, que florece a final de verano. Sus frutos van rodeados de alas membranosas rosadas que la vuelven muy vistosa en otoño. Es un endemismo del sureste ibérico.",
       "tips": [
         "Porte en escoba, con ramas verdes largas y erectas",
@@ -2884,7 +2842,7 @@
         "family": "Amaranthaceae",
         "genus": "Salsola"
       },
-      "iucnGlobal": "NE",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en el LESRPE; endemismo ibérico del sureste árido",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -2914,7 +2872,6 @@
       "kingdom": "flora",
       "group": "Planta suculenta",
       "habitat": "Suelos salinos y arenosos, taludes y bordes de saladar en clima cálido",
-      "conservationStatus": "No amenazada",
       "description": "Planta carnosa y tendida cuyas hojas están cubiertas de vesículas transparentes llenas de agua salada: al sol parecen cristales de hielo o gotas de rocío que no se secan. Esas vesículas almacenan la sal que la planta extrae del suelo y le permiten vivir donde el terreno es demasiado salino para otras.",
       "tips": [
         "Hojas anchas cubiertas de ampollitas brillantes, como escarcha",
@@ -2968,7 +2925,6 @@
       "kingdom": "flora",
       "group": "Planta bulbosa",
       "habitat": "Matorrales secos, laderas pedregosas y arenas litorales en clima cálido",
-      "conservationStatus": "No amenazada",
       "description": "Bulbo enorme, del tamaño de un puño o mayor, que asoma medio enterrado y que en pleno agosto emite un tallo desnudo de más de un metro rematado por una larga espiga de flores blancas. Las hojas, anchas y correosas, aparecen después y desaparecen antes de florecer, así que rara vez se ven flores y hojas a la vez. Es tóxica y también se cita como Drimia maritima o Urginea maritima.",
       "tips": [
         "Bulbo grande y visible, asomando entre las piedras",
@@ -3022,7 +2978,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Matorrales halo-nitrófilos",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Mata baja y extendida, de hojas pequeñas, grisáceas y cubiertas de escamas harinosas que reflejan la luz. Marca los suelos con sal y exceso de nitrógeno, como los antiguos apriscos. Sus frutos van encerrados entre dos valvas endurecidas.",
       "tips": [
         "Hojas pequeñas, grises y harinosas al tacto",
@@ -3075,7 +3030,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Muros, taludes, cunetas y pies de roca en ambientes secos y alterados",
-      "conservationStatus": "No amenazada",
       "description": "Cerraja de hojas muy divididas en segmentos estrechos, casi filiformes, que la distinguen de sus parientes de hoja ancha. Brota en cualquier grieta o talud, suelta látex blanco al partirla y florece prácticamente todo el año en clima cálido.",
       "tips": [
         "Hojas partidas en segmentos muy estrechos y separados",
@@ -3130,7 +3084,6 @@
       "kingdom": "flora",
       "group": "Gramínea",
       "habitat": "Laderas secas, ribazos y pastizales sobre suelos pedregosos",
-      "conservationStatus": "No amenazada",
       "description": "Gramínea perenne que forma matas y espiga en verano, cuando el resto del pastizal ya está agostado. Sus espiguillas van por parejas, cubiertas de pelos rojizos y con aristas retorcidas. Da al paisaje un tono dorado rojizo a final de verano.",
       "tips": [
         "Espiguillas peludas agrupadas por parejas",
@@ -3152,7 +3105,7 @@
         "family": "Poaceae",
         "genus": "Hyparrhenia"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -3185,7 +3138,6 @@
       "kingdom": "flora",
       "group": "Gramínea",
       "habitat": "Pastizales anuales sobre suelos secos y pedregosos",
-      "conservationStatus": "No amenazada",
       "description": "Gramínea anual que agosta pronto y cubre los claros de matorral de un rubio pajizo. Cada semilla lleva una arista larga y retorcida que gira con los cambios de humedad y va enroscándose hasta clavarla en el suelo. Es la responsable de las «agujas» que se enganchan en los calcetines.",
       "tips": [
         "Aristas largas y retorcidas, en espiral al secarse",
@@ -3207,7 +3159,7 @@
         "family": "Poaceae",
         "genus": "Stipellula"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -3240,7 +3192,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Cultivos, cunetas, claros y suelos removidos",
-      "conservationStatus": "No amenazada",
       "description": "Hierbecilla tendida de tallos cuadrangulares y hojas enfrentadas, con flores solitarias que salen de la axila de cada hoja. Las hay de color naranja asalmonado y de color azul intenso, y ambas cierran los pétalos cuando el cielo se nubla, de ahí que se la llamara «hierba del buen tiempo».",
       "tips": [
         "Flores solitarias sobre un pedúnculo largo y fino",
@@ -3294,7 +3245,6 @@
       "kingdom": "flora",
       "group": "Gramínea",
       "habitat": "Pastizales, claros de matorral y ribazos sobre suelos calizos",
-      "conservationStatus": "No amenazada",
       "description": "Gramínea perenne y rizomatosa que forma céspedes extensos en los claros del matorral mediterráneo. Sus hojas son cortas, rígidas y de punta roma. Es de las plantas que más rápido rebrota tras un incendio, gracias a sus rizomas subterráneos.",
       "tips": [
         "Céspedes extensos y bajos, no matas aisladas",
@@ -3316,7 +3266,7 @@
         "family": "Poaceae",
         "genus": "Brachypodium"
       },
-      "iucnGlobal": "LC (Preocupación menor)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2013)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -3349,7 +3299,6 @@
       "kingdom": "flora",
       "group": "Arbusto",
       "habitat": "Suelos salinos y nitrificados, ramblas y bordes de saladar",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Arbusto de color gris plateado, cubierto de escamas microscópicas que reflejan la luz y ayudan a expulsar sal. Sus hojas son de forma romboidal y algo carnosas. Aguanta suelos que casi ninguna otra planta tolera, por lo que se usa para restaurar terrenos degradados.",
       "tips": [
         "Follaje gris plateado, harinoso al tacto",
@@ -3371,7 +3320,7 @@
         "family": "Amaranthaceae",
         "genus": "Atriplex"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -3406,7 +3355,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Dunas con céspedes del Malcolmietalia",
-      "conservationStatus": "En Peligro de Extinción",
       "description": "Colleja anual muy ramificada desde la base, característica de las dunas semifijas; da nombre a la asociación Triplachno nitentis-Silenetum ramosissimae.",
       "tips": [
         "Muy ramificada desde la base",
@@ -3428,7 +3376,7 @@
         "family": "Caryophyllaceae",
         "genus": "Silene"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -3465,7 +3413,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Dunas y arenas litorales estabilizadas",
-      "conservationStatus": "Sensible a la alteración de su hábitat",
       "description": "Matita rígida de las arenas costeras, con las hojas dispuestas en verticilos de cuatro que envuelven el tallo formando una columna geométrica de un verde glauco. Sus flores amarillentas se abren en espigas terminales apretadas, y sus tallos leñosos fijan la arena a su alrededor.",
       "tips": [
         "Hojas en anillos de cuatro alrededor del tallo, muy regulares",
@@ -3520,7 +3467,6 @@
       "kingdom": "flora",
       "group": "Árbol",
       "habitat": "Matorral alto, laderas secas y barrancos del piso más cálido",
-      "conservationStatus": "No amenazada",
       "description": "El acebuche es el olivo silvestre: mismo árbol, sin siglos de selección. Tiene las hojas más pequeñas y duras, las ramas jóvenes a menudo espinosas y aceitunas diminutas. Forma matorrales altos y es el árbol característico de las laderas cálidas mediterráneas.",
       "tips": [
         "Hojas pequeñas, verdes arriba y plateadas por debajo",
@@ -3575,7 +3521,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Matorral seco y soleado sobre margas y suelos pobres",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Mata de aspecto blanquecino por la fina pelusa que cubre hojas y tallos, un recurso frente al sol y la sequía. En primavera se llena de espigas de flores amarillas que atraen a muchos insectos. Es una de las leguminosas que primero coloniza laderas degradadas y taludes.",
       "tips": [
         "Aspecto grisáceo y aterciopelado al tacto",
@@ -3597,7 +3542,7 @@
         "family": "Fabaceae",
         "genus": "Anthyllis"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -3630,7 +3575,6 @@
       "kingdom": "flora",
       "group": "Mata aromática",
       "habitat": "Matorrales halo-nitrófilos",
-      "conservationStatus": "No amenazada",
       "description": "Mata aromática grisácea de las bojas del sureste árido, colonizadora de suelos alterados, bordes de camino y matorrales nitrificados.",
       "tips": [
         "Olor aromático fuerte al frotar",
@@ -3652,7 +3596,7 @@
         "family": "Asteraceae",
         "genus": "Artemisia"
       },
-      "iucnGlobal": "NE",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en el LESRPE; característica de matorrales halonitrófilos (HIC 1430)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -3683,7 +3627,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Pastizales secos, suelos margosos y salinos en clima árido",
-      "conservationStatus": "No amenazada",
       "description": "Saladilla anual pequeña, con una roseta de hojas ásperas al tacto y tallos ramificados en zigzag que llevan las flores en espiguillas cortas. Las flores, blanquecinas o violáceas, conservan el cáliz seco y papiráceo mucho después de marchitarse.",
       "tips": [
         "Hojas de la roseta ásperas, con pelillos duros",
@@ -3738,7 +3681,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Ribazos, cunetas, cultivos y claros de matorral",
-      "conservationStatus": "No amenazada",
       "description": "Correhuela trepadora de flores rosadas grandes y llamativas, con hojas muy variables: las de abajo casi enteras y las de arriba profundamente divididas y plateadas. Se enreda en la vegetación de ribazos y márgenes.",
       "tips": [
         "Flores rosa intenso en embudo, grandes y vistosas",
@@ -3760,7 +3702,7 @@
         "family": "Convolvulaceae",
         "genus": "Convolvulus"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -3793,7 +3735,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Saladares, acantilados costeros y suelos salinos margosos",
-      "conservationStatus": "Especies de interés especial",
       "description": "Siempreviva de roseta basal de hojas espatuladas y tallos ramificados que sostienen espiguillas de flores diminutas de color lila. Los cálices secos y papiráceos permanecen en la planta hasta el invierno siguiente, dando al saladar un tono pajizo persistente.",
       "tips": [
         "Roseta basal de hojas anchas y espatuladas",
@@ -3815,7 +3756,7 @@
         "family": "Plumbaginaceae",
         "genus": "Limonium"
       },
-      "iucnGlobal": "NE",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
@@ -3850,7 +3791,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Marismas, saladares y orillas de aguas salobres",
-      "conservationStatus": "Sensible a la alteración de su hábitat",
       "description": "Hierba anual de hojas cilíndricas y carnosas que crece en los suelos más encharcados y salinos del saladar, donde el agua sube y baja. Al final del ciclo toma tonos rojizos o purpúreos que delatan su presencia a distancia.",
       "tips": [
         "Hojas carnosas, cilíndricas y de punta roma",
@@ -3906,7 +3846,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Saladares, depresiones salinas y suelos arcillosos que se encharcan en invierno",
-      "conservationStatus": "Vulnerable",
       "description": "Hierba anual tendida, de hojas pequeñas y enfrentadas con el envés cubierto de un polvillo blanco de sal que la planta expulsa por glándulas propias. Forma alfombras bajas y ralas en los claros del saladar, con flores rosadas de cinco pétalos diminutos.",
       "tips": [
         "Envés de las hojas blanquecino, como espolvoreado",
@@ -3963,7 +3902,6 @@
       "kingdom": "flora",
       "group": "Árbol",
       "habitat": "Ramblas, cauces salinos, márgenes de saladar y arenas húmedas",
-      "conservationStatus": "Especies de interés especial",
       "description": "Arbolillo de porte ligero y ramas colgantes cubiertas de hojas escamosas diminutas, con un follaje que de lejos parece humo verde. Tolera la sal como pocos árboles: la excreta por sus hojas, y sus espigas rosadas de flores minúsculas cubren la copa en primavera.",
       "tips": [
         "Hojas escamosas de un par de milímetros, pegadas a la ramilla",
@@ -4016,7 +3954,6 @@
       "kingdom": "flora",
       "group": "Gramínea",
       "habitat": "Arenas litorales y suelos sueltos y secos",
-      "conservationStatus": "Especies de interés especial",
       "description": "Gramínea anual enana que forma una mata apretada a ras de suelo, con la inflorescencia reducida a una cabezuela compacta casi sin tallo, medio escondida entre las hojas. Vive en arenas móviles, donde su ciclo relámpago aprovecha la humedad de las lluvias.",
       "tips": [
         "Inflorescencia en cabezuela apretada, casi sentada sobre la mata",
@@ -4072,7 +4009,6 @@
       "kingdom": "flora",
       "group": "Planta bulbosa",
       "habitat": "Arenas litorales, pastizales secos y claros de matorral",
-      "conservationStatus": "En Peligro de Extinción",
       "description": "Ajo silvestre de flores blancas agrupadas en una umbela laxa sobre un tallo fino, con las hojas estrechas y con el borde y el nervio ligeramente pelosos. Como todos los ajos, delata su identidad en cuanto se estruja una hoja.",
       "tips": [
         "Umbela de flores blancas con nervio verdoso en cada pétalo",
@@ -4126,7 +4062,6 @@
       "kingdom": "flora",
       "group": "Árbol",
       "habitat": "Laderas cálidas, antiguos cultivos y matorral del piso termomediterráneo",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Árbol perennifolio de copa densa y hojas compuestas con foliolos redondeados y lustrosos. Florece en otoño directamente sobre el tronco y las ramas viejas. Sus vainas pardas y dulces, las algarrobas, se han usado durante siglos como pienso y alimento.",
       "tips": [
         "Hojas compuestas de foliolos redondos y brillantes",
@@ -4148,7 +4083,7 @@
         "family": "Fabaceae",
         "genus": "Ceratonia"
       },
-      "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2017)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -4181,7 +4116,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Arenas litorales, suelos salinos y eriales cercanos a la costa",
-      "conservationStatus": "No amenazada",
       "description": "Pariente cercana del cerrajón, anual y de hojas carnosas abrazadas al tallo, con capítulos amarillos y látex blanco. Es propia de suelos arenosos y algo salinos del suroeste y del sureste peninsular.",
       "tips": [
         "Hojas basales carnosas, con dientes anchos y triangulares",
@@ -4236,7 +4170,6 @@
       "kingdom": "fauna",
       "group": "Reptil",
       "habitat": "Matorral termomediterráneo semiárido",
-      "conservationStatus": "Vulnerable",
       "description": "Eslizón de cuerpo cilíndrico y brillante, con las patas tan reducidas que apenas se usan: se desplaza reptando y buceando entre la arena y la hojarasca. Su dorso, dorado o bronceado, lleva hileras de ocelos oscuros con el centro claro.",
       "tips": [
         "Patas diminutas, casi inútiles para caminar",
@@ -4258,7 +4191,7 @@
         "family": "Scincidae",
         "genus": "Chalcides"
       },
-      "iucnGlobal": "LC",
+      "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)",
       "spainStatus": "LESRPE; Directiva Hábitats 92/43/CEE, Anexo IV",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -4292,7 +4225,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Tomillares y matorral raso sobre margas y suelos yesosos",
-      "conservationStatus": "No amenazada",
       "description": "Jarilla pequeña y pegajosa, con hojas estrechas y tallos cubiertos de pelos glandulosos que retienen el polvo. Sus flores amarillas duran apenas unas horas y se renuevan cada día. Es un endemismo del sureste ibérico ligado a suelos margosos.",
       "tips": [
         "Tallos pegajosos, con polvo y arena adheridos",
@@ -4314,7 +4246,7 @@
         "family": "Cistaceae",
         "genus": "Helianthemum"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -4346,7 +4278,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Pastizales secos, eriales y suelos margosos pisoteados",
-      "conservationStatus": "No amenazada",
       "description": "Cardo corredor anual, muy espinoso y rígido, con hojas duras parecidas a las de la encina —de ahí el nombre— y cabezuelas espinosas azuladas rodeadas de brácteas punzantes. Al secarse se vuelve leñoso y persiste todo el verano pinchando a quien pase.",
       "tips": [
         "Hojas rígidas y espinosas, recortadas como las de la encina",
@@ -4402,7 +4333,6 @@
       "kingdom": "flora",
       "group": "Planta suculenta",
       "habitat": "Suelos salinos y margosos desnudos, en depresiones áridas",
-      "conservationStatus": "No amenazada",
       "description": "Anual carnosa y tendida, cubierta de papilas que le dan aspecto áspero y blanquecino, con flores pequeñas sin pétalos que se abren estrelladas al sol. Es una planta de los suelos más pobres y salinos, donde forma manchas dispersas sobre el barro desnudo.",
       "tips": [
         "Ramas carnosas y tendidas, ásperas y grisáceas",
@@ -4456,7 +4386,6 @@
       "kingdom": "flora",
       "group": "Planta suculenta",
       "habitat": "Claros arenosos y suelos someros que se encharcan brevemente en invierno",
-      "conservationStatus": "No amenazada",
       "description": "Una de las plantas con flor más pequeñas de la península: apenas un centímetro de tallos carnosos con hojitas apretadas en pares, que al madurar se tiñen de rojo intenso y colorean el suelo. Hay que agacharse mucho para verla, pero cuando abunda pinta manchas rojizas inconfundibles.",
       "tips": [
         "Planta minúscula, de menos de dos centímetros",
@@ -4511,7 +4440,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Litosuelos y pastizales abiertos",
-      "conservationStatus": "Especies de interés especial",
       "description": "Pequeña geraniácea anual de suelos abiertos y pedregosos, de floración temprana en el piso termomediterráneo semiárido.",
       "tips": [
         "Flores rosadas pequeñas",
@@ -4533,7 +4461,7 @@
         "family": "Geraniaceae",
         "genus": "Erodium"
       },
-      "iucnGlobal": "NE",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
@@ -4566,7 +4494,6 @@
       "kingdom": "flora",
       "group": "Gramínea",
       "habitat": "Saladares, depresiones salinas y suelos arcillosos con sal",
-      "conservationStatus": "No amenazada",
       "description": "Gramínea anual delicada, de tallos finísimos y panícula muy abierta con las ramas separadas casi en ángulo recto, que en conjunto parece una nube. Es una de las pocas gramíneas capaces de completar su ciclo en los suelos salinos del saladar.",
       "tips": [
         "Panícula muy abierta, con ramas separadas en ángulo recto",
@@ -4621,7 +4548,6 @@
       "kingdom": "flora",
       "group": "Arbusto",
       "habitat": "Roquedos, matorral seco y pie de acantilado en clima cálido",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Arbusto de aspecto extraño: un manojo de tallos verdes, articulados y colgantes, casi sin hojas, que se quiebran con facilidad por los nudos. No es una planta con flores, sino un pariente lejano de las coníferas; sus semillas van envueltas en una cubierta roja y carnosa.",
       "tips": [
         "Tallos verdes articulados que se rompen por los nudos",
@@ -4643,7 +4569,7 @@
         "family": "Ephedraceae",
         "genus": "Ephedra"
       },
-      "iucnGlobal": "LC (Preocupación menor)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2011)",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -4676,7 +4602,6 @@
       "kingdom": "flora",
       "group": "Arbusto",
       "habitat": "Matorral cálido, roquedos y ramblas de clima muy seco",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Arbusto de la familia del tomate y la belladona, con hojas ovaladas algo carnosas y flores verdosas discretas. Los frutos son bayas rojas y brillantes envueltas en el cáliz. Es una especie de raíz norteafricana que en la península solo vive en los rincones más cálidos del sureste.",
       "tips": [
         "Bayas rojas pequeñas asomando del cáliz",
@@ -4698,7 +4623,7 @@
         "family": "Solanaceae",
         "genus": "Withania"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE; elemento iberoafricano de interés biogeográfico",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -4729,7 +4654,6 @@
       "kingdom": "fauna",
       "group": "Ave marina",
       "habitat": "Playas de arena y grava, salinas y lagunas costeras",
-      "conservationStatus": "Vulnerable",
       "description": "El más pequeño de los charranes europeos, con la frente blanca y el pico amarillo de punta negra. Cría directamente sobre la arena o la grava, en nidos que son poco más que un hoyo, lo que lo hace muy sensible al tránsito de personas en las playas.",
       "tips": [
         "Frente blanca que contrasta con el capirote negro",
@@ -4751,7 +4675,7 @@
         "family": "Laridae",
         "genus": "Sternula"
       },
-      "iucnGlobal": "LC",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
       "regionalStatus": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
       "regionalCcaa": "Región de Murcia",
@@ -4796,7 +4720,6 @@
       "kingdom": "fauna",
       "group": "Ave marina",
       "habitat": "Mar abierto y aguas costeras fuera de la época de cría",
-      "conservationStatus": "Vulnerable",
       "description": "Ave marina compacta, negra por arriba y blanca por debajo, con un pico grueso y comprimido lateralmente cruzado por una línea blanca. Vuela bajo y rápido, rozando el agua, y bucea propulsándose con las alas para perseguir peces pequeños.",
       "tips": [
         "Pico grueso y aplanado de lado, con una raya blanca vertical",
@@ -4863,7 +4786,6 @@
       "kingdom": "fauna",
       "group": "Ave marina",
       "habitat": "Mar abierto; cría en islotes e islas del Mediterráneo",
-      "conservationStatus": "Vulnerable (Región de Murcia)",
       "description": "Pardela grande de dorso pardo ceniciento y vientre blanco, con pico amarillento, que planea largamente sobre las olas alternando ascensos y descensos casi sin batir las alas. Cría en colonias en islotes rocosos y se acerca a ellos de noche, con reclamos que recuerdan a un llanto.",
       "tips": [
         "Vuelo planeado en arcos largos, casi sin aletear",
@@ -4928,7 +4850,6 @@
       "kingdom": "fauna",
       "group": "Ave acuática",
       "habitat": "Humedales, lagunas y costas someras durante el paso migratorio",
-      "conservationStatus": "En peligro de extinción",
       "description": "Charrán pequeño y oscuro que en plumaje nupcial es casi negro con las alas grises, y en invierno gris y blanco con una mancha oscura en el lado del pecho. No se zambulle como los charranes marinos: vuela errático sobre el agua y picotea la superficie al pasar.",
       "tips": [
         "Vuelo errático y buceante sobre el agua, sin zambullirse",
@@ -4995,7 +4916,6 @@
       "kingdom": "fauna",
       "group": "Ave marina",
       "habitat": "Mar abierto; cría en grietas y cuevas de islotes",
-      "conservationStatus": "Anexo I",
       "description": "El ave marina más pequeña del Mediterráneo, apenas del tamaño de un gorrión, negruzca con una banda blanca muy marcada en la rabadilla. Revolotea a ras de agua como una mariposa, con las patas colgando y rozando la superficie.",
       "tips": [
         "Tamaño diminuto, negruzco, con obispillo blanco evidente",
@@ -5061,7 +4981,6 @@
       "kingdom": "fauna",
       "group": "Ave marina",
       "habitat": "Islotes y costas mediterráneas; pesca en mar abierto cerca de la orilla",
-      "conservationStatus": "Anexo II. Lista de especies en peligro o amenazadas.",
       "description": "Gaviota mediterránea de tamaño medio, elegante y de aspecto más «limpio» que la patiamarilla, con el pico rojo coral anillado de negro y las patas verdosas oscuras. Pesca al vuelo rozando el agua, sobre todo de noche y de madrugada. Cría en colonias muy concentradas en islotes y salinas.",
       "tips": [
         "Pico rojo coral con una banda negra cerca de la punta",
@@ -5079,11 +4998,11 @@
         "kingdom": "Animalia",
         "phylum": "Chordata",
         "class": "Aves",
-        "order": null,
-        "family": null,
+        "order": "Charadriiformes",
+        "family": "Laridae",
         "genus": "Larus"
       },
-      "iucnGlobal": "VU (Vulnerable)",
+      "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2020)",
       "spainStatus": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; Ley 42/2007, Anexo IV",
       "regionalStatus": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
       "regionalCcaa": "Región de Murcia",
@@ -5128,7 +5047,6 @@
       "kingdom": "fauna",
       "group": "Ave marina",
       "habitat": "Costas, puertos, playas y vertederos, sobre todo en invierno",
-      "conservationStatus": "Anexo II",
       "description": "Gaviota grande de dorso gris oscuro o casi negro y patas amarillas, que cría en el norte de Europa e inverna en gran número en las costas ibéricas. Se mezcla con la patiamarilla, de la que se distingue por el manto mucho más oscuro y el porte algo más estilizado.",
       "tips": [
         "Manto gris pizarra oscuro, mucho más que en la patiamarilla",
@@ -5195,7 +5113,6 @@
       "kingdom": "fauna",
       "group": "Ave marina",
       "habitat": "Costas, playas, salinas y lagunas litorales",
-      "conservationStatus": "Anexo II. Lista de especies en peligro o amenazadas.",
       "description": "Gaviota mediana de alas blanquecinas sin puntas negras, pico rojo coral y capucha negra completa en primavera. En vuelo destaca por sus primarias sin marcas oscuras, un rasgo que la separa de la reidora aun de lejos.",
       "tips": [
         "Alas blancas sin puntas negras, muy pálidas en vuelo",
@@ -5262,7 +5179,6 @@
       "kingdom": "fauna",
       "group": "Ave marina",
       "habitat": "Costas, salinas, embalses, ríos y campos de cultivo inundados",
-      "conservationStatus": "Anexo III",
       "description": "Gaviota pequeña y ágil, muy común en invierno tierra adentro. En verano lleva la cabeza cubierta por una capucha de color chocolate; en invierno solo le queda una mancha oscura tras el ojo. En vuelo enseña una cuña blanca inconfundible en el borde delantero del ala.",
       "tips": [
         "Cuña blanca en el filo delantero del ala, visible en vuelo",
@@ -5280,11 +5196,11 @@
         "kingdom": "Animalia",
         "phylum": "Chordata",
         "class": "Aves",
-        "order": null,
-        "family": null,
+        "order": "Charadriiformes",
+        "family": "Laridae",
         "genus": "Chroicocephalus"
       },
-      "iucnGlobal": "LC (Preocupación menor)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -5329,7 +5245,6 @@
       "kingdom": "fauna",
       "group": "Ave marina",
       "habitat": "Mar abierto y aguas costeras en invierno",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Ave marina grande y blanca con las puntas de las alas negras y la cabeza teñida de amarillo, de silueta afilada como una lanza. Pesca lanzándose en picado desde decenas de metros y entrando en el agua como un arpón, en zambullidas que se ven desde la costa.",
       "tips": [
         "Silueta blanca en cruz, con las puntas de las alas negras",
@@ -5395,7 +5310,6 @@
       "kingdom": "fauna",
       "group": "Ave marina",
       "habitat": "Mar abierto y aguas costeras durante los pasos migratorios",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Ave marina de vuelo rápido y ágil, con aspecto de gaviota estilizada y las dos plumas centrales de la cola alargadas en punta. Se alimenta persiguiendo a charranes y gaviotas hasta obligarlos a soltar la presa, un comportamiento llamado cleptoparasitismo.",
       "tips": [
         "Persigue a otras aves marinas en vuelo, acosándolas",
@@ -5461,7 +5375,6 @@
       "kingdom": "fauna",
       "group": "Ave marina",
       "habitat": "Mar abierto, en paso migratorio frente a las costas",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Págalo grande y robusto, de pecho ancho y vuelo potente, con las plumas centrales de la cola ensanchadas y retorcidas en cuchara cuando es adulto. Como sus parientes, roba comida a otras aves marinas y sigue a los barcos de pesca.",
       "tips": [
         "Plumas centrales de la cola anchas y retorcidas en el adulto",
@@ -5527,7 +5440,6 @@
       "kingdom": "fauna",
       "group": "Ave marina",
       "habitat": "Costas, salinas, deltas y lagunas litorales",
-      "conservationStatus": "Sensible a la alteración de su hábitat",
       "description": "Charrán esbelto de alas estrechas y cola muy ahorquillada, gris pálido por encima, con capirote negro y pico rojo de punta oscura. Pesca cerniéndose sobre el agua y lanzándose en picado corto, y su reclamo áspero delata las colonias a distancia.",
       "tips": [
         "Pico rojo con la punta negra en primavera y verano",
@@ -5594,7 +5506,6 @@
       "kingdom": "fauna",
       "group": "Ave marina",
       "habitat": "Costas, bahías y salinas; pesca sobre aguas someras",
-      "conservationStatus": "Anexo II. Lista de especies en peligro o amenazadas.",
       "description": "Charrán grande y pálido, con un penacho negro despeinado en la nuca y un pico negro rematado en amarillo, como si lo hubiera mojado en mostaza. Pesca zambulléndose de golpe desde varios metros de altura. Fuera de la época de cría pierde el negro de la frente y queda con la coronilla blanca.",
       "tips": [
         "Punta amarilla en el pico negro",
@@ -5612,11 +5523,11 @@
         "kingdom": "Animalia",
         "phylum": "Chordata",
         "class": "Aves",
-        "order": null,
-        "family": null,
+        "order": "Charadriiformes",
+        "family": "Laridae",
         "genus": "Thalasseus"
       },
-      "iucnGlobal": "LC (Preocupación menor)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
       "regionalCcaa": "Región de Murcia",
@@ -5661,7 +5572,6 @@
       "kingdom": "fauna",
       "group": "Ave marina",
       "habitat": "Mar abierto y aguas costeras; cría solo en las Baleares",
-      "conservationStatus": "En Peligro de Extinción",
       "description": "Pardela mediana, parda por arriba y sucia por debajo, que vuela en bandos bajos y rasantes alternando planeos y series de aleteos rápidos. Es el ave marina más amenazada de Europa: cría únicamente en las Baleares y su población total se cuenta por miles.",
       "tips": [
         "Vuelo bajo y rasante, alternando planeo y aleteos rápidos",
@@ -5727,7 +5637,6 @@
       "kingdom": "fauna",
       "group": "Ave marina",
       "habitat": "Mar abierto y aguas costeras en invierno",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "El mayor de los págalos, pardo y macizo, del tamaño de una gaviota grande, con manchas blancas muy llamativas en la base de las alas que destellan a cada aleteo. Es un pirata consumado: acosa a alcatraces y gaviotas y también captura presas directamente.",
       "tips": [
         "Manchas blancas conspicuas en la base de las primarias",
@@ -5793,7 +5702,6 @@
       "kingdom": "fauna",
       "group": "Ave marina",
       "habitat": "Costas, puertos, playas, acantilados y basureros",
-      "conservationStatus": "Anexo III",
       "description": "La gaviota grande más común del Mediterráneo: manto gris claro, patas amarillas y un pico robusto con una mancha roja en la mandíbula inferior. Es oportunista hasta el extremo —pesca, roba, carroñea y frecuenta puertos y vertederos— y sus colonias ocupan islotes y cortados costeros.",
       "tips": [
         "Patas amarillas y pico amarillo con mancha roja",
@@ -5860,7 +5768,6 @@
       "kingdom": "fauna",
       "group": "Ave marina",
       "habitat": "Mar abierto; cría en islas atlánticas y se ve en paso por el Mediterráneo occidental",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Gemela de la pardela cenicienta mediterránea, algo mayor y más robusta, con el mismo vuelo planeador en arcos sobre el mar. Cría en el Atlántico —Canarias, Azores, Madeira— y entra en el Mediterráneo occidental fuera de la época de cría.",
       "tips": [
         "Silueta grande y pesada planeando en arcos sobre las olas",

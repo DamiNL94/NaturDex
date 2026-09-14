@@ -6,25 +6,46 @@
 
 import { backToHabitatsBtn, catalogCrumb, catalogCrumbLabel, catalogTitle, rarityFilterGroup, resultCount, searchInput, searchLabel, speciesFilterGroup, speciesList } from '../dom.js';
 import { groupSwatch, groupedHabitats, habitatGroup, habitatGroupById, habitatsOfGroup } from '../habitat-groups.js';
-import { TRAMOS, TRAMO_AMENAZA, claseRareza, estrellas, tramoDe } from '../rareza.js';
+import { TRAMOS, TRAMO_AMENAZA, categoriaConservacion, claseRareza, estrellas, tramoDe } from '../rareza.js';
 import { catalogSpecies, esMigratoria, getFilteredHabitats, getFilteredSpecies, habitatSpeciesSeenCount, isHabitatComplete, speciesSinHabitat, state } from '../state.js';
 import { html, icon, raw, speciesImageSrc } from '../util.js';
 
 /*
- * El distintivo de rareza de la tarjeta. Existe por el filtro: sin él, filtrar por «amenazadas»
- * devuelve una lista idéntica a la de antes y no hay forma de ver por qué está cada ficha ahí.
- * Lleva las cinco estrellas —las vacías incluidas— y el nombre de la categoría, y solo se pinta a
- * partir del tramo 2: en el 1 diría «sin figura de protección» en 478 tarjetas de 1.161, que es
- * ruido, y una ficha SIN tramo calculado no puede fingir que tiene uno.
+ * El distintivo de conservación de la tarjeta. Existe por el filtro: sin él, filtrar por
+ * «amenazadas» devuelve una lista idéntica a la de antes y no hay forma de ver por qué está cada
+ * ficha ahí.
+ *
+ * Dos datos en un solo distintivo, y no son el mismo:
+ *   · las ESTRELLAS son el tramo de rareza (`tramoDe()`), la categoría más GRAVE de los dos ámbitos
+ *     legales. Es lo que filtra, lo que tiñe la tarjeta y lo que decide el cartel de advertencia, y
+ *     por eso no cambia. Del tramo 2 para abajo no se pintan: en el 1 dirían «sin figura» en
+ *     novecientas tarjetas, que es ruido, y una ficha sin tramo calculado no puede fingir que tiene.
+ *   · el TEXTO es la categoría del ámbito más cercano —comunidad autónoma → España → UICN—, con el
+ *     ámbito escrito al lado (`categoriaConservacion()`, decisión del 2026-09-12). La ficha pertenece
+ *     a un parque, y quien la lee está dentro de esa comunidad.
+ *
+ * Los dos pueden discrepar, y el ámbito es justo lo que lo explica: cuando la figura estatal es más
+ * grave que la autonómica —34 fichas de 2.882— la tarjeta dice «★★★★☆ Interés especial · Región de
+ * Murcia». Sin el ámbito, eso se leería como una contradicción.
+ *
+ * Y hay un caso nuevo: la especie que no cataloga ninguna norma pero la UICN da por amenazada (24
+ * fichas). Lleva distintivo SIN estrellas, porque tramo de rareza legal no tiene.
  */
 function rarezaBadge(species) {
   const tramo = tramoDe(species);
-  if (tramo === null || tramo < 2) return '';
-  const clase = tramo >= TRAMO_AMENAZA ? 'badge rareza amenazada' : 'badge rareza';
+  const cat = categoriaConservacion(species);
+  if (!cat && (tramo === null || tramo < 2)) return '';
+  const conEstrellas = tramo !== null && tramo >= 2;
+  const amenaza = cat ? cat.amenaza : tramo >= TRAMO_AMENAZA;
+  const clase = amenaza ? 'badge rareza amenazada' : 'badge rareza';
+  const texto = cat ? cat.etiqueta + ' · ' + cat.ambito : TRAMOS[tramo].corto;
+  // El `title` lleva el texto ÍNTEGRO de la fuente —la categoría con su norma—, no un resumen: es lo
+  // que permite comprobar de dónde sale la etiqueta sin abrir la ficha.
+  const titulo = cat ? cat.titulo : TRAMOS[tramo].significado;
   // El texto visible va entero en un solo nodo —estrellas y categoría— y el del lector de pantalla
   // en otro: separarlos en dos nodos visibles dejaba las estrellas pegadas a la palabra, porque el
   // espacio entre ellos caía junto a un `.sr-only` posicionado en absoluto y no se pintaba.
-  return html`<span class="${clase}" title="${TRAMOS[tramo].significado}"><span aria-hidden="true">${estrellas(tramo)} ${TRAMOS[tramo].corto}</span><span class="sr-only">Rareza ${tramo} de 5: ${TRAMOS[tramo].significado}.</span></span>`;
+  return html`<span class="${clase}" title="${titulo}"><span aria-hidden="true">${conEstrellas ? estrellas(tramo) + ' ' : ''}${texto}</span><span class="sr-only">${conEstrellas ? `Rareza ${tramo} de 5: ${TRAMOS[tramo].significado}. ` : ''}${cat ? `Categoría de conservación: ${cat.etiqueta} (${cat.ambito}).` : ''}</span></span>`;
 }
 
 // --- Catálogo ---------------------------------------------------------------------------------------

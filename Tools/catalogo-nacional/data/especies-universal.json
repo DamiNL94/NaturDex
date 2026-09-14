@@ -20,7 +20,7 @@
       "family": "Lacertidae",
       "genus": "Acanthodactylus"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
     "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Acanthodactylus_erythrurus.jpg?width=1280",
     "imageAttribution": "Benny Trapp (CC BY 3.0) · Wikimedia Commons",
@@ -49,11 +49,11 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
       "genus": "Accipiter"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
     "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Northern_Goshawk_ad_M2.jpg?width=1280",
     "imageAttribution": "Norbert Kenntner, Berlin (CC BY-SA 3.0) · Wikimedia Commons",
@@ -116,7 +116,7 @@
       "family": "Sapindaceae",
       "genus": "Acer"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Acer_monspessulanum_fg01.jpg?width=1280",
     "imageAttribution": "Fritz Geller-Grimm (CC BY-SA 2.5) · Wikimedia Commons",
@@ -599,7 +599,7 @@
       "family": "Phasianidae",
       "genus": "Alectoris"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2020)",
     "spainStatus": "No incluida en el LESRPE; Directiva Aves 2009/147/CE, Anexos II y III (especie cinegética)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Perdiz_roja.jpg?width=1280",
     "imageAttribution": "Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons",
@@ -632,7 +632,7 @@
       "family": "Amaryllidaceae",
       "genus": "Allium"
     },
-    "iucnGlobal": "NT (Casi amenazado)",
+    "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2011)",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Allium_melananthum02.jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
@@ -693,7 +693,7 @@
       "family": "Amaryllidaceae",
       "genus": "Allium"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2011)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2011)",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Laguna_de_San_Juan_20100617_3431.jpg?width=1280",
     "imageAttribution": "Alberto Salguero (CC BY-SA 4.0) · Wikimedia Commons",
@@ -994,7 +994,7 @@
       "family": "Apiaceae",
       "genus": "Ammoides"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2015)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2015)",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ammoides_pusilla_Enfoqueflores_2011-6-11_CampodeCalatrava.jpg?width=1280",
     "imageAttribution": "javier martin (Public domain) · Wikimedia Commons",
@@ -1115,7 +1115,7 @@
       "family": "Asteraceae",
       "genus": "Anacyclus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "UICN España: CR (En peligro crítico) (2010)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A._valentinus-1.JPG?width=1280",
     "imageAttribution": "Philmarin (CC BY-SA 3.0) · Wikimedia Commons",
@@ -1324,7 +1324,7 @@
       "family": "Asteraceae",
       "genus": "Andryala"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/114Andryala_ragusina.JPG?width=1280",
     "imageAttribution": "Ziegler175 Rose Ziegler (CC0) · Wikimedia Commons",
@@ -1415,7 +1415,7 @@
       "family": "Motacillidae",
       "genus": "Anthus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/AnthusCampestris_cropped.jpg?width=1280",
     "imageAttribution": "AnthusCampestris.jpg: Lip Kee derivative work: Bogbumper (talk) (CC BY-SA 2.0) · Wikimedia Commons",
@@ -1478,7 +1478,7 @@
       "family": "Motacillidae",
       "genus": "Anthus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anthus_spinoletta.jpg?width=1280",
     "imageAttribution": "Original uploader was Marboline at pl.wikipedia (CC BY-SA 3.0) · Wikimedia Commons",
@@ -1511,7 +1511,7 @@
       "family": "Fabaceae",
       "genus": "Anthyllis"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anthyllis_cytisoides.JPG?width=1280",
     "imageAttribution": "Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons",
@@ -1836,11 +1836,11 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
       "genus": "Aquila"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
     "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Maakotka_(Aquila_chrysaetos)_by_Jarkko_J%C3%A4rvinen.jpg?width=1280",
     "imageAttribution": "Jarkko Järvinen (CC BY-SA 2.0) · Wikimedia Commons",
@@ -1873,7 +1873,7 @@
       "family": "Accipitridae",
       "genus": "Aquila"
     },
-    "iucnGlobal": "LC (población global amplia en Asia y África pese al declive europeo)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "Catálogo Español de Especies Amenazadas: Vulnerable; Libro Rojo de las Aves de España (SEO/BirdLife, 2004/2021); Directiva Aves 2009/147/CE, Anexo I",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_perdicera.jpg?width=1280",
     "imageAttribution": "Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons",
@@ -1935,7 +1935,7 @@
       "family": "Ericaceae",
       "genus": "Arbutus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2017)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto) · y 1 figura más en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Arbutus_unedo_Corsica.jpg?width=1280",
     "imageAttribution": "jxandreani (CC BY 2.0) · Wikimedia Commons",
@@ -1967,7 +1967,7 @@
       "family": "Ericaceae",
       "genus": "Arctostaphylos"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gayuba.jpg?width=1280",
     "imageAttribution": "No machine-readable author provided. Carlosblh assumed (based on co… (CC BY-SA 3.0) · Wikimedia Commons",
@@ -2327,7 +2327,7 @@
       "family": "Rosaceae",
       "genus": "Aria"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2017)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Weilburg_-_Tiergarten_-_Mehlbeere.jpg?width=1280",
     "imageAttribution": "Oliver Abels (SBT) (CC BY-SA 3.0) · Wikimedia Commons",
@@ -2564,7 +2564,7 @@
       "family": "Asteraceae",
       "genus": "Artemisia"
     },
-    "iucnGlobal": "NE",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en el LESRPE; característica de matorrales halonitrófilos (HIC 1430)",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/173279674/original.jpeg",
     "imageAttribution": "Yamil J.R (CC0) · GBIF",
@@ -2683,7 +2683,7 @@
       "family": "Asteraceae",
       "genus": "Artemisia"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "UICN España: VU (Vulnerable) (2010)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Artemisia_reptans_Samuel_Correa_Falc%C3%B3n_2022_GC.jpg?width=1280",
     "imageAttribution": "SamuelCorreaFalcón (CC BY-SA 4.0) · Wikimedia Commons",
@@ -2715,7 +2715,7 @@
       "family": "Amaranthaceae",
       "genus": "Arthrocaulon"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Arthrocnemum_macrostachyum_2LaMata.jpg?width=1280",
     "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
@@ -2836,7 +2836,7 @@
       "family": "Asparagaceae",
       "genus": "Asparagus"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Art%C3%A0_-_Ermita_de_Betlem_-_Asparagus_albus_03_ies.jpg?width=1280",
     "imageAttribution": "Frank Vincentz (CC BY-SA 3.0) · Wikimedia Commons",
@@ -3046,7 +3046,7 @@
       "family": "Asphodelaceae",
       "genus": "Asphodelus"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2013)",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/A._fistulosus-flor-2.JPG?width=1280",
     "imageAttribution": "Philmarin (CC BY-SA 3.0) · Wikimedia Commons",
@@ -3224,7 +3224,7 @@
       "family": "Aspleniaceae",
       "genus": "Asplenium"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Petrarchae.jpg?width=1280",
     "imageAttribution": "Juan Bibiloni (CC BY 3.0) · Wikimedia Commons",
@@ -3343,7 +3343,7 @@
       "family": "Asteraceae",
       "genus": "Asteriscus"
     },
-    "iucnGlobal": "NE (no evaluada a nivel global)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Asteriscus_maritimus1.jpg?width=1280",
     "imageAttribution": "Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons",
@@ -3519,7 +3519,7 @@
       "family": "Erinaceidae",
       "genus": "Atelerix"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)",
     "spainStatus": "LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Erizo_moruno_(Atelerix_algirus).jpg?width=1280",
     "imageAttribution": "Galanthus (CC BY 3.0) · Wikimedia Commons",
@@ -3552,7 +3552,7 @@
       "family": "Apiaceae",
       "genus": "Athamanta"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "UICN España: VU (Vulnerable) (2010)",
     "image": "https://observation.org/photos/83864093.jpg",
     "imageAttribution": "Fco. Javier López Espino (CC BY-NC-ND 4.0) · observation.org / GBIF",
@@ -3584,7 +3584,7 @@
       "family": "Strigidae",
       "genus": "Athene"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Reglamento CITES (CE) 338/97, Anexo A",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mochuelo_Com%C3%BAn_(_Athene_noctua_)(1).jpg?width=1280",
     "imageAttribution": "Arturo Nikolai from Galicia, Spain (CC BY-SA 2.0) · Wikimedia Commons",
@@ -3678,7 +3678,7 @@
       "family": "Amaranthaceae",
       "genus": "Atriplex"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Atriplex_halimus_kz1.JPG?width=1280",
     "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 3.0) · Wikimedia Commons",
@@ -3710,7 +3710,7 @@
       "family": "Amaranthaceae",
       "genus": "Atriplex"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sea_Purslane.jpg?width=1280",
     "imageAttribution": "autor no indicado (Public domain) · Wikimedia Commons",
@@ -3977,7 +3977,7 @@
       "family": "Amaranthaceae",
       "genus": "Beta"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Beta_vulgaris_maritima02.jpg?width=1280",
     "imageAttribution": "Meneerke bloem (CC BY-SA 3.0) · Wikimedia Commons",
@@ -4273,7 +4273,7 @@
       "family": "Poaceae",
       "genus": "Brachypodium"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2013)",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brachypodium_retusum_espiga_seca.jpg?width=1280",
     "imageAttribution": "Pere prlpz (CC BY-SA 2.5) · Wikimedia Commons",
@@ -4450,7 +4450,7 @@
       "family": "Strigidae",
       "genus": "Bubo"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "LESRPE; Directiva Aves 2009/147/CE, Anexo I; Reglamento CITES (CE) 338/97, Anexo A",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bubo_bubo_sibiricus_-_01.JPG?width=1280",
     "imageAttribution": "Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons",
@@ -4693,7 +4693,7 @@
       "family": "Apiaceae",
       "genus": "Bupleurum"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/B._gibraltarium-1.JPG?width=1280",
     "imageAttribution": "Philmarin (CC BY-SA 3.0) · Wikimedia Commons",
@@ -4786,7 +4786,7 @@
       "family": "Burhinidae",
       "genus": "Burhinus"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "LESRPE; Directiva Aves 2009/147/CE, Anexo I",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Burhinus_oedicnemus_insularum_Lanzarote_1.jpg?width=1280",
     "imageAttribution": "Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons",
@@ -4819,7 +4819,7 @@
       "family": "Accipitridae",
       "genus": "Buteo"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2021)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Buizerd-rh_20091021_002_(cropped).jpg?width=1280",
     "imageAttribution": "RonaldHuijssen (CC BY-SA 3.0 nl) · Wikimedia Commons",
@@ -4881,7 +4881,7 @@
       "family": "Brassicaceae",
       "genus": "Cakile"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cakile-maritima-(eurMeersenf)_1.jpg?width=1280",
     "imageAttribution": "Jürgen Howaldt (CC BY-SA 2.0 de) · Wikimedia Commons",
@@ -4913,7 +4913,7 @@
       "family": "Alaudidae",
       "genus": "Calandrella"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alondra.jpg?width=1280",
     "imageAttribution": "Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons",
@@ -5431,7 +5431,7 @@
       "family": "Campanulaceae",
       "genus": "Campanula"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas [IEPNB, Lista Patrón de las especies silvestres presentes en España, vista de normas, consultada 2026-08-09]",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Campanula_hispanica_1.jpg?width=1280",
     "imageAttribution": "Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons",
@@ -5521,7 +5521,7 @@
       "family": "Bovidae",
       "genus": "Capra"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "UICN España: EN (En peligro) (1992)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Capra_pyrenaica_in_Sierra_de_Guadarrama.jpg?width=1280",
     "imageAttribution": "Thomas Holbach (CC BY-SA 4.0) · Wikimedia Commons",
@@ -5550,7 +5550,7 @@
       "family": "Caprimulgidae",
       "genus": "Caprimulgus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nachtzwaluw_-_European_nightjar_-_Caprimulgus_europaeus_2.jpg?width=1280",
     "imageAttribution": "Bouke ten Cate (CC BY 4.0) · Wikimedia Commons",
@@ -5579,11 +5579,11 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Caprimulgiformes",
+      "family": "Caprimulgidae",
       "genus": "Caprimulgus"
     },
-    "iucnGlobal": "NT (Casi amenazado)",
+    "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2022)",
     "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Caprimulgus_ruficollis_-Portugal-8.jpg?width=1280",
     "imageAttribution": "Olivença (CC BY-SA 3.0) · Wikimedia Commons",
@@ -5616,7 +5616,7 @@
       "family": "Apocynaceae",
       "genus": "Caralluma"
     },
-    "iucnGlobal": "NE (no evaluada a nivel global; distribución principal fuera de Europa, en el norte de África)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Lista Roja de la Flora Vascular Española 2008: EN (En Peligro), criterio B1ab(i,iii,iv,v)c(ii,iii,iv)+2ab(i,iii,iv,v)c(ii,iii,iv)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Caralluma_europaea45.JPG?width=1280",
     "imageAttribution": "Nanosanchez (Public domain) · Wikimedia Commons",
@@ -6061,7 +6061,7 @@
       "family": "Asteraceae",
       "genus": "Centaurea"
     },
-    "iucnGlobal": "NE",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Centaurea_saxicola674.jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons",
@@ -6267,7 +6267,7 @@
       "family": "Caprifoliaceae",
       "genus": "Centranthus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Centranthus_lecoqii_subsp._lecoqii_4154.JPG?width=1280",
     "imageAttribution": "Vachiclub (CC BY-SA 4.0) · Wikimedia Commons",
@@ -6298,7 +6298,7 @@
       "family": "Orchidaceae",
       "genus": "Cephalanthera"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cephalanthera_damasonium_050606.jpg?width=1280",
     "imageAttribution": "Bernd Haynold (CC BY 2.5) · Wikimedia Commons",
@@ -6329,7 +6329,7 @@
       "family": "Orchidaceae",
       "genus": "Cephalanthera"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cephalanthera_longifolia_300508.jpg?width=1280",
     "imageAttribution": "Bernd Haynold (CC BY-SA 3.0) · Wikimedia Commons",
@@ -6477,7 +6477,7 @@
       "family": "Fabaceae",
       "genus": "Ceratonia"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2017)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ceratonia_siliqua_Keciboynuzu_1370984_Nevit.jpg?width=1280",
     "imageAttribution": "Nevit Dilmen (talk) (CC BY-SA 3.0) · Wikimedia Commons",
@@ -6539,7 +6539,7 @@
       "family": "Certhiidae",
       "genus": "Certhia"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Short-toed_Treecreeper_(Certhia_brachydactyla)_(cropped_version).jpg?width=1280",
     "imageAttribution": "Short-toed_Treecreeper_(Certhia_brachydactyla).jpg: א (Aleph) deriv… (CC BY-SA 2.5) · Wikimedia Commons",
@@ -6777,7 +6777,7 @@
       "family": "Scincidae",
       "genus": "Chalcides"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)",
     "spainStatus": "LESRPE; Directiva Hábitats 92/43/CEE, Anexo IV",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chalcides_bedriagai_01_by-dpc.jpg?width=1280",
     "imageAttribution": "David Perez (CC BY 3.0) · Wikimedia Commons",
@@ -6840,7 +6840,7 @@
       "family": "Arecaceae",
       "genus": "Chamaerops"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chamaerops_humilis_Torreblanca.jpg?width=1280",
     "imageAttribution": "Canaan (CC BY-SA 4.0) · Wikimedia Commons",
@@ -6872,7 +6872,7 @@
       "family": "Charadriidae",
       "genus": "Charadrius"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; LESRPE (RD 139/2011); Ley 42/2007, Anexo IV",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Charadrius_alexandrinus_-_Kentish_Plover_03.jpg?width=1280",
     "imageAttribution": "Zeynel Cebeci (CC BY-SA 4.0) · Wikimedia Commons",
@@ -7172,11 +7172,11 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Charadriiformes",
+      "family": "Laridae",
       "genus": "Chroicocephalus"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/605325270/original.jpg",
     "imageAttribution": "lalaia (CC BY 4.0) · GBIF",
@@ -7235,11 +7235,11 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
       "genus": "Circaetus"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
     "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_culebrera_(Circaetus_gallicus).jpg?width=1280",
     "imageAttribution": "Paco Gómez (CC BY-SA 4.0) · Wikimedia Commons",
@@ -7332,7 +7332,7 @@
       "family": "Accipitridae",
       "genus": "Circus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2021)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
     "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flickr_-_don_macauley_-_Bird_015.jpg?width=1280",
     "imageAttribution": "Donald Macauley (CC BY-SA 2.0) · Wikimedia Commons",
@@ -7427,7 +7427,7 @@
       "family": "Cistaceae",
       "genus": "Cistus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_albidus_flowers.jpg?width=1280",
     "imageAttribution": "Júlio Reis (CC BY-SA 3.0) · Wikimedia Commons",
@@ -7459,7 +7459,7 @@
       "family": "Cistaceae",
       "genus": "Cistus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Halimium_commutatum1.jpg?width=1280",
     "imageAttribution": "Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons",
@@ -7491,7 +7491,7 @@
       "family": "Cistaceae",
       "genus": "Cistus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_clusii_(habitus).jpg?width=1280",
     "imageAttribution": "Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons",
@@ -7639,7 +7639,7 @@
       "family": "Cistaceae",
       "genus": "Cistus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cistus_populifolius.jpg?width=1280",
     "imageAttribution": "Taken by Carsten Niehaus (user:Lumbar). (CC BY-SA 3.0) · Wikimedia Commons",
@@ -7845,7 +7845,7 @@
       "family": "Colchicaceae",
       "genus": "Colchicum"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Colchicum_triphyllum_001_GotBot_2016.jpg?width=1280",
     "imageAttribution": "Averater (CC BY 4.0) · Wikimedia Commons",
@@ -7966,7 +7966,7 @@
       "family": "Fabaceae",
       "genus": "Colutea"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Colutea_arborescens01.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
@@ -8143,7 +8143,7 @@
       "family": "Convolvulaceae",
       "genus": "Convolvulus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Convolvulus_althaeoides_1.JPG?width=1280",
     "imageAttribution": "User:Xemenendura (CC BY-SA 2.1 es) · Wikimedia Commons",
@@ -8204,7 +8204,7 @@
       "family": "Convolvulaceae",
       "genus": "Convolvulus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Convolvulus_lineatus_2.jpg?width=1280",
     "imageAttribution": "Ghislain118 https://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons",
@@ -8260,11 +8260,11 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Coraciiformes",
+      "family": "Coraciidae",
       "genus": "Coracias"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/European_roller.jpg?width=1280",
     "imageAttribution": "Christian Svane (CC BY-SA 2.5) · Wikimedia Commons",
@@ -8355,7 +8355,7 @@
       "family": "Rosaceae",
       "genus": "Cormus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sorbus_domestica_FruitsLeaves_BotGardBln0906a.JPG?width=1280",
     "imageAttribution": "BotBln (CC BY-SA 3.0) · Wikimedia Commons",
@@ -8416,7 +8416,7 @@
       "family": "Fabaceae",
       "genus": "Coronilla"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Coronilla_juncea.JPG?width=1280",
     "imageAttribution": "Mario Modesto Mata (CC BY-SA 3.0) · Wikimedia Commons",
@@ -8625,7 +8625,7 @@
       "family": "Pteridaceae",
       "genus": "Cosentinia"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cosentinia_vellea_kz02.jpg?width=1280",
     "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
@@ -8657,7 +8657,7 @@
       "family": "Rosaceae",
       "genus": "Cotoneaster"
     },
-    "iucnGlobal": "NT (Casi amenazado) (evaluación UICN 1998)",
+    "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 1998)",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://observation.org/photos/83833755.jpg",
     "imageAttribution": "Paco (Faluke) (CC BY-NC-ND 4.0) · observation.org / GBIF",
@@ -8688,7 +8688,7 @@
       "family": "Phasianidae",
       "genus": "Coturnix"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "UICN España: DD (Datos insuficientes) (2004)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quaglia.jpg?width=1280",
     "imageAttribution": "Raniero Massoli Novelli (CC BY 2.0) · Wikimedia Commons",
@@ -8807,7 +8807,7 @@
       "family": "Apiaceae",
       "genus": "Crithmum"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Crithmum_maritimum.jpg?width=1280",
     "imageAttribution": "Júlio Reis (Tintazul) (CC BY-SA 2.5) · Wikimedia Commons",
@@ -8931,7 +8931,7 @@
       "family": "Sylviidae",
       "genus": "Curruca"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2019)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9A%CE%BF%CE%BA%CE%BA%CE%B9%CE%BD%CE%BF%CF%84%CF%83%CE%B9%CF%81%CE%BF%CE%B2%CE%AC%CE%BA%CE%BF%CF%82.jpg?width=1280",
     "imageAttribution": "Antonios Tsaknakis (CC BY-SA 4.0) · Wikimedia Commons",
@@ -8994,7 +8994,7 @@
       "family": "Sylviidae",
       "genus": "Curruca"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_%C3%A0_lunettes_Aqueduc_de_Zaghouan.jpg?width=1280",
     "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
@@ -9057,7 +9057,7 @@
       "family": "Sylviidae",
       "genus": "Curruca"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "LESRPE (RD 139/2011)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sardinian_Warbler.jpg?width=1280",
     "imageAttribution": "Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons",
@@ -9090,7 +9090,7 @@
       "family": "Sylviidae",
       "genus": "Curruca"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2022)",
     "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_pitchou_Ichkeul_NP.jpg?width=1280",
     "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
@@ -9360,7 +9360,7 @@
       "family": "Cynomoriaceae",
       "genus": "Cynomorium"
     },
-    "iucnGlobal": "NE",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cynomorium_coccineum_vMH375.jpg?width=1280",
     "imageAttribution": "autor no indicado (Public domain) · Wikimedia Commons",
@@ -9392,7 +9392,7 @@
       "family": "Cyperaceae",
       "genus": "Cyperus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cyperus_capitatus.JPG?width=1280",
     "imageAttribution": "Taken by Carsten Niehaus (user:Lumbar). (CC BY-SA 3.0) · Wikimedia Commons",
@@ -9453,7 +9453,7 @@
       "family": "Cytinaceae",
       "genus": "Cytinus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cytinus_ruber_(flowering_plants).jpg?width=1280",
     "imageAttribution": "Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons",
@@ -9546,7 +9546,7 @@
       "family": "Fabaceae",
       "genus": "Cytisus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calycotome_villosa1.jpg?width=1280",
     "imageAttribution": "Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons",
@@ -9578,7 +9578,7 @@
       "family": "Fabaceae",
       "genus": "Cytisus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto, por el que se regula el Catálogo español de especies exóticas invasoras. BOE 185 de 3 de agosto de 2013)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cytisus_scoparius_by_Danny_S._-_001.JPG?width=1280",
     "imageAttribution": "Danny S. (CC BY-SA 3.0) · Wikimedia Commons",
@@ -9755,7 +9755,7 @@
       "family": "Apiaceae",
       "genus": "Daucus"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "No incluida en el LESRPE; anual característica del Malcolmietalia (HIC 2230)",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/475241861/original.jpeg",
     "imageAttribution": "Christoph Moning (CC BY 4.0) · GBIF",
@@ -9846,7 +9846,7 @@
       "family": "Caryophyllaceae",
       "genus": "Dianthus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "UICN España: VU (Vulnerable) (2010)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dianthus_broteri.jpg?width=1280",
     "imageAttribution": "Nanosanchez (Public domain) · Wikimedia Commons",
@@ -9908,7 +9908,7 @@
       "family": "Plantaginaceae",
       "genus": "Digitalis"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Digitalis_obscura_1.jpg?width=1280",
     "imageAttribution": "Cillas (CC BY-SA 4.0) · Wikimedia Commons",
@@ -10027,7 +10027,7 @@
       "family": "Asteraceae",
       "genus": "Dittrichia"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Inula_viscosa_flowers.jpg?width=1280",
     "imageAttribution": "No machine-readable author provided. Rickjpelleg assumed (based on … (CC BY 2.5) · Wikimedia Commons",
@@ -10316,11 +10316,11 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Pelecaniformes",
+      "family": "Ardeidae",
       "genus": "Egretta"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aigrette_garzette_au_lac_sud_de_Tunis_(site_RAMSAR).jpg?width=1280",
     "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
@@ -10474,7 +10474,7 @@
       "family": "Emberizidae",
       "genus": "Emberiza"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "No incluida en el LESRPE; protegida por la Directiva Aves 2009/147/CE",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/606625336/original.jpg",
     "imageAttribution": "euqirneto (CC BY 4.0) · GBIF",
@@ -10626,7 +10626,7 @@
       "family": "Poaceae",
       "genus": "Enneapogon"
     },
-    "iucnGlobal": "NE (no evaluada a nivel global; especie de amplia distribución en Asia y África, rara en el extremo de su área ibérica)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Lista Roja de la Flora Vascular Española 2008: CR (En Peligro Crítico)",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/616035449/original.jpg",
     "imageAttribution": "naturcope (CC BY-NC 4.0) · GBIF",
@@ -10659,7 +10659,7 @@
       "family": "Ephedraceae",
       "genus": "Ephedra"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2011)",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ephedra_fragilis_3.JPG?width=1280",
     "imageAttribution": "User:falconaumanni (CC BY-SA 4.0) · Wikimedia Commons",
@@ -10691,7 +10691,7 @@
       "family": "Bufonidae",
       "genus": "Epidalea"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)",
     "spainStatus": "LESRPE; Directiva Hábitats 92/43/CEE, Anexo IV",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Epidalea_calamita_02_by-dpc.jpg?width=1280",
     "imageAttribution": "David Perez (CC BY 3.0) · Wikimedia Commons",
@@ -10724,7 +10724,7 @@
       "family": "Orchidaceae",
       "genus": "Epipactis"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Epipactis_atrorubens_flowers.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
@@ -10784,7 +10784,7 @@
       "family": "Orchidaceae",
       "genus": "Epipactis"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://bs.plantnet.org/image/o/fa3e211eacbd1612f2e8967c671667bdfafb8228",
     "imageAttribution": "janet_phi (CC BY-SA 4.0) · GBIF",
@@ -10873,7 +10873,7 @@
       "family": "Poaceae",
       "genus": "Eragrostis"
     },
-    "iucnGlobal": "NE",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/591856810/original.jpg",
     "imageAttribution": "Alejandro Rodríguez Zapata (CC BY 4.0) · GBIF/iNaturalist",
@@ -10933,7 +10933,7 @@
       "family": "Ericaceae",
       "genus": "Erica"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Erica_erigena_2c.JPG?width=1280",
     "imageAttribution": "Consultaplantas (CC BY-SA 4.0) · Wikimedia Commons",
@@ -10993,7 +10993,7 @@
       "family": "Fabaceae",
       "genus": "Erinacea"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ERINACEA_ANTHYLLIS_-_SANT_MAMET.JPG?width=1280",
     "imageAttribution": "Isidre blanc (CC BY-SA 3.0) · Wikimedia Commons",
@@ -11085,7 +11085,7 @@
       "family": "Geraniaceae",
       "genus": "Erodium"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/205785187/original.jpg",
     "imageAttribution": "Denys Vynokurov (CC BY 4.0) · GBIF/iNaturalist",
@@ -11175,7 +11175,7 @@
       "family": "Geraniaceae",
       "genus": "Erodium"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2014)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2014)",
     "spainStatus": "CEEA: En peligro de extinción (Orden AAA/1771/2015, de 31 de agosto, por la que se modifica el anexo del Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 211, de 3 de septiembre de 2015)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ERODIUM_FOETIDUM_-_S%C3%92BOL_-_IB-784_(Cargola_de_roca).jpg?width=1280",
     "imageAttribution": "Isidre blanc (CC BY-SA 4.0) · Wikimedia Commons",
@@ -11293,7 +11293,7 @@
       "family": "Geraniaceae",
       "genus": "Erodium"
     },
-    "iucnGlobal": "NE",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/642301345/original.jpg",
     "imageAttribution": "Laia Lahoz (CC BY-NC 4.0) · iNaturalist/GBIF",
@@ -11325,7 +11325,7 @@
       "family": "Geraniaceae",
       "genus": "Erodium"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/483580471/original.jpeg",
     "imageAttribution": "Olivier Argagnon (CC BY 4.0) · GBIF/iNaturalist",
@@ -11621,7 +11621,7 @@
       "family": "Zygophyllaceae",
       "genus": "Fagonia"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE; elemento iberoafricano de interés biogeográfico",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fagonia_cretica.jpg?width=1280",
     "imageAttribution": "Retama (CC BY-SA 3.0) · Wikimedia Commons",
@@ -11653,7 +11653,7 @@
       "family": "Falconidae",
       "genus": "Falco"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2021)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Falco_columbarius_Male.jpg?width=1280",
     "imageAttribution": "Raj Boora from Edmonton, Canada (CC BY 2.0) · Wikimedia Commons",
@@ -11686,7 +11686,7 @@
       "family": "Falconidae",
       "genus": "Falco"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
     "spainStatus": "LESRPE; Directiva Aves 2009/147/CE, Anexo I; Reglamento CITES (CE) 338/97, Anexo A",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Falco_peregrinus_-_01.jpg?width=1280",
     "imageAttribution": "Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons",
@@ -11719,7 +11719,7 @@
       "family": "Falconidae",
       "genus": "Falco"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2021)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hobby_-_Falco_subbuteo.jpg?width=1280",
     "imageAttribution": "Andy Morffew from Itchen Abbas, Hampshire, UK (CC BY 2.0) · Wikimedia Commons",
@@ -11748,11 +11748,11 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Falconiformes",
+      "family": "Falconidae",
       "genus": "Falco"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
     "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Common_kestrel_falco_tinnunculus.jpg?width=1280",
     "imageAttribution": "Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons",
@@ -11785,7 +11785,7 @@
       "family": "Felidae",
       "genus": "Felis"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2023)",
     "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo IV; Reglamento CITES (CE) 338/97, Anexo A",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Felis_silvestris_Kocka_divok%C3%A1_zoo_cropped.jpg?width=1280",
     "imageAttribution": "Felis_silvestris_Kočka_divoká_ZOO_Děčín.jpg: Alena Houšková derivat… (CC BY-SA 3.0) · Wikimedia Commons",
@@ -12054,7 +12054,7 @@
       "family": "Frankeniaceae",
       "genus": "Frankenia"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/464713930/original.jpeg",
     "imageAttribution": "Rafael Medina (CC BY 4.0) · GBIF",
@@ -12147,7 +12147,7 @@
       "family": "Oleaceae",
       "genus": "Fraxinus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2017)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fraxinus_ornus_JPG2.jpg?width=1280",
     "imageAttribution": "Jean-Pol GRANDMONT (CC BY 3.0) · Wikimedia Commons",
@@ -12178,7 +12178,7 @@
       "family": "Fringillidae",
       "genus": "Fringilla"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2019)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fringilla_coelebs_(chaffinch)%2C_male.jpg?width=1280",
     "imageAttribution": "Self: Commons user MichaelMaggs (CC BY-SA 2.5) · Wikimedia Commons",
@@ -12211,7 +12211,7 @@
       "family": "Liliaceae",
       "genus": "Fritillaria"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fritillaria_lusitanica_2_2601.jpg?width=1280",
     "imageAttribution": "Balles2601 (CC BY-SA 4.0) · Wikimedia Commons",
@@ -12508,7 +12508,7 @@
       "family": "Alaudidae",
       "genus": "Galerida"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Crested_Lark_-_Qatar.jpg?width=1280",
     "imageAttribution": "Ashraf Kotb (CC BY-SA 3.0) · Wikimedia Commons",
@@ -12541,7 +12541,7 @@
       "family": "Alaudidae",
       "genus": "Galerida"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Galerida_theklae_Madrid.jpg?width=1280",
     "imageAttribution": "Adrian198cm (Public domain) · Wikimedia Commons",
@@ -12839,7 +12839,7 @@
       "family": "Viverridae",
       "genus": "Genetta"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2015)",
     "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo V",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Genetta_genetta_felina_(Wroclaw_zoo).JPG?width=1280",
     "imageAttribution": "Guérin Nicolas (messages) (CC BY-SA 3.0) · Wikimedia Commons",
@@ -12872,7 +12872,7 @@
       "family": "Fabaceae",
       "genus": "Genista"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Genista_cinerea26de_maig_2007_019.jpg?width=1280",
     "imageAttribution": "Victor M. Vicente Selvas (Public domain) · Wikimedia Commons",
@@ -12904,7 +12904,7 @@
       "family": "Fabaceae",
       "genus": "Genista"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Genista-longipes-2019.jpg?width=1280",
     "imageAttribution": "MottaW (CC BY-SA 4.0) · Wikimedia Commons",
@@ -12993,7 +12993,7 @@
       "family": "Fabaceae",
       "genus": "Genista"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Genista_spartioides_kz01.jpg?width=1280",
     "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
@@ -13318,7 +13318,7 @@
       "family": "Papaveraceae",
       "genus": "Glaucium"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Glaucium_flavum_2015-06-16_442.JPG?width=1280",
     "imageAttribution": "Salicyna (CC BY-SA 4.0) · Wikimedia Commons",
@@ -13438,7 +13438,7 @@
       "family": "Phalacrocoracidae",
       "genus": "Gulosus"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "Subespecie mediterránea (desmarestii) catalogada Vulnerable en el Catálogo Español de Especies Amenazadas",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Shag_Phalacrocorax_aristotelis.jpg?width=1280",
     "imageAttribution": "Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons",
@@ -13499,7 +13499,7 @@
       "family": "Accipitridae",
       "genus": "Gyps"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2021)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vulture_beak_sideview_A.jpg?width=1280",
     "imageAttribution": "Thermos (CC BY-SA 2.5) · Wikimedia Commons",
@@ -13686,7 +13686,7 @@
       "family": "Cistaceae",
       "genus": "Helianthemum"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_almeriense_flor.jpg?width=1280",
     "imageAttribution": "Retama (CC BY-SA 3.0) · Wikimedia Commons",
@@ -14069,7 +14069,7 @@
       "family": "Cistaceae",
       "genus": "Helianthemum"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "UICN España: EN (En peligro) (2010)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_violaceum_habitus_SierraMadrona.jpg?width=1280",
     "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
@@ -14098,7 +14098,7 @@
       "family": "Cistaceae",
       "genus": "Helianthemum"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/384325778/original.jpg",
     "imageAttribution": "anarkis (CC BY-NC 4.0) · GBIF/iNaturalist",
@@ -14274,7 +14274,7 @@
       "family": "Gekkonidae",
       "genus": "Hemidactylus"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
     "spainStatus": "LESRPE (RD 139/2011)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hemidactylus_turcicus_on_a_wall_in_Greece.jpg?width=1280",
     "imageAttribution": "Koppi2 (CC BY-SA 3.0) · Wikimedia Commons",
@@ -14307,7 +14307,7 @@
       "family": "Colubridae",
       "genus": "Hemorrhois"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
     "spainStatus": "LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hemorrhois_hippocrepis_121004.jpg?width=1280",
     "imageAttribution": "Accipiter (R. Altenkamp, Berlin) (CC BY-SA 3.0) · Wikimedia Commons",
@@ -14365,11 +14365,11 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Accipitriformes",
+      "family": "Accipitridae",
       "genus": "Hieraaetus"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
     "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Booted_eagle%2C_Hieraaetus_pennatus%2C_at_Kgalagadi_Transfrontier_Pa_(32334023348).jpg?width=1280",
     "imageAttribution": "Derek Keats from Johannesburg, South Africa (CC BY 2.0) · Wikimedia Commons",
@@ -14670,7 +14670,7 @@
       "family": "Brassicaceae",
       "genus": "Hornungia"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hornungia_petraea2_eF.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
@@ -14792,7 +14792,7 @@
       "family": "Poaceae",
       "genus": "Hyparrhenia"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hyparrhenia_hirta_Habitus_ValledeAlcudia.jpg?width=1280",
     "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
@@ -14882,7 +14882,7 @@
       "family": "Hypericaceae",
       "genus": "Hypericum"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hypericum_caprifolium_(NHS).jpg?width=1280",
     "imageAttribution": "The Trustees of the National History Museum in London (CC BY-SA 4.0) · Wikimedia Commons",
@@ -15088,7 +15088,7 @@
       "family": "Poaceae",
       "genus": "Imperata"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Incluido (Real Decreto 216/2019, de 29 de marzo, por el que se aprueba la lista de especies exóticas…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Impera_cylind_071122-1339_stgd.jpg?width=1280",
     "imageAttribution": "W.A. Djatmiko (Wie146) (CC BY-SA 4.0) · Wikimedia Commons",
@@ -15120,7 +15120,7 @@
       "family": "Iridaceae",
       "genus": "Iris"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Iris_lutescens_(flowers).jpg?width=1280",
     "imageAttribution": "Hans Hillewaert (CC BY-SA 3.0) · Wikimedia Commons",
@@ -15181,7 +15181,7 @@
       "family": "Campanulaceae",
       "genus": "Jasione"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jasione_foliosa_var._Minuta_GotBot_2015_001.jpg?width=1280",
     "imageAttribution": "Averater (CC BY 4.0) · Wikimedia Commons",
@@ -15212,7 +15212,7 @@
       "family": "Juglandaceae",
       "genus": "Juglans"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2017)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestal…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/20110802Walnussbaum_Plankstadt2.jpg?width=1280",
     "imageAttribution": "AnRo0002 (CC0) · Wikimedia Commons",
@@ -15330,7 +15330,7 @@
       "family": "Cupressaceae",
       "genus": "Juniperus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2013)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2013)",
     "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestal…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_oxycedrus_g1.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
@@ -15362,7 +15362,7 @@
       "family": "Cupressaceae",
       "genus": "Juniperus"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_phoenicea1.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
@@ -15448,11 +15448,11 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Piciformes",
+      "family": "Picidae",
       "genus": "Jynx"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jinxtorquilla.jpg?width=1280",
     "imageAttribution": "User:Aelwyn (CC BY-SA 3.0) · Wikimedia Commons",
@@ -15543,7 +15543,7 @@
       "family": "Asteraceae",
       "genus": "Klasea"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Klasea_flavescens0001_01.jpg?width=1280",
     "imageAttribution": "Philmarin (CC BY-SA 3.0) · Wikimedia Commons",
@@ -15604,7 +15604,7 @@
       "family": "Plantaginaceae",
       "genus": "Lafuentea"
     },
-    "iucnGlobal": "NE",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lafuentea_rotundifolia80857.jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
@@ -15694,7 +15694,7 @@
       "family": "Laniidae",
       "genus": "Lanius"
     },
-    "iucnGlobal": "VU (Vulnerable) (evaluación UICN 2017)",
+    "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); UICN España: NT (Casi amenazado) (2004)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/S%C3%BCdlicher-Raubw%C3%BCrger_2018-01-07_0003.jpg?width=1280",
     "imageAttribution": "Andreas Trepte (CC BY-SA 4.0) · Wikimedia Commons",
@@ -15727,7 +15727,7 @@
       "family": "Laniidae",
       "genus": "Lanius"
     },
-    "iucnGlobal": "LC (SPEC, en declive en Europa)",
+    "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2022)",
     "spainStatus": "LESRPE (RD 139/2011)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lanius_senator01_new.jpg?width=1280",
     "imageAttribution": "Lanius_senator01.jpg: chausinho derivative work: Bogbumper (talk) (CC BY-SA 2.0) · Wikimedia Commons",
@@ -15785,11 +15785,11 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Charadriiformes",
+      "family": "Laridae",
       "genus": "Larus"
     },
-    "iucnGlobal": "VU (Vulnerable)",
+    "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2020)",
     "spainStatus": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; Ley 42/2007, Anexo IV",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/611415320/original.jpg",
     "imageAttribution": "Michael Bakker Paiva (CC BY 4.0) · GBIF",
@@ -16037,7 +16037,7 @@
       "family": "Asteraceae",
       "genus": "Launaea"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Launaea_arborescens_-_Oasis_Park_botanical_garden_-_Fuerteventura_-_02.jpg?width=1280",
     "imageAttribution": "Norbert Nagel, Mörfelden-Walldorf, Germany (CC BY-SA 3.0) · Wikimedia Commons",
@@ -16098,7 +16098,7 @@
       "family": "Asteraceae",
       "genus": "Launaea"
     },
-    "iucnGlobal": "NE",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/627205605/original.jpg",
     "imageAttribution": "Olivier Argagnon (CC BY 4.0) · GBIF/iNaturalist",
@@ -16159,7 +16159,7 @@
       "family": "Lamiaceae",
       "genus": "Lavandula"
     },
-    "iucnGlobal": "NE",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lavandula_dentata1.jpg?width=1280",
     "imageAttribution": "KENPEI (CC BY-SA 3.0) · Wikimedia Commons",
@@ -16219,7 +16219,7 @@
       "family": "Lamiaceae",
       "genus": "Lavandula"
     },
-    "iucnGlobal": "NE",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lavandula_multifida.jpg?width=1280",
     "imageAttribution": "Laitche (Public domain) · Wikimedia Commons",
@@ -16310,7 +16310,7 @@
       "family": "Orchidaceae",
       "genus": "Limodorum"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Limodorum_abortivum_Mallorca_04.jpg?width=1280",
     "imageAttribution": "Orchi (CC BY-SA 3.0) · Wikimedia Commons",
@@ -16430,7 +16430,7 @@
       "family": "Plumbaginaceae",
       "genus": "Limonium"
     },
-    "iucnGlobal": "NE",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_cossonianum.jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC0) · Wikimedia Commons",
@@ -16462,7 +16462,7 @@
       "family": "Plumbaginaceae",
       "genus": "Limonium"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/476031749/original.jpeg",
     "imageAttribution": "Christoph Moning (CC BY 4.0) · GBIF",
@@ -16526,7 +16526,7 @@
       "family": "Plumbaginaceae",
       "genus": "Limonium"
     },
-    "iucnGlobal": "NE (no evaluada a nivel global; género con numerosos microendemismos ibéricos)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Limonium_insigne.jpg?width=1280",
     "imageAttribution": "ANE (CC BY-SA 4.0) · Wikimedia Commons",
@@ -16708,7 +16708,7 @@
       "family": "Plantaginaceae",
       "genus": "Linaria"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Linaria_aeruginea.jpg?width=1280",
     "imageAttribution": "This image is created by user Stijn Hantson at Observation.org, a g… (CC BY-SA 3.0) · Wikimedia Commons",
@@ -16769,7 +16769,7 @@
       "family": "Plantaginaceae",
       "genus": "Linaria"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/501474709/original.jpeg",
     "imageAttribution": "deutschle (CC BY-NC 4.0) · GBIF/iNaturalist",
@@ -17122,7 +17122,7 @@
       "family": "Caryophyllaceae",
       "genus": "Loeflingia"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/622499178/original.jpg",
     "imageAttribution": "Augustin Soulard (CC BY 4.0) · GBIF",
@@ -17212,7 +17212,7 @@
       "family": "Caprifoliaceae",
       "genus": "Lonicera"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/527297838/original.jpg",
     "imageAttribution": "Finlay F. K. Thorpe (CC BY-NC 4.0) · GBIF/iNaturalist",
@@ -17330,7 +17330,7 @@
       "family": "Caprifoliaceae",
       "genus": "Lonicera"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lonicera_splendida_2018-05-22_2462.jpg?width=1280",
     "imageAttribution": "Salicyna (CC BY-SA 4.0) · Wikimedia Commons",
@@ -17391,7 +17391,7 @@
       "family": "Fabaceae",
       "genus": "Lotus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/619207211/original.jpg",
     "imageAttribution": "Augustin Soulard (CC BY 4.0) · GBIF",
@@ -17423,7 +17423,7 @@
       "family": "Fabaceae",
       "genus": "Lotus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dorycnium_pentaphyllum_Habitat_2010-6-15_DehesaBoyaldePuertollano.jpg?width=1280",
     "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
@@ -17455,7 +17455,7 @@
       "family": "Fringillidae",
       "genus": "Loxia"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2017)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Red_Crossbills_(Male).jpg?width=1280",
     "imageAttribution": "Elaine R. Wilson, www.naturespicsonline.com (CC BY-SA 3.0) · Wikimedia Commons",
@@ -17518,7 +17518,7 @@
       "family": "Alaudidae",
       "genus": "Lullula"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2019)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lullula_arborea.jpg?width=1280",
     "imageAttribution": "autor no indicado (Public domain) · Wikimedia Commons",
@@ -17641,7 +17641,7 @@
       "family": "Solanaceae",
       "genus": "Lycium"
     },
-    "iucnGlobal": "NE (no evaluada a nivel global)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lycium_intrincatum_(flor).JPG?width=1280",
     "imageAttribution": "ANE (CC BY-SA 4.0) · Wikimedia Commons",
@@ -17824,7 +17824,7 @@
       "family": "Poaceae",
       "genus": "Macrochloa"
     },
-    "iucnGlobal": "VU (Vulnerable) (evaluación UICN 2018)",
+    "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stipa_tenacissima.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
@@ -17886,7 +17886,7 @@
       "family": "Lamprophiidae",
       "genus": "Malpolon"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
     "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Culebra_bastarda_(Malpolon_monspessulanus)%2C_Nig%C3%BCella%2C_Zaragoza%2C_Espa%C3%B1a%2C_2017-05-24%2C_DD_07.jpg?width=1280",
     "imageAttribution": "Diego Delso (CC BY-SA 4.0) · Wikimedia Commons",
@@ -18095,7 +18095,7 @@
       "family": "Brassicaceae",
       "genus": "Maresia"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Maresia_nana_-_Yanalot_01.jpg?width=1280",
     "imageAttribution": "Zeynel Cebeci (CC BY-SA 4.0) · Wikimedia Commons",
@@ -18215,7 +18215,7 @@
       "family": "Mustelidae",
       "genus": "Martes"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Steinmarder_01.jpg?width=1280",
     "imageAttribution": "Zefram (CC BY 2.0 de) · Wikimedia Commons",
@@ -18282,7 +18282,7 @@
       "family": "Geoemydidae",
       "genus": "Mauremys"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mauremys_leprosa_03_by-dpc.jpg?width=1280",
     "imageAttribution": "David Perez (CC BY 3.0) · Wikimedia Commons",
@@ -18521,11 +18521,11 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Passeriformes",
+      "family": "Alaudidae",
       "genus": "Melanocorypha"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Melanocorypha_calandra.jpg?width=1280",
     "imageAttribution": "Bereşe.jpg: Dûrzan cîrano derivative work: Osado (CC BY-SA 3.0) · Wikimedia Commons",
@@ -18558,7 +18558,7 @@
       "family": "Mustelidae",
       "genus": "Meles"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Badger-badger.jpg?width=1280",
     "imageAttribution": "BadgerHero (CC BY-SA 3.0) · Wikimedia Commons",
@@ -18620,7 +18620,7 @@
       "family": "Poaceae",
       "genus": "Melica"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/626575126/original.jpg",
     "imageAttribution": "Piermario Maculan (CC0) · GBIF",
@@ -18769,7 +18769,7 @@
       "family": "Meropidae",
       "genus": "Merops"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "LESRPE (RD 139/2011)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%C5%9Eahl%C3%BBr-33.jpg?width=1280",
     "imageAttribution": "Dûrzan cîrano (CC BY-SA 3.0) · Wikimedia Commons",
@@ -18954,7 +18954,7 @@
       "family": "Miniopteridae",
       "genus": "Miniopterus"
     },
-    "iucnGlobal": "VU (Vulnerable) (evaluación UICN 2023)",
+    "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2023)",
     "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Miniopterus_schreibersii_dasythrix.jpg?width=1280",
     "imageAttribution": "Andrew Smith (Public domain) · Wikimedia Commons",
@@ -19103,7 +19103,7 @@
       "family": "Muscicapidae",
       "genus": "Monticola"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2017)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Monsax.jpg?width=1280",
     "imageAttribution": "Pierre Dalous (CC BY-SA 3.0) · Wikimedia Commons",
@@ -19136,7 +19136,7 @@
       "family": "Muscicapidae",
       "genus": "Monticola"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial, RD 139/2011)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_rock_thrush_(male)_at_Gamla_Nature_Reserve.jpg?width=1280",
     "imageAttribution": "Artemy Voikhansky (CC BY-SA 4.0) · Wikimedia Commons",
@@ -19463,11 +19463,11 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Passeriformes",
+      "family": "Muscicapidae",
       "genus": "Muscicapa"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/SpottedFlycatcheronfence.jpg?width=1280",
     "imageAttribution": "Andrew Easton (Attribution) · Wikimedia Commons",
@@ -19589,7 +19589,7 @@
       "family": "Vespertilionidae",
       "genus": "Myotis"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Myotis-blythii-cropped.jpg?width=1280",
     "imageAttribution": "C. Robiller / www.naturlichter.de (CC BY-SA 3.0) · Wikimedia Commons",
@@ -19622,7 +19622,7 @@
       "family": "Vespertilionidae",
       "genus": "Myotis"
     },
-    "iucnGlobal": "VU (Vulnerable) (evaluación UICN 2016)",
+    "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "Anexo II (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Anexo V (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); UICN España: EN (En peligro) (2007)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Myotis_capaccinii_0105b_cropped.jpg?width=1280",
     "imageAttribution": "This image was improved or created by the Wikigraphists of the Grap… (FAL) · Wikimedia Commons",
@@ -19685,7 +19685,7 @@
       "family": "Vespertilionidae",
       "genus": "Myotis"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Myotis_emarginatus.jpg?width=1280",
     "imageAttribution": "Rémi Bigonneau (CC BY 3.0) · Wikimedia Commons",
@@ -19747,7 +19747,7 @@
       "family": "Vespertilionidae",
       "genus": "Myotis"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Myotis.jpg?width=1280",
     "imageAttribution": "Urheber: Manuel Werner, Germany, Wikipedia-Kontakt: http://de.wikip… (CC BY-SA 3.0) · Wikimedia Commons",
@@ -19780,7 +19780,7 @@
       "family": "Myrtaceae",
       "genus": "Myrtus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Starr_080304-3229_Myrtus_communis.jpg?width=1280",
     "imageAttribution": "Forest & Kim Starr (CC BY 3.0) · Wikimedia Commons",
@@ -19988,7 +19988,7 @@
       "family": "Orchidaceae",
       "genus": "Neotinea"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Neotinea_maculata_(Sardinia).jpg?width=1280",
     "imageAttribution": "(Hans Hillewaert) (CC BY-SA 3.0) · Wikimedia Commons",
@@ -20048,7 +20048,7 @@
       "family": "Apocynaceae",
       "genus": "Nerium"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2013)",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nerium_oleander_flowers_leaves.jpg?width=1280",
     "imageAttribution": "Alvesgaspar (CC BY 2.5) · Wikimedia Commons",
@@ -20139,7 +20139,7 @@
       "family": "Brassicaceae",
       "genus": "Notoceras"
     },
-    "iucnGlobal": "NE",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Notoceras_bicorne_kz08.jpg?width=1280",
     "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
@@ -20285,11 +20285,11 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Passeriformes",
+      "family": "Muscicapidae",
       "genus": "Oenanthe"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Black-eared_Wheatear%2C_Punta_del_Sabinar%2C_Spain.jpg?width=1280",
     "imageAttribution": "Vince Smith from London, United Kingdom (CC BY-SA 2.0) · Wikimedia Commons",
@@ -20322,7 +20322,7 @@
       "family": "Muscicapidae",
       "genus": "Oenanthe"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Black_Wheatear%2C_Isla_Plana_3.jpg?width=1280",
     "imageAttribution": "Andrew Thomas from Shrewsbury, UK (CC BY-SA 2.0) · Wikimedia Commons",
@@ -20355,7 +20355,7 @@
       "family": "Muscicapidae",
       "genus": "Oenanthe"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Oenanthe_oenanthe_Larvik.JPG?width=1280",
     "imageAttribution": "Arnstein Rønning (CC BY-SA 4.0) · Wikimedia Commons",
@@ -20536,7 +20536,7 @@
       "family": "Fabaceae",
       "genus": "Ononis"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ononis_fruticosa.jpg?width=1280",
     "imageAttribution": "Arrakatanga33 (CC BY-SA 4.0) · Wikimedia Commons",
@@ -20626,7 +20626,7 @@
       "family": "Fabaceae",
       "genus": "Ononis"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ononis_ornithopodioides_kz1.jpg?width=1280",
     "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
@@ -20716,7 +20716,7 @@
       "family": "Fabaceae",
       "genus": "Ononis"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/184117054/original.jpeg",
     "imageAttribution": "Santiago Martín-Bravo (CC BY 4.0) · iNaturalist/GBIF",
@@ -20864,7 +20864,7 @@
       "family": "Orchidaceae",
       "genus": "Ophrys"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ophrys_lutea.JPG?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 1.0) · Wikimedia Commons",
@@ -21157,7 +21157,7 @@
       "family": "Leporidae",
       "genus": "Oryctolagus"
     },
-    "iucnGlobal": "EN (Lista Roja mundial UICN 2019: En Peligro por declive en su área nativa)",
+    "iucnGlobal": "EN — En peligro (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "No incluida en el LESRPE; especie cinegética y presa clave del ecosistema mediterráneo",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Oryctolagus_cuniculus_Tasmania_2.jpg?width=1280",
     "imageAttribution": "JJ Harrison (https://www.jjharrison.com.au/) (CC BY-SA 3.0) · Wikimedia Commons",
@@ -21219,7 +21219,7 @@
       "family": "Santalaceae",
       "genus": "Osyris"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Osyris_lanceolata.JPG?width=1280",
     "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons",
@@ -21280,7 +21280,7 @@
       "family": "Strigidae",
       "genus": "Otus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2021)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Scops_Owl_(Otus_scops)%2C_Kalloni%2C_Lesvos%2C_Greece%2C_19.04.2015_(16773748434).jpg?width=1280",
     "imageAttribution": "Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons",
@@ -21932,7 +21932,7 @@
       "family": "Ranidae",
       "genus": "Pelophylax"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2022)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)",
     "spainStatus": "Anexo VI (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); UICN España: LC (Preocupación menor) (2002)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pelophylax_perezi_by-dpc.jpg?width=1280",
     "imageAttribution": "David Perez (CC BY 3.0) · Wikimedia Commons",
@@ -21995,7 +21995,7 @@
       "family": "Apocynaceae",
       "genus": "Periploca"
     },
-    "iucnGlobal": "NE (no evaluada a nivel global)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/609975159/original.jpg",
     "imageAttribution": "Quentin Groom (CC0) · GBIF",
@@ -22087,7 +22087,7 @@
       "family": "Crassulaceae",
       "genus": "Petrosedum"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sedum_sediforme_hojas.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
@@ -22119,7 +22119,7 @@
       "family": "Apiaceae",
       "genus": "Peucedanum"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Raskovnik33Joe-Laserpitium_siler.JPG?width=1280",
     "imageAttribution": "Струјајое (CC BY-SA 3.0) · Wikimedia Commons",
@@ -22179,7 +22179,7 @@
       "family": "Asteraceae",
       "genus": "Phagnalon"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2011)",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Phagnalon_saxatile.JPG?width=1280",
     "imageAttribution": "Xemenendura (CC BY 3.0) · Wikimedia Commons",
@@ -22300,7 +22300,7 @@
       "family": "Oleaceae",
       "genus": "Phillyrea"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Phyllirea_angustifolia.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
@@ -22332,7 +22332,7 @@
       "family": "Oleaceae",
       "genus": "Phillyrea"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2017)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Phillyrea_latifolia.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
@@ -22482,7 +22482,7 @@
       "family": "Muscicapidae",
       "genus": "Phoenicurus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2019)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Common_Redstart_-_Segrate_-_Italy_S4E2518-1_(19357313382).jpg?width=1280",
     "imageAttribution": "Francesco Veronesi from Italy (CC BY-SA 2.0) · Wikimedia Commons",
@@ -22544,7 +22544,7 @@
       "family": "Poaceae",
       "genus": "Phragmites"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)",
     "spainStatus": "No incluida en el LESRPE; helófito de cauces y ramblas (HIC 3250)",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/605083728/original.jpg",
     "imageAttribution": "Zoltán Stekkelpak (CC0) · GBIF",
@@ -22785,7 +22785,7 @@
       "family": "Pinaceae",
       "genus": "Pinus"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2013)",
     "spainStatus": "No catalogada (especie forestal común)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pino_secolare_-_Castelleone_di_Suasa.JPG?width=1280",
     "imageAttribution": "Accurimbono (CC BY-SA 3.0) · Wikimedia Commons",
@@ -22846,7 +22846,7 @@
       "family": "Pinaceae",
       "genus": "Pinus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2013)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2013)",
     "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. Lista de especies forestales e híbiridos artificiales (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestal…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pinus_pinaster_20131229.jpg?width=1280",
     "imageAttribution": "Luis Fernández García (CC BY-SA 4.0) · Wikimedia Commons",
@@ -22997,7 +22997,7 @@
       "family": "Anacardiaceae",
       "genus": "Pistacia"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "No catalogada (especie común mediterránea)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pistacia_lentiscus.jpg?width=1280",
     "imageAttribution": "Lumbar~commonswiki (CC BY-SA 3.0) · Wikimedia Commons",
@@ -23029,7 +23029,7 @@
       "family": "Anacardiaceae",
       "genus": "Pistacia"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pistachier2.JPG?width=1280",
     "imageAttribution": "greffer.net (CC BY 2.5) · Wikimedia Commons",
@@ -23061,7 +23061,7 @@
       "family": "Plantaginaceae",
       "genus": "Plantago"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/633859652/original.jpg",
     "imageAttribution": "Pavel Kúr (CC0) · GBIF",
@@ -23827,7 +23827,7 @@
       "family": "Salicaceae",
       "genus": "Populus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. Lista de especies forestales e híbiridos artificiales (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestal…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Populus_alba_01.jpg?width=1280",
     "imageAttribution": "la la means I love you (CC BY-SA 3.0) · Wikimedia Commons",
@@ -24007,7 +24007,7 @@
       "family": "Rosaceae",
       "genus": "Potentilla"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Potentilla_caulescens.jpg?width=1280",
     "imageAttribution": "User:Tigerente (CC BY 2.5) · Wikimedia Commons",
@@ -24038,7 +24038,7 @@
       "family": "Rosaceae",
       "genus": "Poterium"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "UICN España: NT (Casi amenazado) (2010)",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/517007573/original.jpg",
     "imageAttribution": "FloresdeMurcia.com (CC BY-NC 4.0) · GBIF/iNaturalist",
@@ -24125,7 +24125,7 @@
       "family": "Prunellidae",
       "genus": "Prunella"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alpine_accentor_saganta.jpg?width=1280",
     "imageAttribution": "Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons",
@@ -24188,7 +24188,7 @@
       "family": "Rosaceae",
       "genus": "Prunus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Prunus_prostrata.jpg?width=1280",
     "imageAttribution": "User:Tigerente (CC BY-SA 3.0) · Wikimedia Commons",
@@ -24219,7 +24219,7 @@
       "family": "Lacertidae",
       "genus": "Psammodromus"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
     "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Psammodromus_algirus_-_01.jpg?width=1280",
     "imageAttribution": "Carlos Delgado (CC BY-SA 3.0) · Wikimedia Commons",
@@ -24342,7 +24342,7 @@
       "family": "Lamiaceae",
       "genus": "Pseudodictamnus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ballota_hirsuta_1_(Espagne).jpg?width=1280",
     "imageAttribution": "Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons",
@@ -24403,7 +24403,7 @@
       "family": "Hirundinidae",
       "genus": "Ptyonoprogne"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "LESRPE (RD 139/2011)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ptyonoprogne_rupestris_in_flight.jpg?width=1280",
     "imageAttribution": "ferran pestaña (CC BY-SA 2.0) · Wikimedia Commons",
@@ -24493,8 +24493,8 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Passeriformes",
+      "family": "Corvidae",
       "genus": "Pyrrhocorax"
     },
     "iucnGlobal": "LC (Preocupación menor)",
@@ -24530,7 +24530,7 @@
       "family": "Fagaceae",
       "genus": "Quercus"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_coccifera_1.JPG?width=1280",
     "imageAttribution": "User:Xemenendura (CC BY-SA 3.0) · Wikimedia Commons",
@@ -24562,7 +24562,7 @@
       "family": "Fagaceae",
       "genus": "Quercus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestal…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_faginea_centenario.jpg?width=1280",
     "imageAttribution": "Carlosblh (CC BY-SA 3.0) · Wikimedia Commons",
@@ -24594,7 +24594,7 @@
       "family": "Fagaceae",
       "genus": "Quercus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2020)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)",
     "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. Lista de especies forestales e híbiridos artificiales (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestal…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Carrasca_de_la_Raboseras.JPG?width=1280",
     "imageAttribution": "Picamaderos (CC BY-SA 3.0) · Wikimedia Commons",
@@ -24626,7 +24626,7 @@
       "family": "Fagaceae",
       "genus": "Quercus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_lusitanica_kz01.jpg?width=1280",
     "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
@@ -24657,7 +24657,7 @@
       "family": "Fagaceae",
       "genus": "Quercus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Carrasca_de_la_Raboseras.JPG?width=1280",
     "imageAttribution": "Picamaderos (CC BY-SA 3.0) · Wikimedia Commons",
@@ -25135,7 +25135,7 @@
       "family": "Rhamnaceae",
       "genus": "Rhamnus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_alaternus1627.JPG?width=1280",
     "imageAttribution": "tato grasso (CC BY-SA 2.5) · Wikimedia Commons",
@@ -25283,7 +25283,7 @@
       "family": "Rhinolophidae",
       "genus": "Rhinolophus"
     },
-    "iucnGlobal": "NT (Casi amenazado) (evaluación UICN 2016)",
+    "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rhinolophus_euryale-cropped.jpg?width=1280",
     "imageAttribution": "Carlosblh (CC BY 3.0) · Wikimedia Commons",
@@ -25316,7 +25316,7 @@
       "family": "Rhinolophidae",
       "genus": "Rhinolophus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Rhinolophe_2.jpg?width=1280",
     "imageAttribution": "Marie Jullion (CC BY-SA 3.0) · Wikimedia Commons",
@@ -25349,7 +25349,7 @@
       "family": "Rhinolophidae",
       "genus": "Rhinolophus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kleine_Hufeisennase.jpg?width=1280",
     "imageAttribution": "F. C. Robiller / naturlichter.de (CC BY-SA 3.0) · Wikimedia Commons",
@@ -25382,7 +25382,7 @@
       "family": "Rhinolophidae",
       "genus": "Rhinolophus"
     },
-    "iucnGlobal": "VU (Vulnerable) (evaluación UICN 2016)",
+    "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rhinolophus_mehelyi-cropped.jpg?width=1280",
     "imageAttribution": "F. C. Robiller / naturlichter.de (CC BY-SA 3.0) · Wikimedia Commons",
@@ -25533,7 +25533,7 @@
       "family": "Lamiaceae",
       "genus": "Rosmarinus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie muy común)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rosemary_in_bloom.JPG?width=1280",
     "imageAttribution": "Margalob (CC BY-SA 4.0) · Wikimedia Commons",
@@ -25943,7 +25943,7 @@
       "family": "Salicaceae",
       "genus": "Salix"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2010)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2010)",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Salix_pedicellata_Habitus_2009-9-27_CampoCalatrava.jpg?width=1280",
     "imageAttribution": "javier martin (Public domain) · Wikimedia Commons",
@@ -26003,7 +26003,7 @@
       "family": "Amaranthaceae",
       "genus": "Salsola"
     },
-    "iucnGlobal": "NE",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en el LESRPE; endemismo ibérico del sureste árido",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/474144349/original.jpeg",
     "imageAttribution": "Gabriel Dixon (CC0) · GBIF",
@@ -26034,7 +26034,7 @@
       "family": "Amaranthaceae",
       "genus": "Salsola"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común litoral)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Salsola_kali_habito.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
@@ -26097,7 +26097,7 @@
       "family": "Amaranthaceae",
       "genus": "Salsola"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Salsola_papillosa1160031.jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
@@ -26427,7 +26427,7 @@
       "family": "Muscicapidae",
       "genus": "Saxicola"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Saxicola_rubetra_poklaskwa_AM.jpg?width=1280",
     "imageAttribution": "Artur Mikołajewski (CC BY 2.5) · Wikimedia Commons",
@@ -26492,7 +26492,7 @@
       "family": "Saxifragaceae",
       "genus": "Saxifraga"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/111644731/original.jpeg",
     "imageAttribution": "faluke (CC BY-NC 4.0) · GBIF/iNaturalist",
@@ -26726,7 +26726,7 @@
       "family": "Sciuridae",
       "genus": "Sciurus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2023)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2023)",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eichh%C3%B6rnchen_D%C3%BCsseldorf_Hofgarten_edit.jpg?width=1280",
     "imageAttribution": "Ray eye (CC BY-SA 2.0 de) · Wikimedia Commons",
@@ -26966,7 +26966,7 @@
       "family": "Crassulaceae",
       "genus": "Sedum"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sedum_album.jpg?width=1280",
     "imageAttribution": "Franz Xaver (CC BY-SA 3.0) · Wikimedia Commons",
@@ -26998,7 +26998,7 @@
       "family": "Crassulaceae",
       "genus": "Sedum"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sedum_dasyphyllum_(1)_6.jpg?width=1280",
     "imageAttribution": "Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons",
@@ -27030,7 +27030,7 @@
       "family": "Crassulaceae",
       "genus": "Sedum"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sedum_gypsicola_kz01.jpg?width=1280",
     "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
@@ -27121,7 +27121,7 @@
       "family": "Asteraceae",
       "genus": "Senecio"
     },
-    "iucnGlobal": "NE",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Senecio_flavus_1.jpg?width=1280",
     "imageAttribution": "Gideon Pisanty (Gidip) גדעון פיזנטי (CC BY 3.0) · Wikimedia Commons",
@@ -27329,7 +27329,7 @@
       "family": "Lamiaceae",
       "genus": "Sideritis"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": null,
     "imageAttribution": null,
@@ -27420,7 +27420,7 @@
       "family": "Lamiaceae",
       "genus": "Sideritis"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2014)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2014)",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alb-S.leucantha-13.jpg?width=1280",
     "imageAttribution": "Philmarin (CC BY-SA 4.0) · Wikimedia Commons",
@@ -27598,7 +27598,7 @@
       "family": "Caryophyllaceae",
       "genus": "Silene"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Silene_mellifera_Enfoque_2012-05-27_Robledillo_SierraMadrona.jpg?width=1280",
     "imageAttribution": "Javier martin (CC BY-SA 3.0) · Wikimedia Commons",
@@ -27630,7 +27630,7 @@
       "family": "Caryophyllaceae",
       "genus": "Silene"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Silene_ramosissima_2.jpg?width=1280",
     "imageAttribution": "bymamo (CC BY-SA 4.0) · Wikimedia Commons",
@@ -28256,7 +28256,7 @@
       "family": "Lamiaceae",
       "genus": "Stachys"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stachys_circinata.JPG?width=1280",
     "imageAttribution": "Xemenendura (CC BY-SA 3.0) · Wikimedia Commons",
@@ -28474,7 +28474,7 @@
       "family": "Laridae",
       "genus": "Sternula"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Little_Tern_6820C.jpg?width=1280",
     "imageAttribution": "Little_Tern_6820.jpg: Alnus derivative work: Osado (CC BY-SA 3.0) · Wikimedia Commons",
@@ -28565,7 +28565,7 @@
       "family": "Poaceae",
       "genus": "Stipellula"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stipa_capensis.JPG?width=1280",
     "imageAttribution": "Juanmadro (CC BY-SA 3.0) · Wikimedia Commons",
@@ -28593,11 +28593,11 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Columbiformes",
+      "family": "Columbidae",
       "genus": "Streptopelia"
     },
-    "iucnGlobal": "VU (Vulnerable)",
+    "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "No incluida en el LESRPE; Directiva Aves 2009/147/CE, Anexo II (especie cinegética); Reglamento CITES, Anexo A",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Streptopelia_turtur_Grlica0036.jpg?width=1280",
     "imageAttribution": "Zrno at Serbian Wikipedia (Public domain) · Wikimedia Commons",
@@ -28809,7 +28809,7 @@
       "family": "Amaranthaceae",
       "genus": "Suaeda"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Suaeda_vera.JPG?width=1280",
     "imageAttribution": "Xemenendura (CC BY-SA 4.0) · Wikimedia Commons",
@@ -28900,7 +28900,7 @@
       "family": "Suidae",
       "genus": "Sus"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "No catalogada (especie cinegética común)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eberswalde_Zoo_12-2017_img2.jpg?width=1280",
     "imageAttribution": "A.Savin (FAL) · Wikimedia Commons",
@@ -28989,11 +28989,11 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Podicipediformes",
+      "family": "Podicipedidae",
       "genus": "Tachybaptus"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Zwergtaucher_060319_3.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
@@ -29116,7 +29116,7 @@
       "family": "Tamaricaceae",
       "genus": "Tamarix"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tamarix_africana.jpg?width=1280",
     "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
@@ -29148,7 +29148,7 @@
       "family": "Tamaricaceae",
       "genus": "Tamarix"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "No incluida en el LESRPE; formador de galerías termomediterráneas (HIC 92D0)",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/621745664/original.jpg",
     "imageAttribution": "melendrete (CC BY-NC 4.0) · GBIF",
@@ -29180,7 +29180,7 @@
       "family": "Tamaricaceae",
       "genus": "Tamarix"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "No incluida en el LESRPE; formador de galerías termomediterráneas (HIC 92D0)",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/619019413/original.jpg",
     "imageAttribution": "Christoph Moning (CC BY 4.0) · GBIF",
@@ -29244,7 +29244,7 @@
       "family": "Phyllodactylidae",
       "genus": "Tarentola"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "LESRPE (RD 139/2011)",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/605672084/original.jpg",
     "imageAttribution": "jrodben (CC BY-NC 4.0) · GBIF",
@@ -29277,7 +29277,7 @@
       "family": "Testudinidae",
       "genus": "Testudo"
     },
-    "iucnGlobal": "VU A1cd (evaluación IUCN de 1996; pendiente de reevaluación global reciente)",
+    "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 1996)",
     "spainStatus": "Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexos II y IV; Reglamento CITES (CE) 338/97, Anexo A",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nabeulensis_sarda.JPG?width=1280",
     "imageAttribution": "Gisella D. (CC BY-SA 3.0) · Wikimedia Commons",
@@ -29399,7 +29399,7 @@
       "family": "Lamiaceae",
       "genus": "Teucrium"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_capitatum2006.jpg?width=1280",
     "imageAttribution": "No machine-readable author provided. Víctor M. Vicente Selvas~commo… (Public domain) · Wikimedia Commons",
@@ -29578,7 +29578,7 @@
       "family": "Lamiaceae",
       "genus": "Teucrium"
     },
-    "iucnGlobal": "NE",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_freynii_kz01.jpg?width=1280",
     "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
@@ -29668,7 +29668,7 @@
       "family": "Lamiaceae",
       "genus": "Teucrium"
     },
-    "iucnGlobal": "NE",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_lanigerum_kz01.jpg?width=1280",
     "imageAttribution": "Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons",
@@ -29874,7 +29874,7 @@
       "family": "Lamiaceae",
       "genus": "Teucrium"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/627242096/original.jpg",
     "imageAttribution": "Finlay F. K. Thorpe (CC BY-NC 4.0) · GBIF/iNaturalist",
@@ -29902,11 +29902,11 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Charadriiformes",
+      "family": "Laridae",
       "genus": "Thalasseus"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/606127388/original.jpg",
     "imageAttribution": "Diego González Dopico (CC BY 4.0) · GBIF",
@@ -30145,7 +30145,7 @@
       "family": "Lamiaceae",
       "genus": "Thymus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/411356756/original.jpeg",
     "imageAttribution": "Maël Taupin (CC BY-NC 4.0) · GBIF/iNaturalist",
@@ -30207,7 +30207,7 @@
       "family": "Lamiaceae",
       "genus": "Thymus"
     },
-    "iucnGlobal": "NE",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Thymus_hyemalis_re.jpg?width=1280",
     "imageAttribution": "Retama (CC BY-SA 3.0) · Wikimedia Commons",
@@ -30239,7 +30239,7 @@
       "family": "Lamiaceae",
       "genus": "Thymus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Thymus_membranaceus_(3).jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
@@ -30330,7 +30330,7 @@
       "family": "Lamiaceae",
       "genus": "Thymus"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Thymus_zygis_1.JPG?width=1280",
     "imageAttribution": "Ximenex (CC BY-SA 2.1 es) · Wikimedia Commons",
@@ -30358,11 +30358,11 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Passeriformes",
+      "family": "Tichodromidae",
       "genus": "Tichodroma"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tichodroma_muraria02_cropped.jpg?width=1280",
     "imageAttribution": "derivative work: Hämbörger (talk) Tichodroma_muraria02.jpg: User:Kulac (CC BY-SA 3.0) · Wikimedia Commons",
@@ -30395,7 +30395,7 @@
       "family": "Lacertidae",
       "genus": "Timon"
     },
-    "iucnGlobal": "NT (Casi Amenazado, evaluación de 2009 por declive poblacional en parte de su área)",
+    "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)",
     "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jewelled_Lizard_(Timon_lepidus)_male_found_under_a_stone_by_Jean_NICOLAS_(14166347788).jpg?width=1280",
     "imageAttribution": "Bernard DUPONT from FRANCE (CC BY-SA 2.0) · Wikimedia Commons",
@@ -30575,7 +30575,7 @@
       "family": "Fabaceae",
       "genus": "Trifolium"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
     "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/601798690/original.jpg",
     "imageAttribution": "Miguel A. Casado (CC BY-NC 4.0) · GBIF/iNaturalist",
@@ -30814,7 +30814,7 @@
       "family": "Poaceae",
       "genus": "Tripidium"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2013)",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Saccharum_ravennae_-_J._C._Raulston_Arboretum_-_DSC06214.JPG?width=1280",
     "imageAttribution": "Daderot (Public domain) · Wikimedia Commons",
@@ -31054,7 +31054,7 @@
       "family": "Turdidae",
       "genus": "Turdus"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2019)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
     "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2015-04-20_Turdus_torquatus_torquatus_Cairngorm_3.jpg?width=1280",
     "imageAttribution": "MPF (CC BY-SA 3.0) · Wikimedia Commons",
@@ -31147,7 +31147,7 @@
       "family": "Fabaceae",
       "genus": "Ulex"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2017)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto, por el que se regula el Catálogo español de especies exóticas invasoras. BOE 185 de 3 de agosto de 2013)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ulex_europaeus.jpg?width=1280",
     "imageAttribution": "J.F. Gaffard Jeffdelonge at fr.wikipedia (CC BY-SA 3.0) · Wikimedia Commons",
@@ -31179,7 +31179,7 @@
       "family": "Ulmaceae",
       "genus": "Ulmus"
     },
-    "iucnGlobal": "DD (Datos insuficientes) (evaluación UICN 2017)",
+    "iucnGlobal": "DD — Datos insuficientes (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ulmus_glabra_horizontalis.jpg?width=1280",
     "imageAttribution": "Melburnian (CC BY 2.5) · Wikimedia Commons",
@@ -31210,7 +31210,7 @@
       "family": "Ulmaceae",
       "genus": "Ulmus"
     },
-    "iucnGlobal": "DD (Datos insuficientes) (evaluación UICN 2017)",
+    "iucnGlobal": "DD — Datos insuficientes (Lista Roja mundial de la UICN, 2017)",
     "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestal…)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Blismes_elm_2007.jpg?width=1280",
     "imageAttribution": "Eric Collin. Original uploader was Ptelea at en.wikipedia (GFDL) · Wikimedia Commons",
@@ -31296,11 +31296,11 @@
       "kingdom": "Animalia",
       "phylum": "Chordata",
       "class": "Aves",
-      "order": null,
-      "family": null,
+      "order": "Bucerotiformes",
+      "family": "Upupidae",
       "genus": "Upupa"
     },
-    "iucnGlobal": "LC (Preocupación menor)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)",
     "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wiedehopf_mit_Puppe_als_Futter.jpg?width=1280",
     "imageAttribution": "Sven Damerow (CC BY-SA 4.0) · Wikimedia Commons",
@@ -31537,7 +31537,7 @@
       "family": "Adoxaceae",
       "genus": "Viburnum"
     },
-    "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
     "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/T2_37_Viburnum_tinus_par_Pierre-Joseph_Redout%C3%A9.jpeg?width=1280",
     "imageAttribution": "Pierre-Joseph Redouté (Public domain) · Wikimedia Commons",
@@ -31715,7 +31715,7 @@
       "family": "Canidae",
       "genus": "Vulpes"
     },
-    "iucnGlobal": "LC",
+    "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
     "spainStatus": "No catalogada (especie cinegética común)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vulpes_vulpes_2.jpg?width=1280",
     "imageAttribution": "Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons",
@@ -31777,7 +31777,7 @@
       "family": "Solanaceae",
       "genus": "Withania"
     },
-    "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE; elemento iberoafricano de interés biogeográfico",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Withania_frutescens0176.jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",
@@ -31897,7 +31897,7 @@
       "family": "Rhamnaceae",
       "genus": "Ziziphus"
     },
-    "iucnGlobal": "NE (no evaluada a nivel global)",
+    "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
     "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ziziphus_lotus_20200928_191923.jpg?width=1280",
     "imageAttribution": "Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons",

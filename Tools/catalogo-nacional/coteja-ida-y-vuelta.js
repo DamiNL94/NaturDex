@@ -85,11 +85,8 @@ const ESPERADAS_FUERA = {
  * que se puede revisar.
  */
 const PERDIDAS_ACEPTADAS = {
-  gbifBboxSightings: '2026-08-27. Recuento de avistamientos en el BBOX del espacio, no dentro de sus ' +
-    'polígonos: es la métrica FLOJA de la que se pasó a `gbifOccurrences`. Lo llevan 188 fichas, todas ' +
-    'de Sierra Espuña (el piloto), NINGUNA herramienta lo escribe ya y NADIE lo lee —ni la app, ni la ' +
-    'API, ni el panel—: solo figura en la lista `LOCALES` de sync-species-catalog.js. Abrirle columna ' +
-    'sería consagrar una medida que nadie produce. Retirarlo del park.json es otra decisión y va aparte.',
+  // Hoy no hay ninguna. `gbifBboxSightings` estuvo aquí desde el 2026-08-27 y se retiró del
+  // park.json el 2026-09-14: ya no se pierde nada porque ya no existe el campo.
 };
 
 /** Claves que un fichero PHP emite: `"clave" => …` y `$props["clave"] = …`. */

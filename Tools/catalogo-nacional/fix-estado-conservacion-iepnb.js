@@ -13,6 +13,9 @@
  *
  * Es idempotente: si un valor ya está corregido, no lo vuelve a tocar.
  *
+ * 2026-09-14: retiradas las cuatro correcciones de `conservationStatus`. El campo ya no existe
+ * —ni en la ficha, ni en la app, ni en la BD— y dejarlas aquí lo habría vuelto a escribir.
+ *
  * Uso:
  *   node Tools/catalogo-nacional/fix-estado-conservacion-iepnb.js --dry    # solo informa
  *   node Tools/catalogo-nacional/fix-estado-conservacion-iepnb.js          # escribe
@@ -41,12 +44,10 @@ const CORRECCIONES = [
   // --- 2. Protección declarada que no existe (tres son especies cinegéticas) ---
   { de: 'Martes foina', eidos: 11289,
     spain: 'No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas',
-    cs: 'No catalogada',
     review: 'El IEPNB no registra figura estatal ni regional para esta especie. La categoría regional que figuraba procede del PORN y no se ha podido confirmar en la Ley 7/1995.',
     motivo: 'se le atribuía LESRPE sin estarlo' },
   { de: 'Alectoris rufa', eidos: 12114,
     spain: 'No incluida en el LESRPE; Directiva Aves 2009/147/CE, Anexos II y III (especie cinegética)',
-    cs: 'No catalogada',
     review: 'El IEPNB no registra figura regional para esta especie. La categoría que figuraba procede del PORN y no se ha podido confirmar en la Ley 7/1995.',
     motivo: 'se le atribuía LESRPE siendo especie cinegética' },
   { de: 'Meles meles', eidos: 11709,
@@ -62,7 +63,7 @@ const CORRECCIONES = [
   { de: 'Charadrius alexandrinus', eidos: 10664,
     spain: 'Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; LESRPE (RD 139/2011); Ley 42/2007, Anexo IV',
     murcia: CAT_MU + ': De interés especial',
-    cs: 'Vulnerable', review: null,
+    review: null,
     motivo: 'es CEEA Vulnerable y solo constaba «LESRPE»' },
   { de: 'Larus audouinii', eidos: 14053,
     spain: 'Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; Ley 42/2007, Anexo IV',
@@ -89,7 +90,7 @@ const CORRECCIONES = [
     murcia: CAT_MU + ': De interés especial',
     // La UICN sí la evalúa: assessment 22705916, categoría LC. El código lo da la pasarela
     // v_listapatronespecie_codigos del IEPNB («Código UICN»), junto al código Red Natura A346.
-    cs: 'LC', iucn: 'LC (Preocupación menor)',
+    iucn: 'LC (Preocupación menor)',
     motivo: 'el eidosTaxonId 12063 no existe en la Lista Patrón; el correcto es 12065. Constaba como no evaluada y la UICN la clasifica LC' },
   { de: 'Saxicola torquatus', a: 'Saxicola rubicola', eidos: 16387,
     spain: 'LESRPE (RD 139/2011)',
@@ -101,8 +102,7 @@ const CORRECCIONES = [
 
   // --- 6. Falsos «no evaluada» en la Lista Roja mundial de la UICN ---------------------------
   // El «Código UICN» de v_listapatronespecie_codigos demuestra que existe assessment; la categoría
-  // se leyó de iucnredlist.org (2026-07-25). NO se toca `conservationStatus`: en flora ese campo
-  // refleja el estado LEGAL (Decreto 50/2003), no la evaluación de la UICN.
+  // se leyó de iucnredlist.org (2026-07-25).
   { de: 'Allium melananthum',    iucn: 'NT (Casi amenazado)',      motivo: 'constaba «NE» y la UICN la evalúa NT · assessment 172167' },
   { de: 'Stipa tenacissima',     iucn: 'VU (Vulnerable)',          motivo: 'constaba «no evaluada» y la UICN la evalúa VU, con tendencia decreciente · assessment 57471077' },
   { de: 'Salsola papillosa',     iucn: 'LC (Preocupación menor)',  motivo: 'constaba «NE» · assessment 103535407' },
@@ -166,7 +166,6 @@ function aplicarPark(cambios) {
     if (c.spain) sp.spainStatus = c.spain;
     if (c.spainAppend) sp.spainStatus = anexar(sp.spainStatus, c.spainAppend);
     if (c.murcia) sp.regionalStatus = c.murcia;   // campo renombrado el 2026-08-27 (deuda nº 2)
-    if (c.cs) sp.conservationStatus = c.cs;
     if (c.iucn) sp.iucnGlobal = c.iucn;
     if ('review' in c) { if (c.review === null) delete sp.reviewNote; else sp.reviewNote = c.review; }
     sp.source = conFuente(sp.source);
@@ -214,7 +213,6 @@ function aplicarSeed(cambios) {
         if (act !== undefined) l = sustituirCampo(l, 'spain_status', anexar(act.replace(/''/g, "'"), c.spainAppend));
       }
       if (c.murcia) l = sustituirCampo(l, 'regional_status', c.murcia);
-      if (c.cs) l = sustituirCampo(l, 'conservation_status', c.cs);
       if (c.iucn) l = sustituirCampo(l, 'iucn_global', c.iucn);
       if ('review' in c) l = sustituirCampo(l, 'review_note', c.review);
       if (c.genero) l = sustituirCampo(l, 'taxon_genus', c.genero);

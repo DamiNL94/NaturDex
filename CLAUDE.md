@@ -312,6 +312,7 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 | Tocar la API | [`Backend/CLAUDE.md`](Backend/CLAUDE.md) |
 | Escribir o usar una herramienta | [`Tools/CLAUDE.md`](Tools/CLAUDE.md) — **mira `Tools/lib/` antes de escribir nada nuevo** |
 | Tocar SQL | [`Database/CLAUDE.md`](Database/CLAUDE.md) — qué fichero es fuente y cuál es generado |
+| Llevar a la base lo corregido en el repo | [`Docs/runbook/APLICAR-A-RAILWAY.md`](Docs/runbook/APLICAR-A-RAILWAY.md) — las dos vías, el orden, la cola pendiente y qué mirar antes de pulsar |
 | Tocar avistamientos, ocurrencias o su exportación | [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md) — término a término, qué se generaliza y por qué |
 | Elegir el siguiente trabajo | [`Docs/DEUDA-TECNICA.md`](Docs/DEUDA-TECNICA.md), por orden de rentabilidad |
 | Recordar un comando | [`Docs/COMANDOS.md`](Docs/COMANDOS.md) |

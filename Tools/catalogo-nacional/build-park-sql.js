@@ -222,7 +222,7 @@ L.push('    image_note = VALUES(image_note);');
 
 // 3) Especies --------------------------------------------------------------------------------------
 seccion(`3. Especies (${species.length}). \`identification_tips\` va como texto separado por «; », que es como lo parte park_payload.php.`);
-const COLS_S = ['common_name', 'scientific_name', 'kingdom', 'family', 'primary_habitat', 'conservation_status', 'description', 'description_source', 'identification_tips', 'seasonality', 'image_url', 'image_attribution', 'latitude', 'longitude', 'rarity_score', 'rarity_basis', 'rarity_local', 'rarity_local_basis', 'is_featured', 'is_visible', 'hidden_reason', 'source', 'taxon_phylum', 'taxon_class', 'taxon_order', 'taxon_family', 'taxon_genus', 'iucn_global', 'iucn_spain', 'spain_status', 'regional_status', 'regional_ccaa', 'review_note', 'eidos_taxonid', 'gbif_species_key', 'gbif_occurrences', 'zepa_site_code', 'is_migratory', 'site_presence'];
+const COLS_S = ['common_name', 'scientific_name', 'kingdom', 'family', 'primary_habitat', 'description', 'description_source', 'identification_tips', 'seasonality', 'image_url', 'image_attribution', 'latitude', 'longitude', 'rarity_score', 'rarity_basis', 'rarity_local', 'rarity_local_basis', 'is_featured', 'is_visible', 'hidden_reason', 'source', 'taxon_phylum', 'taxon_class', 'taxon_order', 'taxon_family', 'taxon_genus', 'iucn_global', 'iucn_spain', 'spain_status', 'regional_status', 'regional_ccaa', 'review_note', 'eidos_taxonid', 'gbif_species_key', 'gbif_occurrences', 'zepa_site_code', 'is_migratory', 'site_presence'];
 // Los dos `*_basis` son columnas JSON y se escriben con `sqlJson` de lib/sql (ya lo usan los
 // hábitats): así vuelven del viaje siendo el mismo objeto que hay en el park.json, en vez de una
 // cadena. `park_payload.php` los decodifica al otro lado.
@@ -233,7 +233,7 @@ species.forEach((s, i) => {
   const t = s.taxonomy || {};
   const v = [
     sqlStr(s.commonName), sqlStr(s.scientificName), sqlStr(s.kingdom),
-    sqlStrOrNull(s.group), sqlStrOrNull(s.habitat), sqlStrOrNull(s.conservationStatus),
+    sqlStrOrNull(s.group), sqlStrOrNull(s.habitat),
     sqlStrOrNull(s.description), sqlStrOrNull(s.descriptionSource),
     sqlStrOrNull((s.tips || []).join('; ')), sqlStrOrNull(s.seasonality),
     sqlStrOrNull(s.image), sqlStrOrNull(s.imageAttribution),

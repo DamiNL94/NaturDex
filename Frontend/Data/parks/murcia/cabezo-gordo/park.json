@@ -203,7 +203,6 @@
       "kingdom": "flora",
       "group": "Arbusto",
       "habitat": "Matorral cálido, laderas soleadas y barrancos de clima muy seco",
-      "conservationStatus": "Vulnerable",
       "description": "Arbusto de hojas estrechas y coriáceas y flores pequeñas con cinco pétalos de un pardo verdoso y aspecto aterciopelado. Sus frutos son dos vainas largas y curvas dispuestas en forma de cuerno, de donde le viene el nombre popular de cornical. Suelta látex al romperse.",
       "descriptionSource": null,
       "tips": [
@@ -237,7 +236,7 @@
         "family": "Apocynaceae",
         "genus": "Periploca"
       },
-      "iucnGlobal": "NE (no evaluada a nivel global)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
       "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
@@ -260,7 +259,6 @@
       "kingdom": "flora",
       "group": "Helecho",
       "habitat": "Grietas de roquedos secos y soleados, paredones y pedregales",
-      "conservationStatus": "No catalogada",
       "description": "Helecho pequeño cubierto por completo de una densa lana parda que le da aspecto afieltrado y le permite sobrevivir en roca seca y al sol. En sequía se enrolla sobre sí mismo hasta parecer muerto, y se despliega en cuanto llueve.",
       "descriptionSource": null,
       "tips": [
@@ -294,7 +292,7 @@
         "family": "Pteridaceae",
         "genus": "Cosentinia"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección nacional específica registrada en EIDOS",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -317,7 +315,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Tomillares y matorral raso sobre suelos calizos y margosos secos",
-      "conservationStatus": "Vulnerable",
       "description": "Jarilla pequeña de hojas estrechas y grisáceas con el borde enrollado, que se cubre en primavera de flores amarillas efímeras. Como en todas las jarillas, los pétalos apenas duran una mañana y se renuevan cada día.",
       "descriptionSource": null,
       "tips": [
@@ -347,7 +344,7 @@
         "family": "Cistaceae",
         "genus": "Helianthemum"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "UICN España: EN (En peligro) (2010)",
       "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
@@ -371,7 +368,6 @@
       "kingdom": "flora",
       "group": null,
       "habitat": null,
-      "conservationStatus": "No catalogada",
       "description": null,
       "descriptionSource": null,
       "tips": [],
@@ -425,7 +421,6 @@
       "kingdom": "fauna",
       "group": "Reptil",
       "habitat": "Matorral litoral y laderas secas",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Lagartija esbelta de escamas grandes, quilladas y brillantes, con dos líneas claras muy marcadas a cada lado del dorso. La cola puede medir el doble que el cuerpo. Los machos lucen en primavera manchas azules en el hombro y las mejillas anaranjadas.",
       "descriptionSource": null,
       "tips": [
@@ -459,7 +454,7 @@
         "family": "Lacertidae",
         "genus": "Psammodromus"
       },
-      "iucnGlobal": "LC",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -483,7 +478,6 @@
       "kingdom": "flora",
       "group": "Mata",
       "habitat": "Vive en matorrales y tomillares sobre sustratos básicos, hasta 1000 m",
-      "conservationStatus": "Interés especial",
       "description": "Sufrútice de 17-42 cm, tallos con pelos muy abundantes, cortos dirigidos hacia abajo y y largos más o menos perpendiculares o dirigidos hacia arriba cubriéndolos totalmente; hojas de 8-17 x 1-6 mm, lanceoladas, mucronadas, con uno a tres dientes a cada lado, con pelos largos; inflorescencia en verticilastros con seis flores cada uno, brácteas de 4-15 x 8-10 mm, ovadas, anchas, con seis o siete dientes a cada lado, muy pelosas; cáliz de 6-8,5 mm, con cinco dientes de 2-3,5 mm; corola de 8-9 mm, de color blanco o crema.",
       "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
       "tips": [],
@@ -537,7 +531,6 @@
       "kingdom": "flora",
       "group": null,
       "habitat": null,
-      "conservationStatus": "No catalogada",
       "description": null,
       "descriptionSource": null,
       "tips": [],
@@ -591,7 +584,6 @@
       "kingdom": "flora",
       "group": null,
       "habitat": null,
-      "conservationStatus": "Interés especial",
       "description": null,
       "descriptionSource": null,
       "tips": [],
@@ -641,7 +633,6 @@
       "kingdom": "fauna",
       "group": "Mamífero",
       "habitat": "Matorral termomediterráneo semiárido",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Erizo de orejas grandes y color claro, propio del matorral árido del sureste ibérico; nocturno e insectívoro, se refugia bajo la vegetación densa.",
       "descriptionSource": null,
       "tips": [
@@ -675,7 +666,7 @@
         "family": "Erinaceidae",
         "genus": "Atelerix"
       },
-      "iucnGlobal": "LC",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -695,7 +686,6 @@
       "kingdom": "fauna",
       "group": "Reptil",
       "habitat": null,
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Reptiles estrictamente adaptados a la vida subterránea, especializados en cavar túneles y en la localización de presas bajo tierra. Cuerpo cilíndrico y alargado cubierto de escamas cuadrangulares que se alinean en forma de anillos. Segmentos dorsales entre 14 y 18 y ventrales entre 14 y 20. No presenta extremidades. Cabeza de pequeño tamaño, poco diferenciada del cuerpo, con el hocico redondeado. La visión es vestigial mientras que el olfato y el oído están desarrollados. Cola muy corta, Presenta poros precloacales. Coloración de fondo variable entre violácea y marrón. Sin dimorfismo sexual. Los machos alcanzan una longitud de cabeza y cuerpo de 254 mm y las hembras de 235 mm.",
       "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
       "tips": [],
@@ -745,7 +735,6 @@
       "kingdom": "fauna",
       "group": "Anfibio",
       "habitat": null,
-      "conservationStatus": "No catalogada",
       "description": null,
       "descriptionSource": null,
       "tips": [],
@@ -796,7 +785,6 @@
       "kingdom": "flora",
       "group": "Planta suculenta",
       "habitat": "Matorral halonitrófilo costero",
-      "conservationStatus": "NE",
       "description": "Suculenta de aspecto cactiforme, con tallos carnosos de cuatro caras y dientes blandos, sin espinas verdaderas. Sus flores, en corona, son de un pardo amarillento jaspeado y desprenden olor a carroña para atraer moscas, que son sus polinizadoras.",
       "descriptionSource": null,
       "tips": [
@@ -830,7 +818,7 @@
         "family": "Apocynaceae",
         "genus": "Caralluma"
       },
-      "iucnGlobal": "NE (no evaluada a nivel global; distribución principal fuera de Europa, en el norte de África)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Lista Roja de la Flora Vascular Española 2008: EN (En Peligro), criterio B1ab(i,iii,iv,v)c(ii,iii,iv)+2ab(i,iii,iv,v)c(ii,iii,iv)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -849,7 +837,6 @@
       "kingdom": "flora",
       "group": "Hierba",
       "habitat": "Roquedos y fisuras calcáreas costeras",
-      "conservationStatus": "Vulnerable",
       "description": "Compuesta rupícola que crece colgando de las fisuras de los cantiles calizos, con hojas divididas y algo carnosas y capítulos amarillos rodeados de brácteas con apéndices espinosos. Es un endemismo del sureste ibérico ligado a paredes de roca costeras y de interior.",
       "descriptionSource": null,
       "tips": [
@@ -883,7 +870,7 @@
         "family": "Asteraceae",
         "genus": "Centaurea"
       },
-      "iucnGlobal": "NE",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
@@ -904,7 +891,6 @@
       "kingdom": "flora",
       "group": "Palmera",
       "habitat": "Matorral cálido, laderas soleadas y acantilados del piso termomediterráneo",
-      "conservationStatus": "Interés especial",
       "description": "La única palmera silvestre de Europa continental. Suele crecer en mata, con varios troncos cortos, aunque con los años puede levantar un tronco único. Sus hojas son abanicos rígidos con pecíolos muy espinosos. Del cogollo se sacaba el «palmito», y de las hojas, cordelería y escobas.",
       "descriptionSource": null,
       "tips": [
@@ -938,7 +924,7 @@
         "family": "Arecaceae",
         "genus": "Chamaerops"
       },
-      "iucnGlobal": "LC (Preocupación menor)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
@@ -957,7 +943,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": null,
-      "conservationStatus": "Interés especial",
       "description": "El rasgo más llamativo del cuervo es, sin duda, su colosal tamaño, que lo convierte en el representante más voluminoso del orden de los paseriformes. Dentro de su anatomía destaca sobre todo el pico, notablemente largo, robusto y grueso. Por lo demás, luce un plumaje homogéneamente negro, con algunos brillos metálicos. El vuelo de este enorme pájaro es lento y suele intercalar aleteos con largos planeos, que el ave ejecuta gracias a sus largas alas apuntadas y a su cola en forma de cuña.",
       "descriptionSource": null,
       "tips": [],
@@ -1007,7 +992,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": "Linderos con arbustos y malezas espesas,cultivos, bosquetes, praderas y claros con setos de matorral",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Curruca de mediano tamaño, de cola relativamente larga y con rectrices externas blancas. El macho presenta el dorso de color pardo, con la cabeza gris en plumaje de cría y parda durante el resto del año, las alas pardo-rojizas, la garganta blanca, y las partes inferiores blanquecinas y con tonos rosados. La hembra muestra tonalidades más apagadas, con la cabeza y el dorso más pardos, la garganta blanquecina y más apagada, y la zona ventral también blanquecina y sin los tonos ligeramente asalmonados del macho. Ambos sexos tienen las patas claras. Los adultos lucen un iris rojizo, que contrasta con un tenue anillo orbital claro.",
       "descriptionSource": null,
       "tips": [],
@@ -1057,7 +1041,6 @@
       "kingdom": "fauna",
       "group": "Ave acuática",
       "habitat": "Marismas, salinas, ramblas con agua, arrozales y orillas costeras",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Garza blanca y esbelta, de tamaño medio, con el pico negro y las patas negras rematadas en unos pies amarillos llamativos. Pesca removiendo el fondo con esas patas para levantar peces y camarones. En época de cría luce dos plumas largas y finas en la nuca.",
       "descriptionSource": null,
       "tips": [
@@ -1087,11 +1070,11 @@
         "kingdom": "Animalia",
         "phylum": "Chordata",
         "class": "Aves",
-        "order": null,
-        "family": null,
+        "order": "Pelecaniformes",
+        "family": "Ardeidae",
         "genus": "Egretta"
       },
-      "iucnGlobal": "LC (Preocupación menor)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -1111,7 +1094,6 @@
       "kingdom": "fauna",
       "group": "Roedor",
       "habitat": "Es una especie generalista, capaz de vivir en numerosos hábitats terrestres y arbóreos",
-      "conservationStatus": "NT",
       "description": "Debe su nombre a una franja de pelo negro que, como un antifaz, le enmarca los ojos y le cubre parte de la cara. Su aspecto es inconfundible, aunque sus hábitos trepadores y su color rojizo pueden asemejarle al lirón gris Glis glis, o a la ardilla roja Sciurus vulgaris. Los adultos presentan el dorso pardo- rojizo y el vientre blanco. La cola es larga y está cubierta de pelos, con un llamativo pincel de pelo largo blanco y negro en el extremo. Hocico alargado y orejas grandes. No presentan dimorfismo sexual. Las hembras presentan cuatro pares de mamas: uno pectoral, otro abdominal y dos pares inguinales. Medidas corporales, CC: 118,0-136,0 mm; C: 98,5-113,0 mm; P: 26,5-28,5 mm; Ps: 45,0-120,0 g. Se producen variaciones estacionales en el peso debido al carácter hibernante de la especie. El cráneo es de aspecto macizo y de perfil dorsal convexo. La caja craneana es cuadrada, el rostro largo, los huesos nasales muy estrechos en la parte posterior y los arcos zigomáticos amplios. Las bullas timpánicas presentan gran desarrollo, carácter típico de las especies de roedores de climas desérticos, con densidades de población escasas. Fórmula dentaria: 1.0.1.3/1.0.1.3. Es el único roedor español cuya mandíbula presenta un orificio natural en la apófisis angular, lo que facilita su identificación en los análisis de egagrópilas, excrementos, etc. Número de cromosomas (2n) = 46-52.",
       "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
       "tips": [],
@@ -1161,7 +1143,6 @@
       "kingdom": "fauna",
       "group": "Anfibio",
       "habitat": "Ramblas y zonas húmedas estacionales",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Sapo de patas cortas que corre en vez de saltar, con una línea amarilla nítida a lo largo del centro del lomo. Se reproduce en charcas efímeras que se llenan con las lluvias, y los machos forman coros de un canto vibrante y estridente que se oye a kilómetros.",
       "descriptionSource": null,
       "tips": [
@@ -1195,7 +1176,7 @@
         "family": "Bufonidae",
         "genus": "Epidalea"
       },
-      "iucnGlobal": "LC",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)",
       "spainStatus": "LESRPE; Directiva Hábitats 92/43/CEE, Anexo IV",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -1215,7 +1196,6 @@
       "kingdom": "fauna",
       "group": "Murciélago",
       "habitat": null,
-      "conservationStatus": "Protegida (LESRPE)",
       "description": null,
       "descriptionSource": null,
       "tips": [],
@@ -1265,7 +1245,6 @@
       "kingdom": "fauna",
       "group": "Ave esteparia",
       "habitat": "Llanos cerealistas, pastizales y estepas de suelo profundo",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "La mayor de las alondras ibéricas, robusta y de pico grueso, con una mancha negra muy marcada a cada lado del cuello. Canta en vuelo, describiendo círculos altos con un torrente de notas en el que imita a otras aves. En invierno forma bandos numerosos en los llanos.",
       "descriptionSource": null,
       "tips": [
@@ -1295,11 +1274,11 @@
         "kingdom": "Animalia",
         "phylum": "Chordata",
         "class": "Aves",
-        "order": null,
-        "family": null,
+        "order": "Passeriformes",
+        "family": "Alaudidae",
         "genus": "Melanocorypha"
       },
-      "iucnGlobal": "LC (Preocupación menor)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -1319,7 +1298,6 @@
       "kingdom": "fauna",
       "group": "Murciélago",
       "habitat": "Cuevas y minas; caza en vuelo alto sobre bosque, campo y láminas de agua",
-      "conservationStatus": "Vulnerable",
       "description": "Murciélago de alas largas y estrechas y vuelo rápido y alto, casi como el de un vencejo. Tiene la frente muy abombada y el pelo corto y erizado en la cabeza. Recorre decenas de kilómetros entre las cuevas de cría, de tránsito y de invernada.",
       "descriptionSource": null,
       "tips": [
@@ -1353,7 +1331,7 @@
         "family": "Miniopteridae",
         "genus": "Miniopterus"
       },
-      "iucnGlobal": "VU (Vulnerable) (evaluación UICN 2023)",
+      "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2023)",
       "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -1373,7 +1351,6 @@
       "kingdom": "fauna",
       "group": "Mamífero carnívoro",
       "habitat": null,
-      "conservationStatus": "LC",
       "description": "Es el mustélido más pequeño, de cuerpo y cabeza alargados y extremidades cortas. Cola corta, aproximadamente el 30% del cuerpo. Pelaje de color pardo canela a pardo chocolate en la parte dorsal, y blanco en la ventral, con el límite entre coloraciones recto o sinuoso según las formas descritas. Los pies, con 5 dedos, pueden ser blancos o con la coloración dorsal. En la cara presentan con frecuencia pecas rictales. Acusado dimorfismo sexual en la longitud corporal (los machos son un 10-20% más largos que las hembras). La longitud también varía a lo largo de su distribución. Medidas corporales de ejemplares adultos de la Península Ibérica, CC:175-250 mm (machos), 165-190 mm (hembras); C: 50-85 mm (machos), 40-55 mm (hembras); P: 27-37 mm (machos), 23-27 mm (hembras); Ps: 90-223 g (machos), 49-80 g (hembras). Fórmula dentaria 3.1.3.1/3.1.3.2. Número de cromosomas (2n) = 42. Las hembras presentan cuatro pares de mamas. Podría confundirse con el armiño en librea estival, aunque no posee el tercio apical negro en la cola, ni presenta en estas latitudes librea blanca invernal.",
       "descriptionSource": null,
       "tips": [],
@@ -1423,7 +1400,6 @@
       "kingdom": "fauna",
       "group": "Murciélago",
       "habitat": "Cuevas próximas a ríos y balsas; caza rozando la lámina de agua",
-      "conservationStatus": "Vulnerable",
       "description": "Murciélago ligado al agua: caza volando a pocos centímetros de la superficie de ríos y balsas y captura insectos —e incluso pececillos— con sus pies desproporcionadamente grandes y peludos. Esa dependencia del agua limpia lo hace muy vulnerable.",
       "descriptionSource": null,
       "tips": [
@@ -1457,7 +1433,7 @@
         "family": "Vespertilionidae",
         "genus": "Myotis"
       },
-      "iucnGlobal": "VU (Vulnerable) (evaluación UICN 2016)",
+      "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "Anexo II (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Anexo V (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); UICN España: EN (En peligro) (2007)",
       "regionalStatus": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
       "regionalCcaa": "Región de Murcia",
@@ -1477,7 +1453,6 @@
       "kingdom": "fauna",
       "group": "Murciélago",
       "habitat": "Cuevas y desvanes; caza escarabajos en pastos, claros y bosque sin sotobosque",
-      "conservationStatus": "Interés especial",
       "description": "Uno de los murciélagos más grandes de Europa, con orejas largas y anchas y hocico de aspecto perruno. Caza cerca del suelo, capturando escarabajos que localiza por el ruido que hacen al andar, no solo con el sonar. Cría en colonias numerosas en cuevas y bajo cubiertas.",
       "descriptionSource": null,
       "tips": [
@@ -1511,7 +1486,7 @@
         "family": "Vespertilionidae",
         "genus": "Myotis"
       },
-      "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
       "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
       "regionalCcaa": "Región de Murcia",
@@ -1531,7 +1506,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": "Laderas secas y pedregosas con matorral bajo y suelo desnudo",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Collalba pequeña y contrastada: el macho es color arena claro con las alas negras y un antifaz o una garganta negros según la variedad. Como todas las collalbas, enseña al volar una cola blanca con una «T» negra invertida. Caza insectos lanzándose al suelo desde una piedra o una mata.",
       "descriptionSource": null,
       "tips": [
@@ -1561,11 +1535,11 @@
         "kingdom": "Animalia",
         "phylum": "Chordata",
         "class": "Aves",
-        "order": null,
-        "family": null,
+        "order": "Passeriformes",
+        "family": "Muscicapidae",
         "genus": "Oenanthe"
       },
-      "iucnGlobal": "LC (Preocupación menor)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -1585,7 +1559,6 @@
       "kingdom": "flora",
       "group": "Arbusto",
       "habitat": "Matorral alto, sabinares y laderas secas sobre suelo pedregoso",
-      "conservationStatus": "Interés especial",
       "description": "Arbusto de ramas verdes y erguidas con hojas estrechas y coriáceas. Es hemiparásito: fabrica su propio alimento pero además conecta sus raíces a las de otras plantas para robarles agua y sales. Sus frutos son bayas rojas o anaranjadas muy vistosas.",
       "descriptionSource": null,
       "tips": [
@@ -1619,7 +1592,7 @@
         "family": "Santalaceae",
         "genus": "Osyris"
       },
-      "iucnGlobal": "LC (Preocupación menor)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
@@ -1638,7 +1611,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": null,
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Se trata de una especie fácilmente reconocible por el color amarillo de su cuerpo, que contrasta con el azul de las alas y la cola. La cabeza es de color negro-azabache y con las mejillas muy blancas, salvo en los jóvenes del año, algo amarillenta. Los machos se distinguen de las hembras por poseer una conspicua banda negra que recorre su cuerpo desde la garganta hasta la base de la cola. Las hembras, en cambio, tienen muy poco marcada dicha banda, que se desdibuja en el vientre.",
       "descriptionSource": null,
       "tips": [],
@@ -1688,7 +1660,6 @@
       "kingdom": "fauna",
       "group": "Murciélago",
       "habitat": "Quiróptero de hábitos fisurícolas",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Es uno de los Quirópteros más pequeños de Europa (ANT: 28-35 mm, Ps: 3,5-8,5 g). Orejas cortas, triangulares; trago de punta redondeada, más largo que ancho. Coloración dorsal de marrón-rojizo a gris-verdoso, con individuos negruzcos. Pelaje ventral más claro. La segunda falange del 3er dedo es 2- 3 mm mayor que la tercera. La pigmentación de las partes desnudas de la cara es en general oscura, sin parches claros conspicuos. Los machos tienen el pene grisáceo con una marcada estría más pálida en el glande. Carecen de protuberancia entre los orificios nasales. Fórmula dentaria: 2.1.2.3/3.1.2.3. Incisivo superior interno bicúspide, casi igual que la mitad de la longitud del externo. PM1 muy pequeño y desplazado hacia el interior de la serie dental pero visible desde el exterior. Dotación cromosómica: 2n = 42 ó 2n = 44. Pueden ser confundidos con otros miembros del género Pipistrellus, aunque sus menores dimensiones y la morfología y disposición de los incisivos y premolares superiores permiten distinguirlos en mano con relativa facilidad. ULTRASONIDOS Las emisiones más habituales son pulsos de frecuencia modulada de banda ancha con una cola final casi frecuencia constante. Las frecuencias terminal y de máxima intensidad oscilan entre 42-51 y 41,6- 50,8 kHz, respectivamente. Las llamadas sociales difieren en frecuencia y número de componentes. Las señales son estructuralmente similares a las de otras especies cogenéricas, pero sus diferentes frecuencias permiten separarlas con facilidad.",
       "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
       "tips": [],
@@ -1738,7 +1709,6 @@
       "kingdom": "fauna",
       "group": "Murciélago",
       "habitat": null,
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Es el murciélago más pequeño de Europa (ANT: 28,8-32,8 mm; Ps: 4,1-7,5 g) . Orejas cortas y triangulares. Trago de punta redondeada, más largo que ancho. Pelaje dorsal desde marrón-oliva a arenoso pálido. La región ventral es más clara. La razón entre la longitud de la 2ª y 3ª falange del 3er dedo es 1:1, aunque este carácter es bastante variable. Las orejas y el hocico son relativamente más cortos y el pelaje dorsal del uropatagio más denso y extendido que en el murciélago enano, cubriéndolo hasta su tercio proximal. La pigmentación de las partes desnudas de la cara presenta parches claros conspicuos. En los machos el pene es anaranjado y sin la estría distintiva del murciélago enano. Ambos sexos presentan una pequeña protuberancia entre los orificios nasales, ausente en su especie gemela . Fórmula dentaria: 2.1.2.3/3.1.2.3. Forma y disposición de los incisivos superiores y PM1 como en el murciélago enano. Se distingue con relativa facilidad de otros miembros del mismo género por su tamaño menor y su morfología dentaria. ULTRASONIDOS Las señales de ecolocación más habituales son pulsos de frecuencia modulada de banda ancha con una cola final casi de frecuencia constante. Los valores medios de la frecuencia de máxima intensidad oscilan entre 52 y 56 kHz . Las llamadas sociales están compuestas por 2 a 4 componentes (habitualmente tres) y se escuchan sobre todo en torno a 20 kHz . En situaciones de amenaza emiten llamadas de alarma compuestas por 4-5 elementos, con frecuencias de máxima intensidad entre 26 y 40 kHz.",
       "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
       "tips": [],
@@ -1788,7 +1758,6 @@
       "kingdom": "fauna",
       "group": "Murciélago",
       "habitat": null,
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Es un murciélago de tamaño medio. Orejas muy grandes que se unen por la base de sus bordes internos. El dorso es gris oscuro con los pelos negruzcos en casi toda su longitud, mientras que la zona ventral es blanquecina o gris muy pálida. Los jóvenes tienen una coloración grisácea más apagada. Las hembras son por lo general algo mayores que los machos. ANT: 37,0-45,0 mm; Ps: 6,5-15 g. Fórmula dentaria: 2.1.2.3/3.1.3.3. Número de cromosomas (2n) = 32. Por el tamaño de las orejas y su aspecto, en la Península Ibérica sólo se puede confundir con P. auritus y la semejanza entre ambas requiere que su determinación deba realizarse en mano, y aún así pueden surgir dificultades. Al contrario que en P. auritus, el trago es normalmente mayor de 5,5 mm y está pigmentado en toda su longitud con un color parecido al del pabellón de la oreja. La longitud del pulgar (sin la uña) generalmente es menor (inferior a 6 mm) y la uña es también más corta. Partes desnudas de color grisáceo oscuro (y no pardas o rojizas). Antifaz oscuro alrededor de los ojos más marcado. En los machos adultos, el pene es mazudo (y no cilíndrico). ULTRASONIDOS Emite pulsos de ecolocalización en FM desde 85 a 25 kHz. La intensidad de estos sonidos es muy débil y su alcance apenas supera los 5 m. Las señales son prácticamente indistinguibles de las de P. auritus.",
       "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
       "tips": [],
@@ -1838,7 +1807,6 @@
       "kingdom": "fauna",
       "group": "Murciélago",
       "habitat": "Cuevas cálidas; caza en bosque mediterráneo y mosaicos arbolados",
-      "conservationStatus": "Interés especial",
       "description": "Murciélago de herradura de tamaño medio, de costumbres muy cavernícolas, que forma colonias de cría densas junto a otras especies. Vuela muy pegado a la vegetación, capturando polillas entre las ramas. Sus colonias son muy vulnerables a la visita de cuevas en primavera.",
       "descriptionSource": null,
       "tips": [
@@ -1872,7 +1840,7 @@
         "family": "Rhinolophidae",
         "genus": "Rhinolophus"
       },
-      "iucnGlobal": "NT (Casi amenazado) (evaluación UICN 2016)",
+      "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
       "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
       "regionalCcaa": "Región de Murcia",
@@ -1892,7 +1860,6 @@
       "kingdom": "fauna",
       "group": "Murciélago",
       "habitat": "Cuevas, minas y desvanes para refugiarse; caza en mosaicos de bosque y pasto",
-      "conservationStatus": "Interés especial",
       "description": "El mayor de los murciélagos de herradura ibéricos. Debe el nombre a la hoja nasal en forma de herradura con la que emite el sonar por la nariz, no por la boca. Al reposar se envuelve por completo en las alas, como en una capa, y cuelga libre del techo.",
       "descriptionSource": null,
       "tips": [
@@ -1926,7 +1893,7 @@
         "family": "Rhinolophidae",
         "genus": "Rhinolophus"
       },
-      "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2016)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
       "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
       "regionalCcaa": "Región de Murcia",
@@ -1946,7 +1913,6 @@
       "kingdom": "flora",
       "group": "Árbol",
       "habitat": "Galerías y matorrales ribereños termomediterráneos",
-      "conservationStatus": "Interés especial",
       "description": "Taray de floración prolongada y espigas rosadas que forma galerías y tarayales en cauces y ramblas del litoral árido.",
       "descriptionSource": null,
       "tips": [
@@ -1980,7 +1946,7 @@
         "family": "Tamaricaceae",
         "genus": "Tamarix"
       },
-      "iucnGlobal": "LC",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "No incluida en el LESRPE; formador de galerías termomediterráneas (HIC 92D0)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
@@ -1999,7 +1965,6 @@
       "kingdom": "fauna",
       "group": "Reptil",
       "habitat": "Matorral termomediterráneo semiárido",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "El lagarto más grande de Europa, de hasta 60 cm con la cola incluida. Su dorso es verde con un fino reticulado negro y, en los costados, hileras de ocelos de un azul intenso. Los machos viejos tienen una cabeza enorme y maciza. Es diurno y muy desconfiado.",
       "descriptionSource": null,
       "tips": [
@@ -2033,7 +1998,7 @@
         "family": "Lacertidae",
         "genus": "Timon"
       },
-      "iucnGlobal": "NT (Casi Amenazado, evaluación de 2009 por declive poblacional en parte de su área)",
+      "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -2053,7 +2018,6 @@
       "kingdom": "fauna",
       "group": "Ave rapaz nocturna",
       "habitat": "Es una especie típica de paisajes humanizados con áreas agrícolas en mosaico",
-      "conservationStatus": "LC",
       "description": "El único representante de la familia Tytonidae en territorio europeo es una rapaz de tamaño medio, aspecto esbelto, largas patas y voluminosa cabeza, que luce un contrastado plumaje en el que predominan los tonos leonados y dorados en el dorso y el blanco puro —incluso ligeramente plateado— en las zonas ventrales. Las plumas dorsales y la parte superior de las alas y la cola aparecen finamente vermiculadas por sutiles punteados de color negro, gris y blancuzco, en tanto que las regiones ventrales pueden mostrar un moteado variable. En el rostro —inconfundible por su forma de corazón— destacan los ojos intensamente negros y el prominente pico de color claro. Los jóvenes poseen un plumaje muy similar al de los adultos, de los que se diferencian por sutiles detalles, difíciles de distinguir en el campo. El vuelo de esta rapaz nocturna —de alas largas y relativamente anchas— es elegante, silencioso y ágil gracias al escaso peso del ave. No es raro ver a la lechuza cernirse hábilmente sobre un punto, mientras escudriña el terreno en busca de presas.",
       "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
       "tips": [],
@@ -2103,7 +2067,6 @@
       "kingdom": "fauna",
       "group": "Reptil",
       "habitat": "Ocupa todo tipo de suelos en ambientes mediterráneos de matorral y borde de bosque, pues precisa de cierta cobertura vegetal y de lugares relativamente húmedos",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Longitud hocico-cloaca media de 720 mm (rango 233-1.385 mm), cola relativamente corta. Cabeza algo pequeña, con hocico agudo, que sobrepasa netamente el extremo anterior de la mandíbula. 27 rangos de escamas dorsales. Color de fondo amarillento, con diseño de manchas dorsales en escalera en los ejemplares pequeños, y dos líneas dorsolaterales en los ejemplares de mayor tamaño. Longitud total máxima, 1.650 mm.",
       "descriptionSource": null,
       "tips": [],
@@ -2153,7 +2116,6 @@
       "kingdom": "flora",
       "group": "Arbusto",
       "habitat": "Matorrales arborescentes de Ziziphus",
-      "conservationStatus": "Vulnerable",
       "description": "Arbusto espinoso que forma cúpulas densas de varios metros, un microhábitat en sí mismo: bajo su copa se refugian aves, reptiles y mamíferos, y la humedad y el suelo son distintos que fuera. Sus ramas zigzaguean con dos espinas en cada nudo, una recta y otra ganchuda.",
       "descriptionSource": null,
       "tips": [
@@ -2187,7 +2149,7 @@
         "family": "Rhamnaceae",
         "genus": "Ziziphus"
       },
-      "iucnGlobal": "NE (no evaluada a nivel global)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
       "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
@@ -2206,7 +2168,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": "Acantilados mediterráneos con Limonium",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Hirundínido pardo y robusto que vuela pegado a las paredes rocosas de acantilados y barrancos, donde construye su nido de barro.",
       "descriptionSource": null,
       "tips": [
@@ -2240,7 +2201,7 @@
         "family": "Hirundinidae",
         "genus": "Ptyonoprogne"
       },
-      "iucnGlobal": "LC",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "LESRPE (RD 139/2011)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -2260,7 +2221,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": "Matorral mediterráneo denso, setos y bordes de arbolado",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "La curruca más común del matorral mediterráneo. El macho tiene la cabeza negra hasta por debajo del ojo, la garganta blanca y un llamativo anillo ocular rojo. Es ruidosa y territorial: su reclamo de alarma es un traqueteo seco que delata su presencia constantemente.",
       "descriptionSource": null,
       "tips": [
@@ -2294,7 +2254,7 @@
         "family": "Sylviidae",
         "genus": "Curruca"
       },
-      "iucnGlobal": "LC",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "LESRPE (RD 139/2011)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -2314,7 +2274,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": "Matorral litoral, laderas secas y roquedos",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "La mayor de las collalbas, enteramente negra salvo el obispillo y la base de la cola, blancos. Vive en cortados y laderas rocosas, donde construye junto al nido una plataforma de piedrecitas que acarrea una a una. Su canto es potente y melodioso.",
       "descriptionSource": null,
       "tips": [
@@ -2348,7 +2307,7 @@
         "family": "Muscicapidae",
         "genus": "Oenanthe"
       },
-      "iucnGlobal": "LC",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -2368,7 +2327,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": "Campo abierto con matorral disperso, cables y posaderos altos",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Alcaudón grande, gris por encima y con un antifaz negro que le cruza el ojo. Caza al acecho desde un posadero alto y tiene la costumbre de empalar sus presas —insectos, lagartijas, ratones— en espinas y alambres, formando pequeñas despensas.",
       "descriptionSource": null,
       "tips": [
@@ -2402,7 +2360,7 @@
         "family": "Laniidae",
         "genus": "Lanius"
       },
-      "iucnGlobal": "VU (Vulnerable) (evaluación UICN 2017)",
+      "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); UICN España: NT (Casi amenazado) (2004)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -2422,7 +2380,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": "Campos abiertos, dehesas, cultivos con arbolado y bordes de matorral",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Ave inconfundible de color canela con alas y cola a franjas blancas y negras, y una cresta eréctil que despliega en abanico al posarse. Sondea el suelo blando con el pico largo y curvo en busca de larvas e insectos. Su canto, un «up-up-up» sordo y repetido, se oye de lejos en primavera.",
       "descriptionSource": null,
       "tips": [
@@ -2452,11 +2409,11 @@
         "kingdom": "Animalia",
         "phylum": "Chordata",
         "class": "Aves",
-        "order": null,
-        "family": null,
+        "order": "Bucerotiformes",
+        "family": "Upupidae",
         "genus": "Upupa"
       },
-      "iucnGlobal": "LC (Preocupación menor)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -2476,7 +2433,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": "Matorral bajo, laderas pedregosas y eriales con vegetación rala",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Cogujada de cresta puntiaguda, muy parecida a la común pero de pico más corto y grueso y con el pecho más nítidamente rayado. Prefiere el matorral y las laderas pedregosas, mientras que la común busca cultivos, caminos y bordes de pueblo.",
       "descriptionSource": null,
       "tips": [
@@ -2510,7 +2466,7 @@
         "family": "Alaudidae",
         "genus": "Galerida"
       },
-      "iucnGlobal": "LC",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -2530,7 +2486,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": "Matorral litoral y zonas abiertas con posaderos",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Búho pequeño y rechoncho, de cabeza plana y ojos amarillos con un ceño que le da expresión severa. Es el más diurno de nuestros búhos: se ve posado en postes y ruinas a plena luz. Vuela con un ondulado marcado, a golpes de aleteo y planeo.",
       "descriptionSource": null,
       "tips": [
@@ -2564,7 +2519,7 @@
         "family": "Strigidae",
         "genus": "Athene"
       },
-      "iucnGlobal": "LC",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Reglamento CITES (CE) 338/97, Anexo A",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -2584,7 +2539,6 @@
       "kingdom": "fauna",
       "group": "Ave esteparia",
       "habitat": "Llanos pedregosos, cultivos de secano, ramblas y eriales con poca cobertura",
-      "conservationStatus": "LC",
       "description": "Ave de aspecto extraño y ojos amarillos enormes, adaptados a la actividad nocturna. De día permanece agachada e inmóvil, confiada en su plumaje críptico, y solo al anochecer se activa y delata con un reclamo silbado y melancólico que recuerda al del zarapito.",
       "descriptionSource": null,
       "tips": [
@@ -2618,7 +2572,7 @@
         "family": "Burhinidae",
         "genus": "Burhinus"
       },
-      "iucnGlobal": "LC",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "LESRPE; Directiva Aves 2009/147/CE, Anexo I",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -2638,7 +2592,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": null,
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Ave delicada, grácil y aerodinámica, de color negro, con reflejos azules metálicos por arriba y blancos crema en las partes inferiores. Tiene la frente y la garganta rojas y un collar negro. Las alas, largas y apuntadas, muestran tonos blancos en la parte inferior delantera. Su cola, muy larga y ahorquillada, es de color negro, con pequeños óvalos blancos cuando la extiende. Posee patas cortas sin emplumar, boca muy ancha, y pico corto, plano y negro. Presenta variación latitudinal en el tamaño corporal y en la longitud de la cola, que son menores hacia el sur. Aunque ambos sexos se parecen, la hembra es menos brillante, más blanca por abajo y con la cola más corta. Los jóvenes lucen tonos negros mate, tienen la frente y la garganta naranjas y una cola mucho más corta. De vuelo ágil, rápido y acrobático, la golondrina común ocupa en el espacio aéreo las capas bajas, por debajo de aviones y vencejos.",
       "descriptionSource": null,
       "tips": [],
@@ -2688,7 +2641,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": "Acantilados mediterráneos con Limonium",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Pájaro rupícola de plumaje azul pizarra en el macho, ligado a acantilados marinos y roquedos, donde canta desde cornisas destacadas.",
       "descriptionSource": null,
       "tips": [
@@ -2722,7 +2674,7 @@
         "family": "Muscicapidae",
         "genus": "Monticola"
       },
-      "iucnGlobal": "LC",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial, RD 139/2011)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -2742,7 +2694,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": "Nidos:edificios,acantilados rocosos,cuevas,cajas nido, en colonias.En todo tipo de habitats",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Presenta silueta en forma de ballesta, cola corta y ahorquillada, y alas estrechas y largas. Posee pico corto, plano y con la boca muy ancha; patas emplumadas y extremadamente cortas, que le impiden posarse en el suelo; y pies pequeños y de fuertes garras, con los cuatro dedos dirigidos hacia delante. Muestra coloración uniforme de tono pardo oscuro, casi negro, excepto en la garganta, que es blanca; la cara inferior de las alas resulta un poco más pálida. En otoño, con su plumaje desgastado, es algo más claro. Ambos sexos son iguales. Los jóvenes se parecen mucho a los adultos, aunque con un tono algo más oscuro y un aspecto escamoso, por los pequeños ribetes blancos que tienen en las plumas. Esta ave es observada casi siempre en vuelo y en grupo. Las condiciones de luz, el fondo y la distancia determinan su apariencia, pudiendo confundirse con frecuencia con el vencejo pálido. Se localiza habitualmente en núcleos urbanos, volando de forma incansable a gran velocidad. Pasa la mayor parte de su vida en el aire, y únicamente se la ve posada cuando entra o sale del nido. Duerme tanto en el nido como en vuelo.",
       "descriptionSource": null,
       "tips": [],
@@ -2792,7 +2743,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": null,
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Pajarillo de constitución rechoncha, sobre todo en invierno, cuando ahueca sus plumas para generar una capa de aire caliente interior. Machos y hembras son idénticos en coloración. En su plumaje destaca la amplia mancha anaranjada que se extiende por la cara, la garganta y el pecho, la cual aparece bordeada por una irregular y sutil banda gris. El resto del plumaje resulta poco vistoso. Domina el color pardo verdoso en el dorso y las alas, y el blanco sucio en el vientre. Los jóvenes volantones, antes de la muda parcial a finales del verano, muestran un plumaje pardo, con casi todas sus plumas punteadas en su extremo con motas amarillentas. El petirrojo europeo se mueve habitualmente por el suelo en busca de insectos. Para cantar se posa en las ramas altas de los árboles, ya sea en invierno o durante la temporada de cría. Es muy agresivo, tanto con ejemplares de su misma especie como con el resto de las aves, no solo en la época reproductora, sino también durante la invernada. En este último periodo, las parejas se separan y defienden territorios individuales.",
       "descriptionSource": null,
       "tips": [],
@@ -2842,7 +2792,6 @@
       "kingdom": "fauna",
       "group": "Ave rapaz nocturna",
       "habitat": "Cortados rocosos, barrancos y laderas con matorral y zonas abiertas de caza",
-      "conservationStatus": "Interés especial",
       "description": "El mayor búho de Europa, con casi dos metros de envergadura, penachos de plumas erguidos sobre la cabeza y ojos de un naranja encendido. Caza conejos, ratas e incluso otras rapaces. Su canto es un «bu-bo» profundo que se propaga kilómetros por los barrancos en las noches de invierno.",
       "descriptionSource": null,
       "tips": [
@@ -2876,7 +2825,7 @@
         "family": "Strigidae",
         "genus": "Bubo"
       },
-      "iucnGlobal": "LC",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "LESRPE; Directiva Aves 2009/147/CE, Anexo I; Reglamento CITES (CE) 338/97, Anexo A",
       "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
       "regionalCcaa": "Región de Murcia",
@@ -2896,7 +2845,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": "Matorral bajo y denso, jarales, brezales y tomillares",
-      "conservationStatus": "LC",
       "description": "Curruca pequeña, oscura y de cola muy larga que suele llevar levantada. El macho tiene el vientre vinoso y el ojo rojo rodeado de un anillo del mismo color. Es muy inquieta y rara vez se deja ver más de unos segundos antes de volver a hundirse en la mata.",
       "descriptionSource": null,
       "tips": [
@@ -2930,7 +2878,7 @@
         "family": "Sylviidae",
         "genus": "Curruca"
       },
-      "iucnGlobal": "LC",
+      "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2022)",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -2950,7 +2898,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": "Pastizales pedregosos, canchales y zonas abiertas de montaña",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Collalba de dorso gris en el macho, con antifaz negro y alas oscuras. Como todas las collalbas, delata su identidad al volar: obispillo blanco y cola blanca con una «T» negra invertida. Se posa erguida en piedras y hace carreras cortas por el suelo.",
       "descriptionSource": null,
       "tips": [
@@ -2984,7 +2931,7 @@
         "family": "Muscicapidae",
         "genus": "Oenanthe"
       },
-      "iucnGlobal": "LC (Preocupación menor) (evaluación UICN 2018)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -3004,7 +2951,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": null,
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "El chillón es un gorrión grande y corpulento, con la cabeza robusta y el pico muy fuerte. En su plumaje dominan los tonos marróngrisáceos con un profuso listado oscuro en el dorso. Las partes inferiores, por el contrario, son claras y están adornadas con amplias listas de color gris parduzco. En la cabeza destacan tres listas anchas: una clara; otra marrón-grisácea tras el ojo bajo aquella, y, por encima, una parda oscura. Otra lista de color marrón pálido recorre el píleo. Bajo la garganta presenta una mancha amarilla que a menudo permanece oculta o poco visible. En la cola aparecen unas manchas blancas hacia los extremos, que resultan bien visibles en vuelo. No hay diferencias de coloración entre machos y hembras. Los jóvenes son difíciles de distinguir de los adultos, incluso recién volados del nido. Se diferencian de estos por carecer de la mancha amarilla en la garganta. Asimismo, el dibujo de la cara presenta en ellos un aspecto poco definido y su coloración general es más suave.",
       "descriptionSource": null,
       "tips": [],
@@ -3054,7 +3000,6 @@
       "kingdom": "fauna",
       "group": "Ave esteparia",
       "habitat": "Llanos de cultivo, eriales y pastizales rasos con suelo desnudo",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Alondra pequeña y pálida de aspecto muy limpio, con el pecho sin apenas rayado salvo una mancha oscura a cada lado del cuello. Anida en el suelo, en cultivos y baldíos. En migración se agrupa en bandos que se levantan del suelo todos a la vez.",
       "descriptionSource": null,
       "tips": [
@@ -3088,7 +3033,7 @@
         "family": "Alaudidae",
         "genus": "Calandrella"
       },
-      "iucnGlobal": "LC",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -3108,7 +3053,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": "Matorral termomediterráneo semiárido",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Alcaudón estival de cabeza castaña que caza insectos desde posaderos en el matorral abierto, empalando presas en espinas a modo de despensa.",
       "descriptionSource": null,
       "tips": [
@@ -3142,7 +3086,7 @@
         "family": "Laniidae",
         "genus": "Lanius"
       },
-      "iucnGlobal": "LC (SPEC, en declive en Europa)",
+      "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2022)",
       "spainStatus": "LESRPE (RD 139/2011)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -3162,7 +3106,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": null,
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Curruca de mediano tamaño, de aspecto más compacto y robusto que la mayor parte de sus congéneres, aunque muy similar en tamaño y silueta a la curruca mosquitera. Al igual que ésta, y a diferencia de la mayoría de las currucas, no presenta ni rectrices externas ni garganta blanquecinas. Luce una tonalidad general grisácea, aunque la hembra muestra en las alas y en las regiones ventrales tintes más pardo rojizos. Los machos poseen el capirote negro, mientras que las hembras y los jóvenes lo tienen de color castaño.",
       "descriptionSource": null,
       "tips": [],
@@ -3212,7 +3155,6 @@
       "kingdom": "fauna",
       "group": "Ave",
       "habitat": "Nidos:Acantilados,cortados,marinos e interior.Hasta 1900m.Sustrato preferido calizo,...Edificaciones",
-      "conservationStatus": "Protegida (LESRPE)",
       "description": "Se trata del más grande y vistoso de los vencejos españoles. Presenta una silueta típica en forma de ballesta, cola corta y levemente ahorquillada, y alas muy largas y estrechas, de aleteos lentos. Posee pico corto, plano y con la boca muy ancha; patas emplumadas y extremadamente cortas, que le impiden posarse en el suelo; y pies pequeños y de fuertes garras, con los cuatro dedos dirigidos hacia delante. Muestra coloración general pardo oliva, más oscura en las alas, con dos destacadas áreas blancas en el vientre y la garganta, separadas ambas por un collar parduzco. Ambos sexos son iguales. Los jóvenes resultan muy similares a los adultos, aunque un poco más oscuros y con plumas ribeteadas de blanco. Esta ave pasa la mayor parte de su vida en el aire, por lo que casi siempre se la ve volando y agrupada, tanto en núcleos urbanos como en acantilados costeros y de interior.",
       "descriptionSource": null,
       "tips": [],

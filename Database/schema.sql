@@ -114,7 +114,10 @@ CREATE TABLE IF NOT EXISTS species (
     kingdom ENUM('flora','fauna','fungi','other') NOT NULL,
     family VARCHAR(160),
     primary_habitat VARCHAR(255),
-    conservation_status VARCHAR(160),
+    -- No hay `conservation_status`: se retiró el 2026-09-14 (ver Database/migrations.sql). Era una
+    -- etiqueta derivada y sin guardián que acabó afirmando protecciones inexistentes; la figura
+    -- legal vive en `spain_status` / `regional_status` / `regional_ccaa` y la evaluación de la UICN
+    -- en `iucn_global` / `iucn_spain`.
     description TEXT,
     identification_tips TEXT,
     seasonality VARCHAR(160),

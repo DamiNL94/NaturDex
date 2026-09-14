@@ -87,8 +87,13 @@ en dos y esa separación es la que hace que el catálogo escale:
   nombre científico**, y se sincroniza a todos los `park.json` con `npm run species:apply`.
 - **Local** — dónde y cómo aparece *en este espacio*: `id`, `habitatIds`, `coordinates`, `featured`,
   `visible`, `source`, `reviewNote`, `zepaSiteCode`, `migratory`, `sitePresence`, `gbifOccurrences`,
-  `gbifSpeciesKey`, `eidosTaxonId`, `murciaStatus`, `conservationStatus`, `audio`. Vive en cada
+  `gbifSpeciesKey`, `eidosTaxonId`, `murciaStatus`, `audio`. Vive en cada
   `park.json`.
+
+  > `conservationStatus` estuvo aquí hasta el **2026-09-14**, y `gbifBboxSightings` también. Los dos
+  > se retiraron de las 2.882 fichas por lo mismo: ya no los leía nadie. El primero era una etiqueta
+  > derivada sin guardián que acabó afirmando protecciones inexistentes en 21 fichas; el segundo, el
+  > recuento de GBIF en el BBOX del espacio, la métrica floja de la que se pasó a `gbifOccurrences`.
 
   > `migratory` es local **aunque suene universal**: una misma ave es migratoria en un espacio y
   > residente en otro (el flamenco cría en el Mar Menor y solo inverna en otros humedales). Lo dice

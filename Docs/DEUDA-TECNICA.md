@@ -230,11 +230,13 @@ Cada una se paga mejor ahora que en el espacio número treinta.
    >   y `source` (una sola) no puede guardarlas. Es dato de procedencia: **columna abierta**.
    > · **`solo_curada`** — 4 recintos. Marca el recinto sin equivalente en la cartografía oficial, o
    >   sea la diferencia entre «esto lo dice el MITECO» y «esto lo añadimos nosotros»: **columna**.
-   > · **`gbifBboxSightings`** — 188 fichas, todas de Sierra Espuña. **Se pierde, y está decidido**:
-   >   es el recuento en el BBOX del espacio, la métrica floja de la que se pasó a `gbifOccurrences`;
-   >   ninguna herramienta lo escribe ya y **nadie lo lee** —ni la app, ni la API, ni el panel—.
-   >   Abrirle columna sería consagrar una medida que nadie produce. Retirarlo del `park.json` es
-   >   otra decisión y va aparte.
+   > · **`gbifBboxSightings`** — 188 fichas, todas de Sierra Espuña. Era el recuento en el BBOX del
+   >   espacio, la métrica floja de la que se pasó a `gbifOccurrences`; ninguna herramienta lo
+   >   escribía ya y **no lo leía nadie** —ni la app, ni la API, ni el panel—. Abrirle columna habría
+   >   sido consagrar una medida que nadie produce, así que se aceptó la pérdida y se dejó escrito
+   >   que retirarlo del `park.json` era «otra decisión y va aparte». **Esa decisión se tomó el
+   >   2026-09-14**: retirado de las 188 fichas, y con él la entrada de `PERDIDAS_ACEPTADAS`, que
+   >   hoy está vacía. Ya no hay pérdida que aceptar.
    >
    > Esa tercera categoría es lo que hace que la comprobación sirva: sale con **código 1** solo
    > mientras quede una pérdida **sin decidir**. Una que se ha mirado se escribe en

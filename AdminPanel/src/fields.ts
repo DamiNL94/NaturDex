@@ -27,7 +27,6 @@ export const FIELDS: Record<Resource, FieldDef[]> = {
     { k: 'kingdom', label: 'Reino', type: 'select', options: KINGDOMS },
     { k: 'family', label: 'Grupo (p. ej. Aves, Matorral)' },
     { k: 'primary_habitat', label: 'Hábitat (texto de la ficha)' },
-    { k: 'conservation_status', label: 'Estado de conservación' },
     { k: 'seasonality', label: 'Temporada' },
     { k: 'rarity_score', label: 'Rareza (1-5)', type: 'number', min: 1, max: 5 },
     { k: 'image_url', label: 'Foto (URL o ruta Img/…)' },
