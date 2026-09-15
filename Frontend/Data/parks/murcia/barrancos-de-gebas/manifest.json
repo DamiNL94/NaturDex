@@ -2,8 +2,8 @@
   "slug": "barrancos-de-gebas",
   "name": "Barrancos de Gebas",
   "apiSlug": "barrancos-de-gebas",
-  "version": 17,
-  "updatedAt": "2026-09-14",
+  "version": 19,
+  "updatedAt": "2026-09-15",
   "data": "Data/parks/murcia/barrancos-de-gebas/park.json",
   "geo": {
     "parque": "Data/parks/murcia/barrancos-de-gebas/geo/parque.geojson",

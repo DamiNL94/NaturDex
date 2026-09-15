@@ -1823,7 +1823,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)",
-      "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": "Especie añadida desde el Catálogo de Flora Silvestre Protegida del Anexo I del PORN; la asignación de hábitat es una inferencia ecológica (el Anexo no la vincula a una asociación concreta) y las coordenadas son representativas, no de una localización verificada. Confirmar en campo. La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
       "eidosTaxonId": 7478,
@@ -1843,11 +1843,11 @@
       "gbifOccurrences": 142,
       "visible": true,
       "imageAttribution": "User:Xemenendura (CC BY-SA 3.0) · Wikimedia Commons",
-      "rarityLocal": 3,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "categoria": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)",
-        "ambito": "autonómico",
-        "origen": "regionalStatus del park.json"
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "Sin figura de protección",
@@ -1946,7 +1946,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
-      "regionalStatus": "No incluida en el Catálogo Regional de Flora Silvestre Protegida; población de Cabo Cope señalada por su interés biogeográfico (aislada del resto de su área)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": "La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
       "eidosTaxonId": 5509,
@@ -1967,11 +1967,11 @@
       "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
       "gbifOccurrences": 72,
       "visible": true,
-      "rarityLocal": 1,
+      "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Sin figura de protección",
-        "ambito": "estatal",
-        "origen": "spainStatus del park.json"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "Sin figura de protección",
@@ -2948,7 +2948,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2015)",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo V",
-      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": "El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente. La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
       "eidosTaxonId": 11350,
@@ -2963,11 +2963,11 @@
       "gbifOccurrences": 8,
       "visible": true,
       "imageAttribution": "Guérin Nicolas (messages) (CC BY-SA 3.0) · Wikimedia Commons",
-      "rarityLocal": 3,
+      "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-        "ambito": "autonómico",
-        "origen": "regionalStatus del park.json"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
@@ -3006,7 +3006,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas",
-      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": "El IEPNB no registra figura estatal ni regional para esta especie. La categoría regional que figuraba procede del PORN y no se ha podido confirmar en la Ley 7/1995. La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
       "eidosTaxonId": 11289,
@@ -3021,11 +3021,11 @@
       "gbifOccurrences": 8,
       "visible": true,
       "imageAttribution": "Zefram (CC BY 2.0 de) · Wikimedia Commons",
-      "rarityLocal": 3,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-        "ambito": "autonómico",
-        "origen": "regionalStatus del park.json"
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "Sin figura de protección",
@@ -3122,7 +3122,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)",
       "spainStatus": "LESRPE; Directiva Hábitats 92/43/CEE, Anexo IV",
-      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": "La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
       "eidosTaxonId": 24327,
@@ -3137,11 +3137,11 @@
       "gbifOccurrences": 8,
       "visible": true,
       "imageAttribution": "David Perez (CC BY 3.0) · Wikimedia Commons",
-      "rarityLocal": 3,
+      "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-        "ambito": "autonómico",
-        "origen": "regionalStatus del park.json"
+        "categoria": "LESRPE",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE",
@@ -9393,7 +9393,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "LESRPE; Directiva Aves 2009/147/CE, Anexo I",
-      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": "La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
       "eidosTaxonId": 11887,
@@ -9418,11 +9418,11 @@
       "gbifOccurrences": 0,
       "visible": true,
       "imageAttribution": "Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons",
-      "rarityLocal": 3,
+      "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-        "ambito": "autonómico",
-        "origen": "regionalStatus del park.json"
+        "categoria": "LESRPE",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE",
@@ -9869,7 +9869,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": "El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente. La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
       "eidosTaxonId": 12316,
@@ -9894,11 +9894,11 @@
       "gbifOccurrences": 55,
       "visible": true,
       "imageAttribution": "Adrian198cm (Public domain) · Wikimedia Commons",
-      "rarityLocal": 3,
+      "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-        "ambito": "autonómico",
-        "origen": "regionalStatus del park.json"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
@@ -10277,7 +10277,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": "El PORN cita la presencia de la especie en el parque sin detallar su categoría exacta de protección regional; pendiente de confirmar con el Catálogo Regional vigente. La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
       "eidosTaxonId": 11592,
@@ -10302,11 +10302,11 @@
       "gbifOccurrences": 59,
       "visible": true,
       "imageAttribution": "Andrew Thomas from Shrewsbury, UK (CC BY-SA 2.0) · Wikimedia Commons",
-      "rarityLocal": 3,
+      "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial",
-        "ambito": "autonómico",
-        "origen": "regionalStatus del park.json"
+        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",

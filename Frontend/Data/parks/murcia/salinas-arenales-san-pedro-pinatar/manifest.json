@@ -2,8 +2,8 @@
   "slug": "salinas-arenales-san-pedro-pinatar",
   "name": "Salinas y Arenales de San Pedro del Pinatar",
   "apiSlug": "salinas-arenales-san-pedro-pinatar",
-  "version": 27,
-  "updatedAt": "2026-09-14",
+  "version": 28,
+  "updatedAt": "2026-09-15",
   "data": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar/park.json",
   "geo": {
     "parque": "Data/parks/murcia/salinas-arenales-san-pedro-pinatar/geo/parque.geojson",

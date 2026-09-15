@@ -357,6 +357,7 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 | Llevar a la base lo corregido en el repo | [`Docs/runbook/APLICAR-A-RAILWAY.md`](Docs/runbook/APLICAR-A-RAILWAY.md) — las dos vías, el orden, la cola pendiente y qué mirar antes de pulsar |
 | Tocar avistamientos, ocurrencias o su exportación | [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md) — término a término, qué se generaliza y por qué |
 | Elegir el siguiente trabajo | [`Docs/DEUDA-TECNICA.md`](Docs/DEUDA-TECNICA.md), por orden de rentabilidad, y [`Docs/auditoria-consolidado.md`](Docs/auditoria-consolidado.md) — los 2.159 hallazgos de la auditoría del catálogo convertidos en **733 correcciones** distintas, por colas y con lo ya hecho marcado. Lo regenera `npm run auditoria:consolida` |
+| Saber por qué una decisión de la auditoría se tomó así | [`Docs/decisiones-auditoria.md`](Docs/decisiones-auditoria.md) — las 73 «decisiones» de la cola 6, resueltas y con la fuente de cada respuesta. 67 no necesitaban decidir nada: bastaba leer el `CLAUDE.md`, la guarda de la herramienta o el BOE |
 | Recordar un comando | [`Docs/COMANDOS.md`](Docs/COMANDOS.md) |
 
 ## 4. Búsqueda: lo que está excluido a propósito

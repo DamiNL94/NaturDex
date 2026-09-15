@@ -4939,7 +4939,7 @@
       },
       "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 1992)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
+      "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): Vulnerable",
       "regionalCcaa": "Región de Murcia",
       "eidosTaxonId": 11953,
       "gbifSpeciesKey": null,
@@ -4961,11 +4961,11 @@
         "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000507 (Espacio marino de los Islotes Litorales de Murcia y Almería), sección 3.2"
       },
       "habitatIds": [],
-      "rarityLocal": 1,
+      "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Sin figura de protección",
-        "ambito": "estatal",
-        "origen": "spainStatus del park.json"
+        "categoria": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): Vulnerable",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "rarityBasis": {
         "categoria": "Sin figura de protección",
