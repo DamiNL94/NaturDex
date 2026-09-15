@@ -6,15 +6,41 @@
     "",
     "Curruca conspicillata y Saxicola rubicola: una ficha decía «LC (Preocupación menor)» y la otra",
     "«No evaluada específicamente en la Lista Roja mundial de la UICN». Ambas están evaluadas y",
-    "figuran como Preocupación menor, así que se unifica en ese valor."
+    "figuran como Preocupación menor, así que se unificaron en ese valor.",
+    "",
+    "2026-09-15 · RETIRADO de aquí el `iucnGlobal` de las dos, y este es el motivo:",
+    "el campo dejó de ser texto a mano el 2026-09-13, cuando `lista-roja-mundial.js`",
+    "(npm run especies:listaroja-mundial) pasó a escribirlo con la nomenclatura de `lib/uicn.js`",
+    "—«LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)»—, que lleva el ámbito y el año",
+    "de la evaluación. Fijarlo aquí con la redacción vieja no era una corrección: era un REVERTIDOR.",
+    "Cada `species:extract` reescribía el valor de C3 en el catálogo universal, y el `species:apply`",
+    "siguiente lo habría repartido a las once fichas de la curruca tomillera que hoy lo tienen bien.",
+    "No fallaba nada y no lo veía `validate`, que compara los parques ENTRE SÍ y aquí estaban todos",
+    "de acuerdo. Es la trampa nº 2 del CLAUDE.md —una entrada obsoleta de `data/contenido/` deshace",
+    "una corrección en cada extracción— cazada en el acto.",
+    "",
+    "La regla que queda: en `data/contenido/` va lo REDACTADO (descripción, pistas, porte, nombre",
+    "común, hábitat). Un campo que deriva de una fuente y tiene herramienta propia —iucnGlobal,",
+    "iucnSpain, rarityScore, taxonomy— no se fija aquí; se corrige en su herramienta, o el fichero",
+    "se convierte en la única fuente que gana siempre y nadie lo sabe.",
+    "",
+    "El `spainStatus` se queda: las dos fichas lo tienen igual en los dieciséis espacios y en el",
+    "catálogo, y no hay herramienta que lo derive hoy.",
+    "",
+    "Retirado el campo, se pasó `especies:listaroja-mundial` y no escribió nada, por motivos",
+    "distintos en cada una: Curruca conspicillata (taxonid 80923) SÍ tiene evaluación Mundial en",
+    "EIDOS —LC, 2019— y sus once fichas ya llevaban ese valor con la nomenclatura buena, así que lo",
+    "de aquí solo servía para pisarlo; Saxicola rubicola (taxonid 16387) NO tiene fila Mundial —EIDOS",
+    "solo devuelve la evaluación de ámbito Península, que `lib/uicn.js` no guarda a propósito—, así",
+    "que cae en la clase C (GUARDA) y la herramienta NO la toca. Su «LC (Preocupación menor)» sigue",
+    "siendo una afirmación a mano, y se queda: escribirle «no evaluada» sería falso, porque la UICN",
+    "sí la evalúa y quien no trae la fila es EIDOS."
   ],
 
   "Saxicola rubicola": {
-    "iucnGlobal": "LC (Preocupación menor)",
     "spainStatus": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)"
   },
   "Curruca conspicillata": {
-    "iucnGlobal": "LC (Preocupación menor)",
     "spainStatus": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)"
   }
 }

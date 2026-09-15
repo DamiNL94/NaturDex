@@ -1,0 +1,2076 @@
+{
+  "_nota": "Extracto de la criba pasada EN VIVO el 2026-09-14 para este espacio, que es uno de los dos que la auditoría del catálogo no guardó (Espuña y Carrascoy fueron los primeros que auditó). Contiene SOLO las especies que la criba aprueba y que el espacio no tiene fichadas. No es la selección aprobada del espacio y no la sustituye. Lo escribe build-species-n2.js --altas, que conserva intacto todo lo ya publicado.",
+  "park": "sierra-espuna",
+  "generado": "2026-09-14",
+  "origen": "criba en vivo con el GBIF versionado del espacio (build-species-seleccion.js)",
+  "total": 64,
+  "especies": [
+    {
+      "scientificName": "Aegithalos caudatus",
+      "class": "Aves",
+      "gbifOccurrences": 241,
+      "habitats": 12,
+      "evidence": [
+        "observada_gbif",
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "barrancos-de-gebas",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Aegithalos caudatus",
+          "siteCode": "ES0000173",
+          "siteName": "Sierra Espuña",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "común"
+        }
+      ],
+      "eidosTaxonId": 10993,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Psammodromus algirus",
+      "class": "Squamata",
+      "gbifOccurrences": 29,
+      "habitats": 9,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "barrancos-de-gebas",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 10670,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Helianthemum cinereum",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 29,
+      "habitats": 10,
+      "evidence": [
+        "observada_gbif",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "carrascoy-y-el-valle",
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Helianthemum cinereum subsp. hieronymi (Sennen) G. López",
+          "siteCode": "ES0000173",
+          "siteName": "Sierra Espuña",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "común"
+        }
+      ],
+      "eidosTaxonId": 4971,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Thymus serpylloides",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 11,
+      "habitats": 9,
+      "evidence": [
+        "observada_gbif",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": null,
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Thymus serpylloides subsp. gadorensis (Pau) Jalas",
+          "siteCode": "ES0000173",
+          "siteName": "Sierra Espuña",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "común"
+        }
+      ],
+      "eidosTaxonId": 8944,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Tarentola mauritanica",
+      "class": "Squamata",
+      "gbifOccurrences": 6,
+      "habitats": 6,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "barrancos-de-gebas",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 11692,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Coronella girondica",
+      "class": "Squamata",
+      "gbifOccurrences": 6,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "cabo-cope-puntas-calnegre",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 11362,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Natrix maura",
+      "class": "Squamata",
+      "gbifOccurrences": 6,
+      "habitats": 7,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "carrascoy-y-el-valle",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 11688,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Timon lepidus",
+      "class": "Squamata",
+      "gbifOccurrences": 6,
+      "habitats": 4,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "cabezo-gordo",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 11582,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Hemorrhois hippocrepis",
+      "class": "Squamata",
+      "gbifOccurrences": 5,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "barrancos-de-gebas",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 11448,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Arenaria suffruticosa",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 5,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 4641,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Zamenis scalaris",
+      "class": "Squamata",
+      "gbifOccurrences": 5,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "cabezo-gordo",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 33095,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Saxifraga almeriensis",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 4,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa (verificado por el nombre aceptado: Saxifraga camposii subsp. leptophylla (Willk.) D.A. Webb)",
+      "nombreAceptadoEidos": "Saxifraga camposii subsp. leptophylla (Willk.) D.A. Webb",
+      "eidosTaxonId": 7997,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Chalcides bedriagai",
+      "class": "Squamata",
+      "gbifOccurrences": 4,
+      "habitats": 8,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "cuatro-calas",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 10827,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Pelodytes punctatus",
+      "class": "Amphibia",
+      "gbifOccurrences": 4,
+      "habitats": 7,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "sierra-de-el-carche",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 12037,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Oeosporangium pteridioides",
+      "class": "Polypodiopsida",
+      "gbifOccurrences": 4,
+      "habitats": 7,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "cabo-cope-puntas-calnegre",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 80519,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Geum sylvaticum",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 4,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Geum sylvaticum Pourr.",
+          "siteCode": "ES0000173",
+          "siteName": "Sierra Espuña",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "muy escasa"
+        }
+      ],
+      "eidosTaxonId": 4979,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Hemidactylus turcicus",
+      "class": "Squamata",
+      "gbifOccurrences": 4,
+      "habitats": 4,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "barrancos-de-gebas",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 12351,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Macroprotodon brevis",
+      "class": "Squamata",
+      "gbifOccurrences": 4,
+      "habitats": 4,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "cabo-cope-puntas-calnegre",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 10913,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Psammodromus hispanicus",
+      "class": "Squamata",
+      "gbifOccurrences": 4,
+      "habitats": 4,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "humedal-del-ajauque-y-rambla-salada",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 11461,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Vipera latastei",
+      "class": "Squamata",
+      "gbifOccurrences": 4,
+      "habitats": 4,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "monte-arabi",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 11567,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Fraxinus angustifolia",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 3,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "carrascoy-y-el-valle",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "En Peligro de Extinción"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "En Peligro de Extinción",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 4623,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Narcissus dubius",
+      "class": "Liliopsida",
+      "gbifOccurrences": 3,
+      "habitats": 7,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 6515,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Erica arborea",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 3,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "calblanque-monte-cenizas-pena-aguila",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "En Peligro de Extinción"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "En Peligro de Extinción",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Erica arborea L.",
+          "siteCode": "ES0000173",
+          "siteName": "Sierra Espuña",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": null
+        }
+      ],
+      "eidosTaxonId": 4364,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Amelanchier ovalis",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 3,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 2114,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Chrysojasminum fruticans",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 3,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 5449,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Achillea millefolium",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 3,
+      "habitats": 7,
+      "evidence": [
+        "observada_gbif",
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Achillea millefolium L.",
+          "siteCode": "ES0000173",
+          "siteName": "Sierra Espuña",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": null
+        }
+      ],
+      "eidosTaxonId": 9885,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Cephalanthera rubra",
+      "class": "Liliopsida",
+      "gbifOccurrences": 3,
+      "habitats": 4,
+      "evidence": [
+        "observada_gbif",
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "carrascoy-y-el-valle",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Vulnerable"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Cephalanthera rubra (L.) Rich.",
+          "siteCode": "ES0000173",
+          "siteName": "Sierra Espuña",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "eidosTaxonId": 3381,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Ophrys sphegodes",
+      "class": "Liliopsida",
+      "gbifOccurrences": 3,
+      "habitats": 4,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "carrascoy-y-el-valle",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 6752,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Astragalus bourgaeanus",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 3,
+      "habitats": 6,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 2574,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Fumana fontanesii",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 2,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "En Peligro de Extinción"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "En Peligro de Extinción",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 4653,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Populus nigra var. nigra",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 2,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "sierra-de-salinas",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 7292,
+      "sinonimosFusionados": [
+        "Populus nigra"
+      ],
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Valeriana tuberosa",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 2,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 9238,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Pipistrellus nathusii",
+      "class": "Mammalia",
+      "gbifOccurrences": 2,
+      "habitats": 3,
+      "evidence": [
+        "observada_gbif",
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Pipistrellus nathusii",
+          "siteCode": "ES0000173",
+          "siteName": "Sierra Espuña",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "común"
+        }
+      ],
+      "eidosTaxonId": 11814,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Pleurodeles waltl",
+      "class": "Amphibia",
+      "gbifOccurrences": 2,
+      "habitats": 3,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "sotos-y-bosques-de-ribera-de-canaverosa",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 12420,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Blanus cinereus",
+      "class": "Squamata",
+      "gbifOccurrences": 2,
+      "habitats": 3,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "cabezo-gordo",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 10901,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Santolina viscosa",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 2,
+      "habitats": 4,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "carrascoy-y-el-valle",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 665,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Medicago secundiflora",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 2,
+      "habitats": 6,
+      "evidence": [
+        "observada_gbif",
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Vulnerable"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Medicago secundiflora Durieu",
+          "siteCode": "ES0000173",
+          "siteName": "Sierra Espuña",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "muy escasa"
+        }
+      ],
+      "eidosTaxonId": 6241,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Lonicera etrusca",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 2,
+      "habitats": 4,
+      "evidence": [
+        "observada_gbif",
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "sierra-de-salinas",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Lonicera etrusca Santi",
+          "siteCode": "ES0000173",
+          "siteName": "Sierra Espuña",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "eidosTaxonId": 6037,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Acanthodactylus erythrurus",
+      "class": "Squamata",
+      "gbifOccurrences": 2,
+      "habitats": 2,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "cabo-cope-puntas-calnegre",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 11220,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Himantoglossum hircinum",
+      "class": "Liliopsida",
+      "gbifOccurrences": 2,
+      "habitats": 2,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Vulnerable"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 5270,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Quercus suber",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "En Peligro de Extinción"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "En Peligro de Extinción",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 7228,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Celtis australis",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "carrascoy-y-el-valle",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 3200,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Hieracium",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "CEEA: En peligro de extinción"
+        }
+      ],
+      "rarityScore": 5,
+      "rarityBasis": {
+        "categoria": "En peligro de extinción",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "En peligro de extinción",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Desconocido",
+      "eidosTaxonId": 376,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Juniperus communis",
+      "class": "Pinopsida",
+      "gbifOccurrences": 1,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Vulnerable"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 5499,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Lysimachia tenella",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "sierra-de-la-pila",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Vulnerable"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Anagallis tenella (L.) L.",
+          "siteCode": "ES0000173",
+          "siteName": "Sierra Espuña",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "eidosTaxonId": 1848,
+      "sinonimosFusionados": [
+        "Anagallis tenella"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Cheirolophus intybaceus",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 3,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "calblanque-monte-cenizas-pena-aguila",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Vulnerable"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 3544,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Teucrium carthaginense",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 3,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "calblanque-monte-cenizas-pena-aguila",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Vulnerable"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 8711,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Thymus orospedanus",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 3,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 8934,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Limonium ovalifolium",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 4,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 5856,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Alytes dickhilleni",
+      "class": "Amphibia",
+      "gbifOccurrences": 1,
+      "habitats": 3,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "sotos-y-bosques-de-ribera-de-canaverosa",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "CEEA: Vulnerable"
+        }
+      ],
+      "rarityScore": 4,
+      "rarityBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 11158,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Atadinus pumilus",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 3,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 7743,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Senecio auricula subsp. auricula",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 3,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "sotos-y-bosques-de-ribera-de-canaverosa",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Vulnerable"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa (verificado por el nombre aceptado: Jacobaea auricula (Coss.) Pelser)",
+      "nombreAceptadoEidos": "Jacobaea auricula (Coss.) Pelser",
+      "eidosTaxonId": 674,
+      "sinonimosFusionados": [
+        "Senecio auricula"
+      ],
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Periploca angustifolia",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 3,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "cabezo-gordo",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Vulnerable"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa (verificado por el nombre aceptado: Periploca angustifolia Labill.)",
+      "nombreAceptadoEidos": "Periploca angustifolia Labill.",
+      "eidosTaxonId": 7034,
+      "sinonimosFusionados": [
+        "Periploca laevigata"
+      ],
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Dactylorhiza elata",
+      "class": "Liliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 2,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "sotos-y-bosques-de-ribera-de-canaverosa",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Vulnerable"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 3949,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Ophioglossum vulgatum",
+      "class": "Polypodiopsida",
+      "gbifOccurrences": 1,
+      "habitats": 2,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Vulnerable"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 6599,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Rana temporaria",
+      "class": "Amphibia",
+      "gbifOccurrences": 1,
+      "habitats": 2,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 12298,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Halocnemum strobilaceum",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 2,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "calblanque-monte-cenizas-pena-aguila",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Vulnerable"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 5051,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Ononis aragonensis",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 2,
+      "evidence": [
+        "observada_gbif",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": null,
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Ononis aragonensis Asso",
+          "siteCode": "ES0000173",
+          "siteName": "Sierra Espuña",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "eidosTaxonId": 6673,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Dictamnus hispanicus",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 2,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "sierra-de-el-carche",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 4038,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Salvia argentea",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 2,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Vulnerable"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 7920,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Himantoglossum robertianum",
+      "class": "Liliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 2,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "carrascoy-y-el-valle",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Vulnerable"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 32238,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Osyris lanceolata",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 1,
+      "habitats": 3,
+      "evidence": [
+        "observada_gbif",
+        "protegida"
+      ],
+      "yaFichadaEn": "cabezo-gordo",
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "eidosTaxonId": 6882,
+      "nivelDeFuente": 2
+    },
+    {
+      "scientificName": "Helianthemum cinereum subsp. hieronymi",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": null,
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Helianthemum cinereum subsp. hieronymi (Sennen) G. López",
+          "siteCode": "ES0000173",
+          "siteName": "Sierra Espuña",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "común"
+        }
+      ],
+      "eidosTaxonId": 4974,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Thymus serpylloides subsp. gadorensis",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Vulnerable"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Thymus serpylloides subsp. gadorensis (Pau) Jalas",
+          "siteCode": "ES0000173",
+          "siteName": "Sierra Espuña",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "común"
+        }
+      ],
+      "eidosTaxonId": 8946,
+      "nivelDeFuente": 1
+    }
+  ]
+}

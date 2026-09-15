@@ -2,8 +2,8 @@
   "slug": "carrascoy-y-el-valle",
   "name": "Carrascoy y El Valle",
   "apiSlug": "carrascoy-y-el-valle",
-  "version": 30,
-  "updatedAt": "2026-09-14",
+  "version": 34,
+  "updatedAt": "2026-09-15",
   "data": "Data/parks/murcia/carrascoy-y-el-valle/park.json",
   "geo": {
     "parque": "Data/parks/murcia/carrascoy-y-el-valle/geo/parque.geojson",
@@ -15,7 +15,7 @@
   "images": [],
   "audio": [],
   "counts": {
-    "species": 363,
+    "species": 375,
     "habitats": 15,
     "pointsOfInterest": 21,
     "images": 0,

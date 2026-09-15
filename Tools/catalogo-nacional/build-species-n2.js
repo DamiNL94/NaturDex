@@ -52,11 +52,28 @@ const path = require('path');
 const { arg, flag, requireArgs, die } = require('../lib/cli');
 const { ROOT, FRONTEND, CATALOGO_DIR, OUT_DIR, readJson, rel, fromRoot, parkFiles, escribeEspacio } = require('../lib/io');
 const { clasificaPresenciaSitio } = require('../lib/fenologia');
+const { nameMatches } = require('../lib/eidos');
 
 const DRY = flag('dry');
 const PODAR = flag('podar');
+/*
+ * `--altas`: escribir SOLO las fichas que faltan, sin tocar una sola de las que ya están.
+ *
+ * Existe porque en un espacio PUBLICADO esta herramienta no se puede usar entera. Reescribe el
+ * catálogo desde la selección, y ocho de los dieciséis espacios de Murcia pasaron DESPUÉS por
+ * `aves:poda`: regenerarlos les devuelve las aves que la poda les quitó, sin que nada falle (trampa
+ * nº 6 del CLAUDE.md). Eso dejaba las 437 altas de la auditoría sin camino — la cola 4 del
+ * consolidado, que es la deuda nº 1 con otro nombre.
+ *
+ * Con la bandera puesta, la selección que se pasa por `--seleccion` es un EXTRACTO: contiene solo
+ * las especies que se quieren dar de alta. Lo ya publicado se conserva tal cual y en su orden, y lo
+ * nuevo va detrás. Idempotente por construcción: en el segundo pase esas especies ya están fichadas
+ * y no se escribe nada.
+ */
+const ALTAS = flag('altas');
 const PARK = arg('park');
-requireArgs('Uso: --park <slug> [--dry] [--podar] [--seleccion <ruta>] [--gbif <ruta>]', { park: PARK });
+requireArgs('Uso: --park <slug> [--dry] [--podar|--altas] [--seleccion <ruta>] [--gbif <ruta>]', { park: PARK });
+if (ALTAS && PODAR) die('--altas y --podar son incompatibles: uno solo añade y el otro solo retira.');
 
 const CATALOGO = path.join(CATALOGO_DIR, 'data', 'especies-universal.json');
 // Los catálogos autonómicos de especies protegidas, comunidad a comunidad. Sin la entrada de una
@@ -238,11 +255,48 @@ function identificadorReutilizado(mapa, dudosos, sci, campo) {
  *
  * Por eso manda lo que los demás parques usan HOY, y solo si ahí no hay nada se mira el catálogo.
  */
+/**
+ * ¿El nombre aceptado que devuelve EIDOS es el taxón que el catálogo ya ficha con otro nombre?
+ *
+ * EIDOS escribe el aceptado CON AUTOR —«Rhamnus lycioides L. subsp. lycioides»— y el catálogo lo
+ * guarda sin él, así que comparar por igualdad no casa NUNCA cuando la autoría está de por medio.
+ * Eso convertía un renombrado en un alta: *Rhamnus hispanorum*, que el anexo de Sierra de Salinas y
+ * el de Sierra de la Pila enumeran, es el espino negro que el catálogo ficha en siete espacios como
+ * *Rhamnus lycioides*; escribirlo como especie nueva lo pone dos veces en el mismo catálogo, y ni
+ * `taxones:duplicados` ni el cruce por binomio lo ven.
+ *
+ * Hay que mirar el RANGO de los dos lados, no solo el del aceptado:
+ *
+ *   · el aceptado no baja de especie          → lo que sobra es autoría y es el mismo taxón;
+ *   · la ficha ya está en ese rango           → vale si es la MISMA subespecie
+ *     («Saxifraga camposii subsp. leptophylla» ya fichada, y EIDOS devuelve ese mismo nombre con su
+ *     autor detrás: es la ficha que ya está, no una nueva);
+ *   · la ficha es la especie y el aceptado un infrataxón → solo vale la subespecie **NOMINAL** (el
+ *     tercer epíteto repite el segundo, la regla de `funde-trinomios-nominales.js`). Colgar de la
+ *     ficha de la especie un infrataxón que no es el suyo es la deuda nº 36, y por eso «Teucrium
+ *     buxifolium subsp. rivasii» NO casa con la ficha «Teucrium buxifolium».
+ */
+const infraEpiteto = (n) => {
+  const m = /\b(?:subsp|ssp|var|f)\.\s+([a-z-]+)/i.exec(String(n));
+  return m ? m[1].toLowerCase() : null;
+};
+function mismoTaxonQueFicha(aceptadoEidos, nombreFicha) {
+  if (!nameMatches(aceptadoEidos, nombreFicha)) return false;
+  const infraAceptado = infraEpiteto(aceptadoEidos);
+  if (!infraAceptado) return true;
+  const infraFicha = infraEpiteto(nombreFicha);
+  if (infraFicha) return infraFicha === infraAceptado;
+  return infraAceptado === String(nombreFicha).split(/\s+/)[1].toLowerCase();
+}
+
 function resolverNombre(sel, fichadas, universal) {
   const propuesto = sel.scientificName;
   const aceptado = sel.nombreAceptadoEidos;
-  if (!fichadas.has(propuesto) && aceptado && aceptado !== propuesto && fichadas.has(aceptado))
-    return { nombre: aceptado, renombrada: `${propuesto} → ${aceptado}` };
+  if (!fichadas.has(propuesto) && aceptado && aceptado !== propuesto) {
+    if (fichadas.has(aceptado)) return { nombre: aceptado, renombrada: `${propuesto} → ${aceptado}` };
+    const conAutor = [...fichadas.keys()].find(n => mismoTaxonQueFicha(aceptado, n));
+    if (conAutor) return { nombre: conAutor, renombrada: `${propuesto} → ${conAutor} (EIDOS: «${aceptado}»)` };
+  }
   return { nombre: propuesto, renombrada: null };
 }
 
@@ -488,13 +542,33 @@ function main() {
   const habitatsDelParque = new Set((doc.habitats || []).map(h => h.id));
   const previas = new Map((doc.species || []).map(s => [s.scientificName, s]));
 
+  /*
+   * En modo `--altas`, el propio espacio cuenta para resolver el nombre.
+   *
+   * `cargarFichadas()` salta a propósito el parque que se está escribiendo: cuando se regenera
+   * entero, sus fichas se van a reescribir y mirarlas sería mirarse al espejo. Pero aquí no se
+   * regenera nada, y la pregunta es justo la contraria: **¿esta alta es una ficha que este espacio
+   * ya tiene con otro nombre?** Sin esto, *Saxifraga almeriensis* —que EIDOS da por sinónimo de
+   * *S. camposii* subsp. *leptophylla*, la ficha que Sierra Espuña ya publica— entraba como especie
+   * nueva, y ningún guardián lo veía: otro epíteto, otro binomio, otro `eidosTaxonId`.
+   */
+  if (ALTAS) {
+    for (const sp of doc.species || []) {
+      if (!fichadas.has(sp.scientificName)) fichadas.set(sp.scientificName, { eidos: new Map(), gbif: new Map() });
+      const e = fichadas.get(sp.scientificName);
+      if (sp.eidosTaxonId != null) e.eidos.set(sp.eidosTaxonId, PARK);
+      if (sp.gbifSpeciesKey != null) e.gbif.set(sp.gbifSpeciesKey, PARK);
+    }
+  }
+
   console.log(`\nEspacio: ${entrada.name} (${PARK})`);
   console.log(`Selección aprobada: ${seleccion.doc.total} especies · ${rel(seleccion.ruta)}`);
   console.log(`Barrido GBIF: ${gbif.porNombre.size} especies indexadas · ${rel(gbif.ruta)}`);
   console.log(`ZEPA del espacio: ${zepa ? `${zepa.code} ${zepa.name || ''}` : '— (sin capa zepa.geojson)'}`);
 
   // 1) Resolver el nombre de cada seleccionada y repartir entre lo que se puede escribir y lo que no.
-  const conFicha = [], pendientes = [], renombradas = [];
+  let conFicha = [];
+  const pendientes = [], renombradas = [];
   const sinClaseEnLaSeleccion = [];
   for (const sel of seleccion.doc.especies || []) {
     const { nombre, renombrada } = resolverNombre(sel, fichadas, universal);
@@ -522,6 +596,37 @@ function main() {
     const [ka, kb] = [clave(a), clave(b)];
     return ka[0] - kb[0] || ka[1] - kb[1] || String(ka[2]).localeCompare(String(kb[2]));
   });
+
+  // 2 bis) Con `--altas`, de la selección solo se monta lo que el espacio NO tiene ya.
+  //
+  // Que una de las pedidas ya esté fichada no es un error: es la segunda pasada de la misma orden, y
+  // por eso se dice y se sigue. Lo que sí importa es que el extracto no traiga nada más, así que se
+  // enumera lo que se salta.
+  //
+  // Y se respetan las EXCLUSIONES. `data/exclusiones-especies.json` lo lee `build-species-seleccion.js`,
+  // que es la puerta de lo que entra por la criba; un extracto entra por otra puerta, y sin esta
+  // comprobación la bandera nueva sería la forma de colar justo lo que alguien decidió dejar fuera
+  // con el dato delante. Es el mismo fallo que costó dieciséis días de posidonia publicada, al revés.
+  let yaEstaban = [];
+  if (ALTAS) {
+    const fichero = path.join(CATALOGO_DIR, 'data', 'exclusiones-especies.json');
+    const excl = fs.existsSync(fichero) ? ((readJson(fichero).espacios || {})[PARK] || []) : [];
+    const excluidas = new Map(excl.map(e => [e.scientificName, e.motivo]));
+    const pedidasExcluidas = conFicha.filter(s => excluidas.has(s.scientificName));
+    if (pedidasExcluidas.length) {
+      console.log(`\n  ! ${pedidasExcluidas.length} del extracto están EXCLUIDAS a mano y no se escriben:`);
+      for (const s of pedidasExcluidas)
+        console.log(`      ${s.scientificName} — ${String(excluidas.get(s.scientificName)).slice(0, 120)}…`);
+      conFicha = conFicha.filter(s => !excluidas.has(s.scientificName));
+    }
+    yaEstaban = conFicha.filter(s => previas.has(s.scientificName)).map(s => s.scientificName);
+    conFicha = conFicha.filter(s => !previas.has(s.scientificName));
+    console.log(`\nModo --altas: el extracto pide ${yaEstaban.length + conFicha.length} especies · ` +
+      `${yaEstaban.length} ya fichadas (se dejan como están) · ${conFicha.length} por escribir`);
+    if (pendientes.length) console.log(`  ! ${pendientes.length} sin ficha en el catálogo universal: ` +
+      `${pendientes.map(p => p.scientificName).join(', ')}\n` +
+      '    Se dan de alta con `build-species-universal.js --taxones "…"` y se vuelve a pasar esto.');
+  }
 
   // 3) Montar las fichas ---------------------------------------------------------------------------
   let siguienteId = Math.max(0, ...[...previas.values()].map(s => Number(s.id) || 0)) + 1;
@@ -708,11 +813,21 @@ function main() {
   // nombre viejo queda huérfano y conservarlo deja la misma especie dos veces en el mismo espacio
   // —*Sylvia melanocephala* junto a *Curruca melanocephala*—, que es peor que borrarla. Sigue sin
   // ser el comportamiento por omisión: una ficha puede estar ahí porque alguien la puso a mano.
-  const huerfanas = [...previas.keys()].filter(sci => !conFicha.some(s => s.scientificName === sci));
-  for (const sci of huerfanas) {
-    if (PODAR) { avisos.push(`ficha PODADA por no tener respaldo en la selección: ${sci}`); continue; }
-    species.push(previas.get(sci));
-    avisos.push(`ficha conservada sin respaldo en la selección: ${sci} (usa --podar para retirarla)`);
+  const nuevas = species.length;
+  if (ALTAS) {
+    // Con `--altas` la selección es un EXTRACTO, así que «no tiene respaldo en la selección» no
+    // significa nada aquí: lo ya publicado se conserva TAL CUAL y en su ORDEN, y lo nuevo va detrás.
+    // Conservarlo tal cual es lo que evita la trampa nº 6 —reescribir una ficha desde la selección le
+    // devuelve al espacio las aves que `aves:poda` le quitó—, y conservar el orden es lo que evita un
+    // diff de todo el catálogo que entierre las fichas que sí cambian.
+    species.unshift(...(doc.species || []));
+  } else {
+    const huerfanas = [...previas.keys()].filter(sci => !conFicha.some(s => s.scientificName === sci));
+    for (const sci of huerfanas) {
+      if (PODAR) { avisos.push(`ficha PODADA por no tener respaldo en la selección: ${sci}`); continue; }
+      species.push(previas.get(sci));
+      avisos.push(`ficha conservada sin respaldo en la selección: ${sci} (usa --podar para retirarla)`);
+    }
   }
 
   // 4) Inverso especie↔hábitat en el array de hábitats ---------------------------------------------
@@ -737,10 +852,15 @@ function main() {
   console.log('\n' + lineas.join('\n'));
 
   // 6) Informe de las que se quedan fuera ------------------------------------------------------------
+  // Con `--altas` NO se toca: ese informe describe la selección ENTERA del espacio, y reescribirlo
+  // desde un extracto de cien especies lo convertiría en una mentira más pequeña — o lo borraría
+  // entero al no quedar pendientes en el extracto. Las pendientes del extracto ya se han dicho arriba.
   const pendientesPath = path.join(OUT_DIR, `${PARK}-especies-pendientes.md`);
   const informe = informePendientes(pendientes, seleccion, gbif);
   const previoInforme = fs.existsSync(pendientesPath) ? fs.readFileSync(pendientesPath, 'utf8') : null;
-  if (pendientes.length) {
+  if (ALTAS) {
+    console.log(`= ${rel(pendientesPath)} (sin tocar: --altas trabaja sobre un extracto)`);
+  } else if (pendientes.length) {
     if (!DRY) { fs.mkdirSync(OUT_DIR, { recursive: true }); fs.writeFileSync(pendientesPath, informe, 'utf8'); }
     console.log(previoInforme === informe ? `= ${rel(pendientesPath)}` : `${DRY ? '~' : '+'} ${rel(pendientesPath)}`);
   } else if (previoInforme !== null) {
@@ -754,8 +874,8 @@ function main() {
   const aves = species.filter(s => s.zepaSiteCode).length;
   const conFoto = species.filter(s => s.image).length;
   const conEnlace = species.filter(s => (s.habitatIds || []).length).length;
-  console.log(`\n${species.length} especies escritas (${aves} aves en el apartado de ZEPA, ` +
-    `${conEnlace} colgadas de al menos un hábitat) · ${conFoto} con foto`);
+  console.log(`\n${species.length} especies ${ALTAS ? `en el catálogo, ${nuevas} DADAS DE ALTA ahora` : 'escritas'} ` +
+    `(${aves} aves en el apartado de ZEPA, ${conEnlace} colgadas de al menos un hábitat) · ${conFoto} con foto`);
   console.log(`Enlaces especie↔hábitat: ${species.reduce((n, s) => n + (s.habitatIds || []).length, 0)}`);
   if (porAtlas.length) {
     console.log(`  · ${porAtlas.length} de ellos los sostiene SOLO el Atlas (especie característica del HIC,\n` +

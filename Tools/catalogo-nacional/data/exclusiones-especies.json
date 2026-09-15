@@ -25,6 +25,18 @@
         "decidido": "2026-08-10 (c)"
       }
     ],
+    "calblanque-monte-cenizas-pena-aguila": [
+      {
+        "scientificName": "Gymnosporia senegalensis",
+        "motivo": "Es el arto, y este espacio YA lo ficha: como «Maytenus senegalensis subsp. europaea», que EIDOS marca sinónimo de «Gymnosporia senegalensis subsp. europaea» (taxonid 6258). O sea, lo que hay fichado es la SUBESPECIE de esta especie, y darla de alta pondría la misma planta dos veces en el mismo catálogo. No lo ve `taxones:duplicados` —son dos taxonid, 6257 y 6258— ni el cruce por binomio, porque cambia el género. Lo vio la auditoría (hallazgo C17) y lo confirma EIDOS. Lo que falta aquí no es un alta: es el renombrado Maytenus → Gymnosporia de la ficha que ya está, que es una de las ocho de la cola 3 del consolidado.",
+        "decidido": "2026-09-15"
+      },
+      {
+        "scientificName": "Scilla autumnalis",
+        "motivo": "El formulario del sitio ES0000260 la declara con ese nombre y el espacio ya ficha la misma planta como «Prospero autumnale» (la escila de otoño), hoy oculta por no tener descripción. EIDOS no resuelve el par —devuelve los dos como aceptados, 31996 y 8116—, así que el cruce automático no puede saberlo; el catálogo arrastra las dos fichas universales desde el piloto y el Mar Menor tiene las dos, ocultas. Darla de alta aquí publicaría VISIBLE el duplicado de una ficha que está oculta. Lo que falta no es un alta: es decidir cuál de los dos nombres se queda y fundir las dos fichas universales, que es un renombrado de cuatro puntas.",
+        "decidido": "2026-09-15"
+      }
+    ],
     "salinas-arenales-san-pedro-pinatar": [
       {
         "scientificName": "Posidonia oceanica",

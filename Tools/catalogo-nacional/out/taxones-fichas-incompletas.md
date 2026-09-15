@@ -16,4 +16,11 @@ Total: **1**.
 
 | Especie | Campos vacíos | Otros nombres en EIDOS | Descripción en EIDOS |
 |---|---|---|---|
-| *Enneapogon persicus* | commonName, habitat, seasonality, image, tips | — | Planta herbácea perenne, de hasta 50 cm de altura. Hojas con limbo de hasta 15 cm, enrollado; lígula pelosa. Inflorescencia en panícula densa, 120 x 20 mm, blanquecino-violácea. Espiguillas de 9-11 mm, con 2-3 flores. Lema ovado-redondeada, con 9 aristas plumosas en la base. Cariópside plumosa, hasta 10 mm de longitud (incluyendo las aristas). |
+| *Saxifraga almeriensis* | commonName, group, habitat, seasonality, description, image, tips | — | — |
+
+## Nombres que EIDOS da por sinónimo
+
+La ficha se ha dado de alta con el nombre **pedido**, que es el de la selección aprobada.
+Renombrar arrastra la clave en `data/contenido/` y en el resto de parques.
+
+- Saxifraga almeriensis → Saxifraga camposii subsp. leptophylla (Willk.) D.A. Webb

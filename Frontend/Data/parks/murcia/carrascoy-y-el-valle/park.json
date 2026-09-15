@@ -2292,7 +2292,7 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7730,
@@ -2806,7 +2806,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)",
-      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7478,
@@ -10619,7 +10619,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)",
       "spainStatus": "LESRPE; Directiva Hábitats 92/43/CEE, Anexo IV",
-      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 24327,
@@ -20492,7 +20492,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11592,
@@ -20696,7 +20696,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I",
-      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12316,
@@ -20900,7 +20900,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "LESRPE; Directiva Aves 2009/147/CE, Anexo I",
-      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11887,
@@ -22401,6 +22401,685 @@
       "gbifOccurrences": 2,
       "visible": true,
       "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
+    },
+    {
+      "id": 468,
+      "commonName": "Murciélago de cueva",
+      "scientificName": "Miniopterus schreibersii",
+      "kingdom": "fauna",
+      "group": "Murciélago",
+      "habitat": "Cuevas y minas; caza en vuelo alto sobre bosque, campo y láminas de agua",
+      "description": "Murciélago de alas largas y estrechas y vuelo rápido y alto, casi como el de un vencejo. Tiene la frente muy abombada y el pelo corto y erizado en la cabeza. Recorre decenas de kilómetros entre las cuevas de cría, de tránsito y de invernada.",
+      "descriptionSource": null,
+      "tips": [
+        "Frente muy abombada y pelo corto y de punta",
+        "Alas largas y estrechas; vuelo veloz y alto",
+        "Forma colonias enormes y muy apretadas en cueva"
+      ],
+      "seasonality": "Todo el año, con desplazamientos estacionales entre cuevas",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Miniopterus_schreibersii_dasythrix.jpg?width=1280",
+      "imageAttribution": "Andrew Smith (Public domain) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 4,
+      "rarityBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": true,
+      "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-09-14); Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200002 (Carrascoy y El Valle), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Chiroptera",
+        "family": "Miniopteridae",
+        "genus": "Miniopterus"
+      },
+      "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2023)",
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2007)",
+      "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 12169,
+      "gbifSpeciesKey": null,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": true
+    },
+    {
+      "id": 469,
+      "commonName": "Murciélago ratonero mediano",
+      "scientificName": "Myotis blythii",
+      "kingdom": "fauna",
+      "group": "Murciélago",
+      "habitat": "Cuevas y desvanes; caza saltamontes en pastizales y herbazales",
+      "description": "Casi idéntico al ratonero grande, con el que a menudo comparte colonia, pero algo menor y con el hocico más estrecho y una mancha clara en la frente. Está especializado en cazar saltamontes en pastizales altos, lo que reparte el alimento entre ambas especies.",
+      "descriptionSource": null,
+      "tips": [
+        "Muy parecido al ratonero grande, pero algo menor",
+        "Mancha clara difusa entre los ojos",
+        "Hocico más fino y estrecho"
+      ],
+      "seasonality": "Todo el año (hiberna en invierno)",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Myotis-blythii-cropped.jpg?width=1280",
+      "imageAttribution": "C. Robiller / www.naturlichter.de (CC BY-SA 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 4,
+      "rarityBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": true,
+      "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-09-14); Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200002 (Carrascoy y El Valle), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Chiroptera",
+        "family": "Vespertilionidae",
+        "genus": "Myotis"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2007)",
+      "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 10866,
+      "gbifSpeciesKey": null,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": true
+    },
+    {
+      "id": 470,
+      "commonName": "Murciélago patudo",
+      "scientificName": "Myotis capaccinii",
+      "kingdom": "fauna",
+      "group": "Murciélago",
+      "habitat": "Cuevas próximas a ríos y balsas; caza rozando la lámina de agua",
+      "description": "Murciélago ligado al agua: caza volando a pocos centímetros de la superficie de ríos y balsas y captura insectos —e incluso pececillos— con sus pies desproporcionadamente grandes y peludos. Esa dependencia del agua limpia lo hace muy vulnerable.",
+      "descriptionSource": null,
+      "tips": [
+        "Pies muy grandes y peludos en proporción al cuerpo",
+        "Vuela rozando la lámina de agua",
+        "Membrana del ala insertada en el tobillo, no en el dedo"
+      ],
+      "seasonality": "Todo el año (hiberna en invierno)",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Myotis_capaccinii_0105b_cropped.jpg?width=1280",
+      "imageAttribution": "This image was improved or created by the Wikigraphists of the Grap… (FAL) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 5,
+      "rarityBasis": {
+        "categoria": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": true,
+      "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-09-14); Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200002 (Carrascoy y El Valle), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Chiroptera",
+        "family": "Vespertilionidae",
+        "genus": "Myotis"
+      },
+      "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2016)",
+      "iucnSpain": "EN — En peligro (Lista Roja española, 2007)",
+      "spainStatus": "Anexo II (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Anexo V (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); UICN España: EN (En peligro) (2007)",
+      "regionalStatus": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 10958,
+      "gbifSpeciesKey": null,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": true
+    },
+    {
+      "id": 471,
+      "commonName": "Murciélago ratonero grande",
+      "scientificName": "Myotis myotis",
+      "kingdom": "fauna",
+      "group": "Murciélago",
+      "habitat": "Cuevas y desvanes; caza escarabajos en pastos, claros y bosque sin sotobosque",
+      "description": "Uno de los murciélagos más grandes de Europa, con orejas largas y anchas y hocico de aspecto perruno. Caza cerca del suelo, capturando escarabajos que localiza por el ruido que hacen al andar, no solo con el sonar. Cría en colonias numerosas en cuevas y bajo cubiertas.",
+      "descriptionSource": null,
+      "tips": [
+        "Talla grande y orejas largas y anchas",
+        "Hocico ancho, de aspecto casi perruno",
+        "Caza a ras de suelo, en zonas despejadas"
+      ],
+      "seasonality": "Todo el año (hiberna en invierno)",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Myotis.jpg?width=1280",
+      "imageAttribution": "Urheber: Manuel Werner, Germany, Wikipedia-Kontakt: http://de.wikip… (CC BY-SA 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 4,
+      "rarityBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": true,
+      "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-09-14); Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200002 (Carrascoy y El Valle), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Chiroptera",
+        "family": "Vespertilionidae",
+        "genus": "Myotis"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2007)",
+      "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 11803,
+      "gbifSpeciesKey": null,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": true
+    },
+    {
+      "id": 472,
+      "commonName": "Oreja de Liebre",
+      "scientificName": "Phlomis purpurea",
+      "kingdom": "flora",
+      "group": "Arbusto",
+      "habitat": "Vive formando matorrales en lugares pedregosos y roquedos sobre sustratos preferentemente calizos, desde 20-1000 m",
+      "description": "Arbusto hasta de 1 m, con tallos lanosos, muy foliosos. Hojas de 4-11 cm, lanceoladas o triangulares, con base cordiforme, crenadas, con pelos lanosos. Flores en verticilastros densos con seis flores cada uno, que nacen entre bractéolas estrechamente lanceoladas, agudas. Cáliz de 1,3 cm, con cinco dientes alesnados de 4 mm, peloso. Corola de 2,5 cm, pelosa, con labio superior en forma de casco, y el inferior con un gran lóbulo central redondeado, convexo, y dos laterales triangulares, pequeños, color rosado. Núculas de 5 mm, subtrígonas, color negruzco.",
+      "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+      "tips": [],
+      "seasonality": "Diciembre a junio",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Phlomis_purpurea.jpg?width=1280",
+      "imageAttribution": "autor no indicado (CC BY-SA 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-09-14); Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200002 (Carrascoy y El Valle), sección 3.3, que la cita como «Phlomis purpurea L.»: escasa; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Plantae",
+        "phylum": "Tracheophyta",
+        "class": "Magnoliopsida",
+        "order": "Lamiales",
+        "family": "Lamiaceae",
+        "genus": "Phlomis"
+      },
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 7087,
+      "gbifSpeciesKey": null,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": true
+    },
+    {
+      "id": 473,
+      "commonName": "Murciélago de herradura mediterráneo",
+      "scientificName": "Rhinolophus euryale",
+      "kingdom": "fauna",
+      "group": "Murciélago",
+      "habitat": "Cuevas cálidas; caza en bosque mediterráneo y mosaicos arbolados",
+      "description": "Murciélago de herradura de tamaño medio, de costumbres muy cavernícolas, que forma colonias de cría densas junto a otras especies. Vuela muy pegado a la vegetación, capturando polillas entre las ramas. Sus colonias son muy vulnerables a la visita de cuevas en primavera.",
+      "descriptionSource": null,
+      "tips": [
+        "Talla intermedia entre el grande y el pequeño de herradura",
+        "Apéndice superior de la nariz apuntado y algo curvado",
+        "Forma colonias apretadas en cueva, con otras especies"
+      ],
+      "seasonality": "Todo el año (hiberna en invierno)",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rhinolophus_euryale-cropped.jpg?width=1280",
+      "imageAttribution": "Carlosblh (CC BY 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 4,
+      "rarityBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": true,
+      "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-09-14); Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200002 (Carrascoy y El Valle), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Chiroptera",
+        "family": "Rhinolophidae",
+        "genus": "Rhinolophus"
+      },
+      "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2016)",
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2007)",
+      "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 11230,
+      "gbifSpeciesKey": null,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": true
+    },
+    {
+      "id": 474,
+      "commonName": "Murciélago grande de herradura",
+      "scientificName": "Rhinolophus ferrumequinum",
+      "kingdom": "fauna",
+      "group": "Murciélago",
+      "habitat": "Cuevas, minas y desvanes para refugiarse; caza en mosaicos de bosque y pasto",
+      "description": "El mayor de los murciélagos de herradura ibéricos. Debe el nombre a la hoja nasal en forma de herradura con la que emite el sonar por la nariz, no por la boca. Al reposar se envuelve por completo en las alas, como en una capa, y cuelga libre del techo.",
+      "descriptionSource": null,
+      "tips": [
+        "Al dormir se envuelve entero en las alas",
+        "Hoja nasal en forma de herradura alrededor de las fosas",
+        "Cuelga separado del techo, no metido en una grieta"
+      ],
+      "seasonality": "Todo el año (hiberna en invierno)",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Rhinolophe_2.jpg?width=1280",
+      "imageAttribution": "Marie Jullion (CC BY-SA 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 4,
+      "rarityBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": true,
+      "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-09-14); Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200002 (Carrascoy y El Valle), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Chiroptera",
+        "family": "Rhinolophidae",
+        "genus": "Rhinolophus"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2007)",
+      "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 11264,
+      "gbifSpeciesKey": 2432655,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": true
+    },
+    {
+      "id": 475,
+      "commonName": "Murciélago pequeño de herradura",
+      "scientificName": "Rhinolophus hipposideros",
+      "kingdom": "fauna",
+      "group": "Murciélago",
+      "habitat": "Cuevas, minas y edificios; caza en bosque, sotos y setos",
+      "description": "El más pequeño de los murciélagos de herradura europeos: colgado y envuelto en sus alas no llega al tamaño de una ciruela. Vuela bajo y muy cerca de la vegetación, con revoloteo de mariposa. Es muy sensible a las molestias en sus refugios de cría e invernada.",
+      "descriptionSource": null,
+      "tips": [
+        "Tamaño minúsculo, como una ciruela colgando",
+        "Vuelo bajo y revoloteante junto a setos y muros",
+        "Se envuelve en las alas al reposar, como sus parientes"
+      ],
+      "seasonality": "Todo el año (hiberna en invierno)",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kleine_Hufeisennase.jpg?width=1280",
+      "imageAttribution": "F. C. Robiller / naturlichter.de (CC BY-SA 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-09-14); Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200002 (Carrascoy y El Valle), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Mammalia",
+        "order": "Chiroptera",
+        "family": "Rhinolophidae",
+        "genus": "Rhinolophus"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2007)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
+      "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 11451,
+      "gbifSpeciesKey": null,
+      "zepaSiteCode": null,
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": true
+    },
+    {
+      "id": 476,
+      "commonName": "Chocha perdiz",
+      "scientificName": "Scolopax rusticola",
+      "kingdom": "fauna",
+      "group": "Ave limícola",
+      "habitat": null,
+      "description": "Es una limícola relativamente grande, de largo pico, patas bastante cortas y grandes ojos oscuros, muy desplazados hacia atrás y hacia arriba en la cabeza. Posee un plumaje extremadamente críptico, dominado por los tonos marrones y rojizos, que en el dorso adquieren una notable complejidad, con un diseño abigarrado de barrados, punteados y manchas de diferente tonalidad. Las regiones ventrales son de tonos cremosos, con abundantes estrías transversales de color más oscuro. Los adultos y los jóvenes son prácticamente idénticos. En vuelo resulta más pesada que otras especies cercanas y se caracteriza por sus alas redondeadas y su silueta masiva. Es un ave reacia a volar, pues confía plenamente en las virtudes de su mimética librea, pero, si siente una amenaza próxima, emprende un vuelo errático y zigzagueante a baja altura entre los árboles.",
+      "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+      "tips": [],
+      "seasonality": "Noviembre a marzo",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Woodcock_earthworm.jpg?width=1280",
+      "imageAttribution": "Ronald Slabke (CC BY-SA 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 1,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 1,
+      "rarityLocalBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF confirma su presencia con 1 ocurrencia dentro del espacio (barrido de 2026-09-14); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2: población invernante, presente; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Charadriiformes",
+        "family": "Scolopacidae",
+        "genus": "Scolopax"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 12136,
+      "gbifSpeciesKey": 2481700,
+      "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
+      "habitatIds": [],
+      "gbifOccurrences": 1,
+      "visible": true
+    },
+    {
+      "id": 477,
+      "commonName": "Azor común",
+      "scientificName": "Accipiter gentilis",
+      "kingdom": "fauna",
+      "group": "Ave rapaz",
+      "habitat": "Bosques maduros y masas forestales densas con claros",
+      "description": "Rapaz forestal de alas cortas y anchas y cola larga, diseñada para perseguir presas entre los árboles a gran velocidad. Es esquiva y se ve casi siempre de refilón. La hembra llega a ser un tercio mayor que el macho, una diferencia poco habitual entre las aves.",
+      "descriptionSource": null,
+      "tips": [
+        "Ceja blanca marcada sobre el ojo, como un antifaz al revés",
+        "Vuelo de varios aleteos rápidos seguidos de un planeo corto",
+        "Pecho finamente rayado en horizontal en los adultos"
+      ],
+      "seasonality": "Todo el año",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Northern_Goshawk_ad_M2.jpg?width=1280",
+      "imageAttribution": "Norbert Kenntner, Berlin (CC BY-SA 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-09-14); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2: población permanente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Accipitriformes",
+        "family": "Accipitridae",
+        "genus": "Accipiter"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)",
+      "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 11351,
+      "gbifSpeciesKey": 2480589,
+      "zepaSiteCode": "ES0000269",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": true
+    },
+    {
+      "id": 478,
+      "commonName": "Aguilucho pálido",
+      "scientificName": "Circus cyaneus",
+      "kingdom": "fauna",
+      "group": "Ave rapaz",
+      "habitat": "Nidifica en el norte en matorrales bajos y densos de brezos, tojos.Pastizales y tierras de labor",
+      "description": "Es una rapaz de tamaño medio, cuya fisonomía responde al característico patrón de los integrantes del género Circus, es decir, alas y cola largas, tarsos muy prolongados y aspecto general bastante grácil, aunque menos que el del aguilucho cenizo, del que se diferencia por su mayor tamaño y robustez y por tener las alas comparativamente más anchas. La especie presenta un marcado dimorfismo sexual que afecta al tamaño —las hembras son mayores y más pesadas— y a la coloración del plumaje. El macho adulto es un ave de color claro, en el que dominan los tonos grisáceos, más oscuros en el dorso, la cabeza y el pecho, y blancos en el vientre, donde, a diferencia del cenizo, no luce ningún tipo de manchas o barrados. En vuelo resultan muy visibles las puntas negras de las rémiges primarias, que contrastan mucho con el blanco de las infracoberteras alares; dorsalmente, también son visibles las puntas negras del ala, así como el obispillo, que es blanco y extenso. En la hembra adulta, por el contrario, dominan los tonos terrosos con tintes grisáceos, bastante más claros en las regiones ventrales —que están intensamente rayadas de pardo— que en el dorso, mientras que en la parte inferior de las alas exhibe un barrado abundante. El obispillo de la hembra de pálido resulta muy visible en vuelo y es más extenso que el de la hembra de cenizo. Los individuos juveniles, por su parte, son pardos en las regiones dorsales y de un suave tono ocráceo —ligeramente anaranjado— en las ventrales, que aparecen, además, surcadas por un fino estriado longitudinal. En vuelo, como todos los aguiluchos, esta especie se muestra ágil y maniobrera y es capaz de desplazarse lentamente a baja altura —incluso con malas condiciones atmosféricas— mientras prospecta el terreno con las alas colocadas en forma de “V”.",
+      "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+      "tips": [],
+      "seasonality": "Todo el año",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Circus_cyaneus%2C_Ballaugh_Curragh%2C_Isle_of_Man_1.jpg?width=1280",
+      "imageAttribution": "Isle of Man Government (CC BY 2.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-09-14); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2: población en concentración, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Accipitriformes",
+        "family": "Accipitridae",
+        "genus": "Circus"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 11120,
+      "gbifSpeciesKey": 2480487,
+      "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": true
+    },
+    {
+      "id": 479,
+      "commonName": "Lavandera boyera",
+      "scientificName": "Motacilla flava",
+      "kingdom": "fauna",
+      "group": "Ave",
+      "habitat": "Márgenes de masas de agua,terrenos húmedos,vegetación herbosa,terrenos agrícolas.Hasta 1700m",
+      "description": "Se trata de la más compacta, verdosa y colicorta de las lavanderas españolas. Exhibe dorso y obispillo de color verde oliva, alas plegadas con plumas negras orladas en blanco, y partes inferiores muy amarillas. Posee cola larga y negra, con plumas externas blancas, y patas y pico negros. La cabeza es gris azulada, con garganta y ceja blancas, y regiones ocular y auricular oscuras. Todo lo anterior se refiere al macho nupcial de la subespecie iberiae. Los machos de otras razas se diferencian por las siguientes características: flava tiene garganta amarilla y zona auricular más clara; flavissima luce ceja amarilla y cabeza verdosa; cinereocapilla presenta ceja muy reducida o ausente; thunbergi muestra garganta amarilla y cabeza gris pizarra sin ceja; y feldegg es como la anterior, pero con la cabeza negra. Ambos sexos son parecidos, pero la hembra está menos coloreada, con la cabeza gris verdosa y las partes inferiores de color amarillo tenue. Pese a que existen leves diferencias entre las hembras de cada subespecie, su separación resulta muy difícil. Los jóvenes son similares a las hembras, aunque más verdosos. En plumaje otoñal, los machos de todas las subespecies parecen hembras en plumaje nupcial, siendo difícil la identificación racial. A su vez, las hembras se vuelven parduzcas en otoño y exhiben un collar incompleto en el pecho. Un hábito destacado de esta ave es su asociación con el ganado, sobre todo vacuno.",
+      "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+      "tips": [],
+      "seasonality": "Marzo a octubre",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Yellow_wagtail.jpg?width=1280",
+      "imageAttribution": "Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-09-14); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2, que la cita como «Motacilla flava ([excluding tschutschensis])»: población reproductora, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Passeriformes",
+        "family": "Motacillidae",
+        "genus": "Motacilla"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 11274,
+      "gbifSpeciesKey": 9701857,
+      "zepaSiteCode": "ES0000269",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "reproductora"
+        ],
+        "etiqueta": "Reproductora: cría aquí",
+        "sitios": [
+          {
+            "code": "ES0000269",
+            "name": "Monte El Valle y Sierras de Altaona y Escalona",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000269 (Monte El Valle y Sierras de Altaona y Escalona), sección 3.2"
+      },
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": true
     }
   ]
 }

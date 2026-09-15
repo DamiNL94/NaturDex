@@ -27,12 +27,12 @@ espacio donde está fichado, y ésa es toda la diferencia.
 
 | estado | correcciones | qué significa |
 |---|---|---|
-| `pendiente` | 400 | el dato sigue exactamente como la auditoría lo vio |
+| `hecho` | 283 | el alta, la baja o el hueco ya está |
 | `tocado` | 282 | el valor cambió desde la auditoría |
-| `hecho` | 22 | el alta, la baja o el hueco ya está |
+| `pendiente` | 138 | el dato sigue exactamente como la auditoría lo vio |
 | `resuelto` | 21 | el campo ya no existe en la ficha |
 | `no comparable` | 7 | la auditoría anotó ahí una frase, no el valor: hay que mirarlo a mano |
-| `parcial` | 1 | tocado en unos espacios y pendiente en otros |
+| `parcial` | 2 | tocado en unos espacios y pendiente en otros |
 
 > **«Pendiente» incluye lo que se dejó a propósito.** Esta comprobación mira el dato, no la
 > intención: los `iucn_global` que siguen igual son en buena parte la **clase GUARDA** de
@@ -47,9 +47,9 @@ espacio donde está fichado, y ésa es toda la diferencia.
 | correcciones UNIVERSALES | 303 | **12** |
 | correcciones LOCALES | 30 | **21** |
 | RENOMBRADOS | 8 | **8** |
-| ALTAS de ficha | 288 | **287** |
+| ALTAS de ficha | 288 | **26** |
 | BAJAS de ficha | 3 | **2** |
-| DECISIONES, no trabajo | 83 | **74** |
+| DECISIONES, no trabajo | 83 | **73** |
 | Resueltos por la retirada del campo | 21 | **0** |
 
 > La suma puede pasar del total: una corrección sale en dos colas cuando la auditoría la
@@ -420,298 +420,298 @@ espacio donde está fichado, y ésa es toda la diferencia.
 
 ## Cola 4 · ALTAS de ficha
 
-**288 corrección(es)** · 287 pendiente(s). `build-species-universal.js` si el taxón no está en el catálogo, y después `build-species-n2.js` **solo para las nuevas**: regenerar el espacio entero le devuelve las aves que `aves:poda` le quitó (trampa nº 6).
+**288 corrección(es)** · 26 pendiente(s). `build-species-universal.js` si el taxón no está en el catálogo, y después `build-species-n2.js` **solo para las nuevas**: regenerar el espacio entero le devuelve las aves que `aves:poda` le quitó (trampa nº 6).
 
 | taxón | campo | espacios | estado | lo que la auditoría vio | lo que dice la fuente |
 |---|---|---|---|---|---|
-| *Curruca cantillans* | `inclusion` | 6 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Blanus cinereus* | `inclusion` | 5 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Curruca cantillans* | `inclusion` | 6 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Blanus cinereus* | `inclusion` | 5 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
 | *Hyparrhenia hirta* | `inclusion` | 5 | pendiente | publicada y visible | criba en vivo: nivel 3, «solo GBIF». La selección aprobada la tenía con evidencia del Atlas (observada_gbif + caracteristica) |
-| *Zamenis scalaris* | `inclusion` | 5 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Acanthodactylus erythrurus* | `inclusion` | 4 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Accipiter gentilis* | `inclusion` | 4 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «no-candidata» |
-| *Curruca conspicillata* | `inclusion` | 4 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «exclui… |
-| *Guillonea scabra* | `inclusion` | 4 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Hemorrhois hippocrepis* | `inclusion` | 4 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Zamenis scalaris* | `inclusion` | 5 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Acanthodactylus erythrurus* | `inclusion` | 4 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Accipiter gentilis* | `inclusion` | 4 | hecho | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «no-candidata» |
+| *Curruca conspicillata* | `inclusion` | 4 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «exclui… |
+| *Guillonea scabra* | `inclusion` | 4 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Hemorrhois hippocrepis* | `inclusion` | 4 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
 | *Miniopterus schreibersii* | `inclusion` | 4 | pendiente | no fichada | **el formulario oficial del sitio ES6200009 la declara** (sección 3.2), y el anexo del PRUG también. Es uno de los SIETE únicos taxones que… |
-| *Pipistrellus kuhlii* | `inclusion` | 4 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Pipistrellus pipistrellus* | `inclusion` | 4 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Psammodromus hispanicus* | `inclusion` | 4 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Sarcocapnos enneaphylla subsp. saetabensis* | `inclusion` | 4 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Tyto alba* | `inclusion` | 4 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Vipera latastei* | `inclusion` | 4 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Alytes obstetricans* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Arctostaphylos uva-ursi* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Burhinus oedicnemus* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Caprimulgus ruficollis* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Cecropis daurica* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + anexo_normativo · en la selección aprobada era «excluida» |
-| *Cnephaeus isabellinus* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Coronella girondica* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Crocidura russula* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Curruca hortensis* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Dictamnus hispanicus* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Epidalea calamita* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Erodium saxatile* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Falco subbuteo* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Hemidactylus turcicus* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Macroprotodon brevis* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Malpolon monspessulanus* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Natrix maura* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Oenanthe oenanthe* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Otus scops* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Passer montanus* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Pelodytes punctatus* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Pistacia terebinthus* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Plecotus austriacus* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Regulus regulus* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Rhinolophus ferrumequinum* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Suncus etruscus* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Tachymarptis melba* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Tamarix canariensis* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Tarentola mauritanica* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Timon lepidus* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Turdus torquatus* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Ulmus minor* | `inclusion` | 3 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Anthus campestris* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Calandrella brachydactyla* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Celtis australis* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Cercotrichas galactotes* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Circaetus gallicus* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Circus cyaneus* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «no-candidata» |
-| *Cisticola juncidis* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Clamator glandarius* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Delichon urbicum* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Eliomys quercinus* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Erica multiflora* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Erinaceus europaeus* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Felis silvestris* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Ficedula hypoleuca* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Genetta genetta* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Helianthemum cinereum* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Hippolais polyglotta* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Hormathophylla spinosa* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Jurinea pinnata* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Luscinia megarhynchos* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Macrochloa tenacissima* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + anexo_normativo · en la selección aprobada era «excluida» |
-| *Martes foina* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Melanocorypha calandra* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Meles meles* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Merops apiaster* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Muscicapa striata* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Mustela nivalis* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Myotis blythii* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «no-candidata» |
-| *Myotis capaccinii* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «no-candidata» |
-| *Myotis myotis* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «no-candidata» |
-| *Natrix natrix* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Pipistrellus kuhlii* | `inclusion` | 4 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Pipistrellus pipistrellus* | `inclusion` | 4 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Psammodromus hispanicus* | `inclusion` | 4 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Sarcocapnos enneaphylla subsp. saetabensis* | `inclusion` | 4 | parcial | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Tyto alba* | `inclusion` | 4 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Vipera latastei* | `inclusion` | 4 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Alytes obstetricans* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Arctostaphylos uva-ursi* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Burhinus oedicnemus* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Caprimulgus ruficollis* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Cecropis daurica* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + anexo_normativo · en la selección aprobada era «excluida» |
+| *Cnephaeus isabellinus* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Coronella girondica* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Crocidura russula* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Curruca hortensis* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Dictamnus hispanicus* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Epidalea calamita* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Erodium saxatile* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Falco subbuteo* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Hemidactylus turcicus* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Macroprotodon brevis* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Malpolon monspessulanus* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Natrix maura* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Oenanthe oenanthe* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Otus scops* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Passer montanus* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Pelodytes punctatus* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Pistacia terebinthus* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Plecotus austriacus* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Regulus regulus* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Rhinolophus ferrumequinum* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Suncus etruscus* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Tachymarptis melba* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Tamarix canariensis* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Tarentola mauritanica* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Timon lepidus* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Turdus torquatus* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Ulmus minor* | `inclusion` | 3 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Anthus campestris* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Calandrella brachydactyla* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Celtis australis* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Cercotrichas galactotes* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Circaetus gallicus* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Circus cyaneus* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «no-candidata» |
+| *Cisticola juncidis* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Clamator glandarius* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Delichon urbicum* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Eliomys quercinus* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Erica multiflora* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Erinaceus europaeus* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Felis silvestris* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Ficedula hypoleuca* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Genetta genetta* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Helianthemum cinereum* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Hippolais polyglotta* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Hormathophylla spinosa* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Jurinea pinnata* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Luscinia megarhynchos* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Macrochloa tenacissima* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + anexo_normativo · en la selección aprobada era «excluida» |
+| *Martes foina* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Melanocorypha calandra* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Meles meles* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Merops apiaster* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Muscicapa striata* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Mustela nivalis* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Myotis blythii* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «no-candidata» |
+| *Myotis capaccinii* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «no-candidata» |
+| *Myotis myotis* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «no-candidata» |
+| *Natrix natrix* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
 | *Odontites viscosus subsp. australis* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia caracteristica + protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-can… |
-| *Oenanthe hispanica* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Oenanthe hispanica* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
 | *Olea europaea var. sylvestris* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Osyris lanceolata* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Pelobates cultripes* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Pelophylax perezi* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Pernis apivorus* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Phoenicurus phoenicurus* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Phylloscopus bonelli* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Pipistrellus pygmaeus* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Podarcis hispanicus* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Populus nigra var. nigra* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Prunella collaris* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Prunella modularis* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Osyris lanceolata* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Pelobates cultripes* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Pelophylax perezi* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Pernis apivorus* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Phoenicurus phoenicurus* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Phylloscopus bonelli* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Pipistrellus pygmaeus* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Podarcis hispanicus* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Populus nigra var. nigra* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Prunella collaris* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Prunella modularis* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
 | *Rhamnus hispanorum* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Rhamnus pumila* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Rhinolophus euryale* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «no-candidata» |
-| *Rhinolophus hipposideros* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «no-candidata» |
-| *Scolopax rusticola* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «excluida» |
-| *Seseli montanum subsp. granatense* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Sisymbrium fugax* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Sylvia sarda* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Rhamnus pumila* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Rhinolophus euryale* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «no-candidata» |
+| *Rhinolophus hipposideros* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «no-candidata» |
+| *Scolopax rusticola* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «excluida» |
+| *Seseli montanum subsp. granatense* | `inclusion` | 2 | parcial | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Sisymbrium fugax* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Sylvia sarda* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
 | *Teucrium carolipaui* | `inclusion` | 2 | pendiente | publicada, oculta | criba en vivo: nivel 3, «solo GBIF» → excluida. La selección aprobada del 2026-08-28 la tenía en nivel 2 con evidencia observada_gbif + car… |
-| *Teucrium libanitis* | `inclusion` | 2 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Thymus vulgaris* | `inclusion` | 2 | parcial | — | criba en vivo: nivel 3, «solo GBIF». La selección aprobada la tenía con evidencia del Atlas (observada_gbif + caracteristica) |
+| *Teucrium libanitis* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Thymus vulgaris* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 3, «solo GBIF». La selección aprobada la tenía con evidencia del Atlas (observada_gbif + caracteristica) |
 | *Withania frutescens* | `inclusion` | 2 | pendiente | publicada y visible | criba en vivo: nivel 3, «solo GBIF». La selección aprobada la tenía con evidencia del Atlas (observada_gbif + caracteristica) |
-| *Achillea millefolium* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Acrocephalus arundinaceus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Aegithalos caudatus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Alauda arvensis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Alcedo atthis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Alytes dickhilleni* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Amelanchier ovalis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Anas platyrhynchos* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Anthyllis lagascana* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Apus apus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Aquila fasciata* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Arenaria aggregata* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Achillea millefolium* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Acrocephalus arundinaceus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Aegithalos caudatus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Alauda arvensis* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Alcedo atthis* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Alytes dickhilleni* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Amelanchier ovalis* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Anas platyrhynchos* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Anthyllis lagascana* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Apus apus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Aquila fasciata* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Arenaria aggregata* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
 | *Arenaria montana subsp. intricata* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Arenaria suffruticosa* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Aristida coerulescens* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Aristolochia pistolochia* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Arenaria suffruticosa* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Aristida coerulescens* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Aristolochia pistolochia* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
 | *Armeria bourgaei subsp. willkommiana* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
 | *Arrhenatherum elatius subsp. sardoum* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Asio otus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Asplenium fontanum* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Asplenium onopteris* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Asplenium trichomanes* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Aster sedifolius* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Astragalus bourgaeanus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Atadinus pumilus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Atractylis humilis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Bufo bufo* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Bupleurum fruticescens* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Buxus sempervirens* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Asio otus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Asplenium fontanum* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Asplenium onopteris* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Asplenium trichomanes* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Aster sedifolius* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Astragalus bourgaeanus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Atadinus pumilus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Atractylis humilis* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Bufo bufo* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Bupleurum fruticescens* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Buxus sempervirens* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
 | *Campanula rotundifolia* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + caracteristica · en la selección aprobada era «no-candidata» |
-| *Campanula rotundifolia subsp. hispanica* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Caprimulgus europaeus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Campanula rotundifolia subsp. hispanica* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Caprimulgus europaeus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
 | *Caroxylon genistoides* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + anexo_normativo · en la selección aprobada era «aprobada» |
-| *Caroxylon vermiculatum* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «excluida» |
+| *Caroxylon vermiculatum* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «excluida» |
 | *Centaurea boissieri subsp. mariolensis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia caracteristica + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Cephalanthera rubra* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Ceratonia siliqua* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Cephalanthera rubra* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Ceratonia siliqua* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
 | *Ceropegia munbyana* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + anexo_normativo · en la selección aprobada era «aprobada» |
-| *Cettia cetti* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Chaenorhinum rupestre* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Chalcides bedriagai* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Chamaerops humilis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Cheirolophus intybaceus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Chroicocephalus genei* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «excluida» |
-| *Chroicocephalus ridibundus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «excluida» |
-| *Chrysojasminum fruticans* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Circus aeruginosus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Columba oenas* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Colutea atlantica* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Colutea brevialata* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Colutea hispanica* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Coracias garrulus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Cuculus canorus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Curruca communis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Curruca melanocephala* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + anexo_normativo · en la selección aprobada era «excluida» |
-| *Dactylorhiza elata* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Dendrocopos major* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Emberiza cirlus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Emberiza citrinella* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Emberiza schoeniclus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Ephedra fragilis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Ephedra nebrodensis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Erica arborea* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Erinacea anthyllis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Euphorbia squamigera* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Falco columbarius* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Falco peregrinus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Fraxinus angustifolia* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Fritillaria lusitanica* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Fumana ericoides* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Fumana fontanesii* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Fumana thymifolia* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Galerida cristata* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Genista valentina* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Geum sylvaticum* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Guiraoa arvensis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Cettia cetti* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Chaenorhinum rupestre* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Chalcides bedriagai* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Chamaerops humilis* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Cheirolophus intybaceus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Chroicocephalus genei* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «excluida» |
+| *Chroicocephalus ridibundus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «excluida» |
+| *Chrysojasminum fruticans* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Circus aeruginosus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Columba oenas* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Colutea atlantica* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Colutea brevialata* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Colutea hispanica* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Coracias garrulus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Cuculus canorus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Curruca communis* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Curruca melanocephala* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + anexo_normativo · en la selección aprobada era «excluida» |
+| *Dactylorhiza elata* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Dendrocopos major* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Emberiza cirlus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Emberiza citrinella* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Emberiza schoeniclus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Ephedra fragilis* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Ephedra nebrodensis* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Erica arborea* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Erinacea anthyllis* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Euphorbia squamigera* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Falco columbarius* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Falco peregrinus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Fraxinus angustifolia* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Fritillaria lusitanica* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Fumana ericoides* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Fumana fontanesii* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Fumana thymifolia* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Galerida cristata* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Genista valentina* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Geum sylvaticum* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Guiraoa arvensis* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
 | *Gymnosporia senegalensis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + caracteristica + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «e… |
-| *Halocnemum strobilaceum* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Halocnemum strobilaceum* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
 | *Helianthemum apenninum subsp. cavanillesianum* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Helianthemum cinereum subsp. hieronymi* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Helianthemum cinereum subsp. hieronymi* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia lista_oficial_sitio · en la selección aprobada era «no-candidata» |
 | *Helianthemum cinereum subsp. rotundifolium* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Herniaria fruticosa* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Hieraaetus pennatus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Hieracium loscosianum* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Himantoglossum hircinum* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Himantoglossum robertianum* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Hirundo rustica* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Herniaria fruticosa* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Hieraaetus pennatus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Hieracium loscosianum* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Himantoglossum hircinum* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Himantoglossum robertianum* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Hirundo rustica* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
 | *Iberis carnosa subsp. hegelmaieri* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Jasione foliosa* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Juniperus communis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Juniperus phoenicea* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Jynx torquilla* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Jasione foliosa* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Juniperus communis* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Juniperus phoenicea* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Jynx torquilla* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
 | *Kickxia spuria subsp. integrifolia* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Koeleria vallesiana* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Lanius senator* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Lepus granatensis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Limbarda crithmoides* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + anexo_normativo · en la selección aprobada era «excluida» |
-| *Limonium eugeniae* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Limonium ovalifolium* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Linaria cannabina* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + anexo_normativo · en la selección aprobada era «excluida» |
-| *Linaria cavanillesii* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Lonicera etrusca* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Luscinia svecica* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «excluida» |
-| *Lysimachia arvensis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + anexo_normativo · en la selección aprobada era «excluida» |
-| *Lysimachia tenella* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Macroprotodon cucullatus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Malva multiflora* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + anexo_normativo · en la selección aprobada era «excluida» |
-| *Medicago secundiflora* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Micromeria fruticosa* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Milvus migrans* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Motacilla flava* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «no-candidata» |
-| *Mustela putorius* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Myotis emarginatus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Narcissus dubius* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Nerium oleander* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Koeleria vallesiana* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Lanius senator* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Lepus granatensis* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Limbarda crithmoides* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + anexo_normativo · en la selección aprobada era «excluida» |
+| *Limonium eugeniae* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Limonium ovalifolium* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Linaria cannabina* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + anexo_normativo · en la selección aprobada era «excluida» |
+| *Linaria cavanillesii* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Lonicera etrusca* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Luscinia svecica* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «excluida» |
+| *Lysimachia arvensis* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + anexo_normativo · en la selección aprobada era «excluida» |
+| *Lysimachia tenella* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Macroprotodon cucullatus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Malva multiflora* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + anexo_normativo · en la selección aprobada era «excluida» |
+| *Medicago secundiflora* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Micromeria fruticosa* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Milvus migrans* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Motacilla flava* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «no-candidata» |
+| *Mustela putorius* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Myotis emarginatus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Narcissus dubius* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Nerium oleander* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
 | *Neslia paniculata subsp. thracica* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Nyctalus lasiopterus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Oenanthe leucura* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Oeosporangium pteridioides* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Oloptum miliaceum* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «excluida» |
-| *Ononis aragonensis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Ophioglossum vulgatum* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Ophrys sphegodes* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Oriolus oriolus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Oryctolagus cuniculus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Osyris alba* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Osyris quadripartita* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Otanthus maritimus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «excluida» |
-| *Parietaria judaica* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Periploca angustifolia* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Nyctalus lasiopterus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Oenanthe leucura* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Oeosporangium pteridioides* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Oloptum miliaceum* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «excluida» |
+| *Ononis aragonensis* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Ophioglossum vulgatum* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Ophrys sphegodes* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Oriolus oriolus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Oryctolagus cuniculus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Osyris alba* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Osyris quadripartita* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Otanthus maritimus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «excluida» |
+| *Parietaria judaica* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Periploca angustifolia* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
 | *Petrosedum sediforme* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + caracteristica + anexo_normativo · en la selección aprobada era «aprobada» |
-| *Phillyrea angustifolia* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Phillyrea latifolia* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Phlomis purpurea* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «no-candidata» |
-| *Phylloscopus collybita* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Phylloscopus trochilus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Picus sharpei* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + anexo_normativo · en la selección aprobada era «excluida» |
-| *Pipistrellus nathusii* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Pleurodeles waltl* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Populus alba* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Phillyrea angustifolia* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Phillyrea latifolia* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Phlomis purpurea* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada del 2026-08-16 era «no-candidata» |
+| *Phylloscopus collybita* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Phylloscopus trochilus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Picus sharpei* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + anexo_normativo · en la selección aprobada era «excluida» |
+| *Pipistrellus nathusii* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Pleurodeles waltl* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Populus alba* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
 | *Porphyrio porphyrio porphyrio* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia lista_oficial_sitio · en la selección aprobada era «aprobada» |
-| *Potentilla caulescens* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Poterium ancistroides* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Potentilla caulescens* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Poterium ancistroides* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
 | *Poterium rupicolum* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + anexo_normativo · en la selección aprobada era «aprobada» |
-| *Psammodromus algirus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Quercus suber* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Rana temporaria* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Rhamnus lycioides* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Ruscus aculeatus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Salvia argentea* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Santolina viscosa* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Saxicola rubicola* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + anexo_normativo · en la selección aprobada era «aprobada» |
-| *Saxifraga corsica subsp. cossoniana* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Saxifraga latepetiolata* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Schenkia spicata* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + anexo_normativo · en la selección aprobada era «excluida» |
+| *Psammodromus algirus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Quercus suber* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Rana temporaria* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Rhamnus lycioides* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Ruscus aculeatus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Salvia argentea* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Santolina viscosa* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Saxicola rubicola* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + protegida + anexo_normativo · en la selección aprobada era «aprobada» |
+| *Saxifraga corsica subsp. cossoniana* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Saxifraga latepetiolata* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Schenkia spicata* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + anexo_normativo · en la selección aprobada era «excluida» |
 | *Scilla autumnalis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Senecio auricula subsp. auricula* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Sideritis tragoriganum* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Sitta europaea* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Streptopelia turtur* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Strix aluco* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Sus scrofa* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Sylvia borin* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Tadarida teniotis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Tamarix boveana* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Tamarix gallica* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «excluida» |
-| *Teucrium capitatum* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Senecio auricula subsp. auricula* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Sideritis tragoriganum* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Sitta europaea* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Streptopelia turtur* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Strix aluco* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Sus scrofa* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Sylvia borin* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Tadarida teniotis* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Tamarix boveana* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Tamarix gallica* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo + lista_oficial_sitio · en la selección aprobada era «excluida» |
+| *Teucrium capitatum* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
 | *Teucrium capitatum subsp. gracillimum* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Teucrium carthaginense* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Teucrium franchetianum* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Teucrium pseudochamaepitys* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Teucrium rivasii* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Thymus funkii* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Thymus orospedanus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Thymus serpylloides* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia observada_gbif + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Thymus serpylloides subsp. gadorensis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
-| *Thymus zygis subsp. gracilis* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Turdus iliacus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Turdus pilaris* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Umbilicus rupestris* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Valeriana tuberosa* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
-| *Viburnum tinus* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
-| *Vulpes vulpes* | `inclusion` | 1 | pendiente | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Teucrium carthaginense* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Teucrium franchetianum* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Teucrium pseudochamaepitys* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Teucrium rivasii* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Thymus funkii* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Thymus orospedanus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Thymus serpylloides* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia observada_gbif + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Thymus serpylloides subsp. gadorensis* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + lista_oficial_sitio · en la selección aprobada era «no-candidata» |
+| *Thymus zygis subsp. gracilis* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Turdus iliacus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Turdus pilaris* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Umbilicus rupestris* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Valeriana tuberosa* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 2, evidencia observada_gbif + protegida · en la selección aprobada era «no-candidata» |
+| *Viburnum tinus* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia protegida + anexo_normativo · en la selección aprobada era «no-candidata» |
+| *Vulpes vulpes* | `inclusion` | 1 | hecho | — | criba en vivo: nivel 1, evidencia anexo_normativo · en la selección aprobada era «no-candidata» |
 
 ## Cola 5 · BAJAS de ficha
 
@@ -725,7 +725,7 @@ espacio donde está fichado, y ésa es toda la diferencia.
 
 ## Cola 6 · DECISIONES, no trabajo
 
-**83 corrección(es)** · 74 pendiente(s). Nadie las puede ejecutar sin el boletín delante. No se tocan hasta que se decidan, y se decide **una vez para todos los espacios**.
+**83 corrección(es)** · 73 pendiente(s). Nadie las puede ejecutar sin el boletín delante. No se tocan hasta que se decidan, y se decide **una vez para todos los espacios**.
 
 | taxón | campo | espacios | estado | lo que la auditoría vio | lo que dice la fuente |
 |---|---|---|---|---|---|
@@ -753,7 +753,7 @@ espacio donde está fichado, y ésa es toda la diferencia.
 | *Sarcocornia fruticosa* | `scientific_name` | 2 | pendiente | Sarcocornia fruticosa (taxonid 33125, key 3083613), taxonomy.genus «S… | EIDOS: sinónimo; acepta «*Salicornia lagascae* (Fuente, Rufo & Sánchez Mata) Piirainen & G. Kadereit» (taxonid 33125, género *Salicornia*).… |
 | *Sideritis bourgaeana* | `image` | 2 | tocado | visible y sin foto | auditoría de fotos: 303 fichas · 272 en Commons · 10 fuera de Commons · **21 sin foto**, de las que solo 3 son visibles: ésta, *Artemisia h… |
 | *Teucrium carolipaui* | `inclusion` | 2 | pendiente | publicada, oculta | criba en vivo: nivel 3, «solo GBIF» → excluida. La selección aprobada del 2026-08-28 la tenía en nivel 2 con evidencia observada_gbif + car… |
-| *Thymus vulgaris* | `inclusion` | 2 | parcial | — | criba en vivo: nivel 3, «solo GBIF». La selección aprobada la tenía con evidencia del Atlas (observada_gbif + caracteristica) |
+| *Thymus vulgaris* | `inclusion` | 2 | hecho | — | criba en vivo: nivel 3, «solo GBIF». La selección aprobada la tenía con evidencia del Atlas (observada_gbif + caracteristica) |
 | *Withania frutescens* | `inclusion` | 2 | pendiente | publicada y visible | criba en vivo: nivel 3, «solo GBIF». La selección aprobada la tenía con evidencia del Atlas (observada_gbif + caracteristica) |
 | *Andryala integrifolia* | `inclusion` | 1 | pendiente | publicada y visible | criba en vivo: nivel 3, «solo GBIF». La selección aprobada la tenía con evidencia del Atlas (observada_gbif + caracteristica) |
 | *Artemisia barrelieri* | `inclusion` | 1 | pendiente | publicada y visible | criba en vivo: nivel 3, «solo GBIF». La selección aprobada la tenía con evidencia del Atlas (observada_gbif + caracteristica) |

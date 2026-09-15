@@ -2429,7 +2429,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)",
-      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 7478,
@@ -2782,7 +2782,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)",
       "spainStatus": "LESRPE; Directiva Hábitats 92/43/CEE, Anexo IV",
-      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 24327,
@@ -5819,7 +5819,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2015)",
       "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo V",
-      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11350,
@@ -6031,7 +6031,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas",
-      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11289,
@@ -7590,7 +7590,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
       "spainStatus": "LESRPE; Directiva Aves 2009/147/CE, Anexo I",
-      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11887,
@@ -13559,6 +13559,338 @@
       "gbifOccurrences": 0,
       "visible": true,
       "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
+    },
+    {
+      "id": 206,
+      "commonName": "Gaviota picofina",
+      "scientificName": "Chroicocephalus genei",
+      "kingdom": "fauna",
+      "group": "Ave limícola",
+      "habitat": null,
+      "description": "Se trata de una gaviota de mediano tamaño que, a pesar de estar encuadrada en el grupo de las gaviotas encapuchadas (como, por ejemplo, su pariente la reidora), carece del característico capirote oscuro. De aspecto parecido a la gaviota reidora —aunque ligeramente mayor y más estilizada—, la picofina es un lárido de largas alas y formas refinadas, que no presenta diferencias sexuales evidentes en lo que al tamaño y al plumaje se refiere. Los ejemplares adultos durante la estación reproductora exhiben una librea de color gris claro en el dorso y blanco —con sutiles matices rosados— en las regiones ventrales; el pico — largo y más apuntado que el de otras gaviotas— es de un intenso color rojizo oscuro que, a cierta distancia, da la impresión de ser negro. El iris es amarillo y aparece rodeado de un fino anillo ocular rojo. Los ejemplares juveniles, por su parte, lucen un plumaje algo diferente, con las regiones ventrales blancas (pero sin matices rosáceos), el dorso gris y una amplia banda alar más oscura, compuesta por las coberteras alares marrones y las rémiges terciarias negras; poseen el pico anaranjado y presentan una mancha auricular de color marrón. El plumaje de adulto se adquiere tras la muda del segundo verano.",
+      "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+      "tips": [],
+      "seasonality": "Todo el año",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Larus_genei.jpg?width=1280",
+      "imageAttribution": "GabrielBuissart (CC BY-SA 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF confirma su presencia con 38 ocurrencias dentro del espacio (barrido de 2026-09-12); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2, que la cita como «Larus genei»: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Charadriiformes",
+        "family": "Laridae",
+        "genus": "Chroicocephalus"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 16358,
+      "gbifSpeciesKey": 6065810,
+      "zepaSiteCode": "ES0000260",
+      "migratory": false,
+      "sitePresence": {
+        "tipos": [
+          "permanente"
+        ],
+        "etiqueta": "Residente todo el año",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
+      "habitatIds": [],
+      "gbifOccurrences": 38,
+      "visible": true
+    },
+    {
+      "id": 207,
+      "commonName": "Gaviota reidora",
+      "scientificName": "Chroicocephalus ridibundus",
+      "kingdom": "fauna",
+      "group": "Ave marina",
+      "habitat": "Costas, salinas, embalses, ríos y campos de cultivo inundados",
+      "description": "Gaviota pequeña y ágil, muy común en invierno tierra adentro. En verano lleva la cabeza cubierta por una capucha de color chocolate; en invierno solo le queda una mancha oscura tras el ojo. En vuelo enseña una cuña blanca inconfundible en el borde delantero del ala.",
+      "descriptionSource": null,
+      "tips": [
+        "Cuña blanca en el filo delantero del ala, visible en vuelo",
+        "En invierno, una mancha oscura como un auricular tras el ojo",
+        "Pico y patas rojo oscuro"
+      ],
+      "seasonality": "Otoño e invierno",
+      "image": "https://inaturalist-open-data.s3.amazonaws.com/photos/605325270/original.jpg",
+      "imageAttribution": "lalaia (CC BY 4.0) · GBIF",
+      "coordinates": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF confirma su presencia con 38 ocurrencias dentro del espacio (barrido de 2026-09-12); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2, que la cita como «Larus ridibundus»: población invernante, presente; Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995): la norma la enumera en el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor, que la cita como «Larus ridibundus» (gaviota reidora); EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Charadriiformes",
+        "family": "Laridae",
+        "genus": "Chroicocephalus"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)",
+      "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 16356,
+      "gbifSpeciesKey": 6065824,
+      "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
+      "habitatIds": [],
+      "gbifOccurrences": 38,
+      "visible": true
+    },
+    {
+      "id": 208,
+      "commonName": "Pechiazul",
+      "scientificName": "Luscinia svecica",
+      "kingdom": "fauna",
+      "group": "Ave",
+      "habitat": null,
+      "description": "Pajarillo de figura rechoncha, cola larga y pico fino, con un plumaje en el que destaca su pechera manchada de azul, que en los machos adultos queda perfilada por una fina franja negra, rodeada a su vez por una más ancha banda anaranjada. Además, los machos poseen unas bigoteras teñidas de azul, que en algunas subespecies se funden con la garganta, igualmente azulada. Dependiendo también de la subespecie, el babero azul está adornado con una mancha, a modo de medalla, que puede ser blanca o naranja. La coloración de las hembras resulta menos llamativa. Suelen lucir poco azul en el pecho, a menudo tienen la garganta de color blanco crema, y la banda naranja del pecho está desdibujada. No obstante, las hembras de más edad pueden presentar una coloración similar a los machos. Ambos sexos poseen una distintiva línea blanca sobre el ojo y exhiben un dorso pardo-grisáceo. La cola, anaranjada en su mitad basal, está coloreada de negro o pardo muy oscuro en la parte exterior. Los volantones son pardos y moteados, como los juveniles de petirrojo y ruiseñor común. Sin embargo, los pechiazules juveniles se distinguen por tres detalles: la línea superciliar blanca, su garganta clara y la coloración naranja de la cola.",
+      "descriptionSource": "EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»",
+      "tips": [],
+      "seasonality": "Agosto a marzo",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Luscinia_svecica_volgae.jpg?width=1280",
+      "imageAttribution": "Bogomolov.PL (CC BY-SA 3.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF confirma su presencia con 2 ocurrencias dentro del espacio (barrido de 2026-09-12); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2, que la cita como «Cyanecula svecica»: población invernante, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Passeriformes",
+        "family": "Muscicapidae",
+        "genus": "Luscinia"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 12282,
+      "gbifSpeciesKey": 4408732,
+      "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "invernante"
+        ],
+        "etiqueta": "Invernante: pasa aquí el invierno",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
+      "habitatIds": [],
+      "gbifOccurrences": 2,
+      "visible": true
+    },
+    {
+      "id": 209,
+      "commonName": "Curruca tomillera",
+      "scientificName": "Curruca conspicillata",
+      "kingdom": "fauna",
+      "group": "Ave",
+      "habitat": "Matorral bajo y abierto, tomillares y saladares con arbustos dispersos",
+      "description": "Curruca menuda de matorral raso, gris en la cabeza, parda en el dorso y con las plumas del ala ribeteadas de castaño encendido. El anillo blanco del ojo le da el aire de «gafas» que le da nombre. Es inquieta y suele delatarse por su reclamo antes de dejarse ver.",
+      "descriptionSource": null,
+      "tips": [
+        "Anillo blanco alrededor del ojo bien marcado",
+        "Panel castaño vivo en el ala plegada",
+        "Vive en matorral muy bajo, no en arbolado"
+      ],
+      "seasonality": "Todo el año en el sureste; parcialmente migradora",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_%C3%A0_lunettes_Aqueduc_de_Zaghouan.jpg?width=1280",
+      "imageAttribution": "El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF confirma su presencia con 1 ocurrencia dentro del espacio (barrido de 2026-09-12); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2, que la cita como «Sylvia conspicillata»: población en concentración, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Passeriformes",
+        "family": "Sylviidae",
+        "genus": "Curruca"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2004)",
+      "spainStatus": "Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 80923,
+      "gbifSpeciesKey": 2492959,
+      "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
+      "habitatIds": [],
+      "gbifOccurrences": 1,
+      "visible": true
+    },
+    {
+      "id": 210,
+      "commonName": "Curruca carrasqueña",
+      "scientificName": "Curruca cantillans",
+      "kingdom": "fauna",
+      "group": "Ave",
+      "habitat": "Matorral alto, jarales, encinares aclarados y bordes de bosque",
+      "description": "Curruca de tamaño medio, con el macho de dorso gris, garganta y pecho color teja y un bigote blanco muy nítido que separa ambos. El anillo ocular es rojo. Canta desde el interior del matorral y hace vuelos cortos de exhibición sobre las matas.",
+      "descriptionSource": null,
+      "tips": [
+        "Bigote blanco que bordea la garganta rojiza",
+        "Anillo ocular rojo anaranjado",
+        "Prefiere matorral alto, no el raso"
+      ],
+      "seasonality": "Primavera y verano (estival)",
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9A%CE%BF%CE%BA%CE%BA%CE%B9%CE%BD%CE%BF%CF%84%CF%83%CE%B9%CF%81%CE%BF%CE%B2%CE%AC%CE%BA%CE%BF%CF%82.jpg?width=1280",
+      "imageAttribution": "Antonios Tsaknakis (CC BY-SA 4.0) · Wikimedia Commons",
+      "coordinates": null,
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
+      },
+      "featured": false,
+      "source": "GBIF confirma su presencia con 0 ocurrencias dentro del espacio (barrido de 2026-09-12); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2, que la cita como «Sylvia cantillans ([excluding subalpina])»: población en concentración, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
+      "taxonomy": {
+        "kingdom": "Animalia",
+        "phylum": "Chordata",
+        "class": "Aves",
+        "order": "Passeriformes",
+        "family": "Sylviidae",
+        "genus": "Curruca"
+      },
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "regionalCcaa": "Región de Murcia",
+      "reviewNote": null,
+      "eidosTaxonId": 80920,
+      "gbifSpeciesKey": 2492950,
+      "zepaSiteCode": "ES0000260",
+      "migratory": true,
+      "sitePresence": {
+        "tipos": [
+          "en concentración"
+        ],
+        "etiqueta": "En paso migratorio",
+        "sitios": [
+          {
+            "code": "ES0000260",
+            "name": "Mar Menor",
+            "seccion": "3.2"
+          }
+        ],
+        "fuente": "Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2"
+      },
+      "habitatIds": [],
+      "gbifOccurrences": 0,
+      "visible": true
     }
   ]
 }

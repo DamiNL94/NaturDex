@@ -1,0 +1,537 @@
+{
+  "_nota": "Extracto de la criba pasada EN VIVO el 2026-09-14 para este espacio, que es uno de los dos que la auditoría del catálogo no guardó (Espuña y Carrascoy fueron los primeros que auditó). Contiene SOLO las especies que la criba aprueba y que el espacio no tiene fichadas. No es la selección aprobada del espacio y no la sustituye. Lo escribe build-species-n2.js --altas, que conserva intacto todo lo ya publicado.",
+  "park": "carrascoy-y-el-valle",
+  "generado": "2026-09-14",
+  "origen": "criba en vivo con el GBIF versionado del espacio (build-species-seleccion.js)",
+  "total": 12,
+  "especies": [
+    {
+      "scientificName": "Scolopax rusticola",
+      "class": "Aves",
+      "gbifOccurrences": 1,
+      "habitats": 3,
+      "evidence": [
+        "observada_gbif",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "barrancos-de-gebas",
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Scolopax rusticola",
+          "siteCode": "ES0000269",
+          "siteName": "Monte El Valle y Sierras de Altaona y Escalona",
+          "seccion": "3.2",
+          "tipoPoblacion": "invernante",
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "eidosTaxonId": 12136,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Accipiter gentilis",
+      "class": "Aves",
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "cabo-cope-puntas-calnegre",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Accipiter gentilis",
+          "siteCode": "ES0000269",
+          "siteName": "Monte El Valle y Sierras de Altaona y Escalona",
+          "seccion": "3.2",
+          "tipoPoblacion": "permanente",
+          "categoriaPoblacion": null
+        }
+      ],
+      "eidosTaxonId": 11351,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Circus cyaneus",
+      "class": "Aves",
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "calblanque-monte-cenizas-pena-aguila",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Circus cyaneus",
+          "siteCode": "ES0000269",
+          "siteName": "Monte El Valle y Sierras de Altaona y Escalona",
+          "seccion": "3.2",
+          "tipoPoblacion": "en concentración",
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "eidosTaxonId": 11120,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Motacilla flava",
+      "class": "Aves",
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "calblanque-monte-cenizas-pena-aguila",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Motacilla flava ([excluding tschutschensis])",
+          "siteCode": "ES0000269",
+          "siteName": "Monte El Valle y Sierras de Altaona y Escalona",
+          "seccion": "3.2",
+          "tipoPoblacion": "reproductora",
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "eidosTaxonId": 11274,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Miniopterus schreibersii",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "cabezo-gordo",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "CEEA: Vulnerable"
+        }
+      ],
+      "rarityScore": 4,
+      "rarityBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Miniopterus schreibersii",
+          "siteCode": "ES6200002",
+          "siteName": "Carrascoy y El Valle",
+          "seccion": "3.2",
+          "tipoPoblacion": "permanente",
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "eidosTaxonId": 12169,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Myotis blythii",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "humedal-del-ajauque-y-rambla-salada",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "CEEA: Vulnerable"
+        },
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 4,
+      "rarityBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Myotis blythii",
+          "siteCode": "ES6200002",
+          "siteName": "Carrascoy y El Valle",
+          "seccion": "3.2",
+          "tipoPoblacion": "permanente",
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "eidosTaxonId": 10866,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Myotis capaccinii",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "cabezo-gordo",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "CEEA: En peligro de extinción"
+        },
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
+          "categoria": "Vulnerable"
+        }
+      ],
+      "rarityScore": 5,
+      "rarityBasis": {
+        "categoria": "En peligro de extinción",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 5,
+      "rarityLocalBasis": {
+        "categoria": "En peligro de extinción",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Myotis capaccinii",
+          "siteCode": "ES6200002",
+          "siteName": "Carrascoy y El Valle",
+          "seccion": "3.2",
+          "tipoPoblacion": "permanente",
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "eidosTaxonId": 10958,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Myotis myotis",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "cabezo-gordo",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "CEEA: Vulnerable"
+        },
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 4,
+      "rarityBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Myotis myotis",
+          "siteCode": "ES6200002",
+          "siteName": "Carrascoy y El Valle",
+          "seccion": "3.2",
+          "tipoPoblacion": "permanente",
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "eidosTaxonId": 11803,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Rhinolophus euryale",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "cabezo-gordo",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "CEEA: Vulnerable"
+        },
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 4,
+      "rarityBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Rhinolophus euryale",
+          "siteCode": "ES6200002",
+          "siteName": "Carrascoy y El Valle",
+          "seccion": "3.2",
+          "tipoPoblacion": "permanente",
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "eidosTaxonId": 11230,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Rhinolophus ferrumequinum",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "cabezo-gordo",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "CEEA: Vulnerable"
+        },
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 4,
+      "rarityBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 4,
+      "rarityLocalBasis": {
+        "categoria": "Vulnerable",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Rhinolophus ferrumequinum",
+          "siteCode": "ES6200002",
+          "siteName": "Carrascoy y El Valle",
+          "seccion": "3.2",
+          "tipoPoblacion": "permanente",
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "eidosTaxonId": 11264,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Rhinolophus hipposideros",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "monte-arabi",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        },
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Rhinolophus hipposideros",
+          "siteCode": "ES6200002",
+          "siteName": "Carrascoy y El Valle",
+          "seccion": "3.2",
+          "tipoPoblacion": "permanente",
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "eidosTaxonId": 11451,
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Phlomis purpurea",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": null,
+      "normas": [
+        {
+          "ambito": "Región de Murcia",
+          "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+          "categoria": "Especies de interés especial"
+        }
+      ],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 3,
+      "rarityLocalBasis": {
+        "categoria": "Especies de interés especial",
+        "norma": "Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.",
+        "ambito": "Región de Murcia"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Phlomis purpurea L.",
+          "siteCode": "ES6200002",
+          "siteName": "Carrascoy y El Valle",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": "escasa"
+        }
+      ],
+      "eidosTaxonId": 7087,
+      "nivelDeFuente": 1
+    }
+  ]
+}

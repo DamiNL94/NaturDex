@@ -792,23 +792,12 @@
     },
     {
         "term": "foliolo",
-        "definition": "Cada una de las piezas en que se divide una hoja compuesta.",
+        "definition": "Cada una de las hojitas independientes en que se divide una hoja compuesta.",
         "category": "botánica",
         "aliases": [
             "foliolos",
             "folíolo",
             "folíolos"
-        ],
-        "source": "NaturDex (divulgacion)"
-    },
-    {
-        "term": "folíolo",
-        "definition": "Cada una de las hojitas independientes en que se divide una hoja compuesta.",
-        "category": "botánica",
-        "aliases": [
-            "folíolos",
-            "foliolo",
-            "foliolos"
         ],
         "source": "NaturDex (divulgacion)"
     },

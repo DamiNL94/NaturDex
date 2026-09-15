@@ -9824,5 +9824,426 @@
     "taxonid": 9448,
     "motivo": null,
     "ambitos": {}
+  },
+  "sci:Achillea millefolium": {
+    "taxonid": 9885,
+    "motivo": null,
+    "ambitos": {
+      "Mundial": {
+        "categoriaconservacion": "LC (Preocupación menor)",
+        "anio": 2016
+      }
+    }
+  },
+  "sci:Amelanchier ovalis": {
+    "taxonid": 2114,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Arenaria aggregata": {
+    "taxonid": 2293,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Arenaria suffruticosa": {
+    "taxonid": 4641,
+    "motivo": null,
+    "ambitos": {
+      "España": {
+        "categoriaconservacion": "VU (Vulnerable)",
+        "anio": 2010
+      }
+    }
+  },
+  "sci:Aristida coerulescens": {
+    "taxonid": 80435,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Aristolochia pistolochia": {
+    "taxonid": 2424,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Asplenium fontanum": {
+    "taxonid": 2538,
+    "motivo": null,
+    "ambitos": {
+      "Mundial": {
+        "categoriaconservacion": "LC (Preocupación menor)",
+        "anio": 2017
+      }
+    }
+  },
+  "sci:Aster sedifolius": {
+    "taxonid": 69,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Astragalus bourgaeanus": {
+    "taxonid": 2574,
+    "motivo": null,
+    "ambitos": {
+      "Mundial": {
+        "categoriaconservacion": "LC (Preocupación menor)",
+        "anio": 2012
+      }
+    }
+  },
+  "sci:Atadinus pumilus": {
+    "taxonid": 7743,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Caroxylon vermiculatum": {
+    "taxonid": 1341,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Chrysojasminum fruticans": {
+    "taxonid": 5449,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Dictamnus hispanicus": {
+    "taxonid": 4038,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Emberiza citrinella": {
+    "taxonid": 10911,
+    "motivo": null,
+    "ambitos": {
+      "España": {
+        "categoriaconservacion": "NE (No evaluado)",
+        "anio": 2004
+      },
+      "Mundial": {
+        "categoriaconservacion": "LC (Preocupación menor)",
+        "anio": 2016
+      },
+      "Península": {
+        "categoriaconservacion": "EN (En peligro)",
+        "anio": 2021
+      }
+    }
+  },
+  "sci:Ephedra nebrodensis": {
+    "taxonid": 4311,
+    "motivo": null,
+    "ambitos": {
+      "Mundial": {
+        "categoriaconservacion": "LC (Preocupación menor)",
+        "anio": 2011
+      }
+    }
+  },
+  "sci:Erica multiflora": {
+    "taxonid": 4372,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Fumana fontanesii": {
+    "taxonid": 4653,
+    "motivo": null,
+    "ambitos": {
+      "España": {
+        "categoriaconservacion": "VU (Vulnerable)",
+        "anio": 2010
+      }
+    }
+  },
+  "sci:Genista valentina": {
+    "taxonid": 4929,
+    "motivo": null,
+    "ambitos": {
+      "Mundial": {
+        "categoriaconservacion": "LC (Preocupación menor)",
+        "anio": 2017
+      }
+    }
+  },
+  "sci:Geum sylvaticum": {
+    "taxonid": 4979,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Guillonea scabra": {
+    "taxonid": 5004,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Helianthemum cinereum subsp. hieronymi": {
+    "taxonid": 4974,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Hieracium loscosianum": {
+    "taxonid": 24806,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Himantoglossum hircinum": {
+    "taxonid": 5270,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Hormathophylla spinosa": {
+    "taxonid": 5218,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Juniperus communis": {
+    "taxonid": 5499,
+    "motivo": null,
+    "ambitos": {
+      "Mundial": {
+        "categoriaconservacion": "LC (Preocupación menor)",
+        "anio": 2013
+      }
+    }
+  },
+  "sci:Jurinea pinnata": {
+    "taxonid": 5519,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Koeleria vallesiana": {
+    "taxonid": 10057,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Limbarda crithmoides": {
+    "taxonid": 37515,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Limonium eugeniae": {
+    "taxonid": 82092,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Limonium ovalifolium": {
+    "taxonid": 5856,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Macroprotodon cucullatus": {
+    "taxonid": 23752,
+    "motivo": null,
+    "ambitos": {
+      "España": {
+        "categoriaconservacion": "NT (Casi amenazado)",
+        "anio": 2002
+      },
+      "Mundial": {
+        "categoriaconservacion": "LC (Preocupación menor)",
+        "anio": 2009
+      }
+    }
+  },
+  "sci:Medicago secundiflora": {
+    "taxonid": 6241,
+    "motivo": null,
+    "ambitos": {
+      "Mundial": {
+        "categoriaconservacion": "LC (Preocupación menor)",
+        "anio": 2012
+      }
+    }
+  },
+  "sci:Micromeria fruticosa": {
+    "taxonid": 24931,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Narcissus dubius": {
+    "taxonid": 6515,
+    "motivo": null,
+    "ambitos": {
+      "Mundial": {
+        "categoriaconservacion": "LC (Preocupación menor)",
+        "anio": 2018
+      }
+    }
+  },
+  "sci:Nyctalus lasiopterus": {
+    "taxonid": 11566,
+    "motivo": null,
+    "ambitos": {
+      "España": {
+        "categoriaconservacion": "VU (Vulnerable)",
+        "anio": 2007
+      },
+      "Mundial": {
+        "categoriaconservacion": "VU (Vulnerable)",
+        "anio": 2016
+      }
+    }
+  },
+  "sci:Ononis aragonensis": {
+    "taxonid": 6673,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Ophioglossum vulgatum": {
+    "taxonid": 6599,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Otanthus maritimus": {
+    "taxonid": 10444,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Parietaria judaica": {
+    "taxonid": 6939,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Phlomis purpurea": {
+    "taxonid": 7087,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Pipistrellus nathusii": {
+    "taxonid": 11814,
+    "motivo": null,
+    "ambitos": {
+      "España": {
+        "categoriaconservacion": "NT (Casi amenazado)",
+        "anio": 2007
+      },
+      "Mundial": {
+        "categoriaconservacion": "LC (Preocupación menor)",
+        "anio": 2016
+      }
+    }
+  },
+  "sci:Quercus suber": {
+    "taxonid": 7228,
+    "motivo": null,
+    "ambitos": {
+      "Mundial": {
+        "categoriaconservacion": "LC (Preocupación menor)",
+        "anio": 2017
+      }
+    }
+  },
+  "sci:Rana temporaria": {
+    "taxonid": 12298,
+    "motivo": null,
+    "ambitos": {
+      "España": {
+        "categoriaconservacion": "LC (Preocupación menor)",
+        "anio": 2002
+      },
+      "Mundial": {
+        "categoriaconservacion": "LC (Preocupación menor)",
+        "anio": 2022
+      }
+    }
+  },
+  "sci:Rhamnus hispanorum": {
+    "taxonid": 7731,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Rhamnus pumila": {
+    "taxonid": 982,
+    "motivo": null,
+    "ambitos": {
+      "España": {
+        "categoriaconservacion": "VU (Vulnerable)",
+        "anio": 2010
+      }
+    }
+  },
+  "sci:Salvia argentea": {
+    "taxonid": 7920,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Saxifraga corsica subsp. cossoniana": {
+    "taxonid": 8006,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Schenkia spicata": {
+    "taxonid": 8086,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Seseli montanum subsp. granatense": {
+    "taxonid": 8097,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Sitta europaea": {
+    "taxonid": 11226,
+    "motivo": null,
+    "ambitos": {
+      "España": {
+        "categoriaconservacion": "NE (No evaluado)",
+        "anio": 2004
+      },
+      "Mundial": {
+        "categoriaconservacion": "LC (Preocupación menor)",
+        "anio": 2018
+      },
+      "Península": {
+        "categoriaconservacion": "LC (Preocupación menor)",
+        "anio": 2021
+      }
+    }
+  },
+  "sci:Sylvia sarda": {
+    "taxonid": 80945,
+    "motivo": null,
+    "ambitos": {
+      "España": {
+        "categoriaconservacion": "NE (No evaluado)",
+        "anio": 2004
+      },
+      "Mundial": {
+        "categoriaconservacion": "LC (Preocupación menor)",
+        "anio": 2016
+      }
+    }
+  },
+  "sci:Teucrium rivasii": {
+    "taxonid": 8832,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Thymus orospedanus": {
+    "taxonid": 8934,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Thymus serpylloides": {
+    "taxonid": 8944,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Thymus serpylloides subsp. gadorensis": {
+    "taxonid": 8946,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Thymus zygis subsp. gracilis": {
+    "taxonid": 8958,
+    "motivo": null,
+    "ambitos": {}
+  },
+  "sci:Valeriana tuberosa": {
+    "taxonid": 9238,
+    "motivo": null,
+    "ambitos": {
+      "Mundial": {
+        "categoriaconservacion": "LC (Preocupación menor)",
+        "anio": 2015
+      }
+    }
   }
 }

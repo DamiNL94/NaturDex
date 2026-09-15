@@ -1,0 +1,323 @@
+{
+  "_nota": "Extracto de la selección que la auditoría del catálogo pasó EN VIVO el 2026-09-12. Contiene SOLO las especies que esa criba aprueba y que el espacio no tiene fichadas: son las «altas» de la cola 4 del consolidado (Docs/auditoria-consolidado.md). No es la selección aprobada del espacio y no la sustituye — la de la auditoría difiere de la versionada en las dos direcciones, y adoptarla entera daría por no respaldadas fichas que sí lo están. Lo escribe build-species-n2.js --altas, que conserva intacto todo lo ya publicado.",
+  "park": "calblanque-monte-cenizas-pena-aguila",
+  "generado": "2026-09-12",
+  "origen": "auditoría del catálogo, criba en vivo (calblanque-seleccion-vivo.json)",
+  "total": 7,
+  "especies": [
+    {
+      "scientificName": "Chroicocephalus ridibundus",
+      "class": "Aves",
+      "gbifOccurrences": 38,
+      "habitats": 10,
+      "evidence": [
+        "observada_gbif",
+        "anexo_normativo",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "cabo-cope-puntas-calnegre",
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Larus ridibundus",
+          "siteCode": "ES0000260",
+          "siteName": "Mar Menor",
+          "seccion": "3.2",
+          "tipoPoblacion": "invernante",
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "anexoNormativo": {
+        "citadaComo": "Larus ridibundus",
+        "categoria": null,
+        "nota": "Gaviota reidora. GBIF lo da por sinónimo de Chroicocephalus ridibundus.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies, cada una con su nombre castellano al lado, que es lo que las desambigua). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a evaluación de impacto (I) y a autorización (II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "Transcrito de un ESCANEO LEGIBLE del boletín, que sustituye a la extracción OCR con la que se hizo la primera versión de esta entrada. Importa decirlo porque cambia lo que se le atribuye a la norma: la capa de texto del PDF que sirve `/services/boletin/…` está muy dañada («Meles rrteles», «Martes ji)in(i», «Whitania frutescen s») y la primera transcripción reparó 24 nombres, de los cuales 17 eran daño de la digitalización y no erratas del PORN — la norma imprime bien «Chamaerops humilis», «Ulmus minor», «Arbutus unedo», «Ziziphus lotus», «Tringa totanus» o «Meles meles». Hoy el verbatim es lo que imprime el boletín y solo CINCO entradas llevan `nombreCorregido`, comprobadas una a una contra el backbone de GBIF: tres erratas de imprenta («Phoenix dactyliphera», «Juniperus phoenicia», «Whitania frutescens»), una grafía sin la h moderna («Limonium cartaginensis») y un género en desuso («Aethechinus algirus»). El resto resuelve EXACT por sí solo, incluidos los que GBIF da por sinónimo, que el pipeline ya sabe seguir. Dos entradas de flora citan un género («Ephedra sppl.», «Rhamnus sppl.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d. El Artículo 14 enumera HÁBITATS protegidos, no especies, y cita como prioritarios las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, los pastizales mediterráneos xerofíticos anuales y vivaces y los bosques de Tetraclinis articulata: coherente con lo que el Atlas cartografía aquí. El Artículo 11 confirma la extensión del ámbito, 2.453 ha en Cartagena y La Unión."
+        }
+      },
+      "eidosTaxonId": 16356,
+      "sinonimosFusionados": [
+        "Larus ridibundus"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Chroicocephalus genei",
+      "class": "Aves",
+      "gbifOccurrences": 38,
+      "habitats": 9,
+      "evidence": [
+        "observada_gbif",
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "espacios-abiertos-e-islas-del-mar-menor",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Larus genei",
+          "siteCode": "ES0000260",
+          "siteName": "Mar Menor",
+          "seccion": "3.2",
+          "tipoPoblacion": "permanente",
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "eidosTaxonId": 16358,
+      "sinonimosFusionados": [
+        "Larus genei"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Gymnosporia senegalensis",
+      "class": "Magnoliopsida",
+      "gbifOccurrences": 8,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "caracteristica",
+        "anexo_normativo",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "espacios-abiertos-e-islas-del-mar-menor",
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Maytenus senegalensis subsp. europaea (Boiss.) Güemes & M.B. Crespo",
+          "siteCode": "ES0000260",
+          "siteName": "Mar Menor",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": null
+        }
+      ],
+      "anexoNormativo": {
+        "citadaComo": "Maytenus senegalensis",
+        "categoria": null,
+        "nota": "GBIF la da por sinónimo de Gymnosporia senegalensis, que es el nombre aceptado hoy.",
+        "fuente": {
+          "norma": "Decreto n.º 45/1995, de 26 de mayo, por el que se aprueba el Plan de Ordenación de los Recursos Naturales de Calblanque, Monte de las Cenizas y Peña del Águila.",
+          "boletin": "BORM n.º 152, de 3 de julio de 1995, anuncio 10286",
+          "url": "https://www.borm.es/services/boletin/ano/1995/numero/152/pdf",
+          "anexo": "Artículo 12 «Especies protegidas de flora» (21 entradas, de la Orden de 17 de febrero de 1989 sobre protección de especies de la flora silvestre de la Región de Murcia) y Artículo 13.1.d «Especies protegidas de fauna» (13 especies, cada una con su nombre castellano al lado, que es lo que las desambigua). Los ANEXOS del PORN no traen inventario biológico: son actividades sujetas a evaluación de impacto (I) y a autorización (II), límites del Parque Regional (III) y cartografía.",
+          "cita": "Decreto n.º 45/1995, de 26 de mayo, PORN de Calblanque, Monte de las Cenizas y Peña del Águila, artículos 12 y 13 (BORM n.º 152, de 3 de julio de 1995)",
+          "ambito": "el ámbito del PORN, que son 2.453 ha en Cartagena y La Unión e incluye el Parque Regional más una franja de conexión ecológica a su alrededor",
+          "consultado": "2026-08-17",
+          "nota": "Transcrito de un ESCANEO LEGIBLE del boletín, que sustituye a la extracción OCR con la que se hizo la primera versión de esta entrada. Importa decirlo porque cambia lo que se le atribuye a la norma: la capa de texto del PDF que sirve `/services/boletin/…` está muy dañada («Meles rrteles», «Martes ji)in(i», «Whitania frutescen s») y la primera transcripción reparó 24 nombres, de los cuales 17 eran daño de la digitalización y no erratas del PORN — la norma imprime bien «Chamaerops humilis», «Ulmus minor», «Arbutus unedo», «Ziziphus lotus», «Tringa totanus» o «Meles meles». Hoy el verbatim es lo que imprime el boletín y solo CINCO entradas llevan `nombreCorregido`, comprobadas una a una contra el backbone de GBIF: tres erratas de imprenta («Phoenix dactyliphera», «Juniperus phoenicia», «Whitania frutescens»), una grafía sin la h moderna («Limonium cartaginensis») y un género en desuso («Aethechinus algirus»). El resto resuelve EXACT por sí solo, incluidos los que GBIF da por sinónimo, que el pipeline ya sabe seguir. Dos entradas de flora citan un género («Ephedra sppl.», «Rhamnus sppl.») y NO dan de alta ninguna especie. El Artículo 13 apartados a, b y c no enumeran: remiten al Catálogo Nacional de Especies Amenazadas y a los anexos de las Directivas Hábitats y Aves, así que solo se transcribe el apartado d. El Artículo 14 enumera HÁBITATS protegidos, no especies, y cita como prioritarios las fruticedas espinescentes de Ziziphus lotus y Periploca del Sureste árido, los pastizales mediterráneos xerofíticos anuales y vivaces y los bosques de Tetraclinis articulata: coherente con lo que el Atlas cartografía aquí. El Artículo 11 confirma la extensión del ámbito, 2.453 ha en Cartagena y La Unión."
+        }
+      },
+      "eidosTaxonId": 6257,
+      "sinonimosFusionados": [
+        "Maytenus senegalensis"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Luscinia svecica",
+      "class": "Aves",
+      "gbifOccurrences": 2,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "espacios-abiertos-e-islas-del-mar-menor",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Cyanecula svecica",
+          "siteCode": "ES0000260",
+          "siteName": "Mar Menor",
+          "seccion": "3.2",
+          "tipoPoblacion": "invernante",
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "eidosTaxonId": 12282,
+      "sinonimosFusionados": [
+        "Cyanecula svecica"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Curruca conspicillata",
+      "class": "Aves",
+      "gbifOccurrences": 1,
+      "habitats": 5,
+      "evidence": [
+        "observada_gbif",
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "cabo-cope-puntas-calnegre",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa (verificado por el nombre aceptado: Curruca conspicillata (Temminck, 1820))",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Sylvia conspicillata",
+          "siteCode": "ES0000260",
+          "siteName": "Mar Menor",
+          "seccion": "3.2",
+          "tipoPoblacion": "en concentración",
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "nombreAceptadoEidos": "Curruca conspicillata (Temminck, 1820)",
+      "eidosTaxonId": 80923,
+      "sinonimosFusionados": [
+        "Sylvia conspicillata"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Curruca cantillans",
+      "class": "Aves",
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "protegida",
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "carrascoy-y-el-valle",
+      "normas": [
+        {
+          "ambito": "España",
+          "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+          "categoria": "LESRPE: En régimen de protección especial"
+        }
+      ],
+      "rarityScore": 2,
+      "rarityBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "rarityLocal": 2,
+      "rarityLocalBasis": {
+        "categoria": "En régimen de protección especial",
+        "norma": "Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011",
+        "ambito": "España"
+      },
+      "origen": "Especie nativa (verificado por el nombre aceptado: Curruca cantillans (Pallas, 1764))",
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Sylvia cantillans ([excluding subalpina])",
+          "siteCode": "ES0000260",
+          "siteName": "Mar Menor",
+          "seccion": "3.2",
+          "tipoPoblacion": "en concentración",
+          "categoriaPoblacion": "presente"
+        }
+      ],
+      "nombreAceptadoEidos": "Curruca cantillans (Pallas, 1764)",
+      "eidosTaxonId": 80920,
+      "sinonimosFusionados": [
+        "Sylvia cantillans"
+      ],
+      "nivelDeFuente": 1
+    },
+    {
+      "scientificName": "Scilla autumnalis",
+      "class": null,
+      "gbifOccurrences": 0,
+      "habitats": 0,
+      "evidence": [
+        "lista_oficial_sitio"
+      ],
+      "yaFichadaEn": "espacios-abiertos-e-islas-del-mar-menor",
+      "normas": [],
+      "rarityScore": 1,
+      "rarityBasis": null,
+      "rarityLocal": 1,
+      "rarityLocalBasis": null,
+      "origen": null,
+      "listaOficialSitio": [
+        {
+          "citadaComo": "Scilla autumnalis L.",
+          "siteCode": "ES0000260",
+          "siteName": "Mar Menor",
+          "seccion": "3.3",
+          "tipoPoblacion": null,
+          "categoriaPoblacion": null
+        }
+      ],
+      "eidosTaxonId": 31996,
+      "nivelDeFuente": 1
+    }
+  ]
+}

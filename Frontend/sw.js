@@ -64,7 +64,13 @@
 //      No hay módulos nuevos: cambian Js/rareza.js (`categoriaConservacion()`) y
 //      Js/render/catalogo.js, los dos ya precacheados, y por eso hace falta subir la versión — si no,
 //      el dispositivo que ya tenía la app guardada seguiría pintando el distintivo viejo.
-var VERSION = 'v70';
+// v71: `Data/glosario.json` pierde una entrada duplicada («folíolo», que el fichero traía además de
+//      «foliolo», cada una citando a la otra como alias). No es cosmético: `glosario.term` es UNIQUE
+//      con utf8mb4_unicode_ci, que ignora los acentos, así que para MySQL eran la MISMA fila y la
+//      tabla se quedaba en 218 donde el fichero declaraba 219. Al ser un fichero PRECACHEADO, sin
+//      subir la versión el dispositivo que ya tenía la app guardada seguiría con la copia vieja y
+//      con la definición que pisaba a la buena. No cambia ningún módulo.
+var VERSION = 'v71';
 var RUNTIME_CACHE = 'naturdex-runtime-' + VERSION;
 
 // Armazón mínimo que se intenta precachear en la instalación (best-effort).
