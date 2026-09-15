@@ -25,7 +25,16 @@
     "se convierte en la única fuente que gana siempre y nadie lo sabe.",
     "",
     "El `spainStatus` se queda: las dos fichas lo tienen igual en los dieciséis espacios y en el",
-    "catálogo, y no hay herramienta que lo derive hoy."
+    "catálogo, y no hay herramienta que lo derive hoy.",
+    "",
+    "Retirado el campo, se pasó `especies:listaroja-mundial` y no escribió nada, por motivos",
+    "distintos en cada una: Curruca conspicillata (taxonid 80923) SÍ tiene evaluación Mundial en",
+    "EIDOS —LC, 2019— y sus once fichas ya llevaban ese valor con la nomenclatura buena, así que lo",
+    "de aquí solo servía para pisarlo; Saxicola rubicola (taxonid 16387) NO tiene fila Mundial —EIDOS",
+    "solo devuelve la evaluación de ámbito Península, que `lib/uicn.js` no guarda a propósito—, así",
+    "que cae en la clase C (GUARDA) y la herramienta NO la toca. Su «LC (Preocupación menor)» sigue",
+    "siendo una afirmación a mano, y se queda: escribirle «no evaluada» sería falso, porque la UICN",
+    "sí la evalúa y quien no trae la fila es EIDOS."
   ],
 
   "Saxicola rubicola": {
