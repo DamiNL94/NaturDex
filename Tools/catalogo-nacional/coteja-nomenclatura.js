@@ -96,7 +96,7 @@ const fs = require('fs');
 const path = require('path');
 const { arg, flag, sleep } = require('../lib/cli');
 const { OUT_DIR, readJson, writeJson, rel, fromRoot, parkFiles, escribeEspacio } = require('../lib/io');
-const { rows } = require('../lib/eidos');
+const { rows, rangoPedido, rangoCoincide } = require('../lib/eidos');
 const { getJson } = require('../lib/http');
 
 const PARK = arg('park');
@@ -216,8 +216,10 @@ async function pasadaAutoridades(fichas) {
  * Clasificación de los hallazgos. Cada uno lleva `corregible`, que es lo único que `--write` mira:
  * los renombrados NO lo son por lo que explica la cabecera, aunque el nombre bueno se sepa.
  */
-function clasifica(fichas, cache) {
+async function clasifica(fichas, cache) {
   const hallazgos = [];
+  // Identificadores propuestos que la comprobación en vivo desmiente (ver la nota de B2).
+  const noVerificados = [];
   const porNombre = new Map();
   for (const f of fichas) {
     const clave = `${f.sp.scientificName}`;
@@ -256,16 +258,177 @@ function clasifica(fichas, cache) {
       });
     }
 
-    // B2 · el eidosTaxonId no es de rango especie mientras la ficha lleva un binomio.
+    /*
+     * B2 · el eidosTaxonId no es de rango especie mientras la ficha lleva un binomio.
+     *
+     * Esta clase nació `corregible: false` con la nota «hay que reanclar», y así estuvo: nadie
+     * había mirado si había a DÓNDE reanclar. Lo hay, y casi siempre en la misma respuesta: la
+     * consulta por prefijo que ya se ha hecho para B1 trae la especie aceptada al lado de la
+     * subespecie. Medido el 2026-09-15 sobre el catálogo entero, **22 taxones en 49 fichas**.
+     *
+     * Y no es que alguien los tecleara mal: los escribió el pipeline. `resolveTaxon` empareja por
+     * prefijo para tolerar el autor, con lo que «Turdus merula» casa igual con la especie que con
+     * «Turdus merula subsp. cabrerae» —el mirlo canario—, y se quedaba con la que EIDOS listara
+     * primero. De ese identificador colgaban después la Lista Roja, la figura legal y la taxonomía:
+     * el saúco de Cañaverosa venía anunciando el «CEEA: En peligro de extinción» del **saúco de La
+     * Palma**. La causa está tapada en `lib/eidos.js` (desempate por rango); esto reancla lo ya
+     * escrito, que la corrección de la fuente no toca.
+     *
+     * La propuesta solo se da si bajo el MISMO prefijo hay un aceptado de rango especie. Cuando no
+     * lo hay —*Caralluma europaea*, cuyo único aceptado es una variedad— no se inventa: se enumera,
+     * porque elegir ahí es un renombrado (deuda nº 36) y no un reanclaje.
+     */
     const porId = cache.eidosId[sp.eidosTaxonId];
     if (porId && !porId.error && porId.aceptado &&
         porId.aceptado.taxonrank && porId.aceptado.taxonrank !== 'Species' &&
         String(sci).trim().split(/\s+/).length === 2) {
+      /*
+       * Primero la fila ACEPTADA con ese nombre. Y si no la hay, la fila que LLEVA ese nombre aunque
+       * EIDOS la tenga por sinónimo — que no es lo mismo que adoptar otro taxón, es lo contrario.
+       *
+       * Un `eidosTaxonId` identifica al TAXÓN bajo el que EIDOS archiva este nombre; cuál sea el
+       * nombre aceptado de ese taxón es la otra pregunta, la del renombrado (B1, deuda nº 36), y
+       * ésta no la toca. El precedente está en el propio catálogo y en el §2 del CLAUDE.md:
+       * *Anabasis hispanica* lleva el 1838 desde siempre, que es el taxón donde EIDOS mete su nombre
+       * como sinónimo junto a *A. articulata* y *A. mucronata*.
+       *
+       * Lo que se evita con esto es peor que un rango mal puesto: *Rhamnus pumila* apuntaba a
+       * «Atadinus alpinus subsp. legionensis», *Podarcis hispanica* a la subespecie *atrata* de las
+       * Columbretes y *Regulus ignicapillus* a la *balearicus* — fichas de la Región de Murcia
+       * declarándose poblaciones insulares o leonesas, y con la Lista Roja y la figura legal
+       * colgando de ahí.
+       *
+       * La verificación en vivo cambia en este caso: el aceptado del taxonid propuesto NO va a
+       * llamarse como la ficha (por eso la fila es un sinónimo), así que lo que se exige es que sea
+       * del RANGO que el nombre pide. Si el aceptado fuera otra subespecie, se estaría cambiando un
+       * anclaje malo por otro.
+       */
+      const conNombre = (e && !e.error ? (e.filas || []) : []).filter(r => casaNombre(r.name, sci) && r.taxonid != null);
+      const especie = conNombre.find(r => r.nametype === 'Aceptado/válido' && r.taxonrank === 'Species')
+        || conNombre.find(r => rangoCoincide(r.taxonrank, rangoPedido(sci)) && r.taxonid !== sp.eidosTaxonId);
+      /*
+       * EL IDENTIFICADOR PROPUESTO SE VUELVE A PREGUNTAR EN VIVO, sin caché, y no es celo.
+       *
+       * Lo demás de esta pasada se cachea porque son mil peticiones y la respuesta apenas cambia.
+       * Un `taxonid` no: es lo único que EIDOS puede **renumerar**, y lo hace. La primera vez que
+       * esta clase escribió (2026-09-15), la caché daba el 12054 a «Capra pyrenaica H. R. Schinz,
+       * 1838» y hoy el 12054 es ***Rupicapra pyrenaica***, el rebeco: otro género y otra especie.
+       * Cinco fichas de cabra montés se quedaron apuntando al rebeco, sin que fallara nada, y con
+       * la ironía de que la avería que se estaba arreglando era exactamente ésa.
+       *
+       * La regla que deja: **una caché puede guardar lo que la fuente DICE, nunca la clave con la
+       * que se le vuelve a preguntar.** Son unas pocas peticiones y evitan escribir un puntero a
+       * otro taxón.
+       */
+      let reanclable = !!(especie && especie.taxonid != null && especie.taxonid !== sp.eidosTaxonId);
+      if (reanclable) {
+        try {
+          const vivo = await rows('v_taxonomia',
+            [`taxonid=eq.${especie.taxonid}`, 'select=name,taxonrank,nametype']);
+          const acc = vivo.find(r => r.nametype === 'Aceptado/válido');
+          // Si la fila que lleva el nombre es la ACEPTADA, se exige además que el aceptado se llame
+          // como la ficha; si es un sinónimo, el aceptado se llamará de otra manera por definición y
+          // lo único exigible es el RANGO (ver la nota de arriba).
+          const porSinonimo = especie.nametype !== 'Aceptado/válido';
+          reanclable = !!(acc && rangoCoincide(acc.taxonrank, rangoPedido(sci)) &&
+            (porSinonimo || casaNombre(acc.name, sci)));
+          if (!reanclable) noVerificados.push({ sci, id: especie.taxonid, dice: acc ? `[${acc.taxonrank}] ${acc.name}` : '(sin aceptado)' });
+        } catch (_) { reanclable = false; }
+        await sleep(150);
+      }
+      const porSinonimo = !!(especie && especie.nametype !== 'Aceptado/válido');
       hallazgos.push({
-        tipo: 'id_de_otro_rango', corregible: false, sci, slugs,
+        tipo: 'id_de_otro_rango', corregible: reanclable, sci, slugs,
         detalle: `el eidosTaxonId ${sp.eidosTaxonId} es de rango ${porId.aceptado.taxonrank} ` +
-          `(«${porId.aceptado.name}»), pero la ficha declara un binomio de especie`,
-        propuesta: null, propuestaTaxonId: null,
+          `(«${porId.aceptado.name}»), pero la ficha declara un binomio de especie` +
+          (reanclable
+            ? (porSinonimo
+                ? `; EIDOS archiva «${sci}» bajo el taxonid ${especie.taxonid} (ahí es un ${String(especie.nametype).toLowerCase()}, ` +
+                  'y el nombre aceptado de ese taxón es otra pregunta: la del renombrado)'
+                : `; EIDOS acepta la especie con el taxonid ${especie.taxonid} («${especie.name}»)`)
+            : '; EIDOS no archiva ese nombre en ningún taxón del rango que pide, así que reanclar sería renombrar'),
+        propuesta: null, propuestaTaxonId: reanclable ? especie.taxonid : null,
+      });
+    }
+
+    /*
+     * B4 · la ficha no trae `eidosTaxonId`, y EIDOS resuelve su nombre sin ambigüedad.
+     *
+     * `fix-identificadores-incoherentes.js` dejó esto escrito y sin hacer: «no rellena los nulos;
+     * rellenarlos es otro trabajo y otra decisión… un nulo no miente: dice que nadie lo ha
+     * resuelto». Tenía razón en la regla y en aplazarlo, porque sus dos casos eran distintos entre
+     * sí. Éste es el trabajo, hecho con la condición que faltaba: **se rellena solo cuando EIDOS
+     * acepta ese nombre exacto y en el RANGO que el nombre pide.**
+     *
+     * Con esa condición, el nulo del olivo sigue sin rellenarse solo, que es lo correcto: la ficha
+     * declara *Olea europaea* subsp. *europaea* y el 6644 es la ESPECIE, mientras el 6645 —que sí es
+     * la subespecie— lleva debajo también *subsp. sylvestris*, el acebuche. Ahí no hay un nulo por
+     * resolver: hay una decisión pendiente (C6 de la auditoría).
+     *
+     * Y por qué importa más de lo que parece: sin `eidosTaxonId`, `lista-roja-espana.js` y
+     * `lista-roja-mundial.js` caen a resolver **por nombre**, que es justo el camino donde EIDOS
+     * responde «sinónimo» y la herramienta se planta. Un nulo no miente, pero empuja a la siguiente
+     * herramienta al camino malo.
+     */
+    if (grupo.some(g => g.sp.eidosTaxonId == null)) {
+      const pedido = rangoPedido(sci);
+      const cand = (e && !e.error ? (e.filas || []) : [])
+        .find(r => r.nametype === 'Aceptado/válido' && casaNombre(r.name, sci) && rangoCoincide(r.taxonrank, pedido));
+      let ok = !!(cand && cand.taxonid != null);
+      if (ok) {
+        try {
+          const vivo = await rows('v_taxonomia', [`taxonid=eq.${cand.taxonid}`, 'select=name,taxonrank,nametype']);
+          const acc = vivo.find(r => r.nametype === 'Aceptado/válido');
+          ok = !!(acc && casaNombre(acc.name, sci) && rangoCoincide(acc.taxonrank, pedido));
+          if (!ok) noVerificados.push({ sci, id: cand.taxonid, dice: acc ? `[${acc.taxonrank}] ${acc.name}` : '(sin aceptado)' });
+        } catch (_) { ok = false; }
+        await sleep(150);
+      }
+      const cuantas = grupo.filter(g => g.sp.eidosTaxonId == null).length;
+      hallazgos.push({
+        tipo: 'id_ausente', corregible: ok, sci,
+        slugs: grupo.filter(g => g.sp.eidosTaxonId == null).map(g => g.slug),
+        detalle: `${cuantas} ficha(s) sin eidosTaxonId` +
+          (ok ? `; EIDOS acepta «${sci}» con el taxonid ${cand.taxonid} («${cand.name}»), del rango que pide el nombre`
+              : '; ninguna fila ACEPTADA de EIDOS casa con ese nombre en el rango que pide, ' +
+                'así que elegir un identificador sería una decisión y no un relleno'),
+        propuesta: null, propuestaTaxonId: ok ? cand.taxonid : null,
+      });
+    }
+
+    /*
+     * B3 · el eidosTaxonId apunta a OTRO TAXÓN, no a otro rango del mismo.
+     *
+     * B2 mira el rango y B1 mira el nombre, y entre las dos quedaba un hueco por el que cabe lo peor:
+     * un identificador de rango especie, perfectamente aceptado, **de una especie distinta**. Nada
+     * lo veía, y no es hipotético: el primer `--write` de B2 escribió en cinco fichas de *Capra
+     * pyrenaica* el taxonid que su propia caché daba por bueno, y EIDOS lo había renumerado — hoy
+     * ese número es ***Rupicapra pyrenaica***, el rebeco. La comprobación en vivo de B2 impide
+     * volver a escribirlo; ésta encuentra los que ya estén escritos, vengan de donde vengan.
+     *
+     * Solo se mira cuando EIDOS acepta el nombre de la ficha: si lo da por sinónimo, que el
+     * identificador apunte a otro nombre es lo esperable y de eso habla B1.
+     */
+    if (porId && !porId.error && porId.aceptado && porId.aceptado.taxonrank === 'Species' &&
+        e && !e.error && e.aceptadoPropio && !casaNombre(porId.aceptado.name, sci)) {
+      const especie = (e.filas || [])
+        .find(r => r.nametype === 'Aceptado/válido' && r.taxonrank === 'Species' && casaNombre(r.name, sci));
+      let reanclable = !!(especie && especie.taxonid != null && especie.taxonid !== sp.eidosTaxonId);
+      if (reanclable) {
+        try {
+          const vivo = await rows('v_taxonomia', [`taxonid=eq.${especie.taxonid}`, 'select=name,taxonrank,nametype']);
+          const acc = vivo.find(r => r.nametype === 'Aceptado/válido');
+          reanclable = !!(acc && acc.taxonrank === 'Species' && casaNombre(acc.name, sci));
+          if (!reanclable) noVerificados.push({ sci, id: especie.taxonid, dice: acc ? `[${acc.taxonrank}] ${acc.name}` : '(sin aceptado)' });
+        } catch (_) { reanclable = false; }
+        await sleep(150);
+      }
+      hallazgos.push({
+        tipo: 'id_de_otro_taxon', corregible: reanclable, sci, slugs,
+        detalle: `el eidosTaxonId ${sp.eidosTaxonId} es «${porId.aceptado.name}», que NO es el taxón ` +
+          `que declara la ficha` +
+          (reanclable ? `; EIDOS acepta «${sci}» con el taxonid ${especie.taxonid}` : '; y EIDOS no ofrece otro con ese nombre'),
+        propuesta: null, propuestaTaxonId: reanclable ? especie.taxonid : null,
       });
     }
 
@@ -343,6 +506,11 @@ function clasifica(fichas, cache) {
       });
     }
   }
+  if (noVerificados.length) {
+    console.log(`\n⚠ ${noVerificados.length} reanclaje(s) propuesto(s) que la comprobación en vivo desmiente ` +
+      '(el taxonid que traía la caché no es hoy lo que decía: renumerado, o de otro rango). NO se escriben:');
+    for (const v of noVerificados) console.log(`   · ${v.sci} → taxonid ${v.id}, que hoy es ${v.dice}`);
+  }
   return hallazgos;
 }
 
@@ -362,11 +530,29 @@ function corrigeUniversal(hallazgos) {
   const universal = readJson(universalPath);
   let n = 0;
   for (const h of hallazgos) {
-    if (h.tipo !== 'genus_taxonomia_desalineado') continue;
-    const ficha = universal[h.sci];
-    if (!ficha || !ficha.taxonomy || ficha.taxonomy.genus === h.propuesta) continue;
-    ficha.taxonomy.genus = h.propuesta;
-    n++;
+    if (h.tipo === 'genus_taxonomia_desalineado') {
+      const ficha = universal[h.sci];
+      if (!ficha || !ficha.taxonomy || ficha.taxonomy.genus === h.propuesta) continue;
+      ficha.taxonomy.genus = h.propuesta;
+      n++;
+      continue;
+    }
+    /*
+     * El `eidosTaxonId` es un campo LOCAL (`sync-species-catalog.js`, lista `LOCALES`), así que
+     * `species:apply` no lo reparte y reanclar las fichas no lo revierte. Pero **786 fichas del
+     * catálogo universal lo llevan igualmente**, y no de adorno: es por donde `lista-roja-espana.js`
+     * resuelve el taxón antes de caer al nombre. Dejar ahí el identificador viejo después de
+     * reanclar es sembrar la misma avería en la siguiente herramienta que lo lea — con el agravante
+     * de que ésa sí escribe un campo que ve el usuario. Se sincroniza con lo que acaban de decir las
+     * fichas, que es la misma disciplina del romero que explica el comentario de arriba.
+     */
+    if (h.tipo === 'id_de_otro_rango' || h.tipo === 'id_de_otro_taxon') {
+      const ficha = universal[h.sci];
+      if (!ficha || h.propuestaTaxonId == null) continue;
+      if (ficha.eidosTaxonId === undefined || ficha.eidosTaxonId === h.propuestaTaxonId) continue;
+      ficha.eidosTaxonId = h.propuestaTaxonId;
+      n++;
+    }
   }
   if (n) writeJson(universalPath, universal);
   return n;
@@ -390,6 +576,21 @@ function aplica(fichas, hallazgos) {
       }
       if (h.tipo === 'gbif_key_sinonimo_homotipico' && f.sp.gbifSpeciesKey !== h.propuesta) {
         f.sp.gbifSpeciesKey = h.propuesta; cambios++;
+        docs.set(f.file, f.doc);
+      }
+      // El reanclaje no cambia el NOMBRE de la ficha, así que no desengancha su texto de
+      // `data/contenido/` ni deja fila huérfana en la BD: solo apunta el identificador al taxón que
+      // la ficha dice ser. Lo que sí hay que hacer detrás es volver a derivar lo que colgaba del
+      // identificador viejo (Lista Roja, figura legal, taxonomía), y eso lo dice el informe.
+      // `id_ausente` solo RELLENA: si la ficha ya tiene un identificador, quien decide si es el bueno
+      // es B2/B3, que han mirado a dónde apunta. Pisarlo aquí sería resolver por el nombre un caso
+      // que el identificador ya estaba respondiendo.
+      if (h.tipo === 'id_ausente' && h.propuestaTaxonId != null && f.sp.eidosTaxonId == null) {
+        f.sp.eidosTaxonId = h.propuestaTaxonId; cambios++;
+        docs.set(f.file, f.doc);
+      }
+      if ((h.tipo === 'id_de_otro_rango' || h.tipo === 'id_de_otro_taxon') && h.propuestaTaxonId != null && f.sp.eidosTaxonId !== h.propuestaTaxonId) {
+        f.sp.eidosTaxonId = h.propuestaTaxonId; cambios++;
         docs.set(f.file, f.doc);
       }
       if (h.tipo === 'genus_taxonomia_desalineado' && f.sp.taxonomy && f.sp.taxonomy.genus !== h.propuesta) {
@@ -418,7 +619,9 @@ function aplica(fichas, hallazgos) {
 
 const TITULOS = {
   nombre_sinonimo: 'El nombre de la ficha es un SINÓNIMO para EIDOS (hay que renombrar)',
-  id_de_otro_rango: 'El eidosTaxonId no es de rango especie (hay que reanclar)',
+  id_de_otro_rango: 'El eidosTaxonId no es de rango especie: se reancla a la especie que EIDOS acepta',
+  id_de_otro_taxon: 'El eidosTaxonId apunta a OTRA especie (no a otro rango de la misma)',
+  id_ausente: 'La ficha no trae eidosTaxonId y EIDOS lo resuelve sin ambigüedad',
   genus_discordante: 'El género de taxonomy no cuadra con el del nombre (sin resolver)',
   genus_taxonomia_desalineado: 'taxonomy.genus contradice a EIDOS (corregible)',
   gbif_key_sinonimo_homotipico: 'gbifSpeciesKey apunta a un sinónimo HOMOTÍPICO de GBIF (corregible: pierde ocurrencias)',
@@ -457,6 +660,66 @@ function informe(hallazgos, pasoA) {
 
 // --- Principal ------------------------------------------------------------------------------------
 
+/*
+ * El `eidosTaxonId` del CATÁLOGO UNIVERSAL contra el de las fichas, que no puede ser otro.
+ *
+ * Es un campo LOCAL (lista `LOCALES` de `sync-species-catalog.js`), así que `species:apply` no lo
+ * reparte y nadie lo cotejaba. Pero 786 fichas del catálogo universal lo llevan igualmente, y es
+ * por donde `lista-roja-espana.js` resuelve el taxón antes de caer al nombre: un identificador viejo
+ * ahí es una avería **armada**, esperando a la siguiente herramienta que lo lea. Se vio al reanclar
+ * el 2026-09-15 — las fichas ya apuntaban a la especie y el catálogo universal seguía apuntando a la
+ * subespecie en dieciocho taxones—, y no lo habría visto ninguna comprobación del repositorio:
+ * `validate` compara los parques entre sí y solo en los campos UNIVERSALES.
+ *
+ * Solo se sincroniza cuando TODAS las fichas del taxón coinciden entre ellas: si no, el desacuerdo
+ * es el problema y elegir uno lo escondería (eso es `fix-identificadores-incoherentes.js`).
+ */
+function desajusteIdUniversal(fichas) {
+  const universalPath = path.join(path.dirname(OUT_DIR), 'data', 'especies-universal.json');
+  if (!fs.existsSync(universalPath)) return 0;
+  const universal = readJson(universalPath);
+
+  const porTaxon = new Map();
+  for (const f of fichas) {
+    if (f.sp.eidosTaxonId == null) continue;
+    if (!porTaxon.has(f.sp.scientificName)) porTaxon.set(f.sp.scientificName, new Set());
+    porTaxon.get(f.sp.scientificName).add(f.sp.eidosTaxonId);
+  }
+
+  const desajustados = [], ausentes = [];
+  for (const [sci, ficha] of Object.entries(universal)) {
+    const ids = porTaxon.get(sci);
+    if (!ids || ids.size !== 1) continue;
+    const id = [...ids][0];
+    // El campo AUSENTE es el caso mayoritario y el que más daño hace: `lista-roja-espana.js` y
+    // `lista-roja-mundial.js` resuelven «por `eidosTaxonId` y solo caen al nombre si falta», y por
+    // nombre es donde EIDOS contesta «sinónimo» y las dos se plantan sin escribir. Copiarlo de las
+    // fichas no decide nada nuevo: es el mismo identificador que ya lleva el catálogo publicado.
+    if (ficha.eidosTaxonId == null) { ausentes.push({ sci, fichas: id }); continue; }
+    if (id !== ficha.eidosTaxonId) desajustados.push({ sci, universal: ficha.eidosTaxonId, fichas: id });
+  }
+  if (!desajustados.length && !ausentes.length) return 0;
+
+  if (desajustados.length) {
+    console.log(`\n${desajustados.length} ficha(s) del catálogo universal con un eidosTaxonId que las ` +
+      'fichas ya no usan (por ahí resuelve `lista-roja-espana.js`):');
+    for (const d of desajustados.slice(0, 20)) console.log(`   · ${d.sci}: ${d.universal} → ${d.fichas}`);
+    if (desajustados.length > 20) console.log(`   … y ${desajustados.length - 20} más`);
+  }
+  if (ausentes.length) {
+    console.log(`\n${ausentes.length} ficha(s) del catálogo universal SIN eidosTaxonId, teniéndolo sus ` +
+      'fichas: sin él, las herramientas de Lista Roja resuelven por nombre, que es el camino malo.');
+  }
+  if (!WRITE) { console.log('   (se sincronizan con --write)'); return 0; }
+  for (const a of ausentes) universal[a.sci].eidosTaxonId = a.fichas;
+
+  for (const d of desajustados) universal[d.sci].eidosTaxonId = d.fichas;
+  writeJson(universalPath, universal);
+  const n = desajustados.length + ausentes.length;
+  console.log(`   + ${rel(universalPath)} · ${n} sincronizado(s) (${desajustados.length} corregido(s), ${ausentes.length} rellenado(s))`);
+  return n;
+}
+
 async function main() {
   const fichas = cargaFichas();
   console.log(`Fichas leídas: ${fichas.length}${PARK ? ` (solo ${PARK})` : ''}.`);
@@ -471,7 +734,7 @@ async function main() {
   }
 
   const cache = await pasadaAutoridades(fichas);
-  const hallazgos = clasifica(fichas, cache);
+  const hallazgos = await clasifica(fichas, cache);
 
   console.log('');
   for (const tipo of ORDEN) {
@@ -490,6 +753,8 @@ async function main() {
     const n = hallazgos.filter(h => h.corregible).length;
     console.log(`\nSimulación: ${n} hallazgo(s) corregible(s) sin escribir. Añade --write para aplicarlos.`);
   }
+
+  desajusteIdUniversal(fichas);
 
   const destino = fromRoot(INFORME || 'Docs/nomenclatura-autoridades.md');
   fs.writeFileSync(destino, informe(hallazgos, pasoA));

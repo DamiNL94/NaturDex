@@ -1945,7 +1945,7 @@
         "genus": "Juniperus"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
-      "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": "La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
@@ -3231,7 +3231,7 @@
         "genus": "Teucrium"
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": "La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
@@ -3285,7 +3285,7 @@
         "genus": "Teucrium"
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": "La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
@@ -3339,7 +3339,7 @@
         "genus": "Notoceras"
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": "La cita de presencia en este espacio procede del volcado inicial del catálogo, que reutilizó fichas de otro parque, y no de una fuente propia: pendiente de referenciar contra el PORN y el plan de gestión de este espacio.",
@@ -6185,7 +6185,7 @@
         "genus": "Poterium"
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "UICN España: NT (Casi amenazado) (2010)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -6208,7 +6208,11 @@
         "ambito": "autonómico",
         "origen": "regionalStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null,
       "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2010)"
     },
@@ -6824,11 +6828,11 @@
         "genus": "Lotus"
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": 4138,
+      "eidosTaxonId": 34012,
       "gbifSpeciesKey": 5632022,
       "zepaSiteCode": null,
       "habitatIds": [
@@ -8438,12 +8442,12 @@
         "family": "Bovidae",
         "genus": "Capra"
       },
-      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "UICN España: EN (En peligro) (1992)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
+      "spainStatus": "Anexo VI (Ley 42/2007, de 13 de diciembre)",
       "regionalStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": 24419,
+      "eidosTaxonId": 12055,
       "gbifSpeciesKey": 2441054,
       "zepaSiteCode": null,
       "habitatIds": [
@@ -8462,9 +8466,13 @@
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null,
-      "iucnSpain": "EN — En peligro (Lista Roja española, 1992)"
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2007)"
     },
     {
       "id": 122,
@@ -8780,7 +8788,7 @@
         "genus": "Helianthemum"
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "UICN España: EN (En peligro) (2010)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silves…)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -8803,7 +8811,11 @@
         "ambito": "autonómico",
         "origen": "regionalStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null,
       "iucnSpain": "EN — En peligro (Lista Roja española, 2010)"
     },
@@ -9121,7 +9133,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
-      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11351,
@@ -9461,7 +9473,7 @@
       },
       "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2022)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12122,
@@ -9733,7 +9745,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
-      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12321,
@@ -9937,7 +9949,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11959,
@@ -10005,7 +10017,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12326,
@@ -10073,7 +10085,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "LESRPE (RD 139/2011)",
-      "regionalStatus": "Fauna protegida; estival que cría en taludes de rambla",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10738,
@@ -10141,7 +10153,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12250,
@@ -10209,7 +10221,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11453,
@@ -10343,7 +10355,7 @@
         "family": "Corvidae",
         "genus": "Pyrrhocorax"
       },
-      "iucnGlobal": "LC (Preocupación menor)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV",
       "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
       "regionalCcaa": "Región de Murcia",
@@ -10413,7 +10425,7 @@
       },
       "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "No incluida en el LESRPE; Directiva Aves 2009/147/CE, Anexo II (especie cinegética); Reglamento CITES, Anexo A",
-      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12356,
@@ -10481,7 +10493,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11211,
@@ -10956,7 +10968,7 @@
         "genus": "Coturnix"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
-      "spainStatus": "UICN España: DD (Datos insuficientes) (2004)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -10988,7 +11000,11 @@
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "descriptionSource": null,
       "iucnSpain": "DD — Datos insuficientes (Lista Roja española, 2004)"
     },
@@ -12623,7 +12639,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE",
-      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 10937,
@@ -12689,7 +12705,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "Directiva Aves 2009/147/CE (Red Natura 2000)",
-      "regionalStatus": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 11796,
@@ -15968,7 +15984,7 @@
         "genus": "Jacobaea"
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "iucnSpain": "DD — Datos insuficientes (Lista Roja española, 2010)",
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2010)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",

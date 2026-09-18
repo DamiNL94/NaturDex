@@ -229,7 +229,7 @@ Matas espaciadas sobre suelo desnudo y claro',
   s.taxon_genus = 'Lygeum',
   s.iucn_global = 'LC',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Lygeum spartum';
@@ -546,7 +546,7 @@ Plumas de la punta del ala muy separadas, como dedos',
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Corvidae',
   s.taxon_genus = 'Pyrrhocorax',
-  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
   s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV',
   s.rarity_score = 2,
@@ -1504,11 +1504,11 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Motacillidae',
   s.taxon_genus = 'Motacilla',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Motacilla cinerea';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -2151,9 +2151,9 @@ Mata baja y grisácea del tomillar',
   s.taxon_genus = 'Helianthemum',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = 'EN — En peligro (Lista Roja española, 2010)',
-  s.spain_status = 'UICN España: EN (En peligro) (2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'cabezo-gordo' AND s.scientific_name = 'Helianthemum violaceum';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -2337,8 +2337,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Anura',
   s.taxon_family = 'Bufonidae',
   s.taxon_genus = 'Bufo',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2023)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2002)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -2363,7 +2363,7 @@ Olor desagradable, a carne pasada, en floración',
   s.taxon_family = 'Apocynaceae',
   s.taxon_genus = 'Caralluma',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
+  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2010)',
   s.spain_status = 'Lista Roja de la Flora Vascular Española 2008: EN (En Peligro), criterio B1ab(i,iii,iv,v)c(ii,iii,iv)+2ab(i,iii,iv,v)c(ii,iii,iv)',
   s.rarity_score = 5,
   s.rarity_basis = '{"categoria":"Lista Roja de la Flora Vascular Española 2008: EN (En Peligro), criterio B1ab(i,iii,iv,v)c(ii,iii,iv)+2ab(i,iii,iv,v)c(ii,iii,iv)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -3580,7 +3580,7 @@ Cabezuelas apretadas en el extremo de las ramas',
   s.taxon_genus = 'Teucrium',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Teucrium lanigerum';
@@ -3605,7 +3605,7 @@ Hojas pequeñas y enrolladas, de aspecto grisáceo',
   s.taxon_genus = 'Teucrium',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Teucrium freynii';
@@ -3705,7 +3705,7 @@ Gálbulos redondos que pasan de verde a pardo rojizo',
   s.taxon_genus = 'Juniperus',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Juniperus phoenicea';
@@ -3730,7 +3730,7 @@ Látex blanco al partir un tallo',
   s.taxon_genus = 'Launaea',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Launaea lanifera';
@@ -3851,9 +3851,9 @@ En los suelos más áridos y salinos, casi desnudos',
   s.taxon_order = 'Caryophyllales',
   s.taxon_family = 'Amaranthaceae',
   s.taxon_genus = 'Anabasis',
-  s.iucn_global = 'NE',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Anabasis hispanica';
@@ -3903,7 +3903,7 @@ Flores blanquecinas muy pequeñas, casi inapreciables',
   s.taxon_genus = 'Notoceras',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Notoceras bicorne';
@@ -5384,11 +5384,11 @@ Tonos rosados en pecho y obispillo del macho',
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Fringillidae',
   s.taxon_genus = 'Bucanetes',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
-  s.spain_status = 'Catalogado como Vulnerable en el Libro Rojo de las Aves de España (población ibérica escasa y localizada)',
-  s.rarity_score = 4,
-  s.rarity_basis = '{"categoria":"Catalogado como Vulnerable en el Libro Rojo de las Aves de España (población ibérica escasa y localizada)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Bucanetes githagineus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -5534,7 +5534,7 @@ Plumas de la punta del ala muy separadas, como dedos',
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Corvidae',
   s.taxon_genus = 'Pyrrhocorax',
-  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
   s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV',
   s.rarity_score = 2,
@@ -6952,7 +6952,7 @@ Matas espaciadas sobre suelo desnudo y claro',
   s.taxon_genus = 'Lygeum',
   s.iucn_global = 'LC',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND s.scientific_name = 'Lygeum spartum';
@@ -7146,9 +7146,9 @@ En los suelos más áridos y salinos, casi desnudos',
   s.taxon_order = 'Caryophyllales',
   s.taxon_family = 'Amaranthaceae',
   s.taxon_genus = 'Anabasis',
-  s.iucn_global = 'NE',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND s.scientific_name = 'Anabasis hispanica';
@@ -7551,7 +7551,7 @@ Cambia a tonos rojizos al final del verano',
   s.taxon_order = 'Caryophyllales',
   s.taxon_family = 'Amaranthaceae',
   s.taxon_genus = 'Sarcocornia',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
   s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
   s.rarity_score = 1,
@@ -7672,7 +7672,7 @@ Cabezuelas apretadas en el extremo de las ramas',
   s.taxon_genus = 'Teucrium',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND s.scientific_name = 'Teucrium lanigerum';
@@ -7790,7 +7790,7 @@ Olor desagradable, a carne pasada, en floración',
   s.taxon_family = 'Apocynaceae',
   s.taxon_genus = 'Caralluma',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
+  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2010)',
   s.spain_status = 'Lista Roja de la Flora Vascular Española 2008: EN (En Peligro), criterio B1ab(i,iii,iv,v)c(ii,iii,iv)+2ab(i,iii,iv,v)c(ii,iii,iv)',
   s.rarity_score = 5,
   s.rarity_basis = '{"categoria":"Lista Roja de la Flora Vascular Española 2008: EN (En Peligro), criterio B1ab(i,iii,iv,v)c(ii,iii,iv)+2ab(i,iii,iv,v)c(ii,iii,iv)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -7937,7 +7937,7 @@ Gálbulos redondos que pasan de verde a pardo rojizo',
   s.taxon_genus = 'Juniperus',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND s.scientific_name = 'Juniperus phoenicea';
@@ -7985,8 +7985,8 @@ Porte redondeado y muy denso, difícil de atravesar',
   s.taxon_order = 'Celastrales',
   s.taxon_family = 'Celastraceae',
   s.taxon_genus = 'Maytenus',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2010)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -8636,8 +8636,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Suliformes',
   s.taxon_family = 'Phalacrocoracidae',
   s.taxon_genus = 'Phalacrocorax',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -10402,9 +10402,9 @@ Del tamaño de un puño, mucho menor que una perdiz',
   s.taxon_genus = 'Coturnix',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
   s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
-  s.spain_status = 'UICN España: DD (Datos insuficientes) (2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND s.scientific_name = 'Coturnix coturnix';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -10757,6 +10757,127 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND s.scientific_name = 'Tringa glareola';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gaviota picofina',
+  s.kingdom = 'fauna',
+  s.family = 'Ave limícola',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de una gaviota de mediano tamaño que, a pesar de estar encuadrada en el grupo de las gaviotas encapuchadas (como, por ejemplo, su pariente la reidora), carece del característico capirote oscuro. De aspecto parecido a la gaviota reidora —aunque ligeramente mayor y más estilizada—, la picofina es un lárido de largas alas y formas refinadas, que no presenta diferencias sexuales evidentes en lo que al tamaño y al plumaje se refiere. Los ejemplares adultos durante la estación reproductora exhiben una librea de color gris claro en el dorso y blanco —con sutiles matices rosados— en las regiones ventrales; el pico — largo y más apuntado que el de otras gaviotas— es de un intenso color rojizo oscuro que, a cierta distancia, da la impresión de ser negro. El iris es amarillo y aparece rodeado de un fino anillo ocular rojo. Los ejemplares juveniles, por su parte, lucen un plumaje algo diferente, con las regiones ventrales blancas (pero sin matices rosáceos), el dorso gris y una amplia banda alar más oscura, compuesta por las coberteras alares marrones y las rémiges terciarias negras; poseen el pico anaranjado y presentan una mancha auricular de color marrón. El plumaje de adulto se adquiere tras la muda del segundo verano.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Larus_genei.jpg?width=1280',
+  s.image_attribution = 'GabrielBuissart (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Charadriiformes',
+  s.taxon_family = 'Laridae',
+  s.taxon_genus = 'Chroicocephalus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND s.scientific_name = 'Chroicocephalus genei';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gaviota reidora',
+  s.kingdom = 'fauna',
+  s.family = 'Ave marina',
+  s.primary_habitat = 'Costas, salinas, embalses, ríos y campos de cultivo inundados',
+  s.description = 'Gaviota pequeña y ágil, muy común en invierno tierra adentro. En verano lleva la cabeza cubierta por una capucha de color chocolate; en invierno solo le queda una mancha oscura tras el ojo. En vuelo enseña una cuña blanca inconfundible en el borde delantero del ala.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cuña blanca en el filo delantero del ala, visible en vuelo
+En invierno, una mancha oscura como un auricular tras el ojo
+Pico y patas rojo oscuro',
+  s.seasonality = 'Otoño e invierno',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/605325270/original.jpg',
+  s.image_attribution = 'lalaia (CC BY 4.0) · GBIF',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Charadriiformes',
+  s.taxon_family = 'Laridae',
+  s.taxon_genus = 'Chroicocephalus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND s.scientific_name = 'Chroicocephalus ridibundus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pechiazul',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Pajarillo de figura rechoncha, cola larga y pico fino, con un plumaje en el que destaca su pechera manchada de azul, que en los machos adultos queda perfilada por una fina franja negra, rodeada a su vez por una más ancha banda anaranjada. Además, los machos poseen unas bigoteras teñidas de azul, que en algunas subespecies se funden con la garganta, igualmente azulada. Dependiendo también de la subespecie, el babero azul está adornado con una mancha, a modo de medalla, que puede ser blanca o naranja. La coloración de las hembras resulta menos llamativa. Suelen lucir poco azul en el pecho, a menudo tienen la garganta de color blanco crema, y la banda naranja del pecho está desdibujada. No obstante, las hembras de más edad pueden presentar una coloración similar a los machos. Ambos sexos poseen una distintiva línea blanca sobre el ojo y exhiben un dorso pardo-grisáceo. La cola, anaranjada en su mitad basal, está coloreada de negro o pardo muy oscuro en la parte exterior. Los volantones son pardos y moteados, como los juveniles de petirrojo y ruiseñor común. Sin embargo, los pechiazules juveniles se distinguen por tres detalles: la línea superciliar blanca, su garganta clara y la coloración naranja de la cola.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Agosto a marzo',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Luscinia_svecica_volgae.jpg?width=1280',
+  s.image_attribution = 'Bogomolov.PL (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Luscinia',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND s.scientific_name = 'Luscinia svecica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca tomillera',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral bajo y abierto, tomillares y saladares con arbustos dispersos',
+  s.description = 'Curruca menuda de matorral raso, gris en la cabeza, parda en el dorso y con las plumas del ala ribeteadas de castaño encendido. El anillo blanco del ojo le da el aire de «gafas» que le da nombre. Es inquieta y suele delatarse por su reclamo antes de dejarse ver.',
+  s.description_source = NULL,
+  s.identification_tips = 'Anillo blanco alrededor del ojo bien marcado
+Panel castaño vivo en el ala plegada
+Vive en matorral muy bajo, no en arbolado',
+  s.seasonality = 'Todo el año en el sureste; parcialmente migradora',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_%C3%A0_lunettes_Aqueduc_de_Zaghouan.jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Sylviidae',
+  s.taxon_genus = 'Curruca',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2004)',
+  s.spain_status = 'Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND s.scientific_name = 'Curruca conspicillata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca carrasqueña',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral alto, jarales, encinares aclarados y bordes de bosque',
+  s.description = 'Curruca de tamaño medio, con el macho de dorso gris, garganta y pecho color teja y un bigote blanco muy nítido que separa ambos. El anillo ocular es rojo. Canta desde el interior del matorral y hace vuelos cortos de exhibición sobre las matas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Bigote blanco que bordea la garganta rojiza
+Anillo ocular rojo anaranjado
+Prefiere matorral alto, no el raso',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9A%CE%BF%CE%BA%CE%BA%CE%B9%CE%BD%CE%BF%CF%84%CF%83%CE%B9%CF%81%CE%BF%CE%B2%CE%AC%CE%BA%CE%BF%CF%82.jpg?width=1280',
+  s.image_attribution = 'Antonios Tsaknakis (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Sylviidae',
+  s.taxon_genus = 'Curruca',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND s.scientific_name = 'Curruca cantillans';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Jabalí',
@@ -12293,7 +12414,7 @@ Aspecto grisáceo por la pelusa que cubre la planta',
   s.taxon_genus = 'Lotus',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Lotus dorycnium';
@@ -14014,9 +14135,9 @@ Base leñosa y porte compacto sobre roca',
   s.taxon_genus = 'Poterium',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2010)',
-  s.spain_status = 'UICN España: NT (Casi amenazado) (2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Poterium ancistroides';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -14298,11 +14419,11 @@ Excrementos en montoncitos de bolitas cilíndricas',
   s.taxon_order = 'Artiodactyla',
   s.taxon_family = 'Bovidae',
   s.taxon_genus = 'Capra',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'EN — En peligro (Lista Roja española, 1992)',
-  s.spain_status = 'UICN España: EN (En peligro) (1992)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2007)',
+  s.spain_status = 'Anexo VI (Ley 42/2007, de 13 de diciembre)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Capra pyrenaica';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -14586,9 +14707,9 @@ Mata baja y grisácea del tomillar',
   s.taxon_genus = 'Helianthemum',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = 'EN — En peligro (Lista Roja española, 2010)',
-  s.spain_status = 'UICN España: EN (En peligro) (2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Helianthemum violaceum';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -14659,7 +14780,7 @@ Matas espaciadas sobre suelo desnudo y claro',
   s.taxon_genus = 'Lygeum',
   s.iucn_global = 'LC',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Lygeum spartum';
@@ -14919,7 +15040,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_family = 'Caryophyllaceae',
   s.taxon_genus = 'Rhodalsine',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2010)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2010)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -16545,7 +16666,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_family = 'Bufonidae',
   s.taxon_genus = 'Bufo',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2023)',
-  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2002)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -18086,7 +18207,7 @@ Gálbulos redondos que pasan de verde a pardo rojizo',
   s.taxon_genus = 'Juniperus',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Juniperus phoenicea';
@@ -18701,7 +18822,7 @@ Plumas de la punta del ala muy separadas, como dedos',
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Corvidae',
   s.taxon_genus = 'Pyrrhocorax',
-  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
   s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV',
   s.rarity_score = 2,
@@ -19295,9 +19416,9 @@ Del tamaño de un puño, mucho menor que una perdiz',
   s.taxon_genus = 'Coturnix',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
   s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
-  s.spain_status = 'UICN España: DD (Datos insuficientes) (2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Coturnix coturnix';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -19374,6 +19495,298 @@ Pico largo, fino y algo curvado',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Tichodroma muraria';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de cueva',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Cuevas y minas; caza en vuelo alto sobre bosque, campo y láminas de agua',
+  s.description = 'Murciélago de alas largas y estrechas y vuelo rápido y alto, casi como el de un vencejo. Tiene la frente muy abombada y el pelo corto y erizado en la cabeza. Recorre decenas de kilómetros entre las cuevas de cría, de tránsito y de invernada.',
+  s.description_source = NULL,
+  s.identification_tips = 'Frente muy abombada y pelo corto y de punta
+Alas largas y estrechas; vuelo veloz y alto
+Forma colonias enormes y muy apretadas en cueva',
+  s.seasonality = 'Todo el año, con desplazamientos estacionales entre cuevas',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Miniopterus_schreibersii_dasythrix.jpg?width=1280',
+  s.image_attribution = 'Andrew Smith (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Miniopteridae',
+  s.taxon_genus = 'Miniopterus',
+  s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 2023)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2007)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Miniopterus schreibersii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago ratonero mediano',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Cuevas y desvanes; caza saltamontes en pastizales y herbazales',
+  s.description = 'Casi idéntico al ratonero grande, con el que a menudo comparte colonia, pero algo menor y con el hocico más estrecho y una mancha clara en la frente. Está especializado en cazar saltamontes en pastizales altos, lo que reparte el alimento entre ambas especies.',
+  s.description_source = NULL,
+  s.identification_tips = 'Muy parecido al ratonero grande, pero algo menor
+Mancha clara difusa entre los ojos
+Hocico más fino y estrecho',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Myotis-blythii-cropped.jpg?width=1280',
+  s.image_attribution = 'C. Robiller / www.naturlichter.de (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Myotis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2007)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Myotis blythii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago patudo',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Cuevas próximas a ríos y balsas; caza rozando la lámina de agua',
+  s.description = 'Murciélago ligado al agua: caza volando a pocos centímetros de la superficie de ríos y balsas y captura insectos —e incluso pececillos— con sus pies desproporcionadamente grandes y peludos. Esa dependencia del agua limpia lo hace muy vulnerable.',
+  s.description_source = NULL,
+  s.identification_tips = 'Pies muy grandes y peludos en proporción al cuerpo
+Vuela rozando la lámina de agua
+Membrana del ala insertada en el tobillo, no en el dedo',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Myotis_capaccinii_0105b_cropped.jpg?width=1280',
+  s.image_attribution = 'This image was improved or created by the Wikigraphists of the Grap… (FAL) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Myotis',
+  s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2007)',
+  s.spain_status = 'Anexo II (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Anexo V (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); UICN España: EN (En peligro) (2007)',
+  s.rarity_score = 5,
+  s.rarity_basis = '{"categoria":"CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Myotis capaccinii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago ratonero grande',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Cuevas y desvanes; caza escarabajos en pastos, claros y bosque sin sotobosque',
+  s.description = 'Uno de los murciélagos más grandes de Europa, con orejas largas y anchas y hocico de aspecto perruno. Caza cerca del suelo, capturando escarabajos que localiza por el ruido que hacen al andar, no solo con el sonar. Cría en colonias numerosas en cuevas y bajo cubiertas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Talla grande y orejas largas y anchas
+Hocico ancho, de aspecto casi perruno
+Caza a ras de suelo, en zonas despejadas',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Myotis.jpg?width=1280',
+  s.image_attribution = 'Urheber: Manuel Werner, Germany, Wikipedia-Kontakt: http://de.wikip… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Myotis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2007)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Myotis myotis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Oreja de Liebre',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Vive formando matorrales en lugares pedregosos y roquedos sobre sustratos preferentemente calizos, desde 20-1000 m',
+  s.description = 'Arbusto hasta de 1 m, con tallos lanosos, muy foliosos. Hojas de 4-11 cm, lanceoladas o triangulares, con base cordiforme, crenadas, con pelos lanosos. Flores en verticilastros densos con seis flores cada uno, que nacen entre bractéolas estrechamente lanceoladas, agudas. Cáliz de 1,3 cm, con cinco dientes alesnados de 4 mm, peloso. Corola de 2,5 cm, pelosa, con labio superior en forma de casco, y el inferior con un gran lóbulo central redondeado, convexo, y dos laterales triangulares, pequeños, color rosado. Núculas de 5 mm, subtrígonas, color negruzco.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Diciembre a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Phlomis_purpurea.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Phlomis',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Phlomis purpurea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de herradura mediterráneo',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Cuevas cálidas; caza en bosque mediterráneo y mosaicos arbolados',
+  s.description = 'Murciélago de herradura de tamaño medio, de costumbres muy cavernícolas, que forma colonias de cría densas junto a otras especies. Vuela muy pegado a la vegetación, capturando polillas entre las ramas. Sus colonias son muy vulnerables a la visita de cuevas en primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Talla intermedia entre el grande y el pequeño de herradura
+Apéndice superior de la nariz apuntado y algo curvado
+Forma colonias apretadas en cueva, con otras especies',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhinolophus_euryale-cropped.jpg?width=1280',
+  s.image_attribution = 'Carlosblh (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Rhinolophidae',
+  s.taxon_genus = 'Rhinolophus',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2007)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Rhinolophus euryale';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago grande de herradura',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Cuevas, minas y desvanes para refugiarse; caza en mosaicos de bosque y pasto',
+  s.description = 'El mayor de los murciélagos de herradura ibéricos. Debe el nombre a la hoja nasal en forma de herradura con la que emite el sonar por la nariz, no por la boca. Al reposar se envuelve por completo en las alas, como en una capa, y cuelga libre del techo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Al dormir se envuelve entero en las alas
+Hoja nasal en forma de herradura alrededor de las fosas
+Cuelga separado del techo, no metido en una grieta',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Rhinolophe_2.jpg?width=1280',
+  s.image_attribution = 'Marie Jullion (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Rhinolophidae',
+  s.taxon_genus = 'Rhinolophus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2007)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Rhinolophus ferrumequinum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago pequeño de herradura',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Cuevas, minas y edificios; caza en bosque, sotos y setos',
+  s.description = 'El más pequeño de los murciélagos de herradura europeos: colgado y envuelto en sus alas no llega al tamaño de una ciruela. Vuela bajo y muy cerca de la vegetación, con revoloteo de mariposa. Es muy sensible a las molestias en sus refugios de cría e invernada.',
+  s.description_source = NULL,
+  s.identification_tips = 'Tamaño minúsculo, como una ciruela colgando
+Vuelo bajo y revoloteante junto a setos y muros
+Se envuelve en las alas al reposar, como sus parientes',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Kleine_Hufeisennase.jpg?width=1280',
+  s.image_attribution = 'F. C. Robiller / naturlichter.de (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Rhinolophidae',
+  s.taxon_genus = 'Rhinolophus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Rhinolophus hipposideros';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chocha perdiz',
+  s.kingdom = 'fauna',
+  s.family = 'Ave limícola',
+  s.primary_habitat = NULL,
+  s.description = 'Es una limícola relativamente grande, de largo pico, patas bastante cortas y grandes ojos oscuros, muy desplazados hacia atrás y hacia arriba en la cabeza. Posee un plumaje extremadamente críptico, dominado por los tonos marrones y rojizos, que en el dorso adquieren una notable complejidad, con un diseño abigarrado de barrados, punteados y manchas de diferente tonalidad. Las regiones ventrales son de tonos cremosos, con abundantes estrías transversales de color más oscuro. Los adultos y los jóvenes son prácticamente idénticos. En vuelo resulta más pesada que otras especies cercanas y se caracteriza por sus alas redondeadas y su silueta masiva. Es un ave reacia a volar, pues confía plenamente en las virtudes de su mimética librea, pero, si siente una amenaza próxima, emprende un vuelo errático y zigzagueante a baja altura entre los árboles.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Noviembre a marzo',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Woodcock_earthworm.jpg?width=1280',
+  s.image_attribution = 'Ronald Slabke (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Charadriiformes',
+  s.taxon_family = 'Scolopacidae',
+  s.taxon_genus = 'Scolopax',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Scolopax rusticola';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Azor común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Bosques maduros y masas forestales densas con claros',
+  s.description = 'Rapaz forestal de alas cortas y anchas y cola larga, diseñada para perseguir presas entre los árboles a gran velocidad. Es esquiva y se ve casi siempre de refilón. La hembra llega a ser un tercio mayor que el macho, una diferencia poco habitual entre las aves.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ceja blanca marcada sobre el ojo, como un antifaz al revés
+Vuelo de varios aleteos rápidos seguidos de un planeo corto
+Pecho finamente rayado en horizontal en los adultos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Northern_Goshawk_ad_M2.jpg?width=1280',
+  s.image_attribution = 'Norbert Kenntner, Berlin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Accipitriformes',
+  s.taxon_family = 'Accipitridae',
+  s.taxon_genus = 'Accipiter',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Accipiter gentilis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Aguilucho pálido',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Nidifica en el norte en matorrales bajos y densos de brezos, tojos.Pastizales y tierras de labor',
+  s.description = 'Es una rapaz de tamaño medio, cuya fisonomía responde al característico patrón de los integrantes del género Circus, es decir, alas y cola largas, tarsos muy prolongados y aspecto general bastante grácil, aunque menos que el del aguilucho cenizo, del que se diferencia por su mayor tamaño y robustez y por tener las alas comparativamente más anchas. La especie presenta un marcado dimorfismo sexual que afecta al tamaño —las hembras son mayores y más pesadas— y a la coloración del plumaje. El macho adulto es un ave de color claro, en el que dominan los tonos grisáceos, más oscuros en el dorso, la cabeza y el pecho, y blancos en el vientre, donde, a diferencia del cenizo, no luce ningún tipo de manchas o barrados. En vuelo resultan muy visibles las puntas negras de las rémiges primarias, que contrastan mucho con el blanco de las infracoberteras alares; dorsalmente, también son visibles las puntas negras del ala, así como el obispillo, que es blanco y extenso. En la hembra adulta, por el contrario, dominan los tonos terrosos con tintes grisáceos, bastante más claros en las regiones ventrales —que están intensamente rayadas de pardo— que en el dorso, mientras que en la parte inferior de las alas exhibe un barrado abundante. El obispillo de la hembra de pálido resulta muy visible en vuelo y es más extenso que el de la hembra de cenizo. Los individuos juveniles, por su parte, son pardos en las regiones dorsales y de un suave tono ocráceo —ligeramente anaranjado— en las ventrales, que aparecen, además, surcadas por un fino estriado longitudinal. En vuelo, como todos los aguiluchos, esta especie se muestra ágil y maniobrera y es capaz de desplazarse lentamente a baja altura —incluso con malas condiciones atmosféricas— mientras prospecta el terreno con las alas colocadas en forma de “V”.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Circus_cyaneus%2C_Ballaugh_Curragh%2C_Isle_of_Man_1.jpg?width=1280',
+  s.image_attribution = 'Isle of Man Government (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Accipitriformes',
+  s.taxon_family = 'Accipitridae',
+  s.taxon_genus = 'Circus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Circus cyaneus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lavandera boyera',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Márgenes de masas de agua,terrenos húmedos,vegetación herbosa,terrenos agrícolas.Hasta 1700m',
+  s.description = 'Se trata de la más compacta, verdosa y colicorta de las lavanderas españolas. Exhibe dorso y obispillo de color verde oliva, alas plegadas con plumas negras orladas en blanco, y partes inferiores muy amarillas. Posee cola larga y negra, con plumas externas blancas, y patas y pico negros. La cabeza es gris azulada, con garganta y ceja blancas, y regiones ocular y auricular oscuras. Todo lo anterior se refiere al macho nupcial de la subespecie iberiae. Los machos de otras razas se diferencian por las siguientes características: flava tiene garganta amarilla y zona auricular más clara; flavissima luce ceja amarilla y cabeza verdosa; cinereocapilla presenta ceja muy reducida o ausente; thunbergi muestra garganta amarilla y cabeza gris pizarra sin ceja; y feldegg es como la anterior, pero con la cabeza negra. Ambos sexos son parecidos, pero la hembra está menos coloreada, con la cabeza gris verdosa y las partes inferiores de color amarillo tenue. Pese a que existen leves diferencias entre las hembras de cada subespecie, su separación resulta muy difícil. Los jóvenes son similares a las hembras, aunque más verdosos. En plumaje otoñal, los machos de todas las subespecies parecen hembras en plumaje nupcial, siendo difícil la identificación racial. A su vez, las hembras se vuelven parduzcas en otoño y exhiben un collar incompleto en el pecho. Un hábito destacado de esta ave es su asociación con el ganado, sobre todo vacuno.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Yellow_wagtail.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Motacillidae',
+  s.taxon_genus = 'Motacilla',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Motacilla flava';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Aulaga',
@@ -19645,7 +20058,7 @@ Hojas espatuladas, carnosas y ásperas',
   s.taxon_genus = 'Asteriscus',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'cuatro-calas' AND s.scientific_name = 'Asteriscus maritimus';
@@ -19670,7 +20083,7 @@ Matas espaciadas sobre suelo desnudo y claro',
   s.taxon_genus = 'Lygeum',
   s.iucn_global = 'LC',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'cuatro-calas' AND s.scientific_name = 'Lygeum spartum';
@@ -19870,7 +20283,7 @@ Cabezuelas apretadas en el extremo de las ramas',
   s.taxon_genus = 'Teucrium',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'cuatro-calas' AND s.scientific_name = 'Teucrium lanigerum';
@@ -19943,9 +20356,9 @@ En los suelos más áridos y salinos, casi desnudos',
   s.taxon_order = 'Caryophyllales',
   s.taxon_family = 'Amaranthaceae',
   s.taxon_genus = 'Anabasis',
-  s.iucn_global = 'NE',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'cuatro-calas' AND s.scientific_name = 'Anabasis hispanica';
@@ -19995,7 +20408,7 @@ Hojas acintadas y de verde azulado, saliendo de la arena',
   s.taxon_genus = 'Pancratium',
   s.iucn_global = 'LC',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008 (especie común pero sensible a la degradación de playas)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'cuatro-calas' AND s.scientific_name = 'Pancratium maritimum';
@@ -21368,11 +21781,11 @@ Patas colgando que rozan la superficie al alimentarse',
   s.taxon_order = 'Procellariiformes',
   s.taxon_family = 'Hydrobatidae',
   s.taxon_genus = 'Hydrobates',
-  s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 1992)',
-  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 1992)',
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'cuatro-calas' AND s.scientific_name = 'Hydrobates pelagicus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -21795,7 +22208,7 @@ Matas espaciadas sobre suelo desnudo y claro',
   s.taxon_genus = 'Lygeum',
   s.iucn_global = 'LC',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND s.scientific_name = 'Lygeum spartum';
@@ -22562,7 +22975,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_family = 'Aspleniaceae',
   s.taxon_genus = 'Asplenium',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2010)',
+  s.iucn_spain = NULL,
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -22757,7 +23170,7 @@ Gálbulos redondos que pasan de verde a pardo rojizo',
   s.taxon_genus = 'Juniperus',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND s.scientific_name = 'Juniperus phoenicea';
@@ -22991,7 +23404,7 @@ Cambia a tonos rojizos al final del verano',
   s.taxon_order = 'Caryophyllales',
   s.taxon_family = 'Amaranthaceae',
   s.taxon_genus = 'Sarcocornia',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
   s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
   s.rarity_score = 1,
@@ -23066,7 +23479,7 @@ Forma bosquetes junto a saladares',
   s.taxon_genus = 'Tamarix',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND s.scientific_name = 'Tamarix africana';
@@ -23212,9 +23625,9 @@ En los suelos más áridos y salinos, casi desnudos',
   s.taxon_order = 'Caryophyllales',
   s.taxon_family = 'Amaranthaceae',
   s.taxon_genus = 'Anabasis',
-  s.iucn_global = 'NE',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND s.scientific_name = 'Anabasis hispanica';
@@ -23235,8 +23648,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Anseriformes',
   s.taxon_family = 'Anatidae',
   s.taxon_genus = 'Anas',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2004)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -23401,7 +23814,7 @@ Olor desagradable, a carne pasada, en floración',
   s.taxon_family = 'Apocynaceae',
   s.taxon_genus = 'Caralluma',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
+  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2010)',
   s.spain_status = 'Lista Roja de la Flora Vascular Española 2008: EN (En Peligro), criterio B1ab(i,iii,iv,v)c(ii,iii,iv)+2ab(i,iii,iv,v)c(ii,iii,iv)',
   s.rarity_score = 5,
   s.rarity_basis = '{"categoria":"Lista Roja de la Flora Vascular Española 2008: EN (En Peligro), criterio B1ab(i,iii,iv,v)c(ii,iii,iv)+2ab(i,iii,iv,v)c(ii,iii,iv)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -23692,7 +24105,7 @@ Látex blanco al partir un tallo',
   s.taxon_genus = 'Launaea',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND s.scientific_name = 'Launaea lanifera';
@@ -23715,8 +24128,8 @@ Porte redondeado y muy denso, difícil de atravesar',
   s.taxon_order = 'Celastrales',
   s.taxon_family = 'Celastraceae',
   s.taxon_genus = 'Maytenus',
-  s.iucn_global = 'NE',
-  s.iucn_spain = NULL,
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2010)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -23884,9 +24297,9 @@ Base leñosa y porte compacto sobre roca',
   s.taxon_genus = 'Poterium',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2010)',
-  s.spain_status = 'UICN España: NT (Casi amenazado) (2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND s.scientific_name = 'Poterium ancistroides';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -24053,7 +24466,7 @@ Hojas pequeñas y enrolladas, de aspecto grisáceo',
   s.taxon_genus = 'Teucrium',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND s.scientific_name = 'Teucrium freynii';
@@ -24602,8 +25015,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Suliformes',
   s.taxon_family = 'Phalacrocoracidae',
   s.taxon_genus = 'Phalacrocorax',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -24696,8 +25109,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Turdidae',
   s.taxon_genus = 'Turdus',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -26711,8 +27124,8 @@ Prefiere los llanos salinos y las estepas más áridas',
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Alaudidae',
   s.taxon_genus = 'Calandrella',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'CR — En peligro crítico (Lista Roja española, 2004)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -26991,11 +27404,11 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Motacillidae',
   s.taxon_genus = 'Motacilla',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND s.scientific_name = 'Motacilla cinerea';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -27087,9 +27500,9 @@ Del tamaño de un puño, mucho menor que una perdiz',
   s.taxon_genus = 'Coturnix',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
   s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
-  s.spain_status = 'UICN España: DD (Datos insuficientes) (2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND s.scientific_name = 'Coturnix coturnix';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -27753,7 +28166,7 @@ Cambia a tonos rojizos al final del verano',
   s.taxon_order = 'Caryophyllales',
   s.taxon_family = 'Amaranthaceae',
   s.taxon_genus = 'Sarcocornia',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
   s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
   s.rarity_score = 1,
@@ -27903,9 +28316,9 @@ En los suelos más áridos y salinos, casi desnudos',
   s.taxon_order = 'Caryophyllales',
   s.taxon_family = 'Amaranthaceae',
   s.taxon_genus = 'Anabasis',
-  s.iucn_global = 'NE',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND s.scientific_name = 'Anabasis hispanica';
@@ -27955,7 +28368,7 @@ Látex blanco al partir un tallo',
   s.taxon_genus = 'Launaea',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND s.scientific_name = 'Launaea lanifera';
@@ -28126,7 +28539,7 @@ Hojas pequeñas y enrolladas, de aspecto grisáceo',
   s.taxon_genus = 'Teucrium',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND s.scientific_name = 'Teucrium freynii';
@@ -29351,8 +29764,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Suliformes',
   s.taxon_family = 'Phalacrocoracidae',
   s.taxon_genus = 'Phalacrocorax',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -30903,11 +31316,11 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Motacillidae',
   s.taxon_genus = 'Motacilla',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND s.scientific_name = 'Motacilla cinerea';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -30976,8 +31389,8 @@ Prefiere los llanos salinos y las estepas más áridas',
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Alaudidae',
   s.taxon_genus = 'Calandrella',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'CR — En peligro crítico (Lista Roja española, 2004)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -32118,11 +32531,11 @@ Excrementos en montoncitos de bolitas cilíndricas',
   s.taxon_order = 'Artiodactyla',
   s.taxon_family = 'Bovidae',
   s.taxon_genus = 'Capra',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'EN — En peligro (Lista Roja española, 1992)',
-  s.spain_status = 'UICN España: EN (En peligro) (1992)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2007)',
+  s.spain_status = 'Anexo VI (Ley 42/2007, de 13 de diciembre)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Capra pyrenaica';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -32583,7 +32996,7 @@ Plumas de la punta del ala muy separadas, como dedos',
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Corvidae',
   s.taxon_genus = 'Pyrrhocorax',
-  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
   s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV',
   s.rarity_score = 2,
@@ -32654,8 +33067,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Turdidae',
   s.taxon_genus = 'Turdus',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -33666,6 +34079,2436 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
 WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Troglodytes troglodytes';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija colirroja',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'Lagartija de suelos arenosos, de cuerpo aplanado y dedos con escamas laterales en forma de peine que le sirven de raqueta sobre la arena suelta. Los jóvenes tienen la cola y las patas traseras de un rojo intenso que se apaga en los adultos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dedos con flecos de escamas a los lados, como peines
+Jóvenes con cola y patas traseras rojo intenso
+Cuerpo aplanado, con rayas y ocelos claros en el dorso',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Acanthodactylus_erythrurus.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Lacertidae',
+  s.taxon_genus = 'Acanthodactylus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Acanthodactylus erythrurus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sapo partero común',
+  s.kingdom = 'fauna',
+  s.family = 'Anfibio',
+  s.primary_habitat = NULL,
+  s.description = 'Sapo de tamaño pequeño (menor de 5 cm). Aspecto rechoncho, cabeza grande y hocico redondeado, ojos prominentes, pupila vertical e iris dorado con vetas negras. Tímpano visible y más pequeño que el ojo. Pliegue gular patente. Glándulas parotídeas poco aparentes. Piel granulosa con verrugas pequeñas, frecuentemente agrupadas en los costados en dos hileras dorsolaterales. Miembros cortos y fuertes, los anteriores con 3 tubérculos metacarpianos, y los posteriores con membrana interdigital muy reducida y con un tubérculo metatarsiano pequeño. Coloración dorsal de gris a parda con pequeñas manchas verdes, rojizas y negras poco marcadas. Zona ventral clara.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/AlytesObstet.jpg?width=1280',
+  s.image_attribution = 'Christian Fischer (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Amphibia',
+  s.taxon_order = 'Anura',
+  s.taxon_family = 'Alytidae',
+  s.taxon_genus = 'Alytes',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Alytes obstetricans';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gayuba',
+  s.kingdom = 'flora',
+  s.family = 'Mata',
+  s.primary_habitat = 'Pinares aclarados, crestas y laderas pedregosas de montaña',
+  s.description = 'Mata rastrera de hojas pequeñas, coriáceas y brillantes que forma alfombras densas sobre el suelo del pinar. Sus flores son urnas blanco rosadas colgantes y sus frutos, bayas rojas y harinosas. Ayuda a fijar el suelo en laderas pedregosas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Porte rastrero formando alfombras continuas
+Hojas pequeñas, duras y muy brillantes
+Flores en urna colgante y frutos rojos harinosos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Gayuba.jpg?width=1280',
+  s.image_attribution = 'No machine-readable author provided. Carlosblh assumed (based on co… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Ericales',
+  s.taxon_family = 'Ericaceae',
+  s.taxon_genus = 'Arctostaphylos',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Arctostaphylos uva-ursi';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Falguera',
+  s.kingdom = 'flora',
+  s.family = 'Helecho',
+  s.primary_habitat = 'Vive en grietas de roquedos calizos o silíceos, hasta 2000 m',
+  s.description = 'Helecho de rizoma pequeño, completamente cubierto de escamitas color castaño; frondes hasta de 25 cm, con pecíolo corto y raquis oscuros y brillantes, con pinnas en disposición alterna y perpendicular al raquis, enteras, ovadas, suavemente dentadas y algo onduladas, con cuatro a diez soros alargados que nacen en las nervios laterales. Esporas hasta de 45 micras, color castaño.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Trichomanes-grazalema.jpg?width=1280',
+  s.image_attribution = 'Juan Bibiloni (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Polypodiopsida',
+  s.taxon_order = 'Polypodiales',
+  s.taxon_family = 'Aspleniaceae',
+  s.taxon_genus = 'Asplenium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Asplenium trichomanes';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cardo',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/A._humilis-0002_12.jpg?width=1280',
+  s.image_attribution = 'Philmarin (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Asteraceae',
+  s.taxon_genus = 'Atractylis',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Atractylis humilis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebrilla ciega',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = NULL,
+  s.description = 'Reptiles estrictamente adaptados a la vida subterránea, especializados en cavar túneles y en la localización de presas bajo tierra. Cuerpo cilíndrico y alargado cubierto de escamas cuadrangulares que se alinean en forma de anillos. Segmentos dorsales entre 14 y 18 y ventrales entre 14 y 20. No presenta extremidades. Cabeza de pequeño tamaño, poco diferenciada del cuerpo, con el hocico redondeado. La visión es vestigial mientras que el olfato y el oído están desarrollados. Cola muy corta, Presenta poros precloacales. Coloración de fondo variable entre violácea y marrón. Sin dimorfismo sexual. Los machos alcanzan una longitud de cabeza y cuerpo de 254 mm y las hembras de 235 mm.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Amphisbaenia.JPG?width=1280',
+  s.image_attribution = 'Mario modesto (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Blanidae',
+  s.taxon_genus = 'Blanus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Blanus cinereus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Boja de las calenturas',
+  s.kingdom = 'flora',
+  s.family = 'Mata',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/BUPLEURUM_FRUTISCENS_-_AGUDA_-_IB-327_(Botja_groga).JPG?width=1280',
+  s.image_attribution = 'Isidre blanc (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Apiales',
+  s.taxon_family = 'Apiaceae',
+  s.taxon_genus = 'Bupleurum',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Bupleurum fruticescens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra lisa meridional',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Se encuentra desde el nivel del mar, pero es más frecuente en claros de bosque y matorral mediterráneo en zonas de media montaña',
+  s.description = 'La culebra lisa meridional Coronella girondica es de pequeño tamaño, cabeza pequeña y cola relativamente corta. En general hay 21 hileras de dorsales aunque es frecuente observar 19 hileras en ejemplares de las cordilleras béticas. Dorso y flancos generalmente de color pardo o gris, con una hilera de manchas transversales por el dorso. En el vientre destacan unas manchas cuadradas oscuras en un diseño ajedrezado. En la parte dorsal de la cabeza hay una gran mancha en forma de U, y a ambos lados de la cabeza, una brida oscura que atraviesa el ojo y se prolonga por delante de la placa frontal uniendo las manchas de ambos lados. No hay dimorfismo sexual en la longitud cabeza-cloaca ni en la folidosis cefálica. En cambio se aprecian ligeras diferencias en el número de dorsales (19 hileras más frecuente en machos) y ventrales (más en hembras), pero sobre todo en la cola (mayor longitud relativa y mayor número de subcaudales en machos). No hay subespecies descritas, pero se aprecian diferencias poblacionales en el número de ventrales. En machos, se observa una clina latitudinal en la longitud de hocico-cloaca y número de ventrales, siendo mayores los ejemplares más septentrionales. Longitud total máxima en la Península Ibérica, 800 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/BennyTrapp_Coronella_girondica.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Colubridae',
+  s.taxon_genus = 'Coronella',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Coronella girondica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Musaraña gris',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero',
+  s.primary_habitat = NULL,
+  s.description = 'Es un crocidurino de talla mediana. Medidas corporales, CC: 62,0-84,0 mm; C: 34,0-47,0 mm; P: 11,0-14,0 mm; Ps: 7,0-14,0 g, y cola relativamente corta, recubierta por pelos cortos entre los que sobresalen otros más largos y dispersos. Los ojos son pequeños y los pabellones auditivos están bien desarrollados y son visibles externamente. El color del pelaje varía en función de la edad, la época del año y la localización geográfica. En general, la coloración es gris uniforme en los juveniles, parda o parda-grisácea en los ejemplares de verano y gris oscura en los de invierno. El vientre es gris claro, sin demarcación nítida respecto al dorso. Presenta tres pares de mamas inguinales. El cráneo es más largo y macizo que en los representantes del género Sorex. Las regiones rostral e interorbital son alargadas y el margen posterior del orificio nasal es cóncavo. La caja craneana es alta y los cóndilos occipitales están proyectados hacia atrás. La mandíbula es robusta, con el cóndilo articular bien desarrollado y la apófisis coronoides recta, de altura generalmente superior a 4,2 mm. Fórmula dentaria: 3.1.1.3/1.1.1.3, con tres unicúspides superiores. A diferencia de la musaraña de campo, Crocidura suaveolens, en visión lateral el segundo y tercer unicúspides son de talla similar y sobrepasan la altura del parastilo del cuarto molar. En visión oclusal, el protocono de este molar no está desplazado en dirección bucal y contribuye a formar el margen ántero-interno del diente. En la mandíbula, el segundo molar presenta una constricción bien marcada. Número de cromosomas (2n) = 42.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/WLMMH_(DerHexer)_022.jpg?width=1280',
+  s.image_attribution = 'DerHexer, Wikimedia Commons (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Soricomorpha',
+  s.taxon_family = 'Soricidae',
+  s.taxon_genus = 'Crocidura',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Crocidura russula';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lirón careto',
+  s.kingdom = 'fauna',
+  s.family = 'Roedor',
+  s.primary_habitat = 'Es una especie generalista, capaz de vivir en numerosos hábitats terrestres y arbóreos',
+  s.description = 'Debe su nombre a una franja de pelo negro que, como un antifaz, le enmarca los ojos y le cubre parte de la cara. Su aspecto es inconfundible, aunque sus hábitos trepadores y su color rojizo pueden asemejarle al lirón gris Glis glis, o a la ardilla roja Sciurus vulgaris. Los adultos presentan el dorso pardo- rojizo y el vientre blanco. La cola es larga y está cubierta de pelos, con un llamativo pincel de pelo largo blanco y negro en el extremo. Hocico alargado y orejas grandes. No presentan dimorfismo sexual. Las hembras presentan cuatro pares de mamas: uno pectoral, otro abdominal y dos pares inguinales. Medidas corporales, CC: 118,0-136,0 mm; C: 98,5-113,0 mm; P: 26,5-28,5 mm; Ps: 45,0-120,0 g. Se producen variaciones estacionales en el peso debido al carácter hibernante de la especie. El cráneo es de aspecto macizo y de perfil dorsal convexo. La caja craneana es cuadrada, el rostro largo, los huesos nasales muy estrechos en la parte posterior y los arcos zigomáticos amplios. Las bullas timpánicas presentan gran desarrollo, carácter típico de las especies de roedores de climas desérticos, con densidades de población escasas. Fórmula dentaria: 1.0.1.3/1.0.1.3. Es el único roedor español cuya mandíbula presenta un orificio natural en la apófisis angular, lo que facilita su identificación en los análisis de egagrópilas, excrementos, etc. Número de cromosomas (2n) = 46-52.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Gartenschlaefer_in_Natur.jpg?width=1280',
+  s.image_attribution = 'No machine-readable author provided. Asseus assumed (based on copyr… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Rodentia',
+  s.taxon_family = 'Gliridae',
+  s.taxon_genus = 'Eliomys',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2008)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Eliomys quercinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sapo corredor',
+  s.kingdom = 'fauna',
+  s.family = 'Anfibio',
+  s.primary_habitat = 'Ramblas y zonas húmedas estacionales',
+  s.description = 'Sapo de patas cortas que corre en vez de saltar, con una línea amarilla nítida a lo largo del centro del lomo. Se reproduce en charcas efímeras que se llenan con las lluvias, y los machos forman coros de un canto vibrante y estridente que se oye a kilómetros.',
+  s.description_source = NULL,
+  s.identification_tips = 'Raya amarilla continua por el centro del lomo
+Corre a cuatro patas en vez de saltar
+Canto nocturno vibrante y muy sonoro tras las lluvias',
+  s.seasonality = 'Otoño e invierno lluviosos',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Epidalea_calamita_02_by-dpc.jpg?width=1280',
+  s.image_attribution = 'David Perez (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Amphibia',
+  s.taxon_order = 'Anura',
+  s.taxon_family = 'Bufonidae',
+  s.taxon_genus = 'Epidalea',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE; Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Epidalea calamita';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Erizo europeo',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero',
+  s.primary_habitat = NULL,
+  s.description = 'El aspecto general de los erizos es fácilmente reconocible por su zona dorsal recubierta de espinas, a excepción del rostro. El pelaje ventral es cerdoso, de color pardo, más o menos oscuro, según los individuos, pero con el vientre blancuzco. Ambos sexos son parecidos, ya que los testículos son intraabdominales. La principal diferencia consiste en que el pene está bastante adelantado, mientras que la vagina se localiza cerca del ano. Las hembras presentan cinco pares de mamas, una pectoral, dos abdominales y dos inguinales. Fórmula dentaria: 3.1.3.3/2.1.2.3. Sólo puede confundirse con el erizo moruno, Atelerix algirus, menos robusto, más claro, con las orejas proporcionalmente mayores y con las púas cefálicas más retrasadas. Las principales diferencias dentarias consisten en que el I3 es generalmente monoradiculado en E. europaeus y biradiculado en A. Algirus. El PM2 tiene un paracónido destacado netamente, ligeramente menor que el protocónido, mientras que en A. algirus es mucho más pequeño. Medidas corporales, CC: 190,0-290,0 mm; C: 22,0-40,0 mm; P: 46,0-53,0 mm; O: 25,0- 29,0 mm ; Ps: 500,0-1.200,0 g. Número de cromosomas (2n) = 48.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/West_European_Hedgehog_(Erinaceus_europaeus)1.jpg?width=1280',
+  s.image_attribution = 'Hrald (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Erinaceomorpha',
+  s.taxon_family = 'Erinaceidae',
+  s.taxon_genus = 'Erinaceus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'Incluido (Real Decreto 216/2019, de 29 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Erinaceus europaeus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Geranio de roca',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Fisuras y repisas de roquedos calizos',
+  s.description = 'Geranio rupícola de rosetas compactas y hojas divididas y algo peludas, con flores rosadas o blanquecinas de venas marcadas. Vive encajado en las grietas de los cantiles, donde encuentra humedad y escapa de los herbívoros.',
+  s.description_source = NULL,
+  s.identification_tips = 'Rosetas apretadas metidas en la grieta de la roca
+Flores rosadas con venas más oscuras
+Frutos con pico largo que se enrolla al secarse',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/483580471/original.jpeg',
+  s.image_attribution = 'Olivier Argagnon (CC BY 4.0) · GBIF/iNaturalist',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Geraniales',
+  s.taxon_family = 'Geraniaceae',
+  s.taxon_genus = 'Erodium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección nacional específica registrada en EIDOS',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Erodium saxatile';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gato montés',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero carnívoro',
+  s.primary_habitat = 'Bosque, matorral denso y roquedos con buena población de conejos y roedores',
+  s.description = 'Gato salvaje europeo, más robusto que un gato doméstico atigrado, con la cola gruesa, roma en la punta y anillada de negro. Es solitario, esquivo y sobre todo nocturno. Su mayor amenaza es la hibridación con gatos asilvestrados, que diluye la población silvestre.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola gruesa, de punta roma y con anillos negros nítidos
+Raya negra continua a lo largo del lomo
+Aspecto más recio y patilargo que un gato casero',
+  s.seasonality = 'Todo el año (actividad crepuscular y nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Felis_silvestris_Kocka_divok%C3%A1_zoo_cropped.jpg?width=1280',
+  s.image_attribution = 'Felis_silvestris_Kočka_divoká_ZOO_Děčín.jpg: Alena Houšková derivat… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Carnivora',
+  s.taxon_family = 'Felidae',
+  s.taxon_genus = 'Felis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2023)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo IV; Reglamento CITES (CE) 338/97, Anexo A',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Felis silvestris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jarilla de brezo',
+  s.kingdom = 'flora',
+  s.family = 'Mata',
+  s.primary_habitat = 'Matorrales y pastizales pedregosos sobre calizas, en solanas secas',
+  s.description = 'Matita leñosa de hojas estrechas y punzantes parecidas a las del brezo, de donde le viene el nombre. Sus flores amarillas, de cinco pétalos delicados, se abren por la mañana y pierden los pétalos el mismo día.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas lineares, rígidas y puntiagudas, como agujas cortas
+Flores amarillas efímeras, con pétalos arrugados
+Mata baja y leñosa en la base, muy ramificada',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fumana_ericoides_Tallos_2010-7-03_ParqueNaturalLagunasdelaMata.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Malvales',
+  s.taxon_family = 'Cistaceae',
+  s.taxon_genus = 'Fumana',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Fumana ericoides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Brea',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fumana_thymifolia.jpg?width=1280',
+  s.image_attribution = 'Franz Xaver (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Malvales',
+  s.taxon_family = 'Cistaceae',
+  s.taxon_genus = 'Fumana',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Fumana thymifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gineta',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero carnívoro',
+  s.primary_habitat = 'Bosque, matorral denso, roquedos y sotos con cobertura y refugios',
+  s.description = 'Carnívoro esbelto de pelaje gris con manchas negras y una cola larguísima anillada en blanco y negro, tan larga como el resto del cuerpo. Es un trepador excelente y estrictamente nocturno. Deja sus excrementos en letrinas fijas sobre piedras y troncos, que usa durante años.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola muy larga con anillos blancos y negros bien marcados
+Pelaje gris con hileras de manchas negras
+Letrinas repetidas en el mismo punto elevado',
+  s.seasonality = 'Todo el año (actividad nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Genetta_genetta_felina_(Wroclaw_zoo).JPG?width=1280',
+  s.image_attribution = 'Guérin Nicolas (messages) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Carnivora',
+  s.taxon_family = 'Viverridae',
+  s.taxon_genus = 'Genetta',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2015)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo V',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Genetta genetta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ceje',
+  s.kingdom = 'flora',
+  s.family = 'Mata',
+  s.primary_habitat = 'Crece en tomillares y matorrales sobre suelos secos calizos, dolomíticos o yesosos, hasta 2400 m',
+  s.description = 'Perenne sufruticosa, de 4-30 cm, con tallos ascendentes o erectos, redondeados, de tomentosos a glabros. Hojas con limbo de 4-20 x 2-10 mm, pecioladas, de ovadas a oblongo- lanceoladas, opuestas, a veces las superiores alternas, con envés generalmente peloso o tomentoso, las inferiores sin estípulas, las superiores con estípulas foliáceas. Pétalos de 3-6 mm, pequeños, mayores que el cáliz, amarillos. Cápsula de 3-5 mm, ovoide-elipsoidal, glabra o pelosa en el ápice. Semillas pardo-amarillentas. Especie de la que se han considerado cuatro subespecies, tres de ellas endemismos españoles.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Enero a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_cinereum_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Malvales',
+  s.taxon_family = 'Cistaceae',
+  s.taxon_genus = 'Helianthemum',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Helianthemum cinereum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Salamanquesa rosada',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Pendientes rocosas calcícolas con vegetación casmofítica',
+  s.description = 'Gecko pequeño y translúcido de tonos rosados, de hábitos nocturnos, que se refugia en grietas de roquedos, muros de piedra y ruinas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Piel rosada casi translúcida
+Cola con anillos espinosos
+Nocturna y discreta',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hemidactylus_turcicus_on_a_wall_in_Greece.jpg?width=1280',
+  s.image_attribution = 'Koppi2 (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Gekkonidae',
+  s.taxon_genus = 'Hemidactylus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (RD 139/2011)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Hemidactylus turcicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de herradura',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Culebra ágil y trepadora con dibujo dorsal en herradura, ligada a matorrales termófilos y roquedos soleados del sureste ibérico.',
+  s.description_source = NULL,
+  s.identification_tips = 'Manchas dorsales en herradura
+Ágil y trepadora
+Inofensiva para las personas',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hemorrhois_hippocrepis_121004.jpg?width=1280',
+  s.image_attribution = 'Accipiter (R. Altenkamp, Berlin) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Colubridae',
+  s.taxon_genus = 'Hemorrhois',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Hemorrhois hippocrepis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Esparto',
+  s.kingdom = 'flora',
+  s.family = 'Gramínea',
+  s.primary_habitat = 'Laderas secas y llanos sobre suelos pobres; forma espartales extensos',
+  s.description = 'El esparto, nombrado también como Stipa tenacissima, forma matas densas y duraderas que dan nombre a los espartales, uno de los paisajes característicos del sureste ibérico. Sus hojas se enrollan sobre sí mismas en los días secos para perder menos agua y se abren tras la lluvia. Durante siglos se recolectó para hacer cuerdas, esteras y alpargatas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Matas grandes y compactas de hojas duras enrolladas
+Las hojas se abren tras la lluvia y se enrollan al secar
+Espigas altas y plateadas a final de primavera',
+  s.seasonality = 'Primavera (espigado)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Stipa_tenacissima.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Liliopsida',
+  s.taxon_order = 'Poales',
+  s.taxon_family = 'Poaceae',
+  s.taxon_genus = 'Macrochloa',
+  s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Macrochloa tenacissima';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra bastarda',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'La culebra más grande de la península, de hasta dos metros y medio, con un aspecto inconfundible: ojos grandes de pupila redonda bajo unas escamas salientes que le dan «cejas» y expresión de enfado. Es diurna, muy rápida y venenosa, pero con los colmillos al fondo de la boca, por lo que no supone riesgo si no se la manipula.',
+  s.description_source = NULL,
+  s.identification_tips = 'Escamas prominentes sobre los ojos, como cejas
+Ojo grande con pupila redonda y iris amarillento
+Adultos de dorso pardo oliváceo uniforme; jóvenes muy manchados',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Culebra_bastarda_(Malpolon_monspessulanus)%2C_Nig%C3%BCella%2C_Zaragoza%2C_Espa%C3%B1a%2C_2017-05-24%2C_DD_07.jpg?width=1280',
+  s.image_attribution = 'Diego Delso (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Lamprophiidae',
+  s.taxon_genus = 'Malpolon',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Malpolon monspessulanus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Garduña',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero carnívoro',
+  s.primary_habitat = 'Roquedos, bosques, ruinas y construcciones rurales',
+  s.description = 'Mustélido nocturno de cuerpo alargado y cola espesa, con un babero blanco en la garganta que suele bifurcarse hacia las patas delanteras. Trepa con soltura y aprovecha desde roquedos hasta desvanes. Es omnívora: come frutos, insectos, huevos y pequeños vertebrados.',
+  s.description_source = NULL,
+  s.identification_tips = 'Babero blanco en la garganta, a menudo dividido en dos
+Excrementos retorcidos y con pelos o semillas, sobre piedras
+Rastro nocturno; muy rara vez se ve de día',
+  s.seasonality = 'Todo el año (actividad nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Steinmarder_01.jpg?width=1280',
+  s.image_attribution = 'Zefram (CC BY 2.0 de) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Carnivora',
+  s.taxon_family = 'Mustelidae',
+  s.taxon_genus = 'Martes',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Martes foina';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tejón',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero carnívoro',
+  s.primary_habitat = 'Bosque, matorral y ribazos con suelo blando para excavar tejoneras',
+  s.description = 'Mustélido corpulento y de patas cortas, con la cabeza blanca cruzada por dos bandas negras que pasan por los ojos. Excava madrigueras complejas —las tejoneras— que una misma familia amplía y usa durante generaciones. Es omnívoro y muy aficionado a las lombrices.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cabeza blanca con dos franjas negras longitudinales
+Tejoneras: varias bocas grandes con montones de tierra
+Letrinas en hoyos poco profundos cerca de la madriguera',
+  s.seasonality = 'Todo el año (actividad nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Badger-badger.jpg?width=1280',
+  s.image_attribution = 'BadgerHero (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Carnivora',
+  s.taxon_family = 'Mustelidae',
+  s.taxon_genus = 'Meles',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Meles meles';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Comadreja',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero carnívoro',
+  s.primary_habitat = NULL,
+  s.description = 'Es el mustélido más pequeño, de cuerpo y cabeza alargados y extremidades cortas. Cola corta, aproximadamente el 30% del cuerpo. Pelaje de color pardo canela a pardo chocolate en la parte dorsal, y blanco en la ventral, con el límite entre coloraciones recto o sinuoso según las formas descritas. Los pies, con 5 dedos, pueden ser blancos o con la coloración dorsal. En la cara presentan con frecuencia pecas rictales. Acusado dimorfismo sexual en la longitud corporal (los machos son un 10-20% más largos que las hembras). La longitud también varía a lo largo de su distribución. Medidas corporales de ejemplares adultos de la Península Ibérica, CC:175-250 mm (machos), 165-190 mm (hembras); C: 50-85 mm (machos), 40-55 mm (hembras); P: 27-37 mm (machos), 23-27 mm (hembras); Ps: 90-223 g (machos), 49-80 g (hembras). Fórmula dentaria 3.1.3.1/3.1.3.2. Número de cromosomas (2n) = 42. Las hembras presentan cuatro pares de mamas. Podría confundirse con el armiño en librea estival, aunque no posee el tercio apical negro en la cola, ni presenta en estas latitudes librea blanca invernal.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Mustela_nivalis_-British_Wildlife_Centre-4.jpg?width=1280',
+  s.image_attribution = 'Keven Law (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Carnivora',
+  s.taxon_family = 'Mustelidae',
+  s.taxon_genus = 'Mustela',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Mustela nivalis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago ratonero grande',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Cuevas y desvanes; caza escarabajos en pastos, claros y bosque sin sotobosque',
+  s.description = 'Uno de los murciélagos más grandes de Europa, con orejas largas y anchas y hocico de aspecto perruno. Caza cerca del suelo, capturando escarabajos que localiza por el ruido que hacen al andar, no solo con el sonar. Cría en colonias numerosas en cuevas y bajo cubiertas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Talla grande y orejas largas y anchas
+Hocico ancho, de aspecto casi perruno
+Caza a ras de suelo, en zonas despejadas',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Myotis.jpg?width=1280',
+  s.image_attribution = 'Urheber: Manuel Werner, Germany, Wikipedia-Kontakt: http://de.wikip… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Myotis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2007)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Myotis myotis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra viperina',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Se trata de una culebra que frecuenta ríos, riachuelos, pantanos, balsas y marismas, siendo menos frecuente lejos de los puntos de agua',
+  s.description = 'Serpiente de tamaño medio, cola corta y cabeza ensanchada y bien delimitada respecto al resto del cuerpo. Generalmente hay dos escamas preoculares y dos postoculares, 7 escamas supralabiales y 9 escamas infralabiales. Dorsales claramente carenadas. El diseño es muy llamativo pues se trata de una amplia banda en forma de zig zag que recorre todo el cuerpo en posición dorsal. Existe un patrón alternativo que consiste en dos líneas longitudinales y paralelas, de colores claros, de recorrido también dorsal. El diseño rayado es más frecuente hacia el sur de la península y la costa mediterránea, aunque poblaciones muy cercanas pueden tener frecuencias muy dispares. La coloración corporal de fondo es variable aunque destacan los tonos verdosos, pardos y oliváceos. El vientre es generalmente gris amarillento con manchas oscuras en forma de diseño ajedrezado. Las hembras son mayores pero la longitud de cola y el número de subcaudales son mayores en machos. Longitud total máxima en la Península Ibérica, 910 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Viperine_Snake_(Natrix_maura)_(14198769323).jpg?width=1280',
+  s.image_attribution = 'Bernard DUPONT from FRANCE (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Natricidae',
+  s.taxon_genus = 'Natrix',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Natrix maura';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de collar',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Natrix_natrix_(Karl_L).jpg?width=1280',
+  s.image_attribution = 'Karl Larsaeus (CC BY 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Natricidae',
+  s.taxon_genus = 'Natrix',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Natrix natrix';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sapo de espuelas',
+  s.kingdom = 'fauna',
+  s.family = 'Anfibio',
+  s.primary_habitat = NULL,
+  s.description = 'Sapo de apariencia robusta y de talla mediana. La longitud total máxima se sitúa en 125 mm, aunque por lo general presentan tallas menores, siendo las hembras más grandes que los machos. No presenta tímpanos externamente visibles, ni tampoco glándulas parotídeas aparentes. Los ojos presentan la pupila vertical con el iris de color plateado, amarillento o verde, con reflejos metálicos y un fino reticulado oscuro. Los tubérculos metatarsianos están muy desarrollados y endurecidos, formando una espuela de color negro. La piel es lisa y brillante. La coloración dorsal es variable: blanquecina, amarillenta, grisácea, verdosa o parda, a menudo con presencia de manchas pardas o verdosas más oscuras. Ventralmente presentan tonos blanquecinos, amarillentos o grisáceos, a veces con manchas oscuras.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pelobates_cultripes02.jpg?width=1280',
+  s.image_attribution = 'Franco Andreone - see authorization (CC BY-SA 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Amphibia',
+  s.taxon_order = 'Anura',
+  s.taxon_family = 'Pelobatidae',
+  s.taxon_genus = 'Pelobates',
+  s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Pelobates cultripes';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Labiérnago',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Matorral mediterráneo y laderas secas sobre suelos pedregosos',
+  s.description = 'Arbusto de hojas opuestas, estrechas y coriáceas, muy parecido a un acebuche pero con las hojas verdes por ambas caras. Sus frutos son pequeñas drupas azuladas o negras que consumen zorzales y currucas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas opuestas y estrechas, verdes por las dos caras
+Sin el reverso plateado del acebuche
+Frutos pequeños azulados o negros',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Phyllirea_angustifolia.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Oleaceae',
+  s.taxon_genus = 'Phillyrea',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Phillyrea angustifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de borde claro',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Es fisurícola, tanto litófila como fitófila, y altamente sinantrópica, refugiándose en fisuras o grietas en edificios, rocas y árboles, así como en cajas-nido',
+  s.description = 'Es un murciélago pequeño. Las orejas son cortas, triangulares y con vértice superior redondeado, y poseen cinco pliegues transversales en la parte superior del borde externo. El trago es corto, redondeado en la punta y ligeramente curvado. El pelaje es de coloración general pardo castaño o rojizo en la parte dorsal, y más claro en la zona ventral. El hocico, las orejas y la membrana alar son de color negro parduzco. Las alas son relativamente estrechas. El plagiopatagio se inserta en la base de los dedos del pie; en su borde presentan generalmente una banda de color más claro. El espolón alcanza más de la mitad de la longitud del borde del uropatagio, con lóbulo postcalcáneo con cartílago conspicuo en forma de T. Los incisivos internos superiores (I1) son monocúspides, los externos (I2) menores que la mitad del I1, y el premolar superior anterior (P1) está desplazado hacia el interior y no es visible externamente. Los incisivos inferiores están fuertemente imbricados, y no presentan diastema entre I2 e I3. ANT: 31,0-37,0 mm; Ps: 4,5-10,0 g. Fórmula dentaria: 2.1.2.3/3.1.2.3. Número de cromosomas (2n) = 44. No existe dimorfismo sexual, aunque las hembras son algo mayores. Puede confundirse sobre todo con los otros representantes del género Pipistrellus y en menor medida con Hypsugo savii, de los que se diferencia sobre todo por los caracteres dentales. ULTRASONIDOS Emite pulsos de ecolocalización del tipo FM-CF, con frecuencia de máxima energía a 38-41 kHz, 8-12 ms de duración, e intervalo entre pulsos bimodal con valores máximos en torno a los 100 y 200 ms. Los cantos sociales son una serie de 2 pulsos FM muy rápidos, con máxima energía en torno a los 14-16 kHz, fácilmente audibles como un “chip” agudo, y que mediante sistemas de tiempo expandido permiten discriminar a la especie de P. nathusii. Mediante escucha directa pueden confundirse con sonidos de ecolocalización de Tadarida teniotis.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus_kuhlii.jpg?width=1280',
+  s.image_attribution = 'Mnolf (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Pipistrellus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Pipistrellus kuhlii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago común',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Quiróptero de hábitos fisurícolas',
+  s.description = 'Es uno de los Quirópteros más pequeños de Europa (ANT: 28-35 mm, Ps: 3,5-8,5 g). Orejas cortas, triangulares; trago de punta redondeada, más largo que ancho. Coloración dorsal de marrón-rojizo a gris-verdoso, con individuos negruzcos. Pelaje ventral más claro. La segunda falange del 3er dedo es 2- 3 mm mayor que la tercera. La pigmentación de las partes desnudas de la cara es en general oscura, sin parches claros conspicuos. Los machos tienen el pene grisáceo con una marcada estría más pálida en el glande. Carecen de protuberancia entre los orificios nasales. Fórmula dentaria: 2.1.2.3/3.1.2.3. Incisivo superior interno bicúspide, casi igual que la mitad de la longitud del externo. PM1 muy pequeño y desplazado hacia el interior de la serie dental pero visible desde el exterior. Dotación cromosómica: 2n = 42 ó 2n = 44. Pueden ser confundidos con otros miembros del género Pipistrellus, aunque sus menores dimensiones y la morfología y disposición de los incisivos y premolares superiores permiten distinguirlos en mano con relativa facilidad. ULTRASONIDOS Las emisiones más habituales son pulsos de frecuencia modulada de banda ancha con una cola final casi frecuencia constante. Las frecuencias terminal y de máxima intensidad oscilan entre 42-51 y 41,6- 50,8 kHz, respectivamente. Las llamadas sociales difieren en frecuencia y número de componentes. Las señales son estructuralmente similares a las de otras especies cogenéricas, pero sus diferentes frecuencias permiten separarlas con facilidad.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus_pipistrellus_lateral.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Pipistrellus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Pipistrellus pipistrellus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cornicabra',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Barrancos, umbrías y matorral alto sobre suelos frescos',
+  s.description = 'Arbusto o arbolillo de hoja caduca, con hojas compuestas de foliolos grandes y brillantes y un raquis sin alas, lo que lo separa del lentisco. Suele presentar agallas rojizas y curvadas en forma de cuerno, provocadas por pulgones, que le dan el nombre.',
+  s.description_source = NULL,
+  s.identification_tips = 'Agallas rojizas curvadas como cuernos en las hojas
+Pierde la hoja en invierno, al contrario que el lentisco
+Hoja compuesta con foliolo terminal y raquis sin alas',
+  s.seasonality = 'Primavera a otoño (pierde la hoja en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pistachier2.JPG?width=1280',
+  s.image_attribution = 'greffer.net (CC BY 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Sapindales',
+  s.taxon_family = 'Anacardiaceae',
+  s.taxon_genus = 'Pistacia',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Pistacia terebinthus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago orejudo gris',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = NULL,
+  s.description = 'Es un murciélago de tamaño medio. Orejas muy grandes que se unen por la base de sus bordes internos. El dorso es gris oscuro con los pelos negruzcos en casi toda su longitud, mientras que la zona ventral es blanquecina o gris muy pálida. Los jóvenes tienen una coloración grisácea más apagada. Las hembras son por lo general algo mayores que los machos. ANT: 37,0-45,0 mm; Ps: 6,5-15 g. Fórmula dentaria: 2.1.2.3/3.1.3.3. Número de cromosomas (2n) = 32. Por el tamaño de las orejas y su aspecto, en la Península Ibérica sólo se puede confundir con P. auritus y la semejanza entre ambas requiere que su determinación deba realizarse en mano, y aún así pueden surgir dificultades. Al contrario que en P. auritus, el trago es normalmente mayor de 5,5 mm y está pigmentado en toda su longitud con un color parecido al del pabellón de la oreja. La longitud del pulgar (sin la uña) generalmente es menor (inferior a 6 mm) y la uña es también más corta. Partes desnudas de color grisáceo oscuro (y no pardas o rojizas). Antifaz oscuro alrededor de los ojos más marcado. En los machos adultos, el pene es mazudo (y no cilíndrico). ULTRASONIDOS Emite pulsos de ecolocalización en FM desde 85 a 25 kHz. La intensidad de estos sonidos es muy débil y su alcance apenas supera los 5 m. Las señales son prácticamente indistinguibles de las de P. auritus.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, enero',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Plecotus_austriacus2.jpg?width=1280',
+  s.image_attribution = 'Andrei Sakhno (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Plecotus',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2023)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Plecotus austriacus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija ibérica',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = NULL,
+  s.description = 'La lagartija ibérica es una entidad parafilética que agrupa al menos cinco linajes monofiléticos en la Península Ibérica. Sin embargo, la completa discriminación de las nuevas especies o subespecies de este complejo está aún en una fase inicial. Así, no se planteará aquí detalladamente la distribución de tales formas y sólo se presenta el conjunto como un todo, a la espera de los resultados de análisis en curso. OLIVERIO et al. (2000) ha propuesto P. hispanica vaucheri como una especie distinta, donde estarían incluidas las poblaciones norteafricanas. También han sido identificados dos tipos de lagartijas ibéricas, los cuales se distribuyen en parapatría, respectivamente, el tipo 1 en el noroeste ibérico y el tipo 2 en el suroeste ibérico que, con toda probabilidad, tendrían rango específico.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eidechse.1024.jpg?width=1280',
+  s.image_attribution = 'de:Benutzer:Janekpfeifer (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Lacertidae',
+  s.taxon_genus = 'Podarcis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Podarcis hispanicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija cenicienta',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = NULL,
+  s.description = 'Se puede distinguir de Psammodromus edwardsianus por la falta de una escama supralabial debajo de la subocular. En comparación con Psammodromus edwardsianus y Psammodromus occidentalis, Psammodromus hispanicus tiene menos ocelos, menos poros femorales, menos escamas gulares, y un hocico más redondo. En Psammodromus hispanicus la longitud del hocico hasta la escama anal (LHA), la masa corporal, el número de hileras de escamas ventrales, el número de escamas del collar, la razón de cabeza (anchura de la cabeza/longitud de la cabeza), y la extensión de la coloración nupcial son mayores y la razón LHA/longitud total es menor que en Psammodromus edwardsianus. Tiene color grisáceo a pardo claro y presenta cuatro líneas dorsales de un color blanco crema a gris. El vientre es en general de color blanco. Tiene una coloración nupcial amarilla – verde bastante llamativa.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Psammodromus_hispanicus.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Lacertidae',
+  s.taxon_genus = 'Psammodromus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Psammodromus hispanicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Espino negro',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = NULL,
+  s.description = 'Es un arbustillo de hasta 3 m de altura (López González, 2001), que frecuentemente tiene aspecto de mata alta o media, más o menos espinoso, de ramificación intricada y de perennifolio a semicaducifolio facultativo. Sus especímenes tienen espinas pero presentan una variabilidad: los de las regiones continentales y mediterráneas más áridas las llegan a tener en cantidad y longitud exagerada, pero otros son casi inermes. Presenta también unas ramillas laterales cortas terminadas en un fascículo de hojas. Éstas se disponen alternas, aunque a veces algunas se muestran casi opuestas; son simples, sin peciolo y con un limbo estrecho (tíìcamente menor de 0,5 cm), a veces muy corto, menor de 1,2 cm (subsp. borgiae), de trasovado-oblongo a espatulado-linear, lampiño o con un pelillo muy corto (subesp. velutina).',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_lycioides_fruits.JPG?width=1280',
+  s.image_attribution = 'איתן פרמן (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Rosales',
+  s.taxon_family = 'Rhamnaceae',
+  s.taxon_genus = 'Rhamnus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Rhamnus lycioides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago grande de herradura',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Cuevas, minas y desvanes para refugiarse; caza en mosaicos de bosque y pasto',
+  s.description = 'El mayor de los murciélagos de herradura ibéricos. Debe el nombre a la hoja nasal en forma de herradura con la que emite el sonar por la nariz, no por la boca. Al reposar se envuelve por completo en las alas, como en una capa, y cuelga libre del techo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Al dormir se envuelve entero en las alas
+Hoja nasal en forma de herradura alrededor de las fosas
+Cuelga separado del techo, no metido en una grieta',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Rhinolophe_2.jpg?width=1280',
+  s.image_attribution = 'Marie Jullion (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Rhinolophidae',
+  s.taxon_genus = 'Rhinolophus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2007)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Rhinolophus ferrumequinum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago pequeño de herradura',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Cuevas, minas y edificios; caza en bosque, sotos y setos',
+  s.description = 'El más pequeño de los murciélagos de herradura europeos: colgado y envuelto en sus alas no llega al tamaño de una ciruela. Vuela bajo y muy cerca de la vegetación, con revoloteo de mariposa. Es muy sensible a las molestias en sus refugios de cría e invernada.',
+  s.description_source = NULL,
+  s.identification_tips = 'Tamaño minúsculo, como una ciruela colgando
+Vuelo bajo y revoloteante junto a setos y muros
+Se envuelve en las alas al reposar, como sus parientes',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Kleine_Hufeisennase.jpg?width=1280',
+  s.image_attribution = 'F. C. Robiller / naturlichter.de (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Rhinolophidae',
+  s.taxon_genus = 'Rhinolophus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Rhinolophus hipposideros';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Rabo de gato',
+  s.kingdom = 'flora',
+  s.family = 'Mata',
+  s.primary_habitat = 'Vive en matorrales y claros de bosque o en bordes de camino en pedregales calizos o arcillosos, hasta 1300 m',
+  s.description = 'Sufrútice de 33-48 cm, con tallos ramificados desde abajo, con pelos blanquecinos. Hojas de 7-24 x 1,5-3 mm, lanceoladas, con algunos dientes rudimentarios, mucronadas o espinosas, las jóvenes en fascículos, tomentosas. Inflorescencia en verticilastros con 6 flores cada uno, brácteas de 6-7,5 x 9-12 mm, ovadas, acopadas, con 6-10 dientes a cada lado, pelosas. Cáliz de 6-7 mm, pelosos, con glándulas esferoidales, con 5 dientes de 2,5-3,5 mm. Corola de 6-8 mm, con labio superior erguido e inferior con tres lóbulos perpendiculares al anterior, de color amarillo o castaño claro.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sideritis_mugronensis_Borja.jpg?width=1280',
+  s.image_attribution = 'Guillermo García-Saúco (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Sideritis',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Sideritis tragoriganum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lycocarpus fugax',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a mayo',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Brassicales',
+  s.taxon_family = 'Brassicaceae',
+  s.taxon_genus = 'Sisymbrium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Sisymbrium fugax';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Musgaño pequeño',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero',
+  s.primary_habitat = NULL,
+  s.description = 'Es uno de los mamíferos más pequeños del mundo. Medidas corporales, CC: 35,0-53,0 mm; C: 21,0- 30,0 mm; P: 5,7-7,9 mm; Ps: 1,2-2,7 g. Su morfología externa es similar a la de otras musarañas, pero se distingue por presentar la cabeza proporcionalmente más grande y la cola más larga, de aproximadamente la mitad de la longitud corporal. Las orejas son bien visibles, los ojos pequeños y la cola está revestida de un corto pelaje entre el que sobresalen numerosos pelos dispersos de mayor longitud. La coloración del pelaje muestra pocas variaciones estacionales. En general, es gris pardusca, con ciertos reflejos rojizos en el dorso y de tonalidad más clara en el vientre, sin clara línea de demarcación entre ambas regiones. Presenta tres pares de mamas inguinales. El cráneo es estrecho y alargado, con la caja craneana de perfil superior prácticamente horizontal. La mandíbula es frágil y de dimensiones reducidas. Fórmula dentaria: 3.1.2.3/1.1.1.3. A diferencia del género Crocidura, Suncus se caracteriza por presentar cuatro unicúspides superiores, aunque el último es sumamente pequeño, está desplazado en sentido lingual y queda prácticamente oculto por la cúspide anterior del último premolar. Los dientes de la mandíbula son de morfología similar a los de la musaraña gris, Crocidura russula, aunque de menor tamaño y con la sección posterior del M3 más reducida. Número de cromosomas (2n) = 42.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Suncus_etruscus_crop.jpg?width=1280',
+  s.image_attribution = 'Suncus_etruscus.jpg: Trebol-a derivative work: Materialscientist (t… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Soricomorpha',
+  s.taxon_family = 'Soricidae',
+  s.taxon_genus = 'Suncus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Suncus etruscus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago rabudo',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Los refugios se sitúan en farallones rocosos, acantilados marinos y estructuras artificiales como puentes y edificios',
+  s.description = 'Murciélago de gran tamaño, con alas largas y estrechas. Cabeza característica con orejas rígidas proyectadas hacia delante. La cola sobresale por fuera de la membrana caudal y se retrae en el uropatagio en vuelo. El color del pelo es muy variable, de pardo a gris claro. Algunos ejemplares presentan áreas canosas. No se ha descrito dimorfismo sexual en cuanto al color. Las hembras son ligeramente más grandes. ANT: 57,0-64,0 mm; Ps: 22,0-54,0 g. Fórmula dentaria: 1.1.2.3/3.1.2.3. Número de cromosomas (2n) = 48. No existen especies similares en Europa. ULTRASONIDOS Muestran una gran variedad de llamadas sociales emitidas desde los refugios y en vuelo. Exhibiciones sonoras de los machos dominantes y fuertes emisiones durante las persecuciones aéreas. Las señales de ecolocalización tienen una duración de entre 8 y 27 ms. (media 15 ms). El intervalo entre pulsos oscila entre 200 y 1.400 ms (media 740 ms). Emite entre 9-15 kHz con máxima intensidad en 11,4 kHz. El rango de todos los tipos de llamadas es audible para el oído humano. Con poca experiencia pueden confundirse las señales de ecolocalización del murciélago rabudo con emisiones sociales audibles de otras especies (Pipistrellus pipistrellus, Nyctalus noctula y N. leisleri).',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tadarida.teniotis.jpg?width=1280',
+  s.image_attribution = 'Ramón Caballero García (GPL) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Molossidae',
+  s.taxon_genus = 'Tadarida',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Tadarida teniotis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Taray canario',
+  s.kingdom = 'flora',
+  s.family = 'Árbol',
+  s.primary_habitat = 'Galerías y matorrales ribereños termomediterráneos',
+  s.description = 'Taray de floración prolongada y espigas rosadas que forma galerías y tarayales en cauces y ramblas del litoral árido.',
+  s.description_source = NULL,
+  s.identification_tips = 'Espigas rosadas abundantes
+Floración prolongada
+Forma tarayales en ramblas',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/619019413/original.jpg',
+  s.image_attribution = 'Christoph Moning (CC BY 4.0) · GBIF',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Caryophyllales',
+  s.taxon_family = 'Tamaricaceae',
+  s.taxon_genus = 'Tamarix',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No incluida en el LESRPE; formador de galerías termomediterráneas (HIC 92D0)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Tamarix canariensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Salamanquesa común',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Pendientes rocosas calcícolas con vegetación casmofítica',
+  s.description = 'Gecko robusto de piel tuberculada, activo al anochecer sobre roquedos, muros y cortados, donde caza insectos atraídos por la luz.',
+  s.description_source = NULL,
+  s.identification_tips = 'Piel rugosa con tubérculos
+Activa al atardecer
+Trepa por rocas y muros',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/605672084/original.jpg',
+  s.image_attribution = 'jrodben (CC BY-NC 4.0) · GBIF',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Phyllodactylidae',
+  s.taxon_genus = 'Tarentola',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (RD 139/2011)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Tarentola mauritanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zamarrilla',
+  s.kingdom = 'flora',
+  s.family = 'Mata aromática',
+  s.primary_habitat = 'Tomillares y matorral raso sobre suelo calizo pedregoso',
+  s.description = 'Mata pequeña y grisácea, de hojas estrechas con el borde enrollado, que remata sus tallos en cabezuelas apretadas de flores blancas o crema. Es una de las plantas más constantes del tomillar y una fuente de néctar importante en pleno verano.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cabezuelas redondas y compactas al final del tallo
+Aspecto general blanquecino o grisáceo
+Flores sin labio superior, típicas del género',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_capitatum2006.jpg?width=1280',
+  s.image_attribution = 'No machine-readable author provided. Víctor M. Vicente Selvas~commo… (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Teucrium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Teucrium capitatum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lucema',
+  s.kingdom = 'flora',
+  s.family = 'Mata',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Teucrium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Teucrium libanitis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Hierba de la calentura',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_pseudochamaepitys_M_1.jpg?width=1280',
+  s.image_attribution = 'Adrian198cm (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Teucrium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Teucrium pseudochamaepitys';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tomillo',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Starr-080812-9700-Thymus_vulgaris-leaves-Makawao-Maui_(24807095872).jpg?width=1280',
+  s.image_attribution = 'Forest and Kim Starr (CC BY 3.0 us) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Thymus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2014)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Thymus vulgaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagarto ocelado',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'El lagarto más grande de Europa, de hasta 60 cm con la cola incluida. Su dorso es verde con un fino reticulado negro y, en los costados, hileras de ocelos de un azul intenso. Los machos viejos tienen una cabeza enorme y maciza. Es diurno y muy desconfiado.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ocelos azules alineados en los costados
+Dorso verde con retícula negra muy fina
+Tamaño grande y cabeza maciza en los machos adultos',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Jewelled_Lizard_(Timon_lepidus)_male_found_under_a_stone_by_Jean_NICOLAS_(14166347788).jpg?width=1280',
+  s.image_attribution = 'Bernard DUPONT from FRANCE (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Lacertidae',
+  s.taxon_genus = 'Timon',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Timon lepidus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Olmo común',
+  s.kingdom = 'flora',
+  s.family = 'Árbol',
+  s.primary_habitat = 'Sotos, vegas y suelos profundos con humedad freática',
+  s.description = 'Árbol de hojas asimétricas en la base —un lado baja más que el otro— y borde doblemente aserrado. Florece antes de echar la hoja y fructifica en sámaras redondeadas y membranosas. La grafiosis ha diezmado sus poblaciones adultas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Base de la hoja claramente asimétrica
+Sámaras redondas y papiráceas antes que las hojas
+Rebrota de raíz formando setos y orlas',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Blismes_elm_2007.jpg?width=1280',
+  s.image_attribution = 'Eric Collin. Original uploader was Ptelea at en.wikipedia (GFDL) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Rosales',
+  s.taxon_family = 'Ulmaceae',
+  s.taxon_genus = 'Ulmus',
+  s.iucn_global = 'DD — Datos insuficientes (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestal…)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Ulmus minor';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Campanillas',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = 'Vive en rocas, muros y techumbres viejas',
+  s.description = 'Planta perenne, de 15-40 cm, con cepa tuberosa, glabra, con tallo erecto, simple. Hojas algo carnosas, las basales peltadas, con largo pecíolo central; limbo de 1,5-4 cm, redondeado y cóncavo, festoneado; las caulinares de espatuladas a lanceoladas. Inflorescencia en largo racimo, que ocupa tres cuartas partes del tallo. Flores péndulas, con pedicelos de 1,5-6 mm. Sépalos soldados en la base con cinco dientes agudos. Corola 6-9 mm, mucho más larga que el cáliz, tubular, de color amarillento verdoso, con cinco dientes de 1,5-2 mm, agudos. Diez estambres, internos, soldados a la corola; cinco carpelos, libres. Fruto en polifolículo de 5-7 mm, con foliculos alargados, atenuados en un estilo corto.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Umbilicus_rupestris.jpg?width=1280',
+  s.image_attribution = 'user:Carsten Niehaus (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Saxifragales',
+  s.taxon_family = 'Crassulaceae',
+  s.taxon_genus = 'Umbilicus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Umbilicus rupestris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Durillo',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Umbrías, barrancos y sotobosque de encinar y pinar húmedo',
+  s.description = 'Arbusto de hojas perennes, opuestas y coriáceas, que florece en pleno invierno con corimbos de flores blancas nacidas de capullos rosados. Sus frutos son bayas de un azul metálico oscuro muy llamativo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Florece en invierno, en corimbos blancos planos
+Capullos rosados antes de abrir
+Frutos azul metálico oscuro, casi negros',
+  s.seasonality = 'Invierno y primavera (floración)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/T2_37_Viburnum_tinus_par_Pierre-Joseph_Redout%C3%A9.jpeg?width=1280',
+  s.image_attribution = 'Pierre-Joseph Redouté (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Dipsacales',
+  s.taxon_family = 'Adoxaceae',
+  s.taxon_genus = 'Viburnum',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Viburnum tinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Víbora hocicuda',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Habita suelos silíceos y calizos, tendiendo a ocupar medios psammófilos a baja altitud y en el occidente ibérico, y medios saxícolas en montaña',
+  s.description = 'Se caracteriza por su cuerpo grueso y corto, cola pequeña, tamaño variable pero inferior a 60 cm, cabeza de aspecto triangular y bien diferenciada del cuerpo con un apéndice nasal elevado hacia arriba, escamas cefálicas muy fragmentadas, pupila vertical, y patrón de coloración dorsal generalmente con una banda negra en zigzag sobre fondo ceniciento.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lataste''s_viper.jpg?width=1280',
+  s.image_attribution = 'Tim Vickers (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Viperidae',
+  s.taxon_genus = 'Vipera',
+  s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Vipera latastei';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de escalera',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Ocupa todo tipo de suelos en ambientes mediterráneos de matorral y borde de bosque, pues precisa de cierta cobertura vegetal y de lugares relativamente húmedos',
+  s.description = 'Longitud hocico-cloaca media de 720 mm (rango 233-1.385 mm), cola relativamente corta. Cabeza algo pequeña, con hocico agudo, que sobrepasa netamente el extremo anterior de la mandíbula. 27 rangos de escamas dorsales. Color de fondo amarillento, con diseño de manchas dorsales en escalera en los ejemplares pequeños, y dos líneas dorsolaterales en los ejemplares de mayor tamaño. Longitud total máxima, 1.650 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhinechis_scalaris_cropped.jpg?width=1280',
+  s.image_attribution = 'Benny_Trapp_Rhinechis_scalaris_Portugal.jpg: Benny Trapp derivative… (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Colubridae',
+  s.taxon_genus = 'Zamenis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Zamenis scalaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Azor común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Bosques maduros y masas forestales densas con claros',
+  s.description = 'Rapaz forestal de alas cortas y anchas y cola larga, diseñada para perseguir presas entre los árboles a gran velocidad. Es esquiva y se ve casi siempre de refilón. La hembra llega a ser un tercio mayor que el macho, una diferencia poco habitual entre las aves.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ceja blanca marcada sobre el ojo, como un antifaz al revés
+Vuelo de varios aleteos rápidos seguidos de un planeo corto
+Pecho finamente rayado en horizontal en los adultos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Northern_Goshawk_ad_M2.jpg?width=1280',
+  s.image_attribution = 'Norbert Kenntner, Berlin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Accipitriformes',
+  s.taxon_family = 'Accipitridae',
+  s.taxon_genus = 'Accipiter',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Accipiter gentilis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ánade azulón',
+  s.kingdom = 'fauna',
+  s.family = 'Ave acuática',
+  s.primary_habitat = NULL,
+  s.description = 'En el plumaje del macho de ánade azulón destaca el color verde brillante con irisaciones que presenta en cabeza y cuello. Un estrecho collar blanco separa a este del pecho, que es castaño. El dorso es parduzco; las partes ventrales, grises, y la popa, de color negro, resalta sobre los extremos blancos de las rectrices. El pico es amarillo con la uña negra, en tanto que las patas poseen una coloración anaranjada. Como rasgos característicos en el diseño de este ánade destacan, por un lado, las dos plumas negras y rizadas que presenta sobre la cola y, por otro, el espejuelo, de una tonalidad azul violácea —de ahí su denominación de azulón—, muy patente en vuelo. Como ocurre con la mayoría de las anátidas, esta especie presenta un acusado dimorfismo sexual. En este caso, las hembras tienen un tamaño algo menor que el del macho y son muy crípticas, con un plumaje parduzco moteado en el que tan solo resalta el espejuelo, del mismo color que en el macho. Los jóvenes muestran gran parecido con las hembras, si bien la tonalidad general es algo rojiza.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9F%D0%B0%D1%80%D0%B0_%D1%83%D1%82%D0%BE%D0%BA_%D0%BA%D1%80%D1%8F%D0%BA%D0%B2_(Anas_platyrhynchos)%2C_%D0%9A%D0%BE%D0%BB%D0%BE%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Anseriformes',
+  s.taxon_family = 'Anatidae',
+  s.taxon_genus = 'Anas',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Anas platyrhynchos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Vencejo común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Nidos:edificios,acantilados rocosos,cuevas,cajas nido, en colonias.En todo tipo de habitats',
+  s.description = 'Presenta silueta en forma de ballesta, cola corta y ahorquillada, y alas estrechas y largas. Posee pico corto, plano y con la boca muy ancha; patas emplumadas y extremadamente cortas, que le impiden posarse en el suelo; y pies pequeños y de fuertes garras, con los cuatro dedos dirigidos hacia delante. Muestra coloración uniforme de tono pardo oscuro, casi negro, excepto en la garganta, que es blanca; la cara inferior de las alas resulta un poco más pálida. En otoño, con su plumaje desgastado, es algo más claro. Ambos sexos son iguales. Los jóvenes se parecen mucho a los adultos, aunque con un tono algo más oscuro y un aspecto escamoso, por los pequeños ribetes blancos que tienen en las plumas. Esta ave es observada casi siempre en vuelo y en grupo. Las condiciones de luz, el fondo y la distancia determinan su apariencia, pudiendo confundirse con frecuencia con el vencejo pálido. Se localiza habitualmente en núcleos urbanos, volando de forma incansable a gran velocidad. Pasa la mayor parte de su vida en el aire, y únicamente se la ve posada cuando entra o sale del nido. Duerme tanto en el nido como en vuelo.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Apus_apus_-Barcelona%2C_Spain-8_(1).jpg?width=1280',
+  s.image_attribution = 'pau.artigas (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Apodiformes',
+  s.taxon_family = 'Apodidae',
+  s.taxon_genus = 'Apus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Apus apus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Búho chico canario',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz nocturna',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Frightened_Long-eared_Owl_(28045676729).jpg?width=1280',
+  s.image_attribution = 'Becky Matsubara from El Sobrante, California (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Strigiformes',
+  s.taxon_family = 'Strigidae',
+  s.taxon_genus = 'Asio',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Asio otus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Terrera común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave esteparia',
+  s.primary_habitat = 'Llanos de cultivo, eriales y pastizales rasos con suelo desnudo',
+  s.description = 'Alondra pequeña y pálida de aspecto muy limpio, con el pecho sin apenas rayado salvo una mancha oscura a cada lado del cuello. Anida en el suelo, en cultivos y baldíos. En migración se agrupa en bandos que se levantan del suelo todos a la vez.',
+  s.description_source = NULL,
+  s.identification_tips = 'Mancha oscura a cada lado del cuello, como un botón
+Pecho limpio, sin rayado extenso
+Ceja clara y pico corto y grueso de granívora',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alondra.jpg?width=1280',
+  s.image_attribution = 'Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Alaudidae',
+  s.taxon_genus = 'Calandrella',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Calandrella brachydactyla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chotacabras cuellirrojo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral abierto, pinares aclarados, ramblas y caminos térreos',
+  s.description = 'Ave crepuscular de plumaje jaspeado que imita la hojarasca, tan mimético que de día resulta casi imposible verla posada en el suelo. Caza polillas en vuelo con la boca muy abierta. Su canto nocturno es un «cu-toc, cu-toc» repetido de forma monótona durante minutos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Collar rojizo en la nuca, más marcado que en su pariente europeo
+Se levanta del camino al anochecer y vuelve a posarse unos metros más allá
+Canto nocturno monótono, como un motor lejano',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Caprimulgus_ruficollis_-Portugal-8.jpg?width=1280',
+  s.image_attribution = 'Olivença (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Caprimulgiformes',
+  s.taxon_family = 'Caprimulgidae',
+  s.taxon_genus = 'Caprimulgus',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Caprimulgus ruficollis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Golondrina dáurica',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Desde parameras secas hasta altas cumbres.Nidos bajo puentes,riscos,acantilados,zonas llanas bajas',
+  s.description = 'De apariencia similar a la golondrina común, exhibe dorso negro, con reflejos azulados, y vientre blanco sucio, con flancos anaranjados y algunas rayas tenues. Los rasgos más característicos de la especie son la nuca y la cara anaranjadas, del mismo color que el obispillo. Las alas, largas y apuntadas, también muestran tonos naranjas en la parte inferior delantera. Posee una cola muy larga y muy ahorquillada,de color negro uniforme, tanto por arriba como por abajo. Tiene patas cortas sin emplumar, boca muy ancha, y pico corto, plano y negro. Ambos sexos son iguales. Los jóvenes presentan en el dorso plumaje negro mate, con plumas ribeteadas en blanco, siendo las zonas naranjas de menor intensidad; incluso el obispillo parece blanco en ocasiones. Esta ave se observa frecuentemente cerca de puentes y roquedos, y exhibe un vuelo ágil, rápido y acrobático.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Golondrina_d%C3%A1urica_Cecropis_daurica_1.jpg?width=1280',
+  s.image_attribution = 'Agustín Povedano from El Puerto de Santa María, Extremadura y Andal… (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Hirundinidae',
+  s.taxon_genus = 'Cecropis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Cecropis daurica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alzacola',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Esta especie suele observarse en el suelo o posada en arbustos bajos. Es fácilmente reconocible por su larga cola, de coloración rojiza y extremo terminal con manchas blancas y negras, que frecuentemente alza, despliega y sacude de manera ostensible. También resulta distintivo su diseño facial, ya que posee una lista ocular fina oscura, que contrasta con una banda superciliar de color blanco crema. El resto de su plumaje presenta un tono ocre claro.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Agrobate_roux_au_Parc_National_de_l''Ichkeul_(Tunisia)%2C_crop.jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Cercotrichas',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2004)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Cercotrichas galactotes';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebrera europea',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Sierras y llanos con matorral, ramblas y bosque abierto',
+  s.description = 'Águila grande y muy pálida por debajo, especializada en comer culebras y lagartos. Se ciñe en el aire durante largos ratos, con las patas colgando, escrutando el suelo antes de dejarse caer. La cabeza, ancha y con ojos amarillos muy frontales, le da un aire de lechuza.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vientre y alas casi blancos vistos desde abajo
+Se mantiene cerniéndose, algo raro en un águila tan grande
+Cabeza ancha y ojos amarillos, aspecto de búho',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_culebrera_(Circaetus_gallicus).jpg?width=1280',
+  s.image_attribution = 'Paco Gómez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Accipitriformes',
+  s.taxon_family = 'Accipitridae',
+  s.taxon_genus = 'Circaetus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Circaetus gallicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Aguilucho lagunero occidental',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Masas de vegetación palustre,lagunas, ríos y pantanos.Nidos en vegetación a pocos cm del agua,suelo',
+  s.description = 'El aguilucho lagunero es una rapaz de tamaño medio y aspecto bastante estilizado, aunque ciertamente más robusto que los restantes aguiluchos presentes en nuestra fauna, a los que también supera en envergadura. La especie presenta, como es habitual en otros miembros del género Circus, un acusado dimorfismo sexual, ya que la hembra es bastante mayor y más pesada que el macho, y ambos sexos exhiben plumajes muy diferentes. En el macho adulto predominan los tonos marrones en el dorso, aunque la cabeza y la nuca son amarillentas o ligeramente grisáceas y surcadas por finas estrías oscuras. Las partes inferiores —especialmente a la altura de las patas y el bajo vientre— suelen adquirir un color rojizo, que va dando paso al crema o blanco sucio a medida que subimos hacia el pecho y la garganta, los cuales aparecen suavemente listados. Las rectrices y rémiges secundarias son grises; estas últimas describen una extensa banda alar, muy visible en vuelo . Ventralmente, las alas del macho son más bien claras —blancuzcas o de color gris pálido— y en ellas destacan fuertemente las negras rémiges primarias. Las hembras adultas, por su parte, resultan bastante más oscuras y menos contrastadas, en conjunto, que sus parejas, pues lucen un plumaje —tanto dorsal como ventralmente— dominado por los tonos pardoachocolatados, que en la cabeza, la garganta y los hombros son sustituidos por otros amarillentos o blanquecinos. Los ejemplares recién salidos del nido se parecen bastante a las hembras, aunque resultan más homogéneos y ligeramente más oscuros; además, solo presentan manchas más claras en la cabeza, la nuca y la garganta. Entre la librea juvenil y la de adulto existen varios plumajes de transición, que definen las diferentes edades del ave. Por otra parte, el aguilucho lagunero es una especie en la que no son infrecuentes los casos de melanismo y la aparición de diseños atípicos, lo que en ocasiones puede dificultar su identificación y propiciar las confusiones con especies de tamaño semejante.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Circus_aeruginosus_samiec2.jpg?width=1280',
+  s.image_attribution = 'Artur Mikołajewski (CC BY 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Accipitriformes',
+  s.taxon_family = 'Accipitridae',
+  s.taxon_genus = 'Circus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Circus aeruginosus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Aguilucho pálido',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Nidifica en el norte en matorrales bajos y densos de brezos, tojos.Pastizales y tierras de labor',
+  s.description = 'Es una rapaz de tamaño medio, cuya fisonomía responde al característico patrón de los integrantes del género Circus, es decir, alas y cola largas, tarsos muy prolongados y aspecto general bastante grácil, aunque menos que el del aguilucho cenizo, del que se diferencia por su mayor tamaño y robustez y por tener las alas comparativamente más anchas. La especie presenta un marcado dimorfismo sexual que afecta al tamaño —las hembras son mayores y más pesadas— y a la coloración del plumaje. El macho adulto es un ave de color claro, en el que dominan los tonos grisáceos, más oscuros en el dorso, la cabeza y el pecho, y blancos en el vientre, donde, a diferencia del cenizo, no luce ningún tipo de manchas o barrados. En vuelo resultan muy visibles las puntas negras de las rémiges primarias, que contrastan mucho con el blanco de las infracoberteras alares; dorsalmente, también son visibles las puntas negras del ala, así como el obispillo, que es blanco y extenso. En la hembra adulta, por el contrario, dominan los tonos terrosos con tintes grisáceos, bastante más claros en las regiones ventrales —que están intensamente rayadas de pardo— que en el dorso, mientras que en la parte inferior de las alas exhibe un barrado abundante. El obispillo de la hembra de pálido resulta muy visible en vuelo y es más extenso que el de la hembra de cenizo. Los individuos juveniles, por su parte, son pardos en las regiones dorsales y de un suave tono ocráceo —ligeramente anaranjado— en las ventrales, que aparecen, además, surcadas por un fino estriado longitudinal. En vuelo, como todos los aguiluchos, esta especie se muestra ágil y maniobrera y es capaz de desplazarse lentamente a baja altura —incluso con malas condiciones atmosféricas— mientras prospecta el terreno con las alas colocadas en forma de “V”.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Circus_cyaneus%2C_Ballaugh_Curragh%2C_Isle_of_Man_1.jpg?width=1280',
+  s.image_attribution = 'Isle of Man Government (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Accipitriformes',
+  s.taxon_family = 'Accipitridae',
+  s.taxon_genus = 'Circus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Circus cyaneus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cuco',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Zonas arboladas de todo tipo.Bosques,linderos,bosquetes,cultivos,huertos frutales,piornales',
+  s.description = 'Esta ave, de tamaño medio y aspecto estilizado, se caracteriza por poseer una larga cola y unas alas apuntadas, por lo que su silueta puede confundirse en vuelo con la de una pequeña rapaz, como el cernícalo vulgar o el gavilán. En la coloración del macho dominan los tonos grises, sobre todo en el dorso, la cabeza y el cuello. Por su parte, las regiones ventrales son blancas, pero finamente barreadas. La hembra puede lucir dos tipos de plumaje: uno grisáceo, muy parecido al del macho, y otro rojizo, bastante menos frecuente que el anterior. Los inmaduros se asemejan en parte a las hembras de fase rojiza, aunque tienen las plumas orladas de blanco y una característica mancha blanca en la nuca.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cuckoo_(51169010335).jpg?width=1280',
+  s.image_attribution = 'Andy Morffew from Itchen Abbas, Hampshire, UK (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Cuculiformes',
+  s.taxon_family = 'Cuculidae',
+  s.taxon_genus = 'Cuculus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Cuculus canorus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca carrasqueña',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral alto, jarales, encinares aclarados y bordes de bosque',
+  s.description = 'Curruca de tamaño medio, con el macho de dorso gris, garganta y pecho color teja y un bigote blanco muy nítido que separa ambos. El anillo ocular es rojo. Canta desde el interior del matorral y hace vuelos cortos de exhibición sobre las matas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Bigote blanco que bordea la garganta rojiza
+Anillo ocular rojo anaranjado
+Prefiere matorral alto, no el raso',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9A%CE%BF%CE%BA%CE%BA%CE%B9%CE%BD%CE%BF%CF%84%CF%83%CE%B9%CF%81%CE%BF%CE%B2%CE%AC%CE%BA%CE%BF%CF%82.jpg?width=1280',
+  s.image_attribution = 'Antonios Tsaknakis (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Sylviidae',
+  s.taxon_genus = 'Curruca',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Curruca cantillans';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca zarcera',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Linderos con arbustos y malezas espesas,cultivos, bosquetes, praderas y claros con setos de matorral',
+  s.description = 'Curruca de mediano tamaño, de cola relativamente larga y con rectrices externas blancas. El macho presenta el dorso de color pardo, con la cabeza gris en plumaje de cría y parda durante el resto del año, las alas pardo-rojizas, la garganta blanca, y las partes inferiores blanquecinas y con tonos rosados. La hembra muestra tonalidades más apagadas, con la cabeza y el dorso más pardos, la garganta blanquecina y más apagada, y la zona ventral también blanquecina y sin los tonos ligeramente asalmonados del macho. Ambos sexos tienen las patas claras. Los adultos lucen un iris rojizo, que contrasta con un tenue anillo orbital claro.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Flickr_-_Rainbirder_-_Common_Whitethroat_(Sylvia_communis).jpg?width=1280',
+  s.image_attribution = 'Steve Garvie from Dunfermline, Fife, Scotland (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Sylviidae',
+  s.taxon_genus = 'Curruca',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Curruca communis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca mirlona',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Gran variedad de medios: bosques abiertos de frondosas.Cría:encinares,alcornocales,pinares,sabinares',
+  s.description = 'Es la mayor y la más corpulenta de nuestras currucas. Tiene las partes superiores grisáceas y las inferiores blanquecinas, con tintes rosados en el pecho y más grisáceos en la parte ventral. Posee pico robusto, iris de color amarillo pálido y garganta blanca. El macho exhibe una franja oscura, casi negra, a modo de antifaz, y presenta la frente y el capirote también muy oscuros; este encapuchado resulta más gris (menos oscuro) en las hembras y pardo en los jóvenes. La cola es oscura, con las rectrices externas de color blanco.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_hortensis_Museum_de_Gen%C3%A8ve.JPG?width=1280',
+  s.image_attribution = 'Totodu74 (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Sylviidae',
+  s.taxon_genus = 'Curruca',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Curruca hortensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Avión común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Pequeña golondrina de aspecto compacto, negro azulada brillante por arriba y blanca por abajo, con límites netos entre colores. Posee alas largas y apuntadas y cola corta ahorquillada de color negro; pico corto, plano y negro; boca muy ancha, y patas cortas cubiertas de finas plumas blancas. Destaca su obispillo de color blanco, la única zona clara de las partes dorsales. Ambos sexos son iguales. Los jóvenes resultan menos contrastados, más parduzcos, sobre todo por abajo, con límites difusos entre partes negras y blancas, y con puntas blancas en las terciarias. Este pájaro suele observarse en vuelo y agrupado. Su vuelo es rápido y ágil, aunque menos que en la golondrina común, y a menudo se produce a mayor altura que en esta. Se posa con frecuencia, a veces en el suelo.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Delichon_urbicum_-Iceland_-flying-8_(1).jpg?width=1280',
+  s.image_attribution = 'Ómar Runólfsson (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Hirundinidae',
+  s.taxon_genus = 'Delichon',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Delichon urbicum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Halcón peregrino',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Cortados y áreas abiertas',
+  s.description = 'Halcón robusto de alas puntiagudas y cola corta, capaz de superar los 300 km/h en el picado con que abate a otras aves en pleno vuelo. Se reconoce por la ancha bigotera negra que baja desde el ojo sobre un pecho claro y barrado.',
+  s.description_source = NULL,
+  s.identification_tips = 'Bigotera negra ancha bajo el ojo, como un casco
+Silueta de ancla: alas puntiagudas y cola corta
+Pecho claro con barrado fino en horizontal',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Falco_peregrinus_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Falconiformes',
+  s.taxon_family = 'Falconidae',
+  s.taxon_genus = 'Falco',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE; Directiva Aves 2009/147/CE, Anexo I; Reglamento CITES (CE) 338/97, Anexo A',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Falco peregrinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcotán',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Campo abierto con arbolado disperso, cerca de zonas húmedas',
+  s.description = 'Halcón esbelto con silueta de vencejo gigante: alas muy largas y afiladas y cola corta. Caza libélulas e incluso vencejos en pleno vuelo, con una agilidad extraordinaria. Los adultos tienen los «calzones» y la zona anal de un rojo ladrillo característico.',
+  s.description_source = NULL,
+  s.identification_tips = 'Silueta de hoz, como un vencejo enorme
+Calzones y bajo vientre rojizos en el adulto
+Bigotera negra ancha sobre garganta blanca',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hobby_-_Falco_subbuteo.jpg?width=1280',
+  s.image_attribution = 'Andy Morffew from Itchen Abbas, Hampshire, UK (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Falconiformes',
+  s.taxon_family = 'Falconidae',
+  s.taxon_genus = 'Falco',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Falco subbuteo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cogujada común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Cultivos, caminos, eriales y bordes de poblado con suelo desnudo',
+  s.description = 'Alondra parda de cresta alta y puntiaguda, muy ligada a caminos, cunetas y descampados junto a los pueblos. Camina en vez de saltar y, al volar, deja ver el forro rojizo de las alas y la cola con los bordes canela.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cresta larga y puntiaguda, casi siempre erguida
+Forro de las alas rojizo, visible al levantar el vuelo
+Camina por el suelo en vez de saltar',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Crested_Lark_-_Qatar.jpg?width=1280',
+  s.image_attribution = 'Ashraf Kotb (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Alaudidae',
+  s.taxon_genus = 'Galerida',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Galerida cristata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila calzada',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Bosques y sierras con arbolado, cazando sobre zonas abiertas cercanas',
+  s.description = 'Águila pequeña, del tamaño de un ratonero, con dos formas de plumaje muy distintas: una clara con el vientre blanco y otra oscura y uniforme. Nidifica en árboles dentro del bosque y caza en campo abierto lanzándose desde altura. Se identifica en vuelo por las «luces de posición»: dos manchas blancas en el arranque de las alas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dos manchas blancas donde el ala se une al cuerpo
+Existen ejemplares claros y oscuros de la misma especie
+Cola larga y recta, sin la muesca del milano',
+  s.seasonality = 'Primavera y verano (estival); algunos ejemplares invernan',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Booted_eagle%2C_Hieraaetus_pennatus%2C_at_Kgalagadi_Transfrontier_Pa_(32334023348).jpg?width=1280',
+  s.image_attribution = 'Derek Keats from Johannesburg, South Africa (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Accipitriformes',
+  s.taxon_family = 'Accipitridae',
+  s.taxon_genus = 'Hieraaetus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Hieraaetus pennatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zarcero común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Amplio espectro de hábitats,soleados,densa cobertura arbustiva,<2m altura.Zarzales,majuelos,jarales',
+  s.description = 'Se trata de un pájaro de tamaño pequeño y tonos generales amarillo-verdosos. Presenta el dorso de color verde grisáceo y la zona ventral amarillenta (más pálida en los jóvenes). Es muy similar al raro zarcero icterino, del que resulta difícil de distinguir en el campo. Algunos ejemplares muy pálidos o con el plumaje muy desgastado pueden generar también confusión con otras especies, como el zarcero pálido o la curruca mosquitera. Ambos sexos son similares.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Melodious_warbler_(Hippolais_polyglotta)%2C_Le_Petit_Loc''h%2C_Guidel%2C_Brittany%2C_France_(19765512360).jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Acrocephalidae',
+  s.taxon_genus = 'Hippolais',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Hippolais polyglotta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Golondrina común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Ave delicada, grácil y aerodinámica, de color negro, con reflejos azules metálicos por arriba y blancos crema en las partes inferiores. Tiene la frente y la garganta rojas y un collar negro. Las alas, largas y apuntadas, muestran tonos blancos en la parte inferior delantera. Su cola, muy larga y ahorquillada, es de color negro, con pequeños óvalos blancos cuando la extiende. Posee patas cortas sin emplumar, boca muy ancha, y pico corto, plano y negro. Presenta variación latitudinal en el tamaño corporal y en la longitud de la cola, que son menores hacia el sur. Aunque ambos sexos se parecen, la hembra es menos brillante, más blanca por abajo y con la cola más corta. Los jóvenes lucen tonos negros mate, tienen la frente y la garganta naranjas y una cola mucho más corta. De vuelo ágil, rápido y acrobático, la golondrina común ocupa en el espacio aéreo las capas bajas, por debajo de aviones y vencejos.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Landsvale.jpg?width=1280',
+  s.image_attribution = 'Malene Thyssen (CC BY 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Hirundinidae',
+  s.taxon_genus = 'Hirundo',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Hirundo rustica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcaudón común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Alcaudón estival de cabeza castaña que caza insectos desde posaderos en el matorral abierto, empalando presas en espinas a modo de despensa.',
+  s.description_source = NULL,
+  s.identification_tips = 'Capirote castaño rojizo
+Caza desde posaderos
+Estival de mayo a agosto',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lanius_senator01_new.jpg?width=1280',
+  s.image_attribution = 'Lanius_senator01.jpg: chausinho derivative work: Bogbumper (talk) (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Laniidae',
+  s.taxon_genus = 'Lanius',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE (RD 139/2011)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Lanius senator';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ruiseñor común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Pisos bioclimáticos termo,meso,supramediterráneos,matorrales,sotos densos,montes bajos, jardines...',
+  s.description = 'Ave estilizada, de pico fino y cola larga. Hembras y machos son iguales. Su manto y sus alas presentan un color pardo ocráceo uniforme, excepto en la cola, que posee un distintivo tono pardo rojizo. Las partes inferiores, mucho más claras, tienen color blanco crema. Este pájaro, muy escondidizo, rara vez abandona la protección de la espesura de la vegetación, pero resulta muy fácil de detectar por su inconfundible canto, muy sonoro, emitido incansablemente durante el día y la noche. Los jóvenes volantones, previamente a la muda parcial de su plumaje que tiene lugar antes de que comience la migración, exhiben un plumaje pardo que muestra plumas manchadas en su extremo con motas amarillentas. Los adultos se pueden confundir con carriceros comunes y ruiseñores bastardos, con los que a veces conviven en malezas ribereñas. Sin embargo, los carriceros presentan un tono ocre más pálido y amarillento, y carecen de la cola rojiza que luce el ruiseñor común. Lo mismo sucede con el ruiseñor bastardo, que además tiene una conspicua línea blanca sobre el ojo y posee unas alas y una cola cortas y redondeadas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Luscinia_megarhynchos_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Luscinia',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Luscinia megarhynchos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Calandria común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave esteparia',
+  s.primary_habitat = 'Llanos cerealistas, pastizales y estepas de suelo profundo',
+  s.description = 'La mayor de las alondras ibéricas, robusta y de pico grueso, con una mancha negra muy marcada a cada lado del cuello. Canta en vuelo, describiendo círculos altos con un torrente de notas en el que imita a otras aves. En invierno forma bandos numerosos en los llanos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Babero negro a cada lado del cuello
+Borde trasero del ala blanco y visible en vuelo
+Pico grueso y pálido, de granívora',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Melanocorypha_calandra.jpg?width=1280',
+  s.image_attribution = 'Bereşe.jpg: Dûrzan cîrano derivative work: Osado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Alaudidae',
+  s.taxon_genus = 'Melanocorypha',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Melanocorypha calandra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abejaruco europeo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Ave colorida y gregaria que caza abejas y libélulas en vuelo sobre espacios abiertos y cría en galerías excavadas en taludes terrosos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Colorido inconfundible
+Reclamo ''prruip'' en vuelo
+Cría en taludes de rambla',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%C5%9Eahl%C3%BBr-33.jpg?width=1280',
+  s.image_attribution = 'Dûrzan cîrano (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Coraciiformes',
+  s.taxon_family = 'Meropidae',
+  s.taxon_genus = 'Merops',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE (RD 139/2011)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Merops apiaster';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Milano negro',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = NULL,
+  s.description = 'Esta rapaz de mediano tamaño y coloración general bastante oscura se caracteriza por poseer unas alas más bien largas, así como una larga cola ahorquillada, si bien bastante menos que la de su cercano pariente, el milano real, que ofrece un aspecto más estilizado y es de mayor tamaño. El adulto luce una coloración considerablemente oscura en conjunto, aunque con la cabeza de color grisáceo y finamente listada; las partes inferiores se muestran algo rojizas y aparecen surcadas longitudinalmente por motas alargadas, en tanto que las coberteras alares presentan bordes bastante claros, por lo que definen un característico dibujo dorsal. La cola es marrón-grisácea con abundante barrado. El plumaje del joven es más claro y ostenta un patente moteado pálido en las regiones ventrales, mientras que en las dorsales las coberteras aparecen orladas de color crema, lo que le otorga un aspecto escamoso. La cola no es tan ahorquillada como en el adulto (a veces incluso carece de escotadura), en tanto que las alas, en su parte inferior, muestran dos grandes parches más claros que el resto, aunque no demasiado evidentes. En vuelo, el milano negro es un ave ágil que muestra una extraordinaria capacidad para maniobrar en el aire, aunque no resulta tan elegante como el milano real.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Milvus_migrans_front(ThKraft).jpg?width=1280',
+  s.image_attribution = 'Thomas Kraft (ThKraft) (CC BY-SA 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Accipitriformes',
+  s.taxon_family = 'Accipitridae',
+  s.taxon_genus = 'Milvus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Milvus migrans';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Papamoscas gris',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Arbolado abierto, bordes de bosque, huertos y jardines con perchas altas',
+  s.description = 'Pájaro discreto de color pardo grisáceo, sin marcas llamativas, que se reconoce mejor por su conducta que por su aspecto: se posa muy erguido en una rama descubierta, sale disparado a cazar un insecto en el aire y vuelve exactamente a la misma percha. Repite la maniobra decenas de veces.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vuelve siempre a la misma rama tras cada vuelo de caza
+Postura muy vertical, con las alas caídas
+Frente y pecho con un rayado fino y difuso',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/SpottedFlycatcheronfence.jpg?width=1280',
+  s.image_attribution = 'Andrew Easton (Attribution) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Muscicapa',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Muscicapa striata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba rubia',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Laderas secas y pedregosas con matorral bajo y suelo desnudo',
+  s.description = 'Collalba pequeña y contrastada: el macho es color arena claro con las alas negras y un antifaz o una garganta negros según la variedad. Como todas las collalbas, enseña al volar una cola blanca con una «T» negra invertida. Caza insectos lanzándose al suelo desde una piedra o una mata.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola blanca con una «T» negra al abrirse
+Alas negras que resaltan sobre el cuerpo color arena
+Se posa erguida en piedras y matas, muy visible',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Black-eared_Wheatear%2C_Punta_del_Sabinar%2C_Spain.jpg?width=1280',
+  s.image_attribution = 'Vince Smith from London, United Kingdom (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Oenanthe',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Oenanthe hispanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba gris',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Pastizales pedregosos, canchales y zonas abiertas de montaña',
+  s.description = 'Collalba de dorso gris en el macho, con antifaz negro y alas oscuras. Como todas las collalbas, delata su identidad al volar: obispillo blanco y cola blanca con una «T» negra invertida. Se posa erguida en piedras y hace carreras cortas por el suelo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Obispillo blanco y «T» negra en la cola
+Macho con antifaz negro y dorso gris
+Carreras cortas por el suelo entre piedra y piedra',
+  s.seasonality = 'Paso migratorio y cría en montaña',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oenanthe_oenanthe_Larvik.JPG?width=1280',
+  s.image_attribution = 'Arnstein Rønning (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Oenanthe',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Oenanthe oenanthe';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Oropéndola',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Bosques de ribera,hileras de olmos,chopos,sotos,generalmente fluviales,parques,jardines...Mar-1600m',
+  s.description = 'Ave de tamaño similar a un mirlo y llamativo color amarillento. El macho exhibe un intenso color amarillo limón en la cabeza — rayada con una línea ocular oscura— y en el cuerpo, que contrasta bastante con las anchas y redondeadas alas, totalmente negras, a excepción de dos parches amarillos a la altura de la articulación de la muñeca. La cola es igualmente amarilla, aunque presenta una ancha banda terminal negra. Posee patas de tono grisáceo y pico rojizo. La hembra, que recuerda a un pequeño pito real, muestra tonos más apagados que el macho, con partes superiores de color verde oliva e inferiores blanquecinas y rayadas en gris. Tiene las alas y la cola pardas, y el pico rojo sucio. Los jóvenes son casi iguales a las hembras, aunque con el pico pardo oscuro y el ojo negruzco. Se trata de un ave esquiva, por lo que la mayoría de las observaciones corresponden a individuos en vuelos breves entre la espesura. Su vuelo, directo y ondulado, alterna aleteos y alas plegadas, de modo similar al del pito real. Su carácter agresivo se evidencia en los frecuentes acosos a otras especies, incluso de mayor tamaño.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oriole_2.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Oriolidae',
+  s.taxon_genus = 'Oriolus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Oriolus oriolus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Autillo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz nocturna',
+  s.primary_habitat = 'Arboledas, sotos, huertos y parques con árboles viejos',
+  s.description = 'El búho más pequeño de Europa, apenas mayor que un puño, con un plumaje jaspeado que lo hace invisible pegado a un tronco. Se detecta por el oído: un silbido monótono y flautado que repite cada dos o tres segundos durante toda la noche de primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Silbido corto y flautado repetido de forma monótona
+Diminuto, con dos penachos de plumas en la cabeza
+Plumaje veteado que imita la corteza',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Scops_Owl_(Otus_scops)%2C_Kalloni%2C_Lesvos%2C_Greece%2C_19.04.2015_(16773748434).jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Strigiformes',
+  s.taxon_family = 'Strigidae',
+  s.taxon_genus = 'Otus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Otus scops';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gorrión molinero',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'El más pequeño de los gorriones europeos presenta una coloración parecida a la del gorrión común, es decir: dorso marrón listado de negro y pecho gris muy claro. Se diferencia, no obstante, del común por su extensa capucha de color acastañado y por una llamativa mancha negra que destaca vivamente en la blanca mejilla. Además, luce un collar blanco, que se interrumpe en la nuca, del que carece el gorrión común. El pico es menos robusto que el de su cercano pariente y el babero, considerablemente más reducido. En esta especie no hay significativas diferencias de plumaje entre machos y hembras, por lo que resulta imposible diferenciarlos en el campo. Los jóvenes, hasta finales del verano, se diferencian de los adultos por sus mejillas de color blanco sucio, carentes de mancha negra. El molinero se comporta de manera más nerviosa que el gorrión común y permanece menos tiempo en el suelo.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Passer_montanus_saturatus_s2.JPG?width=1280',
+  s.image_attribution = 'Alpsdake (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Passeridae',
+  s.taxon_genus = 'Passer',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Passer montanus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abejero europeo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Bosque con algunos claros, gran variedad de especies arbóreas.Desde el mar a 1600m, templado-húmedo',
+  s.description = 'La coloración de esta especie presenta considerables diferencias individuales, de tal manera que han llegado a distinguirse hasta 10 fases de plumaje diferentes. Como norma, las partes inferiores son claras y están provistas de un profuso barreado transversal marronáceo, en tanto que las dorsales, parduzcas, resultan bastante más oscuras que las ventrales; la cola, por su parte, muestra un característico franjeado. En la cabeza, que presenta una tonalidad grisácea, destaca el iris intensamente amarillo. Dentro de este patrón general, existen notables variaciones, y se pueden hallar desde individuos muy claros hasta otros extremadamente oscuros, casi melánicos; en todo caso, los ejemplares de coloración intermedia son los más frecuentes. Aparte de algunas diferencias en el diseño y coloración del plumaje, el rasgo más distintivo entre machos y hembras es el mayor tamaño de estas. Los jóvenes, por su parte, tienden a ser oscuros, con el iris marrón. En vuelo es llamativo el barreado ventral, así como las franjas de la cola, si bien lo más significativo y que permite diferenciar fácilmente al abejero de otras rapaces similares, como el busardo ratonero, es su silueta, con la cabeza apuntada, la cola larga —de ángulos algo redondeados— y las alas rectas y estrechas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Wespenbussard_European_honey_buzzard_Pernis_apivorus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Accipitriformes',
+  s.taxon_family = 'Accipitridae',
+  s.taxon_genus = 'Pernis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Pernis apivorus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mosquitero papialbo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Forestal termófila,laderas de solana.Nidos:bosque planifolio,conífera.Zona montana,submediterránea',
+  s.description = 'El papialbo presenta la típica silueta de los mosquiteros: cuerpecillo rechoncho, patas frágiles y pico fino, pero se diferencia de los demás por su coloración general mucho más clara, especialmente en la cabeza y las partes ventrales. Las patas son negras y las alas, el dorso y las partes exteriores de la cola, verdosos, en contraste con el resto del cuerpo, de color blanquecino. La especie no manifiesta dimorfismo sexual.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Western_Bonelli''s_Warbler_-_Aosta_Valley_-_Italy_S4E5346_(19079885220).jpg?width=1280',
+  s.image_attribution = 'Francesco Veronesi from Italy (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Phylloscopidae',
+  s.taxon_genus = 'Phylloscopus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Phylloscopus bonelli';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mosquitero común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un pequeño pajarillo de pico fino y patas oscuras. Presenta tonos verdosos o pardo-grisáceos en el dorso y blanquecinos en las partes inferiores. Ambos sexos resultan similares, si bien los machos son ligeramente mayores que las hembras. Es una especie prácticamente idéntica en el campo al mosquitero ibérico, del que se distingue por su canto y por encontrarse presente en nuestro territorio durante todo el año o en invierno —según las regiones—, mientras que el ibérico es un ave únicamente estival. Es también muy similar al mosquitero musical, pero este posee las patas y el pico pálidos, así como la lista superciliar y otras finas marcas auriculares más definidas. Además, el musical solo está presente en paso.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a abril',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chiffchaff_-_Phylloscopus_collybita.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Phylloscopidae',
+  s.taxon_genus = 'Phylloscopus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Phylloscopus collybita';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tórtola europea',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Sotos, arboledas y matorral alto junto a cultivos y ramblas',
+  s.description = 'La más pequeña y grácil de nuestras palomas, con el dorso escamado en negro y canela y un parche a rayas blancas y negras en el cuello. Su arrullo ronco y adormecedor es uno de los sonidos del verano. Sus poblaciones han caído mucho en Europa por la pérdida de barbechos y setos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Espalda escamada, como un mosaico canela y negro
+Parche rayado blanco y negro a los lados del cuello
+Arrullo ronco y vibrante, muy distinto al de la tórtola turca',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Streptopelia_turtur_Grlica0036.jpg?width=1280',
+  s.image_attribution = 'Zrno at Serbian Wikipedia (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Columbiformes',
+  s.taxon_family = 'Columbidae',
+  s.taxon_genus = 'Streptopelia',
+  s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
+  s.spain_status = 'No incluida en el LESRPE; Directiva Aves 2009/147/CE, Anexo II (especie cinegética); Reglamento CITES, Anexo A',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE, Anexo II (especie cinegética)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Streptopelia turtur';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cárabo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz nocturna',
+  s.primary_habitat = NULL,
+  s.description = 'Lo primero que llama la atención en el aspecto del cárabo común es su voluminosa cabeza, en la que destacan unos enormes y globosos ojos negros, lo que, unido a la ausencia de penachos cefálicos (“orejas”) y a su aspecto rechoncho y robusto, permite diferenciarlo fácilmente del resto de nuestras rapaces nocturnas. Su plumaje resulta extraordinariamente mimético y presenta una gran variabilidad en cuanto a color, ya que existen ejemplares grisáceos, rojizos y marrones. En todos los casos, el diseño consiste en una compleja mezcla de punteados, barrados y vermiculados, que imitan a la perfección la corteza de los árboles. La cara es de color blancuzco, grisáceo o rojizo, y en ella destacan dos listas blanquecinas a modo de “cejas”.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A1%D0%BE%D0%B2%D1%91%D0%BD%D0%BE%D0%BA_%D0%A4%D0%B8%D0%BB%D1%8F%2C_%D0%A1%D0%B5%D1%80%D0%B0%D1%8F_%D0%BD%D0%B5%D1%8F%D1%81%D1%8B%D1%82%D1%8C_(Strix_aluco%2C_juv)%2C_%D0%A4%D0%B8%D0%BB%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%B0%D1%80%D0%BA.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Strigiformes',
+  s.taxon_family = 'Strigidae',
+  s.taxon_genus = 'Strix',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Strix aluco';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Vencejo real',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Nidos:Acantilados,cortados,marinos e interior.Hasta 1900m.Sustrato preferido calizo,...Edificaciones',
+  s.description = 'Se trata del más grande y vistoso de los vencejos españoles. Presenta una silueta típica en forma de ballesta, cola corta y levemente ahorquillada, y alas muy largas y estrechas, de aleteos lentos. Posee pico corto, plano y con la boca muy ancha; patas emplumadas y extremadamente cortas, que le impiden posarse en el suelo; y pies pequeños y de fuertes garras, con los cuatro dedos dirigidos hacia delante. Muestra coloración general pardo oliva, más oscura en las alas, con dos destacadas áreas blancas en el vientre y la garganta, separadas ambas por un collar parduzco. Ambos sexos son iguales. Los jóvenes resultan muy similares a los adultos, aunque un poco más oscuros y con plumas ribeteadas de blanco. Esta ave pasa la mayor parte de su vida en el aire, por lo que casi siempre se la ve volando y agrupada, tanto en núcleos urbanos como en acantilados costeros y de interior.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tachymarptis_melba_-Barcelona%2C_Spain_-flying-8.jpg?width=1280',
+  s.image_attribution = 'Birdwatching Barcelona (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Apodiformes',
+  s.taxon_family = 'Apodidae',
+  s.taxon_genus = 'Tachymarptis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Tachymarptis melba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mirlo capiblanco',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Montaña con matorral y pastos; en paso, sierras con enebros y bayas',
+  s.description = 'Mirlo de montaña que se distingue del común por una banda blanca en forma de media luna sobre el pecho y por las plumas del ala ribeteadas de claro, que dan un aspecto escamado. Es muy desconfiado y se aleja en cuanto detecta movimiento.',
+  s.description_source = NULL,
+  s.identification_tips = 'Media luna blanca en el pecho
+Alas con aspecto escamado y plateado
+Mucho más esquivo que el mirlo común',
+  s.seasonality = 'Paso migratorio e invernada en montaña',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/2015-04-20_Turdus_torquatus_torquatus_Cairngorm_3.jpg?width=1280',
+  s.image_attribution = 'MPF (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Turdidae',
+  s.taxon_genus = 'Turdus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Turdus torquatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lechuza común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz nocturna',
+  s.primary_habitat = 'Es una especie típica de paisajes humanizados con áreas agrícolas en mosaico',
+  s.description = 'El único representante de la familia Tytonidae en territorio europeo es una rapaz de tamaño medio, aspecto esbelto, largas patas y voluminosa cabeza, que luce un contrastado plumaje en el que predominan los tonos leonados y dorados en el dorso y el blanco puro —incluso ligeramente plateado— en las zonas ventrales. Las plumas dorsales y la parte superior de las alas y la cola aparecen finamente vermiculadas por sutiles punteados de color negro, gris y blancuzco, en tanto que las regiones ventrales pueden mostrar un moteado variable. En el rostro —inconfundible por su forma de corazón— destacan los ojos intensamente negros y el prominente pico de color claro. Los jóvenes poseen un plumaje muy similar al de los adultos, de los que se diferencian por sutiles detalles, difíciles de distinguir en el campo. El vuelo de esta rapaz nocturna —de alas largas y relativamente anchas— es elegante, silencioso y ágil gracias al escaso peso del ave. No es raro ver a la lechuza cernirse hábilmente sobre un punto, mientras escudriña el terreno en busca de presas.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tyto_alba_close_up.jpg?width=1280',
+  s.image_attribution = 'Stevie B (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Strigiformes',
+  s.taxon_family = 'Tytonidae',
+  s.taxon_genus = 'Tyto',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Tyto alba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Candil',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Se cría en suelos mayormente calcáreos, matorrales poco densos, encinares, cultivos y ribazos, entre 400-1400 m',
+  s.description = 'Planta herbácea, con cepa pequeña tuberosa y numerosas raíces fasciculadas. Echa bastantes tallos ascendentes, hasta de 30 cm, hojas hasta de 3 cm, pecioladas, triangulares, agudas, de margen denticulado y ondulado. Flores hasta de 5,5 cm, de color amarillento por fuera; se prolongan en una larga lengüeta oblonga, arqueada hacia delante, con márgenes recurvados hacia arriba, de color morado.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aristolochia_pistolochia_habito.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Piperales',
+  s.taxon_family = 'Aristolochiaceae',
+  s.taxon_genus = 'Aristolochia',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Aristolochia pistolochia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Guillonea scabra',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Guillonea_scabra2.JPG?width=1280',
+  s.image_attribution = 'Shuky79 (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Apiales',
+  s.taxon_family = 'Apiaceae',
+  s.taxon_genus = 'Guillonea',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Guillonea scabra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jurinea pinnata',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Escobilla_(Jurinea_pinnata).jpg?width=1280',
+  s.image_attribution = 'José A. Coca González. (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Asteraceae',
+  s.taxon_genus = 'Jurinea',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Jurinea pinnata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Hierba de majal',
+  s.kingdom = 'flora',
+  s.family = 'Gramínea',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Koeleria_vallesiana_-_Berlin_Botanical_Garden_-_IMG_8569.JPG?width=1280',
+  s.image_attribution = 'Daderot (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Liliopsida',
+  s.taxon_order = 'Poales',
+  s.taxon_family = 'Poaceae',
+  s.taxon_genus = 'Koeleria',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Koeleria vallesiana';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Agarraparedes',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Parietaria_judaica_000.jpg?width=1280',
+  s.image_attribution = 'Franco Folini (CC BY 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Rosales',
+  s.taxon_family = 'Urticaceae',
+  s.taxon_genus = 'Parietaria',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Parietaria judaica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca sarda',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Muy parecida a la curruca balear —a la que hasta hace poco se consideraba como perteneciente a la misma especie—, es algo mayor y de un color gris más oscuro y uniforme, extendido también sobre la garganta y los flancos. Los machos adultos presentan la cabeza con un tono azulado, que falta en las hembras y los jóvenes.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Marmora''s_Warbler_-_Sardinia_-_Italy_S4E1036.jpg?width=1280',
+  s.image_attribution = 'Francesco Veronesi (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Sylviidae',
+  s.taxon_genus = 'Curruca',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Anexo IV (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Sylvia sarda';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Camaleón común',
   s.kingdom = 'fauna',
   s.family = 'Reptil',
@@ -33733,7 +36576,7 @@ Hojas acintadas y de verde azulado, saliendo de la arena',
   s.taxon_genus = 'Pancratium',
   s.iucn_global = 'LC',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008 (especie común pero sensible a la degradación de playas)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Pancratium maritimum';
@@ -33756,7 +36599,7 @@ Cambia a tonos rojizos al final del verano',
   s.taxon_order = 'Caryophyllales',
   s.taxon_family = 'Amaranthaceae',
   s.taxon_genus = 'Sarcocornia',
-  s.iucn_global = 'No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
   s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
   s.rarity_score = 1,
@@ -33808,7 +36651,7 @@ Gálbulos redondos que pasan de verde a pardo rojizo',
   s.taxon_genus = 'Juniperus',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Juniperus phoenicea';
@@ -33906,7 +36749,7 @@ Matas espaciadas sobre suelo desnudo y claro',
   s.taxon_genus = 'Lygeum',
   s.iucn_global = 'LC',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Lygeum spartum';
@@ -34513,9 +37356,9 @@ Mata baja y grisácea del tomillar',
   s.taxon_genus = 'Helianthemum',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = 'EN — En peligro (Lista Roja española, 2010)',
-  s.spain_status = 'UICN España: EN (En peligro) (2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Helianthemum violaceum';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -36898,7 +39741,7 @@ Espiga que se fragmenta al madurar',
   s.taxon_order = 'Poales',
   s.taxon_family = 'Poaceae',
   s.taxon_genus = 'Elymus',
-  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
   s.iucn_spain = NULL,
   s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
   s.rarity_score = 1,
@@ -38220,8 +41063,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Squamata',
   s.taxon_family = 'Lacertidae',
   s.taxon_genus = 'Podarcis',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
   s.spain_status = 'Anexo V (Ley 42/2007, de 13 de diciembre)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -39784,8 +42627,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Suliformes',
   s.taxon_family = 'Phalacrocoracidae',
   s.taxon_genus = 'Phalacrocorax',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -39855,8 +42698,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Turdidae',
   s.taxon_genus = 'Turdus',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -40611,11 +43454,11 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Motacillidae',
   s.taxon_genus = 'Motacilla',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Motacilla cinerea';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -41814,11 +44657,11 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Strigiformes',
   s.taxon_family = 'Strigidae',
   s.taxon_genus = 'Asio',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Asio otus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -42035,6 +44878,463 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Porzana porzana';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murajes',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Cultivos, cunetas, claros y suelos removidos',
+  s.description = 'Hierbecilla tendida de tallos cuadrangulares y hojas enfrentadas, con flores solitarias que salen de la axila de cada hoja. Las hay de color naranja asalmonado y de color azul intenso, y ambas cierran los pétalos cuando el cielo se nubla, de ahí que se la llamara «hierba del buen tiempo».',
+  s.description_source = NULL,
+  s.identification_tips = 'Flores solitarias sobre un pedúnculo largo y fino
+Tallos de sección cuadrada, tendidos por el suelo
+Pétalos que se cierran al nublarse o a media tarde',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/A._arvensis-flor-1.JPG?width=1280',
+  s.image_attribution = 'Philmarin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Ericales',
+  s.taxon_family = 'Primulaceae',
+  s.taxon_genus = 'Lysimachia',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Lysimachia arvensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Esparto',
+  s.kingdom = 'flora',
+  s.family = 'Gramínea',
+  s.primary_habitat = 'Laderas secas y llanos sobre suelos pobres; forma espartales extensos',
+  s.description = 'El esparto, nombrado también como Stipa tenacissima, forma matas densas y duraderas que dan nombre a los espartales, uno de los paisajes característicos del sureste ibérico. Sus hojas se enrollan sobre sí mismas en los días secos para perder menos agua y se abren tras la lluvia. Durante siglos se recolectó para hacer cuerdas, esteras y alpargatas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Matas grandes y compactas de hojas duras enrolladas
+Las hojas se abren tras la lluvia y se enrollan al secar
+Espigas altas y plateadas a final de primavera',
+  s.seasonality = 'Primavera (espigado)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Stipa_tenacissima.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Liliopsida',
+  s.taxon_order = 'Poales',
+  s.taxon_family = 'Poaceae',
+  s.taxon_genus = 'Macrochloa',
+  s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Macrochloa tenacissima';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'flores de jabón',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lavatera_April_2010-1.jpg?width=1280',
+  s.image_attribution = 'Alvesgaspar (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Malvales',
+  s.taxon_family = 'Malvaceae',
+  s.taxon_genus = 'Malva',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Malva multiflora';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sapo corredor',
+  s.kingdom = 'fauna',
+  s.family = 'Anfibio',
+  s.primary_habitat = 'Ramblas y zonas húmedas estacionales',
+  s.description = 'Sapo de patas cortas que corre en vez de saltar, con una línea amarilla nítida a lo largo del centro del lomo. Se reproduce en charcas efímeras que se llenan con las lluvias, y los machos forman coros de un canto vibrante y estridente que se oye a kilómetros.',
+  s.description_source = NULL,
+  s.identification_tips = 'Raya amarilla continua por el centro del lomo
+Corre a cuatro patas en vez de saltar
+Canto nocturno vibrante y muy sonoro tras las lluvias',
+  s.seasonality = 'Otoño e invierno lluviosos',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Epidalea_calamita_02_by-dpc.jpg?width=1280',
+  s.image_attribution = 'David Perez (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Amphibia',
+  s.taxon_order = 'Anura',
+  s.taxon_family = 'Bufonidae',
+  s.taxon_genus = 'Epidalea',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE; Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Epidalea calamita';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cerrillo',
+  s.kingdom = 'flora',
+  s.family = 'Gramínea',
+  s.primary_habitat = 'Laderas secas, ribazos y pastizales sobre suelos pedregosos',
+  s.description = 'Gramínea perenne que forma matas y espiga en verano, cuando el resto del pastizal ya está agostado. Sus espiguillas van por parejas, cubiertas de pelos rojizos y con aristas retorcidas. Da al paisaje un tono dorado rojizo a final de verano.',
+  s.description_source = NULL,
+  s.identification_tips = 'Espiguillas peludas agrupadas por parejas
+Aristas retorcidas y acodadas
+Espiga en verano, cuando lo demás está seco',
+  s.seasonality = 'Verano y otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hyparrhenia_hirta_Habitus_ValledeAlcudia.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Liliopsida',
+  s.taxon_order = 'Poales',
+  s.taxon_family = 'Poaceae',
+  s.taxon_genus = 'Hyparrhenia',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Hyparrhenia hirta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lastón',
+  s.kingdom = 'flora',
+  s.family = 'Gramínea',
+  s.primary_habitat = 'Vive en pastizales ruderalizados, cunetas algo húmedas y claros de bosque, hasta 1300 m',
+  s.description = 'Planta perenne, multicaule, con tallos hasta de 1 m, erecto-ascendentes, glabros. Hojas con vaina glabra, limbo hasta de 50 x 1 cm. Inflorescencia en panícula muy laxa, hasta de 40 cm, péndula en la parte superior; con ramas verticiladas erecto-patentes, flexuosas y muy finas; muy numerosas y todas fértiles en los verticilos inferiores. Espiguillas muy pequeñas, unifloras, de 2,5-3,5 mm, comprimidas dorsalmente, verdosas o violáceas; lema con arista de 2-4 mm. Fruto en cariopsis elipsoide.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Piptatherummiliaceum.jpg?width=1280',
+  s.image_attribution = 'Stickpen (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Liliopsida',
+  s.taxon_order = 'Poales',
+  s.taxon_family = 'Poaceae',
+  s.taxon_genus = 'Oloptum',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Oloptum miliaceum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Rana común',
+  s.kingdom = 'fauna',
+  s.family = 'Anfibio',
+  s.primary_habitat = 'Charcas, balsas, acequias y tramos remansados con vegetación',
+  s.description = 'La rana verde ibérica, la más común y adaptable de nuestros anfibios: coloniza desde ramblas y balsas de riego hasta fuentes urbanas. Su canto es un cacareo entrecortado que forma coros al atardecer. Salta al agua al menor movimiento en la orilla.',
+  s.description_source = NULL,
+  s.identification_tips = 'Línea clara a lo largo del centro del lomo en muchos ejemplares
+Canto entrecortado, como una risa o un cacareo
+Salta al agua desde la orilla al notar movimiento',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pelophylax_perezi_by-dpc.jpg?width=1280',
+  s.image_attribution = 'David Perez (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Amphibia',
+  s.taxon_order = 'Anura',
+  s.taxon_family = 'Ranidae',
+  s.taxon_genus = 'Pelophylax',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'Anexo VI (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); UICN España: LC (Preocupación menor) (2002)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Pelophylax perezi';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Taraje',
+  s.kingdom = 'flora',
+  s.family = 'Árbol',
+  s.primary_habitat = 'Ramblas, cauces salinos, márgenes de saladar y arenas húmedas',
+  s.description = 'Arbolillo de porte ligero y ramas colgantes cubiertas de hojas escamosas diminutas, con un follaje que de lejos parece humo verde. Tolera la sal como pocos árboles: la excreta por sus hojas, y sus espigas rosadas de flores minúsculas cubren la copa en primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas escamosas de un par de milímetros, pegadas a la ramilla
+Ramas finas y péndulas, de aspecto plumoso
+Espigas densas de florecillas rosadas o blanquecinas',
+  s.seasonality = 'Floración de primavera a verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tamarix_gallica_-_Villa_Taranto_(Verbania)_-_DSC03778.JPG?width=1280',
+  s.image_attribution = 'Daderot (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Caryophyllales',
+  s.taxon_family = 'Tamaricaceae',
+  s.taxon_genus = 'Tamarix',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestales de reproducción (Catálogo Nacional de Materiales de Base))',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Tamarix gallica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de escalera',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Ocupa todo tipo de suelos en ambientes mediterráneos de matorral y borde de bosque, pues precisa de cierta cobertura vegetal y de lugares relativamente húmedos',
+  s.description = 'Longitud hocico-cloaca media de 720 mm (rango 233-1.385 mm), cola relativamente corta. Cabeza algo pequeña, con hocico agudo, que sobrepasa netamente el extremo anterior de la mandíbula. 27 rangos de escamas dorsales. Color de fondo amarillento, con diseño de manchas dorsales en escalera en los ejemplares pequeños, y dos líneas dorsolaterales en los ejemplares de mayor tamaño. Longitud total máxima, 1.650 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhinechis_scalaris_cropped.jpg?width=1280',
+  s.image_attribution = 'Benny_Trapp_Rhinechis_scalaris_Portugal.jpg: Benny Trapp derivative… (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Colubridae',
+  s.taxon_genus = 'Zamenis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Zamenis scalaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca cabecinegra',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral mediterráneo denso, setos y bordes de arbolado',
+  s.description = 'La curruca más común del matorral mediterráneo. El macho tiene la cabeza negra hasta por debajo del ojo, la garganta blanca y un llamativo anillo ocular rojo. Es ruidosa y territorial: su reclamo de alarma es un traqueteo seco que delata su presencia constantemente.',
+  s.description_source = NULL,
+  s.identification_tips = 'Capucha negra que baja por debajo del ojo
+Anillo ocular rojo intenso
+Reclamo de alarma como una carraca seca',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sardinian_Warbler.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Sylviidae',
+  s.taxon_genus = 'Curruca',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE (RD 139/2011)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Curruca melanocephala';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pardillo común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'El pardillo es un pájaro estilizado, delgado, de pico corto y con cola larga y escotada. Su plumaje tiene color pardo en el dorso y ocre muy pálido en los flancos y el vientre. Presenta pintas alargadas o estrías, mucho más abundantes y visibles en las hembras. Además, los machos resultan inconfundibles en primavera, pues lucen un llamativo color carmín en la frente y el pecho. En vuelo, ambos sexos y los jóvenes del año muestran una débil pero perceptible mancha blanca, que destaca sobre el color negruzco de sus alas. Asimismo, el par de plumas externo de la cola es de color blanco. Tanto las hembras como los jóvenes del año, por su plumaje poco llamativo, se pueden confundir con bisbitas pratenses o con hembras y jóvenes de escribanos. No obstante, los bisbitas tienen un pico fino y largo y —más importante— “caminan”, mientras que los pardillos, como el resto de los fringílidos, “saltan” cuando se desplazan por el suelo. A su vez, la costumbre de los pardillos de buscar el alimento en el suelo los diferencia de los escribanos, a los que se observa habitualmente posados en ramas de arbustos. Los escribanos, son, además, de talla mayor y menos gregarios que los pardillos. Fuera de la época reproductora, el pardillo común se mueve en grandes bandos, que muchas veces son mixtos, pues se mezcla con otros fringílidos, como verdecillos, jilgueros, verderones comunes, lúganos, etc.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Linnet-Mindaugas_Urbonas-3.jpg?width=1280',
+  s.image_attribution = 'Mindaugas Urbonas from Lithuanian wikipedia (Profile, Homepage, E-m… (CC BY-SA 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Fringillidae',
+  s.taxon_genus = 'Linaria',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Linaria cannabina';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pito ibérico',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Es un pájaro carpintero grande y robusto, de aspecto inconfundible, en cuyo plumaje dominan claramente los tonos verdosos, más intensos en las regiones dorsales, ligeramente grisáceos en las ventrales y con matices amarillentos en el obispillo. Carece de moteados y listas —salvo, tenuemente, en la región anal—, pero luce un llamativo patrón de coloración en la cabeza, donde el píleo es rojo y los ojos, amarillentos, aparecen enmarcados por un antifaz negro. Los machos y los jóvenes presentan una bigotera negra y roja, que es exclusivamente negra en las hembras. El plumaje juvenil se caracteriza por ser fuertemente moteado, especialmente en las partes inferiores, aunque, en conjunto, su coloración es más apagada que la del adulto, no presentan antifaz y poseen un iris más oscuro. Su vuelo es muy característico, con una trayectoria ondulatoria en la que el ave combina tramos en los que bate las alas con otros en que las pliega.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Iberian_Green_Woodpecker_(Pito_Ib%C3%A9rico)_(Picus_sharpei)_-_Torrevieja%2C_Spain_2024-02-04.jpg?width=1280',
+  s.image_attribution = 'Ryan Hodnett (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Piciformes',
+  s.taxon_family = 'Picidae',
+  s.taxon_genus = 'Picus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Picus sharpei';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca tomillera',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral bajo y abierto, tomillares y saladares con arbustos dispersos',
+  s.description = 'Curruca menuda de matorral raso, gris en la cabeza, parda en el dorso y con las plumas del ala ribeteadas de castaño encendido. El anillo blanco del ojo le da el aire de «gafas» que le da nombre. Es inquieta y suele delatarse por su reclamo antes de dejarse ver.',
+  s.description_source = NULL,
+  s.identification_tips = 'Anillo blanco alrededor del ojo bien marcado
+Panel castaño vivo en el ala plegada
+Vive en matorral muy bajo, no en arbolado',
+  s.seasonality = 'Todo el año en el sureste; parcialmente migradora',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_%C3%A0_lunettes_Aqueduc_de_Zaghouan.jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Sylviidae',
+  s.taxon_genus = 'Curruca',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2004)',
+  s.spain_status = 'Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Curruca conspicillata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Golondrina dáurica',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Desde parameras secas hasta altas cumbres.Nidos bajo puentes,riscos,acantilados,zonas llanas bajas',
+  s.description = 'De apariencia similar a la golondrina común, exhibe dorso negro, con reflejos azulados, y vientre blanco sucio, con flancos anaranjados y algunas rayas tenues. Los rasgos más característicos de la especie son la nuca y la cara anaranjadas, del mismo color que el obispillo. Las alas, largas y apuntadas, también muestran tonos naranjas en la parte inferior delantera. Posee una cola muy larga y muy ahorquillada,de color negro uniforme, tanto por arriba como por abajo. Tiene patas cortas sin emplumar, boca muy ancha, y pico corto, plano y negro. Ambos sexos son iguales. Los jóvenes presentan en el dorso plumaje negro mate, con plumas ribeteadas en blanco, siendo las zonas naranjas de menor intensidad; incluso el obispillo parece blanco en ocasiones. Esta ave se observa frecuentemente cerca de puentes y roquedos, y exhibe un vuelo ágil, rápido y acrobático.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Golondrina_d%C3%A1urica_Cecropis_daurica_1.jpg?width=1280',
+  s.image_attribution = 'Agustín Povedano from El Puerto de Santa María, Extremadura y Andal… (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Hirundinidae',
+  s.taxon_genus = 'Cecropis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Cecropis daurica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca carrasqueña',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral alto, jarales, encinares aclarados y bordes de bosque',
+  s.description = 'Curruca de tamaño medio, con el macho de dorso gris, garganta y pecho color teja y un bigote blanco muy nítido que separa ambos. El anillo ocular es rojo. Canta desde el interior del matorral y hace vuelos cortos de exhibición sobre las matas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Bigote blanco que bordea la garganta rojiza
+Anillo ocular rojo anaranjado
+Prefiere matorral alto, no el raso',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9A%CE%BF%CE%BA%CE%BA%CE%B9%CE%BD%CE%BF%CF%84%CF%83%CE%B9%CF%81%CE%BF%CE%B2%CE%AC%CE%BA%CE%BF%CF%82.jpg?width=1280',
+  s.image_attribution = 'Antonios Tsaknakis (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Sylviidae',
+  s.taxon_genus = 'Curruca',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Curruca cantillans';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Hierba del cólico',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Inula_crithmoides_Flowers_Closeup3_LagunadelaMata.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Asteraceae',
+  s.taxon_genus = 'Limbarda',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Limbarda crithmoides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Hiel de la tierra',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Centaurium_spicatum.jpg?width=1280',
+  s.image_attribution = 'Tigerente (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Gentianales',
+  s.taxon_family = 'Gentianaceae',
+  s.taxon_genus = 'Schenkia',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Schenkia spicata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Caramillo',
+  s.kingdom = 'flora',
+  s.family = 'Mata',
+  s.primary_habitat = 'Suelos salinos y nitrificados, ramblas, majadas y bordes de camino',
+  s.description = 'Mata muy ramificada de hojas cortas, gruesas y algo peludas que en verano se vuelven grisáceas. Es de las mejores indicadoras de suelos con sal y con exceso de nitrógeno, como los antiguos apriscos de ganado. Al fructificar, cada semilla se rodea de alas membranosas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojitas cortas, gruesas y con pelusa
+Frutos con alas membranosas rosadas o pajizas
+Aparece donde ha habido ganado o remoción del suelo',
+  s.seasonality = 'Verano y otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Salsola_vermiculata.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Caryophyllales',
+  s.taxon_family = 'Amaranthaceae',
+  s.taxon_genus = 'Caroxylon',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Caroxylon vermiculatum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'algodonosa',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Otanthus_maritimus_1.JPG?width=1280',
+  s.image_attribution = 'Gideon Pisanty (Gidip) גדעון פיזנטי (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Asteraceae',
+  s.taxon_genus = 'Achillea',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Otanthus maritimus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Jabalí',
@@ -42379,7 +45679,7 @@ Gálbulos redondos que pasan de verde a pardo rojizo',
   s.taxon_genus = 'Juniperus',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Juniperus phoenicea';
@@ -42449,7 +45749,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_family = 'Plumbaginaceae',
   s.taxon_genus = 'Armeria',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2010)',
+  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2010)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -42736,9 +46036,9 @@ Base leñosa y porte compacto sobre roca',
   s.taxon_genus = 'Poterium',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2010)',
-  s.spain_status = 'UICN España: NT (Casi amenazado) (2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Poterium ancistroides';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -42804,7 +46104,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_family = 'Brassicaceae',
   s.taxon_genus = 'Alyssum',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2017)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -43252,11 +46552,11 @@ Excrementos en montoncitos de bolitas cilíndricas',
   s.taxon_order = 'Artiodactyla',
   s.taxon_family = 'Bovidae',
   s.taxon_genus = 'Capra',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'EN — En peligro (Lista Roja española, 1992)',
-  s.spain_status = 'UICN España: EN (En peligro) (1992)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2007)',
+  s.spain_status = 'Anexo VI (Ley 42/2007, de 13 de diciembre)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Capra pyrenaica';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -43654,7 +46954,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_family = 'Brassicaceae',
   s.taxon_genus = 'Iberis',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2010)',
+  s.iucn_spain = NULL,
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -45857,9 +49157,9 @@ Mata baja y grisácea del tomillar',
   s.taxon_genus = 'Helianthemum',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = 'EN — En peligro (Lista Roja española, 2010)',
-  s.spain_status = 'UICN España: EN (En peligro) (2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Helianthemum violaceum';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -47087,7 +50387,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_family = 'Caryophyllaceae',
   s.taxon_genus = 'Rhodalsine',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2010)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2010)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -48034,7 +51334,7 @@ Plumas de la punta del ala muy separadas, como dedos',
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Corvidae',
   s.taxon_genus = 'Pyrrhocorax',
-  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
   s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV',
   s.rarity_score = 2,
@@ -49192,6 +52492,1478 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
 WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Curruca communis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija colirroja',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'Lagartija de suelos arenosos, de cuerpo aplanado y dedos con escamas laterales en forma de peine que le sirven de raqueta sobre la arena suelta. Los jóvenes tienen la cola y las patas traseras de un rojo intenso que se apaga en los adultos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dedos con flecos de escamas a los lados, como peines
+Jóvenes con cola y patas traseras rojo intenso
+Cuerpo aplanado, con rayas y ocelos claros en el dorso',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Acanthodactylus_erythrurus.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Lacertidae',
+  s.taxon_genus = 'Acanthodactylus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Acanthodactylus erythrurus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Helecha',
+  s.kingdom = 'flora',
+  s.family = 'Helecho',
+  s.primary_habitat = 'Se encuentra en bosques umbríos y roquedos, sobre sustratos ácidos, hasta 1900 m',
+  s.description = 'Rizoma rastrero, ramificado y frondes hasta de 45 cm, persistentes con largo pecíolo, tres o cuatro veces pinnadas, con pinnas pecioladas, las pínnulas dentadas y con soros dispersos.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Asplenium_onopteris_1.jpg?width=1280',
+  s.image_attribution = 'Franz Xaver (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Polypodiopsida',
+  s.taxon_order = 'Polypodiales',
+  s.taxon_family = 'Aspleniaceae',
+  s.taxon_genus = 'Asplenium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Asplenium onopteris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebrilla ciega',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = NULL,
+  s.description = 'Reptiles estrictamente adaptados a la vida subterránea, especializados en cavar túneles y en la localización de presas bajo tierra. Cuerpo cilíndrico y alargado cubierto de escamas cuadrangulares que se alinean en forma de anillos. Segmentos dorsales entre 14 y 18 y ventrales entre 14 y 20. No presenta extremidades. Cabeza de pequeño tamaño, poco diferenciada del cuerpo, con el hocico redondeado. La visión es vestigial mientras que el olfato y el oído están desarrollados. Cola muy corta, Presenta poros precloacales. Coloración de fondo variable entre violácea y marrón. Sin dimorfismo sexual. Los machos alcanzan una longitud de cabeza y cuerpo de 254 mm y las hembras de 235 mm.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Amphisbaenia.JPG?width=1280',
+  s.image_attribution = 'Mario modesto (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Blanidae',
+  s.taxon_genus = 'Blanus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Blanus cinereus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bufo bufo',
+  s.kingdom = 'fauna',
+  s.family = 'Anfibio',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Bufo_bufo_sitting-Iric2006.jpg?width=1280',
+  s.image_attribution = 'Iric (CC BY-SA 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Amphibia',
+  s.taxon_order = 'Anura',
+  s.taxon_family = 'Bufonidae',
+  s.taxon_genus = 'Bufo',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2023)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2002)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Bufo bufo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago hortelano',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eptesicus_isabellinus_sketch.jpg?width=1280',
+  s.image_attribution = 'Coenrad Temmick (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Cnephaeus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Cnephaeus isabellinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Musaraña gris',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero',
+  s.primary_habitat = NULL,
+  s.description = 'Es un crocidurino de talla mediana. Medidas corporales, CC: 62,0-84,0 mm; C: 34,0-47,0 mm; P: 11,0-14,0 mm; Ps: 7,0-14,0 g, y cola relativamente corta, recubierta por pelos cortos entre los que sobresalen otros más largos y dispersos. Los ojos son pequeños y los pabellones auditivos están bien desarrollados y son visibles externamente. El color del pelaje varía en función de la edad, la época del año y la localización geográfica. En general, la coloración es gris uniforme en los juveniles, parda o parda-grisácea en los ejemplares de verano y gris oscura en los de invierno. El vientre es gris claro, sin demarcación nítida respecto al dorso. Presenta tres pares de mamas inguinales. El cráneo es más largo y macizo que en los representantes del género Sorex. Las regiones rostral e interorbital son alargadas y el margen posterior del orificio nasal es cóncavo. La caja craneana es alta y los cóndilos occipitales están proyectados hacia atrás. La mandíbula es robusta, con el cóndilo articular bien desarrollado y la apófisis coronoides recta, de altura generalmente superior a 4,2 mm. Fórmula dentaria: 3.1.1.3/1.1.1.3, con tres unicúspides superiores. A diferencia de la musaraña de campo, Crocidura suaveolens, en visión lateral el segundo y tercer unicúspides son de talla similar y sobrepasan la altura del parastilo del cuarto molar. En visión oclusal, el protocono de este molar no está desplazado en dirección bucal y contribuye a formar el margen ántero-interno del diente. En la mandíbula, el segundo molar presenta una constricción bien marcada. Número de cromosomas (2n) = 42.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/WLMMH_(DerHexer)_022.jpg?width=1280',
+  s.image_attribution = 'DerHexer, Wikimedia Commons (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Soricomorpha',
+  s.taxon_family = 'Soricidae',
+  s.taxon_genus = 'Crocidura',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Crocidura russula';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Canadillo',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Roquedos, matorral seco y pie de acantilado en clima cálido',
+  s.description = 'Arbusto de aspecto extraño: un manojo de tallos verdes, articulados y colgantes, casi sin hojas, que se quiebran con facilidad por los nudos. No es una planta con flores, sino un pariente lejano de las coníferas; sus semillas van envueltas en una cubierta roja y carnosa.',
+  s.description_source = NULL,
+  s.identification_tips = 'Tallos verdes articulados que se rompen por los nudos
+Sin hojas visibles, solo escamas en cada nudo
+Frutos rojos carnosos con una semilla dentro',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ephedra_fragilis_3.JPG?width=1280',
+  s.image_attribution = 'User:falconaumanni (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Gnetopsida',
+  s.taxon_order = 'Ephedrales',
+  s.taxon_family = 'Ephedraceae',
+  s.taxon_genus = 'Ephedra',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2011)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Ephedra fragilis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sapo corredor',
+  s.kingdom = 'fauna',
+  s.family = 'Anfibio',
+  s.primary_habitat = 'Ramblas y zonas húmedas estacionales',
+  s.description = 'Sapo de patas cortas que corre en vez de saltar, con una línea amarilla nítida a lo largo del centro del lomo. Se reproduce en charcas efímeras que se llenan con las lluvias, y los machos forman coros de un canto vibrante y estridente que se oye a kilómetros.',
+  s.description_source = NULL,
+  s.identification_tips = 'Raya amarilla continua por el centro del lomo
+Corre a cuatro patas en vez de saltar
+Canto nocturno vibrante y muy sonoro tras las lluvias',
+  s.seasonality = 'Otoño e invierno lluviosos',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Epidalea_calamita_02_by-dpc.jpg?width=1280',
+  s.image_attribution = 'David Perez (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Amphibia',
+  s.taxon_order = 'Anura',
+  s.taxon_family = 'Bufonidae',
+  s.taxon_genus = 'Epidalea',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE; Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Epidalea calamita';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Geranio de roca',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Fisuras y repisas de roquedos calizos',
+  s.description = 'Geranio rupícola de rosetas compactas y hojas divididas y algo peludas, con flores rosadas o blanquecinas de venas marcadas. Vive encajado en las grietas de los cantiles, donde encuentra humedad y escapa de los herbívoros.',
+  s.description_source = NULL,
+  s.identification_tips = 'Rosetas apretadas metidas en la grieta de la roca
+Flores rosadas con venas más oscuras
+Frutos con pico largo que se enrolla al secarse',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/483580471/original.jpeg',
+  s.image_attribution = 'Olivier Argagnon (CC BY 4.0) · GBIF/iNaturalist',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Geraniales',
+  s.taxon_family = 'Geraniaceae',
+  s.taxon_genus = 'Erodium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección nacional específica registrada en EIDOS',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Erodium saxatile';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Guiraoa arvensis',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Brassicales',
+  s.taxon_family = 'Brassicaceae',
+  s.taxon_genus = 'Guiraoa',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Guiraoa arvensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de herradura',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Culebra ágil y trepadora con dibujo dorsal en herradura, ligada a matorrales termófilos y roquedos soleados del sureste ibérico.',
+  s.description_source = NULL,
+  s.identification_tips = 'Manchas dorsales en herradura
+Ágil y trepadora
+Inofensiva para las personas',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hemorrhois_hippocrepis_121004.jpg?width=1280',
+  s.image_attribution = 'Accipiter (R. Altenkamp, Berlin) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Colubridae',
+  s.taxon_genus = 'Hemorrhois',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Hemorrhois hippocrepis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Quebrantapiedras',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = 'Herniaria fruticosa vive en lugares secos sobre sustratos yesíferos o salinos, hasta 1200 m',
+  s.description = 'Perenne, hasta de 30 cm, en parte postrada, pelosa, con hojas de 3 x 1,5 mm, ovadas, carnosas, con flores en glomérulos terminales o laterales, con cuatro sépalos desiguales, ciliados y cuatro estambres; utrículo de 1 mm, elipsoidal.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Herniaria_fruticosa.jpg?width=1280',
+  s.image_attribution = 'Poseidon75 (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Caryophyllales',
+  s.taxon_family = 'Caryophyllaceae',
+  s.taxon_genus = 'Herniaria',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Herniaria fruticosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Botón azul',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Fisuras y repisas de roquedos calizos de montaña',
+  s.description = 'Planta rupícola que forma matas compactas en las grietas de la roca, con cabezuelas globosas de flores azules formadas por muchas florecillas estrechas. Es un endemismo ibérico ligado a los cantiles calizos, donde escapa de la competencia y del ganado.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cabezuelas azules redondas, como pompones
+Crece encajada en grietas de pared rocosa
+Hojas estrechas agrupadas en la base',
+  s.seasonality = 'Verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Jasione_foliosa_var._Minuta_GotBot_2015_001.jpg?width=1280',
+  s.image_attribution = 'Averater (CC BY 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Campanulaceae',
+  s.taxon_genus = 'Jasione',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección nacional específica registrada en EIDOS',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Jasione foliosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de cogulla occidental',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Especie relativamente termófila, normalmente solo se encuentra en el pisos bioclimáticos termo y mesomediterráneo',
+  s.description = 'Es el ofidio más pequeño que habita la Península Ibérica. Cabeza corta, aplastada, con ojos relativamente pequeños, de pupila redonda o verticalmente oval, e iris anaranjado o rojizo. Cola corta, pues en promedio representa el 14,9% de la longitud total. Normalmente posee siete supralabiales, la cuarta y quinta en contacto con el ojo, y la sexta alta y en contacto o muy próxima a la parietal. Por lo general, 21 rangos de dorsales en el centro del cuerpo. Coloración de fondo en cabeza y cuerpo gris, que tiende a marrón cuando ha mudado recientemente. El diseño de la cabeza se caracteriza porque en el píleo se encuentra el vértice de una figura en forma de V que tiene dos ramas curvas, convexas, mientras recorre las parietales. Posteriormente a la cabeza collar nucal oscuro. Longitud total máxima, 598 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Macroprotodon_brevis.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Colubridae',
+  s.taxon_genus = 'Macroprotodon',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Macroprotodon brevis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra bastarda',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'La culebra más grande de la península, de hasta dos metros y medio, con un aspecto inconfundible: ojos grandes de pupila redonda bajo unas escamas salientes que le dan «cejas» y expresión de enfado. Es diurna, muy rápida y venenosa, pero con los colmillos al fondo de la boca, por lo que no supone riesgo si no se la manipula.',
+  s.description_source = NULL,
+  s.identification_tips = 'Escamas prominentes sobre los ojos, como cejas
+Ojo grande con pupila redonda y iris amarillento
+Adultos de dorso pardo oliváceo uniforme; jóvenes muy manchados',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Culebra_bastarda_(Malpolon_monspessulanus)%2C_Nig%C3%BCella%2C_Zaragoza%2C_Espa%C3%B1a%2C_2017-05-24%2C_DD_07.jpg?width=1280',
+  s.image_attribution = 'Diego Delso (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Lamprophiidae',
+  s.taxon_genus = 'Malpolon',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Malpolon monspessulanus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de cueva',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Cuevas y minas; caza en vuelo alto sobre bosque, campo y láminas de agua',
+  s.description = 'Murciélago de alas largas y estrechas y vuelo rápido y alto, casi como el de un vencejo. Tiene la frente muy abombada y el pelo corto y erizado en la cabeza. Recorre decenas de kilómetros entre las cuevas de cría, de tránsito y de invernada.',
+  s.description_source = NULL,
+  s.identification_tips = 'Frente muy abombada y pelo corto y de punta
+Alas largas y estrechas; vuelo veloz y alto
+Forma colonias enormes y muy apretadas en cueva',
+  s.seasonality = 'Todo el año, con desplazamientos estacionales entre cuevas',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Miniopterus_schreibersii_dasythrix.jpg?width=1280',
+  s.image_attribution = 'Andrew Smith (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Miniopteridae',
+  s.taxon_genus = 'Miniopterus',
+  s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 2023)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2007)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Miniopterus schreibersii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bayón',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Osyris_alba_1.JPG?width=1280',
+  s.image_attribution = 'User:Xemenendura (CC BY-SA 2.1 es) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Santalales',
+  s.taxon_family = 'Santalaceae',
+  s.taxon_genus = 'Osyris',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Osyris alba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sapo de espuelas',
+  s.kingdom = 'fauna',
+  s.family = 'Anfibio',
+  s.primary_habitat = NULL,
+  s.description = 'Sapo de apariencia robusta y de talla mediana. La longitud total máxima se sitúa en 125 mm, aunque por lo general presentan tallas menores, siendo las hembras más grandes que los machos. No presenta tímpanos externamente visibles, ni tampoco glándulas parotídeas aparentes. Los ojos presentan la pupila vertical con el iris de color plateado, amarillento o verde, con reflejos metálicos y un fino reticulado oscuro. Los tubérculos metatarsianos están muy desarrollados y endurecidos, formando una espuela de color negro. La piel es lisa y brillante. La coloración dorsal es variable: blanquecina, amarillenta, grisácea, verdosa o parda, a menudo con presencia de manchas pardas o verdosas más oscuras. Ventralmente presentan tonos blanquecinos, amarillentos o grisáceos, a veces con manchas oscuras.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pelobates_cultripes02.jpg?width=1280',
+  s.image_attribution = 'Franco Andreone - see authorization (CC BY-SA 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Amphibia',
+  s.taxon_order = 'Anura',
+  s.taxon_family = 'Pelobatidae',
+  s.taxon_genus = 'Pelobates',
+  s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Pelobates cultripes';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de borde claro',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Es fisurícola, tanto litófila como fitófila, y altamente sinantrópica, refugiándose en fisuras o grietas en edificios, rocas y árboles, así como en cajas-nido',
+  s.description = 'Es un murciélago pequeño. Las orejas son cortas, triangulares y con vértice superior redondeado, y poseen cinco pliegues transversales en la parte superior del borde externo. El trago es corto, redondeado en la punta y ligeramente curvado. El pelaje es de coloración general pardo castaño o rojizo en la parte dorsal, y más claro en la zona ventral. El hocico, las orejas y la membrana alar son de color negro parduzco. Las alas son relativamente estrechas. El plagiopatagio se inserta en la base de los dedos del pie; en su borde presentan generalmente una banda de color más claro. El espolón alcanza más de la mitad de la longitud del borde del uropatagio, con lóbulo postcalcáneo con cartílago conspicuo en forma de T. Los incisivos internos superiores (I1) son monocúspides, los externos (I2) menores que la mitad del I1, y el premolar superior anterior (P1) está desplazado hacia el interior y no es visible externamente. Los incisivos inferiores están fuertemente imbricados, y no presentan diastema entre I2 e I3. ANT: 31,0-37,0 mm; Ps: 4,5-10,0 g. Fórmula dentaria: 2.1.2.3/3.1.2.3. Número de cromosomas (2n) = 44. No existe dimorfismo sexual, aunque las hembras son algo mayores. Puede confundirse sobre todo con los otros representantes del género Pipistrellus y en menor medida con Hypsugo savii, de los que se diferencia sobre todo por los caracteres dentales. ULTRASONIDOS Emite pulsos de ecolocalización del tipo FM-CF, con frecuencia de máxima energía a 38-41 kHz, 8-12 ms de duración, e intervalo entre pulsos bimodal con valores máximos en torno a los 100 y 200 ms. Los cantos sociales son una serie de 2 pulsos FM muy rápidos, con máxima energía en torno a los 14-16 kHz, fácilmente audibles como un “chip” agudo, y que mediante sistemas de tiempo expandido permiten discriminar a la especie de P. nathusii. Mediante escucha directa pueden confundirse con sonidos de ecolocalización de Tadarida teniotis.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus_kuhlii.jpg?width=1280',
+  s.image_attribution = 'Mnolf (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Pipistrellus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Pipistrellus kuhlii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago común',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Quiróptero de hábitos fisurícolas',
+  s.description = 'Es uno de los Quirópteros más pequeños de Europa (ANT: 28-35 mm, Ps: 3,5-8,5 g). Orejas cortas, triangulares; trago de punta redondeada, más largo que ancho. Coloración dorsal de marrón-rojizo a gris-verdoso, con individuos negruzcos. Pelaje ventral más claro. La segunda falange del 3er dedo es 2- 3 mm mayor que la tercera. La pigmentación de las partes desnudas de la cara es en general oscura, sin parches claros conspicuos. Los machos tienen el pene grisáceo con una marcada estría más pálida en el glande. Carecen de protuberancia entre los orificios nasales. Fórmula dentaria: 2.1.2.3/3.1.2.3. Incisivo superior interno bicúspide, casi igual que la mitad de la longitud del externo. PM1 muy pequeño y desplazado hacia el interior de la serie dental pero visible desde el exterior. Dotación cromosómica: 2n = 42 ó 2n = 44. Pueden ser confundidos con otros miembros del género Pipistrellus, aunque sus menores dimensiones y la morfología y disposición de los incisivos y premolares superiores permiten distinguirlos en mano con relativa facilidad. ULTRASONIDOS Las emisiones más habituales son pulsos de frecuencia modulada de banda ancha con una cola final casi frecuencia constante. Las frecuencias terminal y de máxima intensidad oscilan entre 42-51 y 41,6- 50,8 kHz, respectivamente. Las llamadas sociales difieren en frecuencia y número de componentes. Las señales son estructuralmente similares a las de otras especies cogenéricas, pero sus diferentes frecuencias permiten separarlas con facilidad.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus_pipistrellus_lateral.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Pipistrellus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Pipistrellus pipistrellus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cornicabra',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Barrancos, umbrías y matorral alto sobre suelos frescos',
+  s.description = 'Arbusto o arbolillo de hoja caduca, con hojas compuestas de foliolos grandes y brillantes y un raquis sin alas, lo que lo separa del lentisco. Suele presentar agallas rojizas y curvadas en forma de cuerno, provocadas por pulgones, que le dan el nombre.',
+  s.description_source = NULL,
+  s.identification_tips = 'Agallas rojizas curvadas como cuernos en las hojas
+Pierde la hoja en invierno, al contrario que el lentisco
+Hoja compuesta con foliolo terminal y raquis sin alas',
+  s.seasonality = 'Primavera a otoño (pierde la hoja en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pistachier2.JPG?width=1280',
+  s.image_attribution = 'greffer.net (CC BY 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Sapindales',
+  s.taxon_family = 'Anacardiaceae',
+  s.taxon_genus = 'Pistacia',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Pistacia terebinthus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago orejudo gris',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = NULL,
+  s.description = 'Es un murciélago de tamaño medio. Orejas muy grandes que se unen por la base de sus bordes internos. El dorso es gris oscuro con los pelos negruzcos en casi toda su longitud, mientras que la zona ventral es blanquecina o gris muy pálida. Los jóvenes tienen una coloración grisácea más apagada. Las hembras son por lo general algo mayores que los machos. ANT: 37,0-45,0 mm; Ps: 6,5-15 g. Fórmula dentaria: 2.1.2.3/3.1.3.3. Número de cromosomas (2n) = 32. Por el tamaño de las orejas y su aspecto, en la Península Ibérica sólo se puede confundir con P. auritus y la semejanza entre ambas requiere que su determinación deba realizarse en mano, y aún así pueden surgir dificultades. Al contrario que en P. auritus, el trago es normalmente mayor de 5,5 mm y está pigmentado en toda su longitud con un color parecido al del pabellón de la oreja. La longitud del pulgar (sin la uña) generalmente es menor (inferior a 6 mm) y la uña es también más corta. Partes desnudas de color grisáceo oscuro (y no pardas o rojizas). Antifaz oscuro alrededor de los ojos más marcado. En los machos adultos, el pene es mazudo (y no cilíndrico). ULTRASONIDOS Emite pulsos de ecolocalización en FM desde 85 a 25 kHz. La intensidad de estos sonidos es muy débil y su alcance apenas supera los 5 m. Las señales son prácticamente indistinguibles de las de P. auritus.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, enero',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Plecotus_austriacus2.jpg?width=1280',
+  s.image_attribution = 'Andrei Sakhno (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Plecotus',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2023)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Plecotus austriacus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cincoenrama',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Fisuras y repisas de roquedos calizos, sobre todo en umbría',
+  s.description = 'Planta rupícola de hojas divididas en cinco foliolos dentados y flores blancas de cinco pétalos algo separados entre sí. Crece colgando de las grietas de los cantiles calizos, formando matas laxas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas divididas en cinco foliolos dentados
+Flores blancas con los pétalos algo separados
+Cuelga de fisuras en pared caliza',
+  s.seasonality = 'Verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Potentilla_caulescens.jpg?width=1280',
+  s.image_attribution = 'User:Tigerente (CC BY 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Rosales',
+  s.taxon_family = 'Rosaceae',
+  s.taxon_genus = 'Potentilla',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección nacional específica registrada en EIDOS',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Potentilla caulescens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija cenicienta',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = NULL,
+  s.description = 'Se puede distinguir de Psammodromus edwardsianus por la falta de una escama supralabial debajo de la subocular. En comparación con Psammodromus edwardsianus y Psammodromus occidentalis, Psammodromus hispanicus tiene menos ocelos, menos poros femorales, menos escamas gulares, y un hocico más redondo. En Psammodromus hispanicus la longitud del hocico hasta la escama anal (LHA), la masa corporal, el número de hileras de escamas ventrales, el número de escamas del collar, la razón de cabeza (anchura de la cabeza/longitud de la cabeza), y la extensión de la coloración nupcial son mayores y la razón LHA/longitud total es menor que en Psammodromus edwardsianus. Tiene color grisáceo a pardo claro y presenta cuatro líneas dorsales de un color blanco crema a gris. El vientre es en general de color blanco. Tiene una coloración nupcial amarilla – verde bastante llamativa.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Psammodromus_hispanicus.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Lacertidae',
+  s.taxon_genus = 'Psammodromus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Psammodromus hispanicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zapatito de la Virgen',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Extraplomos y roquedos calcáreos',
+  s.description = 'Pequeña planta rupícola de extraplomos y oquedades de roquedos calcáreos, integrante de la asociación Resedo paui-Sarcocapnetum saetabensis del hábitat 8210.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cuelga de extraplomos y techos rocosos
+Flores blanco-rosadas con espolón
+Hojas divididas glaucas',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Orella_de_ratol%C3%AD_(Sarcocapnos_saetabensis)_al_castell_de_X%C3%A0tiva.jpg?width=1280',
+  s.image_attribution = 'Joanbanjo (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Ranunculales',
+  s.taxon_family = 'Papaveraceae',
+  s.taxon_genus = 'Sarcocapnos',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Sarcocapnos enneaphylla subsp. saetabensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Taray canario',
+  s.kingdom = 'flora',
+  s.family = 'Árbol',
+  s.primary_habitat = 'Galerías y matorrales ribereños termomediterráneos',
+  s.description = 'Taray de floración prolongada y espigas rosadas que forma galerías y tarayales en cauces y ramblas del litoral árido.',
+  s.description_source = NULL,
+  s.identification_tips = 'Espigas rosadas abundantes
+Floración prolongada
+Forma tarayales en ramblas',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/619019413/original.jpg',
+  s.image_attribution = 'Christoph Moning (CC BY 4.0) · GBIF',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Caryophyllales',
+  s.taxon_family = 'Tamaricaceae',
+  s.taxon_genus = 'Tamarix',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No incluida en el LESRPE; formador de galerías termomediterráneas (HIC 92D0)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Tamarix canariensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tomillo sanjuanero',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a agosto',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Thymus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Thymus funkii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Olmo común',
+  s.kingdom = 'flora',
+  s.family = 'Árbol',
+  s.primary_habitat = 'Sotos, vegas y suelos profundos con humedad freática',
+  s.description = 'Árbol de hojas asimétricas en la base —un lado baja más que el otro— y borde doblemente aserrado. Florece antes de echar la hoja y fructifica en sámaras redondeadas y membranosas. La grafiosis ha diezmado sus poblaciones adultas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Base de la hoja claramente asimétrica
+Sámaras redondas y papiráceas antes que las hojas
+Rebrota de raíz formando setos y orlas',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Blismes_elm_2007.jpg?width=1280',
+  s.image_attribution = 'Eric Collin. Original uploader was Ptelea at en.wikipedia (GFDL) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Rosales',
+  s.taxon_family = 'Ulmaceae',
+  s.taxon_genus = 'Ulmus',
+  s.iucn_global = 'DD — Datos insuficientes (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestal…)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Ulmus minor';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Víbora hocicuda',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Habita suelos silíceos y calizos, tendiendo a ocupar medios psammófilos a baja altitud y en el occidente ibérico, y medios saxícolas en montaña',
+  s.description = 'Se caracteriza por su cuerpo grueso y corto, cola pequeña, tamaño variable pero inferior a 60 cm, cabeza de aspecto triangular y bien diferenciada del cuerpo con un apéndice nasal elevado hacia arriba, escamas cefálicas muy fragmentadas, pupila vertical, y patrón de coloración dorsal generalmente con una banda negra en zigzag sobre fondo ceniciento.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lataste''s_viper.jpg?width=1280',
+  s.image_attribution = 'Tim Vickers (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Viperidae',
+  s.taxon_genus = 'Vipera',
+  s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Vipera latastei';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de escalera',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Ocupa todo tipo de suelos en ambientes mediterráneos de matorral y borde de bosque, pues precisa de cierta cobertura vegetal y de lugares relativamente húmedos',
+  s.description = 'Longitud hocico-cloaca media de 720 mm (rango 233-1.385 mm), cola relativamente corta. Cabeza algo pequeña, con hocico agudo, que sobrepasa netamente el extremo anterior de la mandíbula. 27 rangos de escamas dorsales. Color de fondo amarillento, con diseño de manchas dorsales en escalera en los ejemplares pequeños, y dos líneas dorsolaterales en los ejemplares de mayor tamaño. Longitud total máxima, 1.650 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhinechis_scalaris_cropped.jpg?width=1280',
+  s.image_attribution = 'Benny_Trapp_Rhinechis_scalaris_Portugal.jpg: Benny Trapp derivative… (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Colubridae',
+  s.taxon_genus = 'Zamenis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Zamenis scalaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tarabilla europea',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral bajo, herbazales, ribazos y bordes de cultivo con posaderos',
+  s.description = 'Pájaro pequeño y regordete que se posa en lo alto de las matas, muy erguido y a la vista, para lanzarse al suelo a por insectos. El macho tiene la cabeza negra, un collar blanco a los lados y el pecho naranja. Su reclamo suena como dos piedras golpeadas, de donde le viene el nombre.',
+  s.description_source = NULL,
+  s.identification_tips = 'Siempre en lo alto de una mata, bien visible
+Macho con capucha negra y medio collar blanco
+Reclamo como el chasquido de dos cantos rodados',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Malestonechatseaham_Cropped.jpg?width=1280',
+  s.image_attribution = 'derivative work: Myosotis Scorpioides (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Saxicola',
+  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Saxicola rubicola';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Azor común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Bosques maduros y masas forestales densas con claros',
+  s.description = 'Rapaz forestal de alas cortas y anchas y cola larga, diseñada para perseguir presas entre los árboles a gran velocidad. Es esquiva y se ve casi siempre de refilón. La hembra llega a ser un tercio mayor que el macho, una diferencia poco habitual entre las aves.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ceja blanca marcada sobre el ojo, como un antifaz al revés
+Vuelo de varios aleteos rápidos seguidos de un planeo corto
+Pecho finamente rayado en horizontal en los adultos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Northern_Goshawk_ad_M2.jpg?width=1280',
+  s.image_attribution = 'Norbert Kenntner, Berlin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Accipitriformes',
+  s.taxon_family = 'Accipitridae',
+  s.taxon_genus = 'Accipiter',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Accipiter gentilis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carricero tordal',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Nidos:zonas palustres,carrizales espesos (Phragmites sp.),eneas (Typha sp.),espadañas.Masas de agua',
+  s.description = 'Se trata de la especie más robusta entre los carriceros y carricerines. De tonos pardos uniformes, es similar al carricero común, aunque notablemente mayor y con el pico más grande. Presenta el dorso marrón rojizo o grisáceo, según la edad y el desgaste de la pluma, y tiene las partes inferiores de tonos pardo-amarillentos. Ambos sexos son iguales.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Carricero_tordal.jpg?width=1280',
+  s.image_attribution = 'Carles Pastor (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Acrocephalidae',
+  s.taxon_genus = 'Acrocephalus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Acrocephalus arundinaceus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bisbita campestre',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Llanos secos, pastizales ralos y claros pedregosos con poca vegetación',
+  s.description = 'Bisbita grande, esbelto y de tonos arena, con muy poco rayado en el pecho comparado con sus parientes. Camina por el suelo desnudo moviendo la cola arriba y abajo. Anida entre piedras y matas bajas, y su canto es una frase corta y monótona que emite en vuelo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Pecho casi liso, sin el rayado denso de otros bisbitas
+Camina en vez de saltar, meneando la cola
+Ceja clara marcada y patas largas y pálidas',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/AnthusCampestris_cropped.jpg?width=1280',
+  s.image_attribution = 'AnthusCampestris.jpg: Lip Kee derivative work: Bogbumper (talk) (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Motacillidae',
+  s.taxon_genus = 'Anthus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Anthus campestris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcaraván',
+  s.kingdom = 'fauna',
+  s.family = 'Ave esteparia',
+  s.primary_habitat = 'Llanos pedregosos, cultivos de secano, ramblas y eriales con poca cobertura',
+  s.description = 'Ave de aspecto extraño y ojos amarillos enormes, adaptados a la actividad nocturna. De día permanece agachada e inmóvil, confiada en su plumaje críptico, y solo al anochecer se activa y delata con un reclamo silbado y melancólico que recuerda al del zarapito.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ojos amarillos desproporcionadamente grandes
+Dos barras blancas y negras en el ala plegada
+Reclamo silbado y triste al anochecer',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Burhinus_oedicnemus_insularum_Lanzarote_1.jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Charadriiformes',
+  s.taxon_family = 'Burhinidae',
+  s.taxon_genus = 'Burhinus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE; Directiva Aves 2009/147/CE, Anexo I',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Burhinus oedicnemus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebrera europea',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Sierras y llanos con matorral, ramblas y bosque abierto',
+  s.description = 'Águila grande y muy pálida por debajo, especializada en comer culebras y lagartos. Se ciñe en el aire durante largos ratos, con las patas colgando, escrutando el suelo antes de dejarse caer. La cabeza, ancha y con ojos amarillos muy frontales, le da un aire de lechuza.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vientre y alas casi blancos vistos desde abajo
+Se mantiene cerniéndose, algo raro en un águila tan grande
+Cabeza ancha y ojos amarillos, aspecto de búho',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_culebrera_(Circaetus_gallicus).jpg?width=1280',
+  s.image_attribution = 'Paco Gómez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Accipitriformes',
+  s.taxon_family = 'Accipitridae',
+  s.taxon_genus = 'Circaetus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Circaetus gallicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Carraca europea',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Campos abiertos con arbolado disperso, ribazos y construcciones con huecos',
+  s.description = 'Del tamaño de una paloma y de un azul turquesa intenso que sorprende al levantar el vuelo. Caza al acecho desde cables y postes, dejándose caer sobre saltamontes y escarabajos. Cría en huecos de árboles viejos y de edificios, de ahí que dependa de que queden árboles añosos y ruinas en el campo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Azul turquesa que solo se aprecia bien cuando vuela
+Espalda de color canela que contrasta con el azul
+Posada quieta en cables, oteando el suelo',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/European_roller.jpg?width=1280',
+  s.image_attribution = 'Christian Svane (CC BY-SA 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Coraciiformes',
+  s.taxon_family = 'Coraciidae',
+  s.taxon_genus = 'Coracias',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE; Ley 42/2007, Anexo IV',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Coracias garrulus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca carrasqueña',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral alto, jarales, encinares aclarados y bordes de bosque',
+  s.description = 'Curruca de tamaño medio, con el macho de dorso gris, garganta y pecho color teja y un bigote blanco muy nítido que separa ambos. El anillo ocular es rojo. Canta desde el interior del matorral y hace vuelos cortos de exhibición sobre las matas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Bigote blanco que bordea la garganta rojiza
+Anillo ocular rojo anaranjado
+Prefiere matorral alto, no el raso',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9A%CE%BF%CE%BA%CE%BA%CE%B9%CE%BD%CE%BF%CF%84%CF%83%CE%B9%CF%81%CE%BF%CE%B2%CE%AC%CE%BA%CE%BF%CF%82.jpg?width=1280',
+  s.image_attribution = 'Antonios Tsaknakis (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Sylviidae',
+  s.taxon_genus = 'Curruca',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Curruca cantillans';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca mirlona',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Gran variedad de medios: bosques abiertos de frondosas.Cría:encinares,alcornocales,pinares,sabinares',
+  s.description = 'Es la mayor y la más corpulenta de nuestras currucas. Tiene las partes superiores grisáceas y las inferiores blanquecinas, con tintes rosados en el pecho y más grisáceos en la parte ventral. Posee pico robusto, iris de color amarillo pálido y garganta blanca. El macho exhibe una franja oscura, casi negra, a modo de antifaz, y presenta la frente y el capirote también muy oscuros; este encapuchado resulta más gris (menos oscuro) en las hembras y pardo en los jóvenes. La cola es oscura, con las rectrices externas de color blanco.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_hortensis_Museum_de_Gen%C3%A8ve.JPG?width=1280',
+  s.image_attribution = 'Totodu74 (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Sylviidae',
+  s.taxon_genus = 'Curruca',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Curruca hortensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Escribano soteño',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'De tamaño algo menor que el escribano cerillo, el soteño es ligeramente más colicorto y posee un pico más robusto. La coloración general se asemeja también a la del cerillo, sobre todo en jóvenes y hembras. Se diferencian, sin embargo, por el color del obispillo — gris oliváceo en el soteño—, por la posesión de marcadas bandas laterales en la cara y, en general, por presentar menos áreas amarillentas en el plumaje. El macho en época reproductora luce una amplia franja pectoral gris olivácea, un llamativo babero negro en la garganta y un antifaz del mismo color; además, conserva todo el año el píleo y la nuca extensamente coloreados de gris oliváceo, con finas listas oscuras.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Emberiza_cirlus.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Emberizidae',
+  s.taxon_genus = 'Emberiza',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Emberiza cirlus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Papamoscas cerrojillo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Zonas boscosas,de caducifolios, robles,hayas,pinares de altura,sotos espesos.Migrac:muy repartido,',
+  s.description = 'Es un paseriforme de pequeño tamaño, cuerpo compacto, cabeza ancha y pico fino. Fuera de la época de reproducción no hay diferencias entre los sexos en lo que al plumaje se refiere, ya que ambos lo poseen de color pardo claro por el dorso y blanco ocre en las partes inferiores. Los ojos, las patas y el pico son negros. En primavera, los machos adquieren un plumaje nupcial negro o marrón muy oscuro en las partes superiores, con una llamativa mancha blanca en la frente y un extenso panel blanco en las alas. Las partes inferiores se aclaran hasta adquirir un color blanco puro. A menudo queda algún resto de plumaje pardo en la cabeza o en las coberteras del hombro. Los jóvenes recién salidos del nido, por su parte, presentan un plumaje, en general, muy moteado de marrón claro y pardo, con aspecto escamoso.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril, mayo, junio, agosto, septiembre, octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ficedula_hypoleuca_NRM.jpg?width=1280',
+  s.image_attribution = 'Uploaded by Aelwyn with the permission of the Author, who works wit… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Ficedula',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Ficedula hypoleuca';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zarcero común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Amplio espectro de hábitats,soleados,densa cobertura arbustiva,<2m altura.Zarzales,majuelos,jarales',
+  s.description = 'Se trata de un pájaro de tamaño pequeño y tonos generales amarillo-verdosos. Presenta el dorso de color verde grisáceo y la zona ventral amarillenta (más pálida en los jóvenes). Es muy similar al raro zarcero icterino, del que resulta difícil de distinguir en el campo. Algunos ejemplares muy pálidos o con el plumaje muy desgastado pueden generar también confusión con otras especies, como el zarcero pálido o la curruca mosquitera. Ambos sexos son similares.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Melodious_warbler_(Hippolais_polyglotta)%2C_Le_Petit_Loc''h%2C_Guidel%2C_Brittany%2C_France_(19765512360).jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Acrocephalidae',
+  s.taxon_genus = 'Hippolais',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Hippolais polyglotta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Papamoscas gris',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Arbolado abierto, bordes de bosque, huertos y jardines con perchas altas',
+  s.description = 'Pájaro discreto de color pardo grisáceo, sin marcas llamativas, que se reconoce mejor por su conducta que por su aspecto: se posa muy erguido en una rama descubierta, sale disparado a cazar un insecto en el aire y vuelve exactamente a la misma percha. Repite la maniobra decenas de veces.',
+  s.description_source = NULL,
+  s.identification_tips = 'Vuelve siempre a la misma rama tras cada vuelo de caza
+Postura muy vertical, con las alas caídas
+Frente y pecho con un rayado fino y difuso',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/SpottedFlycatcheronfence.jpg?width=1280',
+  s.image_attribution = 'Andrew Easton (Attribution) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Muscicapa',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Muscicapa striata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Autillo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz nocturna',
+  s.primary_habitat = 'Arboledas, sotos, huertos y parques con árboles viejos',
+  s.description = 'El búho más pequeño de Europa, apenas mayor que un puño, con un plumaje jaspeado que lo hace invisible pegado a un tronco. Se detecta por el oído: un silbido monótono y flautado que repite cada dos o tres segundos durante toda la noche de primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Silbido corto y flautado repetido de forma monótona
+Diminuto, con dos penachos de plumas en la cabeza
+Plumaje veteado que imita la corteza',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Scops_Owl_(Otus_scops)%2C_Kalloni%2C_Lesvos%2C_Greece%2C_19.04.2015_(16773748434).jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Strigiformes',
+  s.taxon_family = 'Strigidae',
+  s.taxon_genus = 'Otus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Otus scops';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gorrión molinero',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'El más pequeño de los gorriones europeos presenta una coloración parecida a la del gorrión común, es decir: dorso marrón listado de negro y pecho gris muy claro. Se diferencia, no obstante, del común por su extensa capucha de color acastañado y por una llamativa mancha negra que destaca vivamente en la blanca mejilla. Además, luce un collar blanco, que se interrumpe en la nuca, del que carece el gorrión común. El pico es menos robusto que el de su cercano pariente y el babero, considerablemente más reducido. En esta especie no hay significativas diferencias de plumaje entre machos y hembras, por lo que resulta imposible diferenciarlos en el campo. Los jóvenes, hasta finales del verano, se diferencian de los adultos por sus mejillas de color blanco sucio, carentes de mancha negra. El molinero se comporta de manera más nerviosa que el gorrión común y permanece menos tiempo en el suelo.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Passer_montanus_saturatus_s2.JPG?width=1280',
+  s.image_attribution = 'Alpsdake (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Passeridae',
+  s.taxon_genus = 'Passer',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Passer montanus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Colirrojo real',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Bosques abiertos, sotos y arboledas con huecos para criar',
+  s.description = 'Pájaro elegante con la cola de un naranja encendido que hace vibrar sin parar al posarse. El macho tiene la garganta negra, la frente blanca y el pecho anaranjado; la hembra es parda pero conserva la misma cola vibrante, que es la mejor pista para identificarlos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola naranja que tiembla constantemente
+Macho con frente blanca y garganta negra
+Se posa en ramas bajas y baja al suelo a por insectos',
+  s.seasonality = 'Paso migratorio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_Redstart_-_Segrate_-_Italy_S4E2518-1_(19357313382).jpg?width=1280',
+  s.image_attribution = 'Francesco Veronesi from Italy (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Phoenicurus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Phoenicurus phoenicurus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Reyezuelo sencillo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Junto a su cercano pariente, el listado, el reyezuelo sencillo es una de las aves más pequeñas de Europa. Presenta el dorso verdoso, con alas más oscuras sobre las que destaca una franja blanquecina. Se diferencia de su pariente por carecer de la lista superciliar clara, así como de la lista ocular negra. Dos tiras negras —que no se unen en la frente— surcan su píleo, flanqueando una tercera banda frontal más ancha de color naranja en los machos y amarillo en las hembras. Los jóvenes carecen de todas estas listas.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%96%D0%B5%D0%BB%D1%82%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D1%80%D0%BE%D0%BB%D1%91%D0%BA_(Regulus_regulus)%2C_%D0%91%D0%B8%D1%82%D1%86%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BB%D0%B5%D1%81.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Regulidae',
+  s.taxon_genus = 'Regulus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Regulus regulus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Vencejo real',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Nidos:Acantilados,cortados,marinos e interior.Hasta 1900m.Sustrato preferido calizo,...Edificaciones',
+  s.description = 'Se trata del más grande y vistoso de los vencejos españoles. Presenta una silueta típica en forma de ballesta, cola corta y levemente ahorquillada, y alas muy largas y estrechas, de aleteos lentos. Posee pico corto, plano y con la boca muy ancha; patas emplumadas y extremadamente cortas, que le impiden posarse en el suelo; y pies pequeños y de fuertes garras, con los cuatro dedos dirigidos hacia delante. Muestra coloración general pardo oliva, más oscura en las alas, con dos destacadas áreas blancas en el vientre y la garganta, separadas ambas por un collar parduzco. Ambos sexos son iguales. Los jóvenes resultan muy similares a los adultos, aunque un poco más oscuros y con plumas ribeteadas de blanco. Esta ave pasa la mayor parte de su vida en el aire, por lo que casi siempre se la ve volando y agrupada, tanto en núcleos urbanos como en acantilados costeros y de interior.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tachymarptis_melba_-Barcelona%2C_Spain_-flying-8.jpg?width=1280',
+  s.image_attribution = 'Birdwatching Barcelona (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Apodiformes',
+  s.taxon_family = 'Apodidae',
+  s.taxon_genus = 'Tachymarptis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Tachymarptis melba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lechuza común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz nocturna',
+  s.primary_habitat = 'Es una especie típica de paisajes humanizados con áreas agrícolas en mosaico',
+  s.description = 'El único representante de la familia Tytonidae en territorio europeo es una rapaz de tamaño medio, aspecto esbelto, largas patas y voluminosa cabeza, que luce un contrastado plumaje en el que predominan los tonos leonados y dorados en el dorso y el blanco puro —incluso ligeramente plateado— en las zonas ventrales. Las plumas dorsales y la parte superior de las alas y la cola aparecen finamente vermiculadas por sutiles punteados de color negro, gris y blancuzco, en tanto que las regiones ventrales pueden mostrar un moteado variable. En el rostro —inconfundible por su forma de corazón— destacan los ojos intensamente negros y el prominente pico de color claro. Los jóvenes poseen un plumaje muy similar al de los adultos, de los que se diferencian por sutiles detalles, difíciles de distinguir en el campo. El vuelo de esta rapaz nocturna —de alas largas y relativamente anchas— es elegante, silencioso y ágil gracias al escaso peso del ave. No es raro ver a la lechuza cernirse hábilmente sobre un punto, mientras escudriña el terreno en busca de presas.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tyto_alba_close_up.jpg?width=1280',
+  s.image_attribution = 'Stevie B (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Strigiformes',
+  s.taxon_family = 'Tytonidae',
+  s.taxon_genus = 'Tyto',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Tyto alba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Aristida coerulescens',
+  s.kingdom = 'flora',
+  s.family = 'Gramínea',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Liliopsida',
+  s.taxon_order = 'Poales',
+  s.taxon_family = 'Poaceae',
+  s.taxon_genus = 'Aristida',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Aristida coerulescens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Camín real',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Vive en lindes y orlas de encinar o pinar, o en formaciones de matorral, sobre sustratos básicos, hasta 1500 m',
+  s.description = 'Planta herbácea perenne, hasta de 50 cm, con hojas de olor anisado, compuestas, de raquis ligeramente alado, con unos 15 folíolos ovados, denticulados. Inflorescencia racemiforme, hasta con 15 flores pediceladas, con sépalos de unos 5 mm y pétalos hasta de 2 cm, uncinados, lanceolados, de color crema a morado con líneas oscuras longitudinales. Fruto en cápsula formado por cinco folículos, con endocarpo que se dobla y lanza las semillas de unos 5 mm, ovoides, negras.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Dictamnus_Hispanicus_(8755663794).jpg?width=1280',
+  s.image_attribution = 'Juanedc from Zaragoza, España (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Sapindales',
+  s.taxon_family = 'Rutaceae',
+  s.taxon_genus = 'Dictamnus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Dictamnus hispanicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Arnacho',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ephedra_nebrodensis_Jard%C3%ADn_bot%C3%A1nico_de_Valencia_02.JPG?width=1280',
+  s.image_attribution = 'Falconaumanni (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Gnetopsida',
+  s.taxon_order = 'Ephedrales',
+  s.taxon_family = 'Ephedraceae',
+  s.taxon_genus = 'Ephedra',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2011)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Ephedra nebrodensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Berezo',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Septiembre a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Erica_multiflora_001.jpg?width=1280',
+  s.image_attribution = 'H. Zell (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Ericales',
+  s.taxon_family = 'Ericaceae',
+  s.taxon_genus = 'Erica',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Erica multiflora';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Guillonea scabra',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Guillonea_scabra2.JPG?width=1280',
+  s.image_attribution = 'Shuky79 (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Apiales',
+  s.taxon_family = 'Apiaceae',
+  s.taxon_genus = 'Guillonea',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Guillonea scabra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Hieracium loscosianum',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Asteraceae',
+  s.taxon_genus = 'Hieracium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Hieracium loscosianum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pendejo',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ptilotrichum_spinosum_4_(Espagne).JPG?width=1280',
+  s.image_attribution = 'Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Brassicales',
+  s.taxon_family = 'Brassicaceae',
+  s.taxon_genus = 'Hormathophylla',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Hormathophylla spinosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jurinea pinnata',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Escobilla_(Jurinea_pinnata).jpg?width=1280',
+  s.image_attribution = 'José A. Coca González. (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Asteraceae',
+  s.taxon_genus = 'Jurinea',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Jurinea pinnata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Limonium eugeniae',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Caryophyllales',
+  s.taxon_family = 'Plumbaginaceae',
+  s.taxon_genus = 'Limonium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Limonium eugeniae';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Rhamnus pumila',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Forma parte de las comunidades de caméfitos que se desarrollan sobre paredones calcáreos verticales de la alianza Saxifragion trifurcato-canaliculatae',
+  s.description = 'Arbusto enano, inerme, postrado. Hojas ovadolanceoladas a elípticas, crenuladas, con pecíolo corto, pubescentes por el haz y glabrescentes por el envés. Pecíolos y ramas jóvenes densamente pubescentes al igual que los pedúnculos florales, iguales o mayores que el cáliz. Cáliz verde-amarillento con lóbulos acuminados más largos que el tubo. Pétalos ausentes.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_pumila_Atlas_Alpenflora.jpg?width=1280',
+  s.image_attribution = 'Anton Hartinger (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Rosales',
+  s.taxon_family = 'Rhamnaceae',
+  s.taxon_genus = 'Atadinus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Rhamnus pumila';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tomillo',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Thymus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Thymus zygis subsp. gracilis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Escribano cerillo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un escribano de considerable tamaño y cola larga, en el que predominan los tonos acastañados, amarillentos y pardogrisáceos. El macho, durante la época de cría, luce la cabeza y el vientre de un brillante amarillo, con el característico antifaz de tres bandas propio de los escribanos muy desdibujado, casi inexistente, mientras que el pecho y el obispillo se tornan rojizos. La librea de la hembra se asemeja a la del macho durante el periodo invernal; en ella dominan las coloraciones más apagadas, grisáceas y pardas, con tonos amarillos más pálidos y menos extendidos. Los jóvenes se parecen mucho a las hembras, pero son más grisáceos, con apenas una leve tonalidad amarilla en la región ventral.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Emberiza_citrinella_-New_Zealand_-North_Island-8.jpg?width=1280',
+  s.image_attribution = 'Alan Vernon (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Emberizidae',
+  s.taxon_genus = 'Emberiza',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Emberiza citrinella';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca sarda',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Muy parecida a la curruca balear —a la que hasta hace poco se consideraba como perteneciente a la misma especie—, es algo mayor y de un color gris más oscuro y uniforme, extendido también sobre la garganta y los flancos. Los machos adultos presentan la cabeza con un tono azulado, que falta en las hembras y los jóvenes.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Marmora''s_Warbler_-_Sardinia_-_Italy_S4E1036.jpg?width=1280',
+  s.image_attribution = 'Francesco Veronesi (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Sylviidae',
+  s.taxon_genus = 'Curruca',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Anexo IV (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Sylvia sarda';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Jabalí',
   s.kingdom = 'fauna',
   s.family = 'Mamífero ungulado',
@@ -49555,7 +54327,7 @@ Gálbulos redondos que pasan de verde a pardo rojizo',
   s.taxon_genus = 'Juniperus',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Juniperus phoenicea';
@@ -50223,7 +54995,7 @@ Aspecto grisáceo por la pelusa que cubre la planta',
   s.taxon_genus = 'Lotus',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Lotus dorycnium';
@@ -51308,7 +56080,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_family = 'Plumbaginaceae',
   s.taxon_genus = 'Armeria',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2010)',
+  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2010)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -51902,9 +56674,9 @@ Mata baja y grisácea del tomillar',
   s.taxon_genus = 'Helianthemum',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = 'EN — En peligro (Lista Roja española, 2010)',
-  s.spain_status = 'UICN España: EN (En peligro) (2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Helianthemum violaceum';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -52092,7 +56864,7 @@ Matas espaciadas sobre suelo desnudo y claro',
   s.taxon_genus = 'Lygeum',
   s.iucn_global = 'LC',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Lygeum spartum';
@@ -53583,7 +58355,7 @@ Plumas de la punta del ala muy separadas, como dedos',
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Corvidae',
   s.taxon_genus = 'Pyrrhocorax',
-  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
   s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV',
   s.rarity_score = 2,
@@ -54411,6 +59183,1534 @@ Camina por el suelo clavando el pico largo y curvo',
 WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Upupa epops';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sapo partero común',
+  s.kingdom = 'fauna',
+  s.family = 'Anfibio',
+  s.primary_habitat = NULL,
+  s.description = 'Sapo de tamaño pequeño (menor de 5 cm). Aspecto rechoncho, cabeza grande y hocico redondeado, ojos prominentes, pupila vertical e iris dorado con vetas negras. Tímpano visible y más pequeño que el ojo. Pliegue gular patente. Glándulas parotídeas poco aparentes. Piel granulosa con verrugas pequeñas, frecuentemente agrupadas en los costados en dos hileras dorsolaterales. Miembros cortos y fuertes, los anteriores con 3 tubérculos metacarpianos, y los posteriores con membrana interdigital muy reducida y con un tubérculo metatarsiano pequeño. Coloración dorsal de gris a parda con pequeñas manchas verdes, rojizas y negras poco marcadas. Zona ventral clara.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/AlytesObstet.jpg?width=1280',
+  s.image_attribution = 'Christian Fischer (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Amphibia',
+  s.taxon_order = 'Anura',
+  s.taxon_family = 'Alytidae',
+  s.taxon_genus = 'Alytes',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Alytes obstetricans';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gayuba',
+  s.kingdom = 'flora',
+  s.family = 'Mata',
+  s.primary_habitat = 'Pinares aclarados, crestas y laderas pedregosas de montaña',
+  s.description = 'Mata rastrera de hojas pequeñas, coriáceas y brillantes que forma alfombras densas sobre el suelo del pinar. Sus flores son urnas blanco rosadas colgantes y sus frutos, bayas rojas y harinosas. Ayuda a fijar el suelo en laderas pedregosas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Porte rastrero formando alfombras continuas
+Hojas pequeñas, duras y muy brillantes
+Flores en urna colgante y frutos rojos harinosos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Gayuba.jpg?width=1280',
+  s.image_attribution = 'No machine-readable author provided. Carlosblh assumed (based on co… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Ericales',
+  s.taxon_family = 'Ericaceae',
+  s.taxon_genus = 'Arctostaphylos',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Arctostaphylos uva-ursi';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebrilla ciega',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = NULL,
+  s.description = 'Reptiles estrictamente adaptados a la vida subterránea, especializados en cavar túneles y en la localización de presas bajo tierra. Cuerpo cilíndrico y alargado cubierto de escamas cuadrangulares que se alinean en forma de anillos. Segmentos dorsales entre 14 y 18 y ventrales entre 14 y 20. No presenta extremidades. Cabeza de pequeño tamaño, poco diferenciada del cuerpo, con el hocico redondeado. La visión es vestigial mientras que el olfato y el oído están desarrollados. Cola muy corta, Presenta poros precloacales. Coloración de fondo variable entre violácea y marrón. Sin dimorfismo sexual. Los machos alcanzan una longitud de cabeza y cuerpo de 254 mm y las hembras de 235 mm.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Amphisbaenia.JPG?width=1280',
+  s.image_attribution = 'Mario modesto (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Blanidae',
+  s.taxon_genus = 'Blanus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Blanus cinereus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'campanillas de cantil',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Fisuras de roquedos, taludes y pedregales de montaña',
+  s.description = 'Campánula de tallos finos y flexibles con flores azul violeta en forma de campana colgante. Crece en grietas de roca y en pedregales, donde sus raíces alcanzan la humedad que retiene la piedra. Las hojas de la base tienen forma redondeada y las del tallo son estrechas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flores azuladas en campana, colgando del tallo
+Hojas basales redondeadas, muy distintas de las del tallo
+En grietas y repisas de roca, a menudo colgando',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Campanula_hispanica_1.jpg?width=1280',
+  s.image_attribution = 'Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Campanulaceae',
+  s.taxon_genus = 'Campanula',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas [IEPNB, Lista Patrón de las especies silvestres presentes en España, vista de normas, consultada 2026-08-09]',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Campanula rotundifolia subsp. hispanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Algarrobo',
+  s.kingdom = 'flora',
+  s.family = 'Árbol',
+  s.primary_habitat = 'Laderas cálidas, antiguos cultivos y matorral del piso termomediterráneo',
+  s.description = 'Árbol perennifolio de copa densa y hojas compuestas con foliolos redondeados y lustrosos. Florece en otoño directamente sobre el tronco y las ramas viejas. Sus vainas pardas y dulces, las algarrobas, se han usado durante siglos como pienso y alimento.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas compuestas de foliolos redondos y brillantes
+Flores nacidas directamente del tronco y las ramas gruesas
+Vainas pardas y aplanadas colgando del árbol',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ceratonia_siliqua_Keciboynuzu_1370984_Nevit.jpg?width=1280',
+  s.image_attribution = 'Nevit Dilmen (talk) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Fabales',
+  s.taxon_family = 'Fabaceae',
+  s.taxon_genus = 'Ceratonia',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Ceratonia siliqua';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Espuelilla de yesos',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a junio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Plantaginaceae',
+  s.taxon_genus = 'Chaenorhinum',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Chaenorhinum rupestre';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Palmito',
+  s.kingdom = 'flora',
+  s.family = 'Palmera',
+  s.primary_habitat = 'Matorral cálido, laderas soleadas y acantilados del piso termomediterráneo',
+  s.description = 'La única palmera silvestre de Europa continental. Suele crecer en mata, con varios troncos cortos, aunque con los años puede levantar un tronco único. Sus hojas son abanicos rígidos con pecíolos muy espinosos. Del cogollo se sacaba el «palmito», y de las hojas, cordelería y escobas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas en abanico, rígidas y divididas en segmentos
+Pecíolos con espinas fuertes en los bordes
+Porte en mata, con varios troncos desde la base',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chamaerops_humilis_Torreblanca.jpg?width=1280',
+  s.image_attribution = 'Canaan (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Liliopsida',
+  s.taxon_order = 'Arecales',
+  s.taxon_family = 'Arecaceae',
+  s.taxon_genus = 'Chamaerops',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Chamaerops humilis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago hortelano',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eptesicus_isabellinus_sketch.jpg?width=1280',
+  s.image_attribution = 'Coenrad Temmick (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Cnephaeus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Cnephaeus isabellinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Colutea atlantica',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Fabales',
+  s.taxon_family = 'Fabaceae',
+  s.taxon_genus = 'Colutea',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Colutea atlantica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chocho lobero',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Noviembre, febrero, marzo, abril, mayo, junio, julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Colutea_hispanica0479.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Fabales',
+  s.taxon_family = 'Fabaceae',
+  s.taxon_genus = 'Colutea',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Colutea hispanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Aliaga',
+  s.kingdom = 'flora',
+  s.family = 'Mata',
+  s.primary_habitat = 'Crestas ventosas, pastizales pedregosos y matorral almohadillado de montaña',
+  s.description = 'Leguminosa que forma cojines rígidos y espinosos, una arquitectura que le permite resistir el viento, el frío y el pisoteo en las cumbres. En primavera se cubre de flores azul violeta que contrastan con el verde grisáceo de las espinas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cojín compacto y espinoso, duro al tacto
+Flores azul violeta sobre un almohadón de espinas
+En crestas y collados expuestos al viento',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/ERINACEA_ANTHYLLIS_-_SANT_MAMET.JPG?width=1280',
+  s.image_attribution = 'Isidre blanc (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Fabales',
+  s.taxon_family = 'Fabaceae',
+  s.taxon_genus = 'Erinacea',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección nacional específica registrada en EIDOS',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Erinacea anthyllis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Geranio de roca',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Fisuras y repisas de roquedos calizos',
+  s.description = 'Geranio rupícola de rosetas compactas y hojas divididas y algo peludas, con flores rosadas o blanquecinas de venas marcadas. Vive encajado en las grietas de los cantiles, donde encuentra humedad y escapa de los herbívoros.',
+  s.description_source = NULL,
+  s.identification_tips = 'Rosetas apretadas metidas en la grieta de la roca
+Flores rosadas con venas más oscuras
+Frutos con pico largo que se enrolla al secarse',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/483580471/original.jpeg',
+  s.image_attribution = 'Olivier Argagnon (CC BY 4.0) · GBIF/iNaturalist',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Geraniales',
+  s.taxon_family = 'Geraniaceae',
+  s.taxon_genus = 'Erodium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección nacional específica registrada en EIDOS',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Erodium saxatile';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Euphorbia squamigera',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Euphorbia_squamigera_kz12.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Malpighiales',
+  s.taxon_family = 'Euphorbiaceae',
+  s.taxon_genus = 'Euphorbia',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Euphorbia squamigera';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tablero de damas',
+  s.kingdom = 'flora',
+  s.family = 'Planta bulbosa',
+  s.primary_habitat = 'Pastizales, claros de matorral y pedregales de montaña',
+  s.description = 'Bulbosa de tallo fino y hojas estrechas que cuelga una o dos flores en forma de campana, con un jaspeado pardo y verdoso que recuerda a un tablero de ajedrez. Pasa desapercibida entre la hierba pese a su forma llamativa.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flor colgante en campana con dibujo ajedrezado
+Tallo fino con pocas hojas estrechas
+Colores apagados que la camuflan en el pastizal',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fritillaria_lusitanica_2_2601.jpg?width=1280',
+  s.image_attribution = 'Balles2601 (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Liliopsida',
+  s.taxon_order = 'Liliales',
+  s.taxon_family = 'Liliaceae',
+  s.taxon_genus = 'Fritillaria',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección nacional específica registrada en EIDOS',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Fritillaria lusitanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de cueva',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Cuevas y minas; caza en vuelo alto sobre bosque, campo y láminas de agua',
+  s.description = 'Murciélago de alas largas y estrechas y vuelo rápido y alto, casi como el de un vencejo. Tiene la frente muy abombada y el pelo corto y erizado en la cabeza. Recorre decenas de kilómetros entre las cuevas de cría, de tránsito y de invernada.',
+  s.description_source = NULL,
+  s.identification_tips = 'Frente muy abombada y pelo corto y de punta
+Alas largas y estrechas; vuelo veloz y alto
+Forma colonias enormes y muy apretadas en cueva',
+  s.seasonality = 'Todo el año, con desplazamientos estacionales entre cuevas',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Miniopterus_schreibersii_dasythrix.jpg?width=1280',
+  s.image_attribution = 'Andrew Smith (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Miniopteridae',
+  s.taxon_genus = 'Miniopterus',
+  s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 2023)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2007)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Miniopterus schreibersii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Turón',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero carnívoro',
+  s.primary_habitat = NULL,
+  s.description = 'Mustélido de tamaño intermedio entre la marta, Martes martes y el armiño, Mustela erminea. El cuerpo es esbelto y alargado. Medidas corporales, CC: 385-425 mm; C: 150 mm; Ps: 800-1.300 g (machos), en hembras es un 60-90% inferior. La coloración general es bastante uniforme, normalmente tostado oscuro, pero se aclara en ambos flancos. Presenta un característico antifaz blanco alrededor del hocico y las regiones auriculares y oculares. El dimorfismo sexual es bastante marcado, aunque sin llegar al caso de la comadreja, Mustela nivalis, o el armiño, M. erminea. Fórmula dentaria: 3.1.3.1/3.1.3.2. Número de cromosomas (2n) = 40.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ilder.jpg?width=1280',
+  s.image_attribution = 'Malene Thyssen (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Carnivora',
+  s.taxon_family = 'Mustelidae',
+  s.taxon_genus = 'Mustela',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2007)',
+  s.spain_status = 'Anexo VI (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Mustela putorius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Baladre',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Cauces de rambla y ramblizos con humedad subterránea y crecidas',
+  s.description = 'Arbusto de hojas coriáceas, alargadas y opuestas, que forma masas densas en el lecho de las ramblas y aguanta las riadas gracias a su raigambre. Florece en rosa intenso durante buena parte del verano. Toda la planta es muy tóxica, savia incluida.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas duras y lanceoladas con el nervio central marcado
+Flores rosas grandes en el extremo de las ramas
+Frutos en vaina larga que se abre soltando semillas con vilano',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Nerium_oleander_flowers_leaves.jpg?width=1280',
+  s.image_attribution = 'Alvesgaspar (CC BY 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Gentianales',
+  s.taxon_family = 'Apocynaceae',
+  s.taxon_genus = 'Nerium',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2013)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Nerium oleander';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bayón',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Matorral alto, sabinares y laderas secas sobre suelo pedregoso',
+  s.description = 'Arbusto de ramas verdes y erguidas con hojas estrechas y coriáceas. Es hemiparásito: fabrica su propio alimento pero además conecta sus raíces a las de otras plantas para robarles agua y sales. Sus frutos son bayas rojas o anaranjadas muy vistosas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ramas verdes y erectas, de aspecto escobiforme
+Bayas rojo anaranjado brillantes al madurar
+Hojas estrechas, duras y de punta aguda',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Osyris_lanceolata.JPG?width=1280',
+  s.image_attribution = 'Xemenendura (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Santalales',
+  s.taxon_family = 'Santalaceae',
+  s.taxon_genus = 'Osyris',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Osyris lanceolata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bayón',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Osyris_quadripartita_(6841103821).jpg?width=1280',
+  s.image_attribution = 'Dinesh Valke from Thane, India (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Santalales',
+  s.taxon_family = 'Santalaceae',
+  s.taxon_genus = 'Osyris',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Osyris quadripartita';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sapillo moteado común',
+  s.kingdom = 'fauna',
+  s.family = 'Anfibio',
+  s.primary_habitat = NULL,
+  s.description = 'Anuro de aspecto grácil, con un tamaño medio de 40 mm (36,32 mm en los machos y 43,3 mm en las hembras). Hocico alargado, ojos relativamente grandes y con pupila vertical. Dos tercios inferiores del iris más oscuros que el tercio superior. Membrana timpánica poco patente, ausencia de glándulas parótidas. Extremidades largas, particularmente las posteriores, y poco palmeadas (hasta la base de los dedos). Dedos alargados con un único tubérculo metatarsiano, situado en la base del primer dedo. Color variable, aunque suele mostrar un moteado verde más o menos patente en dorso, cabeza y extremidades. Vientre claro, con un moteado oscuro irregular. Los machos se diferencian de las hembras por su menor tamaño y por mostrar callosidades nupciales en las extremidades anteriores, muslos y la parte ventral y gular, durante el período de reproducción.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pelodytes_punctatus_side.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Amphibia',
+  s.taxon_order = 'Anura',
+  s.taxon_family = 'Pelodytidae',
+  s.taxon_genus = 'Pelodytes',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Pelodytes punctatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de borde claro',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Es fisurícola, tanto litófila como fitófila, y altamente sinantrópica, refugiándose en fisuras o grietas en edificios, rocas y árboles, así como en cajas-nido',
+  s.description = 'Es un murciélago pequeño. Las orejas son cortas, triangulares y con vértice superior redondeado, y poseen cinco pliegues transversales en la parte superior del borde externo. El trago es corto, redondeado en la punta y ligeramente curvado. El pelaje es de coloración general pardo castaño o rojizo en la parte dorsal, y más claro en la zona ventral. El hocico, las orejas y la membrana alar son de color negro parduzco. Las alas son relativamente estrechas. El plagiopatagio se inserta en la base de los dedos del pie; en su borde presentan generalmente una banda de color más claro. El espolón alcanza más de la mitad de la longitud del borde del uropatagio, con lóbulo postcalcáneo con cartílago conspicuo en forma de T. Los incisivos internos superiores (I1) son monocúspides, los externos (I2) menores que la mitad del I1, y el premolar superior anterior (P1) está desplazado hacia el interior y no es visible externamente. Los incisivos inferiores están fuertemente imbricados, y no presentan diastema entre I2 e I3. ANT: 31,0-37,0 mm; Ps: 4,5-10,0 g. Fórmula dentaria: 2.1.2.3/3.1.2.3. Número de cromosomas (2n) = 44. No existe dimorfismo sexual, aunque las hembras son algo mayores. Puede confundirse sobre todo con los otros representantes del género Pipistrellus y en menor medida con Hypsugo savii, de los que se diferencia sobre todo por los caracteres dentales. ULTRASONIDOS Emite pulsos de ecolocalización del tipo FM-CF, con frecuencia de máxima energía a 38-41 kHz, 8-12 ms de duración, e intervalo entre pulsos bimodal con valores máximos en torno a los 100 y 200 ms. Los cantos sociales son una serie de 2 pulsos FM muy rápidos, con máxima energía en torno a los 14-16 kHz, fácilmente audibles como un “chip” agudo, y que mediante sistemas de tiempo expandido permiten discriminar a la especie de P. nathusii. Mediante escucha directa pueden confundirse con sonidos de ecolocalización de Tadarida teniotis.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus_kuhlii.jpg?width=1280',
+  s.image_attribution = 'Mnolf (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Pipistrellus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Pipistrellus kuhlii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago común',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Quiróptero de hábitos fisurícolas',
+  s.description = 'Es uno de los Quirópteros más pequeños de Europa (ANT: 28-35 mm, Ps: 3,5-8,5 g). Orejas cortas, triangulares; trago de punta redondeada, más largo que ancho. Coloración dorsal de marrón-rojizo a gris-verdoso, con individuos negruzcos. Pelaje ventral más claro. La segunda falange del 3er dedo es 2- 3 mm mayor que la tercera. La pigmentación de las partes desnudas de la cara es en general oscura, sin parches claros conspicuos. Los machos tienen el pene grisáceo con una marcada estría más pálida en el glande. Carecen de protuberancia entre los orificios nasales. Fórmula dentaria: 2.1.2.3/3.1.2.3. Incisivo superior interno bicúspide, casi igual que la mitad de la longitud del externo. PM1 muy pequeño y desplazado hacia el interior de la serie dental pero visible desde el exterior. Dotación cromosómica: 2n = 42 ó 2n = 44. Pueden ser confundidos con otros miembros del género Pipistrellus, aunque sus menores dimensiones y la morfología y disposición de los incisivos y premolares superiores permiten distinguirlos en mano con relativa facilidad. ULTRASONIDOS Las emisiones más habituales son pulsos de frecuencia modulada de banda ancha con una cola final casi frecuencia constante. Las frecuencias terminal y de máxima intensidad oscilan entre 42-51 y 41,6- 50,8 kHz, respectivamente. Las llamadas sociales difieren en frecuencia y número de componentes. Las señales son estructuralmente similares a las de otras especies cogenéricas, pero sus diferentes frecuencias permiten separarlas con facilidad.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus_pipistrellus_lateral.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Pipistrellus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Pipistrellus pipistrellus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de Cabrera',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = NULL,
+  s.description = 'Es el murciélago más pequeño de Europa (ANT: 28,8-32,8 mm; Ps: 4,1-7,5 g) . Orejas cortas y triangulares. Trago de punta redondeada, más largo que ancho. Pelaje dorsal desde marrón-oliva a arenoso pálido. La región ventral es más clara. La razón entre la longitud de la 2ª y 3ª falange del 3er dedo es 1:1, aunque este carácter es bastante variable. Las orejas y el hocico son relativamente más cortos y el pelaje dorsal del uropatagio más denso y extendido que en el murciélago enano, cubriéndolo hasta su tercio proximal. La pigmentación de las partes desnudas de la cara presenta parches claros conspicuos. En los machos el pene es anaranjado y sin la estría distintiva del murciélago enano. Ambos sexos presentan una pequeña protuberancia entre los orificios nasales, ausente en su especie gemela . Fórmula dentaria: 2.1.2.3/3.1.2.3. Forma y disposición de los incisivos superiores y PM1 como en el murciélago enano. Se distingue con relativa facilidad de otros miembros del mismo género por su tamaño menor y su morfología dentaria. ULTRASONIDOS Las señales de ecolocación más habituales son pulsos de frecuencia modulada de banda ancha con una cola final casi de frecuencia constante. Los valores medios de la frecuencia de máxima intensidad oscilan entre 52 y 56 kHz . Las llamadas sociales están compuestas por 2 a 4 componentes (habitualmente tres) y se escuchan sobre todo en torno a 20 kHz . En situaciones de amenaza emiten llamadas de alarma compuestas por 4-5 elementos, con frecuencias de máxima intensidad entre 26 y 40 kHz.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril, mayo, junio, julio, agosto, septiembre, octubre, enero',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus_pygmaeus01.jpg?width=1280',
+  s.image_attribution = 'Evgeniy Yakhontov (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Pipistrellus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Pipistrellus pygmaeus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zapatito de la Virgen',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Extraplomos y roquedos calcáreos',
+  s.description = 'Pequeña planta rupícola de extraplomos y oquedades de roquedos calcáreos, integrante de la asociación Resedo paui-Sarcocapnetum saetabensis del hábitat 8210.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cuelga de extraplomos y techos rocosos
+Flores blanco-rosadas con espolón
+Hojas divididas glaucas',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Orella_de_ratol%C3%AD_(Sarcocapnos_saetabensis)_al_castell_de_X%C3%A0tiva.jpg?width=1280',
+  s.image_attribution = 'Joanbanjo (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Ranunculales',
+  s.taxon_family = 'Papaveraceae',
+  s.taxon_genus = 'Sarcocapnos',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Sarcocapnos enneaphylla subsp. saetabensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Saxifraga latepetiolata',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Saxifragales',
+  s.taxon_family = 'Saxifragaceae',
+  s.taxon_genus = 'Saxifraga',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Saxifraga latepetiolata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lycocarpus fugax',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a mayo',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Brassicales',
+  s.taxon_family = 'Brassicaceae',
+  s.taxon_genus = 'Sisymbrium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Sisymbrium fugax';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Musgaño pequeño',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero',
+  s.primary_habitat = NULL,
+  s.description = 'Es uno de los mamíferos más pequeños del mundo. Medidas corporales, CC: 35,0-53,0 mm; C: 21,0- 30,0 mm; P: 5,7-7,9 mm; Ps: 1,2-2,7 g. Su morfología externa es similar a la de otras musarañas, pero se distingue por presentar la cabeza proporcionalmente más grande y la cola más larga, de aproximadamente la mitad de la longitud corporal. Las orejas son bien visibles, los ojos pequeños y la cola está revestida de un corto pelaje entre el que sobresalen numerosos pelos dispersos de mayor longitud. La coloración del pelaje muestra pocas variaciones estacionales. En general, es gris pardusca, con ciertos reflejos rojizos en el dorso y de tonalidad más clara en el vientre, sin clara línea de demarcación entre ambas regiones. Presenta tres pares de mamas inguinales. El cráneo es estrecho y alargado, con la caja craneana de perfil superior prácticamente horizontal. La mandíbula es frágil y de dimensiones reducidas. Fórmula dentaria: 3.1.2.3/1.1.1.3. A diferencia del género Crocidura, Suncus se caracteriza por presentar cuatro unicúspides superiores, aunque el último es sumamente pequeño, está desplazado en sentido lingual y queda prácticamente oculto por la cúspide anterior del último premolar. Los dientes de la mandíbula son de morfología similar a los de la musaraña gris, Crocidura russula, aunque de menor tamaño y con la sección posterior del M3 más reducida. Número de cromosomas (2n) = 42.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Suncus_etruscus_crop.jpg?width=1280',
+  s.image_attribution = 'Suncus_etruscus.jpg: Trebol-a derivative work: Materialscientist (t… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Soricomorpha',
+  s.taxon_family = 'Soricidae',
+  s.taxon_genus = 'Suncus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Suncus etruscus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Taray de saladar',
+  s.kingdom = 'flora',
+  s.family = 'Árbol',
+  s.primary_habitat = 'Galerías y matorrales ribereños termomediterráneos',
+  s.description = 'Taray de saladar de flores blanco-rosadas y porte arbustivo, propio de bordes de ramblas salinas y depresiones halófilas del litoral.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flores en espigas densas
+Tolera suelos muy salinos
+Bordes de rambla y saladar',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/621745664/original.jpg',
+  s.image_attribution = 'melendrete (CC BY-NC 4.0) · GBIF',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Caryophyllales',
+  s.taxon_family = 'Tamaricaceae',
+  s.taxon_genus = 'Tamarix',
+  s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No incluida en el LESRPE; formador de galerías termomediterráneas (HIC 92D0)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Tamarix boveana';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Taray canario',
+  s.kingdom = 'flora',
+  s.family = 'Árbol',
+  s.primary_habitat = 'Galerías y matorrales ribereños termomediterráneos',
+  s.description = 'Taray de floración prolongada y espigas rosadas que forma galerías y tarayales en cauces y ramblas del litoral árido.',
+  s.description_source = NULL,
+  s.identification_tips = 'Espigas rosadas abundantes
+Floración prolongada
+Forma tarayales en ramblas',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/619019413/original.jpg',
+  s.image_attribution = 'Christoph Moning (CC BY 4.0) · GBIF',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Caryophyllales',
+  s.taxon_family = 'Tamaricaceae',
+  s.taxon_genus = 'Tamarix',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No incluida en el LESRPE; formador de galerías termomediterráneas (HIC 92D0)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Tamarix canariensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'poleo amargo',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Teucrium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Teucrium carolipaui';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Oroval',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Matorral cálido, roquedos y ramblas de clima muy seco',
+  s.description = 'Arbusto de la familia del tomate y la belladona, con hojas ovaladas algo carnosas y flores verdosas discretas. Los frutos son bayas rojas y brillantes envueltas en el cáliz. Es una especie de raíz norteafricana que en la península solo vive en los rincones más cálidos del sureste.',
+  s.description_source = NULL,
+  s.identification_tips = 'Bayas rojas pequeñas asomando del cáliz
+Hojas ovales, algo carnosas y de verde apagado
+Flores verde amarillentas, poco vistosas',
+  s.seasonality = 'Primavera y otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Withania_frutescens0176.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Solanales',
+  s.taxon_family = 'Solanaceae',
+  s.taxon_genus = 'Withania',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE; elemento iberoafricano de interés biogeográfico',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Withania frutescens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bisbita campestre',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Llanos secos, pastizales ralos y claros pedregosos con poca vegetación',
+  s.description = 'Bisbita grande, esbelto y de tonos arena, con muy poco rayado en el pecho comparado con sus parientes. Camina por el suelo desnudo moviendo la cola arriba y abajo. Anida entre piedras y matas bajas, y su canto es una frase corta y monótona que emite en vuelo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Pecho casi liso, sin el rayado denso de otros bisbitas
+Camina en vez de saltar, meneando la cola
+Ceja clara marcada y patas largas y pálidas',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/AnthusCampestris_cropped.jpg?width=1280',
+  s.image_attribution = 'AnthusCampestris.jpg: Lip Kee derivative work: Bogbumper (talk) (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Motacillidae',
+  s.taxon_genus = 'Anthus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Anthus campestris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcaraván',
+  s.kingdom = 'fauna',
+  s.family = 'Ave esteparia',
+  s.primary_habitat = 'Llanos pedregosos, cultivos de secano, ramblas y eriales con poca cobertura',
+  s.description = 'Ave de aspecto extraño y ojos amarillos enormes, adaptados a la actividad nocturna. De día permanece agachada e inmóvil, confiada en su plumaje críptico, y solo al anochecer se activa y delata con un reclamo silbado y melancólico que recuerda al del zarapito.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ojos amarillos desproporcionadamente grandes
+Dos barras blancas y negras en el ala plegada
+Reclamo silbado y triste al anochecer',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Burhinus_oedicnemus_insularum_Lanzarote_1.jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Charadriiformes',
+  s.taxon_family = 'Burhinidae',
+  s.taxon_genus = 'Burhinus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE; Directiva Aves 2009/147/CE, Anexo I',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Burhinus oedicnemus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Terrera común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave esteparia',
+  s.primary_habitat = 'Llanos de cultivo, eriales y pastizales rasos con suelo desnudo',
+  s.description = 'Alondra pequeña y pálida de aspecto muy limpio, con el pecho sin apenas rayado salvo una mancha oscura a cada lado del cuello. Anida en el suelo, en cultivos y baldíos. En migración se agrupa en bandos que se levantan del suelo todos a la vez.',
+  s.description_source = NULL,
+  s.identification_tips = 'Mancha oscura a cada lado del cuello, como un botón
+Pecho limpio, sin rayado extenso
+Ceja clara y pico corto y grueso de granívora',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alondra.jpg?width=1280',
+  s.image_attribution = 'Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Alaudidae',
+  s.taxon_genus = 'Calandrella',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Calandrella brachydactyla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chotacabras europeo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Claros de bosque, brezales y matorral con suelo desnudo',
+  s.description = 'Ave nocturna de plumaje jaspeado que descansa de día tumbada a lo largo de una rama o en el suelo, confundida con la corteza. Caza polillas al vuelo con la boca enorme. Su canto es un ronroneo continuo y mecánico que puede durar minutos sin pausa.',
+  s.description_source = NULL,
+  s.identification_tips = 'Canto como un motor lejano, continuo y vibrante
+Vuela al anochecer con giros silenciosos y bruscos
+El macho muestra manchas blancas en alas y cola',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Nachtzwaluw_-_European_nightjar_-_Caprimulgus_europaeus_2.jpg?width=1280',
+  s.image_attribution = 'Bouke ten Cate (CC BY 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Caprimulgiformes',
+  s.taxon_family = 'Caprimulgidae',
+  s.taxon_genus = 'Caprimulgus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Caprimulgus europaeus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chotacabras cuellirrojo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral abierto, pinares aclarados, ramblas y caminos térreos',
+  s.description = 'Ave crepuscular de plumaje jaspeado que imita la hojarasca, tan mimético que de día resulta casi imposible verla posada en el suelo. Caza polillas en vuelo con la boca muy abierta. Su canto nocturno es un «cu-toc, cu-toc» repetido de forma monótona durante minutos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Collar rojizo en la nuca, más marcado que en su pariente europeo
+Se levanta del camino al anochecer y vuelve a posarse unos metros más allá
+Canto nocturno monótono, como un motor lejano',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Caprimulgus_ruficollis_-Portugal-8.jpg?width=1280',
+  s.image_attribution = 'Olivença (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Caprimulgiformes',
+  s.taxon_family = 'Caprimulgidae',
+  s.taxon_genus = 'Caprimulgus',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Caprimulgus ruficollis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Buitrón',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de una de las aves más pequeñas de Europa. Posee el dorso y el píleo de color pardo oscuro y fuertemente listados, el obispillo rojizo y las partes inferiores claras con los flancos y el pecho de color ocráceo. En vuelo ejecuta una trayectoria muy ondulante y presenta una silueta característica, con las alas redondeadas y la cola —que suele mantener parcialmente desplegada— con un perfil también redondeado y de longitud creciente de los extremos hacia el centro. En su parte distal, la cola muestra una banda de manchas negras y blancas muy visibles en vuelo. Cuando se posa entre la vegetación, suele aferrarse a los tallos manteniendo la verticalidad a la vez que agita continuamente la cola.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Zitting_cisticola_2024_04_19_(cropped).jpg?width=1280',
+  s.image_attribution = 'Alexis Lours (CC BY 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Cisticolidae',
+  s.taxon_genus = 'Cisticola',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Cisticola juncidis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Críalo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Bosques,zonas con córvidos',
+  s.description = 'Es un ave de tamaño medio, morfológicamente muy semejante al cuco, del que se diferencia por su aspecto más esbelto, por tener una cola más larga y por el colorido del plumaje. Este es de tono marrón grisáceo en las regiones dorsales, que aparecen salpicadas de motas blancas, al igual que ocurre con las plumas del ala. La zona ventral es de color blanquecino, con la garganta teñida de ocre-amarillento. En la cabeza luce un capirote de color gris plateado —que remata en una pequeña cresta ligeramente eréctil— y un anillo ocular rojo. El joven presenta una coloración incluso más vistosa que los adultos, pues exhibe un intenso color achocolatado con abundantes motas blancas en el dorso y unas regiones ventrales blancas, que se tornan amarillo-ocráceas en pecho y cuello. Las plumas de vuelo poseen un vistoso color rojizo, en tanto que el capirote es negro y el anillo ocular más conspicuo que el de los adultos.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Clamator_glandarius.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Cuculiformes',
+  s.taxon_family = 'Cuculidae',
+  s.taxon_genus = 'Clamator',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Clamator glandarius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca carrasqueña',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral alto, jarales, encinares aclarados y bordes de bosque',
+  s.description = 'Curruca de tamaño medio, con el macho de dorso gris, garganta y pecho color teja y un bigote blanco muy nítido que separa ambos. El anillo ocular es rojo. Canta desde el interior del matorral y hace vuelos cortos de exhibición sobre las matas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Bigote blanco que bordea la garganta rojiza
+Anillo ocular rojo anaranjado
+Prefiere matorral alto, no el raso',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9A%CE%BF%CE%BA%CE%BA%CE%B9%CE%BD%CE%BF%CF%84%CF%83%CE%B9%CF%81%CE%BF%CE%B2%CE%AC%CE%BA%CE%BF%CF%82.jpg?width=1280',
+  s.image_attribution = 'Antonios Tsaknakis (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Sylviidae',
+  s.taxon_genus = 'Curruca',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Curruca cantillans';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca tomillera',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral bajo y abierto, tomillares y saladares con arbustos dispersos',
+  s.description = 'Curruca menuda de matorral raso, gris en la cabeza, parda en el dorso y con las plumas del ala ribeteadas de castaño encendido. El anillo blanco del ojo le da el aire de «gafas» que le da nombre. Es inquieta y suele delatarse por su reclamo antes de dejarse ver.',
+  s.description_source = NULL,
+  s.identification_tips = 'Anillo blanco alrededor del ojo bien marcado
+Panel castaño vivo en el ala plegada
+Vive en matorral muy bajo, no en arbolado',
+  s.seasonality = 'Todo el año en el sureste; parcialmente migradora',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_%C3%A0_lunettes_Aqueduc_de_Zaghouan.jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Sylviidae',
+  s.taxon_genus = 'Curruca',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2004)',
+  s.spain_status = 'Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Curruca conspicillata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Avión común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Pequeña golondrina de aspecto compacto, negro azulada brillante por arriba y blanca por abajo, con límites netos entre colores. Posee alas largas y apuntadas y cola corta ahorquillada de color negro; pico corto, plano y negro; boca muy ancha, y patas cortas cubiertas de finas plumas blancas. Destaca su obispillo de color blanco, la única zona clara de las partes dorsales. Ambos sexos son iguales. Los jóvenes resultan menos contrastados, más parduzcos, sobre todo por abajo, con límites difusos entre partes negras y blancas, y con puntas blancas en las terciarias. Este pájaro suele observarse en vuelo y agrupado. Su vuelo es rápido y ágil, aunque menos que en la golondrina común, y a menudo se produce a mayor altura que en esta. Se posa con frecuencia, a veces en el suelo.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Delichon_urbicum_-Iceland_-flying-8_(1).jpg?width=1280',
+  s.image_attribution = 'Ómar Runólfsson (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Hirundinidae',
+  s.taxon_genus = 'Delichon',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Delichon urbicum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcotán',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Campo abierto con arbolado disperso, cerca de zonas húmedas',
+  s.description = 'Halcón esbelto con silueta de vencejo gigante: alas muy largas y afiladas y cola corta. Caza libélulas e incluso vencejos en pleno vuelo, con una agilidad extraordinaria. Los adultos tienen los «calzones» y la zona anal de un rojo ladrillo característico.',
+  s.description_source = NULL,
+  s.identification_tips = 'Silueta de hoz, como un vencejo enorme
+Calzones y bajo vientre rojizos en el adulto
+Bigotera negra ancha sobre garganta blanca',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hobby_-_Falco_subbuteo.jpg?width=1280',
+  s.image_attribution = 'Andy Morffew from Itchen Abbas, Hampshire, UK (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Falconiformes',
+  s.taxon_family = 'Falconidae',
+  s.taxon_genus = 'Falco',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Falco subbuteo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Papamoscas cerrojillo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Zonas boscosas,de caducifolios, robles,hayas,pinares de altura,sotos espesos.Migrac:muy repartido,',
+  s.description = 'Es un paseriforme de pequeño tamaño, cuerpo compacto, cabeza ancha y pico fino. Fuera de la época de reproducción no hay diferencias entre los sexos en lo que al plumaje se refiere, ya que ambos lo poseen de color pardo claro por el dorso y blanco ocre en las partes inferiores. Los ojos, las patas y el pico son negros. En primavera, los machos adquieren un plumaje nupcial negro o marrón muy oscuro en las partes superiores, con una llamativa mancha blanca en la frente y un extenso panel blanco en las alas. Las partes inferiores se aclaran hasta adquirir un color blanco puro. A menudo queda algún resto de plumaje pardo en la cabeza o en las coberteras del hombro. Los jóvenes recién salidos del nido, por su parte, presentan un plumaje, en general, muy moteado de marrón claro y pardo, con aspecto escamoso.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril, mayo, junio, agosto, septiembre, octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ficedula_hypoleuca_NRM.jpg?width=1280',
+  s.image_attribution = 'Uploaded by Aelwyn with the permission of the Author, who works wit… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Ficedula',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Ficedula hypoleuca';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Torcecuello euroasiático',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Bosques abiertos, sotos, huertos y arboledas con madera muerta',
+  s.description = 'Pariente de los pájaros carpinteros que ni pica la madera ni trepa por los troncos: se posa de través en las ramas y come hormigas del suelo con una lengua larguísima. Su plumaje jaspeado en grises y pardos imita la corteza. Si se le molesta en el nido, retuerce el cuello como una culebra, de ahí su nombre.',
+  s.description_source = NULL,
+  s.identification_tips = 'Plumaje veteado como corteza, difícil de ver quieto
+Se posa a lo largo de la rama, no agarrado al tronco
+Franja oscura desde la nuca hasta la mitad de la espalda',
+  s.seasonality = 'Paso migratorio e invernada',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Jinxtorquilla.jpg?width=1280',
+  s.image_attribution = 'User:Aelwyn (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Piciformes',
+  s.taxon_family = 'Picidae',
+  s.taxon_genus = 'Jynx',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Jynx torquilla';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abejaruco europeo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Ave colorida y gregaria que caza abejas y libélulas en vuelo sobre espacios abiertos y cría en galerías excavadas en taludes terrosos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Colorido inconfundible
+Reclamo ''prruip'' en vuelo
+Cría en taludes de rambla',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%C5%9Eahl%C3%BBr-33.jpg?width=1280',
+  s.image_attribution = 'Dûrzan cîrano (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Coraciiformes',
+  s.taxon_family = 'Meropidae',
+  s.taxon_genus = 'Merops',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE (RD 139/2011)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Merops apiaster';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba gris',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Pastizales pedregosos, canchales y zonas abiertas de montaña',
+  s.description = 'Collalba de dorso gris en el macho, con antifaz negro y alas oscuras. Como todas las collalbas, delata su identidad al volar: obispillo blanco y cola blanca con una «T» negra invertida. Se posa erguida en piedras y hace carreras cortas por el suelo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Obispillo blanco y «T» negra en la cola
+Macho con antifaz negro y dorso gris
+Carreras cortas por el suelo entre piedra y piedra',
+  s.seasonality = 'Paso migratorio y cría en montaña',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oenanthe_oenanthe_Larvik.JPG?width=1280',
+  s.image_attribution = 'Arnstein Rønning (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Oenanthe',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Oenanthe oenanthe';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Colirrojo real',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Bosques abiertos, sotos y arboledas con huecos para criar',
+  s.description = 'Pájaro elegante con la cola de un naranja encendido que hace vibrar sin parar al posarse. El macho tiene la garganta negra, la frente blanca y el pecho anaranjado; la hembra es parda pero conserva la misma cola vibrante, que es la mejor pista para identificarlos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola naranja que tiembla constantemente
+Macho con frente blanca y garganta negra
+Se posa en ramas bajas y baja al suelo a por insectos',
+  s.seasonality = 'Paso migratorio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_Redstart_-_Segrate_-_Italy_S4E2518-1_(19357313382).jpg?width=1280',
+  s.image_attribution = 'Francesco Veronesi from Italy (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Phoenicurus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Phoenicurus phoenicurus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mosquitero papialbo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Forestal termófila,laderas de solana.Nidos:bosque planifolio,conífera.Zona montana,submediterránea',
+  s.description = 'El papialbo presenta la típica silueta de los mosquiteros: cuerpecillo rechoncho, patas frágiles y pico fino, pero se diferencia de los demás por su coloración general mucho más clara, especialmente en la cabeza y las partes ventrales. Las patas son negras y las alas, el dorso y las partes exteriores de la cola, verdosos, en contraste con el resto del cuerpo, de color blanquecino. La especie no manifiesta dimorfismo sexual.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Western_Bonelli''s_Warbler_-_Aosta_Valley_-_Italy_S4E5346_(19079885220).jpg?width=1280',
+  s.image_attribution = 'Francesco Veronesi from Italy (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Phylloscopidae',
+  s.taxon_genus = 'Phylloscopus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Phylloscopus bonelli';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mosquitero musical',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Bosques abiertos de frondosas, robledales, hayedos,castañares,arbustos,a media altura, media altura..',
+  s.description = 'Presenta gran parecido con otros congéneres, especialmente los mosquiteros común e ibérico, de los que se diferencia por poseer el pico y las patas pálidos, las listas faciales más marcadas —con una lista superciliar muy patente—, las partes inferiores más amarillas y el dorso de un tono verdoso más brillante.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo, abril, mayo, agosto, septiembre, octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Willow_Warbler_Phylloscopus_trochilus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Phylloscopidae',
+  s.taxon_genus = 'Phylloscopus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Phylloscopus trochilus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Acentor alpino',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Roquedos y pedreras de alta montaña; en invierno baja a cortados',
+  s.description = 'Pájaro robusto de montaña, pardo y discreto salvo por dos detalles: los flancos con listas castañas y una garganta blanca finamente moteada de negro. Camina entre las rocas buscando insectos y semillas, y en invierno desciende a cortados y construcciones.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flancos con anchas listas castañas
+Garganta blanca con motas negras, como un babero
+Base del pico amarilla',
+  s.seasonality = 'Otoño e invierno en cotas bajas',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alpine_accentor_saganta.jpg?width=1280',
+  s.image_attribution = 'Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Prunellidae',
+  s.taxon_genus = 'Prunella',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Prunella collaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Acentor común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Pájaro del tamaño de un gorrión común, con el pico fino y puntiagudo, y las patas fuertes y rojizas. De comportamiento huidizo, le gusta moverse entre la vegetación baja y caminar por el suelo. Tiene las partes superiores del plumaje marrones y con escamado pardo oscuro, semejantes al dorso de un gorrión común. La cabeza, la garganta y el pecho son de un color gris plomizo, más intenso en los machos, con la zona auricular y el píleo marrones. Las partes posteriores del vientre poseen un tono gris más claro, con los flancos marrones. Los jóvenes exhiben cabeza y garganta de color castaño, en lugar de gris, y muestran todo el plumaje fuertemente listado de pardo oscuro. La base de su pico es naranja amarillenta, mientras que los adultos presentan todo el pico negro.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Acentor_com%C3%BAn23_by_Paco_G%C3%B3mez.jpg?width=1280',
+  s.image_attribution = 'Paco Gómez (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Prunellidae',
+  s.taxon_genus = 'Prunella',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Prunella modularis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Reyezuelo sencillo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Junto a su cercano pariente, el listado, el reyezuelo sencillo es una de las aves más pequeñas de Europa. Presenta el dorso verdoso, con alas más oscuras sobre las que destaca una franja blanquecina. Se diferencia de su pariente por carecer de la lista superciliar clara, así como de la lista ocular negra. Dos tiras negras —que no se unen en la frente— surcan su píleo, flanqueando una tercera banda frontal más ancha de color naranja en los machos y amarillo en las hembras. Los jóvenes carecen de todas estas listas.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%96%D0%B5%D0%BB%D1%82%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D1%80%D0%BE%D0%BB%D1%91%D0%BA_(Regulus_regulus)%2C_%D0%91%D0%B8%D1%82%D1%86%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BB%D0%B5%D1%81.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Regulidae',
+  s.taxon_genus = 'Regulus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Regulus regulus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chocha perdiz',
+  s.kingdom = 'fauna',
+  s.family = 'Ave limícola',
+  s.primary_habitat = NULL,
+  s.description = 'Es una limícola relativamente grande, de largo pico, patas bastante cortas y grandes ojos oscuros, muy desplazados hacia atrás y hacia arriba en la cabeza. Posee un plumaje extremadamente críptico, dominado por los tonos marrones y rojizos, que en el dorso adquieren una notable complejidad, con un diseño abigarrado de barrados, punteados y manchas de diferente tonalidad. Las regiones ventrales son de tonos cremosos, con abundantes estrías transversales de color más oscuro. Los adultos y los jóvenes son prácticamente idénticos. En vuelo resulta más pesada que otras especies cercanas y se caracteriza por sus alas redondeadas y su silueta masiva. Es un ave reacia a volar, pues confía plenamente en las virtudes de su mimética librea, pero, si siente una amenaza próxima, emprende un vuelo errático y zigzagueante a baja altura entre los árboles.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Noviembre a marzo',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Woodcock_earthworm.jpg?width=1280',
+  s.image_attribution = 'Ronald Slabke (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Charadriiformes',
+  s.taxon_family = 'Scolopacidae',
+  s.taxon_genus = 'Scolopax',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Scolopax rusticola';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zorzal alirrojo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'El alirrojo es un zorzal de pequeño tamaño, compacto y de cola relativamente corta, que no presenta un dimorfismo sexual muy evidente. Su plumaje es marrón-grisáceo en el dorso y blanco con listas oscuras hacia las regiones ventrales. Los flancos y la parte inferior de las alas lucen un tono rojizo bastante intenso, que es visible en vuelo y constituye un buen indicio para diferenciarlo de especies próximas. Otro rasgo llamativo en su diseño es la presencia de una marcada ceja y una bigotera blancas, distinguibles incluso a cierta distancia. Suele moverse en grupos numerosos durante el invierno, a menudo en compañía de otros zorzales.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a marzo',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cotoneaster_frigidus_Turdus_iliacus_1.jpg?width=1280',
+  s.image_attribution = 'MPF (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Turdidae',
+  s.taxon_genus = 'Turdus',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Turdus iliacus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zorzal real',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'El real es un zorzal grande y bastante corpulento, que se reconoce fácilmente por presentar la cabeza y el obispillo de color gris azulado. El plumaje de la espalda y del dorso del ala es pardo-grisáceo, algo rojizo en ocasiones, mientras que las partes inferiores son blanquecinas con manchas ocres en los flancos y el pecho —más intensas en época reproductora— y profusamente moteadas de manchas oscuras en forma de cuña. El pico es amarillo con la punta oscura. Ambos sexos son muy parecidos, especialmente en invierno. Vistos de cerca, en el diseño de la cara se puede observar una brida negra delante del ojo y otra bajo la mejilla, así como la ceja blanquecina. En vuelo resalta su cola, larga y oscura, y los paneles blancos bajo el ala.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a marzo',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Turdus_pilaris2.jpg?width=1280',
+  s.image_attribution = 'Adam Kumiszcza (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Turdidae',
+  s.taxon_genus = 'Turdus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Turdus pilaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mirlo capiblanco',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Montaña con matorral y pastos; en paso, sierras con enebros y bayas',
+  s.description = 'Mirlo de montaña que se distingue del común por una banda blanca en forma de media luna sobre el pecho y por las plumas del ala ribeteadas de claro, que dan un aspecto escamado. Es muy desconfiado y se aleja en cuanto detecta movimiento.',
+  s.description_source = NULL,
+  s.identification_tips = 'Media luna blanca en el pecho
+Alas con aspecto escamado y plateado
+Mucho más esquivo que el mirlo común',
+  s.seasonality = 'Paso migratorio e invernada en montaña',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/2015-04-20_Turdus_torquatus_torquatus_Cairngorm_3.jpg?width=1280',
+  s.image_attribution = 'MPF (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Turdidae',
+  s.taxon_genus = 'Turdus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Turdus torquatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lechuza común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz nocturna',
+  s.primary_habitat = 'Es una especie típica de paisajes humanizados con áreas agrícolas en mosaico',
+  s.description = 'El único representante de la familia Tytonidae en territorio europeo es una rapaz de tamaño medio, aspecto esbelto, largas patas y voluminosa cabeza, que luce un contrastado plumaje en el que predominan los tonos leonados y dorados en el dorso y el blanco puro —incluso ligeramente plateado— en las zonas ventrales. Las plumas dorsales y la parte superior de las alas y la cola aparecen finamente vermiculadas por sutiles punteados de color negro, gris y blancuzco, en tanto que las regiones ventrales pueden mostrar un moteado variable. En el rostro —inconfundible por su forma de corazón— destacan los ojos intensamente negros y el prominente pico de color claro. Los jóvenes poseen un plumaje muy similar al de los adultos, de los que se diferencian por sutiles detalles, difíciles de distinguir en el campo. El vuelo de esta rapaz nocturna —de alas largas y relativamente anchas— es elegante, silencioso y ágil gracias al escaso peso del ave. No es raro ver a la lechuza cernirse hábilmente sobre un punto, mientras escudriña el terreno en busca de presas.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tyto_alba_close_up.jpg?width=1280',
+  s.image_attribution = 'Stevie B (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Strigiformes',
+  s.taxon_family = 'Tytonidae',
+  s.taxon_genus = 'Tyto',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Tyto alba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'rubilla colorada',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Arenaria_erinacea.jpg?width=1280',
+  s.image_attribution = 'Ghislain118 (AD) http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Caryophyllales',
+  s.taxon_family = 'Caryophyllaceae',
+  s.taxon_genus = 'Arenaria',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Arenaria aggregata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Manzanilla de pastor',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a diciembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Asteraceae_-_Galatella_sedifolia.jpg?width=1280',
+  s.image_attribution = 'Hectonichus (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Asteraceae',
+  s.taxon_genus = 'Galatella',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Aster sedifolius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Toliaga',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Vive en matorrales basófilos, entre 100-700 m',
+  s.description = 'Arbusto hasta de 1 m, muy ramificado, con ramas delgadas, de aspecto efedroide y hojas de 1-2,5 mm, caedizas; flores solitarias de 8-10 mm, amarillas, de estandarte glabro y quilla serícea; legumbre de 10-11 x 3-4 mm, serícea, con una a cuatro semillas de 2,1-2,3 mm, negras.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Octubre, noviembre, diciembre, febrero, marzo, abril, mayo, junio, julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Fabales',
+  s.taxon_family = 'Fabaceae',
+  s.taxon_genus = 'Genista',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Genista valentina';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Guillonea scabra',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Guillonea_scabra2.JPG?width=1280',
+  s.image_attribution = 'Shuky79 (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Apiales',
+  s.taxon_family = 'Apiaceae',
+  s.taxon_genus = 'Guillonea',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Guillonea scabra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pendejo',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ptilotrichum_spinosum_4_(Espagne).JPG?width=1280',
+  s.image_attribution = 'Ghislain118 http://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Brassicales',
+  s.taxon_family = 'Brassicaceae',
+  s.taxon_genus = 'Hormathophylla',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Hormathophylla spinosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de cogulla',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Arenales litorales subáridos, cultivos, baja-media montaña,refugios pedregosos',
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hooded_Snake(Macroprotodon_cucullatus).jpg?width=1280',
+  s.image_attribution = 'gailhampshire (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Colubridae',
+  s.taxon_genus = 'Macroprotodon',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
+  s.spain_status = 'CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Macroprotodon cucullatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Trepador azul',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Fácil de reconocer, sus caracteres más distintivos son tres: tiene color azulado, “carece de cuello” y se mueve habitualmente pegado a troncos y ramas, incluso cabeza abajo. Es un ave pequeña, del tamaño de un gorrión, pero de patas robustas, cabeza muy gruesa y pico largo y fuerte. Tanto los machos como las hembras lucen un bello color azul grisáceo en las alas, el dorso y la cola. Sus partes inferiores presentan un tono débilmente anaranjado, que es más intenso en los machos. Estos poseen, además, manchas de color rojo granate en sus flancos y en las plumas que cubren la cara inferior de la cola.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Nuthatch_(Sitta_europaea)%2C_Parc_de_Woluw%C3%A9%2C_Brussels.jpg?width=1280',
+  s.image_attribution = 'Frank Vassen (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Sittidae',
+  s.taxon_genus = 'Sitta',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Sitta europaea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Siempreviva insigne',
   s.kingdom = 'flora',
   s.family = 'Hierba',
@@ -54455,7 +60755,7 @@ Cabezuelas apretadas en el extremo de las ramas',
   s.taxon_genus = 'Teucrium',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Teucrium lanigerum';
@@ -54505,7 +60805,7 @@ Matas espaciadas sobre suelo desnudo y claro',
   s.taxon_genus = 'Lygeum',
   s.iucn_global = 'LC',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Lygeum spartum';
@@ -54580,7 +60880,7 @@ Látex blanco al partir un tallo',
   s.taxon_genus = 'Launaea',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Launaea lanifera';
@@ -54993,7 +61293,7 @@ Hojas pequeñas y enrolladas, de aspecto grisáceo',
   s.taxon_genus = 'Teucrium',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Teucrium freynii';
@@ -55464,7 +61764,7 @@ Plumas de la punta del ala muy separadas, como dedos',
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Corvidae',
   s.taxon_genus = 'Pyrrhocorax',
-  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
   s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV',
   s.rarity_score = 2,
@@ -55564,11 +61864,11 @@ Tonos rosados en pecho y obispillo del macho',
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Fringillidae',
   s.taxon_genus = 'Bucanetes',
-  s.iucn_global = 'LC',
-  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
-  s.spain_status = 'Catalogado como Vulnerable en el Libro Rojo de las Aves de España (población ibérica escasa y localizada)',
-  s.rarity_score = 4,
-  s.rarity_basis = '{"categoria":"Catalogado como Vulnerable en el Libro Rojo de las Aves de España (población ibérica escasa y localizada)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Bucanetes githagineus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -56280,7 +62580,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_family = 'Brassicaceae',
   s.taxon_genus = 'Iberis',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2010)',
+  s.iucn_spain = NULL,
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -57047,8 +63347,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Turdidae',
   s.taxon_genus = 'Turdus',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -57861,7 +64161,7 @@ Plumas de la punta del ala muy separadas, como dedos',
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Corvidae',
   s.taxon_genus = 'Pyrrhocorax',
-  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
   s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV',
   s.rarity_score = 2,
@@ -58391,9 +64691,9 @@ Del tamaño de un puño, mucho menor que una perdiz',
   s.taxon_genus = 'Coturnix',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
   s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
-  s.spain_status = 'UICN España: DD (Datos insuficientes) (2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Coturnix coturnix';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -58562,6 +64862,2488 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Troglodytes troglodytes';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija colirroja',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'Lagartija de suelos arenosos, de cuerpo aplanado y dedos con escamas laterales en forma de peine que le sirven de raqueta sobre la arena suelta. Los jóvenes tienen la cola y las patas traseras de un rojo intenso que se apaga en los adultos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dedos con flecos de escamas a los lados, como peines
+Jóvenes con cola y patas traseras rojo intenso
+Cuerpo aplanado, con rayas y ocelos claros en el dorso',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Acanthodactylus_erythrurus.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Lacertidae',
+  s.taxon_genus = 'Acanthodactylus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Acanthodactylus erythrurus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sapo partero común',
+  s.kingdom = 'fauna',
+  s.family = 'Anfibio',
+  s.primary_habitat = NULL,
+  s.description = 'Sapo de tamaño pequeño (menor de 5 cm). Aspecto rechoncho, cabeza grande y hocico redondeado, ojos prominentes, pupila vertical e iris dorado con vetas negras. Tímpano visible y más pequeño que el ojo. Pliegue gular patente. Glándulas parotídeas poco aparentes. Piel granulosa con verrugas pequeñas, frecuentemente agrupadas en los costados en dos hileras dorsolaterales. Miembros cortos y fuertes, los anteriores con 3 tubérculos metacarpianos, y los posteriores con membrana interdigital muy reducida y con un tubérculo metatarsiano pequeño. Coloración dorsal de gris a parda con pequeñas manchas verdes, rojizas y negras poco marcadas. Zona ventral clara.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/AlytesObstet.jpg?width=1280',
+  s.image_attribution = 'Christian Fischer (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Amphibia',
+  s.taxon_order = 'Anura',
+  s.taxon_family = 'Alytidae',
+  s.taxon_genus = 'Alytes',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Alytes obstetricans';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Probayernos',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero, marzo, abril, mayo, junio, julio, septiembre, octubre',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Fabales',
+  s.taxon_family = 'Fabaceae',
+  s.taxon_genus = 'Anthyllis',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Anthyllis lagascana';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gayuba',
+  s.kingdom = 'flora',
+  s.family = 'Mata',
+  s.primary_habitat = 'Pinares aclarados, crestas y laderas pedregosas de montaña',
+  s.description = 'Mata rastrera de hojas pequeñas, coriáceas y brillantes que forma alfombras densas sobre el suelo del pinar. Sus flores son urnas blanco rosadas colgantes y sus frutos, bayas rojas y harinosas. Ayuda a fijar el suelo en laderas pedregosas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Porte rastrero formando alfombras continuas
+Hojas pequeñas, duras y muy brillantes
+Flores en urna colgante y frutos rojos harinosos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Gayuba.jpg?width=1280',
+  s.image_attribution = 'No machine-readable author provided. Carlosblh assumed (based on co… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Ericales',
+  s.taxon_family = 'Ericaceae',
+  s.taxon_genus = 'Arctostaphylos',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Arctostaphylos uva-ursi';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebrilla ciega',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = NULL,
+  s.description = 'Reptiles estrictamente adaptados a la vida subterránea, especializados en cavar túneles y en la localización de presas bajo tierra. Cuerpo cilíndrico y alargado cubierto de escamas cuadrangulares que se alinean en forma de anillos. Segmentos dorsales entre 14 y 18 y ventrales entre 14 y 20. No presenta extremidades. Cabeza de pequeño tamaño, poco diferenciada del cuerpo, con el hocico redondeado. La visión es vestigial mientras que el olfato y el oído están desarrollados. Cola muy corta, Presenta poros precloacales. Coloración de fondo variable entre violácea y marrón. Sin dimorfismo sexual. Los machos alcanzan una longitud de cabeza y cuerpo de 254 mm y las hembras de 235 mm.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Amphisbaenia.JPG?width=1280',
+  s.image_attribution = 'Mario modesto (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Blanidae',
+  s.taxon_genus = 'Blanus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Blanus cinereus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Buje',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Forma matorrales en barrancos y laderas umbrías preferentemente sobre sustrato básico, también en claros de bosque, entre 100-2100 m',
+  s.description = 'Arbusto o pequeño árbol perennifolio, de 0,5-6 m, monoico, muy ramoso, con ramas adultas glabras de corteza amarillenta. Hojas de 1,3-3 x 0,4-1,5 cm, ovado-elípticas, obtusas, enteras, con pecíolo corto, opuestas, coriáceas, glabras, con haz verde oscuro brillante y envés más claro. Flores de 5-7 mm, en glomérulos axilares densos, amarillentas, las masculinas con cuatro tépalos y cuatro estambres, que rodean a una flor femenina con seis tépalos y ovario tricarpelar. Fruto en cápsula de 8-11 x 6-8 mm, subesférica, tricorne, glauca.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Buxus_sempervirens.jpg?width=1280',
+  s.image_attribution = 'No machine-readable author provided. MPF assumed (based on copyrigh… (CC BY 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Buxales',
+  s.taxon_family = 'Buxaceae',
+  s.taxon_genus = 'Buxus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Buxus sempervirens';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Almez',
+  s.kingdom = 'flora',
+  s.family = 'Árbol',
+  s.primary_habitat = 'En vegas y riberas de ríos, sobre suelos húmedos y profundos de aluvión',
+  s.description = 'Árbol caducifolio hasta de 30 m y amplia copa, con corteza muy lisa de color gris plateado, parecida a la piel de los elefantes. Ramas con frecuencia colgantes. Hojas 5-15 x 1,5-6 cm, simples, alternas, pecioladas, asimétricas en la base, lanceoladas, largamente acuminadas, aserradas, más o menos pelosas, con el haz verde oscuro y envés verde claro. Flores masculinas o hermafroditas, pequeñas y solitarias, poco vistosas, verdosas, con una sola envoltura floral y con un largo pedúnculo de 2-8 cm. Fruto de 8-12 mm, en drupa redondeada y con largo pedúnculo, color negro azulado en la madurez.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a enero',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Celtis_australis_(2).JPG?width=1280',
+  s.image_attribution = 'Marija Gajić (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Rosales',
+  s.taxon_family = 'Cannabaceae',
+  s.taxon_genus = 'Celtis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Celtis australis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago hortelano',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eptesicus_isabellinus_sketch.jpg?width=1280',
+  s.image_attribution = 'Coenrad Temmick (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Cnephaeus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Cnephaeus isabellinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Espantalobos',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a agosto',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/127274887/original.jpeg',
+  s.image_attribution = 'Denys Vynokurov (CC BY 4.0) · iNaturalist/GBIF',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Fabales',
+  s.taxon_family = 'Fabaceae',
+  s.taxon_genus = 'Colutea',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Colutea brevialata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra lisa meridional',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Se encuentra desde el nivel del mar, pero es más frecuente en claros de bosque y matorral mediterráneo en zonas de media montaña',
+  s.description = 'La culebra lisa meridional Coronella girondica es de pequeño tamaño, cabeza pequeña y cola relativamente corta. En general hay 21 hileras de dorsales aunque es frecuente observar 19 hileras en ejemplares de las cordilleras béticas. Dorso y flancos generalmente de color pardo o gris, con una hilera de manchas transversales por el dorso. En el vientre destacan unas manchas cuadradas oscuras en un diseño ajedrezado. En la parte dorsal de la cabeza hay una gran mancha en forma de U, y a ambos lados de la cabeza, una brida oscura que atraviesa el ojo y se prolonga por delante de la placa frontal uniendo las manchas de ambos lados. No hay dimorfismo sexual en la longitud cabeza-cloaca ni en la folidosis cefálica. En cambio se aprecian ligeras diferencias en el número de dorsales (19 hileras más frecuente en machos) y ventrales (más en hembras), pero sobre todo en la cola (mayor longitud relativa y mayor número de subcaudales en machos). No hay subespecies descritas, pero se aprecian diferencias poblacionales en el número de ventrales. En machos, se observa una clina latitudinal en la longitud de hocico-cloaca y número de ventrales, siendo mayores los ejemplares más septentrionales. Longitud total máxima en la Península Ibérica, 800 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/BennyTrapp_Coronella_girondica.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Colubridae',
+  s.taxon_genus = 'Coronella',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Coronella girondica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Musaraña gris',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero',
+  s.primary_habitat = NULL,
+  s.description = 'Es un crocidurino de talla mediana. Medidas corporales, CC: 62,0-84,0 mm; C: 34,0-47,0 mm; P: 11,0-14,0 mm; Ps: 7,0-14,0 g, y cola relativamente corta, recubierta por pelos cortos entre los que sobresalen otros más largos y dispersos. Los ojos son pequeños y los pabellones auditivos están bien desarrollados y son visibles externamente. El color del pelaje varía en función de la edad, la época del año y la localización geográfica. En general, la coloración es gris uniforme en los juveniles, parda o parda-grisácea en los ejemplares de verano y gris oscura en los de invierno. El vientre es gris claro, sin demarcación nítida respecto al dorso. Presenta tres pares de mamas inguinales. El cráneo es más largo y macizo que en los representantes del género Sorex. Las regiones rostral e interorbital son alargadas y el margen posterior del orificio nasal es cóncavo. La caja craneana es alta y los cóndilos occipitales están proyectados hacia atrás. La mandíbula es robusta, con el cóndilo articular bien desarrollado y la apófisis coronoides recta, de altura generalmente superior a 4,2 mm. Fórmula dentaria: 3.1.1.3/1.1.1.3, con tres unicúspides superiores. A diferencia de la musaraña de campo, Crocidura suaveolens, en visión lateral el segundo y tercer unicúspides son de talla similar y sobrepasan la altura del parastilo del cuarto molar. En visión oclusal, el protocono de este molar no está desplazado en dirección bucal y contribuye a formar el margen ántero-interno del diente. En la mandíbula, el segundo molar presenta una constricción bien marcada. Número de cromosomas (2n) = 42.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/WLMMH_(DerHexer)_022.jpg?width=1280',
+  s.image_attribution = 'DerHexer, Wikimedia Commons (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Soricomorpha',
+  s.taxon_family = 'Soricidae',
+  s.taxon_genus = 'Crocidura',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Crocidura russula';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lirón careto',
+  s.kingdom = 'fauna',
+  s.family = 'Roedor',
+  s.primary_habitat = 'Es una especie generalista, capaz de vivir en numerosos hábitats terrestres y arbóreos',
+  s.description = 'Debe su nombre a una franja de pelo negro que, como un antifaz, le enmarca los ojos y le cubre parte de la cara. Su aspecto es inconfundible, aunque sus hábitos trepadores y su color rojizo pueden asemejarle al lirón gris Glis glis, o a la ardilla roja Sciurus vulgaris. Los adultos presentan el dorso pardo- rojizo y el vientre blanco. La cola es larga y está cubierta de pelos, con un llamativo pincel de pelo largo blanco y negro en el extremo. Hocico alargado y orejas grandes. No presentan dimorfismo sexual. Las hembras presentan cuatro pares de mamas: uno pectoral, otro abdominal y dos pares inguinales. Medidas corporales, CC: 118,0-136,0 mm; C: 98,5-113,0 mm; P: 26,5-28,5 mm; Ps: 45,0-120,0 g. Se producen variaciones estacionales en el peso debido al carácter hibernante de la especie. El cráneo es de aspecto macizo y de perfil dorsal convexo. La caja craneana es cuadrada, el rostro largo, los huesos nasales muy estrechos en la parte posterior y los arcos zigomáticos amplios. Las bullas timpánicas presentan gran desarrollo, carácter típico de las especies de roedores de climas desérticos, con densidades de población escasas. Fórmula dentaria: 1.0.1.3/1.0.1.3. Es el único roedor español cuya mandíbula presenta un orificio natural en la apófisis angular, lo que facilita su identificación en los análisis de egagrópilas, excrementos, etc. Número de cromosomas (2n) = 46-52.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Gartenschlaefer_in_Natur.jpg?width=1280',
+  s.image_attribution = 'No machine-readable author provided. Asseus assumed (based on copyr… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Rodentia',
+  s.taxon_family = 'Gliridae',
+  s.taxon_genus = 'Eliomys',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2008)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Eliomys quercinus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Erizo europeo',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero',
+  s.primary_habitat = NULL,
+  s.description = 'El aspecto general de los erizos es fácilmente reconocible por su zona dorsal recubierta de espinas, a excepción del rostro. El pelaje ventral es cerdoso, de color pardo, más o menos oscuro, según los individuos, pero con el vientre blancuzco. Ambos sexos son parecidos, ya que los testículos son intraabdominales. La principal diferencia consiste en que el pene está bastante adelantado, mientras que la vagina se localiza cerca del ano. Las hembras presentan cinco pares de mamas, una pectoral, dos abdominales y dos inguinales. Fórmula dentaria: 3.1.3.3/2.1.2.3. Sólo puede confundirse con el erizo moruno, Atelerix algirus, menos robusto, más claro, con las orejas proporcionalmente mayores y con las púas cefálicas más retrasadas. Las principales diferencias dentarias consisten en que el I3 es generalmente monoradiculado en E. europaeus y biradiculado en A. Algirus. El PM2 tiene un paracónido destacado netamente, ligeramente menor que el protocónido, mientras que en A. algirus es mucho más pequeño. Medidas corporales, CC: 190,0-290,0 mm; C: 22,0-40,0 mm; P: 46,0-53,0 mm; O: 25,0- 29,0 mm ; Ps: 500,0-1.200,0 g. Número de cromosomas (2n) = 48.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/West_European_Hedgehog_(Erinaceus_europaeus)1.jpg?width=1280',
+  s.image_attribution = 'Hrald (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Erinaceomorpha',
+  s.taxon_family = 'Erinaceidae',
+  s.taxon_genus = 'Erinaceus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'Incluido (Real Decreto 216/2019, de 29 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Erinaceus europaeus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gato montés',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero carnívoro',
+  s.primary_habitat = 'Bosque, matorral denso y roquedos con buena población de conejos y roedores',
+  s.description = 'Gato salvaje europeo, más robusto que un gato doméstico atigrado, con la cola gruesa, roma en la punta y anillada de negro. Es solitario, esquivo y sobre todo nocturno. Su mayor amenaza es la hibridación con gatos asilvestrados, que diluye la población silvestre.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola gruesa, de punta roma y con anillos negros nítidos
+Raya negra continua a lo largo del lomo
+Aspecto más recio y patilargo que un gato casero',
+  s.seasonality = 'Todo el año (actividad crepuscular y nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Felis_silvestris_Kocka_divok%C3%A1_zoo_cropped.jpg?width=1280',
+  s.image_attribution = 'Felis_silvestris_Kočka_divoká_ZOO_Děčín.jpg: Alena Houšková derivat… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Carnivora',
+  s.taxon_family = 'Felidae',
+  s.taxon_genus = 'Felis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2023)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo IV; Reglamento CITES (CE) 338/97, Anexo A',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Felis silvestris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gineta',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero carnívoro',
+  s.primary_habitat = 'Bosque, matorral denso, roquedos y sotos con cobertura y refugios',
+  s.description = 'Carnívoro esbelto de pelaje gris con manchas negras y una cola larguísima anillada en blanco y negro, tan larga como el resto del cuerpo. Es un trepador excelente y estrictamente nocturno. Deja sus excrementos en letrinas fijas sobre piedras y troncos, que usa durante años.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola muy larga con anillos blancos y negros bien marcados
+Pelaje gris con hileras de manchas negras
+Letrinas repetidas en el mismo punto elevado',
+  s.seasonality = 'Todo el año (actividad nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Genetta_genetta_felina_(Wroclaw_zoo).JPG?width=1280',
+  s.image_attribution = 'Guérin Nicolas (messages) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Carnivora',
+  s.taxon_family = 'Viverridae',
+  s.taxon_genus = 'Genetta',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2015)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo V',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Genetta genetta';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Salamanquesa rosada',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Pendientes rocosas calcícolas con vegetación casmofítica',
+  s.description = 'Gecko pequeño y translúcido de tonos rosados, de hábitos nocturnos, que se refugia en grietas de roquedos, muros de piedra y ruinas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Piel rosada casi translúcida
+Cola con anillos espinosos
+Nocturna y discreta',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hemidactylus_turcicus_on_a_wall_in_Greece.jpg?width=1280',
+  s.image_attribution = 'Koppi2 (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Gekkonidae',
+  s.taxon_genus = 'Hemidactylus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (RD 139/2011)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Hemidactylus turcicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de herradura',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Culebra ágil y trepadora con dibujo dorsal en herradura, ligada a matorrales termófilos y roquedos soleados del sureste ibérico.',
+  s.description_source = NULL,
+  s.identification_tips = 'Manchas dorsales en herradura
+Ágil y trepadora
+Inofensiva para las personas',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hemorrhois_hippocrepis_121004.jpg?width=1280',
+  s.image_attribution = 'Accipiter (R. Altenkamp, Berlin) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Colubridae',
+  s.taxon_genus = 'Hemorrhois',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Hemorrhois hippocrepis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sabina negral',
+  s.kingdom = 'flora',
+  s.family = 'Conífera',
+  s.primary_habitat = 'Roquedos, arenales, acantilados y crestas ventosas sobre suelos pobres',
+  s.description = 'Sabina de hojas diminutas en forma de escama, pegadas a la ramilla, que dan a las ramas un aspecto de cordón redondeado. Aguanta viento, sequía y salinidad como pocas plantas leñosas. Sus gálbulos —los falsos frutos— maduran de verde a un rojo pardusco en dos años.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas en escama pegadas a la rama, no punzantes
+Ramillas cilíndricas, como cordones
+Gálbulos redondos que pasan de verde a pardo rojizo',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Juniperus_phoenicea1.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Pinopsida',
+  s.taxon_order = 'Pinales',
+  s.taxon_family = 'Cupressaceae',
+  s.taxon_genus = 'Juniperus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Juniperus phoenicea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Liebre ibérica',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero',
+  s.primary_habitat = NULL,
+  s.description = 'Es la más pequeña de las liebres españolas. Al igual que sus congéneres presentan unas extremidades posteriores muy desarrolladas y unas orejas muy largas y con los extremos negros. El pelaje es pardo amarillento en su parte dorsal y blanco por la ventral, destacan las extremidades con una mancha blanca en su parte posterior. Medidas corporales, CC: 44,4-47,0 cm; C: 9,5-10,9 cm; O: 9,6-10,1 cm; P: 11,4-11,8 mm; Ps: 2,06-2,54 kg. Se ha citado un peso máximos de 2,95 kg para los machos y de 3,30 kg para las hembras.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/LiebreIberica.jpg?width=1280',
+  s.image_attribution = 'Luis Egido (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Lagomorpha',
+  s.taxon_family = 'Leporidae',
+  s.taxon_genus = 'Lepus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Lepus granatensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Linaria cavanillesii',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Repisas y fisuras de cantiles calizos, generalmente en umbría',
+  s.description = 'Linaria rupícola de tallos colgantes y hojas algo carnosas y verticiladas, con flores amarillas provistas de un espolón largo y curvado. Es un endemismo ibérico de área muy reducida, restringido a un puñado de cantiles.',
+  s.description_source = NULL,
+  s.identification_tips = 'Tallos colgando de la pared rocosa
+Flores amarillas con espolón largo por detrás
+Hojas dispuestas en anillos alrededor del tallo',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/501474709/original.jpeg',
+  s.image_attribution = 'deutschle (CC BY-NC 4.0) · GBIF/iNaturalist',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Plantaginaceae',
+  s.taxon_genus = 'Linaria',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección nacional específica registrada en EIDOS',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Linaria cavanillesii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de cogulla occidental',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Especie relativamente termófila, normalmente solo se encuentra en el pisos bioclimáticos termo y mesomediterráneo',
+  s.description = 'Es el ofidio más pequeño que habita la Península Ibérica. Cabeza corta, aplastada, con ojos relativamente pequeños, de pupila redonda o verticalmente oval, e iris anaranjado o rojizo. Cola corta, pues en promedio representa el 14,9% de la longitud total. Normalmente posee siete supralabiales, la cuarta y quinta en contacto con el ojo, y la sexta alta y en contacto o muy próxima a la parietal. Por lo general, 21 rangos de dorsales en el centro del cuerpo. Coloración de fondo en cabeza y cuerpo gris, que tiende a marrón cuando ha mudado recientemente. El diseño de la cabeza se caracteriza porque en el píleo se encuentra el vértice de una figura en forma de V que tiene dos ramas curvas, convexas, mientras recorre las parietales. Posteriormente a la cabeza collar nucal oscuro. Longitud total máxima, 598 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Macroprotodon_brevis.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Colubridae',
+  s.taxon_genus = 'Macroprotodon',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Macroprotodon brevis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra bastarda',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'La culebra más grande de la península, de hasta dos metros y medio, con un aspecto inconfundible: ojos grandes de pupila redonda bajo unas escamas salientes que le dan «cejas» y expresión de enfado. Es diurna, muy rápida y venenosa, pero con los colmillos al fondo de la boca, por lo que no supone riesgo si no se la manipula.',
+  s.description_source = NULL,
+  s.identification_tips = 'Escamas prominentes sobre los ojos, como cejas
+Ojo grande con pupila redonda y iris amarillento
+Adultos de dorso pardo oliváceo uniforme; jóvenes muy manchados',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Culebra_bastarda_(Malpolon_monspessulanus)%2C_Nig%C3%BCella%2C_Zaragoza%2C_Espa%C3%B1a%2C_2017-05-24%2C_DD_07.jpg?width=1280',
+  s.image_attribution = 'Diego Delso (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Lamprophiidae',
+  s.taxon_genus = 'Malpolon',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Malpolon monspessulanus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Garduña',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero carnívoro',
+  s.primary_habitat = 'Roquedos, bosques, ruinas y construcciones rurales',
+  s.description = 'Mustélido nocturno de cuerpo alargado y cola espesa, con un babero blanco en la garganta que suele bifurcarse hacia las patas delanteras. Trepa con soltura y aprovecha desde roquedos hasta desvanes. Es omnívora: come frutos, insectos, huevos y pequeños vertebrados.',
+  s.description_source = NULL,
+  s.identification_tips = 'Babero blanco en la garganta, a menudo dividido en dos
+Excrementos retorcidos y con pelos o semillas, sobre piedras
+Rastro nocturno; muy rara vez se ve de día',
+  s.seasonality = 'Todo el año (actividad nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Steinmarder_01.jpg?width=1280',
+  s.image_attribution = 'Zefram (CC BY 2.0 de) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Carnivora',
+  s.taxon_family = 'Mustelidae',
+  s.taxon_genus = 'Martes',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Martes foina';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tejón',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero carnívoro',
+  s.primary_habitat = 'Bosque, matorral y ribazos con suelo blando para excavar tejoneras',
+  s.description = 'Mustélido corpulento y de patas cortas, con la cabeza blanca cruzada por dos bandas negras que pasan por los ojos. Excava madrigueras complejas —las tejoneras— que una misma familia amplía y usa durante generaciones. Es omnívoro y muy aficionado a las lombrices.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cabeza blanca con dos franjas negras longitudinales
+Tejoneras: varias bocas grandes con montones de tierra
+Letrinas en hoyos poco profundos cerca de la madriguera',
+  s.seasonality = 'Todo el año (actividad nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Badger-badger.jpg?width=1280',
+  s.image_attribution = 'BadgerHero (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Carnivora',
+  s.taxon_family = 'Mustelidae',
+  s.taxon_genus = 'Meles',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'No incluida en el LESRPE ni en el Catálogo Español de Especies Amenazadas',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Meles meles';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de cueva',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Cuevas y minas; caza en vuelo alto sobre bosque, campo y láminas de agua',
+  s.description = 'Murciélago de alas largas y estrechas y vuelo rápido y alto, casi como el de un vencejo. Tiene la frente muy abombada y el pelo corto y erizado en la cabeza. Recorre decenas de kilómetros entre las cuevas de cría, de tránsito y de invernada.',
+  s.description_source = NULL,
+  s.identification_tips = 'Frente muy abombada y pelo corto y de punta
+Alas largas y estrechas; vuelo veloz y alto
+Forma colonias enormes y muy apretadas en cueva',
+  s.seasonality = 'Todo el año, con desplazamientos estacionales entre cuevas',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Miniopterus_schreibersii_dasythrix.jpg?width=1280',
+  s.image_attribution = 'Andrew Smith (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Miniopteridae',
+  s.taxon_genus = 'Miniopterus',
+  s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 2023)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2007)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Miniopterus schreibersii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Comadreja',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero carnívoro',
+  s.primary_habitat = NULL,
+  s.description = 'Es el mustélido más pequeño, de cuerpo y cabeza alargados y extremidades cortas. Cola corta, aproximadamente el 30% del cuerpo. Pelaje de color pardo canela a pardo chocolate en la parte dorsal, y blanco en la ventral, con el límite entre coloraciones recto o sinuoso según las formas descritas. Los pies, con 5 dedos, pueden ser blancos o con la coloración dorsal. En la cara presentan con frecuencia pecas rictales. Acusado dimorfismo sexual en la longitud corporal (los machos son un 10-20% más largos que las hembras). La longitud también varía a lo largo de su distribución. Medidas corporales de ejemplares adultos de la Península Ibérica, CC:175-250 mm (machos), 165-190 mm (hembras); C: 50-85 mm (machos), 40-55 mm (hembras); P: 27-37 mm (machos), 23-27 mm (hembras); Ps: 90-223 g (machos), 49-80 g (hembras). Fórmula dentaria 3.1.3.1/3.1.3.2. Número de cromosomas (2n) = 42. Las hembras presentan cuatro pares de mamas. Podría confundirse con el armiño en librea estival, aunque no posee el tercio apical negro en la cola, ni presenta en estas latitudes librea blanca invernal.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Mustela_nivalis_-British_Wildlife_Centre-4.jpg?width=1280',
+  s.image_attribution = 'Keven Law (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Carnivora',
+  s.taxon_family = 'Mustelidae',
+  s.taxon_genus = 'Mustela',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Mustela nivalis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago ratonero mediano',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Cuevas y desvanes; caza saltamontes en pastizales y herbazales',
+  s.description = 'Casi idéntico al ratonero grande, con el que a menudo comparte colonia, pero algo menor y con el hocico más estrecho y una mancha clara en la frente. Está especializado en cazar saltamontes en pastizales altos, lo que reparte el alimento entre ambas especies.',
+  s.description_source = NULL,
+  s.identification_tips = 'Muy parecido al ratonero grande, pero algo menor
+Mancha clara difusa entre los ojos
+Hocico más fino y estrecho',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Myotis-blythii-cropped.jpg?width=1280',
+  s.image_attribution = 'C. Robiller / www.naturlichter.de (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Myotis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2007)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Myotis blythii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago patudo',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Cuevas próximas a ríos y balsas; caza rozando la lámina de agua',
+  s.description = 'Murciélago ligado al agua: caza volando a pocos centímetros de la superficie de ríos y balsas y captura insectos —e incluso pececillos— con sus pies desproporcionadamente grandes y peludos. Esa dependencia del agua limpia lo hace muy vulnerable.',
+  s.description_source = NULL,
+  s.identification_tips = 'Pies muy grandes y peludos en proporción al cuerpo
+Vuela rozando la lámina de agua
+Membrana del ala insertada en el tobillo, no en el dedo',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Myotis_capaccinii_0105b_cropped.jpg?width=1280',
+  s.image_attribution = 'This image was improved or created by the Wikigraphists of the Grap… (FAL) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Myotis',
+  s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2007)',
+  s.spain_status = 'Anexo II (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); Anexo V (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011); UICN España: EN (En peligro) (2007)',
+  s.rarity_score = 5,
+  s.rarity_basis = '{"categoria":"CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Myotis capaccinii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de Geoffroy o de oreja partida',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Cuevas y desvanes; caza arañas e insectos en el follaje de bosques y sotos',
+  s.description = 'Murciélago de pelaje lanoso y rojizo, con una escotadura muy marcada en el borde de la oreja que le da nombre. Recoge sus presas directamente del follaje y de las paredes, cerniéndose frente a ellas, en vez de capturarlas en pleno vuelo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Muesca clara en el borde externo de la oreja
+Pelaje lanoso y de tono rojizo
+Se ciñe frente a hojas y muros para capturar arañas',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Myotis_emarginatus.jpg?width=1280',
+  s.image_attribution = 'Rémi Bigonneau (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Myotis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2007)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Myotis emarginatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra viperina',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Se trata de una culebra que frecuenta ríos, riachuelos, pantanos, balsas y marismas, siendo menos frecuente lejos de los puntos de agua',
+  s.description = 'Serpiente de tamaño medio, cola corta y cabeza ensanchada y bien delimitada respecto al resto del cuerpo. Generalmente hay dos escamas preoculares y dos postoculares, 7 escamas supralabiales y 9 escamas infralabiales. Dorsales claramente carenadas. El diseño es muy llamativo pues se trata de una amplia banda en forma de zig zag que recorre todo el cuerpo en posición dorsal. Existe un patrón alternativo que consiste en dos líneas longitudinales y paralelas, de colores claros, de recorrido también dorsal. El diseño rayado es más frecuente hacia el sur de la península y la costa mediterránea, aunque poblaciones muy cercanas pueden tener frecuencias muy dispares. La coloración corporal de fondo es variable aunque destacan los tonos verdosos, pardos y oliváceos. El vientre es generalmente gris amarillento con manchas oscuras en forma de diseño ajedrezado. Las hembras son mayores pero la longitud de cola y el número de subcaudales son mayores en machos. Longitud total máxima en la Península Ibérica, 910 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Viperine_Snake_(Natrix_maura)_(14198769323).jpg?width=1280',
+  s.image_attribution = 'Bernard DUPONT from FRANCE (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Natricidae',
+  s.taxon_genus = 'Natrix',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Natrix maura';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de collar',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Natrix_natrix_(Karl_L).jpg?width=1280',
+  s.image_attribution = 'Karl Larsaeus (CC BY 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Natricidae',
+  s.taxon_genus = 'Natrix',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Natrix natrix';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Conejo',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Lagomorfo excavador que vive en madrigueras coloniales; pieza clave del ecosistema mediterráneo como presa de águila perdicera, búho real y carnívoros.',
+  s.description_source = NULL,
+  s.identification_tips = 'Excava madrigueras coloniales
+Presa clave de rapaces
+Activo al amanecer y atardecer',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oryctolagus_cuniculus_Tasmania_2.jpg?width=1280',
+  s.image_attribution = 'JJ Harrison (https://www.jjharrison.com.au/) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Lagomorpha',
+  s.taxon_family = 'Leporidae',
+  s.taxon_genus = 'Oryctolagus',
+  s.iucn_global = 'EN — En peligro (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2007)',
+  s.spain_status = 'No incluida en el LESRPE; especie cinegética y presa clave del ecosistema mediterráneo',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Oryctolagus cuniculus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sapillo moteado común',
+  s.kingdom = 'fauna',
+  s.family = 'Anfibio',
+  s.primary_habitat = NULL,
+  s.description = 'Anuro de aspecto grácil, con un tamaño medio de 40 mm (36,32 mm en los machos y 43,3 mm en las hembras). Hocico alargado, ojos relativamente grandes y con pupila vertical. Dos tercios inferiores del iris más oscuros que el tercio superior. Membrana timpánica poco patente, ausencia de glándulas parótidas. Extremidades largas, particularmente las posteriores, y poco palmeadas (hasta la base de los dedos). Dedos alargados con un único tubérculo metatarsiano, situado en la base del primer dedo. Color variable, aunque suele mostrar un moteado verde más o menos patente en dorso, cabeza y extremidades. Vientre claro, con un moteado oscuro irregular. Los machos se diferencian de las hembras por su menor tamaño y por mostrar callosidades nupciales en las extremidades anteriores, muslos y la parte ventral y gular, durante el período de reproducción.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pelodytes_punctatus_side.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Amphibia',
+  s.taxon_order = 'Anura',
+  s.taxon_family = 'Pelodytidae',
+  s.taxon_genus = 'Pelodytes',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Pelodytes punctatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Rana común',
+  s.kingdom = 'fauna',
+  s.family = 'Anfibio',
+  s.primary_habitat = 'Charcas, balsas, acequias y tramos remansados con vegetación',
+  s.description = 'La rana verde ibérica, la más común y adaptable de nuestros anfibios: coloniza desde ramblas y balsas de riego hasta fuentes urbanas. Su canto es un cacareo entrecortado que forma coros al atardecer. Salta al agua al menor movimiento en la orilla.',
+  s.description_source = NULL,
+  s.identification_tips = 'Línea clara a lo largo del centro del lomo en muchos ejemplares
+Canto entrecortado, como una risa o un cacareo
+Salta al agua desde la orilla al notar movimiento',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pelophylax_perezi_by-dpc.jpg?width=1280',
+  s.image_attribution = 'David Perez (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Amphibia',
+  s.taxon_order = 'Anura',
+  s.taxon_family = 'Ranidae',
+  s.taxon_genus = 'Pelophylax',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'Anexo VI (Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad. BOE 299, de 14 de diciembre de 2007); UICN España: LC (Preocupación menor) (2002)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Pelophylax perezi';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Labiérnago prieto',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Encinares, matorral alto y umbrías sobre suelos pedregosos',
+  s.description = 'Arbusto o arbolillo de hojas opuestas, coriáceas y de borde dentado, más anchas que las de su pariente de hoja estrecha. Las hojas jóvenes son marcadamente dentadas y las adultas casi enteras, lo que despista con frecuencia.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hojas opuestas y anchas, dentadas en las ramas jóvenes
+Verde oscuro por las dos caras
+Frutos pequeños azul negruzcos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Phillyrea_latifolia.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Oleaceae',
+  s.taxon_genus = 'Phillyrea',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Phillyrea latifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de borde claro',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Es fisurícola, tanto litófila como fitófila, y altamente sinantrópica, refugiándose en fisuras o grietas en edificios, rocas y árboles, así como en cajas-nido',
+  s.description = 'Es un murciélago pequeño. Las orejas son cortas, triangulares y con vértice superior redondeado, y poseen cinco pliegues transversales en la parte superior del borde externo. El trago es corto, redondeado en la punta y ligeramente curvado. El pelaje es de coloración general pardo castaño o rojizo en la parte dorsal, y más claro en la zona ventral. El hocico, las orejas y la membrana alar son de color negro parduzco. Las alas son relativamente estrechas. El plagiopatagio se inserta en la base de los dedos del pie; en su borde presentan generalmente una banda de color más claro. El espolón alcanza más de la mitad de la longitud del borde del uropatagio, con lóbulo postcalcáneo con cartílago conspicuo en forma de T. Los incisivos internos superiores (I1) son monocúspides, los externos (I2) menores que la mitad del I1, y el premolar superior anterior (P1) está desplazado hacia el interior y no es visible externamente. Los incisivos inferiores están fuertemente imbricados, y no presentan diastema entre I2 e I3. ANT: 31,0-37,0 mm; Ps: 4,5-10,0 g. Fórmula dentaria: 2.1.2.3/3.1.2.3. Número de cromosomas (2n) = 44. No existe dimorfismo sexual, aunque las hembras son algo mayores. Puede confundirse sobre todo con los otros representantes del género Pipistrellus y en menor medida con Hypsugo savii, de los que se diferencia sobre todo por los caracteres dentales. ULTRASONIDOS Emite pulsos de ecolocalización del tipo FM-CF, con frecuencia de máxima energía a 38-41 kHz, 8-12 ms de duración, e intervalo entre pulsos bimodal con valores máximos en torno a los 100 y 200 ms. Los cantos sociales son una serie de 2 pulsos FM muy rápidos, con máxima energía en torno a los 14-16 kHz, fácilmente audibles como un “chip” agudo, y que mediante sistemas de tiempo expandido permiten discriminar a la especie de P. nathusii. Mediante escucha directa pueden confundirse con sonidos de ecolocalización de Tadarida teniotis.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus_kuhlii.jpg?width=1280',
+  s.image_attribution = 'Mnolf (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Pipistrellus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Pipistrellus kuhlii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago común',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Quiróptero de hábitos fisurícolas',
+  s.description = 'Es uno de los Quirópteros más pequeños de Europa (ANT: 28-35 mm, Ps: 3,5-8,5 g). Orejas cortas, triangulares; trago de punta redondeada, más largo que ancho. Coloración dorsal de marrón-rojizo a gris-verdoso, con individuos negruzcos. Pelaje ventral más claro. La segunda falange del 3er dedo es 2- 3 mm mayor que la tercera. La pigmentación de las partes desnudas de la cara es en general oscura, sin parches claros conspicuos. Los machos tienen el pene grisáceo con una marcada estría más pálida en el glande. Carecen de protuberancia entre los orificios nasales. Fórmula dentaria: 2.1.2.3/3.1.2.3. Incisivo superior interno bicúspide, casi igual que la mitad de la longitud del externo. PM1 muy pequeño y desplazado hacia el interior de la serie dental pero visible desde el exterior. Dotación cromosómica: 2n = 42 ó 2n = 44. Pueden ser confundidos con otros miembros del género Pipistrellus, aunque sus menores dimensiones y la morfología y disposición de los incisivos y premolares superiores permiten distinguirlos en mano con relativa facilidad. ULTRASONIDOS Las emisiones más habituales son pulsos de frecuencia modulada de banda ancha con una cola final casi frecuencia constante. Las frecuencias terminal y de máxima intensidad oscilan entre 42-51 y 41,6- 50,8 kHz, respectivamente. Las llamadas sociales difieren en frecuencia y número de componentes. Las señales son estructuralmente similares a las de otras especies cogenéricas, pero sus diferentes frecuencias permiten separarlas con facilidad.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus_pipistrellus_lateral.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Pipistrellus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Pipistrellus pipistrellus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de Cabrera',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = NULL,
+  s.description = 'Es el murciélago más pequeño de Europa (ANT: 28,8-32,8 mm; Ps: 4,1-7,5 g) . Orejas cortas y triangulares. Trago de punta redondeada, más largo que ancho. Pelaje dorsal desde marrón-oliva a arenoso pálido. La región ventral es más clara. La razón entre la longitud de la 2ª y 3ª falange del 3er dedo es 1:1, aunque este carácter es bastante variable. Las orejas y el hocico son relativamente más cortos y el pelaje dorsal del uropatagio más denso y extendido que en el murciélago enano, cubriéndolo hasta su tercio proximal. La pigmentación de las partes desnudas de la cara presenta parches claros conspicuos. En los machos el pene es anaranjado y sin la estría distintiva del murciélago enano. Ambos sexos presentan una pequeña protuberancia entre los orificios nasales, ausente en su especie gemela . Fórmula dentaria: 2.1.2.3/3.1.2.3. Forma y disposición de los incisivos superiores y PM1 como en el murciélago enano. Se distingue con relativa facilidad de otros miembros del mismo género por su tamaño menor y su morfología dentaria. ULTRASONIDOS Las señales de ecolocación más habituales son pulsos de frecuencia modulada de banda ancha con una cola final casi de frecuencia constante. Los valores medios de la frecuencia de máxima intensidad oscilan entre 52 y 56 kHz . Las llamadas sociales están compuestas por 2 a 4 componentes (habitualmente tres) y se escuchan sobre todo en torno a 20 kHz . En situaciones de amenaza emiten llamadas de alarma compuestas por 4-5 elementos, con frecuencias de máxima intensidad entre 26 y 40 kHz.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril, mayo, junio, julio, agosto, septiembre, octubre, enero',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus_pygmaeus01.jpg?width=1280',
+  s.image_attribution = 'Evgeniy Yakhontov (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Pipistrellus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Pipistrellus pygmaeus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cornicabra',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Barrancos, umbrías y matorral alto sobre suelos frescos',
+  s.description = 'Arbusto o arbolillo de hoja caduca, con hojas compuestas de foliolos grandes y brillantes y un raquis sin alas, lo que lo separa del lentisco. Suele presentar agallas rojizas y curvadas en forma de cuerno, provocadas por pulgones, que le dan el nombre.',
+  s.description_source = NULL,
+  s.identification_tips = 'Agallas rojizas curvadas como cuernos en las hojas
+Pierde la hoja en invierno, al contrario que el lentisco
+Hoja compuesta con foliolo terminal y raquis sin alas',
+  s.seasonality = 'Primavera a otoño (pierde la hoja en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pistachier2.JPG?width=1280',
+  s.image_attribution = 'greffer.net (CC BY 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Sapindales',
+  s.taxon_family = 'Anacardiaceae',
+  s.taxon_genus = 'Pistacia',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Pistacia terebinthus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago orejudo gris',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = NULL,
+  s.description = 'Es un murciélago de tamaño medio. Orejas muy grandes que se unen por la base de sus bordes internos. El dorso es gris oscuro con los pelos negruzcos en casi toda su longitud, mientras que la zona ventral es blanquecina o gris muy pálida. Los jóvenes tienen una coloración grisácea más apagada. Las hembras son por lo general algo mayores que los machos. ANT: 37,0-45,0 mm; Ps: 6,5-15 g. Fórmula dentaria: 2.1.2.3/3.1.3.3. Número de cromosomas (2n) = 32. Por el tamaño de las orejas y su aspecto, en la Península Ibérica sólo se puede confundir con P. auritus y la semejanza entre ambas requiere que su determinación deba realizarse en mano, y aún así pueden surgir dificultades. Al contrario que en P. auritus, el trago es normalmente mayor de 5,5 mm y está pigmentado en toda su longitud con un color parecido al del pabellón de la oreja. La longitud del pulgar (sin la uña) generalmente es menor (inferior a 6 mm) y la uña es también más corta. Partes desnudas de color grisáceo oscuro (y no pardas o rojizas). Antifaz oscuro alrededor de los ojos más marcado. En los machos adultos, el pene es mazudo (y no cilíndrico). ULTRASONIDOS Emite pulsos de ecolocalización en FM desde 85 a 25 kHz. La intensidad de estos sonidos es muy débil y su alcance apenas supera los 5 m. Las señales son prácticamente indistinguibles de las de P. auritus.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, enero',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Plecotus_austriacus2.jpg?width=1280',
+  s.image_attribution = 'Andrei Sakhno (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Plecotus',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2023)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Plecotus austriacus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija ibérica',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = NULL,
+  s.description = 'La lagartija ibérica es una entidad parafilética que agrupa al menos cinco linajes monofiléticos en la Península Ibérica. Sin embargo, la completa discriminación de las nuevas especies o subespecies de este complejo está aún en una fase inicial. Así, no se planteará aquí detalladamente la distribución de tales formas y sólo se presenta el conjunto como un todo, a la espera de los resultados de análisis en curso. OLIVERIO et al. (2000) ha propuesto P. hispanica vaucheri como una especie distinta, donde estarían incluidas las poblaciones norteafricanas. También han sido identificados dos tipos de lagartijas ibéricas, los cuales se distribuyen en parapatría, respectivamente, el tipo 1 en el noroeste ibérico y el tipo 2 en el suroeste ibérico que, con toda probabilidad, tendrían rango específico.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eidechse.1024.jpg?width=1280',
+  s.image_attribution = 'de:Benutzer:Janekpfeifer (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Lacertidae',
+  s.taxon_genus = 'Podarcis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Podarcis hispanicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Álamo blanco',
+  s.kingdom = 'flora',
+  s.family = 'Árbol',
+  s.primary_habitat = 'Riberas, sotos y suelos con capa freática cercana',
+  s.description = 'Árbol de ribera con el envés de las hojas cubierto de un fieltro blanco que hace que la copa parezca cambiar de color con el viento. La corteza es clara y con lenticelas romboidales oscuras. Rebrota de raíz con facilidad y forma bosquetes clonales.',
+  s.description_source = NULL,
+  s.identification_tips = 'Envés de la hoja blanco: la copa «platea» con el viento
+Corteza clara con marcas romboidales oscuras
+Retoños de raíz alrededor del pie principal',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Populus_alba_01.jpg?width=1280',
+  s.image_attribution = 'la la means I love you (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Malpighiales',
+  s.taxon_family = 'Salicaceae',
+  s.taxon_genus = 'Populus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. Lista de especies forestales e híbiridos artificiales (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestal…)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Populus alba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Álamo',
+  s.kingdom = 'flora',
+  s.family = 'Árbol',
+  s.primary_habitat = 'Los chopos son especies de luz, de temperamento muy robusto, colonizadores de terrenos desnudos en las riberas de los ríos',
+  s.description = 'Populus nigra es un árbol caducifolio, de porte y copa muy variable, que puede alcanzar los 40 m de altura y 70-100 cm de diámetro. En poblaciones naturales las dimensiones y conformación general del árbol varía en función de la estructura y densidad de la población, así como del origen del rodal (sexual o asexual) y de la interacción con la dinámica fluvial. El fuste es erguido, con ramificación abundante e irregular. La corteza es clara, blanco-amarillenta, y lisa en árboles jóvenes, y oscura, rugosa y agrietada longitudinalmente, formando un entrecruzado característico, en individuos adultos. Es muy característico de esta especie la formación de protuberancias en el tronco y la proliferación de brotes epicórmicos, así como la presencia de contrafuertes en la base de los troncos de árboles longevos. Su sistema radical es fuerte, formado por un eje principal que se ramifica y alcanza capas profundas del terreno, mientras que las raíces secundarias se extienden horizontalmente de forma superficial. Algunos ejemplares pueden alcanzar los 300 años. Los brotes del año son claramente cilíndricos en la base, a veces subangulares en la zona apical, pero nunca acostillados. Este conjunto de caracteres tiene un gran valor de diagnóstico para la identificación de ejemplares adultos y han sido recopilados por el grupo de trabajo de P. nigra de EUFORGEN en una ficha técnica de identificación. Las hojas son glabras, de color verde en ambas caras, nervio principal amarillento muy destacado en el envés y con peciolo largo comprimido lateralmente. Presenta dimorfismo foliar: las hojas turionales son aovado-triangulares o aovado-rómbicas, acuminadas y con borde festoneado-aserrado; las hojas de los braquiblastos son más pequeñas y anchas, romboidales, anchamente cuneiformes en la base. Las yemas vegetativas son aovado-oblongas y agudas, aplicadas sobre el ramillo, cubiertas de escamas rojizas, viscosas y olorosas. Es una especie dioica, las yemas florales se presentan en posición axilar sobre los brotes de un año, a menudo agrupadas por debajo de la yema terminal. Las yemas florales femeninas están curvadas hacia fuera y son más pequeñas que las masculinas. Tanto las flores masculinas como las femeninas se disponen agrupadas en amentos colgantes. Los masculinos son gruesos, cilíndricos, de 3-9 cm de longitud, con flores de 10 a 20 estambres con anteras púrpuras que dan un color característico al amento en la fase de brotación y elongación. Los amentos femeninos son largamente pedunculados, laxos, verdosos, de 7-15 cm. Las flores femeninas se presentan sobre un pedicelo corto, con ovario aovado-cónico de color verde y dos estigmas lobulados de color verde-amarillento adosados al ovario. Los amentos fructíferos portan 40 a 45 frutos. Éstos son cápsulas bivalvas aovado- cónicas, con pedicelo corto, verdosas inicialmente y pardas en la madurez, cada una de las cuales contiene 10-14 semillas. Las semillas son de muy pequeño tamaño (2 mm), de color marfil a blanco-grisáceo, piriforme, con unos filamentos blancos adheridos al extremo proximal, de aspecto algodonoso y carácter hidrófobo, que facilitan su dispersión por el viento y el agua.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Zwarte_populier_(Populus_nigra)%2C_06-02-2026._(d.j.b.).jpg_04.jpg?width=1280',
+  s.image_attribution = 'Dominicus Johannes Bergsma. (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Malpighiales',
+  s.taxon_family = 'Salicaceae',
+  s.taxon_genus = 'Populus',
+  s.iucn_global = 'DD — Datos insuficientes (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. Lista de especies forestales e híbiridos artificiales (Real Decreto 289/2003, de 7 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Populus nigra var. nigra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Hierba de la cruz',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Roquedos, pedregales y pastizales pedregosos de montaña',
+  s.description = 'Pimpinela de base leñosa y hojas divididas en foliolos pequeños y dentados, con cabezuelas globosas de flores verdosas y rojizas que carecen de pétalos. Crece agarrada a la roca y a los pedregales calizos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cabezuelas globosas verdosas o rojizas, sin pétalos
+Hojas divididas en muchos foliolos dentados
+Base leñosa y porte compacto sobre roca',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/517007573/original.jpg',
+  s.image_attribution = 'FloresdeMurcia.com (CC BY-NC 4.0) · GBIF/iNaturalist',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Rosales',
+  s.taxon_family = 'Rosaceae',
+  s.taxon_genus = 'Poterium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Poterium ancistroides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija cenicienta',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = NULL,
+  s.description = 'Se puede distinguir de Psammodromus edwardsianus por la falta de una escama supralabial debajo de la subocular. En comparación con Psammodromus edwardsianus y Psammodromus occidentalis, Psammodromus hispanicus tiene menos ocelos, menos poros femorales, menos escamas gulares, y un hocico más redondo. En Psammodromus hispanicus la longitud del hocico hasta la escama anal (LHA), la masa corporal, el número de hileras de escamas ventrales, el número de escamas del collar, la razón de cabeza (anchura de la cabeza/longitud de la cabeza), y la extensión de la coloración nupcial son mayores y la razón LHA/longitud total es menor que en Psammodromus edwardsianus. Tiene color grisáceo a pardo claro y presenta cuatro líneas dorsales de un color blanco crema a gris. El vientre es en general de color blanco. Tiene una coloración nupcial amarilla – verde bastante llamativa.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Psammodromus_hispanicus.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Lacertidae',
+  s.taxon_genus = 'Psammodromus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Psammodromus hispanicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de herradura mediterráneo',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Cuevas cálidas; caza en bosque mediterráneo y mosaicos arbolados',
+  s.description = 'Murciélago de herradura de tamaño medio, de costumbres muy cavernícolas, que forma colonias de cría densas junto a otras especies. Vuela muy pegado a la vegetación, capturando polillas entre las ramas. Sus colonias son muy vulnerables a la visita de cuevas en primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Talla intermedia entre el grande y el pequeño de herradura
+Apéndice superior de la nariz apuntado y algo curvado
+Forma colonias apretadas en cueva, con otras especies',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhinolophus_euryale-cropped.jpg?width=1280',
+  s.image_attribution = 'Carlosblh (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Rhinolophidae',
+  s.taxon_genus = 'Rhinolophus',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2007)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Rhinolophus euryale';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago grande de herradura',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = 'Cuevas, minas y desvanes para refugiarse; caza en mosaicos de bosque y pasto',
+  s.description = 'El mayor de los murciélagos de herradura ibéricos. Debe el nombre a la hoja nasal en forma de herradura con la que emite el sonar por la nariz, no por la boca. Al reposar se envuelve por completo en las alas, como en una capa, y cuelga libre del techo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Al dormir se envuelve entero en las alas
+Hoja nasal en forma de herradura alrededor de las fosas
+Cuelga separado del techo, no metido en una grieta',
+  s.seasonality = 'Todo el año (hiberna en invierno)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Rhinolophe_2.jpg?width=1280',
+  s.image_attribution = 'Marie Jullion (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Rhinolophidae',
+  s.taxon_genus = 'Rhinolophus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2007)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Rhinolophus ferrumequinum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Albricias',
+  s.kingdom = 'flora',
+  s.family = 'Mata',
+  s.primary_habitat = 'Vive en sotobosques de encinares y melojares, o en grietas de roquedos, hasta 1500 m',
+  s.description = 'Subarbusto de 20-80 cm, rizomatoso, glabro, con tallos erguidos de sección circular. Hojas reducidas y tallitos ensanchados en forma de hoja o cladodios perenifolios, de 2-4 x 1-3 cm, elípticos, terminados en espina, con tres nervios. Plantas dioicas, con flores masculinas y femeninas en ejemplares diferentes, que nacen en el tercio inferior del cladodio, con una bráctea de 2-3 mm, escariosa, con seis tépalos de 2-3 mm, tres elípticos y tres lanceolados, de color amarillo verdoso; las masculinas con tres estambres soldados, las femeninas con el ovario y estambres con anteras vestigiales. Fruto en baya de 1-1,5 cm, globosa, roja, con una o dos semillas de 6-8 mm.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ruscus_aculeatus2.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Liliopsida',
+  s.taxon_order = 'Asparagales',
+  s.taxon_family = 'Asparagaceae',
+  s.taxon_genus = 'Ruscus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Anexo VI (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Ruscus aculeatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zapatito de la Virgen',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Extraplomos y roquedos calcáreos',
+  s.description = 'Pequeña planta rupícola de extraplomos y oquedades de roquedos calcáreos, integrante de la asociación Resedo paui-Sarcocapnetum saetabensis del hábitat 8210.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cuelga de extraplomos y techos rocosos
+Flores blanco-rosadas con espolón
+Hojas divididas glaucas',
+  s.seasonality = 'Primavera',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Orella_de_ratol%C3%AD_(Sarcocapnos_saetabensis)_al_castell_de_X%C3%A0tiva.jpg?width=1280',
+  s.image_attribution = 'Joanbanjo (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Ranunculales',
+  s.taxon_family = 'Papaveraceae',
+  s.taxon_genus = 'Sarcocapnos',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Sarcocapnos enneaphylla subsp. saetabensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Musgaño pequeño',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero',
+  s.primary_habitat = NULL,
+  s.description = 'Es uno de los mamíferos más pequeños del mundo. Medidas corporales, CC: 35,0-53,0 mm; C: 21,0- 30,0 mm; P: 5,7-7,9 mm; Ps: 1,2-2,7 g. Su morfología externa es similar a la de otras musarañas, pero se distingue por presentar la cabeza proporcionalmente más grande y la cola más larga, de aproximadamente la mitad de la longitud corporal. Las orejas son bien visibles, los ojos pequeños y la cola está revestida de un corto pelaje entre el que sobresalen numerosos pelos dispersos de mayor longitud. La coloración del pelaje muestra pocas variaciones estacionales. En general, es gris pardusca, con ciertos reflejos rojizos en el dorso y de tonalidad más clara en el vientre, sin clara línea de demarcación entre ambas regiones. Presenta tres pares de mamas inguinales. El cráneo es estrecho y alargado, con la caja craneana de perfil superior prácticamente horizontal. La mandíbula es frágil y de dimensiones reducidas. Fórmula dentaria: 3.1.2.3/1.1.1.3. A diferencia del género Crocidura, Suncus se caracteriza por presentar cuatro unicúspides superiores, aunque el último es sumamente pequeño, está desplazado en sentido lingual y queda prácticamente oculto por la cúspide anterior del último premolar. Los dientes de la mandíbula son de morfología similar a los de la musaraña gris, Crocidura russula, aunque de menor tamaño y con la sección posterior del M3 más reducida. Número de cromosomas (2n) = 42.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Suncus_etruscus_crop.jpg?width=1280',
+  s.image_attribution = 'Suncus_etruscus.jpg: Trebol-a derivative work: Materialscientist (t… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Soricomorpha',
+  s.taxon_family = 'Soricidae',
+  s.taxon_genus = 'Suncus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Suncus etruscus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Jabalí',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero ungulado',
+  s.primary_habitat = 'Bosque, matorral denso y cultivos; necesita cobertura y puntos de agua',
+  s.description = 'Ungulado robusto y adaptable, con el cuerpo cubierto de cerdas ásperas y una cabeza en cuña rematada por un hocico potente con el que remueve el suelo. Los rayones —las crías— nacen con líneas claras a lo largo del lomo. Es omnívoro y ha ampliado mucho su área en las últimas décadas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Hozaduras: zonas de suelo removido como si lo hubieran arado
+Huellas hendidas grandes con las pezuñas laterales marcadas
+Barros y árboles con el tronco embarrado a media altura',
+  s.seasonality = 'Todo el año (actividad sobre todo nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Eberswalde_Zoo_12-2017_img2.jpg?width=1280',
+  s.image_attribution = 'A.Savin (FAL) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Artiodactyla',
+  s.taxon_family = 'Suidae',
+  s.taxon_genus = 'Sus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'No catalogada (especie cinegética común)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Sus scrofa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Salamanquesa común',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Pendientes rocosas calcícolas con vegetación casmofítica',
+  s.description = 'Gecko robusto de piel tuberculada, activo al anochecer sobre roquedos, muros y cortados, donde caza insectos atraídos por la luz.',
+  s.description_source = NULL,
+  s.identification_tips = 'Piel rugosa con tubérculos
+Activa al atardecer
+Trepa por rocas y muros',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/605672084/original.jpg',
+  s.image_attribution = 'jrodben (CC BY-NC 4.0) · GBIF',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Phyllodactylidae',
+  s.taxon_genus = 'Tarentola',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (RD 139/2011)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Tarentola mauritanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Teucrium franchetianum',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Teucrium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Teucrium franchetianum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lucema',
+  s.kingdom = 'flora',
+  s.family = 'Mata',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Teucrium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Teucrium libanitis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagarto ocelado',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'El lagarto más grande de Europa, de hasta 60 cm con la cola incluida. Su dorso es verde con un fino reticulado negro y, en los costados, hileras de ocelos de un azul intenso. Los machos viejos tienen una cabeza enorme y maciza. Es diurno y muy desconfiado.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ocelos azules alineados en los costados
+Dorso verde con retícula negra muy fina
+Tamaño grande y cabeza maciza en los machos adultos',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Jewelled_Lizard_(Timon_lepidus)_male_found_under_a_stone_by_Jean_NICOLAS_(14166347788).jpg?width=1280',
+  s.image_attribution = 'Bernard DUPONT from FRANCE (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Lacertidae',
+  s.taxon_genus = 'Timon',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Timon lepidus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Olmo común',
+  s.kingdom = 'flora',
+  s.family = 'Árbol',
+  s.primary_habitat = 'Sotos, vegas y suelos profundos con humedad freática',
+  s.description = 'Árbol de hojas asimétricas en la base —un lado baja más que el otro— y borde doblemente aserrado. Florece antes de echar la hoja y fructifica en sámaras redondeadas y membranosas. La grafiosis ha diezmado sus poblaciones adultas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Base de la hoja claramente asimétrica
+Sámaras redondas y papiráceas antes que las hojas
+Rebrota de raíz formando setos y orlas',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Blismes_elm_2007.jpg?width=1280',
+  s.image_attribution = 'Eric Collin. Original uploader was Ptelea at en.wikipedia (GFDL) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Rosales',
+  s.taxon_family = 'Ulmaceae',
+  s.taxon_genus = 'Ulmus',
+  s.iucn_global = 'DD — Datos insuficientes (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…); ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo, sobre la comercialización de los materiales forestal…)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Ulmus minor';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Víbora hocicuda',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Habita suelos silíceos y calizos, tendiendo a ocupar medios psammófilos a baja altitud y en el occidente ibérico, y medios saxícolas en montaña',
+  s.description = 'Se caracteriza por su cuerpo grueso y corto, cola pequeña, tamaño variable pero inferior a 60 cm, cabeza de aspecto triangular y bien diferenciada del cuerpo con un apéndice nasal elevado hacia arriba, escamas cefálicas muy fragmentadas, pupila vertical, y patrón de coloración dorsal generalmente con una banda negra en zigzag sobre fondo ceniciento.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lataste''s_viper.jpg?width=1280',
+  s.image_attribution = 'Tim Vickers (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Viperidae',
+  s.taxon_genus = 'Vipera',
+  s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Vipera latastei';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Zorro',
+  s.kingdom = 'fauna',
+  s.family = 'Mamífero carnívoro',
+  s.primary_habitat = 'Prácticamente cualquier ambiente: bosque, matorral, cultivos y periferias urbanas',
+  s.description = 'El carnívoro silvestre más adaptable y extendido: vive desde la alta montaña hasta el borde de las ciudades. Es omnívoro y oportunista, lo que explica su éxito. Se reconoce por la cola larga y espesa —la «hopa»— rematada casi siempre en blanco.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola muy espesa con la punta blanca
+Huella alargada con las cuatro almohadillas alineadas
+Excrementos retorcidos y con pelos, sobre piedras y caminos',
+  s.seasonality = 'Todo el año (actividad sobre todo nocturna)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Vulpes_vulpes_2.jpg?width=1280',
+  s.image_attribution = 'Juan Lacruz (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Carnivora',
+  s.taxon_family = 'Canidae',
+  s.taxon_genus = 'Vulpes',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
+  s.spain_status = 'No catalogada (especie cinegética común)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Vulpes vulpes';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de escalera',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Ocupa todo tipo de suelos en ambientes mediterráneos de matorral y borde de bosque, pues precisa de cierta cobertura vegetal y de lugares relativamente húmedos',
+  s.description = 'Longitud hocico-cloaca media de 720 mm (rango 233-1.385 mm), cola relativamente corta. Cabeza algo pequeña, con hocico agudo, que sobrepasa netamente el extremo anterior de la mandíbula. 27 rangos de escamas dorsales. Color de fondo amarillento, con diseño de manchas dorsales en escalera en los ejemplares pequeños, y dos líneas dorsolaterales en los ejemplares de mayor tamaño. Longitud total máxima, 1.650 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhinechis_scalaris_cropped.jpg?width=1280',
+  s.image_attribution = 'Benny_Trapp_Rhinechis_scalaris_Portugal.jpg: Benny Trapp derivative… (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Colubridae',
+  s.taxon_genus = 'Zamenis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Zamenis scalaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Azor común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Bosques maduros y masas forestales densas con claros',
+  s.description = 'Rapaz forestal de alas cortas y anchas y cola larga, diseñada para perseguir presas entre los árboles a gran velocidad. Es esquiva y se ve casi siempre de refilón. La hembra llega a ser un tercio mayor que el macho, una diferencia poco habitual entre las aves.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ceja blanca marcada sobre el ojo, como un antifaz al revés
+Vuelo de varios aleteos rápidos seguidos de un planeo corto
+Pecho finamente rayado en horizontal en los adultos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Northern_Goshawk_ad_M2.jpg?width=1280',
+  s.image_attribution = 'Norbert Kenntner, Berlin (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Accipitriformes',
+  s.taxon_family = 'Accipitridae',
+  s.taxon_genus = 'Accipiter',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Accipiter gentilis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alondra común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Aláudido típico, de tonos pardos y estriado oscuro, con pico fuerte, cuerpo alargado y robusto, patas, alas y cola alargadas, y hábitos terrestres. La especie combina la presencia de una pequeña cresta, una máscara facial pálida, pecho estriado, borde blanco terminal en las alas — como en la calandria— y rectrices externas de la cola blancas. Su vuelo es rápido, con intenso batido de alas. Tiene una gran capacidad de maniobra en el aire, con posibilidades de cernidos prolongados y ascensiones y descensos vertiginosos .',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alauda_arvensis_2.jpg?width=1280',
+  s.image_attribution = 'Daniel Pettersson (CC BY-SA 2.5 se) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Alaudidae',
+  s.taxon_genus = 'Alauda',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Alauda arvensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Martín pescador',
+  s.kingdom = 'fauna',
+  s.family = 'Ave acuática',
+  s.primary_habitat = 'Ríos, ramblas con pozas, canales y láminas de agua con posaderos y taludes terrosos',
+  s.description = 'Pájaro rechoncho de color azul turquesa iridiscente por encima y naranja por debajo, con un pico largo y recto desproporcionado. Pesca lanzándose en picado desde una rama sobre el agua y anida en un túnel que excava en taludes de tierra.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = 'Destello azul eléctrico volando bajo y recto sobre el agua
+Silbido agudo y penetrante, casi siempre antes de verlo
+Posado inmóvil en una rama sobre el agua, cabeza gacha',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_Kingfisher_Alcedo_atthis.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Coraciiformes',
+  s.taxon_family = 'Alcedinidae',
+  s.taxon_genus = 'Alcedo',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Alcedo atthis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Águila perdicera',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Sierras con cortados rocosos y amplias zonas abiertas de matorral y cultivo para cazar',
+  s.description = 'Águila mediana de alas largas y cola larga, con el vientre blanco finamente rayado y una mancha blanca en la espalda que se ve bien en vuelo. Caza a gran velocidad y a poca altura, sorprendiendo a perdices, conejos y palomas. Las parejas ocupan el mismo cortado durante años.',
+  s.description_source = NULL,
+  s.identification_tips = 'Mancha blanca en el centro de la espalda, visible desde arriba
+Vientre claro y muy rayado, con una banda oscura en el borde del ala
+Vuelo bajo y rápido cuando caza, no en círculos altos',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Aguila_perdicera.jpg?width=1280',
+  s.image_attribution = 'Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Accipitriformes',
+  s.taxon_family = 'Accipitridae',
+  s.taxon_genus = 'Aquila',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2004)',
+  s.spain_status = 'Catálogo Español de Especies Amenazadas: Vulnerable; Libro Rojo de las Aves de España (SEO/BirdLife, 2004/2021); Directiva Aves 2009/147/CE, Anexo I',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas: Vulnerable","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Aquila fasciata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcaraván',
+  s.kingdom = 'fauna',
+  s.family = 'Ave esteparia',
+  s.primary_habitat = 'Llanos pedregosos, cultivos de secano, ramblas y eriales con poca cobertura',
+  s.description = 'Ave de aspecto extraño y ojos amarillos enormes, adaptados a la actividad nocturna. De día permanece agachada e inmóvil, confiada en su plumaje críptico, y solo al anochecer se activa y delata con un reclamo silbado y melancólico que recuerda al del zarapito.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ojos amarillos desproporcionadamente grandes
+Dos barras blancas y negras en el ala plegada
+Reclamo silbado y triste al anochecer',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Burhinus_oedicnemus_insularum_Lanzarote_1.jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Charadriiformes',
+  s.taxon_family = 'Burhinidae',
+  s.taxon_genus = 'Burhinus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE; Directiva Aves 2009/147/CE, Anexo I',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Burhinus oedicnemus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chotacabras cuellirrojo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral abierto, pinares aclarados, ramblas y caminos térreos',
+  s.description = 'Ave crepuscular de plumaje jaspeado que imita la hojarasca, tan mimético que de día resulta casi imposible verla posada en el suelo. Caza polillas en vuelo con la boca muy abierta. Su canto nocturno es un «cu-toc, cu-toc» repetido de forma monótona durante minutos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Collar rojizo en la nuca, más marcado que en su pariente europeo
+Se levanta del camino al anochecer y vuelve a posarse unos metros más allá
+Canto nocturno monótono, como un motor lejano',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Caprimulgus_ruficollis_-Portugal-8.jpg?width=1280',
+  s.image_attribution = 'Olivença (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Caprimulgiformes',
+  s.taxon_family = 'Caprimulgidae',
+  s.taxon_genus = 'Caprimulgus',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Caprimulgus ruficollis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Golondrina dáurica',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Desde parameras secas hasta altas cumbres.Nidos bajo puentes,riscos,acantilados,zonas llanas bajas',
+  s.description = 'De apariencia similar a la golondrina común, exhibe dorso negro, con reflejos azulados, y vientre blanco sucio, con flancos anaranjados y algunas rayas tenues. Los rasgos más característicos de la especie son la nuca y la cara anaranjadas, del mismo color que el obispillo. Las alas, largas y apuntadas, también muestran tonos naranjas en la parte inferior delantera. Posee una cola muy larga y muy ahorquillada,de color negro uniforme, tanto por arriba como por abajo. Tiene patas cortas sin emplumar, boca muy ancha, y pico corto, plano y negro. Ambos sexos son iguales. Los jóvenes presentan en el dorso plumaje negro mate, con plumas ribeteadas en blanco, siendo las zonas naranjas de menor intensidad; incluso el obispillo parece blanco en ocasiones. Esta ave se observa frecuentemente cerca de puentes y roquedos, y exhibe un vuelo ágil, rápido y acrobático.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Golondrina_d%C3%A1urica_Cecropis_daurica_1.jpg?width=1280',
+  s.image_attribution = 'Agustín Povedano from El Puerto de Santa María, Extremadura y Andal… (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Hirundinidae',
+  s.taxon_genus = 'Cecropis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Cecropis daurica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alzacola',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Esta especie suele observarse en el suelo o posada en arbustos bajos. Es fácilmente reconocible por su larga cola, de coloración rojiza y extremo terminal con manchas blancas y negras, que frecuentemente alza, despliega y sacude de manera ostensible. También resulta distintivo su diseño facial, ya que posee una lista ocular fina oscura, que contrasta con una banda superciliar de color blanco crema. El resto de su plumaje presenta un tono ocre claro.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Agrobate_roux_au_Parc_National_de_l''Ichkeul_(Tunisia)%2C_crop.jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Cercotrichas',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2004)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Cercotrichas galactotes';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cetia ruiseñor',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de un pájaro de pequeño tamaño, de diseño muy discreto y aspecto rechoncho, con alas y cola redondeadas. Presenta el dorso de color pardo-rojizo oscuro y las zonas inferiores grisáceas, con motas claras en las infracoberteras caudales. Posee una ceja pálida, así como una zona auricular grisácea y un pico muy fino. Ambos sexos son iguales en apariencia y solamente se diferencian por pequeñas variaciones de tamaño. De hábitos escondidizos, resulta difícil de observar, pero es, en cambio, muy fácil de detectar en las espesas marañas ribereñas que frecuenta por su inconfundible y sonoro canto. Cuando se desplaza entre la vegetación, levanta y despliega frecuentemente la cola.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/37-090505-cettis-warbler-at-Kalloni-east-river.jpg?width=1280',
+  s.image_attribution = 'Mark S Jobling (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Cettiidae',
+  s.taxon_genus = 'Cettia',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Cettia cetti';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Buitrón',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Se trata de una de las aves más pequeñas de Europa. Posee el dorso y el píleo de color pardo oscuro y fuertemente listados, el obispillo rojizo y las partes inferiores claras con los flancos y el pecho de color ocráceo. En vuelo ejecuta una trayectoria muy ondulante y presenta una silueta característica, con las alas redondeadas y la cola —que suele mantener parcialmente desplegada— con un perfil también redondeado y de longitud creciente de los extremos hacia el centro. En su parte distal, la cola muestra una banda de manchas negras y blancas muy visibles en vuelo. Cuando se posa entre la vegetación, suele aferrarse a los tallos manteniendo la verticalidad a la vez que agita continuamente la cola.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Zitting_cisticola_2024_04_19_(cropped).jpg?width=1280',
+  s.image_attribution = 'Alexis Lours (CC BY 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Cisticolidae',
+  s.taxon_genus = 'Cisticola',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Cisticola juncidis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Críalo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Bosques,zonas con córvidos',
+  s.description = 'Es un ave de tamaño medio, morfológicamente muy semejante al cuco, del que se diferencia por su aspecto más esbelto, por tener una cola más larga y por el colorido del plumaje. Este es de tono marrón grisáceo en las regiones dorsales, que aparecen salpicadas de motas blancas, al igual que ocurre con las plumas del ala. La zona ventral es de color blanquecino, con la garganta teñida de ocre-amarillento. En la cabeza luce un capirote de color gris plateado —que remata en una pequeña cresta ligeramente eréctil— y un anillo ocular rojo. El joven presenta una coloración incluso más vistosa que los adultos, pues exhibe un intenso color achocolatado con abundantes motas blancas en el dorso y unas regiones ventrales blancas, que se tornan amarillo-ocráceas en pecho y cuello. Las plumas de vuelo poseen un vistoso color rojizo, en tanto que el capirote es negro y el anillo ocular más conspicuo que el de los adultos.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Clamator_glandarius.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Cuculiformes',
+  s.taxon_family = 'Cuculidae',
+  s.taxon_genus = 'Clamator',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Clamator glandarius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Paloma zurita',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Paloma similar a la bravía, pero de tamaño algo menor, y más ligera que la torcaz. En su plumaje, totalmente gris, destacan los tonos vinosos del cuello, el color gris pálido del obispillo y unas franjas más claras en las alas. Ambos sexos resultan similares. Tiene un vuelo más rápido y con mayor frecuencia de aleteo que la torcaz. Al volar se ve oscura la zona inferior de sus alas, que es pálida en las palomas bravía y torcaz.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/2019-03-17_Columba_oenas%2C_Jesmond_Dene_1.jpg?width=1280',
+  s.image_attribution = 'MPF (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Columbiformes',
+  s.taxon_family = 'Columbidae',
+  s.taxon_genus = 'Columba',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Columba oenas';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca carrasqueña',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral alto, jarales, encinares aclarados y bordes de bosque',
+  s.description = 'Curruca de tamaño medio, con el macho de dorso gris, garganta y pecho color teja y un bigote blanco muy nítido que separa ambos. El anillo ocular es rojo. Canta desde el interior del matorral y hace vuelos cortos de exhibición sobre las matas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Bigote blanco que bordea la garganta rojiza
+Anillo ocular rojo anaranjado
+Prefiere matorral alto, no el raso',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9A%CE%BF%CE%BA%CE%BA%CE%B9%CE%BD%CE%BF%CF%84%CF%83%CE%B9%CF%81%CE%BF%CE%B2%CE%AC%CE%BA%CE%BF%CF%82.jpg?width=1280',
+  s.image_attribution = 'Antonios Tsaknakis (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Sylviidae',
+  s.taxon_genus = 'Curruca',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Curruca cantillans';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca tomillera',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral bajo y abierto, tomillares y saladares con arbustos dispersos',
+  s.description = 'Curruca menuda de matorral raso, gris en la cabeza, parda en el dorso y con las plumas del ala ribeteadas de castaño encendido. El anillo blanco del ojo le da el aire de «gafas» que le da nombre. Es inquieta y suele delatarse por su reclamo antes de dejarse ver.',
+  s.description_source = NULL,
+  s.identification_tips = 'Anillo blanco alrededor del ojo bien marcado
+Panel castaño vivo en el ala plegada
+Vive en matorral muy bajo, no en arbolado',
+  s.seasonality = 'Todo el año en el sureste; parcialmente migradora',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fauvette_%C3%A0_lunettes_Aqueduc_de_Zaghouan.jpg?width=1280',
+  s.image_attribution = 'El Golli Mohamed (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Sylviidae',
+  s.taxon_genus = 'Curruca',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2004)',
+  s.spain_status = 'Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Curruca conspicillata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca mirlona',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Gran variedad de medios: bosques abiertos de frondosas.Cría:encinares,alcornocales,pinares,sabinares',
+  s.description = 'Es la mayor y la más corpulenta de nuestras currucas. Tiene las partes superiores grisáceas y las inferiores blanquecinas, con tintes rosados en el pecho y más grisáceos en la parte ventral. Posee pico robusto, iris de color amarillo pálido y garganta blanca. El macho exhibe una franja oscura, casi negra, a modo de antifaz, y presenta la frente y el capirote también muy oscuros; este encapuchado resulta más gris (menos oscuro) en las hembras y pardo en los jóvenes. La cola es oscura, con las rectrices externas de color blanco.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_hortensis_Museum_de_Gen%C3%A8ve.JPG?width=1280',
+  s.image_attribution = 'Totodu74 (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Sylviidae',
+  s.taxon_genus = 'Curruca',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Curruca hortensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Pico picapinos',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'La especie comparte la coloración típica de los picos, con tonos muy intensos y definidos. La región dorsal es blanquinegra y presenta un característico patrón. Posee unas listas negras a ambos lados de la cara y el cuello, que enlazan con el pecho, el pico, los hombros y la nuca. Las regiones ventrales son blancas, sin listas ni punteaduras, y la zona anal luce una extensa y llamativa coloración rojiza. El dimorfismo sexual se aprecia sobre todo en la nuca: roja en los machos y negra en las hembras. El plumaje de los jóvenes resulta más difuso, con las partes ventrales de color blanco sucio y una menor intensidad de rojo en la zona anal; asimismo, se distinguen de los adultos por tener el píleo rojo.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Greater_Spotted_Woodpecker_(41554059345).jpg?width=1280',
+  s.image_attribution = 'Gerry Zambonini (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Piciformes',
+  s.taxon_family = 'Picidae',
+  s.taxon_genus = 'Dendrocopos',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Dendrocopos major';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Escribano palustre',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'El palustre es un escribano de mediano tamaño que presenta un plumaje dominado por los tonos pardos y acastañados en el dorso y blanquecinos con algunas listas en el vientre. El macho en plumaje nupcial luce la garganta y la cabeza de un intenso color negro, así como un collar y una bigotera blancos. En esa época, también la cabeza y el pecho de la hembra tienden a oscurecerse, aunque carecen del característico collar blanco. En invierno, resulta más complicado diferenciar por el plumaje tanto a los sexos como a los ejemplares inmaduros; estos poseen una coloración en general más clara y las partes inferiores más fuertemente listadas. Durante el periodo invernal, suelen moverse entre el carrizo en nutridos bandos que resultan fáciles de detectar gracias a sus penetrantes y melancólicos silbidos.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a marzo',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Emberiza_schoeniclus_(male)%2C_Gatchina%2C_Russia.jpg?width=1280',
+  s.image_attribution = 'This photography was created by Artem Topchiy (user Art-top). Other… (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Emberizidae',
+  s.taxon_genus = 'Emberiza',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Emberiza schoeniclus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Esmerejón',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Llanos abiertos, marismas y pastizales durante la invernada',
+  s.description = 'El halcón más pequeño de Europa, poco mayor que un mirlo, con vuelo rápido y bajo pegado al terreno para sorprender a pequeñas aves. El macho es gris azulado por encima; la hembra, parda. No se ciñe como el cernícalo: siempre está en movimiento.',
+  s.description_source = NULL,
+  s.identification_tips = 'Muy pequeño y compacto, con aleteo rápido
+Vuela bajo y en línea recta, casi rozando el suelo
+Sin bigotera marcada, a diferencia del peregrino',
+  s.seasonality = 'Otoño e invierno',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Falco_columbarius_Male.jpg?width=1280',
+  s.image_attribution = 'Raj Boora from Edmonton, Canada (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Falconiformes',
+  s.taxon_family = 'Falconidae',
+  s.taxon_genus = 'Falco',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Falco columbarius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcotán',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Campo abierto con arbolado disperso, cerca de zonas húmedas',
+  s.description = 'Halcón esbelto con silueta de vencejo gigante: alas muy largas y afiladas y cola corta. Caza libélulas e incluso vencejos en pleno vuelo, con una agilidad extraordinaria. Los adultos tienen los «calzones» y la zona anal de un rojo ladrillo característico.',
+  s.description_source = NULL,
+  s.identification_tips = 'Silueta de hoz, como un vencejo enorme
+Calzones y bajo vientre rojizos en el adulto
+Bigotera negra ancha sobre garganta blanca',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hobby_-_Falco_subbuteo.jpg?width=1280',
+  s.image_attribution = 'Andy Morffew from Itchen Abbas, Hampshire, UK (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Falconiformes',
+  s.taxon_family = 'Falconidae',
+  s.taxon_genus = 'Falco',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Falco subbuteo';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ruiseñor común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Pisos bioclimáticos termo,meso,supramediterráneos,matorrales,sotos densos,montes bajos, jardines...',
+  s.description = 'Ave estilizada, de pico fino y cola larga. Hembras y machos son iguales. Su manto y sus alas presentan un color pardo ocráceo uniforme, excepto en la cola, que posee un distintivo tono pardo rojizo. Las partes inferiores, mucho más claras, tienen color blanco crema. Este pájaro, muy escondidizo, rara vez abandona la protección de la espesura de la vegetación, pero resulta muy fácil de detectar por su inconfundible canto, muy sonoro, emitido incansablemente durante el día y la noche. Los jóvenes volantones, previamente a la muda parcial de su plumaje que tiene lugar antes de que comience la migración, exhiben un plumaje pardo que muestra plumas manchadas en su extremo con motas amarillentas. Los adultos se pueden confundir con carriceros comunes y ruiseñores bastardos, con los que a veces conviven en malezas ribereñas. Sin embargo, los carriceros presentan un tono ocre más pálido y amarillento, y carecen de la cola rojiza que luce el ruiseñor común. Lo mismo sucede con el ruiseñor bastardo, que además tiene una conspicua línea blanca sobre el ojo y posee unas alas y una cola cortas y redondeadas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Luscinia_megarhynchos_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Luscinia',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Luscinia megarhynchos';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Calandria común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave esteparia',
+  s.primary_habitat = 'Llanos cerealistas, pastizales y estepas de suelo profundo',
+  s.description = 'La mayor de las alondras ibéricas, robusta y de pico grueso, con una mancha negra muy marcada a cada lado del cuello. Canta en vuelo, describiendo círculos altos con un torrente de notas en el que imita a otras aves. En invierno forma bandos numerosos en los llanos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Babero negro a cada lado del cuello
+Borde trasero del ala blanco y visible en vuelo
+Pico grueso y pálido, de granívora',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Melanocorypha_calandra.jpg?width=1280',
+  s.image_attribution = 'Bereşe.jpg: Dûrzan cîrano derivative work: Osado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Alaudidae',
+  s.taxon_genus = 'Melanocorypha',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Melanocorypha calandra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba rubia',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Laderas secas y pedregosas con matorral bajo y suelo desnudo',
+  s.description = 'Collalba pequeña y contrastada: el macho es color arena claro con las alas negras y un antifaz o una garganta negros según la variedad. Como todas las collalbas, enseña al volar una cola blanca con una «T» negra invertida. Caza insectos lanzándose al suelo desde una piedra o una mata.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cola blanca con una «T» negra al abrirse
+Alas negras que resaltan sobre el cuerpo color arena
+Se posa erguida en piedras y matas, muy visible',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Black-eared_Wheatear%2C_Punta_del_Sabinar%2C_Spain.jpg?width=1280',
+  s.image_attribution = 'Vince Smith from London, United Kingdom (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Oenanthe',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
+  s.spain_status = 'Directiva Aves 2009/147/CE (Red Natura 2000); LESRPE',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Oenanthe hispanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba negra',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Matorral litoral, laderas secas y roquedos',
+  s.description = 'La mayor de las collalbas, enteramente negra salvo el obispillo y la base de la cola, blancos. Vive en cortados y laderas rocosas, donde construye junto al nido una plataforma de piedrecitas que acarrea una a una. Su canto es potente y melodioso.',
+  s.description_source = NULL,
+  s.identification_tips = 'Cuerpo negro con obispillo blanco muy contrastado
+«T» negra invertida en la cola blanca al volar
+Montoncitos de piedrecitas junto a la grieta del nido',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Black_Wheatear%2C_Isla_Plana_3.jpg?width=1280',
+  s.image_attribution = 'Andrew Thomas from Shrewsbury, UK (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Oenanthe',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Aves 2009/147/CE, Anexo I',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Oenanthe leucura';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Collalba gris',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Pastizales pedregosos, canchales y zonas abiertas de montaña',
+  s.description = 'Collalba de dorso gris en el macho, con antifaz negro y alas oscuras. Como todas las collalbas, delata su identidad al volar: obispillo blanco y cola blanca con una «T» negra invertida. Se posa erguida en piedras y hace carreras cortas por el suelo.',
+  s.description_source = NULL,
+  s.identification_tips = 'Obispillo blanco y «T» negra en la cola
+Macho con antifaz negro y dorso gris
+Carreras cortas por el suelo entre piedra y piedra',
+  s.seasonality = 'Paso migratorio y cría en montaña',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oenanthe_oenanthe_Larvik.JPG?width=1280',
+  s.image_attribution = 'Arnstein Rønning (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Muscicapidae',
+  s.taxon_genus = 'Oenanthe',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Oenanthe oenanthe';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Autillo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz nocturna',
+  s.primary_habitat = 'Arboledas, sotos, huertos y parques con árboles viejos',
+  s.description = 'El búho más pequeño de Europa, apenas mayor que un puño, con un plumaje jaspeado que lo hace invisible pegado a un tronco. Se detecta por el oído: un silbido monótono y flautado que repite cada dos o tres segundos durante toda la noche de primavera.',
+  s.description_source = NULL,
+  s.identification_tips = 'Silbido corto y flautado repetido de forma monótona
+Diminuto, con dos penachos de plumas en la cabeza
+Plumaje veteado que imita la corteza',
+  s.seasonality = 'Primavera y verano (estival)',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Scops_Owl_(Otus_scops)%2C_Kalloni%2C_Lesvos%2C_Greece%2C_19.04.2015_(16773748434).jpg?width=1280',
+  s.image_attribution = 'Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Strigiformes',
+  s.taxon_family = 'Strigidae',
+  s.taxon_genus = 'Otus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Otus scops';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gorrión molinero',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'El más pequeño de los gorriones europeos presenta una coloración parecida a la del gorrión común, es decir: dorso marrón listado de negro y pecho gris muy claro. Se diferencia, no obstante, del común por su extensa capucha de color acastañado y por una llamativa mancha negra que destaca vivamente en la blanca mejilla. Además, luce un collar blanco, que se interrumpe en la nuca, del que carece el gorrión común. El pico es menos robusto que el de su cercano pariente y el babero, considerablemente más reducido. En esta especie no hay significativas diferencias de plumaje entre machos y hembras, por lo que resulta imposible diferenciarlos en el campo. Los jóvenes, hasta finales del verano, se diferencian de los adultos por sus mejillas de color blanco sucio, carentes de mancha negra. El molinero se comporta de manera más nerviosa que el gorrión común y permanece menos tiempo en el suelo.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Passer_montanus_saturatus_s2.JPG?width=1280',
+  s.image_attribution = 'Alpsdake (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Passeridae',
+  s.taxon_genus = 'Passer',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Passer montanus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abejero europeo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz',
+  s.primary_habitat = 'Bosque con algunos claros, gran variedad de especies arbóreas.Desde el mar a 1600m, templado-húmedo',
+  s.description = 'La coloración de esta especie presenta considerables diferencias individuales, de tal manera que han llegado a distinguirse hasta 10 fases de plumaje diferentes. Como norma, las partes inferiores son claras y están provistas de un profuso barreado transversal marronáceo, en tanto que las dorsales, parduzcas, resultan bastante más oscuras que las ventrales; la cola, por su parte, muestra un característico franjeado. En la cabeza, que presenta una tonalidad grisácea, destaca el iris intensamente amarillo. Dentro de este patrón general, existen notables variaciones, y se pueden hallar desde individuos muy claros hasta otros extremadamente oscuros, casi melánicos; en todo caso, los ejemplares de coloración intermedia son los más frecuentes. Aparte de algunas diferencias en el diseño y coloración del plumaje, el rasgo más distintivo entre machos y hembras es el mayor tamaño de estas. Los jóvenes, por su parte, tienden a ser oscuros, con el iris marrón. En vuelo es llamativo el barreado ventral, así como las franjas de la cola, si bien lo más significativo y que permite diferenciar fácilmente al abejero de otras rapaces similares, como el busardo ratonero, es su silueta, con la cabeza apuntada, la cola larga —de ángulos algo redondeados— y las alas rectas y estrechas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Wespenbussard_European_honey_buzzard_Pernis_apivorus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Accipitriformes',
+  s.taxon_family = 'Accipitridae',
+  s.taxon_genus = 'Pernis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Pernis apivorus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Acentor alpino',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Roquedos y pedreras de alta montaña; en invierno baja a cortados',
+  s.description = 'Pájaro robusto de montaña, pardo y discreto salvo por dos detalles: los flancos con listas castañas y una garganta blanca finamente moteada de negro. Camina entre las rocas buscando insectos y semillas, y en invierno desciende a cortados y construcciones.',
+  s.description_source = NULL,
+  s.identification_tips = 'Flancos con anchas listas castañas
+Garganta blanca con motas negras, como un babero
+Base del pico amarilla',
+  s.seasonality = 'Otoño e invierno en cotas bajas',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Alpine_accentor_saganta.jpg?width=1280',
+  s.image_attribution = 'Paco Gómez from Castellón, Spain (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Prunellidae',
+  s.taxon_genus = 'Prunella',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Prunella collaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Acentor común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Pájaro del tamaño de un gorrión común, con el pico fino y puntiagudo, y las patas fuertes y rojizas. De comportamiento huidizo, le gusta moverse entre la vegetación baja y caminar por el suelo. Tiene las partes superiores del plumaje marrones y con escamado pardo oscuro, semejantes al dorso de un gorrión común. La cabeza, la garganta y el pecho son de un color gris plomizo, más intenso en los machos, con la zona auricular y el píleo marrones. Las partes posteriores del vientre poseen un tono gris más claro, con los flancos marrones. Los jóvenes exhiben cabeza y garganta de color castaño, en lugar de gris, y muestran todo el plumaje fuertemente listado de pardo oscuro. La base de su pico es naranja amarillenta, mientras que los adultos presentan todo el pico negro.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Acentor_com%C3%BAn23_by_Paco_G%C3%B3mez.jpg?width=1280',
+  s.image_attribution = 'Paco Gómez (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Prunellidae',
+  s.taxon_genus = 'Prunella',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Prunella modularis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Reyezuelo sencillo',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Junto a su cercano pariente, el listado, el reyezuelo sencillo es una de las aves más pequeñas de Europa. Presenta el dorso verdoso, con alas más oscuras sobre las que destaca una franja blanquecina. Se diferencia de su pariente por carecer de la lista superciliar clara, así como de la lista ocular negra. Dos tiras negras —que no se unen en la frente— surcan su píleo, flanqueando una tercera banda frontal más ancha de color naranja en los machos y amarillo en las hembras. Los jóvenes carecen de todas estas listas.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/%D0%96%D0%B5%D0%BB%D1%82%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D1%80%D0%BE%D0%BB%D1%91%D0%BA_(Regulus_regulus)%2C_%D0%91%D0%B8%D1%82%D1%86%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BB%D0%B5%D1%81.jpg?width=1280',
+  s.image_attribution = 'Dion Art (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Regulidae',
+  s.taxon_genus = 'Regulus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Regulus regulus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Curruca mosquitera',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Campiñas verdes,sotos,orlas de bosque,zonas de vegetación ribereña,masas arboladas con sotobosque..',
+  s.description = 'Pajarillo de fisonomía más compacta y robusta que la de otras currucas —aunque bastante similar a la de la curruca capirotada—, con cabeza más redondeada y pico más corto y grueso. Un fino anillo orbital rodea al ojo. De todas formas, se trata de un ave que no cuenta con rasgos distintivos realmente identificativos o llamativos, y su aspecto general resulta bastante uniforme. Presenta las partes ventrales de color ante pálido y el dorso pardo-grisáceo. En torno a su cuello destaca ligeramente un discreto collar más grisáceo. Ambos sexos son iguales.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril, mayo, agosto, septiembre, octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Sylvia_borin_(%C3%96rebro_County).jpg?width=1280',
+  s.image_attribution = 'Biillyboy (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Sylviidae',
+  s.taxon_genus = 'Sylvia',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Sylvia borin';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Vencejo real',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Nidos:Acantilados,cortados,marinos e interior.Hasta 1900m.Sustrato preferido calizo,...Edificaciones',
+  s.description = 'Se trata del más grande y vistoso de los vencejos españoles. Presenta una silueta típica en forma de ballesta, cola corta y levemente ahorquillada, y alas muy largas y estrechas, de aleteos lentos. Posee pico corto, plano y con la boca muy ancha; patas emplumadas y extremadamente cortas, que le impiden posarse en el suelo; y pies pequeños y de fuertes garras, con los cuatro dedos dirigidos hacia delante. Muestra coloración general pardo oliva, más oscura en las alas, con dos destacadas áreas blancas en el vientre y la garganta, separadas ambas por un collar parduzco. Ambos sexos son iguales. Los jóvenes resultan muy similares a los adultos, aunque un poco más oscuros y con plumas ribeteadas de blanco. Esta ave pasa la mayor parte de su vida en el aire, por lo que casi siempre se la ve volando y agrupada, tanto en núcleos urbanos como en acantilados costeros y de interior.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tachymarptis_melba_-Barcelona%2C_Spain_-flying-8.jpg?width=1280',
+  s.image_attribution = 'Birdwatching Barcelona (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Apodiformes',
+  s.taxon_family = 'Apodidae',
+  s.taxon_genus = 'Tachymarptis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Tachymarptis melba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mirlo capiblanco',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = 'Montaña con matorral y pastos; en paso, sierras con enebros y bayas',
+  s.description = 'Mirlo de montaña que se distingue del común por una banda blanca en forma de media luna sobre el pecho y por las plumas del ala ribeteadas de claro, que dan un aspecto escamado. Es muy desconfiado y se aleja en cuanto detecta movimiento.',
+  s.description_source = NULL,
+  s.identification_tips = 'Media luna blanca en el pecho
+Alas con aspecto escamado y plateado
+Mucho más esquivo que el mirlo común',
+  s.seasonality = 'Paso migratorio e invernada en montaña',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/2015-04-20_Turdus_torquatus_torquatus_Cairngorm_3.jpg?width=1280',
+  s.image_attribution = 'MPF (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Turdidae',
+  s.taxon_genus = 'Turdus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Turdus torquatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lechuza común',
+  s.kingdom = 'fauna',
+  s.family = 'Ave rapaz nocturna',
+  s.primary_habitat = 'Es una especie típica de paisajes humanizados con áreas agrícolas en mosaico',
+  s.description = 'El único representante de la familia Tytonidae en territorio europeo es una rapaz de tamaño medio, aspecto esbelto, largas patas y voluminosa cabeza, que luce un contrastado plumaje en el que predominan los tonos leonados y dorados en el dorso y el blanco puro —incluso ligeramente plateado— en las zonas ventrales. Las plumas dorsales y la parte superior de las alas y la cola aparecen finamente vermiculadas por sutiles punteados de color negro, gris y blancuzco, en tanto que las regiones ventrales pueden mostrar un moteado variable. En el rostro —inconfundible por su forma de corazón— destacan los ojos intensamente negros y el prominente pico de color claro. Los jóvenes poseen un plumaje muy similar al de los adultos, de los que se diferencian por sutiles detalles, difíciles de distinguir en el campo. El vuelo de esta rapaz nocturna —de alas largas y relativamente anchas— es elegante, silencioso y ágil gracias al escaso peso del ave. No es raro ver a la lechuza cernirse hábilmente sobre un punto, mientras escudriña el terreno en busca de presas.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Tyto_alba_close_up.jpg?width=1280',
+  s.image_attribution = 'Stevie B (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Strigiformes',
+  s.taxon_family = 'Tytonidae',
+  s.taxon_genus = 'Tyto',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'EN — En peligro (Lista Roja española, 2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Tyto alba';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'culantrillo blanco menor',
+  s.kingdom = 'flora',
+  s.family = 'Helecho',
+  s.primary_habitat = 'Vive en rocas calizas, entre 300-2200 m',
+  s.description = 'Tiene un rizoma robusto, y frondes hasta de 25 cm, con pecíolo corto, verde, y lámina dos o tres veces pinnada, con hojillas alternas, las medianas mayores, y soros junto al nervio medio.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Asplenium-fontanum-Soller.jpg?width=1280',
+  s.image_attribution = 'Juan Bibiloni (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Polypodiopsida',
+  s.taxon_order = 'Polypodiales',
+  s.taxon_family = 'Aspleniaceae',
+  s.taxon_genus = 'Asplenium',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Asplenium fontanum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Camín real',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Vive en lindes y orlas de encinar o pinar, o en formaciones de matorral, sobre sustratos básicos, hasta 1500 m',
+  s.description = 'Planta herbácea perenne, hasta de 50 cm, con hojas de olor anisado, compuestas, de raquis ligeramente alado, con unos 15 folíolos ovados, denticulados. Inflorescencia racemiforme, hasta con 15 flores pediceladas, con sépalos de unos 5 mm y pétalos hasta de 2 cm, uncinados, lanceolados, de color crema a morado con líneas oscuras longitudinales. Fruto en cápsula formado por cinco folículos, con endocarpo que se dobla y lanza las semillas de unos 5 mm, ovoides, negras.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Dictamnus_Hispanicus_(8755663794).jpg?width=1280',
+  s.image_attribution = 'Juanedc from Zaragoza, España (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Sapindales',
+  s.taxon_family = 'Rutaceae',
+  s.taxon_genus = 'Dictamnus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Dictamnus hispanicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Berezo',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Septiembre a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Erica_multiflora_001.jpg?width=1280',
+  s.image_attribution = 'H. Zell (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Ericales',
+  s.taxon_family = 'Ericaceae',
+  s.taxon_genus = 'Erica',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Erica multiflora';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Guillonea scabra',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Guillonea_scabra2.JPG?width=1280',
+  s.image_attribution = 'Shuky79 (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Apiales',
+  s.taxon_family = 'Apiaceae',
+  s.taxon_genus = 'Guillonea',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Guillonea scabra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Micromeria fruticosa',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Micromeria_fruticosa.JPG?width=1280',
+  s.image_attribution = 'Gideon Pisanty (Gidip) גדעון פיזנטי (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Micromeria',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Micromeria fruticosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Nóctulo gigante',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = NULL,
+  s.description = 'Es el mayor murciélago europeo. No parece mostrar dimorfismo sexual en tamaño. Pelo monocolor. Pelaje denso, largo y lustroso, que se extiende por el patagio. Dorso de color variable desde castaño a rojizo. Vientre más claro o amarillento. Los jóvenes son mas grisáceos. Orejas cortas, anchas y redondeadas, con el antitrago grueso y el trago grande y de forma arriñonada. Las alas, largas y relativamente estrechas, se insertan en el tobillo. Lóbulo poscalcáneo bien desarrollado. ANT: 61,3-67,8 mm (datos ibéricos). Dentición robusta. Fórmula dentaria: 2.1.2.3/3.1.2.3. Número de cromosomas (2n) = 42. Sólo podría confundirse, por su tamaño, con el murciélago rabudo, Tadarida teniotis, pero éste es grisáceo, de cola libre y alas aún mas estilizadas, y por su morfología, con el nóctulo mediano, Nyctalus noctula, aunque éste es algo más pequeño (antebrazo menor de 60 mm), menos robusto y de orejas menos anchas en su parte superior. ULTRASONIDOS Falta una descripción detallada. Presentan una estructura clara de cazadores aéreos, con una componente predominante de frecuencia casi constante. Como las otras dos especies del género, el nóctulo grande alterna de forma característica dos tipos de pulsos: uno con frecuencia terminal de unos 17 kHz y duración de unos 19 ms, y otro con frecuencia terminal más baja (15,3 kHz) y mayor duración (21,7 ms). A través de un detector de sonidos en heterodino los pulsos se oyen con un característico “plip- plop”. En vuelo en altura parece que los pulsos pierden la alternancia y el nóctulo grande emite sólo señales de frecuencia baja. Dado la similitud en frecuencias y ritmo, sus ultrasonidos son difíciles de diferenciar de los de N. noctula.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/GreaterNoctule.JPG?width=1280',
+  s.image_attribution = 'The original uploader was Nicolharper at English Wikipedia. (CC BY 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Nyctalus',
+  s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2007)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Nyctalus lasiopterus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Espino negro',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = NULL,
+  s.description = 'Es un arbustillo de hasta 3 m de altura (López González, 2001), que frecuentemente tiene aspecto de mata alta o media, más o menos espinoso, de ramificación intricada y de perennifolio a semicaducifolio facultativo. Sus especímenes tienen espinas pero presentan una variabilidad: los de las regiones continentales y mediterráneas más áridas las llegan a tener en cantidad y longitud exagerada, pero otros son casi inermes. Presenta también unas ramillas laterales cortas terminadas en un fascículo de hojas. Éstas se disponen alternas, aunque a veces algunas se muestran casi opuestas; son simples, sin peciolo y con un limbo estrecho (tíìcamente menor de 0,5 cm), a veces muy corto, menor de 1,2 cm (subsp. borgiae), de trasovado-oblongo a espatulado-linear, lampiño o con un pelillo muy corto (subesp. velutina).',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_lycioides_fruits.JPG?width=1280',
+  s.image_attribution = 'איתן פרמן (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Rosales',
+  s.taxon_family = 'Rhamnaceae',
+  s.taxon_genus = 'Rhamnus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Rhamnus lycioides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Rhamnus pumila',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Forma parte de las comunidades de caméfitos que se desarrollan sobre paredones calcáreos verticales de la alianza Saxifragion trifurcato-canaliculatae',
+  s.description = 'Arbusto enano, inerme, postrado. Hojas ovadolanceoladas a elípticas, crenuladas, con pecíolo corto, pubescentes por el haz y glabrescentes por el envés. Pecíolos y ramas jóvenes densamente pubescentes al igual que los pedúnculos florales, iguales o mayores que el cáliz. Cáliz verde-amarillento con lóbulos acuminados más largos que el tubo. Pétalos ausentes.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhamnus_pumila_Atlas_Alpenflora.jpg?width=1280',
+  s.image_attribution = 'Anton Hartinger (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Rosales',
+  s.taxon_family = 'Rhamnaceae',
+  s.taxon_genus = 'Atadinus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Rhamnus pumila';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Saxifraga corsica subsp. cossoniana',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Saxifragales',
+  s.taxon_family = 'Saxifragaceae',
+  s.taxon_genus = 'Saxifraga',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Saxifraga corsica subsp. cossoniana';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Seseli montanum subsp. granatense',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Apiales',
+  s.taxon_family = 'Apiaceae',
+  s.taxon_genus = 'Seseli',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Seseli montanum subsp. granatense';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Teucrium rivasii',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Teucrium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Teucrium rivasii';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Pino carrasco',
@@ -58733,7 +67515,7 @@ Gálbulos redondos que pasan de verde a pardo rojizo',
   s.taxon_genus = 'Juniperus',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Juniperus phoenicea';
@@ -59283,7 +68065,7 @@ Cabezuelas apretadas en el extremo de las ramas',
   s.taxon_genus = 'Teucrium',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Teucrium lanigerum';
@@ -59308,7 +68090,7 @@ Hojas pequeñas y enrolladas, de aspecto grisáceo',
   s.taxon_genus = 'Teucrium',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Teucrium freynii';
@@ -59333,7 +68115,7 @@ Flores blanquecinas muy pequeñas, casi inapreciables',
   s.taxon_genus = 'Notoceras',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'No localizada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Notoceras bicorne';
@@ -60558,9 +69340,9 @@ Base leñosa y porte compacto sobre roca',
   s.taxon_genus = 'Poterium',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2010)',
-  s.spain_status = 'UICN España: NT (Casi amenazado) (2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Poterium ancistroides';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -60833,7 +69615,7 @@ Aspecto grisáceo por la pelusa que cubre la planta',
   s.taxon_genus = 'Lotus',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo, sobre conservación de los recursos genéticos foresta…)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Lotus dorycnium';
@@ -61531,11 +70313,11 @@ Excrementos en montoncitos de bolitas cilíndricas',
   s.taxon_order = 'Artiodactyla',
   s.taxon_family = 'Bovidae',
   s.taxon_genus = 'Capra',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'EN — En peligro (Lista Roja española, 1992)',
-  s.spain_status = 'UICN España: EN (En peligro) (1992)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2007)',
+  s.spain_status = 'Anexo VI (Ley 42/2007, de 13 de diciembre)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Capra pyrenaica';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -61683,9 +70465,9 @@ Mata baja y grisácea del tomillar',
   s.taxon_genus = 'Helianthemum',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = 'EN — En peligro (Lista Roja española, 2010)',
-  s.spain_status = 'UICN España: EN (En peligro) (2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Helianthemum violaceum';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -62281,7 +71063,7 @@ Plumas de la punta del ala muy separadas, como dedos',
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Corvidae',
   s.taxon_genus = 'Pyrrhocorax',
-  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
   s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV',
   s.rarity_score = 2,
@@ -62508,9 +71290,9 @@ Del tamaño de un puño, mucho menor que una perdiz',
   s.taxon_genus = 'Coturnix',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
   s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
-  s.spain_status = 'UICN España: DD (Datos insuficientes) (2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Coturnix coturnix';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -63264,6 +72046,1452 @@ Prefiere matorral alto, no el raso',
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Curruca cantillans';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ceje',
+  s.kingdom = 'flora',
+  s.family = 'Mata',
+  s.primary_habitat = 'Crece en tomillares y matorrales sobre suelos secos calizos, dolomíticos o yesosos, hasta 2400 m',
+  s.description = 'Perenne sufruticosa, de 4-30 cm, con tallos ascendentes o erectos, redondeados, de tomentosos a glabros. Hojas con limbo de 4-20 x 2-10 mm, pecioladas, de ovadas a oblongo- lanceoladas, opuestas, a veces las superiores alternas, con envés generalmente peloso o tomentoso, las inferiores sin estípulas, las superiores con estípulas foliáceas. Pétalos de 3-6 mm, pequeños, mayores que el cáliz, amarillos. Cápsula de 3-5 mm, ovoide-elipsoidal, glabra o pelosa en el ápice. Semillas pardo-amarillentas. Especie de la que se han considerado cuatro subespecies, tres de ellas endemismos españoles.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Enero a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Helianthemum_cinereum_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Malvales',
+  s.taxon_family = 'Cistaceae',
+  s.taxon_genus = 'Helianthemum',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Helianthemum cinereum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija colilarga',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'Lagartija esbelta de escamas grandes, quilladas y brillantes, con dos líneas claras muy marcadas a cada lado del dorso. La cola puede medir el doble que el cuerpo. Los machos lucen en primavera manchas azules en el hombro y las mejillas anaranjadas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dos líneas claras nítidas a lo largo de cada costado
+Escamas grandes y quilladas, de aspecto brillante
+Cola larguísima, hasta el doble que el cuerpo',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Psammodromus_algirus_-_01.jpg?width=1280',
+  s.image_attribution = 'Carlos Delgado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Lacertidae',
+  s.taxon_genus = 'Psammodromus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Psammodromus algirus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tomillo',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Junio a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Thymus_serpylloides_EnfoqueFloracion_2010-6-17_DehesaBoyaldePuertollano.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Thymus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Thymus serpylloides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra lisa meridional',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Se encuentra desde el nivel del mar, pero es más frecuente en claros de bosque y matorral mediterráneo en zonas de media montaña',
+  s.description = 'La culebra lisa meridional Coronella girondica es de pequeño tamaño, cabeza pequeña y cola relativamente corta. En general hay 21 hileras de dorsales aunque es frecuente observar 19 hileras en ejemplares de las cordilleras béticas. Dorso y flancos generalmente de color pardo o gris, con una hilera de manchas transversales por el dorso. En el vientre destacan unas manchas cuadradas oscuras en un diseño ajedrezado. En la parte dorsal de la cabeza hay una gran mancha en forma de U, y a ambos lados de la cabeza, una brida oscura que atraviesa el ojo y se prolonga por delante de la placa frontal uniendo las manchas de ambos lados. No hay dimorfismo sexual en la longitud cabeza-cloaca ni en la folidosis cefálica. En cambio se aprecian ligeras diferencias en el número de dorsales (19 hileras más frecuente en machos) y ventrales (más en hembras), pero sobre todo en la cola (mayor longitud relativa y mayor número de subcaudales en machos). No hay subespecies descritas, pero se aprecian diferencias poblacionales en el número de ventrales. En machos, se observa una clina latitudinal en la longitud de hocico-cloaca y número de ventrales, siendo mayores los ejemplares más septentrionales. Longitud total máxima en la Península Ibérica, 800 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/BennyTrapp_Coronella_girondica.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Colubridae',
+  s.taxon_genus = 'Coronella',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Coronella girondica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra viperina',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Se trata de una culebra que frecuenta ríos, riachuelos, pantanos, balsas y marismas, siendo menos frecuente lejos de los puntos de agua',
+  s.description = 'Serpiente de tamaño medio, cola corta y cabeza ensanchada y bien delimitada respecto al resto del cuerpo. Generalmente hay dos escamas preoculares y dos postoculares, 7 escamas supralabiales y 9 escamas infralabiales. Dorsales claramente carenadas. El diseño es muy llamativo pues se trata de una amplia banda en forma de zig zag que recorre todo el cuerpo en posición dorsal. Existe un patrón alternativo que consiste en dos líneas longitudinales y paralelas, de colores claros, de recorrido también dorsal. El diseño rayado es más frecuente hacia el sur de la península y la costa mediterránea, aunque poblaciones muy cercanas pueden tener frecuencias muy dispares. La coloración corporal de fondo es variable aunque destacan los tonos verdosos, pardos y oliváceos. El vientre es generalmente gris amarillento con manchas oscuras en forma de diseño ajedrezado. Las hembras son mayores pero la longitud de cola y el número de subcaudales son mayores en machos. Longitud total máxima en la Península Ibérica, 910 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Viperine_Snake_(Natrix_maura)_(14198769323).jpg?width=1280',
+  s.image_attribution = 'Bernard DUPONT from FRANCE (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Natricidae',
+  s.taxon_genus = 'Natrix',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Natrix maura';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Salamanquesa común',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Pendientes rocosas calcícolas con vegetación casmofítica',
+  s.description = 'Gecko robusto de piel tuberculada, activo al anochecer sobre roquedos, muros y cortados, donde caza insectos atraídos por la luz.',
+  s.description_source = NULL,
+  s.identification_tips = 'Piel rugosa con tubérculos
+Activa al atardecer
+Trepa por rocas y muros',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/605672084/original.jpg',
+  s.image_attribution = 'jrodben (CC BY-NC 4.0) · GBIF',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Phyllodactylidae',
+  s.taxon_genus = 'Tarentola',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (RD 139/2011)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Tarentola mauritanica';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagarto ocelado',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'El lagarto más grande de Europa, de hasta 60 cm con la cola incluida. Su dorso es verde con un fino reticulado negro y, en los costados, hileras de ocelos de un azul intenso. Los machos viejos tienen una cabeza enorme y maciza. Es diurno y muy desconfiado.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ocelos azules alineados en los costados
+Dorso verde con retícula negra muy fina
+Tamaño grande y cabeza maciza en los machos adultos',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Jewelled_Lizard_(Timon_lepidus)_male_found_under_a_stone_by_Jean_NICOLAS_(14166347788).jpg?width=1280',
+  s.image_attribution = 'Bernard DUPONT from FRANCE (CC BY-SA 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Lacertidae',
+  s.taxon_genus = 'Timon',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Timon lepidus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Arenaria suffruticosa',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Caryophyllales',
+  s.taxon_family = 'Caryophyllaceae',
+  s.taxon_genus = 'Arenaria',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Arenaria suffruticosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de herradura',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Culebra ágil y trepadora con dibujo dorsal en herradura, ligada a matorrales termófilos y roquedos soleados del sureste ibérico.',
+  s.description_source = NULL,
+  s.identification_tips = 'Manchas dorsales en herradura
+Ágil y trepadora
+Inofensiva para las personas',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hemorrhois_hippocrepis_121004.jpg?width=1280',
+  s.image_attribution = 'Accipiter (R. Altenkamp, Berlin) (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Colubridae',
+  s.taxon_genus = 'Hemorrhois',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Hemorrhois hippocrepis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de escalera',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Ocupa todo tipo de suelos en ambientes mediterráneos de matorral y borde de bosque, pues precisa de cierta cobertura vegetal y de lugares relativamente húmedos',
+  s.description = 'Longitud hocico-cloaca media de 720 mm (rango 233-1.385 mm), cola relativamente corta. Cabeza algo pequeña, con hocico agudo, que sobrepasa netamente el extremo anterior de la mandíbula. 27 rangos de escamas dorsales. Color de fondo amarillento, con diseño de manchas dorsales en escalera en los ejemplares pequeños, y dos líneas dorsolaterales en los ejemplares de mayor tamaño. Longitud total máxima, 1.650 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Rhinechis_scalaris_cropped.jpg?width=1280',
+  s.image_attribution = 'Benny_Trapp_Rhinechis_scalaris_Portugal.jpg: Benny Trapp derivative… (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Colubridae',
+  s.taxon_genus = 'Zamenis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Zamenis scalaris';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Eslizón ibérico',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Matorral termomediterráneo semiárido',
+  s.description = 'Eslizón de cuerpo cilíndrico y brillante, con las patas tan reducidas que apenas se usan: se desplaza reptando y buceando entre la arena y la hojarasca. Su dorso, dorado o bronceado, lleva hileras de ocelos oscuros con el centro claro.',
+  s.description_source = NULL,
+  s.identification_tips = 'Patas diminutas, casi inútiles para caminar
+Cuerpo cilíndrico y muy brillante, como pulido
+Hileras de ocelos oscuros de centro claro en el dorso',
+  s.seasonality = 'Primavera y verano',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Chalcides_bedriagai_01_by-dpc.jpg?width=1280',
+  s.image_attribution = 'David Perez (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Scincidae',
+  s.taxon_genus = 'Chalcides',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE; Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Chalcides bedriagai';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Hierba del señor',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Geum_sylvaticum_EnfoqueFlor_2012-4-22_SierraMadrona.jpg?width=1280',
+  s.image_attribution = 'Javier martin (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Rosales',
+  s.taxon_family = 'Rosaceae',
+  s.taxon_genus = 'Geum',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Geum sylvaticum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Salamanquesa rosada',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Pendientes rocosas calcícolas con vegetación casmofítica',
+  s.description = 'Gecko pequeño y translúcido de tonos rosados, de hábitos nocturnos, que se refugia en grietas de roquedos, muros de piedra y ruinas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Piel rosada casi translúcida
+Cola con anillos espinosos
+Nocturna y discreta',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Hemidactylus_turcicus_on_a_wall_in_Greece.jpg?width=1280',
+  s.image_attribution = 'Koppi2 (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Gekkonidae',
+  s.taxon_genus = 'Hemidactylus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (RD 139/2011)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Hemidactylus turcicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebra de cogulla occidental',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Especie relativamente termófila, normalmente solo se encuentra en el pisos bioclimáticos termo y mesomediterráneo',
+  s.description = 'Es el ofidio más pequeño que habita la Península Ibérica. Cabeza corta, aplastada, con ojos relativamente pequeños, de pupila redonda o verticalmente oval, e iris anaranjado o rojizo. Cola corta, pues en promedio representa el 14,9% de la longitud total. Normalmente posee siete supralabiales, la cuarta y quinta en contacto con el ojo, y la sexta alta y en contacto o muy próxima a la parietal. Por lo general, 21 rangos de dorsales en el centro del cuerpo. Coloración de fondo en cabeza y cuerpo gris, que tiende a marrón cuando ha mudado recientemente. El diseño de la cabeza se caracteriza porque en el píleo se encuentra el vértice de una figura en forma de V que tiene dos ramas curvas, convexas, mientras recorre las parietales. Posteriormente a la cabeza collar nucal oscuro. Longitud total máxima, 598 mm.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Macroprotodon_brevis.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Colubridae',
+  s.taxon_genus = 'Macroprotodon',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Macroprotodon brevis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Oeosporangium pteridioides',
+  s.kingdom = 'flora',
+  s.family = 'Helecho',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Octubre a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Oeosporangium_pteridioides.jpg?width=1280',
+  s.image_attribution = 'Marc Riera (CC BY 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Polypodiopsida',
+  s.taxon_order = 'Polypodiales',
+  s.taxon_family = 'Pteridaceae',
+  s.taxon_genus = 'Oeosporangium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Oeosporangium pteridioides';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sapillo moteado común',
+  s.kingdom = 'fauna',
+  s.family = 'Anfibio',
+  s.primary_habitat = NULL,
+  s.description = 'Anuro de aspecto grácil, con un tamaño medio de 40 mm (36,32 mm en los machos y 43,3 mm en las hembras). Hocico alargado, ojos relativamente grandes y con pupila vertical. Dos tercios inferiores del iris más oscuros que el tercio superior. Membrana timpánica poco patente, ausencia de glándulas parótidas. Extremidades largas, particularmente las posteriores, y poco palmeadas (hasta la base de los dedos). Dedos alargados con un único tubérculo metatarsiano, situado en la base del primer dedo. Color variable, aunque suele mostrar un moteado verde más o menos patente en dorso, cabeza y extremidades. Vientre claro, con un moteado oscuro irregular. Los machos se diferencian de las hembras por su menor tamaño y por mostrar callosidades nupciales en las extremidades anteriores, muslos y la parte ventral y gular, durante el período de reproducción.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pelodytes_punctatus_side.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Amphibia',
+  s.taxon_order = 'Anura',
+  s.taxon_family = 'Pelodytidae',
+  s.taxon_genus = 'Pelodytes',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Pelodytes punctatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija cenicienta',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = NULL,
+  s.description = 'Se puede distinguir de Psammodromus edwardsianus por la falta de una escama supralabial debajo de la subocular. En comparación con Psammodromus edwardsianus y Psammodromus occidentalis, Psammodromus hispanicus tiene menos ocelos, menos poros femorales, menos escamas gulares, y un hocico más redondo. En Psammodromus hispanicus la longitud del hocico hasta la escama anal (LHA), la masa corporal, el número de hileras de escamas ventrales, el número de escamas del collar, la razón de cabeza (anchura de la cabeza/longitud de la cabeza), y la extensión de la coloración nupcial son mayores y la razón LHA/longitud total es menor que en Psammodromus edwardsianus. Tiene color grisáceo a pardo claro y presenta cuatro líneas dorsales de un color blanco crema a gris. El vientre es en general de color blanco. Tiene una coloración nupcial amarilla – verde bastante llamativa.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Psammodromus_hispanicus.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Lacertidae',
+  s.taxon_genus = 'Psammodromus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Psammodromus hispanicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Víbora hocicuda',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Habita suelos silíceos y calizos, tendiendo a ocupar medios psammófilos a baja altitud y en el occidente ibérico, y medios saxícolas en montaña',
+  s.description = 'Se caracteriza por su cuerpo grueso y corto, cola pequeña, tamaño variable pero inferior a 60 cm, cabeza de aspecto triangular y bien diferenciada del cuerpo con un apéndice nasal elevado hacia arriba, escamas cefálicas muy fragmentadas, pupila vertical, y patrón de coloración dorsal generalmente con una banda negra en zigzag sobre fondo ceniciento.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lataste''s_viper.jpg?width=1280',
+  s.image_attribution = 'Tim Vickers (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Viperidae',
+  s.taxon_genus = 'Vipera',
+  s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Vipera latastei';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alquemila',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Vive en prados, claros de bosque o ribazos nitrificados, sobre cualquier tipo de sustrato',
+  s.description = 'Hierba perenne hasta de 70 cm, rizomatosa, pelosa, con hojas bipinnatisectas con los segmentos que crecen en todas direcciones, por lo que resulta cilíndrica. Capítulos dispuestos en corimbo de corimbos, de 3,5-4,5 mm, con brácteas del involucro coriáceas, pelosas, con flores liguladas femeninas y flosculosas hermafroditas, color blanco o algo rosado. Aquenios ovoides, comprimidos lateralmente, con dos costillas, sin vilano.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Achillea_millefolium_habito.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Asteraceae',
+  s.taxon_genus = 'Achillea',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Achillea millefolium';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcurnio',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Vive formando matorrales en roquedos calizos u otras formaciones de matorral poco densos, entre 300-2500 m',
+  s.description = 'Hierba perenne, hasta 1,5 m; tallo simple, con pelos estrellados. Hojas de 1,5-10 x 1,5-7 cm, las inferiores con pecíolo largo; triangular-ovadas, enteras o ligeramente tri a pentalobuladas, crenadas o serradas. Flores solitarias o en pequeños grupos axilares, cortamente pediceladas. Epicáliz con varias piezas estrechas, más cortas que el cáliz, este con cinco sépalos de 8-11 mm, soldados, triangular-ovados, acuminados. Cinco pétalos de 10-20 x 6-15 mm, libres, obovados, de color rosado o blanquecino. Estambres numerosos y anteras de color púrpura. Fruto formado por 15-25 mericarpos de 15-25 x 3,4-4,5 mm.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril, mayo, junio, julio, agosto, octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Amelanchier_ovalis.JPG?width=1280',
+  s.image_attribution = 'No machine-readable author provided. Victor M. Vicente Selvas assum… (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Rosales',
+  s.taxon_family = 'Rosaceae',
+  s.taxon_genus = 'Amelanchier',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Amelanchier ovalis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Astragalus bourgaeanus',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Fabales',
+  s.taxon_family = 'Fabaceae',
+  s.taxon_genus = 'Astragalus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2012)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Astragalus bourgaeanus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cephalanthera rubra',
+  s.kingdom = 'flora',
+  s.family = 'Orquídea',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cephalanthera_rubra_02_Luxemburg.jpg?width=1280',
+  s.image_attribution = 'Orchi (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Liliopsida',
+  s.taxon_order = 'Asparagales',
+  s.taxon_family = 'Orchidaceae',
+  s.taxon_genus = 'Cephalanthera',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Cephalanthera rubra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Aceiteras',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Vive en matorrales o roquedos, hasta 1800 m',
+  s.description = 'Arbusto de 0,5-2 m, con muchos tallos erguidos de sección cuadrangular y hojas hasta de 4,5 cm, trifolioladas, con foliolos hasta de 3 x 1 cm, elípticos u obovados. Flores en grupos de dos o tres, pediceladas, con cáliz de 3-8 mm, con cinco dientes muy estrechos, y corola con tubo largo hasta de 1,4 cm y cinco lóbulos ovados, amarilla, con dos estambres que no sobresalen de los lóbulos y estigma simple. Fruto en baya, de 8-13 mm, globosa, de color negro con una a cuatro semillas.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Jasminum_fruticans_a.JPG?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Oleaceae',
+  s.taxon_genus = 'Chrysojasminum',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Chrysojasminum fruticans';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Brezo arbóreo',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = 'En el género Erica (Fam. Ericaceae) se incluyen arbustos, excepcionalmente, árboles. Disponen de hojas en verticilos, de 3-6, a veces algunas alternas, enteras o raramente denticuladas, de márgenes resolutos, casi aciculares, generalmente muy estrechas (“ericoides”) y persistentes. El tamaño reducido de las hojas en los brezos del género Erica parece que es para disminuir la pérdida de agua por transpiración cuando hace calor o en situaciones con poca disponibilidad de agua. Las paredes celulares de las hojas son gruesas, con lignina o sílice, y las células pueden contener cantidades apreciables de taninos, resinas y aceites esenciales. Estas características las hacen poco apetecibles e indigestas para muchos herbívoros y altamente inflamables en condiciones secas. Se piensa también que el desarrollo de este tipo de hojas esclerófilas es una respuesta a los escasos niveles de nutrientes, especialmente de fósforo, en los suelos en que crecen los brezales. La asociación en sus raíces con hongos (micorrizas) les facilita vivir en estos medios. El brezo blanco (E. arborea) es un arbusto o arbolillo siempre verde de 1-4 (7) m de talla en la Península Ibérica, según la región o la altitud. En Canarias alcanza porte arbóreo, pudiendo llegar a 20 m de talla, y en las montañas de África Oriental incluso más (Ruiz de la Torre, 2006). Este brezo generalmente está ramificado desde la cepa, con sus ramas jóvenes de costillas inapreciables, de corteza pardo-amarillenta, pero aspecto blanquecino, al estar cubiertas densamente de pelos, unos lisos (predominan en los brotes del año) y otros, más frecuentes, denticulados-equinados. Los tallos viejos son tortuosos y de color rojizo. Las hojas son lineares, con el margen muy revoluto, que no deja ver el envés y se disponen en verticilos de 3 o 4; miden de 3 a 9 x (0,3) 0,5 a 0,7 mm. Son glabras o pelosas; las jóvenes con cilios glandulíferos muy cortos. El follaje verde vivo claro, de los brotes nuevos, destaca sobre otros brezos. Las hojitas que van cayendo forman un humus ácido en el suelo, que se utiliza para cultivar plantas acidófilas (rododendros, azaleas, hortensias, etc.) y se le denomina “tierra de brezo” (López González, 2001; Ruiz de la Torre, 2006; Lastra, 2008). La var. alpina Dieck, de la Serranía de Cuenca, es utilizada en jardinería. Esta variedad posee hojas de color verde intenso, que contrastan con los racimos compactos de flores blancas, y puede podarse enérgicamente para mantener la forma, favoreciendo nuevos crecimientos. El brezo negro (E. australis) es un arbusto de 0,3-1,7 (2,5) m. Tallos jóvenes de costillas algo marcadas, de corteza pardo-rojiza, con pelos simples, no glandulíferos, a veces mezclados con otros denticulado-equinados. Hojas lineares de 3 a 6 mm, dispuestas en verticilos de cuatro alrededor del tallo, erecto-patentes, lineares, brillantes, tan revolutas que no dejan ver el envés, glabras o pelosas, las jóvenes ciliado-glandulosas. Especie con gran variabilidad morfológica, lo que ha llevado a diferentes interpretaciones taxonómicas. Las poblaciones del interior y del norte de la Península Ibérica son consideradas por otros autores como una subespecie (E. australis subsp. aragonensis (Willj.) Cout.), pero no siempre es posible su distinción. Una de las características más peculiares de los dos brezos referenciados, E. arborea y E. australis, es la formación de gruesas cepas basales, que a veces alcanzan los 50 cm de diámetro. Dicha cepa, que los botánicos denominan lignotubérculo, consiste en un dilatado engrosamiento de la parte superior de la raíz. En su superficie se origina un auténtico banco de yemas que rebrotan con gran vigor cuando se quema o es desbrozada la parte aérea de la planta. La localización de estas yemas, justamente a ras del suelo o subterráneas las protege del fuego reiterado (Oria de Rueda, 2003).',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Erica_arborea.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Ericales',
+  s.taxon_family = 'Ericaceae',
+  s.taxon_genus = 'Erica',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Erica arborea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Fresno',
+  s.kingdom = 'flora',
+  s.family = 'Árbol',
+  s.primary_habitat = 'Vive sobre sustratos frescos y en general profundos, hasta 1400 m',
+  s.description = 'Árbol hasta de 20 m, caducifolio, con corteza grisácea, agrietada. Hojas de 10-30 cm, compuestas imparipinnadas, con siete a 13 folíolos hasta de 9 cm, lanceolados o elípticos, levemente dentados, pecioladas. Flores dispuestas en racimos axilares, simplificadas, minúsculas, unisexuales o hermafroditas, con dos estambres casi sentados y un estilo con estigma bilobulado. Fruto en sámara hasta de 5 cm, alada por los bordes.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Fresno_(Colmenar_Viejo).jpg?width=1280',
+  s.image_attribution = 'Wiki LIC (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Oleaceae',
+  s.taxon_genus = 'Fraxinus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. Lista de especies forestales e híbiridos artificiales (Real Decreto 289/2003, de 7 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Fraxinus angustifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Narcissus dubius',
+  s.kingdom = 'flora',
+  s.family = 'Planta bulbosa',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Enero a mayo',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Nadala_Menuda_(Narcissus_Dubius)_02.JPG?width=1280',
+  s.image_attribution = 'No machine-readable author provided. CavallBernat assumed (based on… (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Liliopsida',
+  s.taxon_order = 'Asparagales',
+  s.taxon_family = 'Amaryllidaceae',
+  s.taxon_genus = 'Narcissus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Narcissus dubius';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Abejera',
+  s.kingdom = 'flora',
+  s.family = 'Orquídea',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ophrys_sphegodes_(as_Ophrys_aranifera)_-_Bot._Reg._14_pl._1197_(1828).jpg?width=1280',
+  s.image_attribution = 'Designer: M. Hart - Engraver: J. Watts (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Liliopsida',
+  s.taxon_order = 'Asparagales',
+  s.taxon_family = 'Orchidaceae',
+  s.taxon_genus = 'Ophrys',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Ophrys sphegodes';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Lagartija colirroja',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = 'Matorral litoral y laderas secas',
+  s.description = 'Lagartija de suelos arenosos, de cuerpo aplanado y dedos con escamas laterales en forma de peine que le sirven de raqueta sobre la arena suelta. Los jóvenes tienen la cola y las patas traseras de un rojo intenso que se apaga en los adultos.',
+  s.description_source = NULL,
+  s.identification_tips = 'Dedos con flecos de escamas a los lados, como peines
+Jóvenes con cola y patas traseras rojo intenso
+Cuerpo aplanado, con rayas y ocelos claros en el dorso',
+  s.seasonality = 'Primavera a otoño',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Acanthodactylus_erythrurus.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Lacertidae',
+  s.taxon_genus = 'Acanthodactylus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Acanthodactylus erythrurus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Culebrilla ciega',
+  s.kingdom = 'fauna',
+  s.family = 'Reptil',
+  s.primary_habitat = NULL,
+  s.description = 'Reptiles estrictamente adaptados a la vida subterránea, especializados en cavar túneles y en la localización de presas bajo tierra. Cuerpo cilíndrico y alargado cubierto de escamas cuadrangulares que se alinean en forma de anillos. Segmentos dorsales entre 14 y 18 y ventrales entre 14 y 20. No presenta extremidades. Cabeza de pequeño tamaño, poco diferenciada del cuerpo, con el hocico redondeado. La visión es vestigial mientras que el olfato y el oído están desarrollados. Cola muy corta, Presenta poros precloacales. Coloración de fondo variable entre violácea y marrón. Sin dimorfismo sexual. Los machos alcanzan una longitud de cabeza y cuerpo de 254 mm y las hembras de 235 mm.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Amphisbaenia.JPG?width=1280',
+  s.image_attribution = 'Mario modesto (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Reptilia',
+  s.taxon_order = 'Squamata',
+  s.taxon_family = 'Blanidae',
+  s.taxon_genus = 'Blanus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Blanus cinereus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Fumana de Desfontaines',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'La población murciana se encuentra en matorrales abiertos sobre suelos descarnados, en cunetas y áreas cortafuegos',
+  s.description = 'Pequeño arbusto de hasta 1 (1,7) m de altura. Ramas junciformes, erectas, de aspecto verdeglauco. Hojas solamente en los tallos jóvenes, ovales, de márgenes planos. Flores solitarias, efímeras. Sépalos externos lineares, los internos ovado-lanceolados. Pétalos de hasta 15 mm, caedizos. Cápsula de hasta 7 mm de longitud. Semillas 2 x 3 mm.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Malvales',
+  s.taxon_family = 'Cistaceae',
+  s.taxon_genus = 'Fumana',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Fumana fontanesii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'orquídea barbada',
+  s.kingdom = 'flora',
+  s.family = 'Orquídea',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/341_Loroglossum_hircinum_Rich.jpg?width=1280',
+  s.image_attribution = 'Amédée Masclef (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Liliopsida',
+  s.taxon_order = 'Asparagales',
+  s.taxon_family = 'Orchidaceae',
+  s.taxon_genus = 'Himantoglossum',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Himantoglossum hircinum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chuntamanetas',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Vive en bosques mediterráneos esclerófilos y marcescentes y en sus orlas, hasta 1800 m',
+  s.description = 'Arbusto trepador sarmentoso, con hojas de 3-6 x 2-3,5 cm, obovadas, opuestas y decusadas, caducas, algo coriáceas, sentadas, al menos el par superior soldadas en la base. Inflorescencia en glomérulos terminales pedunculados de entre seis y 12 flores de 3-4,5 cm, con largos tubos, de color blanco-amarillento o rojizo, con estilo exerto. Fruto en baya de 4,5-7 mm, ovoide,roja.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Lonicera_etrusca.jpg?width=1280',
+  s.image_attribution = 'en:User:Iorsh (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Dipsacales',
+  s.taxon_family = 'Caprifoliaceae',
+  s.taxon_genus = 'Lonicera',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Lonicera etrusca';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Medicago secundiflora',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Medicago_secundiflora_pods.JPG?width=1280',
+  s.image_attribution = 'Ninjatacoshell (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Fabales',
+  s.taxon_family = 'Fabaceae',
+  s.taxon_genus = 'Medicago',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2012)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Medicago secundiflora';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Murciélago de Nathusius',
+  s.kingdom = 'fauna',
+  s.family = 'Murciélago',
+  s.primary_habitat = NULL,
+  s.description = 'El pelaje dorsal de los adultos es de color pardo rojizo durante el verano y pardo oscuro con tonos grises durante el invierno. El vientre es pardo claro o amarillento. Los juveniles tienen el dorso pardo oscuro, careciendo de los tonos grises del pelaje invernal de los adultos. Superficie dorsal del uropatagio cubierta de pelo al menos hasta la mitad. Como en los otros Pipistrellus, las orejas son cortas y el trago es un poco más largo que ancho y de punta redondeada. No se dispone de información sobre dimorfismo sexual. ANT: 32,0-37,0 mm; Ps: 6,0-15,5. Fórmula dentaria: 2.1.2.3/3.1.2.3. Los caninos son grandes, especialmente los inferiores, cuya anchura antero-posterior supera la mitad de su altura. El P1 es claramente visible y está alineado exteriormente con el resto de los dientes. El I2 es mayor que la longitud de la segunda cúspide del I1. Los incisivos inferiores no están imbricados y existe un diastema entre I2 e I3. Número de cromosomas (2n) = 44. Puede confundirse con las otras especies del mismo género. El color de Hypsugo savii es muy diferente. En cualquier caso, la identificación es sencilla utilizando los caracteres dentarios indicados. ULTRASONIDOS Emite pulsos de FM, con un máximo de intensidad en torno a 40 kHz. La llamada social consta de dos partes, la primera con cinco a ocho pulsos de FM cuyo máximo de intensidad se produce a 18 kHz y la segunda con tres a siete y con un máximo de intensidad a 34 kHz. Su duración total media es de 206 ms y son emitidas con un ritmo de 1,40 llamadas por segundo. Los sonidos de ecolocalización pueden ser confundidos con los emitidos por P. kuhlii, aunque existen pequeñas diferencias entre ambas especies. La determinación resulta sencilla utilizando las llamadas sociales.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril, mayo, junio, julio, septiembre, octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pipistrellus_nathusii.jpg?width=1280',
+  s.image_attribution = 'Mnolf (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Mammalia',
+  s.taxon_order = 'Chiroptera',
+  s.taxon_family = 'Vespertilionidae',
+  s.taxon_genus = 'Pipistrellus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2007)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Pipistrellus nathusii';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Gallipato',
+  s.kingdom = 'fauna',
+  s.family = 'Anfibio',
+  s.primary_habitat = NULL,
+  s.description = 'Urodelo grande, que puede alcanzar una longitud total de 312 mm. Cabeza aplastada, muy ancha en su parte posterior. Cuerpo cubierto con verrugas con punta negra. Posee en los costados una hilera de manchas amarillentas o anaranjadas. Sin cresta en el cuerpo. Cola lateralmente comprimida.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Pleorodeles_waltl.jpg?width=1280',
+  s.image_attribution = 'No machine-readable author provided. Pengo assumed (based on copyri… (CC BY-SA 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Amphibia',
+  s.taxon_order = 'Caudata',
+  s.taxon_family = 'Salamandridae',
+  s.taxon_genus = 'Pleurodeles',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2023)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Pleurodeles waltl';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Álamo',
+  s.kingdom = 'flora',
+  s.family = 'Árbol',
+  s.primary_habitat = 'Los chopos son especies de luz, de temperamento muy robusto, colonizadores de terrenos desnudos en las riberas de los ríos',
+  s.description = 'Populus nigra es un árbol caducifolio, de porte y copa muy variable, que puede alcanzar los 40 m de altura y 70-100 cm de diámetro. En poblaciones naturales las dimensiones y conformación general del árbol varía en función de la estructura y densidad de la población, así como del origen del rodal (sexual o asexual) y de la interacción con la dinámica fluvial. El fuste es erguido, con ramificación abundante e irregular. La corteza es clara, blanco-amarillenta, y lisa en árboles jóvenes, y oscura, rugosa y agrietada longitudinalmente, formando un entrecruzado característico, en individuos adultos. Es muy característico de esta especie la formación de protuberancias en el tronco y la proliferación de brotes epicórmicos, así como la presencia de contrafuertes en la base de los troncos de árboles longevos. Su sistema radical es fuerte, formado por un eje principal que se ramifica y alcanza capas profundas del terreno, mientras que las raíces secundarias se extienden horizontalmente de forma superficial. Algunos ejemplares pueden alcanzar los 300 años. Los brotes del año son claramente cilíndricos en la base, a veces subangulares en la zona apical, pero nunca acostillados. Este conjunto de caracteres tiene un gran valor de diagnóstico para la identificación de ejemplares adultos y han sido recopilados por el grupo de trabajo de P. nigra de EUFORGEN en una ficha técnica de identificación. Las hojas son glabras, de color verde en ambas caras, nervio principal amarillento muy destacado en el envés y con peciolo largo comprimido lateralmente. Presenta dimorfismo foliar: las hojas turionales son aovado-triangulares o aovado-rómbicas, acuminadas y con borde festoneado-aserrado; las hojas de los braquiblastos son más pequeñas y anchas, romboidales, anchamente cuneiformes en la base. Las yemas vegetativas son aovado-oblongas y agudas, aplicadas sobre el ramillo, cubiertas de escamas rojizas, viscosas y olorosas. Es una especie dioica, las yemas florales se presentan en posición axilar sobre los brotes de un año, a menudo agrupadas por debajo de la yema terminal. Las yemas florales femeninas están curvadas hacia fuera y son más pequeñas que las masculinas. Tanto las flores masculinas como las femeninas se disponen agrupadas en amentos colgantes. Los masculinos son gruesos, cilíndricos, de 3-9 cm de longitud, con flores de 10 a 20 estambres con anteras púrpuras que dan un color característico al amento en la fase de brotación y elongación. Los amentos femeninos son largamente pedunculados, laxos, verdosos, de 7-15 cm. Las flores femeninas se presentan sobre un pedicelo corto, con ovario aovado-cónico de color verde y dos estigmas lobulados de color verde-amarillento adosados al ovario. Los amentos fructíferos portan 40 a 45 frutos. Éstos son cápsulas bivalvas aovado- cónicas, con pedicelo corto, verdosas inicialmente y pardas en la madurez, cada una de las cuales contiene 10-14 semillas. Las semillas son de muy pequeño tamaño (2 mm), de color marfil a blanco-grisáceo, piriforme, con unos filamentos blancos adheridos al extremo proximal, de aspecto algodonoso y carácter hidrófobo, que facilitan su dispersión por el viento y el agua.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Zwarte_populier_(Populus_nigra)%2C_06-02-2026._(d.j.b.).jpg_04.jpg?width=1280',
+  s.image_attribution = 'Dominicus Johannes Bergsma. (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Malpighiales',
+  s.taxon_family = 'Salicaceae',
+  s.taxon_genus = 'Populus',
+  s.iucn_global = 'DD — Datos insuficientes (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. Lista de especies forestales e híbiridos artificiales (Real Decreto 289/2003, de 7 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Populus nigra var. nigra';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Brochera pegajosa',
+  s.kingdom = 'flora',
+  s.family = 'Mata',
+  s.primary_habitat = 'Vive en tomillares sobre yesos, hasta 600 m',
+  s.description = 'Planta de 15-45 cm, cubierta de glandulas sésiles, por lo que resulta pegajosa, con tallos densamente foliosos, hojas de 8-25 mm, con largo pecíolo, pinnatisectas con cinco hileras de segmentos, las superiores lineares. Capítulos numerosos, solitarios en cada escapo, de 5-10 mm de diámetro, subglobosos, con varias filas de brácteas. Florecillas todas tubulares, glandulosas, amarillas. Aquenios 1,2-1,5 mm, angulosos, sin vilano.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Santolina_viscosa_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Asteraceae',
+  s.taxon_genus = 'Santolina',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Santolina viscosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Valeriana menor',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Vive en roquedos o claros de bosque, en general sobre calizas, entre 300-2300 m',
+  s.description = 'Hierba perenne, hasta de 70 cm, con rizoma tuberoso, con tallos simples; hojas de 3-11 x 1-5 cm, ovadas o elípticas, enteras, crenadas o serradas, las inferiores largamente pecioladas; inflorescencia corimbiforme, con flores hermafroditas, con corola de 5-7 mm, rosada; aquenio de 2,7-3,9 mm, ovoide, de sección semicircular, con costillas laterales.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a junio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Valeriana_tuberosa.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Dipsacales',
+  s.taxon_family = 'Caprifoliaceae',
+  s.taxon_genus = 'Valeriana',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2015)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Valeriana tuberosa';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sapo partero bético',
+  s.kingdom = 'fauna',
+  s.family = 'Anfibio',
+  s.primary_habitat = 'Especie característica de zonas de montaña, aunque casi se encuentra a nivel del mar en barrancos de la costa malagueña',
+  s.description = 'Sapo pequeño (32,8 - 56,5 mm), de aspecto robusto. Tubérculos glandulares en el dorso de color blanco. Falanges cortas y anchas, con el extremo de los dedos algo espatulado. Con tres tubérculos metacarpales. Dorso finamente granulado, de color blanquecino o grisáceo con manchas oscuras. Pupila vertical.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Febrero a noviembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Alytes_dickhilleni.jpg?width=1280',
+  s.image_attribution = 'Benny Trapp (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Amphibia',
+  s.taxon_order = 'Anura',
+  s.taxon_family = 'Alytidae',
+  s.taxon_genus = 'Alytes',
+  s.iucn_global = 'EN — En peligro (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2002)',
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Alytes dickhilleni';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Chopera',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a septiembre',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Rosales',
+  s.taxon_family = 'Rhamnaceae',
+  s.taxon_genus = 'Atadinus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Atadinus pumilus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Almez',
+  s.kingdom = 'flora',
+  s.family = 'Árbol',
+  s.primary_habitat = 'En vegas y riberas de ríos, sobre suelos húmedos y profundos de aluvión',
+  s.description = 'Árbol caducifolio hasta de 30 m y amplia copa, con corteza muy lisa de color gris plateado, parecida a la piel de los elefantes. Ramas con frecuencia colgantes. Hojas 5-15 x 1,5-6 cm, simples, alternas, pecioladas, asimétricas en la base, lanceoladas, largamente acuminadas, aserradas, más o menos pelosas, con el haz verde oscuro y envés verde claro. Flores masculinas o hermafroditas, pequeñas y solitarias, poco vistosas, verdosas, con una sola envoltura floral y con un largo pedúnculo de 2-8 cm. Fruto de 8-12 mm, en drupa redondeada y con largo pedúnculo, color negro azulado en la madurez.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a enero',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Celtis_australis_(2).JPG?width=1280',
+  s.image_attribution = 'Marija Gajić (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Rosales',
+  s.taxon_family = 'Cannabaceae',
+  s.taxon_genus = 'Celtis',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Celtis australis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'achicoria falsa',
+  s.kingdom = 'flora',
+  s.family = 'Mata',
+  s.primary_habitat = 'Habita sobre acantilados y laderas de naturaleza margo-arenosa muy deleznables junto a la línea de costa, en el piso termomediterráneo de ombroclima seco',
+  s.description = 'Planta procumbente y multicaule, de base sufruticosa y hojas subcrasas, las inferiores liradopinnatipartidas y las superiores linear-lanceoladas. Tallos floríferos estriado-glandulosos, subáfilos y engrosados por debajo del capítulo. Brácteas del involucro oblongas, con apéndice semilunar y con 9-11 cilios. Aquenios de 4x2 mm, negruzcos, glabrescentes y con vilano de hasta 3 mm de longitud.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Cheirolophus_intybaceus_kz01.jpg?width=1280',
+  s.image_attribution = 'Krzysztof Ziarnek, Kenraiz (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Asteraceae',
+  s.taxon_genus = 'Cheirolophus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = 'CR — En peligro crítico (Lista Roja española, 2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Cheirolophus intybaceus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mayos',
+  s.kingdom = 'flora',
+  s.family = 'Orquídea',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Dactylorhiza_elata_003.jpg?width=1280',
+  s.image_attribution = 'Johan N (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Liliopsida',
+  s.taxon_order = 'Asparagales',
+  s.taxon_family = 'Orchidaceae',
+  s.taxon_genus = 'Dactylorhiza',
+  s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Dactylorhiza elata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Camín real',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Vive en lindes y orlas de encinar o pinar, o en formaciones de matorral, sobre sustratos básicos, hasta 1500 m',
+  s.description = 'Planta herbácea perenne, hasta de 50 cm, con hojas de olor anisado, compuestas, de raquis ligeramente alado, con unos 15 folíolos ovados, denticulados. Inflorescencia racemiforme, hasta con 15 flores pediceladas, con sépalos de unos 5 mm y pétalos hasta de 2 cm, uncinados, lanceolados, de color crema a morado con líneas oscuras longitudinales. Fruto en cápsula formado por cinco folículos, con endocarpo que se dobla y lanza las semillas de unos 5 mm, ovoides, negras.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Dictamnus_Hispanicus_(8755663794).jpg?width=1280',
+  s.image_attribution = 'Juanedc from Zaragoza, España (CC BY 2.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Sapindales',
+  s.taxon_family = 'Rutaceae',
+  s.taxon_genus = 'Dictamnus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Dictamnus hispanicus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Sosa jabonera',
+  s.kingdom = 'flora',
+  s.family = 'Planta suculenta',
+  s.primary_habitat = 'Saladares muy salinos con encharcamiento estacional',
+  s.description = 'Mata de tallos articulados y suculentos, con las ramas jóvenes agrupadas en apretados manojos que recuerdan a piñas diminutas, de donde le viene el nombre. Vive en los suelos más salinos del saladar, donde apenas compite con otras plantas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ramillas agrupadas en manojos con aspecto de piña
+Tallos gruesos y articulados de color verde grisáceo
+En las zonas más saladas y desnudas del saladar',
+  s.seasonality = 'Verano y otoño',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/611359925/original.jpg',
+  s.image_attribution = 'Xavier Rufray (CC BY-NC 4.0) · iNaturalist/GBIF · obs. EAU (revisar: existe en salinas de España)',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Caryophyllales',
+  s.taxon_family = 'Amaranthaceae',
+  s.taxon_genus = 'Halocnemum',
+  s.iucn_global = 'LC (amplia distribución circunmediterránea y saharo-arábiga)',
+  s.iucn_spain = 'CR — En peligro crítico (Lista Roja española, 2010)',
+  s.spain_status = 'No incluida en el LESRPE (RD 139/2011); propia de saladares prioritarios UE (HIC 1420)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Halocnemum strobilaceum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'compañón',
+  s.kingdom = 'flora',
+  s.family = 'Orquídea',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Enero a abril',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Barlia_robertiana9937.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Liliopsida',
+  s.taxon_order = 'Asparagales',
+  s.taxon_family = 'Orchidaceae',
+  s.taxon_genus = 'Himantoglossum',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Himantoglossum robertianum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ginepro Nano',
+  s.kingdom = 'flora',
+  s.family = 'Conífera',
+  s.primary_habitat = 'Es una especie de un amplio espectro ecológico',
+  s.description = 'El enebro común es un arbusto o pequeño arbolillo muy ramificado, de 1 a 2 m de altura, de hábito postrado o erecto, que puede alcanzar, en ocasiones, porte arbóreo hasta de 15 m (Amaral Franco, 1986). La corteza es de color marrón en el tronco y las ramas gruesas y se exfolia en placas y tiras estrechas. Las ramas pueden insertarse de forma ascendente o extendida. Las hojas son aciculares, tienen una longitud de 4 a 20 mm y se insertan de manera verticilada en grupos de tres. Presentan una banda estomática blanca en la cara abaxial, característica que facilita su diferenciación del enebro de la miera (J. oxycedrus). Esta especie es muy polimórfica y se han descrito varios taxones intraespecíficos, muchos de ellos simpátricos. No existe un consenso sobre la subdivisión de esta especie ya que los estudios genéticos son escasos. Algunos autores consideran que el hábito de crecimiento no es un rasgo discriminante adecuado, ya sea porque no han establecido su correspondencia con ciertos marcadores moleculares, ya porque se estime una gran influencia de factores ambientales sobre este rasgo. En la Península Ibérica, Amaral Franco (1986) describe tres subespecies teniendo en cuenta diferencias en ciertos rasgos de las acículas y en el porte. Juniperus communis es una especie dioica, aunque alguna vez se observan ejemplares con estructuras reproductoras de ambos sexos. Los conos masculinos se insertan en las axilas de las hojas situadas hacia la mitad de los ramillos del último crecimiento. Los conos femeninos, axilares en braquiblastos muy cortos (1 mm), están formados por dos verticilos de tres brácteas cada uno, siendo fértil el superior, que es el que se desarrolla completamente. Los gálbulos son globosos a ovoideos, de 4 a 13 mm de diámetro; inicialmente de color verde grisáceo, al madurar adquieren una tonalidad negra azulada, de aspecto ceroso. Cada gálbulo contiene de 1 a 3 semillas ovoides u oblongas, angulosas o redondeadas, de 4-5 mm de longitud (Amaral Franco, 1986; Farjon, 2005).',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Den_Italienske_Sti%2C_eneb%C3%A6r.JPG?width=1280',
+  s.image_attribution = 'Sebastian Nils (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Pinopsida',
+  s.taxon_order = 'Pinales',
+  s.taxon_family = 'Cupressaceae',
+  s.taxon_genus = 'Juniperus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2013)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Juniperus communis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Acelga salvaje',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'ive en costas rocosas y saladares, hasta 80 m',
+  s.description = 'Hierba perenne, con hojas inferiores 3,5-13 x 1,4-3 cm, oblanceoladas, que acaban en un mucrón, con escapo 8-35 cm; inflorescencia piramidal o redondeada arriba; flores 4-5 mm de diámetro, con cáliz 3,4-4,1 mm, muy delgado, y pétalos 5,5-6,5 mm, cuneiformes, de color rojizo.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Abril a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Touffe_de_Limonium_ovalifolium.jpg?width=1280',
+  s.image_attribution = 'Patrice78500 (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Caryophyllales',
+  s.taxon_family = 'Plumbaginaceae',
+  s.taxon_genus = 'Limonium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Limonium ovalifolium';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'anagálide de pantano',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a septiembre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Anagalis_tenella_''Studland''_1.JPG?width=1280',
+  s.image_attribution = 'Ghislain118 https://www.fleurs-des-montagnes.net (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Ericales',
+  s.taxon_family = 'Primulaceae',
+  s.taxon_genus = 'Lysimachia',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Lysimachia tenella';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Ononis aragonesa',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Mayo a julio',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Fabales',
+  s.taxon_family = 'Fabaceae',
+  s.taxon_genus = 'Ononis',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Ononis aragonensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'lengua de serpiente',
+  s.kingdom = 'flora',
+  s.family = 'Helecho',
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Ophioglossum_vulgatum_Saarland_01.jpg?width=1280',
+  s.image_attribution = 'Orchi (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Polypodiopsida',
+  s.taxon_order = 'Ophioglossales',
+  s.taxon_family = 'Ophioglossaceae',
+  s.taxon_genus = 'Ophioglossum',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Ophioglossum vulgatum';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Bayón',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Matorral alto, sabinares y laderas secas sobre suelo pedregoso',
+  s.description = 'Arbusto de ramas verdes y erguidas con hojas estrechas y coriáceas. Es hemiparásito: fabrica su propio alimento pero además conecta sus raíces a las de otras plantas para robarles agua y sales. Sus frutos son bayas rojas o anaranjadas muy vistosas.',
+  s.description_source = NULL,
+  s.identification_tips = 'Ramas verdes y erectas, de aspecto escobiforme
+Bayas rojo anaranjado brillantes al madurar
+Hojas estrechas, duras y de punta aguda',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Osyris_lanceolata.JPG?width=1280',
+  s.image_attribution = 'Xemenendura (CC BY-SA 4.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Santalales',
+  s.taxon_family = 'Santalaceae',
+  s.taxon_genus = 'Osyris',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Osyris lanceolata';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Cornical',
+  s.kingdom = 'flora',
+  s.family = 'Arbusto',
+  s.primary_habitat = 'Matorral cálido, laderas soleadas y barrancos de clima muy seco',
+  s.description = 'Arbusto de hojas estrechas y coriáceas y flores pequeñas con cinco pétalos de un pardo verdoso y aspecto aterciopelado. Sus frutos son dos vainas largas y curvas dispuestas en forma de cuerno, de donde le viene el nombre popular de cornical. Suelta látex al romperse.',
+  s.description_source = NULL,
+  s.identification_tips = 'Frutos en dos vainas curvas enfrentadas, como cuernos
+Látex blanco al partir una hoja o rama
+Flores pardo verdosas con aspecto de terciopelo',
+  s.seasonality = 'Primavera y verano (floración)',
+  s.image_url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/609975159/original.jpg',
+  s.image_attribution = 'Quentin Groom (CC0) · GBIF',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Gentianales',
+  s.taxon_family = 'Apocynaceae',
+  s.taxon_genus = 'Periploca',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Periploca angustifolia';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Alcornoque',
+  s.kingdom = 'flora',
+  s.family = 'Árbol',
+  s.primary_habitat = 'Preferentemente sobre suelos sueltos y permeables, en substratos silíceos',
+  s.description = 'Árbol hasta de 20-25 m, perennifolio, monoico, de corteza suberosa agrietada y muy gruesa formada por corcho. Tronco recto o tortuoso, copa bastante amplia e irregular. Hojas de 3-8 x 1,2-5,5 cm, alternas, elípticas, denticuladas o enteras, coriáceas, con 5-7 pares de nervios secundarios, color verde oscuro, brillantes, blanquecino-tomentosas por el envés, con pecíolo tomentoso de 6-15 mm. Inflorescencias masculinas de 4-8 cm, en amentos colgantes; las femeninas solitarias o en grupos de 2-5 flores, estas amarillentas. Fruto hasta de 45 x 20 mm, en glande o bellota, ovoide, color castaño, cubierto parcialmente por la cúpula con escamas inferiores cortas e imbricadas, y las medias y superiores terminadas en punta más o menos arqueada.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Quercus_suber_JPG1.jpg?width=1280',
+  s.image_attribution = 'Jean-Pol GRANDMONT (CC BY 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Fagales',
+  s.taxon_family = 'Fagaceae',
+  s.taxon_genus = 'Quercus',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. Lista de especies forestales e híbiridos artificiales (Real Decreto 289/2003, de 7 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Quercus suber';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Rana bermeja',
+  s.kingdom = 'fauna',
+  s.family = 'Anfibio',
+  s.primary_habitat = 'La rana bermeja presenta una actividad generalmente nocturna aunque en zonas de alta montaña es frecuente observar individuos activos durante al día',
+  s.description = 'Rana grande y de aspecto robusto. Las hembras son más grandes que los machos y pueden superar los 90 mm de longitud. Presenta dos manchas oscuras a ambos lados de la cabeza en forma de un antifaz. El hocico es redondeado y los ojos tienen la pupila horizontal. El tímpano es grande y tiene un tamaño 2/3 menor que el ojo. En las patas anteriores, el tercer dedo de la mano es siempre mayor que el resto. Las patas posteriores son más cortas y rechonchas que en otras ranas pardas. Las membranas interdigitales solo cubren entre 1/2 y 2/3 de la longitud de los dedos. Los dedos tienen nódulos desarrollados, en las patas anteriores presentan tres tubérculos palmares, más desarrollados en los machos. Tiene los pliegues dorsolaterales casi paralelos y próximos entre sí. La coloración en esta especie es muy variable, pudiendo encontrarse ejemplares completamente negros, grises, naranjas o incluso rojos. Asimismo presentan un patrón de manchas muy variado, desde un diseño completamente liso a ejemplares jaspeados y manchados. Muchos ejemplares presentan una mancha en forma de V invertida en la espalda. La coloración del vientre es más clara que el dorso, con matices blancos o amarillentos, pudiendo aparecer manchas de extensión variable.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = 'Marzo a octubre',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Common_frog.jpg?width=1280',
+  s.image_attribution = 'autor no indicado (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Amphibia',
+  s.taxon_order = 'Anura',
+  s.taxon_family = 'Ranidae',
+  s.taxon_genus = 'Rana',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo VI (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Rana temporaria';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Salvia blanca',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a julio',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Salvia_argentea.jpg?width=1280',
+  s.image_attribution = 'Nicolás Joseph Jacquin (Public domain) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Salvia',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Salvia argentea';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Senecio auricula subsp. auricula',
+  s.kingdom = 'flora',
+  s.family = 'Hierba',
+  s.primary_habitat = 'Vive sobre suelos yesosos en complejos lagunares, saladares y al pie de cerros o en bordes de cursos estacionales',
+  s.description = 'Hierba de tallo erecto, simple o ramificado en la inflorescencia. Roseta basal de hojas ovado-espatuladas, con 3-5 dientes en el ápice, glaucas, algo coriáceas, glabras o subglabras; las caulinares de 1- 3 cm, de oblongas a linear-lanceoladas. Corimbos con (1)2-8 capítulos, 25-35 mm de diámetro. Involucro 7-12 mm, subglabro. Flores liguladas 10-13, de 10-12 mm. Aquenios 4-5 mm, algo pelosos.',
+  s.description_source = 'EIDOS (IEPNB, MITECO), v_atributos_pliniancore, atributo «Descripción de la especie»',
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Asterales',
+  s.taxon_family = 'Asteraceae',
+  s.taxon_genus = 'Jacobaea',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Senecio auricula subsp. auricula';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'zamarrilla de Cartagena',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Marzo, abril, mayo, junio, agosto',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Teucrium_carthaginense88.jpg?width=1280',
+  s.image_attribution = 'Nanosanchez (CC BY-SA 3.0) · Wikimedia Commons',
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Teucrium',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2010)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Teucrium carthaginense';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tomillo',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Abril a agosto',
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Thymus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Thymus orospedanus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Helianthemum cinereum subsp. hieronymi',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Malvales',
+  s.taxon_family = 'Cistaceae',
+  s.taxon_genus = 'Helianthemum',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Helianthemum cinereum subsp. hieronymi';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Tomillo',
+  s.kingdom = 'flora',
+  s.family = NULL,
+  s.primary_habitat = NULL,
+  s.description = NULL,
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = NULL,
+  s.image_url = NULL,
+  s.image_attribution = NULL,
+  s.taxon_phylum = 'Tracheophyta',
+  s.taxon_class = 'Magnoliopsida',
+  s.taxon_order = 'Lamiales',
+  s.taxon_family = 'Lamiaceae',
+  s.taxon_genus = 'Thymus',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
+  s.iucn_spain = NULL,
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Thymus serpylloides subsp. gadorensis';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
+  s.common_name = 'Mito',
+  s.kingdom = 'fauna',
+  s.family = 'Ave',
+  s.primary_habitat = NULL,
+  s.description = 'Es fácil de identificar por la notable longitud de su cola (7-9 centímetros), que contrasta con su pequeño cuerpecillo, de cortas y redondeadas alas. En un primer vistazo resulta un ave con una apariencia general oscura. Sin embargo, observada con atención se aprecia una banda clara que recorre toda la cabeza, así como una pechuga grisácea con tintes rojizos, que contrasta con los tonos negros y grises del dorso, la cola y las alas.',
+  s.description_source = NULL,
+  s.identification_tips = '',
+  s.seasonality = 'Todo el año',
+  s.image_url = 'https://commons.wikimedia.org/wiki/Special:FilePath/Long-tailed_Tit_Aegithalos_caudatus.jpg?width=1280',
+  s.image_attribution = 'Andreas Trepte (CC BY-SA 2.5) · Wikimedia Commons',
+  s.taxon_phylum = 'Chordata',
+  s.taxon_class = 'Aves',
+  s.taxon_order = 'Passeriformes',
+  s.taxon_family = 'Aegithalidae',
+  s.taxon_genus = 'Aegithalos',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Aegithalos caudatus';
+
+UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.common_name = 'Ardilla roja',
   s.kingdom = 'fauna',
   s.family = 'Roedor',
@@ -63928,8 +74156,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Anseriformes',
   s.taxon_family = 'Anatidae',
   s.taxon_genus = 'Anas',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2004)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -64189,8 +74417,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Anura',
   s.taxon_family = 'Bufonidae',
   s.taxon_genus = 'Bufo',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2023)',
+  s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2002)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -64237,11 +74465,11 @@ Excrementos en montoncitos de bolitas cilíndricas',
   s.taxon_order = 'Artiodactyla',
   s.taxon_family = 'Bovidae',
   s.taxon_genus = 'Capra',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'EN — En peligro (Lista Roja española, 1992)',
-  s.spain_status = 'UICN España: EN (En peligro) (1992)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2007)',
+  s.spain_status = 'Anexo VI (Ley 42/2007, de 13 de diciembre)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Capra pyrenaica';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -64540,9 +74768,9 @@ Del tamaño de un puño, mucho menor que una perdiz',
   s.taxon_genus = 'Coturnix',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
   s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2004)',
-  s.spain_status = 'UICN España: DD (Datos insuficientes) (2004)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
-  s.rarity_basis = NULL
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Coturnix coturnix';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -65112,7 +75340,7 @@ Gálbulos redondos que pasan de verde a pardo rojizo',
   s.taxon_genus = 'Juniperus',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Juniperus phoenicea';
@@ -66348,8 +76576,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Regulidae',
   s.taxon_genus = 'Regulus',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -66540,11 +76768,11 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Dipsacales',
   s.taxon_family = 'Adoxaceae',
   s.taxon_genus = 'Sambucus',
-  s.iucn_global = 'EN — En peligro (Lista Roja mundial de la UICN, 2011)',
-  s.iucn_spain = 'CR — En peligro crítico (Lista Roja española, 2010)',
-  s.spain_status = 'CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Prioritaria (Ley 42/2007, de 13 de diciembre)',
-  s.rarity_score = 5,
-  s.rarity_basis = '{"categoria":"CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)',
+  s.iucn_spain = NULL,
+  s.spain_status = 'ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Sambucus nigra';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -66611,7 +76839,7 @@ Hojas divididas glaucas',
   s.taxon_order = 'Ranunculales',
   s.taxon_family = 'Papaveraceae',
   s.taxon_genus = 'Sarcocapnos',
-  s.iucn_global = 'NE',
+  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
@@ -66635,7 +76863,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_family = 'Asteraceae',
   s.taxon_genus = 'Jacobaea',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = 'DD — Datos insuficientes (Lista Roja española, 2010)',
+  s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2010)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -66824,7 +77052,7 @@ Forma bosquetes junto a saladares',
   s.taxon_genus = 'Tamarix',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)',
   s.iucn_spain = NULL,
-  s.spain_status = 'No catalogada en la Lista Roja de la Flora Vascular Española 2008',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Tamarix africana';
@@ -67933,8 +78161,8 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_order = 'Suliformes',
   s.taxon_family = 'Phalacrocoracidae',
   s.taxon_genus = 'Phalacrocorax',
-  s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
-  s.iucn_spain = NULL,
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
+  s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
   s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
@@ -68624,7 +78852,7 @@ Plumas de la punta del ala muy separadas, como dedos',
   s.taxon_order = 'Passeriformes',
   s.taxon_family = 'Corvidae',
   s.taxon_genus = 'Pyrrhocorax',
-  s.iucn_global = 'LC (Preocupación menor)',
+  s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2004)',
   s.spain_status = 'LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV',
   s.rarity_score = 2,

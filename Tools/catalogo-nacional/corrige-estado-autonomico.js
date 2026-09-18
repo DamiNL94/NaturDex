@@ -26,6 +26,21 @@
  * todos con el de Murcia sería inventarse la norma de la otra. Por eso cada corrección lleva su
  * `ccaa` y solo alcanza a los espacios cuyo `regionalCcaa` coincide.
  *
+ * Y por qué además existe `textoAnterior`
+ * ---------------------------------------
+ * Porque «por comunidad» es el alcance bueno cuando el error está en toda la comunidad, y demasiado
+ * ancho cuando está en UN espacio. El caso que lo estrena: once aves de **Sierra Espuña** cuyo
+ * `regionalStatus` no era una figura del catálogo sino «Ave de la ZEPA ES0000261 (Almenara, Moreras
+ * y Cabo Cope)» —el código de OTRO espacio, y además un formulario de la Red Natura 2000 no es una
+ * categoría del Catálogo Regional—, mientras los otros quince espacios las fichan bien. Aplicar eso
+ * por comunidad habría reescrito 111 textos correctos.
+ *
+ * No es un truco para acotar el alcance: es una guarda. Dice «corrige solo donde SIGA el texto que
+ * el cotejo demostró falso», y así una corrección no puede pisar lo que alguien ya arregló ni
+ * uniformar a la fuerza una redacción distinta pero cierta — que las hay: el catálogo tiene **once
+ * redacciones** de la misma negación, y la que escribe hoy el generador está en 461 fichas de las
+ * 2.577 que la llevan. Es opcional: sin el campo, el alcance es el de siempre.
+ *
  * Lo que NO hace
  * --------------
  * **No toca `rarityLocal` ni `rarityLocalBasis`.** El tramo se deriva de este texto, y quien lo
@@ -67,6 +82,7 @@ console.log(`Correcciones declaradas en ${rel(RUTA)}: ${correcciones.length}`);
 const porEspacio = new Map();   // slug → { entrada, cambios: [] }
 const yaEstaban = [];
 const fueraDeCcaa = [];
+const noCoincideTexto = [];
 
 for (const p of parkFiles()) {
   const pj = readJson(p.file);
@@ -78,7 +94,21 @@ for (const p of parkFiles()) {
       if (s.scientificName !== c.scientificName) continue;
       // La corrección habla de UNA comunidad: fuera de ella no dice nada.
       if (c.ccaa && s.regionalCcaa && s.regionalCcaa !== c.ccaa) { fueraDeCcaa.push({ slug: p.slug, sn: s.scientificName, ccaa: s.regionalCcaa }); continue; }
+      // El «ya está» va ANTES de la guarda de `textoAnterior`, o una corrección aplicada se
+      // contaría en el segundo pase como «tiene otro texto»: cierto, pero ilegible — el otro texto
+      // es justamente el que escribió esta entrada.
       if (s.regionalStatus === c.regionalStatus) { yaEstaban.push({ slug: p.slug, sn: s.scientificName }); continue; }
+      // `textoAnterior`: la corrección solo alcanza a las fichas que SIGUEN diciendo lo que el
+      // cotejo demostró falso. Sin esta guarda, una entrada escrita para arreglar un espacio pisa
+      // el texto de los otros quince, que puede decir lo mismo con otra redacción — y el catálogo
+      // tiene ONCE redacciones distintas de la misma negación («No incluida en el Catálogo Regional
+      // de especies protegidas» en 1.948 fichas, la frase que escribe hoy el generador en 461),
+      // así que eso no es una hipótesis. Es opcional: sin el campo, la corrección se comporta como
+      // siempre y alcanza a toda la comunidad.
+      if (c.textoAnterior != null && String(s.regionalStatus ?? '') !== c.textoAnterior) {
+        noCoincideTexto.push({ slug: p.slug, sn: s.scientificName, tiene: s.regionalStatus });
+        continue;
+      }
       cambios.push({ ficha: s, sn: s.scientificName, antes: s.regionalStatus, despues: c.regionalStatus });
     }
   }
@@ -97,6 +127,11 @@ for (const [slug, e] of porEspacio) {
 }
 
 console.log(`\nFichas a corregir: ${total} en ${porEspacio.size} espacio(s) · ya correctas: ${yaEstaban.length}`);
+if (noCoincideTexto.length) {
+  console.log(`Con \`textoAnterior\` declarado y otro texto en la ficha (no se tocan): ${noCoincideTexto.length}`);
+  for (const f of noCoincideTexto.slice(0, 10)) console.log(`   · ${f.slug} · ${f.sn}: ${JSON.stringify(String(f.tiene ?? '').slice(0, 80))}`);
+  if (noCoincideTexto.length > 10) console.log(`   … y ${noCoincideTexto.length - 10} más`);
+}
 if (fueraDeCcaa.length) {
   console.log(`Fuera del ámbito de la corrección (otra comunidad): ${fueraDeCcaa.length}`);
   for (const f of fueraDeCcaa) console.log(`   · ${f.slug} · ${f.sn} (${f.ccaa})`);

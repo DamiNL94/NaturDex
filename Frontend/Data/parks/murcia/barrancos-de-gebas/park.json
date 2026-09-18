@@ -679,7 +679,7 @@
         "genus": "Lygeum"
       },
       "iucnGlobal": "LC",
-      "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -1372,7 +1372,7 @@
         "family": "Corvidae",
         "genus": "Pyrrhocorax"
       },
-      "iucnGlobal": "LC (Preocupación menor)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV",
       "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
       "regionalCcaa": "Región de Murcia",
@@ -3385,15 +3385,15 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Grey_Wagtail.jpg?width=1280",
       "imageAttribution": "User:Kclama (CC SA 1.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 1,
+      "rarityScore": 2,
       "rarityBasis": {
-        "categoria": "Sin figura de protección",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 1,
+      "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "Sin figura de protección",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
@@ -3407,19 +3407,19 @@
         "family": "Motacillidae",
         "genus": "Motacilla"
       },
-      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": 10897,
+      "eidosTaxonId": 10898,
       "gbifSpeciesKey": 2490310,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 11,
       "visible": false,
       "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.",
-      "iucnSpain": "DD — Datos insuficientes (Lista Roja española, 2004)"
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 63,

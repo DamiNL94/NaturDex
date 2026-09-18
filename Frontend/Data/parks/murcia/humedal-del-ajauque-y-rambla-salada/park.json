@@ -490,7 +490,7 @@
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": null,
+      "eidosTaxonId": 8225,
       "gbifSpeciesKey": 4201784,
       "zepaSiteCode": null,
       "habitatIds": [
@@ -659,7 +659,7 @@
         "family": "Amaranthaceae",
         "genus": "Sarcocornia"
       },
-      "iucnGlobal": "No evaluada específicamente en la Lista Roja mundial de la UICN (especie común)",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "No incluida en la Lista Roja de la Flora Vascular Española (2008) ni en el LESRPE",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
@@ -997,8 +997,8 @@
         "family": "Amaranthaceae",
         "genus": "Anabasis"
       },
-      "iucnGlobal": "NE",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -1111,7 +1111,7 @@
         "genus": "Launaea"
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -1495,7 +1495,7 @@
         "genus": "Teucrium"
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -4302,12 +4302,12 @@
         "family": "Phalacrocoracidae",
         "genus": "Phalacrocorax"
       },
-      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": 10965,
+      "eidosTaxonId": 14032,
       "gbifSpeciesKey": 2481890,
       "zepaSiteCode": "ES0000195",
       "migratory": true,
@@ -4328,7 +4328,8 @@
       "habitatIds": [],
       "gbifOccurrences": 83,
       "visible": false,
-      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.",
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 87,
@@ -8139,15 +8140,15 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Grey_Wagtail.jpg?width=1280",
       "imageAttribution": "User:Kclama (CC SA 1.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 1,
+      "rarityScore": 2,
       "rarityBasis": {
-        "categoria": "Sin figura de protección",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 1,
+      "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "Sin figura de protección",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
@@ -8161,19 +8162,19 @@
         "family": "Motacillidae",
         "genus": "Motacilla"
       },
-      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": 10897,
+      "eidosTaxonId": 10898,
       "gbifSpeciesKey": 2490310,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 5,
       "visible": false,
       "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.",
-      "iucnSpain": "DD — Datos insuficientes (Lista Roja española, 2004)"
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 153,
@@ -8332,18 +8333,18 @@
         "family": "Alaudidae",
         "genus": "Calandrella"
       },
-      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": 12119,
+      "eidosTaxonId": 33007,
       "gbifSpeciesKey": 2490682,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 4,
       "visible": true,
-      "iucnSpain": "CR — En peligro crítico (Lista Roja española, 2004)"
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 156,

@@ -27,7 +27,7 @@
  * admite la Red List de la UICN directamente (`PROCEDENCIA-DE-CAMPOS.md:46`), que aquí no se
  * consulta porque necesita clave.
  *
- * De modo que el criterio no es «reescribir con EIDOS» sino cuatro casos, y solo tres escriben:
+ * De modo que el criterio no es «reescribir con EIDOS» sino cinco casos, y solo cuatro escriben:
  *
  *   A · REDACCIÓN — EIDOS trae fila y su código coincide con el de la ficha. Cambia cómo está
  *       escrito, no lo que dice. Es el grueso, y es la corrección que buscaba C3.
@@ -40,6 +40,11 @@
  *       «No evaluada» aquí sería borrar un dato por un silencio.
  *   D · HUECO — EIDOS no trae fila y la ficha **ya dice que no está evaluada**, con otras palabras.
  *       Se normaliza la frase: es la misma afirmación, escrita como manda `lib/uicn.js`.
+ *   E · HUECO LLENO — EIDOS trae fila y la ficha **dice que no está evaluada**. No es un desacuerdo:
+ *       es la simétrica de la D, y se escribe sin bandera. Se separó de la B el 2026-09-15, cuando el
+ *       reanclaje de identificadores dejó cinco de golpe —fichas que decían «no evaluada» porque se
+ *       le estaba preguntando a una subespecie sin fila mundial— y cuatro de ellas tenían una ficha
+ *       GEMELA en el catálogo, con el mismo taxonid y el otro nombre, que sí traía el valor bueno.
  *
  * Cómo resuelve cada ficha
  * ------------------------
@@ -116,7 +121,13 @@ function afirmaCategoria(texto) {
     if (LIMITE && hechos >= LIMITE) break;
     hechos++;
     const ficha = catalogo[sci];
-    const clave = `sci:${sci}`;
+    // La clave de la caché lleva DENTRO el identificador con el que se va a resolver, y eso no es
+    // un detalle de implementación: una entrada guarda a veces una NEGATIVA —«EIDOS lo da por
+    // sinónimo… se decide en la deuda nº 36»— y esa negativa solo vale mientras la ficha no tenga
+    // `eidosTaxonId`. El 2026-09-15 se rellenaron 329 identificadores del catálogo universal y las
+    // seis fichas bloqueadas siguieron bloqueadas: la caché las contestaba por nombre antes de que
+    // nadie mirase el id nuevo. Con el id en la clave, rellenarlo invalida la entrada él solo.
+    const clave = ficha.eidosTaxonId ? `id:${ficha.eidosTaxonId}` : `sci:${sci}`;
 
     let entrada = cache[clave];
     if (!entrada) {
@@ -154,7 +165,7 @@ function afirmaCategoria(texto) {
 
   // --- Clasificación --------------------------------------------------------------------------
 
-  const A = [], B = [], C = [], D = [], igual = [], sinResolver = [];
+  const A = [], B = [], C = [], D = [], E = [], igual = [], sinResolver = [];
 
   for (const r of resultados) {
     const { sci, actual, entrada } = r;
@@ -168,14 +179,28 @@ function afirmaCategoria(texto) {
     const codEidos = codigoDe(propuesta);
     const fila = { sci, actual, propuesta, codFicha, codEidos };
 
-    if (hayFila) (codFicha === codEidos ? A : B).push(fila);
+    /*
+     * La clase E existe porque la B mezclaba dos cosas que no son la misma.
+     *
+     * B es un DESACUERDO: la ficha dice «LC» y EIDOS dice «NT». Ahí hay dos afirmaciones y elegir
+     * pide criterio, por eso no se escribe sin `--con-categoria`. Pero cuando la ficha dice «no
+     * evaluada» y EIDOS SÍ trae evaluación, nadie está en desacuerdo con nadie: la ficha declara un
+     * hueco y la fuente lo llena. Es la simétrica exacta de la D, que ya se escribe sola.
+     *
+     * Se separó el 2026-09-15, cuando el reanclaje de identificadores dejó las cinco de golpe: las
+     * fichas decían «no evaluada» porque se le estaba preguntando a una subespecie que no tiene fila
+     * mundial. Meterlas en B las habría dejado esperando una decisión que no existe — y con el
+     * agravante de que cuatro de ellas tienen una ficha GEMELA en el catálogo, con el mismo taxonid
+     * y el otro nombre, que sí llevaba el valor bueno: el mismo taxón diciendo dos cosas.
+     */
+    if (hayFila) (codFicha === codEidos ? A : (afirmaCategoria(actual) ? B : E)).push(fila);
     else if (afirmaCategoria(actual)) C.push(fila);
     else D.push(fila);
   }
 
   // --- Escritura ------------------------------------------------------------------------------
 
-  const aplicar = CON_CATEGORIA ? [...A, ...B, ...D] : [...A, ...D];
+  const aplicar = CON_CATEGORIA ? [...A, ...B, ...D, ...E] : [...A, ...D, ...E];
   for (const f of aplicar) catalogo[f.sci].iucnGlobal = f.propuesta;
 
   // --- Informe --------------------------------------------------------------------------------
@@ -191,6 +216,7 @@ function afirmaCategoria(texto) {
   say(`B · CATEGORÍA — EIDOS devuelve OTRA categoría: ${B.length}  → ${CON_CATEGORIA ? 'se reescriben (--con-categoria)' : 'NO se tocan sin --con-categoria'}`);
   say(`C · GUARDA    — EIDOS no devuelve fila y la ficha afirma una categoría: ${C.length}  → NO se tocan`);
   say(`D · HUECO     — EIDOS no devuelve fila y la ficha ya dice «no evaluada»: ${D.length}  → se normaliza la frase`);
+  say(`E · HUECO LLENO — la ficha decía «no evaluada» y EIDOS SÍ trae evaluación: ${E.length}  → se escriben`);
   if (sinResolver.length) say(`      no se ha podido preguntar por ${sinResolver.length} ficha(s)`);
 
   if (B.length) {

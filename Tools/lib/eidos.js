@@ -58,13 +58,53 @@ const nameMatches = (eidosName, sci) => {
 /** Género + epíteto, para comparar el nombre aceptado de EIDOS con el de GBIF (que da el binomio). */
 const binomial = (s) => norm(s).split(' ').slice(0, 2).join(' ');
 
+/*
+ * EL RANGO QUE PIDE EL NOMBRE, y por qué hace falta preguntárselo.
+ *
+ * `nameMatches` empareja por prefijo para tolerar el autor, y eso tiene un efecto que no se ve:
+ * «Turdus merula» casa con «Turdus merula Linnaeus, 1758» (la especie, que es lo que se pedía) y
+ * casa IGUAL de bien con «Turdus merula subsp. cabrerae» (el mirlo canario, que es otro bicho). Las
+ * dos filas están aceptadas, así que `find` devolvía **la primera que EIDOS listara**, y EIDOS lista
+ * primero la subespecie. Nada fallaba: la llamada respondía `status: 'ok'` con un taxonid perfecto…
+ * de otro taxón, y de ahí colgaban después su estado legal, su Lista Roja y su taxonomía.
+ *
+ * Es la misma familia que el `|| filas[0]` de `commonName` (2026-08-29): una reserva razonable que
+ * convierte «no sé cuál» en «éste», y quien llama se cree la promesa de la firma. Se detectó el
+ * 2026-09-15 auditando el catálogo: SIETE taxones en 20 fichas llevaban el identificador de una
+ * subespecie —cuatro de ellas de Canarias o del norte de África— teniendo la especie dada de alta y
+ * aceptada en EIDOS, a un puesto de distancia en la misma respuesta.
+ *
+ * El desempate no se adivina: lo dice la propia fuente en `taxonrank`. Basta con inferir del nombre
+ * PEDIDO qué rango se está pidiendo y quedarse con la fila que lo tenga.
+ */
+const MARCAS_INFRA = /\b(subsp|ssp|var|subvar|f|forma|cv)\.?\s/i;
+function rangoPedido(sci) {
+  const s = norm(sci);
+  const palabras = s.split(' ').filter(Boolean);
+  if (MARCAS_INFRA.test(s + ' ')) {
+    if (/\bvar\.?\s/i.test(s + ' ')) return 'Variety';
+    if (/\b(f|forma)\.?\s/i.test(s + ' ')) return 'Form';
+    return 'Subspecies';
+  }
+  if (palabras.length >= 3) return 'Subspecies';   // trinomio sin marca: «Capra pyrenaica pyrenaica»
+  if (palabras.length === 2) return 'Species';
+  return 'Genus';
+}
+const rangoCoincide = (deLaFila, pedido) => !deLaFila || !pedido || norm(deLaFila) === norm(pedido);
+
 /**
  * Resuelve un nombre científico contra la nomenclatura de EIDOS.
  * @returns {Promise<{status:'ok'|'sinonimo'|'no-encontrada', taxonid:number|null, taxon:object|null,
- *                    acceptedName:string|null, synonymName:string|null}>}
+ *                    acceptedName:string|null, synonymName:string|null, rangoDistinto:boolean}>}
  *   'ok'          el nombre es el aceptado (o hay un aceptado bajo ese prefijo).
  *   'sinonimo'    el nombre está reclasificado; `acceptedName`/`taxonid` apuntan al aceptado real.
  *   'no-encontrada' EIDOS no conoce ese nombre (típico en flora poco tratada).
+ *
+ * `rangoDistinto` avisa de que lo que se devuelve NO es del rango que pedía el nombre —porque EIDOS
+ * no tiene ese rango aceptado bajo ese prefijo, como *Caralluma europaea*, cuyo único aceptado es
+ * una variedad—. Se devuelve igual, porque es la mejor respuesta que hay, pero el que llama tiene
+ * que poder distinguir «esto es lo que pediste» de «esto es lo único que hay»: escribir lo segundo
+ * en un `eidosTaxonId` sin decirlo es como se colaron las veinte fichas de 2026-09-15.
  */
 async function resolveTaxon(sci, opts = {}) {
   const select = 'select=taxonid,nameid,acceptednameid,name,taxonrank,nametype,genus,specificepithet,scientificnameauthorship,taxonomicgroup,origen';
@@ -72,9 +112,16 @@ async function resolveTaxon(sci, opts = {}) {
   if (!filas.length) return { status: 'no-encontrada', taxonid: null, taxon: null, acceptedName: null, synonymName: null };
 
   const aceptados = filas.filter(r => r.nametype === 'Aceptado/válido');
-  const exacto = aceptados.find(r => nameMatches(r.name, sci)) || aceptados[0];
+  // El rango que pide el nombre manda sobre el orden en que EIDOS devuelva las filas: ver la nota
+  // de `rangoPedido`. Sin este desempate, pedir una especie devuelve su subespecie si va delante.
+  const pedido = rangoPedido(sci);
+  const porNombre = aceptados.filter(r => nameMatches(r.name, sci));
+  const exacto = porNombre.find(r => rangoCoincide(r.taxonrank, pedido)) || porNombre[0] || aceptados[0];
   if (exacto) {
-    return { status: 'ok', taxonid: exacto.taxonid, taxon: exacto, acceptedName: exacto.name, synonymName: null };
+    return {
+      status: 'ok', taxonid: exacto.taxonid, taxon: exacto, acceptedName: exacto.name, synonymName: null,
+      rangoDistinto: !rangoCoincide(exacto.taxonrank, pedido),
+    };
   }
 
   // Solo figura como sinónimo: se resuelve el nombre aceptado real por `acceptednameid`.
@@ -164,5 +211,5 @@ async function commonName(idtaxon, opts = {}) {
 module.exports = {
   HOST, BASE_ESPECIE, BASE_CATALOGO, THROTTLE_MS,
   q, rows, resolveTaxon, conservationByScope, legalStatus, commonName,
-  norm, nameMatches, binomial, sleep,
+  norm, nameMatches, binomial, rangoPedido, rangoCoincide, sleep,
 };

@@ -1242,7 +1242,7 @@
         "genus": "Teucrium"
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -1305,7 +1305,7 @@
         "genus": "Teucrium"
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -1542,7 +1542,7 @@
         "genus": "Juniperus"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
-      "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -1602,7 +1602,7 @@
         "genus": "Launaea"
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -1903,8 +1903,8 @@
         "family": "Amaranthaceae",
         "genus": "Anabasis"
       },
-      "iucnGlobal": "NE",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": "Pliego de herbario, no fotografía de campo. De este taxón no existe ninguna imagen de campo con licencia libre: 0 observaciones con multimedia en iNaturalist, categoría vacía en Wikimedia Commons y, en GBIF, solo pliegos de herbario. Se descartó el del herbario MA (Real Jardín Botánico–CSIC), que sería de mejor procedencia, porque su servidor solo sirve el escaneo original de 24 MB, inasumible para una ficha. Se mantiene la copia local del pliego del Smithsonian (CC0, 800 kB).",
@@ -2026,7 +2026,7 @@
         "genus": "Notoceras"
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "No localizada en la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -5563,15 +5563,15 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bucanetes_githagineus_-Salinas_de_Janubio%2C_Lanzarote%2C_Spain-8.jpg?width=1280",
       "imageAttribution": "Frank Vassen from Brussels, Belgium (CC BY 2.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 2,
       "rarityBasis": {
-        "categoria": "Catalogado como Vulnerable en el Libro Rojo de las Aves de España (población ibérica escasa y localizada)",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 4,
+      "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "Catalogado como Vulnerable en el Libro Rojo de las Aves de España (población ibérica escasa y localizada)",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
@@ -5585,13 +5585,13 @@
         "family": "Fringillidae",
         "genus": "Bucanetes"
       },
-      "iucnGlobal": "LC",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)",
-      "spainStatus": "Catalogado como Vulnerable en el Libro Rojo de las Aves de España (población ibérica escasa y localizada)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre)",
       "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": 11363,
+      "eidosTaxonId": 11365,
       "gbifSpeciesKey": 2494394,
       "zepaSiteCode": "ES0000261",
       "migratory": false,
@@ -5993,7 +5993,7 @@
         "family": "Corvidae",
         "genus": "Pyrrhocorax"
       },
-      "iucnGlobal": "LC (Preocupación menor)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV",
       "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",

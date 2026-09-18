@@ -209,7 +209,7 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial, RD 139/2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'barrancos-de-gebas' AND sp.scientific_name = 'Monticola solitarius';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
-   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'barrancos-de-gebas' AND sp.scientific_name = 'Motacilla cinerea';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
@@ -693,7 +693,7 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'cabo-cope-puntas-calnegre' AND sp.scientific_name = 'Calandrella brachydactyla';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
-   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Catalogado como Vulnerable en el Libro Rojo de las Aves de España (población ibérica escasa y localizada)","ambito":"estatal","origen":"spainStatus del park.json"}'
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'cabo-cope-puntas-calnegre' AND sp.scientific_name = 'Bucanetes githagineus';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
@@ -753,7 +753,7 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'cabo-cope-puntas-calnegre' AND sp.scientific_name = 'Tichodroma muraria';
 
--- ── calblanque-monte-cenizas-pena-aguila ────────────────────────  204 ficha(s)
+-- ── calblanque-monte-cenizas-pena-aguila ────────────────────────  209 ficha(s)
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'calblanque-monte-cenizas-pena-aguila' AND sp.scientific_name = 'Pistacia lentiscus';
@@ -1366,8 +1366,23 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'calblanque-monte-cenizas-pena-aguila' AND sp.scientific_name = 'Tringa glareola';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'calblanque-monte-cenizas-pena-aguila' AND sp.scientific_name = 'Chroicocephalus genei';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'calblanque-monte-cenizas-pena-aguila' AND sp.scientific_name = 'Chroicocephalus ridibundus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'calblanque-monte-cenizas-pena-aguila' AND sp.scientific_name = 'Luscinia svecica';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'calblanque-monte-cenizas-pena-aguila' AND sp.scientific_name = 'Curruca conspicillata';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'calblanque-monte-cenizas-pena-aguila' AND sp.scientific_name = 'Curruca cantillans';
 
--- ── carrascoy-y-el-valle ────────────────────────────────────────  363 ficha(s)
+-- ── carrascoy-y-el-valle ────────────────────────────────────────  375 ficha(s)
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'carrascoy-y-el-valle' AND sp.scientific_name = 'Sus scrofa';
@@ -2457,6 +2472,42 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'carrascoy-y-el-valle' AND sp.scientific_name = 'Tichodroma muraria';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'carrascoy-y-el-valle' AND sp.scientific_name = 'Miniopterus schreibersii';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'carrascoy-y-el-valle' AND sp.scientific_name = 'Myotis blythii';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 5, sp.rarity_local_basis = '{"categoria":"CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'carrascoy-y-el-valle' AND sp.scientific_name = 'Myotis capaccinii';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'carrascoy-y-el-valle' AND sp.scientific_name = 'Myotis myotis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'carrascoy-y-el-valle' AND sp.scientific_name = 'Phlomis purpurea';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'carrascoy-y-el-valle' AND sp.scientific_name = 'Rhinolophus euryale';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'carrascoy-y-el-valle' AND sp.scientific_name = 'Rhinolophus ferrumequinum';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'carrascoy-y-el-valle' AND sp.scientific_name = 'Rhinolophus hipposideros';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'carrascoy-y-el-valle' AND sp.scientific_name = 'Scolopax rusticola';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'carrascoy-y-el-valle' AND sp.scientific_name = 'Accipiter gentilis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'carrascoy-y-el-valle' AND sp.scientific_name = 'Circus cyaneus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'carrascoy-y-el-valle' AND sp.scientific_name = 'Motacilla flava';
 
 -- ── cuatro-calas ────────────────────────────────────────────────  93 ficha(s)
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
@@ -2697,7 +2748,7 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 5, sp.rarity_local_basis = '{"categoria":"CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'cuatro-calas' AND sp.scientific_name = 'Chlidonias niger';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
-   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): Vulnerable","ambito":"autonómico","origen":"regionalStatus del park.json"}'
  WHERE pk.slug = 'cuatro-calas' AND sp.scientific_name = 'Hydrobates pelagicus';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Catálogo Español de Especies Amenazadas (CEEA): Vulnerable","ambito":"estatal","origen":"spainStatus del park.json"}'
@@ -3404,7 +3455,7 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND sp.scientific_name = 'Mergus serrator';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
-   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND sp.scientific_name = 'Motacilla cinerea';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
@@ -3898,7 +3949,7 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'humedal-del-ajauque-y-rambla-salada' AND sp.scientific_name = 'Hippolais polyglotta';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
-   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'humedal-del-ajauque-y-rambla-salada' AND sp.scientific_name = 'Motacilla cinerea';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
@@ -4042,7 +4093,7 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'humedal-del-ajauque-y-rambla-salada' AND sp.scientific_name = 'Tyto alba';
 
--- ── monte-arabi ─────────────────────────────────────────────────  68 ficha(s)
+-- ── monte-arabi ─────────────────────────────────────────────────  170 ficha(s)
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Sus scrofa';
@@ -4247,8 +4298,314 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Troglodytes troglodytes';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Acanthodactylus erythrurus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Alytes obstetricans';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Arctostaphylos uva-ursi';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Asplenium trichomanes';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Atractylis humilis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Blanus cinereus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Bupleurum fruticescens';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Coronella girondica';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Crocidura russula';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Eliomys quercinus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Epidalea calamita';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Erinaceus europaeus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Erodium saxatile';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Felis silvestris';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Fumana ericoides';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Fumana thymifolia';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Genetta genetta';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Helianthemum cinereum';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Hemidactylus turcicus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Hemorrhois hippocrepis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Macrochloa tenacissima';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Malpolon monspessulanus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Martes foina';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Meles meles';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Mustela nivalis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Myotis myotis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Natrix maura';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Natrix natrix';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Pelobates cultripes';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Phillyrea angustifolia';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Pipistrellus kuhlii';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Pipistrellus pipistrellus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Pistacia terebinthus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Plecotus austriacus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Podarcis hispanicus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Psammodromus hispanicus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Rhamnus lycioides';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Rhinolophus ferrumequinum';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Rhinolophus hipposideros';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Sideritis tragoriganum';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Sisymbrium fugax';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Suncus etruscus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Tadarida teniotis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Tamarix canariensis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Tarentola mauritanica';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Teucrium capitatum';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Teucrium libanitis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Teucrium pseudochamaepitys';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Thymus vulgaris';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Timon lepidus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Ulmus minor';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Umbilicus rupestris';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Viburnum tinus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Vipera latastei';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Zamenis scalaris';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Accipiter gentilis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Anas platyrhynchos';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Apus apus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Asio otus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Calandrella brachydactyla';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Caprimulgus ruficollis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Cecropis daurica';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Cercotrichas galactotes';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Circaetus gallicus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 5, sp.rarity_local_basis = '{"categoria":"Extinguida (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Circus aeruginosus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Circus cyaneus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Cuculus canorus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Curruca cantillans';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Curruca communis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Curruca hortensis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Delichon urbicum';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Falco peregrinus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Falco subbuteo';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Galerida cristata';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Hieraaetus pennatus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Hippolais polyglotta';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Hirundo rustica';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Lanius senator';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Luscinia megarhynchos';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Melanocorypha calandra';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Merops apiaster';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Milvus migrans';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Muscicapa striata';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Oenanthe hispanica';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Oenanthe oenanthe';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Oriolus oriolus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Otus scops';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Passer montanus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Pernis apivorus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Phylloscopus bonelli';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Phylloscopus collybita';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE, Anexo II (especie cinegética)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Streptopelia turtur';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Strix aluco';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Tachymarptis melba';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Turdus torquatus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Tyto alba';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Aristolochia pistolochia';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Guillonea scabra';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Jurinea pinnata';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Koeleria vallesiana';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Parietaria judaica';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'monte-arabi' AND sp.scientific_name = 'Sylvia sarda';
 
--- ── salinas-arenales-san-pedro-pinatar ──────────────────────────  354 ficha(s)
+-- ── salinas-arenales-san-pedro-pinatar ──────────────────────────  372 ficha(s)
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Chamaeleo chamaeleon';
@@ -4315,9 +4672,6 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Lagurus ovatus';
-UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
-   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
- WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Posidonia oceanica';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Psammodromus algirus';
@@ -5129,7 +5483,7 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 5, sp.rarity_local_basis = '{"categoria":"CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Chlidonias niger';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
-   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Motacilla cinerea';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE, Anexo II (especie cinegética)","ambito":"estatal","origen":"spainStatus del park.json"}'
@@ -5282,7 +5636,7 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Jynx torquilla';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
-   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Asio otus';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
@@ -5311,8 +5665,65 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Porzana porzana';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Lysimachia arvensis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Macrochloa tenacissima';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Malva multiflora';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Epidalea calamita';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Hyparrhenia hirta';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Oloptum miliaceum';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Pelophylax perezi';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Tamarix gallica';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Zamenis scalaris';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Curruca melanocephala';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Linaria cannabina';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Picus sharpei';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Curruca conspicillata';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Cecropis daurica';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Curruca cantillans';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Limbarda crithmoides';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Schenkia spicata';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Caroxylon vermiculatum';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar' AND sp.scientific_name = 'Otanthus maritimus';
 
--- ── sierra-de-el-carche ─────────────────────────────────────────  303 ficha(s)
+-- ── sierra-de-el-carche ─────────────────────────────────────────  365 ficha(s)
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Sus scrofa';
@@ -6222,8 +6633,194 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Curruca communis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Acanthodactylus erythrurus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Asplenium onopteris';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Blanus cinereus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Bufo bufo';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Cnephaeus isabellinus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Crocidura russula';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Ephedra fragilis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Epidalea calamita';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Erodium saxatile';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Guiraoa arvensis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Hemorrhois hippocrepis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Herniaria fruticosa';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Jasione foliosa';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Macroprotodon brevis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Malpolon monspessulanus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Miniopterus schreibersii';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Osyris alba';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Pelobates cultripes';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Pipistrellus kuhlii';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Pipistrellus pipistrellus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Pistacia terebinthus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Plecotus austriacus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Potentilla caulescens';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Psammodromus hispanicus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Sarcocapnos enneaphylla subsp. saetabensis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Tamarix canariensis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Thymus funkii';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Ulmus minor';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Vipera latastei';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Zamenis scalaris';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Saxicola rubicola';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Accipiter gentilis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Acrocephalus arundinaceus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Anthus campestris';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Burhinus oedicnemus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Circaetus gallicus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Coracias garrulus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Curruca cantillans';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Curruca hortensis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Emberiza cirlus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Ficedula hypoleuca';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Hippolais polyglotta';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Muscicapa striata';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Otus scops';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Passer montanus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Phoenicurus phoenicurus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Regulus regulus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Tachymarptis melba';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Tyto alba';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Aristida coerulescens';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Dictamnus hispanicus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Ephedra nebrodensis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Erica multiflora';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Guillonea scabra';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Hieracium loscosianum';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Hormathophylla spinosa';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Jurinea pinnata';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Limonium eugeniae';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Rhamnus pumila';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Thymus zygis subsp. gracilis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Emberiza citrinella';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-el-carche' AND sp.scientific_name = 'Sylvia sarda';
 
--- ── sierra-de-la-pila ───────────────────────────────────────────  219 ficha(s)
+-- ── sierra-de-la-pila ───────────────────────────────────────────  283 ficha(s)
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Sus scrofa';
@@ -6881,6 +7478,198 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Upupa epops';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Alytes obstetricans';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Arctostaphylos uva-ursi';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Blanus cinereus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Campanula rotundifolia subsp. hispanica';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Ceratonia siliqua';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Chaenorhinum rupestre';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Chamaerops humilis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Cnephaeus isabellinus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Colutea atlantica';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Colutea hispanica';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Erinacea anthyllis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Erodium saxatile';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Euphorbia squamigera';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Fritillaria lusitanica';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Miniopterus schreibersii';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Mustela putorius';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Nerium oleander';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Osyris lanceolata';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Osyris quadripartita';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Pelodytes punctatus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Pipistrellus kuhlii';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Pipistrellus pipistrellus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Pipistrellus pygmaeus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Sarcocapnos enneaphylla subsp. saetabensis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Saxifraga latepetiolata';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Sisymbrium fugax';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Suncus etruscus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Tamarix boveana';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Tamarix canariensis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Teucrium carolipaui';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Withania frutescens';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Anthus campestris';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Burhinus oedicnemus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Calandrella brachydactyla';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Caprimulgus europaeus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Caprimulgus ruficollis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Cisticola juncidis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Clamator glandarius';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Curruca cantillans';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Curruca conspicillata';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Delichon urbicum';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Falco subbuteo';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Ficedula hypoleuca';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Jynx torquilla';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Merops apiaster';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Oenanthe oenanthe';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Phoenicurus phoenicurus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Phylloscopus bonelli';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Phylloscopus trochilus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Prunella collaris';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Prunella modularis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Regulus regulus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Scolopax rusticola';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Turdus iliacus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Turdus pilaris';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Turdus torquatus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Tyto alba';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Arenaria aggregata';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Aster sedifolius';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Genista valentina';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Guillonea scabra';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Hormathophylla spinosa';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Macroprotodon cucullatus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-la-pila' AND sp.scientific_name = 'Sitta europaea';
 
 -- ── sierra-de-las-moreras ───────────────────────────────────────  66 ficha(s)
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
@@ -7022,7 +7811,7 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
  WHERE pk.slug = 'sierra-de-las-moreras' AND sp.scientific_name = 'Bubo bubo';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
-   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Catalogado como Vulnerable en el Libro Rojo de las Aves de España (población ibérica escasa y localizada)","ambito":"estatal","origen":"spainStatus del park.json"}'
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-de-las-moreras' AND sp.scientific_name = 'Bucanetes githagineus';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
@@ -7082,7 +7871,7 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-de-las-moreras' AND sp.scientific_name = 'Tichodroma muraria';
 
--- ── sierra-de-salinas ───────────────────────────────────────────  105 ficha(s)
+-- ── sierra-de-salinas ───────────────────────────────────────────  209 ficha(s)
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Pinus halepensis';
@@ -7398,8 +8187,320 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Troglodytes troglodytes';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Acanthodactylus erythrurus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Alytes obstetricans';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Anthyllis lagascana';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Arctostaphylos uva-ursi';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Blanus cinereus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Buxus sempervirens';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Celtis australis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Cnephaeus isabellinus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Colutea brevialata';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Coronella girondica';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Crocidura russula';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Eliomys quercinus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Erinaceus europaeus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Felis silvestris';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Genetta genetta';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Hemidactylus turcicus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Hemorrhois hippocrepis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Juniperus phoenicea';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Lepus granatensis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Linaria cavanillesii';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Macroprotodon brevis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Malpolon monspessulanus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Martes foina';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Meles meles';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Miniopterus schreibersii';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Mustela nivalis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Myotis blythii';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 5, sp.rarity_local_basis = '{"categoria":"CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listado de Especies Silvestres en Régimen de Protección Especial y del Catálogo Español de Especies Amenazadas. BOE 46, de 23 de febrero de 2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Myotis capaccinii';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Myotis emarginatus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Natrix maura';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Natrix natrix';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Oryctolagus cuniculus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Pelodytes punctatus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Pelophylax perezi';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 5, sp.rarity_local_basis = '{"categoria":"En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Phillyrea latifolia';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Pipistrellus kuhlii';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Pipistrellus pipistrellus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Pipistrellus pygmaeus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Pistacia terebinthus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Plecotus austriacus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Podarcis hispanicus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Populus alba';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Populus nigra var. nigra';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Poterium ancistroides';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Psammodromus hispanicus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Rhinolophus euryale';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Rhinolophus ferrumequinum';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Ruscus aculeatus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Sarcocapnos enneaphylla subsp. saetabensis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Suncus etruscus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Sus scrofa';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Tarentola mauritanica';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Teucrium franchetianum';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Teucrium libanitis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Timon lepidus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Ulmus minor';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Vipera latastei';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Vulpes vulpes';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Zamenis scalaris';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Accipiter gentilis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Alauda arvensis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Alcedo atthis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 5, sp.rarity_local_basis = '{"categoria":"En Peligro de Extinción (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Aquila fasciata';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Burhinus oedicnemus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Caprimulgus ruficollis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Cecropis daurica';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Cercotrichas galactotes';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Cettia cetti';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Cisticola juncidis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Clamator glandarius';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Columba oenas';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Curruca cantillans';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Listado de Especies Silvestres en Régimen de Protección Especial (LESRPE)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Curruca conspicillata';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Curruca hortensis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Dendrocopos major';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Emberiza schoeniclus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Falco columbarius';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Falco subbuteo';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Luscinia megarhynchos';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Melanocorypha calandra';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Oenanthe hispanica';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Oenanthe leucura';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Oenanthe oenanthe';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Otus scops';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Passer montanus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Pernis apivorus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Prunella collaris';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Prunella modularis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Regulus regulus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Sylvia borin';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Tachymarptis melba';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Turdus torquatus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Tyto alba';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Asplenium fontanum';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Dictamnus hispanicus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Erica multiflora';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Guillonea scabra';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Micromeria fruticosa';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Nyctalus lasiopterus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Rhamnus lycioides';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Rhamnus pumila';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Saxifraga corsica subsp. cossoniana';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Seseli montanum subsp. granatense';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-de-salinas' AND sp.scientific_name = 'Teucrium rivasii';
 
--- ── sierra-espuna ───────────────────────────────────────────────  188 ficha(s)
+-- ── sierra-espuna ───────────────────────────────────────────────  250 ficha(s)
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Pinus halepensis';
@@ -7413,13 +8514,13 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Vulpes vulpes';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
-   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): De interés especial (Anexo II: aprovechamiento sujeto a autorización)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Quercus coccifera';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Pistacia lentiscus';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
-   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
  WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Juniperus phoenicea';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
@@ -7470,16 +8571,16 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial","ambito":"autonómico","origen":"regionalStatus del park.json"}'
  WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Felis silvestris';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
-   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Genetta genetta';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
-   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Martes foina';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial","ambito":"autonómico","origen":"regionalStatus del park.json"}'
  WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Meles meles';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
-   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Epidalea calamita';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Catálogo Regional de Flora Silvestre Protegida de Murcia (Decreto 50/2003): Vulnerable","ambito":"autonómico","origen":"regionalStatus del park.json"}'
@@ -7803,7 +8904,7 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial","ambito":"autonómico","origen":"regionalStatus del park.json"}'
  WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Bubo bubo';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
-   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Burhinus oedicnemus';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
@@ -7824,7 +8925,7 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Galerida cristata';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
-   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Galerida theklae';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
@@ -7842,7 +8943,7 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"Directiva Aves 2009/147/CE (Red Natura 2000)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Oenanthe hispanica';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
-   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia: De interés especial","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Oenanthe leucura';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial","ambito":"autonómico","origen":"regionalStatus del park.json"}'
@@ -7964,6 +9065,192 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Curruca cantillans';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Helianthemum cinereum';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Psammodromus algirus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Thymus serpylloides';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Coronella girondica';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Natrix maura';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Tarentola mauritanica';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Timon lepidus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Arenaria suffruticosa';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Hemorrhois hippocrepis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Zamenis scalaris';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Chalcides bedriagai';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Geum sylvaticum';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Hemidactylus turcicus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Macroprotodon brevis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Oeosporangium pteridioides';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Pelodytes punctatus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Psammodromus hispanicus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Vipera latastei';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Achillea millefolium';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Amelanchier ovalis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Astragalus bourgaeanus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Cephalanthera rubra';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Chrysojasminum fruticans';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 5, sp.rarity_local_basis = '{"categoria":"En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Erica arborea';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 5, sp.rarity_local_basis = '{"categoria":"En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Fraxinus angustifolia';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Narcissus dubius';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Ophrys sphegodes';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Acanthodactylus erythrurus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Blanus cinereus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 5, sp.rarity_local_basis = '{"categoria":"En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Fumana fontanesii';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Himantoglossum hircinum';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Lonicera etrusca';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Medicago secundiflora';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Pipistrellus nathusii';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Pleurodeles waltl';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Populus nigra var. nigra';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Santolina viscosa';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Valeriana tuberosa';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Alytes dickhilleni';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Atadinus pumilus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Celtis australis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Cheirolophus intybaceus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Dactylorhiza elata';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Dictamnus hispanicus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Halocnemum strobilaceum';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Himantoglossum robertianum';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Juniperus communis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Limonium ovalifolium';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Lysimachia tenella';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Ononis aragonensis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Ophioglossum vulgatum';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Osyris lanceolata';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Periploca angustifolia';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 5, sp.rarity_local_basis = '{"categoria":"En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Quercus suber';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Rana temporaria';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Salvia argentea';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Senecio auricula subsp. auricula';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Teucrium carthaginense';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Thymus orospedanus';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Helianthemum cinereum subsp. hieronymi';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 4, sp.rarity_local_basis = '{"categoria":"Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Thymus serpylloides subsp. gadorensis';
+UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
+   SET sp.rarity_local = 2, sp.rarity_local_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+ WHERE pk.slug = 'sierra-espuna' AND sp.scientific_name = 'Aegithalos caudatus';
 
 -- ── sotos-y-bosques-de-ribera-de-canaverosa ─────────────────────  245 ficha(s)
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
@@ -8378,7 +9665,7 @@ UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 3, sp.rarity_local_basis = '{"categoria":"Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'
  WHERE pk.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND sp.scientific_name = 'Salix purpurea';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
-   SET sp.rarity_local = 5, sp.rarity_local_basis = '{"categoria":"CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del park.json"}'
+   SET sp.rarity_local = 1, sp.rarity_local_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del park.json"}'
  WHERE pk.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND sp.scientific_name = 'Sambucus nigra';
 UPDATE species sp JOIN parks pk ON pk.id = sp.park_id
    SET sp.rarity_local = 5, sp.rarity_local_basis = '{"categoria":"En Peligro de Extinción (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)","ambito":"autonómico","origen":"regionalStatus del park.json"}'

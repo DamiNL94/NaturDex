@@ -450,7 +450,11 @@
       "imageAttribution": "Thomas Holbach (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
       "rarityScore": 1,
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 1,
       "rarityLocalBasis": {
         "categoria": "Sin figura de protección",
@@ -467,12 +471,12 @@
         "family": "Bovidae",
         "genus": "Capra"
       },
-      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "UICN España: EN (En peligro) (1992)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
+      "spainStatus": "Anexo VI (Ley 42/2007, de 13 de diciembre)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": 24419,
+      "eidosTaxonId": 12055,
       "gbifSpeciesKey": 2441054,
       "zepaSiteCode": null,
       "habitatIds": [
@@ -480,7 +484,7 @@
       ],
       "gbifOccurrences": 4,
       "visible": true,
-      "iucnSpain": "EN — En peligro (Lista Roja española, 1992)"
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2007)"
     },
     {
       "id": 5,
@@ -1482,7 +1486,7 @@
         "family": "Corvidae",
         "genus": "Pyrrhocorax"
       },
-      "iucnGlobal": "LC (Preocupación menor)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV",
       "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
       "regionalCcaa": "Región de Murcia",
@@ -1633,19 +1637,19 @@
         "family": "Turdidae",
         "genus": "Turdus"
       },
-      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": 11725,
+      "eidosTaxonId": 11726,
       "gbifSpeciesKey": 2490719,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 8,
       "visible": false,
       "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.",
-      "iucnSpain": "DD — Datos insuficientes (Lista Roja española, 2004)"
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 27,
@@ -6721,15 +6725,15 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Frightened_Long-eared_Owl_(28045676729).jpg?width=1280",
       "imageAttribution": "Becky Matsubara from El Sobrante, California (CC BY 2.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 1,
+      "rarityScore": 2,
       "rarityBasis": {
-        "categoria": "Sin figura de protección",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 1,
+      "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "Sin figura de protección",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
@@ -6743,13 +6747,13 @@
         "family": "Strigidae",
         "genus": "Asio"
       },
-      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "iucnSpain": "DD — Datos insuficientes (Lista Roja española, 2004)",
-      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": 11920,
+      "eidosTaxonId": 11921,
       "gbifSpeciesKey": 2497306,
       "zepaSiteCode": null,
       "habitatIds": [],

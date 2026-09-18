@@ -1523,3 +1523,39 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     > **Las tres se fueron en la poda de la nº 41**, así que si alguna de las tres tenía razón, se ha
     > perdido una ficha protegida. El cotejo sigue haciendo falta: decide de qué lado caen otras 23
     > del mismo espacio.
+
+44. **Un `spainStatus` con una evaluación dentro cambia el tramo, y hay 11 redacciones de la misma
+    negación.** El 2026-09-15, al cerrar la cola 1 de la auditoría, se vieron dos cosas que la
+    auditoría no perseguía y que siguen abiertas:
+    > **(a) La escalera lee evaluaciones del texto, y las lee por accidente.** `lib/rareza.js` tiene
+    > una tabla `EVALUACIONES` que asigna tramo **5** a «CR/EN» y **4** a «VU» cuando los ve junto a
+    > «Lista Roja» o «Libro Rojo». Con las redacciones reales eso no discrimina lo que pretende:
+    > «UICN España: **CR** (En peligro crítico)» sale **5** porque la frase contiene «En peligro
+    > crítico», y «UICN España: **EN** (En peligro)» sale **1** porque no contiene ninguna de las dos
+    > anclas. Mismo hecho, dos tramos, por qué palabras acierte a llevar la frase. Las 21 fichas cuyo
+    > `spainStatus` era una evaluación ya están corregidas —el dato vive en `iucnSpain`, que es un
+    > campo normalizado—, así que hoy **la escalera no lo lee de ninguna parte**: `iucnSpain` no
+    > entra en `tramoDeTexto`. **DECIDIDO el 2026-09-15: no entra.** Una evaluación de la UICN no es
+    > una figura de protección, y `iucnSpain` ya se enseña aparte en la ficha. Queda medido por si
+    > alguna vez se reabre: leerla habría subido de tramo **180 fichas** (el halcón peregrino de 3 a 5
+    > en 14 espacios, la lechuza común de 1 a 5 en 9) y las destacadas de 346 a unas 500, porque
+    > `featured = rarityLocal >= 4`.
+    >
+    > **(b) Once redacciones para la misma negación.** 2.577 fichas dicen «No incluida en…» de once
+    > formas distintas, y solo **461** usan la que escribe hoy el generador (`build-species-n2.js`,
+    > desde `data/catalogos-regionales.json`); 1.948 conservan la genérica de antes del 2026-08-27 y
+    > 82 citan «el Decreto 50/2003» a secas, que además es el catálogo de **flora** aplicado a
+    > fauna. Todas afirman lo mismo y todas dan tramo 1, así que no hay dato mal — hay once maneras
+    > de decirlo en un campo que el usuario lee. Uniformarlo es un `--write` con `textoAnterior`
+    > (ver `corrige-estado-autonomico.js`), no un criterio nuevo.
+
+45. **`--refrescar-campos` conserva el valor viejo cuando la derivación nueva no trae el campo.**
+    `build-species-universal.js` aplica el parche con `if (f[campo] !== undefined)`, y eso mezcla dos
+    situaciones que no son la misma: «no he podido preguntar» (donde conservar es lo correcto) y «he
+    preguntado y la fuente no lo tiene» (donde conservar es quedarse con un dato que ya no sostiene
+    nadie). Se vio al reanclar los identificadores del 2026-09-15: cuatro fichas conservaron el
+    `iucnSpain` que habían heredado del taxón equivocado —*Sambucus nigra* seguía anunciando «CR en
+    España», que es del saúco de La Palma— porque el taxón bueno no tiene fila de ámbito España.
+    Se limpiaron a mano esas cuatro; **la causa sigue ahí**. Arreglarlo pide que la ficha construida
+    distinga «vacío porque la fuente calla» de «vacío porque no se pudo preguntar», que es la misma
+    distinción que ya hacen `lib/fenologia.js` y la deuda nº 38.

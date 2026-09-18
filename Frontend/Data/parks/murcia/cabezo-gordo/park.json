@@ -327,7 +327,11 @@
       "imageAttribution": "Javier martin (Public domain) · Wikimedia Commons",
       "coordinates": null,
       "rarityScore": 1,
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 4,
       "rarityLocalBasis": {
         "categoria": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
@@ -345,7 +349,7 @@
         "genus": "Helianthemum"
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "UICN España: EN (En peligro) (2010)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -764,19 +768,19 @@
         "family": "Bufonidae",
         "genus": "Bufo"
       },
-      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2023)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": 93827,
+      "eidosTaxonId": 16219,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": false,
       "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.",
-      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2002)"
     },
     {
       "id": 12,
@@ -820,15 +824,16 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Lista Roja de la Flora Vascular Española 2008: EN (En Peligro), criterio B1ab(i,iii,iv,v)c(ii,iii,iv)+2ab(i,iii,iv,v)c(ii,iii,iv)",
-      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": 80097,
+      "eidosTaxonId": 2866,
       "gbifSpeciesKey": 3578145,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true
+      "visible": true,
+      "iucnSpain": "EN — En peligro (Lista Roja española, 2010)"
     },
     {
       "id": 13,

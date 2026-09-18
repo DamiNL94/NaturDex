@@ -5,7 +5,8 @@
     "ccaa": "la comunidad de la que habla el texto. Un `regionalStatus` describe algo territorial, así que la corrección solo alcanza a los espacios de ESA comunidad (CLAUDE.md §2, la trampa nº 25)",
     "regionalStatus": "el texto que debe quedar, con la norma dentro: es de donde `rareza-legal.js` saca el tramo",
     "porque": "qué cotejo lo demuestra y qué decía antes la ficha",
-    "fuente": "la norma, citada para poder volver a comprobarlo"
+    "fuente": "la norma, citada para poder volver a comprobarlo",
+    "textoAnterior": "OPCIONAL. Si está, la corrección solo alcanza a las fichas cuyo `regionalStatus` sea EXACTAMENTE este texto. Se usa cuando el error está en un espacio concreto y los demás dicen lo mismo con otra redacción: sin la guarda, la corrección por comunidad pisaría quince textos correctos. El catálogo tiene once redacciones distintas de la misma negación, así que no es una precaución teórica."
   },
   "correcciones": [
     {
@@ -91,6 +92,110 @@
       "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "porque": "Clase G aparecida el 2026-09-15 al dar de alta las fichas de la auditoría, y con una raíz que conviene dejar escrita: el anexo del plan de Sierra de Salinas enumera *Rhamnus hispanorum*, que EIDOS resuelve como sinónimo de «Rhamnus lycioides L. subsp. lycioides» (taxonid 7731) — y es ESE taxonid, el de la subespecie nominal, el que lleva la fila del Decreto 50/2003 «Especies de interés especial». La ESPECIE, taxonid 7730, no tiene ninguna fila. El alta se escribió con el nombre del catálogo (*Rhamnus lycioides*) y se trajo consigo la figura legal del infrataxón, dejando una ficha en tramo 3 frente a siete en tramo 1. Se iguala a la baja: una ficha de la especie no puede afirmar la protección que EIDOS solo da a la subespecie, que es rellenar un campo de fuente con una suposición (regla nº 2). Si el Decreto 50/2003 —que no es legible desde aquí: no está en el BOE y el BORM no sirve el texto— protege al espino negro en general, la corrección es la contraria y alcanza a las ocho fichas.",
       "fuente": "EIDOS (IEPNB), v_estadolegal: taxonid 7730 (Rhamnus lycioides) sin filas · taxonid 7731 (R. lycioides subsp. lycioides ≡ R. hispanorum) con la fila del Decreto n.º 50/2003"
+    },
+    {
+      "scientificName": "Accipiter gentilis",
+      "ccaa": "Región de Murcia",
+      "textoAnterior": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "porque": "El `regionalStatus` de estas once fichas de Sierra Espuña no era una figura del catálogo autonómico sino una frase copiada de otro espacio: «Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)». La ES0000261 es la ZEPA de Cabo Cope y Sierra de las Moreras; la de Sierra Espuña es la ES0000173, y su propio volcado del formulario lo dice. Dos errores en la misma línea: el código es de otro espacio, y estar en un formulario de la Red Natura 2000 NO es una categoría del Catálogo Regional, que es lo que este campo guarda y de donde `rareza-legal.js` saca el tramo. Preguntado EIDOS por el taxonid de cada una (v_estadolegal, ámbito autonómico), NINGUNA tiene fila del catálogo de Murcia, y los otros quince espacios las fichan todas como «No incluida». Cola 2 de la auditoría del catálogo.",
+      "fuente": "EIDOS (IEPNB), v_estadolegal, ámbito Región de Murcia: sin fila para ninguno de los once taxones · Formulario Normalizado de Datos del sitio ES0000173 (Sierra Espuña), `out/sierra-espuna-rn2000-sitio.json`"
+    },
+    {
+      "scientificName": "Caprimulgus ruficollis",
+      "ccaa": "Región de Murcia",
+      "textoAnterior": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "porque": "El `regionalStatus` de estas once fichas de Sierra Espuña no era una figura del catálogo autonómico sino una frase copiada de otro espacio: «Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)». La ES0000261 es la ZEPA de Cabo Cope y Sierra de las Moreras; la de Sierra Espuña es la ES0000173, y su propio volcado del formulario lo dice. Dos errores en la misma línea: el código es de otro espacio, y estar en un formulario de la Red Natura 2000 NO es una categoría del Catálogo Regional, que es lo que este campo guarda y de donde `rareza-legal.js` saca el tramo. Preguntado EIDOS por el taxonid de cada una (v_estadolegal, ámbito autonómico), NINGUNA tiene fila del catálogo de Murcia, y los otros quince espacios las fichan todas como «No incluida». Cola 2 de la auditoría del catálogo.",
+      "fuente": "EIDOS (IEPNB), v_estadolegal, ámbito Región de Murcia: sin fila para ninguno de los once taxones · Formulario Normalizado de Datos del sitio ES0000173 (Sierra Espuña), `out/sierra-espuna-rn2000-sitio.json`"
+    },
+    {
+      "scientificName": "Falco tinnunculus",
+      "ccaa": "Región de Murcia",
+      "textoAnterior": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "porque": "El `regionalStatus` de estas once fichas de Sierra Espuña no era una figura del catálogo autonómico sino una frase copiada de otro espacio: «Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)». La ES0000261 es la ZEPA de Cabo Cope y Sierra de las Moreras; la de Sierra Espuña es la ES0000173, y su propio volcado del formulario lo dice. Dos errores en la misma línea: el código es de otro espacio, y estar en un formulario de la Red Natura 2000 NO es una categoría del Catálogo Regional, que es lo que este campo guarda y de donde `rareza-legal.js` saca el tramo. Preguntado EIDOS por el taxonid de cada una (v_estadolegal, ámbito autonómico), NINGUNA tiene fila del catálogo de Murcia, y los otros quince espacios las fichan todas como «No incluida». Cola 2 de la auditoría del catálogo.",
+      "fuente": "EIDOS (IEPNB), v_estadolegal, ámbito Región de Murcia: sin fila para ninguno de los once taxones · Formulario Normalizado de Datos del sitio ES0000173 (Sierra Espuña), `out/sierra-espuna-rn2000-sitio.json`"
+    },
+    {
+      "scientificName": "Hieraaetus pennatus",
+      "ccaa": "Región de Murcia",
+      "textoAnterior": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "porque": "El `regionalStatus` de estas once fichas de Sierra Espuña no era una figura del catálogo autonómico sino una frase copiada de otro espacio: «Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)». La ES0000261 es la ZEPA de Cabo Cope y Sierra de las Moreras; la de Sierra Espuña es la ES0000173, y su propio volcado del formulario lo dice. Dos errores en la misma línea: el código es de otro espacio, y estar en un formulario de la Red Natura 2000 NO es una categoría del Catálogo Regional, que es lo que este campo guarda y de donde `rareza-legal.js` saca el tramo. Preguntado EIDOS por el taxonid de cada una (v_estadolegal, ámbito autonómico), NINGUNA tiene fila del catálogo de Murcia, y los otros quince espacios las fichan todas como «No incluida». Cola 2 de la auditoría del catálogo.",
+      "fuente": "EIDOS (IEPNB), v_estadolegal, ámbito Región de Murcia: sin fila para ninguno de los once taxones · Formulario Normalizado de Datos del sitio ES0000173 (Sierra Espuña), `out/sierra-espuna-rn2000-sitio.json`"
+    },
+    {
+      "scientificName": "Jynx torquilla",
+      "ccaa": "Región de Murcia",
+      "textoAnterior": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "porque": "El `regionalStatus` de estas once fichas de Sierra Espuña no era una figura del catálogo autonómico sino una frase copiada de otro espacio: «Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)». La ES0000261 es la ZEPA de Cabo Cope y Sierra de las Moreras; la de Sierra Espuña es la ES0000173, y su propio volcado del formulario lo dice. Dos errores en la misma línea: el código es de otro espacio, y estar en un formulario de la Red Natura 2000 NO es una categoría del Catálogo Regional, que es lo que este campo guarda y de donde `rareza-legal.js` saca el tramo. Preguntado EIDOS por el taxonid de cada una (v_estadolegal, ámbito autonómico), NINGUNA tiene fila del catálogo de Murcia, y los otros quince espacios las fichan todas como «No incluida». Cola 2 de la auditoría del catálogo.",
+      "fuente": "EIDOS (IEPNB), v_estadolegal, ámbito Región de Murcia: sin fila para ninguno de los once taxones · Formulario Normalizado de Datos del sitio ES0000173 (Sierra Espuña), `out/sierra-espuna-rn2000-sitio.json`"
+    },
+    {
+      "scientificName": "Melanocorypha calandra",
+      "ccaa": "Región de Murcia",
+      "textoAnterior": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "porque": "El `regionalStatus` de estas once fichas de Sierra Espuña no era una figura del catálogo autonómico sino una frase copiada de otro espacio: «Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)». La ES0000261 es la ZEPA de Cabo Cope y Sierra de las Moreras; la de Sierra Espuña es la ES0000173, y su propio volcado del formulario lo dice. Dos errores en la misma línea: el código es de otro espacio, y estar en un formulario de la Red Natura 2000 NO es una categoría del Catálogo Regional, que es lo que este campo guarda y de donde `rareza-legal.js` saca el tramo. Preguntado EIDOS por el taxonid de cada una (v_estadolegal, ámbito autonómico), NINGUNA tiene fila del catálogo de Murcia, y los otros quince espacios las fichan todas como «No incluida». Cola 2 de la auditoría del catálogo.",
+      "fuente": "EIDOS (IEPNB), v_estadolegal, ámbito Región de Murcia: sin fila para ninguno de los once taxones · Formulario Normalizado de Datos del sitio ES0000173 (Sierra Espuña), `out/sierra-espuna-rn2000-sitio.json`"
+    },
+    {
+      "scientificName": "Muscicapa striata",
+      "ccaa": "Región de Murcia",
+      "textoAnterior": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "porque": "El `regionalStatus` de estas once fichas de Sierra Espuña no era una figura del catálogo autonómico sino una frase copiada de otro espacio: «Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)». La ES0000261 es la ZEPA de Cabo Cope y Sierra de las Moreras; la de Sierra Espuña es la ES0000173, y su propio volcado del formulario lo dice. Dos errores en la misma línea: el código es de otro espacio, y estar en un formulario de la Red Natura 2000 NO es una categoría del Catálogo Regional, que es lo que este campo guarda y de donde `rareza-legal.js` saca el tramo. Preguntado EIDOS por el taxonid de cada una (v_estadolegal, ámbito autonómico), NINGUNA tiene fila del catálogo de Murcia, y los otros quince espacios las fichan todas como «No incluida». Cola 2 de la auditoría del catálogo.",
+      "fuente": "EIDOS (IEPNB), v_estadolegal, ámbito Región de Murcia: sin fila para ninguno de los once taxones · Formulario Normalizado de Datos del sitio ES0000173 (Sierra Espuña), `out/sierra-espuna-rn2000-sitio.json`"
+    },
+    {
+      "scientificName": "Oenanthe hispanica",
+      "ccaa": "Región de Murcia",
+      "textoAnterior": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "porque": "El `regionalStatus` de estas once fichas de Sierra Espuña no era una figura del catálogo autonómico sino una frase copiada de otro espacio: «Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)». La ES0000261 es la ZEPA de Cabo Cope y Sierra de las Moreras; la de Sierra Espuña es la ES0000173, y su propio volcado del formulario lo dice. Dos errores en la misma línea: el código es de otro espacio, y estar en un formulario de la Red Natura 2000 NO es una categoría del Catálogo Regional, que es lo que este campo guarda y de donde `rareza-legal.js` saca el tramo. Preguntado EIDOS por el taxonid de cada una (v_estadolegal, ámbito autonómico), NINGUNA tiene fila del catálogo de Murcia, y los otros quince espacios las fichan todas como «No incluida». Cola 2 de la auditoría del catálogo.",
+      "fuente": "EIDOS (IEPNB), v_estadolegal, ámbito Región de Murcia: sin fila para ninguno de los once taxones · Formulario Normalizado de Datos del sitio ES0000173 (Sierra Espuña), `out/sierra-espuna-rn2000-sitio.json`"
+    },
+    {
+      "scientificName": "Streptopelia turtur",
+      "ccaa": "Región de Murcia",
+      "textoAnterior": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "porque": "El `regionalStatus` de estas once fichas de Sierra Espuña no era una figura del catálogo autonómico sino una frase copiada de otro espacio: «Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)». La ES0000261 es la ZEPA de Cabo Cope y Sierra de las Moreras; la de Sierra Espuña es la ES0000173, y su propio volcado del formulario lo dice. Dos errores en la misma línea: el código es de otro espacio, y estar en un formulario de la Red Natura 2000 NO es una categoría del Catálogo Regional, que es lo que este campo guarda y de donde `rareza-legal.js` saca el tramo. Preguntado EIDOS por el taxonid de cada una (v_estadolegal, ámbito autonómico), NINGUNA tiene fila del catálogo de Murcia, y los otros quince espacios las fichan todas como «No incluida». Cola 2 de la auditoría del catálogo.",
+      "fuente": "EIDOS (IEPNB), v_estadolegal, ámbito Región de Murcia: sin fila para ninguno de los once taxones · Formulario Normalizado de Datos del sitio ES0000173 (Sierra Espuña), `out/sierra-espuna-rn2000-sitio.json`"
+    },
+    {
+      "scientificName": "Tichodroma muraria",
+      "ccaa": "Región de Murcia",
+      "textoAnterior": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "porque": "El `regionalStatus` de estas once fichas de Sierra Espuña no era una figura del catálogo autonómico sino una frase copiada de otro espacio: «Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)». La ES0000261 es la ZEPA de Cabo Cope y Sierra de las Moreras; la de Sierra Espuña es la ES0000173, y su propio volcado del formulario lo dice. Dos errores en la misma línea: el código es de otro espacio, y estar en un formulario de la Red Natura 2000 NO es una categoría del Catálogo Regional, que es lo que este campo guarda y de donde `rareza-legal.js` saca el tramo. Preguntado EIDOS por el taxonid de cada una (v_estadolegal, ámbito autonómico), NINGUNA tiene fila del catálogo de Murcia, y los otros quince espacios las fichan todas como «No incluida». Cola 2 de la auditoría del catálogo.",
+      "fuente": "EIDOS (IEPNB), v_estadolegal, ámbito Región de Murcia: sin fila para ninguno de los once taxones · Formulario Normalizado de Datos del sitio ES0000173 (Sierra Espuña), `out/sierra-espuna-rn2000-sitio.json`"
+    },
+    {
+      "scientificName": "Upupa epops",
+      "ccaa": "Región de Murcia",
+      "textoAnterior": "Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "porque": "El `regionalStatus` de estas once fichas de Sierra Espuña no era una figura del catálogo autonómico sino una frase copiada de otro espacio: «Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope)». La ES0000261 es la ZEPA de Cabo Cope y Sierra de las Moreras; la de Sierra Espuña es la ES0000173, y su propio volcado del formulario lo dice. Dos errores en la misma línea: el código es de otro espacio, y estar en un formulario de la Red Natura 2000 NO es una categoría del Catálogo Regional, que es lo que este campo guarda y de donde `rareza-legal.js` saca el tramo. Preguntado EIDOS por el taxonid de cada una (v_estadolegal, ámbito autonómico), NINGUNA tiene fila del catálogo de Murcia, y los otros quince espacios las fichan todas como «No incluida». Cola 2 de la auditoría del catálogo.",
+      "fuente": "EIDOS (IEPNB), v_estadolegal, ámbito Región de Murcia: sin fila para ninguno de los once taxones · Formulario Normalizado de Datos del sitio ES0000173 (Sierra Espuña), `out/sierra-espuna-rn2000-sitio.json`"
+    },
+    {
+      "scientificName": "Merops apiaster",
+      "ccaa": "Región de Murcia",
+      "textoAnterior": "Fauna protegida; estival que cría en taludes de rambla",
+      "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
+      "porque": "Clase D de `npm run especies:legal` («el texto no es un estado legal»), y el único caso que quedaba. El `regionalStatus` del abejaruco en Sierra Espuña era prosa del piloto —«Fauna protegida; estival que cría en taludes de rambla»—: ni cita una figura del Catálogo Regional ni puede leerla la escalera de `lib/rareza.js`, así que la ficha se quedaba sin tramo. Preguntado EIDOS por su taxonid 10738, no hay ninguna fila del catálogo de Murcia (sí LESRPE en el ámbito nacional, que es lo que guarda `spainStatus`), y los otros once espacios lo fichan como «No incluida». La fenología —que cría en taludes de rambla— no se pierde: no es estado legal y su sitio son `seasonality` y la descripción.",
+      "fuente": "EIDOS (IEPNB), v_estadolegal, taxonid 10738, ámbito Región de Murcia: sin filas"
+    },
+    {
+      "scientificName": "Caralluma europaea",
+      "ccaa": "Región de Murcia",
+      "textoAnterior": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "porque": "Las tres fichas NEGABAN por escrito una protección que el Decreto 50/2003 sí da. La auditoría lo había anotado y no se podía ejecutar porque el `eidosTaxonId` de la ficha era el **80097**, que en EIDOS es «Caralluma europaea var. maroccana» —una VARIEDAD marroquí, otro taxón—, y por ese identificador EIDOS no devuelve ninguna norma. Reanclada al 2866 el 2026-09-15 (que es el taxón bajo el que EIDOS archiva el binomio), v_estadolegal devuelve «Vulnerable — Decreto n.º 50/2003» y v_estadoconservacion «EN (2010)» de ámbito España. Sube de tramo local 1 a 4, así que pasa a destacable. Colas 1 y 2 de la auditoría del catálogo, últimas pendientes.",
+      "fuente": "EIDOS (IEPNB), v_estadolegal, taxonid 2866, ámbito Región de Murcia · Decreto n.º 50/2003, de 30 de mayo (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia)"
     }
   ]
 }

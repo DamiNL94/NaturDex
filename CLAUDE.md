@@ -68,7 +68,7 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
    deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).
 
-## 2. Treinta cosas que fallan EN VERDE
+## 2. Treinta y tres cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
@@ -336,6 +336,63 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   piquirroja el texto bueno es el del espacio que va solo. La regla general: **un campo local que
   describe algo territorial necesita su propia coherencia, agrupada por el territorio del que
   habla** — ni por parque ni globalmente.
+- **Pedir una especie y que te den su SUBESPECIE, con `status: 'ok'` y un identificador impecable.**
+  `resolveTaxon()` es «el corazón del modelo de datos» y empareja por prefijo para tolerar el autor
+  que EIDOS pega al nombre. Con eso, «Turdus merula» casa con la especie **y** con «Turdus merula
+  subsp. *cabrerae*» —el mirlo canario—; las dos están aceptadas, y `find` se quedaba con **la que
+  EIDOS listara primero**, que es la subespecie. De ese identificador colgaban después la Lista Roja,
+  la figura legal y la taxonomía de la ficha. Medido el 2026-09-15 sobre el catálogo entero: **24
+  taxones, 49 fichas**, y las 24 en la misma dirección. El saúco de Cañaverosa anunciaba «CEEA: En
+  peligro de extinción · Prioritaria» y un `rarityScore` de **5** porque llevaba las credenciales del
+  ***saúco de La Palma***; el paíño de Cuatro Calas decía «sin figura de protección estatal» teniendo
+  **LESRPE y Anexo IV**; la cabra montés publicaba el «EN (1992)» de la subespecie **extinta** del
+  Pirineo. Tapado en `lib/eidos.js` con el desempate por **rango** —el que pide el nombre contra el
+  `taxonrank` de la fuente— y reanclado con `npm run taxones:nomenclatura -- --online --write`. La
+  regla general: **un emparejamiento tolerante necesita un desempate, o la tolerancia se convierte en
+  una elección a ciegas que nadie ve.**
+- **Un identificador equivocado APAGA el detector de duplicados.** `scan-taxones-duplicados.js`
+  —`npm run taxones:duplicados`, que sale con código 1 mientras queden— busca el mismo
+  `eidosTaxonId` bajo dos nombres científicos. Salía en verde, y no porque no hubiera duplicados:
+  porque las fichas del nombre viejo apuntaban a una **subespecie** y las del nombre aceptado a la
+  especie, así que los identificadores no coincidían y no había nada que comparar. Al reanclarlos
+  (2026-09-15) aparecieron **siete pares**, todos reales y ninguno visible hasta entonces: *Bufo
+  bufo*/*B. spinosus*, *Anas strepera*/*Mareca strepera*, *Scilla autumnalis*/*Prospero autumnale*,
+  *Podarcis hispanica*/*P. hispanicus*, *Rhamnus pumila*/*Atadinus pumilus*, *Regulus
+  ignicapillus*/*R. ignicapilla* y *Dactylis glomerata*/*D. g.* subsp. *hispanica*. La lección:
+  **una comprobación que cruza por un identificador no puede validar ese identificador**, así que su
+  verde vale exactamente lo que valga el campo con el que cruza. Ninguno es visible dos veces en el
+  mismo espacio —en todos los pares la ficha del nombre viejo está oculta y vacía—, así que son
+  higiene de catálogo y no un fallo que vea el usuario; resolverlos es un renombrado.
+- **Una caché puede guardar lo que la fuente DICE, nunca la clave con la que se le vuelve a
+  preguntar.** Y tampoco una NEGATIVA indexada por el nombre: `lista-roja-espana.js` y
+  `lista-roja-mundial.js` guardaban «EIDOS lo da por sinónimo: se decide en la deuda nº 36» bajo la
+  clave del nombre científico, y esa respuesta solo vale mientras la ficha no tenga `eidosTaxonId`.
+  Rellenados 329 identificadores, las seis fichas bloqueadas siguieron bloqueadas: la caché las
+  contestaba antes de que nadie mirase el id nuevo. Desde el 2026-09-15 la clave lleva el id dentro. El primer `--write` del reanclaje de arriba escribió en cinco fichas de *Capra
+  pyrenaica* el taxonid que la caché de `out/nomenclatura-autoridades.json` daba por bueno para
+  «Capra pyrenaica H. R. Schinz, 1838». **EIDOS lo había renumerado**: ese número es hoy ***Rupicapra
+  pyrenaica***, el rebeco. Cinco cabras monteses apuntando a otro género, sin un solo aviso, mientras
+  se arreglaba exactamente esa avería. Un `taxonid` es lo único que la fuente puede renumerar, así
+  que ahora se **vuelve a preguntar en vivo** antes de escribirlo, y hay una clase nueva
+  (`id_de_otro_taxon`) que caza al que ya esté escrito: B2 miraba el rango y B1 el nombre, y por el
+  hueco de en medio cabía lo peor —un identificador de rango especie, aceptado, **de otra especie**—.
+- **`npm run red:check` puede dar por CERRADA una fuente que está abierta.** Sondeaba la **raíz** de
+  cada host con seis segundos de límite, y la portada de `iepnb.gob.es` —la de personas— tarda unos
+  diez; su API contesta en 100 ms. Resultado: el informe declaraba **EIDOS cerrado**, que es la fuente
+  principal del proyecto, y la sesión se pone a buscar cómo trabajar sin red. Un falso CERRADO no se
+  parece a un fallo: se parece a una limitación del entorno, y viene con un informe en rojo que lo
+  respalda. Cada host admite desde el 2026-09-15 una **ruta de sonda**, para preguntar por lo que de
+  verdad se va a llamar.
+- **Un `spainStatus` que no contiene ni un solo hecho legal, y la escalera de rareza leyéndolo
+  igual.** El campo guarda la **figura de protección estatal**, y en 21 fichas guardaba otra cosa:
+  una evaluación de la Lista Roja («UICN España: EN (En peligro) (2010)») o una negación sobre ella
+  («No catalogada en la Lista Roja de la Flora Vascular Española 2008»). No es un matiz de redacción,
+  porque de ese texto sale el tramo: «UICN España: **CR** (En peligro crítico)» da **5** y «UICN
+  España: **EN** (En peligro)» da **1**, según qué palabras acierte a contener — el mismo hecho con
+  dos tramos por un accidente de expresión. Y en dos fichas el texto **negaba** una figura que EIDOS
+  sí da: la sabina negral, en diez espacios, decía «no catalogada» teniendo tres normas estatales.
+  Corregido el 2026-09-15 con `--refrescar-campos spainStatus`. Lo que la evaluación necesitaba ya
+  existía y se llama `iucnSpain`.
 
 ---
 

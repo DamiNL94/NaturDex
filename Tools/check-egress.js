@@ -26,6 +26,10 @@ const { flag } = require('./lib/cli');
 // Los hosts salen de lo que llama de verdad el código de Tools/ y Backend/. Si añades una fuente
 // nueva a una herramienta, añádela aquí: es el único sitio donde está escrito de qué depende el
 // proyecto para funcionar con red.
+//
+// Cada entrada es `[host, para qué sirve]` y admite un TERCER elemento opcional: la ruta por la que
+// preguntar cuando la raíz del host no representa al servicio que de verdad se usa. Sin proxy la
+// sonda va a esa ruta, así que se mide lo que va a llamar la herramienta y no la portada.
 const HOSTS = [
   ['registry.npmjs.org',           'npm install (raíz y AdminPanel)'],
   ['pypi.org',                     'utilidades puntuales de Python'],
@@ -44,7 +48,14 @@ const HOSTS = [
   // que esta política de egreso rechaza con un 403 al CONNECT — y por eso 366 fichas de ave llevaban
   // una nota pidiendo contrastar contra una fuente inalcanzable. No hace falta abrir la EEA: el dato
   // es nacional y lo publica MITECO en este mismo host (2026-08-15).
-  ['iepnb.gob.es',                 'EIDOS (taxonomía, UICN y estado legal) y Red Natura 2000 (especies oficiales por sitio)'],
+  //
+  // TERCER ELEMENTO = ruta de sonda, y esta entrada es el motivo de que exista. La raíz de
+  // `iepnb.gob.es` es el PORTAL para personas y tarda ~10 s en contestar; la API contesta en 100 ms.
+  // Preguntando por la raíz con un límite de 6 s este informe daba EIDOS por **cerrado** teniendo la
+  // fuente principal del proyecto perfectamente disponible (2026-09-15). Es el peor error que puede
+  // cometer un comprobador: un falso CERRADO no se nota como un fallo, se nota como una sesión que
+  // renuncia sola a la mitad del trabajo y lo justifica enseñando un informe en rojo.
+  ['iepnb.gob.es',                 'EIDOS (taxonomía, UICN y estado legal) y Red Natura 2000 (especies oficiales por sitio)', '/api/especie/v_nombrescomunes?limit=1'],
   ['geoportal.imida.es',           'límites oficiales de los espacios (n1:build, n1:refina)'],
   // La ÚNICA fuente que consulta el backend en vivo: todo lo demás de esta lista lo llama el
   // tooling. Cerrado, se caen dos cosas distintas: `tiempo:municipios` no puede resolver el código
@@ -176,11 +187,11 @@ function porConnect(host) {
 // un HEAD de la raíz se marca como cerrado igualmente: puede ser del servicio, pero lo habitual es
 // que sea una intercepción, y en cualquiera de los dos casos la herramienta que lo necesita no va a
 // funcionar. Se dice "probable" porque no hay forma de distinguirlo desde fuera.
-async function directo(host) {
+async function directo(host, ruta) {
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
   try {
-    const res = await fetch('https://' + host + '/', { method: 'HEAD', redirect: 'manual', signal: ctrl.signal });
+    const res = await fetch('https://' + host + (ruta || '/'), { method: 'HEAD', redirect: 'manual', signal: ctrl.signal });
     if (res.status === 403) return { ok: false, detalle: 'HTTP 403 (probable denegación de política)' };
     return { ok: true, detalle: 'HTTP ' + res.status };
   } catch (err) {
@@ -190,10 +201,10 @@ async function directo(host) {
   }
 }
 
-const alcanzable = host => (proxy ? porConnect(host) : directo(host));
+const alcanzable = (host, ruta) => (proxy ? porConnect(host) : directo(host, ruta));
 
 async function main() {
-  const resultados = await Promise.all(HOSTS.map(async ([host, para]) => ({ host, para, ...await alcanzable(host) })));
+  const resultados = await Promise.all(HOSTS.map(async ([host, para, ruta]) => ({ host, para, ...await alcanzable(host, ruta) })));
 
   if (flag('allowlist')) {
     // Para pegar en los ajustes del entorno: solo lo que hoy está cerrado.

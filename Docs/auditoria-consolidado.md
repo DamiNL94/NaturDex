@@ -27,11 +27,11 @@ espacio donde está fichado, y ésa es toda la diferencia.
 
 | estado | correcciones | qué significa |
 |---|---|---|
+| `tocado` | 321 | el valor cambió desde la auditoría |
 | `hecho` | 283 | el alta, la baja o el hueco ya está |
-| `tocado` | 282 | el valor cambió desde la auditoría |
-| `pendiente` | 138 | el dato sigue exactamente como la auditoría lo vio |
+| `pendiente` | 97 | el dato sigue exactamente como la auditoría lo vio |
 | `resuelto` | 21 | el campo ya no existe en la ficha |
-| `no comparable` | 7 | la auditoría anotó ahí una frase, no el valor: hay que mirarlo a mano |
+| `no comparable` | 9 | la auditoría anotó ahí una frase, no el valor: hay que mirarlo a mano |
 | `parcial` | 2 | tocado en unos espacios y pendiente en otros |
 
 > **«Pendiente» incluye lo que se dejó a propósito.** Esta comprobación mira el dato, no la
@@ -44,12 +44,12 @@ espacio donde está fichado, y ésa es toda la diferencia.
 
 | cola | correcciones | pendientes |
 |---|---|---|
-| correcciones UNIVERSALES | 303 | **12** |
-| correcciones LOCALES | 30 | **21** |
+| correcciones UNIVERSALES | 303 | **0** |
+| correcciones LOCALES | 30 | **0** |
 | RENOMBRADOS | 8 | **8** |
 | ALTAS de ficha | 288 | **26** |
 | BAJAS de ficha | 3 | **2** |
-| DECISIONES, no trabajo | 83 | **73** |
+| DECISIONES, no trabajo | 83 | **65** |
 | Resueltos por la retirada del campo | 21 | **0** |
 
 > La suma puede pasar del total: una corrección sale en dos colas cuando la auditoría la
@@ -58,7 +58,7 @@ espacio donde está fichado, y ésa es toda la diferencia.
 
 ## Cola 1 · correcciones UNIVERSALES
 
-**303 corrección(es)** · 12 pendiente(s). Se corrigen **una vez** en `Tools/catalogo-nacional/data/especies-universal.json` y se reparten con `npm run species:apply -- --sql`. Corregirlas en el `park.json` las revierte el siguiente pase (trampa nº 4 del CLAUDE.md).
+**303 corrección(es)** · 0 pendiente(s). Se corrigen **una vez** en `Tools/catalogo-nacional/data/especies-universal.json` y se reparten con `npm run species:apply -- --sql`. Corregirlas en el `park.json` las revierte el siguiente pase (trampa nº 4 del CLAUDE.md).
 
 | taxón | campo | espacios | estado | lo que la auditoría vio | lo que dice la fuente |
 |---|---|---|---|---|---|
@@ -93,7 +93,7 @@ espacio donde está fichado, y ésa es toda la diferencia.
 | *Oenanthe oenanthe* | `iucn_global` | 10 | tocado | LC (Preocupación menor) (evaluación UICN 2018) | LC — Preocupación menor (Lista Roja mundial de la UICN, 2018) |
 | *Ptyonoprogne rupestris* | `iucn_global` | 10 | tocado | LC | LC — Preocupación menor (Lista Roja mundial de la UICN, 2017) |
 | *Pyrrhocorax pyrrhocorax* | `taxon_order+taxon_family` | 10 | hecho | — | EIDOS v_taxonomia: order="Passeriformes" · family="Corvidae" |
-| *Pyrrhocorax pyrrhocorax* | `iucn_global` | 10 | pendiente | LC (Preocupación menor) | LC — Preocupación menor (Lista Roja mundial de la UICN, 2016) |
+| *Pyrrhocorax pyrrhocorax* | `iucn_global` | 10 | tocado | LC (Preocupación menor) | LC — Preocupación menor (Lista Roja mundial de la UICN, 2016) |
 | *Streptopelia turtur* | `taxon_order+taxon_family` | 10 | hecho | — | EIDOS v_taxonomia: order="Columbiformes" · family="Columbidae" |
 | *Streptopelia turtur* | `iucn_global` | 10 | tocado | VU (Vulnerable) | VU — Vulnerable (Lista Roja mundial de la UICN, 2019) |
 | *Buteo buteo* | `iucn_global` | 9 | tocado | LC (Preocupación menor) (evaluación UICN 2021) | LC — Preocupación menor (Lista Roja mundial de la UICN, 2021) |
@@ -169,7 +169,7 @@ espacio donde está fichado, y ésa es toda la diferencia.
 | *Ziziphus lotus* | `iucn_global` | 6 | tocado | NE (no evaluada a nivel global) | No evaluada en la Lista Roja mundial de la UICN |
 | *Accipiter gentilis* | `taxon_order+taxon_family` | 5 | hecho | — | EIDOS v_taxonomia: order="Accipitriformes" · family="Accipitridae" |
 | *Accipiter gentilis* | `iucn_global` | 5 | tocado | LC (Preocupación menor) | LC — Preocupación menor (Lista Roja mundial de la UICN, 2021) |
-| *Anabasis hispanica* | `iucn_global` | 5 | pendiente | NE | No evaluada en la Lista Roja mundial de la UICN |
+| *Anabasis hispanica* | `iucn_global` | 5 | tocado | NE | No evaluada en la Lista Roja mundial de la UICN |
 | *Aquila fasciata* | `iucn_global` | 5 | tocado | LC (población global amplia en Asia y África pese al declive europeo) | LC — Preocupación menor (Lista Roja mundial de la UICN, 2019) |
 | *Artemisia barrelieri* | `iucn_global` | 5 | tocado | NE | No evaluada en la Lista Roja mundial de la UICN |
 | *Arthrocaulon macrostachyum* | `iucn_global` | 5 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN (espe… | No evaluada en la Lista Roja mundial de la UICN |
@@ -198,13 +198,13 @@ espacio donde está fichado, y ésa es toda la diferencia.
 | *Vulpes vulpes* | `iucn_global` | 5 | tocado | LC | LC — Preocupación menor (Lista Roja mundial de la UICN, 2021) |
 | *Ceratonia siliqua* | `iucn_global` | 4 | tocado | LC (Preocupación menor) (evaluación UICN 2017) | LC — Preocupación menor (Lista Roja mundial de la UICN, 2017) |
 | *Convolvulus althaeoides* | `iucn_global` | 4 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
-| *Coturnix coturnix* | `spain_status` | 4 | pendiente | UICN España: DD (Datos insuficientes) (2004) | EIDOS v_estadolegal, ámbito Nacional: ninguna norma. El texto es una EVALUACIÓN de conservación, no una figura legal, y su sitio es `iucnSp… |
+| *Coturnix coturnix* | `spain_status` | 4 | tocado | UICN España: DD (Datos insuficientes) (2004) | EIDOS v_estadolegal, ámbito Nacional: ninguna norma. El texto es una EVALUACIÓN de conservación, no una figura legal, y su sitio es `iucnSp… |
 | *Curruca cantillans* | `iucn_global` | 4 | tocado | LC (Preocupación menor) (evaluación UICN 2019) | LC — Preocupación menor (Lista Roja mundial de la UICN, 2019) |
 | *Dianthus broteri* | `iucn_global` | 4 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
 | *Ephedra fragilis* | `iucn_global` | 4 | tocado | LC (Preocupación menor) | LC — Preocupación menor (Lista Roja mundial de la UICN, 2011) |
 | *Felis silvestris* | `iucn_global` | 4 | tocado | LC | LC — Preocupación menor (Lista Roja mundial de la UICN, 2023) |
 | *Fritillaria lusitanica* | `iucn_global` | 4 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
-| *Helianthemum violaceum* | `spain_status` | 4 | pendiente | UICN España: EN (En peligro) (2010) | EIDOS v_estadolegal, taxonid 5102, ámbito Nacional: ninguna norma. La EN 2010 es una evaluación (v_estadoconservacion, España) y ya está bi… |
+| *Helianthemum violaceum* | `spain_status` | 4 | tocado | UICN España: EN (En peligro) (2010) | EIDOS v_estadolegal, taxonid 5102, ámbito Nacional: ninguna norma. La EN 2010 es una evaluación (v_estadoconservacion, España) y ya está bi… |
 | *Klasea flavescens* | `iucn_global` | 4 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
 | *Launaea lanifera* | `iucn_global` | 4 | tocado | NE | No evaluada en la Lista Roja mundial de la UICN |
 | *Lavandula multifida* | `iucn_global` | 4 | tocado | NE | No evaluada en la Lista Roja mundial de la UICN |
@@ -220,7 +220,7 @@ espacio donde está fichado, y ésa es toda la diferencia.
 | *Prunella collaris* | `iucn_global` | 4 | tocado | LC (Preocupación menor) (evaluación UICN 2016) | LC — Preocupación menor (Lista Roja mundial de la UICN, 2016) |
 | *Rhinolophus euryale* | `iucn_global` | 4 | tocado | NT (Casi amenazado) (evaluación UICN 2016) | NT — Casi amenazada (Lista Roja mundial de la UICN, 2016) |
 | *Sarcocornia fruticosa* | `taxon_genus` | 4 | tocado | — | EIDOS v_taxonomia: genus="Salicornia" |
-| *Sarcocornia fruticosa* | `iucn_global` | 4 | pendiente | No evaluada específicamente en la Lista Roja mundial de la UICN (espe… | No evaluada en la Lista Roja mundial de la UICN |
+| *Sarcocornia fruticosa* | `iucn_global` | 4 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN (espe… | No evaluada en la Lista Roja mundial de la UICN |
 | *Sedum dasyphyllum* | `iucn_global` | 4 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
 | *Tamarix boveana* | `iucn_global` | 4 | tocado | LC | EIDOS v_estadoconservacion, ámbito Mundial: VU — Vulnerable (2018) |
 | *Teucrium capitatum* | `iucn_global` | 4 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN (espe… | No evaluada en la Lista Roja mundial de la UICN |
@@ -259,7 +259,7 @@ espacio donde está fichado, y ésa es toda la diferencia.
 | *Asplenium petrarchae* | `iucn_global` | 2 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
 | *Atriplex halimus* | `iucn_global` | 2 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN (espe… | No evaluada en la Lista Roja mundial de la UICN |
 | *Bupleurum gibraltarium* | `iucn_global` | 2 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
-| *Capra pyrenaica* | `spain_status` | 2 | pendiente | UICN España: EN (En peligro) (1992) | EIDOS v_estadolegal, ámbito Nacional: ninguna norma. El texto es una EVALUACIÓN de conservación, no una figura legal, y su sitio es `iucnSp… |
+| *Capra pyrenaica* | `spain_status` | 2 | tocado | UICN España: EN (En peligro) (1992) | EIDOS v_estadolegal, ámbito Nacional: ninguna norma. El texto es una EVALUACIÓN de conservación, no una figura legal, y su sitio es `iucnSp… |
 | *Cephalanthera longifolia* | `iucn_global` | 2 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
 | *Chalcides bedriagai* | `iucn_global` | 2 | tocado | LC | EIDOS: «NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)» |
 | *Colutea arborescens* | `iucn_global` | 2 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
@@ -280,7 +280,7 @@ espacio donde está fichado, y ésa es toda la diferencia.
 | *Limodorum abortivum* | `iucn_global` | 2 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
 | *Lotus creticus* | `iucn_global` | 2 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN (espe… | No evaluada en la Lista Roja mundial de la UICN |
 | *Maytenus senegalensis subsp. europaea* | `taxon_genus` | 2 | tocado | — | EIDOS v_taxonomia: genus="Gymnosporia" |
-| *Maytenus senegalensis subsp. europaea* | `iucn_global` | 2 | pendiente | NE | No evaluada en la Lista Roja mundial de la UICN |
+| *Maytenus senegalensis subsp. europaea* | `iucn_global` | 2 | tocado | NE | No evaluada en la Lista Roja mundial de la UICN |
 | *Monticola saxatilis* | `iucn_global` | 2 | tocado | LC (Preocupación menor) (evaluación UICN 2017) | LC — Preocupación menor (Lista Roja mundial de la UICN, 2017) |
 | *Myotis emarginatus* | `iucn_global` | 2 | tocado | LC (Preocupación menor) (evaluación UICN 2016) | LC — Preocupación menor (Lista Roja mundial de la UICN, 2016) |
 | *Nerium oleander* | `iucn_global` | 2 | tocado | LC (Preocupación menor) | LC — Preocupación menor (Lista Roja mundial de la UICN, 2013) |
@@ -289,7 +289,7 @@ espacio donde está fichado, y ésa es toda la diferencia.
 | *Ononis speciosa* | `iucn_global` | 2 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
 | *Petrosedum sediforme* | `iucn_global` | 2 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN (espe… | No evaluada en la Lista Roja mundial de la UICN |
 | *Phagnalon saxatile* | `iucn_global` | 2 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN (espe… | EIDOS: LC — Preocupación menor (Lista Roja mundial de la UICN, 2011) |
-| *Poterium ancistroides* | `spain_status` | 2 | pendiente | UICN España: NT (Casi amenazado) (2010) | EIDOS v_estadolegal, ámbito Nacional: ninguna norma. El texto es una EVALUACIÓN de conservación, no una figura legal, y su sitio es `iucnSp… |
+| *Poterium ancistroides* | `spain_status` | 2 | tocado | UICN España: NT (Casi amenazado) (2010) | EIDOS v_estadolegal, ámbito Nacional: ninguna norma. El texto es una EVALUACIÓN de conservación, no una figura legal, y su sitio es `iucnSp… |
 | *Rhinolophus mehelyi* | `iucn_global` | 2 | tocado | VU (Vulnerable) (evaluación UICN 2016) | VU — Vulnerable (Lista Roja mundial de la UICN, 2016) |
 | *Sedum gypsicola* | `iucn_global` | 2 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
 | *Silene mellifera* | `iucn_global` | 2 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
@@ -315,7 +315,7 @@ espacio donde está fichado, y ésa es toda la diferencia.
 | *Beta maritima* | `iucn_global` | 1 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN (espe… | No evaluada en la Lista Roja mundial de la UICN |
 | *Campanula rotundifolia subsp. hispanica* | `iucn_global` | 1 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
 | *Caprimulgus europaeus* | `iucn_global` | 1 | tocado | LC (Preocupación menor) (evaluación UICN 2016) | LC — Preocupación menor (Lista Roja mundial de la UICN, 2016) |
-| *Caralluma europaea* | `iucn_spain` | 1 | pendiente | — | EIDOS v_estadoconservacion, taxonid 2866, ámbito España: EN (En peligro), 2010 |
+| *Caralluma europaea* | `iucn_spain` | 1 | tocado | — | EIDOS v_estadoconservacion, taxonid 2866, ámbito España: EN (En peligro), 2010 |
 | *Centranthus lecoqii* | `iucn_global` | 1 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
 | *Cephalanthera damasonium* | `iucn_global` | 1 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
 | *Cistus populifolius* | `iucn_global` | 1 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
@@ -326,7 +326,7 @@ espacio donde está fichado, y ésa es toda la diferencia.
 | *Crithmum maritimum* | `iucn_global` | 1 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN (espe… | No evaluada en la Lista Roja mundial de la UICN |
 | *Cyperus capitatus* | `iucn_global` | 1 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN (espe… | No evaluada en la Lista Roja mundial de la UICN |
 | *Elymus farctus* | `taxon_genus` | 1 | tocado | — | EIDOS v_taxonomia: genus="Thinopyrum" |
-| *Elymus farctus* | `iucn_global` | 1 | pendiente | LC (Preocupación menor) | LC — Preocupación menor (Lista Roja mundial de la UICN, 2019) |
+| *Elymus farctus* | `iucn_global` | 1 | tocado | LC (Preocupación menor) | LC — Preocupación menor (Lista Roja mundial de la UICN, 2019) |
 | *Enneapogon persicus* | `iucn_global` | 1 | tocado | NE (no evaluada a nivel global; especie de amplia distribución en Asi… | No evaluada en la Lista Roja mundial de la UICN |
 | *Epipactis atrorubens* | `iucn_global` | 1 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
 | *Epipactis kleinii* | `iucn_global` | 1 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
@@ -348,7 +348,7 @@ espacio donde está fichado, y ésa es toda la diferencia.
 | *Lonicera biflora* | `iucn_global` | 1 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
 | *Lonicera splendida* | `iucn_global` | 1 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
 | *Maresia nana* | `iucn_global` | 1 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
-| *Maytenus senegalensis subsp. europaea* | `iucn_spain` | 1 | pendiente | — | EIDOS v_estadoconservacion, ámbito España: NT — Casi amenazada (Lista Roja española, 2010) |
+| *Maytenus senegalensis subsp. europaea* | `iucn_spain` | 1 | tocado | — | EIDOS v_estadoconservacion, ámbito España: NT — Casi amenazada (Lista Roja española, 2010) |
 | *Melica minuta* | `iucn_global` | 1 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN (espe… | No evaluada en la Lista Roja mundial de la UICN |
 | *Neotinea maculata* | `iucn_global` | 1 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
 | *Ophrys lutea* | `iucn_global` | 1 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
@@ -359,7 +359,7 @@ espacio donde está fichado, y ésa es toda la diferencia.
 | *Pseudodictamnus hirsutus* | `iucn_global` | 1 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN (espe… | No evaluada en la Lista Roja mundial de la UICN |
 | *Quercus lusitanica* | `iucn_global` | 1 | tocado | LC (Preocupación menor) (evaluación UICN 2018) | LC — Preocupación menor (Lista Roja mundial de la UICN, 2018) |
 | *Salix pedicellata* | `iucn_global` | 1 | tocado | LC (Preocupación menor) (evaluación UICN 2010) | LC — Preocupación menor (Lista Roja mundial de la UICN, 2010) |
-| *Sarcocapnos enneaphylla subsp. saetabensis* | `iucn_global` | 1 | pendiente | NE | No evaluada en la Lista Roja mundial de la UICN |
+| *Sarcocapnos enneaphylla subsp. saetabensis* | `iucn_global` | 1 | tocado | NE | No evaluada en la Lista Roja mundial de la UICN |
 | *Saxifraga camposii subsp. leptophylla* | `iucn_global` | 1 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
 | *Sedum album* | `iucn_global` | 1 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN (espe… | No evaluada en la Lista Roja mundial de la UICN |
 | *Stachys circinata* | `iucn_global` | 1 | tocado | No evaluada específicamente en la Lista Roja mundial de la UICN | No evaluada en la Lista Roja mundial de la UICN |
@@ -368,40 +368,40 @@ espacio donde está fichado, y ésa es toda la diferencia.
 
 ## Cola 2 · correcciones LOCALES
 
-**30 corrección(es)** · 21 pendiente(s). Van espacio por espacio en el `park.json` **y** a la base por su propio SQL: `species-universal.sql` solo lleva los universales. Una corrección local que no se vuelca no la ve el usuario, porque la API manda sobre el paquete.
+**30 corrección(es)** · 0 pendiente(s). Van espacio por espacio en el `park.json` **y** a la base por su propio SQL: `species-universal.sql` solo lleva los universales. Una corrección local que no se vuelca no la ve el usuario, porque la API manda sobre el paquete.
 
 | taxón | campo | espacios | estado | lo que la auditoría vio | lo que dice la fuente |
 |---|---|---|---|---|---|
 | *Pyrrhocorax pyrrhocorax* | `regional_status` | 9 | tocado | «No incluida en el Catálogo Regional de especies protegidas (Región d… | EIDOS v_estadolegal (por taxonid 12065), Región de Murcia: «Especies de interés especial» — Ley 7/1995 |
 | *Curruca conspicillata* | `gbif_species_key` | 7 | tocado | 9868071 | GBIF: la key es HOMOTYPIC_SYNONYM en el backbone; el aceptado es «*Sylvia conspicillata* Temminck, 1820» (key **2492959**) |
-| *Caralluma europaea* | `eidos_taxonid` | 3 | pendiente | 80097 | EIDOS v_taxonomia: 80097 = «Caralluma europaea var. maroccana (Hook. fil.) A. Berger» [Variety]. El binomio «Caralluma europaea (Guss.) N.E… |
-| *Turdus merula* | `eidos_taxonid` | 3 | pendiente | 11725 | EIDOS: 11725 es «Turdus merula subsp. cabrerae», la subespecie CANARIA, y la ficha declara el binomio |
-| *Bucanetes githagineus* | `eidos_taxonid` | 2 | pendiente | 11363 | EIDOS: 11363 es «Bucanetes githagineus subsp. zedlitzi» [Subspecies], y la ficha declara un binomio de especie |
+| *Caralluma europaea* | `eidos_taxonid` | 3 | tocado | 80097 | EIDOS v_taxonomia: 80097 = «Caralluma europaea var. maroccana (Hook. fil.) A. Berger» [Variety]. El binomio «Caralluma europaea (Guss.) N.E… |
+| *Turdus merula* | `eidos_taxonid` | 3 | tocado | 11725 | EIDOS: 11725 es «Turdus merula subsp. cabrerae», la subespecie CANARIA, y la ficha declara el binomio |
+| *Bucanetes githagineus* | `eidos_taxonid` | 2 | tocado | 11363 | EIDOS: 11363 es «Bucanetes githagineus subsp. zedlitzi» [Subspecies], y la ficha declara un binomio de especie |
 | *Gulosus aristotelis* | `regional_status` | 2 | tocado | No incluida en Catálogo Regional de Flora Silvestre Protegida de la R… | EIDOS v_estadolegal, ámbito Región de Murcia: «Vulnerable» — Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial |
 | *Phalacrocorax carbo* | `eidos_taxonid` | 2 | no comparable | 10965 · ficha oculta («sin descripción») | EIDOS: el taxonid 10965 es de rango **Subspecies**, «*Phalacrocorax carbo* subsp. *sinensis*», que es **otro taxón**, no un matiz de rango |
-| *Accipiter gentilis* | `regional_status` | 1 | pendiente | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
+| *Accipiter gentilis* | `regional_status` | 1 | tocado | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
 | *Ammophila arenaria subsp. arundinacea* | `eidos_taxonid` | 1 | no comparable | eidosTaxonId **126** y `taxonomy.genus` «Calamagrostis», ya copiado d… | EIDOS: el 126 es ***Calamagrostis arundinacea*** (L.) Roth, una gramínea de bosque. El **barrón de las dunas** es el taxonid **10241**, *Ca… |
-| *Capra pyrenaica* | `eidos_taxonid` | 1 | pendiente | 24419 | EIDOS: 24419 es «Capra pyrenaica pyrenaica» [Subspecies] |
-| *Caprimulgus ruficollis* | `regional_status` | 1 | pendiente | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
-| *Caralluma europaea* | `regional_status` | 1 | pendiente | No incluida en el Catálogo Regional de especies protegidas (Región de… | EIDOS v_estadolegal, taxonid 2866, Región de Murcia: «Vulnerable» — Decreto n.º 50/2003, de 30 de mayo (Catálogo Regional de Flora Silvestr… |
-| *Falco tinnunculus* | `regional_status` | 1 | pendiente | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
-| *Hieraaetus pennatus* | `regional_status` | 1 | pendiente | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
-| *Hydrobates pelagicus* | `eidos_taxonid` | 1 | pendiente | 11953 | EIDOS: el taxonid 11953 es de rango Subspecies («Hydrobates pelagicus pelagicus Linnaeus, 1758») y la ficha declara un binomio de especie |
+| *Capra pyrenaica* | `eidos_taxonid` | 1 | tocado | 24419 | EIDOS: 24419 es «Capra pyrenaica pyrenaica» [Subspecies] |
+| *Caprimulgus ruficollis* | `regional_status` | 1 | tocado | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
+| *Caralluma europaea* | `regional_status` | 1 | tocado | No incluida en el Catálogo Regional de especies protegidas (Región de… | EIDOS v_estadolegal, taxonid 2866, Región de Murcia: «Vulnerable» — Decreto n.º 50/2003, de 30 de mayo (Catálogo Regional de Flora Silvestr… |
+| *Falco tinnunculus* | `regional_status` | 1 | tocado | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
+| *Hieraaetus pennatus* | `regional_status` | 1 | tocado | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
+| *Hydrobates pelagicus* | `eidos_taxonid` | 1 | tocado | 11953 | EIDOS: el taxonid 11953 es de rango Subspecies («Hydrobates pelagicus pelagicus Linnaeus, 1758») y la ficha declara un binomio de especie |
 | *Juniperus phoenicea* | `regional_status` | 1 | tocado | No incluida en el Catálogo Regional de Flora Silvestre Protegida; pob… | EIDOS v_estadolegal, Región de Murcia: «Especies de interés especial» — Decreto n.º 50/2003. Tramo EIDOS 3, tramo de la ficha 1 |
-| *Jynx torquilla* | `regional_status` | 1 | pendiente | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
-| *Lotus dorycnium* | `eidos_taxonid` | 1 | pendiente | 4138 | EIDOS: 4138 es «Lotus dorycnium subsp. dorycnium» [Subspecies] y la ficha declara el binomio |
-| *Melanocorypha calandra* | `regional_status` | 1 | pendiente | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
-| *Motacilla cinerea* | `eidos_taxonid` | 1 | pendiente | 10897 | EIDOS: rango Subspecies, «*Motacilla cinerea* subsp. ***canariensis***» |
-| *Muscicapa striata* | `regional_status` | 1 | pendiente | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
-| *Oenanthe hispanica* | `regional_status` | 1 | pendiente | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
+| *Jynx torquilla* | `regional_status` | 1 | tocado | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
+| *Lotus dorycnium* | `eidos_taxonid` | 1 | tocado | 4138 | EIDOS: 4138 es «Lotus dorycnium subsp. dorycnium» [Subspecies] y la ficha declara el binomio |
+| *Melanocorypha calandra* | `regional_status` | 1 | tocado | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
+| *Motacilla cinerea* | `eidos_taxonid` | 1 | tocado | 10897 | EIDOS: rango Subspecies, «*Motacilla cinerea* subsp. ***canariensis***» |
+| *Muscicapa striata* | `regional_status` | 1 | tocado | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
+| *Oenanthe hispanica* | `regional_status` | 1 | tocado | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
 | *Olea europaea subsp. sylvestris* | `eidos_taxonid` | 1 | no comparable | el ACEBUCHE lleva eidosTaxonId 6645 y está OCULTO («sin descripción»)… | EIDOS v_taxonomia, taxonid 6645: «Olea europaea L. subsp. europaea» (Subspecies, Aceptado/válido), y bajo ESE MISMO taxonid «Olea europaea … |
 | *Petrosedum sediforme* | `source` | 1 | tocado | el `source` declara «7 hábitats» y la ficha tiene 8 enlaces · sin eid… | La BD guarda sus 8 enlaces con `evidence` a NULL: build-park-sql.js no rellena una procedencia que no puede deducir del `source` |
-| *Petrosedum sediforme* | `eidos_taxonid` | 1 | pendiente | — | La ficha no trae identificador de EIDOS: no hay con qué cotejar su taxonomía ni su estado |
-| *Salsola genistoides* | `eidos_taxonid` | 1 | tocado | null | EIDOS: no consultado — la ficha no trae identificador, así que no hay con qué cotejar ni la taxonomía ni la figura legal |
-| *Sambucus nigra* | `eidos_taxonid` | 1 | pendiente | 6 | EIDOS: el taxonid 6 es de rango Subspecies, «*Sambucus nigra* subsp. *palmensis*» — el **saúco de La Palma**, endemismo canario |
-| *Streptopelia turtur* | `regional_status` | 1 | pendiente | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
-| *Tichodroma muraria* | `regional_status` | 1 | pendiente | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
-| *Upupa epops* | `regional_status` | 1 | pendiente | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
+| *Petrosedum sediforme* | `eidos_taxonid` | 1 | no comparable | — | La ficha no trae identificador de EIDOS: no hay con qué cotejar su taxonomía ni su estado |
+| *Salsola genistoides* | `eidos_taxonid` | 1 | no comparable | null | EIDOS: no consultado — la ficha no trae identificador, así que no hay con qué cotejar ni la taxonomía ni la figura legal |
+| *Sambucus nigra* | `eidos_taxonid` | 1 | tocado | 6 | EIDOS: el taxonid 6 es de rango Subspecies, «*Sambucus nigra* subsp. *palmensis*» — el **saúco de La Palma**, endemismo canario |
+| *Streptopelia turtur* | `regional_status` | 1 | tocado | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
+| *Tichodroma muraria* | `regional_status` | 1 | tocado | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
+| *Upupa epops* | `regional_status` | 1 | tocado | Ave de la ZEPA ES0000261 (Almenara, Moreras y Cabo Cope) | La ZEPA ES0000261 es «Almenara, Moreras y Cabo Cope»: NO es el sitio de este espacio, cuya ZEPA es la ES0000173 (Sierra Espuña). Y «ave de … |
 
 ## Cola 3 · RENOMBRADOS
 
@@ -725,7 +725,7 @@ espacio donde está fichado, y ésa es toda la diferencia.
 
 ## Cola 6 · DECISIONES, no trabajo
 
-**83 corrección(es)** · 73 pendiente(s). Nadie las puede ejecutar sin el boletín delante. No se tocan hasta que se decidan, y se decide **una vez para todos los espacios**.
+**83 corrección(es)** · 65 pendiente(s). Nadie las puede ejecutar sin el boletín delante. No se tocan hasta que se decidan, y se decide **una vez para todos los espacios**.
 
 | taxón | campo | espacios | estado | lo que la auditoría vio | lo que dice la fuente |
 |---|---|---|---|---|---|
@@ -761,9 +761,9 @@ espacio donde está fichado, y ésa es toda la diferencia.
 | *Asphodelus albus* | `inclusion` | 1 | pendiente | publicada y visible | criba en vivo: nivel 3, «solo GBIF». La selección aprobada la tenía con evidencia del Atlas (observada_gbif + caracteristica) |
 | *Asphodelus macrocarpus* | `inclusion` | 1 | pendiente | publicada y visible | criba en vivo: nivel 3, «solo GBIF». La selección aprobada la tenía con evidencia del Atlas (observada_gbif + caracteristica) |
 | *Astragalus sesameus* | `inclusion` | 1 | pendiente | publicada, oculta | criba en vivo: nivel 3, «solo GBIF» → excluida. La selección aprobada del 2026-08-28 la tenía en nivel 2 con evidencia observada_gbif + car… |
-| *Bucanetes githagineus* | `iucn_global` | 1 | pendiente | LC | No evaluada en la Lista Roja mundial de la UICN |
+| *Bucanetes githagineus* | `iucn_global` | 1 | tocado | LC | No evaluada en la Lista Roja mundial de la UICN |
 | *Bufo bufo* | `eidos_taxonid` | 1 | no comparable | Bufo bufo · 93827 | EIDOS: 93827 = «Bufo bufo bufo Linnaeus, 1758» [Subspecies]. El binomio «Bufo bufo» es Sinónimo del taxonid 16219 = «Bufo spinosus Daudin, … |
-| *Burhinus oedicnemus* | `regional_status` | 1 | pendiente | Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Mur… | EIDOS v_estadolegal, ámbito Región de Murcia: ninguna fila para este taxón. Tramo EIDOS 1, tramo de la ficha 3 |
+| *Burhinus oedicnemus* | `regional_status` | 1 | tocado | Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Mur… | EIDOS v_estadolegal, ámbito Región de Murcia: ninguna fila para este taxón. Tramo EIDOS 1, tramo de la ficha 3 |
 | *Campanula erinus* | `inclusion` | 1 | pendiente | publicada | criba en vivo: nivel 3, «solo GBIF» → excluida. La selección aprobada del 2026-08-28 la tenía en nivel 2 con evidencia observada_gbif + car… |
 | *Capparis zoharyi* | `scientific_name` | 1 | pendiente | Capparis zoharyi · eidosTaxonId 3033 | EIDOS la da por sinónimo y acepta «Capparis spinosa L. subsp. spinosa», de rango SUBESPECIE |
 | *Caralluma europaea* | `gbif_species_key` | 1 | no comparable | 3578145 · gbifOccurrences 0 · 0 hábitats | GBIF backbone: 3578145 es SYNONYM (heterotípico, según GBIF) de «Ceropegia europaea (Guss.) Bruyns», key 9245056. El barrido en vivo del 20… |
@@ -775,24 +775,24 @@ espacio donde está fichado, y ésa es toda la diferencia.
 | *Cutandia maritima* | `iucn_global` | 1 | pendiente | LC | No evaluada en la Lista Roja mundial de la UICN |
 | *Cytinus hypocistis* | `inclusion` | 1 | pendiente | publicada y visible | criba en vivo: nivel 3, «solo GBIF». La selección aprobada la tenía con evidencia del Atlas (observada_gbif + caracteristica) |
 | *Cytisus intermedius* | `iucn_global` | 1 | pendiente | LC | No evaluada en la Lista Roja mundial de la UICN |
-| *Epidalea calamita* | `regional_status` | 1 | pendiente | Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Mur… | EIDOS v_estadolegal, ámbito Región de Murcia: ninguna fila para este taxón. Tramo EIDOS 1, tramo de la ficha 3 |
+| *Epidalea calamita* | `regional_status` | 1 | tocado | Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Mur… | EIDOS v_estadolegal, ámbito Región de Murcia: ninguna fila para este taxón. Tramo EIDOS 1, tramo de la ficha 3 |
 | *Eryngium ilicifolium* | `inclusion` | 1 | pendiente | publicada | criba en vivo: nivel 3, «solo GBIF» → excluida. La selección aprobada del 2026-08-28 la tenía en nivel 2 con evidencia observada_gbif + car… |
 | *Festuca capillifolia* | `inclusion` | 1 | pendiente | publicada, oculta | criba en vivo: nivel 3, «solo GBIF». La selección aprobada la tenía con evidencia del Atlas (observada_gbif + caracteristica) |
 | *Filago fuscescens* | `inclusion` | 1 | pendiente | publicada, oculta | criba en vivo: nivel 3, «solo GBIF» → excluida. La selección aprobada del 2026-08-28 la tenía en nivel 2 con evidencia observada_gbif + car… |
 | *Filago fuscescens* | `image` | 1 | tocado | sin foto (ficha oculta) | auditoría de fotos: 204 fichas · 192 en Commons · 11 fuera de Commons · 1 sin foto. 0 archivos inexistentes y 0 licencias mal citadas |
 | *Filago mareotica* | `inclusion` | 1 | pendiente | publicada | criba en vivo: nivel 3, «solo GBIF» → excluida. La selección aprobada del 2026-08-28 la tenía en nivel 2 con evidencia observada_gbif + car… |
-| *Galerida theklae* | `regional_status` | 1 | pendiente | Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Mur… | EIDOS v_estadolegal, ámbito Región de Murcia: ninguna fila para este taxón. Tramo EIDOS 1, tramo de la ficha 3 |
+| *Galerida theklae* | `regional_status` | 1 | tocado | Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Mur… | EIDOS v_estadolegal, ámbito Región de Murcia: ninguna fila para este taxón. Tramo EIDOS 1, tramo de la ficha 3 |
 | *Galium murale* | `inclusion` | 1 | pendiente | publicada, oculta | criba en vivo: nivel 3, «solo GBIF». La selección aprobada la tenía con evidencia del Atlas (observada_gbif + caracteristica) |
-| *Genetta genetta* | `regional_status` | 1 | pendiente | Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Mur… | EIDOS v_estadolegal, ámbito Región de Murcia: ninguna fila para este taxón. Tramo EIDOS 1, tramo de la ficha 3 |
+| *Genetta genetta* | `regional_status` | 1 | tocado | Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Mur… | EIDOS v_estadolegal, ámbito Región de Murcia: ninguna fila para este taxón. Tramo EIDOS 1, tramo de la ficha 3 |
 | *Genista longipes* | `gbif_species_key` | 1 | pendiente | 5347560 | GBIF la marca DOUBTFUL y no ofrece un aceptado |
 | *Geranium lucidum* | `inclusion` | 1 | pendiente | publicada, oculta | criba en vivo: nivel 3, «solo GBIF». La selección aprobada la tenía con evidencia del Atlas (observada_gbif + caracteristica) |
 | *Haplophyllum linifolium* | `inclusion` | 1 | pendiente | publicada, oculta | criba en vivo: nivel 3, «solo GBIF» → excluida. La selección aprobada del 2026-08-28 la tenía en nivel 2 con evidencia observada_gbif + car… |
-| *Hydrobates pelagicus* | `iucn_global` | 1 | pendiente | VU — Vulnerable (Lista Roja mundial de la UICN, 1992) | No evaluada en la Lista Roja mundial de la UICN |
+| *Hydrobates pelagicus* | `iucn_global` | 1 | tocado | VU — Vulnerable (Lista Roja mundial de la UICN, 1992) | No evaluada en la Lista Roja mundial de la UICN |
 | *Limonium lobatum* | `inclusion` | 1 | pendiente | publicada | criba en vivo: nivel 3, «solo GBIF» → excluida. La selección aprobada del 2026-08-28 la tenía en nivel 2 con evidencia observada_gbif + car… |
 | *Malpolon monspessulanus* | `spain_status` | 1 | no comparable | LESRPE (Listado de Especies Silvestres en Régimen de Protección Espec… | EIDOS v_estadolegal, ámbito Nacional: ninguna fila del LESRPE. Tramo EIDOS: 1 |
-| *Martes foina* | `regional_status` | 1 | pendiente | Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Mur… | EIDOS v_estadolegal, ámbito Región de Murcia: ninguna fila para este taxón. Tramo EIDOS 1, tramo de la ficha 3 |
+| *Martes foina* | `regional_status` | 1 | tocado | Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Mur… | EIDOS v_estadolegal, ámbito Región de Murcia: ninguna fila para este taxón. Tramo EIDOS 1, tramo de la ficha 3 |
 | *Medicago marina* | `iucn_global` | 1 | pendiente | LC | No evaluada en la Lista Roja mundial de la UICN |
-| *Oenanthe leucura* | `regional_status` | 1 | pendiente | Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Mur… | EIDOS v_estadolegal, ámbito Región de Murcia: ninguna fila para este taxón. Tramo EIDOS 1, tramo de la ficha 3 |
+| *Oenanthe leucura* | `regional_status` | 1 | tocado | Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Mur… | EIDOS v_estadolegal, ámbito Región de Murcia: ninguna fila para este taxón. Tramo EIDOS 1, tramo de la ficha 3 |
 | *Ononis ornithopodioides* | `inclusion` | 1 | pendiente | publicada | criba en vivo: nivel 3, «solo GBIF» → excluida. La selección aprobada del 2026-08-28 la tenía en nivel 2 con evidencia observada_gbif + car… |
 | *Ononis sicula* | `inclusion` | 1 | pendiente | publicada, oculta | criba en vivo: nivel 3, «solo GBIF» → excluida. La selección aprobada del 2026-08-28 la tenía en nivel 2 con evidencia observada_gbif + car… |
 | *Orobanche cernua* | `inclusion` | 1 | pendiente | publicada, oculta | criba en vivo: nivel 3, «solo GBIF» → excluida. La selección aprobada del 2026-08-28 la tenía en nivel 2 con evidencia observada_gbif + car… |

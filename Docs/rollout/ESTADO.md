@@ -163,6 +163,12 @@ delimitación regional, así que conserva el límite del MITECO y no pasa por
 Cada línea es un informe de cierre. El título dice la conclusión; entra al fichero solo si te hace
 falta el detalle.
 
+### [`sesiones/2026-09-15-b.md`](sesiones/2026-09-15-b.md)
+
+| Sesión | Qué se cerró |
+|---|---|
+| 2026-09-15 (b) | **Las colas 1 y 2 de la auditoría —universales de 12 a 8, locales de 21 a 3— y el fallo que explicaba la mitad de las dos.** `resolveTaxon()`, «el corazón del modelo de datos», empareja por prefijo para tolerar el autor, así que «Turdus merula» casaba igual con la especie que con «Turdus merula subsp. *cabrerae*» —el mirlo canario— y se quedaba con **la que EIDOS listara primero**, que es la subespecie: `status: 'ok'` y un taxonid impecable de otro taxón. **24 taxones, 49 fichas**, y las 24 en la misma dirección. De ese identificador colgaba lo que ve el usuario: el saúco de Cañaverosa anunciaba «CEEA: En peligro de extinción · Prioritaria» con **tramo 5** porque llevaba las credenciales del ***saúco de La Palma***; el paíño decía «sin figura estatal» teniendo LESRPE y Anexo IV; la cabra montés publicaba el «EN (1992)» de la subespecie **extinta del Pirineo**. Tapado con un desempate por **rango** y reanclado con `taxones:nomenclatura --write`, cuya clase B2 llevaba desde agosto en `corregible: false` con la nota «hay que reanclar»: nadie había mirado que el sitio al que reanclar venía en la misma respuesta. **Y un susto que deja regla**: el primer `--write` escribió en las cinco cabras el taxonid de la caché, que EIDOS había **renumerado** — hoy es *Rupicapra pyrenaica*, el rebeco. Ahora el identificador se vuelve a preguntar en vivo antes de escribirlo, y hay clase nueva (`id_de_otro_taxon`) para el que ya esté escrito. También: **21 fichas cuyo `spainStatus` no contenía un solo hecho legal** (la sabina negral **negaba** en 10 espacios tres normas estatales que EIDOS sí le da), las **once aves de Sierra Espuña con la ZEPA de Cabo Cope** que el 2026-08-29 dejó anotadas, y `red:check` dando **EIDOS por cerrado** estando abierto, por sondear la portada en vez de la API. Clases D y G de `especies:legal`, a **0**. |
+
 ### [`sesiones/2026-09-15.md`](sesiones/2026-09-15.md)
 
 | Sesión | Qué se cerró |

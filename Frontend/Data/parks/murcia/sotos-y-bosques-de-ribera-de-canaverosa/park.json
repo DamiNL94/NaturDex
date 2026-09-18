@@ -1719,18 +1719,19 @@
         "family": "Anatidae",
         "genus": "Anas"
       },
-      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": 28187,
+      "eidosTaxonId": 33018,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": false,
-      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.",
+      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2004)"
     },
     {
       "id": 29,
@@ -2275,19 +2276,19 @@
         "family": "Bufonidae",
         "genus": "Bufo"
       },
-      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2023)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": 93827,
+      "eidosTaxonId": 16219,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": false,
       "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.",
-      "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)"
+      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2002)"
     },
     {
       "id": 40,
@@ -2359,7 +2360,11 @@
       "imageAttribution": "Thomas Holbach (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
       "rarityScore": 1,
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 1,
       "rarityLocalBasis": {
         "categoria": "Sin figura de protección",
@@ -2376,18 +2381,18 @@
         "family": "Bovidae",
         "genus": "Capra"
       },
-      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "UICN España: EN (En peligro) (1992)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
+      "spainStatus": "Anexo VI (Ley 42/2007, de 13 de diciembre)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": 24419,
+      "eidosTaxonId": 12055,
       "gbifSpeciesKey": 2441054,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": true,
-      "iucnSpain": "EN — En peligro (Lista Roja española, 1992)"
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2007)"
     },
     {
       "id": 42,
@@ -3000,7 +3005,11 @@
       "imageAttribution": "Raniero Massoli Novelli (CC BY 2.0) · Wikimedia Commons",
       "coordinates": null,
       "rarityScore": 1,
-      "rarityBasis": null,
+      "rarityBasis": {
+        "categoria": "Sin figura de protección",
+        "ambito": "estatal",
+        "origen": "spainStatus del catálogo universal"
+      },
       "rarityLocal": 1,
       "rarityLocalBasis": {
         "categoria": "Sin figura de protección",
@@ -3018,7 +3027,7 @@
         "genus": "Coturnix"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
-      "spainStatus": "UICN España: DD (Datos insuficientes) (2004)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -4234,7 +4243,7 @@
         "genus": "Juniperus"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
-      "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -6859,18 +6868,19 @@
         "family": "Regulidae",
         "genus": "Regulus"
       },
-      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": 23782,
+      "eidosTaxonId": 11499,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": false,
-      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.",
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 131,
@@ -7247,15 +7257,15 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sambucus_nigra_004.jpg?width=1280",
       "imageAttribution": "Willow (CC BY 2.5) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 5,
+      "rarityScore": 1,
       "rarityBasis": {
-        "categoria": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero)",
+        "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 5,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "categoria": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero)",
+        "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
@@ -7269,12 +7279,12 @@
         "family": "Adoxaceae",
         "genus": "Sambucus"
       },
-      "iucnGlobal": "EN — En peligro (Lista Roja mundial de la UICN, 2011)",
-      "spainStatus": "CEEA: En peligro de extinción (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Prioritaria (Ley 42/2007, de 13 de diciembre)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2020)",
+      "spainStatus": "ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": 6,
+      "eidosTaxonId": 7950,
       "gbifSpeciesKey": null,
       "zepaSiteCode": null,
       "habitatIds": [],
@@ -7420,7 +7430,7 @@
         "family": "Papaveraceae",
         "genus": "Sarcocapnos"
       },
-      "iucnGlobal": "NE",
+      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
@@ -7479,7 +7489,7 @@
       "habitatIds": [],
       "gbifOccurrences": 0,
       "visible": true,
-      "iucnSpain": "DD — Datos insuficientes (Lista Roja española, 2010)"
+      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2010)"
     },
     {
       "id": 143,
@@ -7869,7 +7879,7 @@
         "genus": "Tamarix"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2018)",
-      "spainStatus": "No catalogada en la Lista Roja de la Flora Vascular Española 2008",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -10236,18 +10246,19 @@
         "family": "Phalacrocoracidae",
         "genus": "Phalacrocorax"
       },
-      "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
-      "eidosTaxonId": 10965,
+      "eidosTaxonId": 14032,
       "gbifSpeciesKey": 2481890,
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 12,
       "visible": false,
-      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla."
+      "hiddenReason": "Sin descripción: ninguna fuente publica texto para este taxón. Oculta hasta redactarla.",
+      "iucnSpain": "NE — No evaluada (Lista Roja española, 2004)"
     },
     {
       "id": 198,
@@ -11704,7 +11715,7 @@
         "family": "Corvidae",
         "genus": "Pyrrhocorax"
       },
-      "iucnGlobal": "LC (Preocupación menor)",
+      "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
       "spainStatus": "LESRPE (RD 139/2011); Directiva Aves 2009/147/CE, Anexo I; Ley 42/2007, Anexo IV",
       "regionalStatus": "Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de Murcia (Ley 7/1995): De interés especial",
       "regionalCcaa": "Región de Murcia",

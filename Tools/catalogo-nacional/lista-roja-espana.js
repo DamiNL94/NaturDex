@@ -91,7 +91,13 @@ function cargaCache() {
     if (LIMITE && hechos >= LIMITE) break;
     hechos++;
     const ficha = catalogo[sci];
-    const clave = `sci:${sci}`;
+    // La clave de la caché lleva DENTRO el identificador con el que se va a resolver, y eso no es
+    // un detalle de implementación: una entrada guarda a veces una NEGATIVA —«EIDOS lo da por
+    // sinónimo… se decide en la deuda nº 36»— y esa negativa solo vale mientras la ficha no tenga
+    // `eidosTaxonId`. El 2026-09-15 se rellenaron 329 identificadores del catálogo universal y las
+    // seis fichas bloqueadas siguieron bloqueadas: la caché las contestaba por nombre antes de que
+    // nadie mirase el id nuevo. Con el id en la clave, rellenarlo invalida la entrada él solo.
+    const clave = ficha.eidosTaxonId ? `id:${ficha.eidosTaxonId}` : `sci:${sci}`;
 
     let entrada = cache[clave];
     if (!entrada) {
