@@ -1632,7 +1632,45 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     > de decirlo en un campo que el usuario lee. Uniformarlo es un `--write` con `textoAnterior`
     > (ver `corrige-estado-autonomico.js`), no un criterio nuevo.
 
-45. **`--refrescar-campos` conserva el valor viejo cuando la derivación nueva no trae el campo.**
+45. ~~**`--refrescar-campos` conserva el valor viejo cuando la derivación nueva no trae el campo.**~~
+    — **PAGADA el 2026-09-19, y eran TRES puertas, no una.** La distinción que pedía este apartado
+    —«la fuente ha contestado y no lo trae» frente a «no se ha podido preguntar»— se puede afirmar
+    en las tres, y en las tres se estaba perdiendo:
+    > **1 · `build-species-universal.js --refrescar-campos`**, que es la que describía el apartado.
+    > Un campo pedido que la derivación nueva no trae ahora se **retira**, y se enumera al final del
+    > pase. Es legítimo porque el bucle pide EIDOS, GBIF y Wikimedia dentro del mismo `try` y
+    > **cualquier fallo saca al taxón del lote con `continue`**: un taxón que llega a `fichas` tiene
+    > sus tres fuentes contestadas. Queda escrito en `retira()` que si algún día una fuente pasa a
+    > fallar campo a campo sin lanzar, la distinción hay que traerla ahí.
+    >
+    > **2 · `lista-roja-espana.js`**, la otra herramienta que escribe el mismo campo, y solo sabía
+    > escribir: si la ficha traía `iucnSpain` y EIDOS —habiendo contestado— no daba fila de ámbito
+    > España, el valor viejo se quedaba. Lo que hacía falta para distinguir **ya estaba calculado
+    > ahí** y no se usaba: su `motivo` dice «no se ha podido preguntar» y esas fichas van a
+    > `sinResolver`, intactas. Dos retiradas: la **chova piquirroja**, que anunciaba «NT (Lista Roja
+    > española, 2004)» siendo una evaluación de ámbito **Península** de 2021 —un ámbito que este
+    > campo no recoge por diseño—, y ***Rhamnus pumila***, cuyo taxón aceptado (*Atadinus pumilus*)
+    > no tiene en EIDOS **ninguna** fila de conservación. La segunda conviene mirarla si alguien
+    > quiere recuperarla: la Lista Roja de la Flora Vascular Española es una publicación real, pero
+    > **la procedencia declarada de este campo es EIDOS** (`PROCEDENCIA-DE-CAMPOS.md`), y ahí no
+    > está.
+    >
+    > **3 · Y la que hacía inútiles a las otras dos: `species:apply` no sabía borrar.** Su bucle
+    > salta los campos que el catálogo universal no trae —correcto en 754 de los 1.115 taxones, donde
+    > «ausente» es «nadie lo ha rellenado»—, así que un campo **retirado** del catálogo sobrevivía en
+    > los `park.json`… y el `species:extract` que el runbook manda pasar detrás lo devolvía al
+    > catálogo. La prueba está en las cifras: la limpieza a mano del 2026-09-15 tocó **cuatro** fichas
+    > universales y **ninguna** de las fichas de los espacios, así que *Sambucus nigra* seguía
+    > anunciando en Cañaverosa el «CR en España» del **saúco de La Palma** cuatro días después. Con
+    > `--retira <campos>` —el que llama nombra los campos, no se adivina— salen **18 fichas de once
+    > espacios**: las cuatro de aquella limpieza (*Sambucus nigra*, *Iberis carnosa*, *Asplenium
+    > obovatum*, *Bucanetes githagineus*) y las dos nuevas.
+    >
+    > La lección que se generaliza, y que no es solo de este campo: **sincronizar es escribir Y
+    > retirar**. Una herramienta que solo sabe escribir convierte cualquier corrección que consista
+    > en quitar algo en una corrección que se deshace sola.
+
+    El texto original, para saber de dónde venía:
     `build-species-universal.js` aplica el parche con `if (f[campo] !== undefined)`, y eso mezcla dos
     situaciones que no son la misma: «no he podido preguntar» (donde conservar es lo correcto) y «he
     preguntado y la fuente no lo tiene» (donde conservar es quedarse con un dato que ya no sostiene

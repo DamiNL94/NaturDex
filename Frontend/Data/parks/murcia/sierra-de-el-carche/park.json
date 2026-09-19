@@ -5490,8 +5490,7 @@
         "zonas-subestepicas-de-6220"
       ],
       "gbifOccurrences": 2,
-      "visible": true,
-      "iucnSpain": "EN — En peligro (Lista Roja española, 2010)"
+      "visible": true
     },
     {
       "id": 60,
@@ -15614,8 +15613,7 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 11,
-      "visible": true,
-      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
+      "visible": true
     },
     {
       "id": 242,
@@ -21019,7 +21017,6 @@
         "genus": "Atadinus"
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "iucnSpain": "VU — Vulnerable (Lista Roja española, 2010)",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",

@@ -7289,8 +7289,7 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 0,
-      "visible": true,
-      "iucnSpain": "CR — En peligro crítico (Lista Roja española, 2010)"
+      "visible": true
     },
     {
       "id": 139,
@@ -11725,8 +11724,7 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 4,
-      "visible": true,
-      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
+      "visible": true
     },
     {
       "id": 227,

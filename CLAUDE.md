@@ -68,7 +68,7 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
    deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).
 
-## 2. Treinta y seis cosas que fallan EN VERDE
+## 2. Treinta y siete cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
@@ -427,6 +427,24 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   `validate`** (la lección de la nº 4, otra vez). Tapado el 2026-09-19: `--sql` escribe el UPDATE de
   su columna, y lo escribe como **espejo** de lo que declara el fichero de correcciones, no como cola
   de lo que ese pase acaba de cambiar — que es la avería del `--sql` de la auditoría de enlaces.
+- **Sincronizar era solo escribir, así que toda corrección que consistiera en QUITAR algo se
+  deshacía sola.** `species:apply` salta los campos que el catálogo universal no trae, y eso es lo
+  correcto en 754 de los 1.115 taxones, donde «ausente» quiere decir «nadie lo ha rellenado
+  todavía». Pero cuando el campo se ha **retirado** a propósito —porque la fuente, habiendo
+  contestado, ya no lo sostiene— «ausente» significa lo contrario, y ahí el valor caducado sobrevive
+  en los `park.json`; peor: el `species:extract` que el runbook manda pasar detrás lo **devuelve** al
+  catálogo universal. Se ve en las cifras del 2026-09-15: aquella limpieza a mano de `iucnSpain`
+  tocó **cuatro fichas universales y ninguna de los espacios**, así que *Sambucus nigra* seguía
+  anunciando en Cañaverosa el «CR en España» del **saúco de La Palma** cuatro días después, con el
+  dato ya bien en el catálogo. Los dos silencios de la misma familia estaban en las dos herramientas
+  que escriben ese campo: `build-species-universal.js --refrescar-campos` conservaba el valor viejo
+  cuando la derivación nueva omitía el campo, y `lista-roja-espana.js` solo sabía escribir teniendo
+  ya calculada la distinción que hacía falta (su `motivo` es «no se ha podido preguntar»). Tapado el
+  2026-09-19 en las tres puertas (deuda nº 45): las dos primeras retiran y lo enumeran, y
+  `species:apply --retira <campos>` propaga la retirada a las fichas — **nombrando los campos quien
+  llama**, que es lo único que distingue los dos significados de «ausente». Son 18 fichas de once
+  espacios. La lección general: **sincronizar es escribir Y retirar**, y una herramienta que solo
+  sabe escribir no sincroniza, acumula.
 
 ---
 

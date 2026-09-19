@@ -1496,8 +1496,7 @@
       "zepaSiteCode": null,
       "habitatIds": [],
       "gbifOccurrences": 12,
-      "visible": true,
-      "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2004)"
+      "visible": true
     },
     {
       "id": 24,
