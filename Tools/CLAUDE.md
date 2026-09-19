@@ -81,6 +81,14 @@ el fichero —el **consentimiento** del observador y la **generalización** de l
 taxones amenazados—, y ninguna de las dos vive aquí: están en `Backend/Lib/dwc.php`, que es puro y por
 eso se puede probar sin BD. Ver [`Docs/DARWIN-CORE.md`](../Docs/DARWIN-CORE.md).
 
+`db-backup-remoto.php` es la **copia de la base DESPLEGADA**, y existe porque `npm run db:backup`
+copia el contenedor LOCAL, que no arranca. Era la tercera vez que se escribía el mismo volcado PDO
+antes de aplicar una cola —2026-09-11, 09-14 y 09-15— y las tres se tiró; el runbook lo daba por
+supuesto sin decir dónde estaba, porque no estaba. Instantánea COHERENTE
+(`START TRANSACTION WITH CONSISTENT SNAPSHOT`: sin eso, dos tablas volcadas con un minuto de
+diferencia pueden contradecirse y la copia parece buena), manifiesto con filas por tabla y `sha1`
+al lado, y **destino obligatorio fuera del repositorio** porque el volcado lleva correos y hashes.
+
 `test-presence-rules.php` y `test-dwc-rules.php` son `npm test`.
 
 ## `catalogo-nacional/` — el pipeline por espacio

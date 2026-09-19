@@ -188,6 +188,69 @@ están en ningún `park.json` (restos de un renombrado), y el UPSERT del n2 no.
 
 ---
 
+## 3 bis. La cola del 2026-09-19 · APLICADA
+
+Tres sesiones de deuda (nº 43, 45 y 44(b)) dejaron cola. Se aplicó entera **regenerando los
+dieciséis n2 y aplicando solo eso**: `build-park-sql.js` escribe las 38 columnas de `species` desde
+el `park.json`, así que `species-universal.sql`, `rareza-local.sql` y `estado-autonomico.sql`
+**quedan cubiertos** (§3.5) — y de hecho el cotejo posterior lo confirma con 0 diferencias sin
+haberlos aplicado.
+
+Lo que costó y lo que enseñó:
+
+**1 · La copia ya no se escribe a mano.** Era la tercera vez que hacía falta un volcado PDO de
+Railway y las tres se había escrito y tirado. Ahora es `Tools/db-backup-remoto.php`:
+
+```bash
+railway run --service MySQL -- bash -c \
+  'php Tools/db-backup-remoto.php "$MYSQL_PUBLIC_URL" "$HOME/NaturDex-backups/railway-naturadex-<fecha>-pre-cola.sql"'
+```
+
+Instantánea coherente, manifiesto con filas y `sha1` al lado, y **fuera del repositorio** porque
+lleva correos y hashes. La del 19: 18 tablas, **10.384 filas, 12,2 MB**.
+
+**2 · Los dieciséis n2 versionados iban todos atrasados**, como manda §3.1 bis: se regeneran, sale
+`git status Database/` con los dieciséis modificados, y se aplican esos.
+
+**3 · El cotejo simétrico, y dos sesgos que casi lo estropean.** La pregunta es «¿tiene la base
+algún valor que el repositorio NO tenga?», porque el n2 es un UPSERT. La primera pasada dijo
+**11.426 diferencias** y **124 valores solo en la base**; las dos cifras estaban infladas por el
+comparador, no por la base:
+
+- **Las columnas JSON hay que canonizarlas en LOS DOS lados.** El runbook ya avisaba de que MySQL
+  reordena las claves, y aun así el script solo ordenaba las del repositorio: `rarity_basis` y
+  `rarity_local_basis` salían con **3.311 diferencias** cada una —el catálogo entero— donde las
+  reales eran 86 y 72.
+- **`identification_tips` se escribe con «; », no con salto de línea**, que es como lo parte
+  `park_payload.php`. Comparándolo mal salían **1.577** diferencias; las reales son **0**. Ojo, que
+  aquí hay una divergencia de verdad y conviene tenerla presente: `build-park-sql.js` une con «; »
+  y `sync-species-catalog.js --sql` une con `\n`. La base la manda el n2, que es el que escribe la
+  ficha entera.
+- Y un tercer sesgo sin consecuencia: `is_visible` sale como «valor solo en la base» en 106 fichas
+  porque el `park.json` **omite** `visible` cuando es cierto, y el generador escribe
+  `s.visible === undefined ? true`. No hay pérdida; lo que hay que mirar es el generador, no el
+  comparador.
+
+Corregido eso: **0 fichas en la base que no estén en el repositorio, 0 al revés**, y los únicos
+valores que la base tenía y el repositorio no eran los **18 `iucn_spain`** que la deuda nº 45
+retiró a propósito. Nadie había editado desde el AdminPanel.
+
+**4 · Después: 0 diferencias en 35 columnas.** Recuentos tras aplicar — 3.311 fichas, 6.411
+enlaces, 164 hábitats, 144 POIs, 16 espacios, **343 destacadas** (eran 345) y **una sola redacción**
+de la negación en `regional_status`, en 2.580 fichas.
+
+**5 · Y la comprobación que de verdad cierra el círculo: la API.** La base no es el final del
+camino, lo es lo que sirve el endpoint:
+
+```bash
+curl -s "https://naturdex-production-62b3.up.railway.app/Backend/Api/species.php?park=sierra-espuna"
+```
+
+—la ruta lleva `/Backend/Api/`, no `/api/`—. La cabra montés de Sierra Espuña sale con
+`rarityLocal 4`, destacada y «Vulnerable (Ley 7/1995…)»; el saúco de Cañaverosa, con `iucnSpain`
+en `null`.
+
+
 ## 4. Lo que hay que mirar ANTES de aplicar
 
 **La pregunta que importa no es «¿qué va a cambiar?» sino la simétrica: ¿hay en la base algún valor
