@@ -2101,17 +2101,17 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nabeulensis_sarda.JPG?width=1280",
       "imageAttribution": "Gisella D. (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 4,
       "rarityBasis": {
-        "categoria": "Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
-        "ambito": "autonómico",
-        "origen": "regionalStatus del park.json"
+        "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
+        "ambito": "estatal",
+        "origen": "spainStatus del park.json"
       },
       "featured": true,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-28); Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.3: presente; Formulario Normalizado de Datos del sitio Red Natura 2000 ES6200011 (Sierra de las Moreras), sección 3.2: población permanente, presente; Decreto n.º 299/2010, Plan de gestión y conservación de la ZEPA Almenara, Moreras y Cabo Cope, §7.3 (fauna catalogada) y §8.3.3 (flora del Catálogo Regional): la norma la enumera en la ZEPA «Sierra de la Almenara, Moreras y Cabo Cope» y su zona de estudio, que el propio plan cifra en unos 510 km² repartidos en cuatro unidades —Almenara 415 km², Carrasquilla 94, Sierra de las Moreras 16 y Cabo Cope 1—. Las tablas dicen «presentes en la ZEPA» y «en la zona de estudio», nunca «en este espacio»; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
@@ -2125,7 +2125,7 @@
       },
       "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 1996)",
       "iucnSpain": "EN — En peligro (Lista Roja española, 2002)",
-      "spainStatus": "Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexos II y IV; Reglamento CITES (CE) 338/97, Anexo A",
+      "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
       "regionalStatus": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -3184,7 +3184,7 @@
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
-      "featured": true,
+      "featured": false,
       "source": "GBIF confirma su presencia con 3 ocurrencias dentro del espacio (barrido de 2026-08-28); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -3512,19 +3512,19 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Charadrius_alexandrinus_-_Kentish_Plover_03.jpg?width=1280",
       "imageAttribution": "Zeynel Cebeci (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 2,
       "rarityBasis": {
-        "categoria": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 4,
+      "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable",
-        "ambito": "estatal",
-        "origen": "spainStatus del park.json"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
-      "featured": true,
+      "featured": false,
       "source": "GBIF confirma su presencia con 1 ocurrencia dentro del espacio (barrido de 2026-08-28); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000261 (Almenara-Moreras-Cabo Cope), sección 3.2: población permanente, presente; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -3536,7 +3536,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
       "iucnSpain": "VU — Vulnerable (Lista Roja española, 2004)",
-      "spainStatus": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; LESRPE (RD 139/2011); Ley 42/2007, Anexo IV",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,

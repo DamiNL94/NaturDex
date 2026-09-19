@@ -8,9 +8,9 @@ Cotejados **1113 taxones** de **3311 fichas** en 16 espacio(s).
 
 | Clase | Qué es | Casos |
 |---|---|---|
-| A | La ficha AFIRMA una figura que EIDOS no sostiene | 4 |
-| B | La ficha no recoge una figura que EIDOS sí trae | 9 |
-| C | Las dos ven figura, con gravedad distinta | 1 |
+| A | La ficha AFIRMA una figura que EIDOS no sostiene | 2 |
+| B | La ficha no recoge una figura que EIDOS sí trae | 1 |
+| C | Las dos ven figura, con gravedad distinta | 0 |
 | G | El mismo taxón se contradice entre espacios de la MISMA comunidad | 0 |
 | D | El texto no es un estado legal | 0 |
 | F | La afirmación no es contrastable con `v_estadolegal` | 12 |
@@ -41,9 +41,7 @@ usa «Especies de interés especial» y «Vulnerable»— pero hay que mirarlo a
 | Taxón | Ámbito | Texto de la ficha | Tramo ficha | Tramo EIDOS | Norma vigente en EIDOS | Espacios |
 |---|---|---|---|---|---|---|
 | *Burhinus oedicnemus* | estatal | LESRPE; Directiva Aves 2009/147/CE, Anexo I | 2 | 1 | — | barrancos-de-gebas, cabezo-gordo, cabo-cope-puntas-calnegre, calblanque-monte-cenizas-pena-aguila, carrascoy-y-el-valle, espacios-abiertos-e-islas-del-mar-menor, humedal-del-ajauque-y-rambla-salada, monte-arabi, salinas-arenales-san-pedro-pinatar, sierra-de-el-carche, sierra-de-la-pila, sierra-de-las-moreras, sierra-de-salinas, sierra-espuna |
-| *Caralluma europaea* | autonómico (Región de Murcia) | Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de … | 4 | 1 | — | cabezo-gordo, calblanque-monte-cenizas-pena-aguila, espacios-abiertos-e-islas-del-mar-menor |
-| *Genetta genetta* | estatal | LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo V | 2 | 1 | — | calblanque-monte-cenizas-pena-aguila, humedal-del-ajauque-y-rambla-salada, monte-arabi, sierra-de-el-carche, sierra-de-la-pila, sierra-de-salinas, sierra-espuna, sotos-y-bosques-de-ribera-de-canaverosa |
-| *Malpolon monspessulanus* | estatal | LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial) | 2 | 1 | — | barrancos-de-gebas, humedal-del-ajauque-y-rambla-salada, salinas-arenales-san-pedro-pinatar, sierra-de-la-pila, sotos-y-bosques-de-ribera-de-canaverosa, monte-arabi, sierra-de-el-carche, sierra-de-salinas |
+| *Natrix natrix* | estatal | LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPN… | 2 | 1 | — | monte-arabi, sierra-de-salinas, sierra-de-el-carche, sotos-y-bosques-de-ribera-de-canaverosa |
 
 El subconjunto que más pesa: estas fichas entran en el **nivel 2** de la puerta
 (`mide-niveles-puerta.js` lee la figura del texto), así que su respaldo documental está
@@ -55,14 +53,6 @@ ser un hueco de EIDOS, como en las dos lavandas—, pero tampoco las respalda.
 | Taxón | Ámbito | Texto de la ficha | Tramo ficha | Tramo EIDOS | Norma vigente en EIDOS | Espacios |
 |---|---|---|---|---|---|---|
 | *Alyssum montanum* | estatal | Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) | 1 | 5 | En peligro de extinción — Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listad… | sierra-de-el-carche |
-| *Calandrella rufescens* | estatal | Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) | 1 | 2 | En régimen de protección especial — Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listad… | espacios-abiertos-e-islas-del-mar-menor, humedal-del-ajauque-y-rambla-salada |
-| *Capra pyrenaica* | autonómico (Región de Murcia) | No incluida en el Catálogo Regional de especies protegidas (Región de Murcia) | 1 | 4 | Vulnerable — Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvi… | carrascoy-y-el-valle, monte-arabi, sierra-de-el-carche, sotos-y-bosques-de-ribera-de-canaverosa |
-| *Capra pyrenaica* | autonómico (Región de Murcia) | No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-0… | 1 | 4 | Vulnerable — Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvi… | sierra-espuna |
-| *Micromeria fruticosa* | autonómico (Región de Murcia) | No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especie… | 1 | 4 | Vulnerable — Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Reg… | sierra-de-salinas |
-| *Regulus ignicapillus* | estatal | Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) | 1 | 2 | En régimen de protección especial — Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listad… | sotos-y-bosques-de-ribera-de-canaverosa |
-| *Rhamnus pumila* | autonómico (Región de Murcia) | No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especie… | 1 | 3 | Especies de interés especial — Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Reg… | sierra-de-el-carche, sierra-de-salinas |
-| *Sambucus nigra* | autonómico (Región de Murcia) | No incluida en el Catálogo Regional de especies protegidas (Región de Murcia) | 1 | 4 | Vulnerable — Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Reg… | sotos-y-bosques-de-ribera-de-canaverosa |
-| *Scilla autumnalis* | autonómico (Región de Murcia) | No incluida en el Catálogo Regional de especies protegidas (Región de Murcia) | 1 | 3 | Especies de interés especial — Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Reg… | espacios-abiertos-e-islas-del-mar-menor |
 
 Peor que la clase A: aquí se está **perdiendo** una especie protegida. La norma vigente
 dice una cosa y la ficha dice otra —o no dice nada, que sale marcado «por silencio»—, así
@@ -70,9 +60,7 @@ que su `rarityLocal` está por debajo de lo que le toca y la app no la destaca.
 
 ## C · Las dos ven figura, con gravedad distinta
 
-| Taxón | Ámbito | Texto de la ficha | Tramo ficha | Tramo EIDOS | Norma vigente en EIDOS | Espacios |
-|---|---|---|---|---|---|---|
-| *Testudo graeca* | estatal | Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Di… | 2 | 4 | Vulnerable — Real Decreto 139/2011, de 4 de febrero, para el desarrollo del Listad… | cabo-cope-puntas-calnegre, sierra-de-las-moreras |
+_Ninguno._
 
 ## G · El mismo taxón se contradice entre espacios de la MISMA comunidad
 

@@ -234,9 +234,22 @@ async function consultaEidos(t) {
   }
 
   const filas = await eidos.rows('v_estadolegal',
-    [`idtaxon=eq.${idtaxon}`, 'select=estadolegal,norma,ambito,ccaa,idvigente']);
+    [`idtaxon=eq.${idtaxon}`, 'select=estadolegal,norma,ambito,ccaa,idvigente,observacionespoblacion']);
   return { idtaxon, resuelto, nombreEidos, filas };
 }
+
+/*
+ * La clave de la caché lleva DENTRO el identificador con el que se va a preguntar, y no es un
+ * detalle de implementación: indexada solo por nombre, la entrada sobrevive a que la ficha cambie
+ * de `eidosTaxonId` y sigue contestando por el taxón viejo. Costó una acusación falsa el
+ * 2026-09-19: el chumberillo de lobo (*Caralluma europaea*) salía en la clase A —«afirma Vulnerable
+ * y EIDOS no trae ninguna norma»— porque la caché contestaba por el idtaxon 80097, que no tiene
+ * filas, mientras la ficha apuntaba desde el reanclaje al 2866, que sí trae su Decreto 50/2003. Es
+ * la misma lección que ya estaba escrita en `lista-roja-espana.js`: **una caché puede guardar lo
+ * que la fuente dice, nunca la clave con la que se le vuelve a preguntar.** Con el id en la clave,
+ * reanclar un taxón invalida su entrada él solo.
+ */
+const claveCache = (t) => (t.eidosTaxonId ? `id:${t.eidosTaxonId}` : `sci:${t.sci}`);
 
 async function pasadaEidos(taxones) {
   fs.mkdirSync(OUT_DIR, { recursive: true });
@@ -246,9 +259,10 @@ async function pasadaEidos(taxones) {
   for (let i = 0; i < taxones.length; i++) {
     const t = taxones[i];
     if (i % 100 === 0) process.stderr.write(`  EIDOS estado legal: ${i}/${taxones.length}\n`);
-    if (cache[t.sci]) continue;
-    try { cache[t.sci] = await consultaEidos(t); }
-    catch (e) { cache[t.sci] = { error: e.message }; }
+    const clave = claveCache(t);
+    if (cache[clave]) continue;
+    try { cache[clave] = await consultaEidos(t); }
+    catch (e) { cache[clave] = { error: e.message }; }
     pedidas++;
     await sleep(eidos.THROTTLE_MS);
   }
@@ -291,7 +305,11 @@ function tramoEidos(filas, filtro) {
   return { tramo, basis, hayFilas };
 }
 
-const esNacional = (f) => f.ambito === 'Nacional' && !f.ccaa;
+// Y la TERCERA trampa de la vista, encontrada el 2026-09-19: una norma nacional puede aplicarse solo
+// en Canarias o Baleares, y EIDOS lo dice en `observacionespoblacion`. Sin mirarlo, el cotejo daba
+// por buena una ficha que anunciaba «CEEA: Vulnerable» por la población canaria del chorlitejo
+// patinegro. El criterio está en `aplicaEnPeninsula` (lib/eidos.js), con las citas del BOE.
+const esNacional = (f) => f.ambito === 'Nacional' && !f.ccaa && eidos.aplicaEnPeninsula(f);
 const esDeCcaa = (ccaa) => (f) => !!f.ccaa && normCcaa(f.ccaa) === normCcaa(ccaa);
 
 /*
@@ -594,7 +612,7 @@ async function main() {
   const hallazgos = sinRed.filter(h => h.clase === 'G');
   const sinTaxon = [];
   for (const t of taxones) {
-    const e = cache[t.sci];
+    const e = cache[claveCache(t)];
     if (!e || e.error) { sinTaxon.push({ sci: t.sci, motivo: e ? `error al consultar: ${e.error}` : 'sin consultar' }); continue; }
     if (e.resuelto === 'no-encontrada') { sinTaxon.push({ sci: t.sci, motivo: 'EIDOS no conoce el nombre' }); continue; }
 

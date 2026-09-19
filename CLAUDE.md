@@ -68,7 +68,7 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
    deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).
 
-## 2. Treinta y tres cosas que fallan EN VERDE
+## 2. Treinta y seis cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
@@ -393,6 +393,40 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   sí da: la sabina negral, en diez espacios, decía «no catalogada» teniendo tres normas estatales.
   Corregido el 2026-09-15 con `--refrescar-campos spainStatus`. Lo que la evaluación necesitaba ya
   existía y se llama `iucnSpain`.
+- **Una norma ESTATAL que solo se aplica en Canarias, dentro de la ficha de una especie de Murcia.**
+  El Anexo del RD 139/2011 tiene una columna «Población referida» y EIDOS la sirve en
+  `observacionespoblacion`; el pipeline no la leía, así que `spainStatus` se quedaba con la fila que
+  pesara más sin mirar **dónde** se aplica. Catorce taxones del catálogo: el **chorlitejo patinegro**
+  y la **seba** anunciaban «CEEA: Vulnerable» —tramo 4 y **destacadas**— por su población canaria,
+  teniendo el mismo Anexo una segunda fila «Península y Baleares» que es solo LESRPE; el **pinzón
+  vulgar** anunciaba LESRPE cuando el Anexo lo lista SOLO con «Canarias»; y ocho **culebras nativas**
+  llevaban «CEEEI: Incluido», que es el catálogo de especies exóticas **INVASORAS** y se les aplica
+  en «Canarias, Ibiza y Formentera». Con ellas el madroño, el tojo y la escoba negra — **los tres que
+  la revisión de Sierra Espuña del 2026-08-09 ya corrigió, a mano y en un solo `park.json`**: la
+  causa estaba en el catálogo universal y volvió sola. La lección que se generaliza: **una corrección
+  local sobre una causa universal se deshace**, y puede tardar un año en volver a verse. Tapado el
+  2026-09-19 con `aplicaEnPeninsula()` en `lib/eidos.js`, que usan el generador y el cotejo.
+- **Un desempate que solo mira la mitad de las filas.** `resolveTaxon` empareja por prefijo y desde
+  el 2026-09-15 desempata por rango… **entre las filas ACEPTADAS**. Cuando EIDOS no tiene aceptado el
+  rango que se pide, el nombre de rango bueno está en una fila de **sinónimo** y el desempate no lo
+  veía: pedir *Calandrella rufescens* devolvía su **subespecie** (`status: 'ok'`, rangoDistinto) en
+  vez del taxón que el catálogo ya tenía anclado, y pedir *Regulus ignicapillus* devolvía la
+  subespecie **balearicus**. Igual con *Caralluma europaea* (una **variedad** marroquí), *Scilla
+  autumnalis* y *Rhamnus pumila*. Nada fallaba: las cinco respuestas eran taxones reales con
+  identificador impecable. Arreglado el 2026-09-19 filtrando por rango **todas** las filas que casan
+  por nombre y prefiriendo la aceptada **después**; con eso los cinco nombres devuelven exactamente
+  el `eidosTaxonId` que las fichas ya llevaban. La lección: **un desempate aplicado a un subconjunto
+  no es un desempate**.
+- **Un campo corregido en el `park.json` que no tiene vía a la base, y una cabecera que juraba que sí
+  la tenía.** `regional_status` es columna LOCAL: no viaja en el `species-universal.sql` de
+  `species:apply`, y `rareza-legal.js --sql` **tampoco la lleva** —escribe `rarity_local`,
+  `rarity_local_basis` e `is_featured`, que es el tramo derivado, no el texto—. La cabecera de
+  `corrige-estado-autonomico.js` decía lo contrario, así que cada corrección de esa cola quedaba bien
+  en el repositorio y vieja en lo que ve el usuario, y la única vía era regenerar el `-n2.sql` del
+  espacio, que es la trampa nº 6. **Una afirmación falsa en un comentario no la puede comprobar
+  `validate`** (la lección de la nº 4, otra vez). Tapado el 2026-09-19: `--sql` escribe el UPDATE de
+  su columna, y lo escribe como **espejo** de lo que declara el fichero de correcciones, no como cola
+  de lo que ese pase acaba de cambiar — que es la avería del `--sql` de la auditoría de enlaces.
 
 ---
 

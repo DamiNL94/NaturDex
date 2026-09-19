@@ -2657,7 +2657,7 @@
         "genus": "Natrix"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -5443,13 +5443,13 @@
       "coordinates": null,
       "rarityScore": 2,
       "rarityBasis": {
-        "categoria": "LESRPE (RD 139/2011)",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "LESRPE (RD 139/2011)",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
@@ -5464,7 +5464,7 @@
         "genus": "Hemorrhois"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
-      "spainStatus": "LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -6226,11 +6226,11 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 1,
+      "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Sin figura de protección",
-        "ambito": "estatal",
-        "origen": "spainStatus del park.json"
+        "categoria": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
       "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-21); Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.3, que la cita como «Scilla autumnalis L.»; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §2.1.2 (Paisaje Protegido «Espacios Abiertos e Islas del Mar Menor») (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Paisaje Protegido «Espacios Abiertos e Islas del Mar Menor», que es el propio espacio: el volumen II le dedica un apartado con inventario propio (§2.1), distinto del de su ZEC ES6200006 (§1.1.2), y la tabla del §2 del volumen I mide sus 1.307,85 ha dentro del ámbito del plan, el 100 %; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
@@ -6244,7 +6244,7 @@
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
       "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
-      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 8116,
@@ -6555,7 +6555,7 @@
         "genus": "Zamenis"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -7278,19 +7278,19 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Charadrius_alexandrinus_-_Kentish_Plover_03.jpg?width=1280",
       "imageAttribution": "Zeynel Cebeci (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 2,
       "rarityBasis": {
-        "categoria": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 4,
+      "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable",
-        "ambito": "estatal",
-        "origen": "spainStatus del park.json"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
-      "featured": true,
+      "featured": false,
       "source": "GBIF confirma su presencia con 742 ocurrencias dentro del espacio (barrido de 2026-08-21); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000260 (Mar Menor), sección 3.2: población reproductora; Decreto n.º 259/2019, de 10 de octubre, Plan de gestión integral del Mar Menor y la franja litoral mediterránea, volumen II §2.1.2 (Paisaje Protegido «Espacios Abiertos e Islas del Mar Menor») (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Paisaje Protegido «Espacios Abiertos e Islas del Mar Menor», que es el propio espacio: el volumen II le dedica un apartado con inventario propio (§2.1), distinto del de su ZEC ES6200006 (§1.1.2), y la tabla del §2 del volumen I mide sus 1.307,85 ha dentro del ámbito del plan, el 100 %; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -7301,7 +7301,7 @@
         "genus": "Charadrius"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-      "spainStatus": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; LESRPE (RD 139/2011); Ley 42/2007, Anexo IV",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -12134,15 +12134,15 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fringilla_coelebs_(chaffinch)%2C_male.jpg?width=1280",
       "imageAttribution": "Self: Commons user MichaelMaggs (CC BY-SA 2.5) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "rarityBasis": {
-        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 2,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
@@ -12157,7 +12157,7 @@
         "genus": "Fringilla"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -13273,15 +13273,15 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calandrella_rufescens_Canarias.jpg?width=1280",
       "imageAttribution": "Calandrella_rufescens_-Canary_Islands_-Spain-8.jpg: Tony Hisgett de… (CC BY 2.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 1,
+      "rarityScore": 2,
       "rarityBasis": {
-        "categoria": "Sin figura de protección",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 1,
+      "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "Sin figura de protección",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
@@ -13296,7 +13296,7 @@
         "genus": "Calandrella"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)",
-      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,

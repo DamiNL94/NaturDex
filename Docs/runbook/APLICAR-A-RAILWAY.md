@@ -162,6 +162,23 @@ valor que el paquete no tuviera (0 campos), así que el UPSERT solo suma.
 Resultado: **218 términos y 26 invasoras** (con el arruí, *Ammotragus lervia*, que solo estaba en el
 JSON). 218 y no 219 por el choque de collation que explica §4.
 
+### 3.4 bis El estado legal autonómico (`estado-autonomico.sql`)
+
+`regional_status` —el texto que cita el catálogo autonómico— es columna **LOCAL**: no viaja en el
+`species-universal.sql` de `species:apply`, y `rareza-local.sql` tampoco la lleva (ése escribe el
+tramo derivado: `rarity_local`, `rarity_local_basis` e `is_featured`). Hasta el 2026-09-19 no la
+escribía **nadie** salvo el `-n2.sql` del espacio entero, que es la trampa nº 6, así que cada
+corrección de esa cola se quedaba en el repositorio.
+
+Lo escribe ahora `node Tools/catalogo-nacional/corrige-estado-autonomico.js --sql
+Database/estado-autonomico.sql`. Es un **espejo**, no una cola: lleva todas las fichas que deben
+tener el texto que declara `data/estado-autonomico-correcciones.json`, estuvieran ya bien o no, así
+que regenerarlo nunca pierde lo que no se llegó a aplicar y aplicarlo dos veces escribe lo mismo.
+
+**Va DESPUÉS de los n2** si en esa tanda se regenera alguno: el n2 escribe todas las columnas de
+`species` desde el `park.json`, y el orden inverso no rompe nada pero deja el trabajo hecho dos
+veces. Y como cualquier otro, **cuenta las filas después**.
+
 ### 3.5 Lo que NO hace falta aplicar
 
 `species-universal.sql` (2.882 UPDATE) y `rareza-local.sql` (2.882 UPDATE) **quedan cubiertos por los

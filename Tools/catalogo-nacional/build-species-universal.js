@@ -492,10 +492,23 @@ function normaCorta(norma) {
 }
 
 function espanaDe(nacionales) {
-  if (!(nacionales || []).length) return 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)';
+  // Una norma de ámbito «Nacional» puede aplicarse SOLO en Canarias o Baleares, y entonces no
+  // describe el estado legal de una especie de la península: el criterio vive en
+  // `aplicaEnPeninsula` (lib/eidos.js), con las pruebas del BOE en su cabecera.
+  const todas = nacionales || [];
+  const aplican = todas.filter(eidos.aplicaEnPeninsula);
+  const fuera = todas.length - aplican.length;
+  // El hueco se DICE —una norma apartada no es una norma que no existe—, pero se dice SIN nombrar la
+  // figura: el tramo se deriva de este mismo texto con la escalera de `lib/rareza.js`, así que dejar
+  // caer aquí un «LESRPE» de Canarias devolvería por la puerta de atrás el tramo que el filtro
+  // acaba de quitar.
+  const nota = fuera
+    ? ` · ${fuera} norma${fuera === 1 ? '' : 's'} estatal${fuera === 1 ? '' : 'es'} más en EIDOS (IEPNB), aplicable${fuera === 1 ? '' : 's'} solo fuera de la península`
+    : '';
+  if (!aplican.length) return `Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)${nota}`;
   const vistos = new Set();
   const partes = [];
-  for (const r of [...nacionales].sort((a, b) => pesoDe(a) - pesoDe(b))) {
+  for (const r of [...aplican].sort((a, b) => pesoDe(a) - pesoDe(b))) {
     const txt = [r.estadolegal, r.norma ? `(${normaCorta(r.norma)})` : null].filter(Boolean).join(' ');
     if (!txt || vistos.has(txt)) continue;
     vistos.add(txt);
@@ -503,7 +516,7 @@ function espanaDe(nacionales) {
   }
   // Tres figuras bastan para situar a la especie; a partir de ahí la ficha deja de leerse.
   const sobran = partes.length - 3;
-  return partes.slice(0, 3).join(' · ') + (sobran > 0 ? ` · y ${sobran} figura${sobran === 1 ? '' : 's'} más en EIDOS (IEPNB)` : '');
+  return partes.slice(0, 3).join(' · ') + (sobran > 0 ? ` · y ${sobran} figura${sobran === 1 ? '' : 's'} más en EIDOS (IEPNB)` : '') + nota;
 }
 
 /**

@@ -2016,7 +2016,7 @@
       "genus": "Arbutus"
     },
     "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
-    "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto) · y 1 figura más en EIDOS (IEPNB)",
+    "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Arbutus_unedo_Corsica.jpg?width=1280",
     "imageAttribution": "jxandreani (CC BY 2.0) · Wikimedia Commons",
     "rarityBasis": {
@@ -5269,7 +5269,7 @@
     "group": "Ave esteparia",
     "habitat": "Saladares, estepas salinas, eriales y llanos áridos con vegetación rala",
     "seasonality": "Todo el año",
-    "rarityScore": 1,
+    "rarityScore": 2,
     "description": "La alondra más pequeña de Europa, de plumaje pardo grisáceo y con el pecho finamente rayado de arriba abajo, sin las manchas laterales de su parienta. Vive ligada a los llanos más áridos y salinos, un hábitat en retroceso, y se camufla tan bien que suele verse solo al levantar el vuelo.",
     "descriptionSource": null,
     "tips": [
@@ -5286,12 +5286,12 @@
       "genus": "Calandrella"
     },
     "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Calandrella_rufescens_Canarias.jpg?width=1280",
     "imageAttribution": "Calandrella_rufescens_-Canary_Islands_-Spain-8.jpg: Tony Hisgett de… (CC BY 2.0) · Wikimedia Commons",
     "eidosTaxonId": 33007,
     "rarityBasis": {
-      "categoria": "Sin figura de protección",
+      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     },
@@ -7249,7 +7249,7 @@
     "group": "Ave limícola",
     "habitat": "Playas, salinas, marismas y llanos arenosos junto al mar",
     "seasonality": "Todo el año, con máximos en primavera y verano",
-    "rarityScore": 4,
+    "rarityScore": 2,
     "description": "Chorlitejo pequeño y pálido, de patas oscuras, que corretea por la arena en carreras cortas seguidas de paradas bruscas. Su nido es una simple depresión en la arena con los huevos perfectamente camuflados, por lo que las puestas se pierden con facilidad bajo el pisoteo.",
     "tips": [
       "Collar oscuro interrumpido en el centro del pecho",
@@ -7265,11 +7265,11 @@
       "genus": "Charadrius"
     },
     "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; LESRPE (RD 139/2011); Ley 42/2007, Anexo IV",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Charadrius_alexandrinus_-_Kentish_Plover_03.jpg?width=1280",
     "imageAttribution": "Zeynel Cebeci (CC BY-SA 4.0) · Wikimedia Commons",
     "rarityBasis": {
-      "categoria": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable",
+      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     },
@@ -8820,7 +8820,7 @@
       "genus": "Coronella"
     },
     "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/BennyTrapp_Coronella_girondica.jpg?width=1280",
     "imageAttribution": "Benny Trapp (CC BY 3.0) · Wikimedia Commons",
     "eidosTaxonId": 11362,
@@ -9681,7 +9681,7 @@
     "group": null,
     "habitat": "Cymodocea nodosa crece sobre fondo arenoso fotófilo con contenido de materia orgánica",
     "seasonality": "Febrero, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre",
-    "rarityScore": 4,
+    "rarityScore": 2,
     "description": null,
     "descriptionSource": null,
     "tips": [],
@@ -9694,12 +9694,12 @@
       "genus": "Cymodocea"
     },
     "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2010)",
-    "spainStatus": "CEEA: Vulnerable (Orden AAA/1351) · LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cymodocea.JPG?width=1280",
     "imageAttribution": "Miguelverdu (CC BY-SA 3.0) · Wikimedia Commons",
     "eidosTaxonId": 3911,
     "rarityBasis": {
-      "categoria": "CEEA: Vulnerable (Orden AAA/1351)",
+      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     },
@@ -10037,7 +10037,7 @@
       "genus": "Cytisus"
     },
     "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-    "spainStatus": "CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto, por el que se regula el Catálogo español de especies exóticas invasoras. BOE 185 de 3 de agosto de 2013)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cytisus_scoparius_by_Danny_S._-_001.JPG?width=1280",
     "imageAttribution": "Danny S. (CC BY-SA 3.0) · Wikimedia Commons",
     "rarityBasis": {
@@ -12768,7 +12768,7 @@
     "group": "Ave",
     "habitat": "Bosques, arboledas, huertos y jardines con arbolado",
     "seasonality": "Todo el año",
-    "rarityScore": 2,
+    "rarityScore": 1,
     "description": "Uno de los pájaros más abundantes de Europa. El macho luce el pecho vinoso y la nuca gris azulada; la hembra es parda. Ambos comparten dos barras alares blancas muy visibles en vuelo. Su canto es una frase descendente que acaba en un floreo, repetida sin descanso en primavera.",
     "tips": [
       "Dos barras blancas bien marcadas en cada ala",
@@ -12784,11 +12784,11 @@
       "genus": "Fringilla"
     },
     "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fringilla_coelebs_(chaffinch)%2C_male.jpg?width=1280",
     "imageAttribution": "Self: Commons user MichaelMaggs (CC BY-SA 2.5) · Wikimedia Commons",
     "rarityBasis": {
-      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+      "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     },
@@ -13464,7 +13464,7 @@
     "group": "Mamífero carnívoro",
     "habitat": "Bosque, matorral denso, roquedos y sotos con cobertura y refugios",
     "seasonality": "Todo el año (actividad nocturna)",
-    "rarityScore": 2,
+    "rarityScore": 1,
     "description": "Carnívoro esbelto de pelaje gris con manchas negras y una cola larguísima anillada en blanco y negro, tan larga como el resto del cuerpo. Es un trepador excelente y estrictamente nocturno. Deja sus excrementos en letrinas fijas sobre piedras y troncos, que usa durante años.",
     "tips": [
       "Cola muy larga con anillos blancos y negros bien marcados",
@@ -13480,11 +13480,11 @@
       "genus": "Genetta"
     },
     "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2015)",
-    "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo V",
+    "spainStatus": "Anexo VI (Ley 42/2007, de 13 de diciembre)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Genetta_genetta_felina_(Wroclaw_zoo).JPG?width=1280",
     "imageAttribution": "Guérin Nicolas (messages) (CC BY-SA 3.0) · Wikimedia Commons",
     "rarityBasis": {
-      "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+      "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     },
@@ -15082,11 +15082,11 @@
       "genus": "Hemorrhois"
     },
     "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
-    "spainStatus": "LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hemorrhois_hippocrepis_121004.jpg?width=1280",
     "imageAttribution": "Accipiter (R. Altenkamp, Berlin) (CC BY-SA 3.0) · Wikimedia Commons",
     "rarityBasis": {
-      "categoria": "LESRPE (RD 139/2011)",
+      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     },
@@ -18931,7 +18931,7 @@
       "genus": "Macroprotodon"
     },
     "iucnGlobal": "NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Benny_Trapp_Macroprotodon_brevis.jpg?width=1280",
     "imageAttribution": "Benny Trapp (CC BY 3.0) · Wikimedia Commons",
     "eidosTaxonId": 10913,
@@ -18968,7 +18968,7 @@
     },
     "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
     "iucnSpain": "NT — Casi amenazada (Lista Roja española, 2002)",
-    "spainStatus": "CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hooded_Snake(Macroprotodon_cucullatus).jpg?width=1280",
     "imageAttribution": "gailhampshire (CC BY 2.0) · Wikimedia Commons",
     "eidosTaxonId": 23752
@@ -18979,7 +18979,7 @@
     "group": "Reptil",
     "habitat": "Matorral litoral y laderas secas",
     "seasonality": "Primavera a otoño",
-    "rarityScore": 2,
+    "rarityScore": 1,
     "description": "La culebra más grande de la península, de hasta dos metros y medio, con un aspecto inconfundible: ojos grandes de pupila redonda bajo unas escamas salientes que le dan «cejas» y expresión de enfado. Es diurna, muy rápida y venenosa, pero con los colmillos al fondo de la boca, por lo que no supone riesgo si no se la manipula.",
     "tips": [
       "Escamas prominentes sobre los ojos, como cejas",
@@ -18995,11 +18995,11 @@
       "genus": "Malpolon"
     },
     "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
-    "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Culebra_bastarda_(Malpolon_monspessulanus)%2C_Nig%C3%BCella%2C_Zaragoza%2C_Espa%C3%B1a%2C_2017-05-24%2C_DD_07.jpg?width=1280",
     "imageAttribution": "Diego Delso (CC BY-SA 4.0) · Wikimedia Commons",
     "rarityBasis": {
-      "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+      "categoria": "Sin figura de protección",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     },
@@ -21115,7 +21115,7 @@
       "genus": "Natrix"
     },
     "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Viperine_Snake_(Natrix_maura)_(14198769323).jpg?width=1280",
     "imageAttribution": "Bernard DUPONT from FRANCE (CC BY-SA 2.0) · Wikimedia Commons",
     "eidosTaxonId": 11688,
@@ -21133,7 +21133,7 @@
     "group": "Reptil",
     "habitat": null,
     "seasonality": "Marzo a noviembre",
-    "rarityScore": 1,
+    "rarityScore": 2,
     "description": null,
     "descriptionSource": null,
     "tips": [],
@@ -21146,12 +21146,12 @@
       "genus": "Natrix"
     },
     "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-    "spainStatus": "CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Natrix_natrix_(Karl_L).jpg?width=1280",
     "imageAttribution": "Karl Larsaeus (CC BY 2.5) · Wikimedia Commons",
     "eidosTaxonId": 81375,
     "rarityBasis": {
-      "categoria": "Sin figura de protección",
+      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     }
@@ -26383,7 +26383,7 @@
     "group": "Ave",
     "habitat": null,
     "seasonality": "Todo el año",
-    "rarityScore": 1,
+    "rarityScore": 2,
     "description": null,
     "descriptionSource": null,
     "tips": [],
@@ -26396,12 +26396,12 @@
       "genus": "Regulus"
     },
     "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)",
-    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Firecrest93.JPG?width=1280",
     "imageAttribution": "NAUMANN, NATURGESCHICHTE DER VÖGEL MITTELEUROPAS: Band II, Tafel 15… (Public domain) · Wikimedia Commons",
     "eidosTaxonId": 11499,
     "rarityBasis": {
-      "categoria": "Sin figura de protección",
+      "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     },
@@ -31078,7 +31078,7 @@
     "group": "Reptil",
     "habitat": "Matorral termomediterráneo semiárido",
     "seasonality": "Primavera y otoño",
-    "rarityScore": 2,
+    "rarityScore": 4,
     "description": "Tortuga terrestre de caparazón abombado con dibujo de placas amarillas y negras, la única silvestre del sureste peninsular. Se reconoce por un tubérculo córneo a cada lado de la cola —el «espolón»— y por no tener el peto articulado. Pasa el verano y el invierno inactiva, refugiada bajo matas y madrigueras.",
     "tips": [
       "Un tubérculo córneo a cada lado de la base de la cola",
@@ -31094,11 +31094,11 @@
       "genus": "Testudo"
     },
     "iucnGlobal": "VU — Vulnerable (Lista Roja mundial de la UICN, 1996)",
-    "spainStatus": "Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexos II y IV; Reglamento CITES (CE) 338/97, Anexo A",
+    "spainStatus": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Nabeulensis_sarda.JPG?width=1280",
     "imageAttribution": "Gisella D. (CC BY-SA 3.0) · Wikimedia Commons",
     "rarityBasis": {
-      "categoria": "Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+      "categoria": "CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)",
       "ambito": "estatal",
       "origen": "spainStatus del catálogo universal"
     },
@@ -33125,7 +33125,7 @@
       "genus": "Ulex"
     },
     "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
-    "spainStatus": "CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto, por el que se regula el Catálogo español de especies exóticas invasoras. BOE 185 de 3 de agosto de 2013)",
+    "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ulex_europaeus.jpg?width=1280",
     "imageAttribution": "J.F. Gaffard Jeffdelonge at fr.wikipedia (CC BY-SA 3.0) · Wikimedia Commons",
     "rarityBasis": {
@@ -33819,7 +33819,7 @@
       "genus": "Zamenis"
     },
     "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
-    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
+    "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rhinechis_scalaris_cropped.jpg?width=1280",
     "imageAttribution": "Benny_Trapp_Rhinechis_scalaris_Portugal.jpg: Benny Trapp derivative… (CC BY 3.0) · Wikimedia Commons",
     "eidosTaxonId": 33095,

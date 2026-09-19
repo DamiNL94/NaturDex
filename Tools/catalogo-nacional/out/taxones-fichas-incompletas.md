@@ -12,29 +12,34 @@ Las dos columnas de la derecha son el material con el que curar **sin salirse de
 EIDOS» lista los nombres castellanos que la fuente conoce —el marcado como preferente no
 siempre es por el que se conoce a la especie: EIDOS prefiere «Aguilón» a «Alimoche común».
 
-Total: **22**.
+Total: **18**.
 
 | Especie | Campos vacíos | Otros nombres en EIDOS | Descripción en EIDOS |
 |---|---|---|---|
-| *Motacilla cinerea* | habitat, description, tips | Lavandera cascadeña (preferente)<br>Lavandera cascadeña | — |
-| *Bucanetes githagineus* | habitat, description, tips | Camachuelo trompetero (preferente)<br>Camachuelo trompetero | — |
-| *Phalacrocorax carbo* | habitat, description, tips | Cormorán grande<br>Cormorán grande | — |
-| *Lotus dorycnium* | commonName, group, habitat, description, tips | — | — |
-| *Paronychia capitata* | group, habitat, description, tips | Flor de papel<br>Hierba de la plata<br>Hierba de la platilla<br>Hierba de la sangre<br>Hierba meona<br>Lapilla<br>Mermasangre<br>Mermasangres<br>Nevadeta<br>Nevadilla<br>Orinaria<br>Quebrantadientes<br>Quebrantapiedras<br>Sanguinaria (preferente)<br>Yerba de la sangre<br>Yerba la sangre del campo<br>Carnadillo<br>Hierba la sangre del campo<br>Hierba meadera<br>Mata de plata<br>Hierba la / de la virgen<br>Urinaria | — |
-| *Capra pyrenaica* | habitat, description, tips | Cabra montés (preferente)<br>Cabra Montesa<br>Bucardo | — |
-| *Dactylis glomerata* | habitat, description, tips | Aballico<br>Avallico<br>Ballueca<br>Bayueca<br>Centinela<br>Cerrillera<br>Cervuno<br>Enjilaora<br>Enjilaora de mora<br>Espigueta<br>Herba del tueru blancu<br>Hierba de los uñeros<br>Hierba triguera<br>Jopillos<br>Jopitos<br>Lastón<br>Pasto cervuno<br>Planta l'asma<br>Triguera bravía<br>Triguerilla<br>dactilo<br>jopillos de monte<br>grama<br>Enhiladora<br>Enhiladora de mora<br>Hierba mazorquera<br>Hierba serillosa<br>Jopito<br>Planta l’asma<br>Triguera | — |
-| *Pardoglossum cheirifolium* | group, habitat, description, tips | Oreja de Liebre<br>Llengua de bou<br>Biñebla<br>Lengua de perro<br>Pulmonaria<br>Riñella<br>Viniebla<br>Viñebla<br>viniebla de hojas de alhelí | — |
-| *Hydrobates pelagicus* | habitat, description, tips | Paiño comun (preferente)<br>Paíño europeo<br>Paíño europeo | — |
-| *Asplenium obovatum* | commonName, habitat, description, tips | — | — |
-| *Turdus merula* | habitat, description, tips | Mirlo común (preferente)<br>Mirlo común<br>Patoja | — |
-| *Asio otus* | habitat, description, tips | Búho chico (preferente)<br>Búho chico | — |
-| *Ifloga spicata* | commonName, group, habitat, description, tips | — | — |
-| *Linum strictum* | group, habitat, description, tips | Campanica<br>Hierba botella<br>Linacilla<br>Taramilla amarilla | — |
-| *Polypogon maritimus* | habitat, description, tips | Cola de zorra<br>Iiopillo de zorro<br>Morillo de zorra | — |
-| *Armeria filicaulis* | commonName, group, habitat, description, image, tips | — | — |
-| *Festuca indigesta* | habitat, description, tips | Alambral<br>rompebarriga | — |
-| *Iberis carnosa* | commonName, group, habitat, description, tips | — | — |
-| *Anthyllis vulneraria* | group, habitat, description, tips | Vulneraria | — |
-| *Helichrysum serotinum* | commonName, group, habitat, description, tips | — | — |
-| *Helictochloa bromoides* | habitat, description, image, tips | Cerrillo mular<br>Palaí<br>Palaín<br>avena de monte | — |
-| *Sambucus nigra* | group, habitat, description, tips | Saúco negro<br>Saúco negro<br>Sabugo<br>Sauco<br>Bizcatal<br>Bizcatu<br>Canillero<br>Cañilero<br>Cañolero<br>Cañuleiro<br>Cañulero<br>Cohetera<br>Escopetón<br>Flor de saúco<br>Jabuco<br>Sabú<br>Sabuca<br>Sabucal<br>Sabuco<br>Sabucu<br>Sabugu<br>Sabujo<br>Sabunco<br>Sabuquera<br>Sabuquero<br>Sacapute<br>Sagú<br>Sahuco<br>Sahúco<br>Samugo<br>Samuquero<br>Saúbu<br>Saucal<br>Saúco<br>Saúco<br>Saúcu<br>Saugo<br>Saúgo<br>Saúgu<br>Sauquero<br>Xabú<br>Xagú<br>Xaú<br>Xaúbu<br>Xaúgu<br>sabugo<br>Benito<br>Bizcato<br>Cañonero<br>Cohetera<br>Cohetero<br>Sabugo<br>Saúco mayor<br>Sauguero<br>Sayugo<br>Sayuguina<br>Xabugo | — |
+| *Genetta genetta* | habitat, description, tips | Gineta (preferente) | — |
+| *Malpolon monspessulanus* | habitat, description, tips | Bicha<br>Culebra<br>Culebra bastarda (preferente) | — |
+| *Calandrella rufescens* | habitat, description, tips | Terrera marismeña (preferente)<br>Terrera marismeña | — |
+| *Regulus ignicapillus* | habitat, description, tips | Reyezuelo listado (preferente)<br>Reyezuelo listado | — |
+| *Testudo graeca* | habitat, description, tips | Tortuga mora (preferente) | — |
+| *Fringilla coelebs* | habitat, description, tips | Pimientera (preferente)<br>Pinzón vulgar | — |
+| *Cymodocea nodosa* | group, habitat, description, tips | Seba<br>Alga (preferente)<br>Grama de mar<br>Sebadal<br>alga marina | — |
+| *Charadrius alexandrinus* | habitat, description, tips | Pollito de mar<br>Chorlo nevado<br>Frailecillo blanco<br>Chorlitejo patinegro (preferente)<br>Chorlitejo patinegro | — |
+| *Natrix maura* | habitat, description, tips | Culebra de agua<br>Culebra viperina (preferente) | — |
+| *Macroprotodon brevis* | habitat, description, tips | Culebra de cogulla occidental (preferente) | — |
+| *Zamenis scalaris* | habitat, description, tips | Bicha<br>Culebra<br>Culebra de escalera (preferente) | — |
+| *Macroprotodon cucullatus* | habitat, seasonality, description, tips | Culebra de cogulla oriental<br>Culebra de cogulla (preferente)<br>Culebra de cogulla occidental | — |
+| *Hemorrhois hippocrepis* | habitat, description, tips | Asperomarín<br>Culebra de herradura (preferente) | — |
+| *Coronella girondica* | habitat, description, tips | Culebra lisa meridional (preferente) | — |
+| *Ulex europaeus* | group, habitat, description, tips | Tojo<br>Tojo<br>Aliaga<br>Árguma<br>Aulaga | — |
+| *Arbutus unedo* | group, habitat, description, tips | Madroño<br>Madroño<br>Abis<br>Agarullo<br>Alboriu<br>Albornial<br>Alborniu<br>Alborza<br>Alborzas<br>Alborzera<br>Arbetón<br>Árbol de los borrachinos<br>Armoniu<br>Bordo<br>Borrachinal<br>Borto<br>Burrubiote<br>Campanita<br>Madroña<br>Madroñal<br>Madroñera<br>Madroños<br>Mairoñera<br>Modrollera<br>Modroño<br>Aborio<br>Albornio<br>Madroñera<br>Modrollo | — |
+| *Cytisus scoparius* | group, habitat, description, tips | Retama negra<br>Retamón<br>Xesta<br>Ginesta<br>Albareja<br>Ehcoba<br>Ejcoba<br>Escoba<br>Escoba amarilla<br>Escoba bermeja<br>Escoba negra<br>Escoba negral<br>Escoba rubia<br>Escoba tamariz<br>Escoba verde<br>Escobaeras<br>Escobajera<br>Escobal<br>Escobeña<br>Escobeñas<br>Escobera<br>Escoberas<br>Escobón<br>Escobones<br>Gorbiñu<br>Hiniesta<br>Hiniestra<br>Jiniesta<br>Piorno<br>Ramón<br>Retama amarilla<br>Retama colorá<br>Retama de escobas<br>Retama fina<br>Retama hiniesta<br>Retama inhiesta<br>Siniestra<br>Zapaterinos<br>Retama colorada<br>Escoba portuguesa<br>Chamosca<br>Escoba de flor amarilla<br>Escoba rubial<br>Escobadera<br>Hillesta<br>Retama | — |
+| *Natrix natrix* | habitat, description, tips | Culebra de collar | — |
+
+## Nombres que EIDOS da por sinónimo
+
+La ficha se ha dado de alta con el nombre **pedido**, que es el de la selección aprobada.
+Renombrar arrastra la clave en `data/contenido/` y en el resto de parques.
+
+- Calandrella rufescens → Alaudala rufescens (Vieillot, 1819)
+- Regulus ignicapillus → Regulus ignicapilla (Temminck, 1820)
+- Natrix natrix → Natrix helvetica (Lacépède, 1789)

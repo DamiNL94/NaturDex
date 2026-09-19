@@ -4531,7 +4531,7 @@
         "genus": "Coronella"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -5119,15 +5119,15 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Culebra_bastarda_(Malpolon_monspessulanus)%2C_Nig%C3%BCella%2C_Zaragoza%2C_Espa%C3%B1a%2C_2017-05-24%2C_DD_07.jpg?width=1280",
       "imageAttribution": "Diego Delso (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "rarityBasis": {
-        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 2,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
@@ -5142,7 +5142,7 @@
         "genus": "Malpolon"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
-      "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -5306,7 +5306,7 @@
         "genus": "Natrix"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -8151,19 +8151,19 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cymodocea.JPG?width=1280",
       "imageAttribution": "Miguelverdu (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 2,
       "rarityBasis": {
-        "categoria": "CEEA: Vulnerable (Orden AAA/1351)",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 4,
+      "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "CEEA: Vulnerable (Orden AAA/1351)",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
-      "featured": true,
+      "featured": false,
       "source": "GBIF: 0 ocurrencias dentro de los polígonos de hábitat del espacio (0 hábitats; barrido de 2026-08-17); Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Plantae",
@@ -8174,7 +8174,7 @@
         "genus": "Cymodocea"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2010)",
-      "spainStatus": "CEEA: Vulnerable (Orden AAA/1351) · LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -9260,13 +9260,13 @@
       "coordinates": null,
       "rarityScore": 2,
       "rarityBasis": {
-        "categoria": "LESRPE (RD 139/2011)",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "LESRPE (RD 139/2011)",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
@@ -9281,7 +9281,7 @@
         "genus": "Hemorrhois"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
-      "spainStatus": "LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -13860,19 +13860,19 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Charadrius_alexandrinus_-_Kentish_Plover_03.jpg?width=1280",
       "imageAttribution": "Zeynel Cebeci (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 4,
+      "rarityScore": 2,
       "rarityBasis": {
-        "categoria": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 4,
+      "rarityLocal": 3,
       "rarityLocalBasis": {
-        "categoria": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable",
-        "ambito": "estatal",
-        "origen": "spainStatus del park.json"
+        "categoria": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
-      "featured": true,
+      "featured": false,
       "source": "GBIF confirma su presencia con 1023 ocurrencias dentro del espacio (barrido de 2026-08-17); las aves no se adscriben a hábitats; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000175 (Salinas y Arenales de San Pedro del Pinatar), sección 3.2: población reproductora; Formulario Normalizado de Datos del sitio Red Natura 2000 ES0000175 (Salinas y Arenales de San Pedro del Pinatar), sección 3.2: población permanente; Decreto n.º 259/2019, de 10 de octubre, PRUG del Parque Regional «Salinas y Arenales de San Pedro del Pinatar» (volumen III del Plan de gestión integral del Mar Menor), §2.3.1.2 y §2.3.3.2 (BORM n.º 242, de 19 de octubre de 2019): la norma la enumera en el Parque Regional «Salinas y Arenales de San Pedro del Pinatar», que es el propio espacio: a diferencia de los planes del Altiplano, aquí el inventario NO es el de la ZEC sino el del parque, porque el volumen III es su PRUG; EIDOS (IEPNB, MITECO) para la taxonomía y el estado legal",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -13883,7 +13883,7 @@
         "genus": "Charadrius"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-      "spainStatus": "Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; LESRPE (RD 139/2011); Ley 42/2007, Anexo IV",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "Especies de interés especial (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -18721,15 +18721,15 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fringilla_coelebs_(chaffinch)%2C_male.jpg?width=1280",
       "imageAttribution": "Self: Commons user MichaelMaggs (CC BY-SA 2.5) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "rarityBasis": {
-        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 2,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
@@ -18744,7 +18744,7 @@
         "genus": "Fringilla"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -21197,7 +21197,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
       "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,

@@ -4927,7 +4927,7 @@
       "imageAttribution": "Júlio Reis (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
       "rarityScore": 2,
-      "featured": false,
+      "featured": true,
       "source": "Especie de la lista oficial del sitio Natura 2000 ES0000507 (EEA/BISE, Site_Species_List). Sin ocurrencia de GBIF verificada dentro del espacio: la cita es documental.",
       "taxonomy": {
         "kingdom": "Animalia",

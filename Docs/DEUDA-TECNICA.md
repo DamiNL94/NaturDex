@@ -1436,6 +1436,89 @@ Cada una se paga mejor ahora que en el espacio número treinta.
 
 43. **Los estados legales del piloto están escritos a mano y contradicen a EIDOS, en las dos
     direcciones.**
+    > **LLEVADAS AL BOLETÍN — 2026-09-19.** De las quince discrepancias que dejó el barrido quedaban
+    > **catorce** (la del chumberillo de lobo era una acusación falsa de la caché, abajo). Se han
+    > cotejado **una a una contra el texto consolidado del BOE y contra el BORM**, no contra EIDOS:
+    > el Anexo del **RD 139/2011** (`BOE-A-2011-3582`), el Anexo I de la **Ley 7/1995** de Murcia
+    > (`BOE-A-1995-13301`) y el Anexo I del **Decreto n.º 50/2003** (BORM n.º 131, de 10 de junio de
+    > 2003, descargado entero por `services/boletin/ano/2003/numero/131/pdf`). **Trece corregidas y
+    > una que no había que tocar**:
+    >
+    > | Taxón | Lo que decía | Lo que dice el boletín | Tramo |
+    > |---|---|---|---|
+    > | *Testudo graeca* | LESRPE | **CEEA: Vulnerable**, sin restricción de población | 2 → **4** |
+    > | *Capra pyrenaica* | «no incluida» (5 espacios, 2 redacciones) | Ley 7/1995, Anexo I **B) vulnerables** | 1 → **4** |
+    > | *Sambucus nigra* | «no incluida» | D. 50/2003, Anexo I **2 VULNERABLES** | 1 → **4** |
+    > | *Micromeria fruticosa* | «no incluida» | D. 50/2003, Anexo I **2 VULNERABLES** | 1 → **4** |
+    > | *Rhamnus pumila* | «no incluida» (2 esp.) | D. 50/2003, Anexo I **3 INTERÉS ESPECIAL** («*Rhamnus pumilus*») | 1 → **3** |
+    > | *Scilla autumnalis* | «no incluida» | D. 50/2003, Anexo I **3 INTERÉS ESPECIAL** | 1 → **3** |
+    > | *Calandrella rufescens* | «sin figura estatal» | LESRPE (el Anexo lo escribe «Calandrela», con una ele) | 1 → **2** |
+    > | *Regulus ignicapillus* | «sin figura estatal» | LESRPE | 1 → **2** |
+    > | *Genetta genetta* | LESRPE (8 espacios) | **no figura en el Anexo**: solo Anexo VI de la Ley 42/2007 | 2 → **1** |
+    > | *Malpolon monspessulanus* | LESRPE (8 espacios) | **no figura en el Anexo** | 2 → **1** |
+    > | *Burhinus oedicnemus* | LESRPE (14 espacios) | **sí figura**, como *B. o. oedicnemus/insularum*, «Península, Baleares y Canarias Orientales» | **se queda** |
+    >
+    > El alcaraván es el que enseña por qué esto no se podía cerrar desde EIDOS: la clase A lo
+    > acusaba en **catorce espacios** porque EIDOS no trae para el taxón de rango ESPECIE ninguna
+    > norma nacional —el Anexo cataloga la **subespecie**—, y la ficha tenía razón. **La etiqueta de
+    > una autoridad dice lo que opina esa autoridad** (la lección de la nº 4), y aquí la que decide
+    > es el BOE.
+    >
+    > **Y la culebra de collar, por la misma puerta y al revés.** El Anexo lista «*Natrix natrix*»
+    > sin restricción de población; EIDOS la ha recombinado a *N. helvetica*, y ese registro no
+    > arrastra el LESRPE. Su `spainStatus` está escrito **contra el BOE**, a mano, y por eso ella y
+    > el alcaraván siguen saliendo en la clase A del informe: son las dos fichas del catálogo cuyo
+    > estado estatal **no es reproducible desde EIDOS**, y un `--refrescar-campos spainStatus`
+    > sobre cualquiera de las dos las estropea.
+    >
+    > **Y al ir al boletín salió lo que nadie buscaba: una norma estatal no siempre protege en toda
+    > España, y el pipeline no lo miraba.** El Anexo del RD 139/2011 tiene una columna «Población
+    > referida» y EIDOS la sirve en `observacionespoblacion`; `espanaDe()` no la leía. Catorce
+    > taxones del catálogo llevaban dentro una norma que **no se aplica en la península**:
+    > · *Charadrius alexandrinus* y *Cymodocea nodosa* anunciaban **CEEA: Vulnerable** —tramo 4 y
+    >   **destacadas**— por su población **canaria**, teniendo el Anexo una segunda fila
+    >   «Península y Baleares» que es solo LESRPE;
+    > · *Fringilla coelebs* anunciaba **LESRPE** cuando el Anexo lo lista SOLO con «Canarias»;
+    > · ocho culebras nativas —la bastarda, la viperina, la de herradura, la de collar…— anunciaban
+    >   **«CEEEI: Incluido»**, que es el catálogo de especies exóticas **INVASORAS** y se les aplica
+    >   en «Canarias, Ibiza y Formentera», donde están introducidas. Con ellas el **madroño**, el
+    >   **tojo** y la **escoba negra**, que son exactamente los tres que la revisión de Sierra Espuña
+    >   del **2026-08-09** ya había corregido **a mano y en un solo `park.json`**: la causa estaba en
+    >   el catálogo universal y volvió sola. Una corrección local sobre una causa universal se
+    >   deshace, y tarda trece meses en volver a verse.
+    >
+    > El criterio vive ahora en un solo sitio (`aplicaEnPeninsula`, en `lib/eidos.js`) y lo usan el
+    > generador y el cotejo. Se aparta **solo** lo que queda ENTERAMENTE fuera de la península, y el
+    > hueco se dice en la frase («1 norma estatal más en EIDOS, aplicable solo fuera de la
+    > península») **sin nombrar la figura**: el tramo se lee de ese mismo texto, así que dejar caer
+    > ahí un «LESRPE» de Canarias lo devolvería por la puerta de atrás.
+    >
+    > **Lo que queda de este apartado**, y ahora es corto:
+    > · ***Alyssum montanum*** (Sierra de El Carche) — **decisión, no trabajo**. EIDOS lo da por
+    >   sinónimo de *Alyssum fastigiatum* Heywood (taxonid 24299, siguiendo Flora iberica), y *A.
+    >   fastigiatum* **está en el CEEA como «En peligro de extinción»**: aceptar la sinonimia lleva
+    >   la ficha de tramo 1 a **5** y a destacada. Pero bajo ese mismo taxonid EIDOS mete también
+    >   *A. gadorense*, que es el endemismo de Sierra de Gádor, y tiene **aparte** aceptada la
+    >   subespecie *A. montanum* subsp. *montanum* (80821), **sin ninguna norma**. Y su Lista Roja
+    >   española dice **LC**, que con un «En peligro de extinción» estatal al lado no cuadra. El
+    >   nombre lo pone el **PRUG del Parque Regional** (Decreto 28/2025), que enumera «Alyssum
+    >   montanum». **No se ha tocado**: subir una ficha a tramo 5 por una sinonimia que la propia
+    >   fuente se contradice sería inventar el dato, y el hueco documentado vale más.
+    > · Los **16 textos de la clase D** y los **9 de la clase G** están a **0** desde el 2026-09-15.
+    > · Queda el **`regionalStatus` de Sierra Espuña**, que es lo de siempre: 188 fichas con textos
+    >   del piloto. Lo que ya se ha caído de esa lista son las once aves de la ZEPA ajena y los nueve
+    >   de la clase G.
+    >
+    > **Y tres averías de las que fallan en verde, encontradas por el camino y tapadas:** la caché
+    > del cotejo indexada por nombre (acusaba al chumberillo de lobo con las filas de un taxonid que
+    > ya no era el suyo), `resolveTaxon` desempatando por rango **solo entre las filas aceptadas**
+    > (pedir *Calandrella rufescens* devolvía su **subespecie** y pedir *Regulus ignicapillus* la
+    > **balearicus**, las dos con `status: 'ok'`), y `regional_status` **sin vía a la base**: la
+    > cabecera de `corrige-estado-autonomico.js` decía que ese SQL lo redactaba `rareza-legal.js` y
+    > no era verdad —ése escribe el tramo, no el texto—, así que las correcciones de esta cola
+    > quedaban bien en el repositorio y viejas en lo que ve el usuario. Ahora `--sql` lo escribe, y
+    > **como espejo**, no como cola.
+
     > **EL BARRIDO ESTÁ HECHO — 2026-08-29.** Lo hace `npm run especies:legal -- --online`
     > (`Tools/catalogo-nacional/coteja-estado-legal.js`) sobre **1.058 taxones de 2.882 fichas** en
     > los dieciséis espacios, y el resultado vive en

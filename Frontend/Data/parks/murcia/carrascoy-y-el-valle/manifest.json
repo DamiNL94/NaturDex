@@ -2,8 +2,8 @@
   "slug": "carrascoy-y-el-valle",
   "name": "Carrascoy y El Valle",
   "apiSlug": "carrascoy-y-el-valle",
-  "version": 40,
-  "updatedAt": "2026-09-15",
+  "version": 43,
+  "updatedAt": "2026-09-19",
   "data": "Data/parks/murcia/carrascoy-y-el-valle/park.json",
   "geo": {
     "parque": "Data/parks/murcia/carrascoy-y-el-valle/geo/parque.geojson",

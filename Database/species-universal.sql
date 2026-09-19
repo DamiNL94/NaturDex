@@ -79,9 +79,9 @@ Inofensiva para las personas',
   s.taxon_genus = 'Hemorrhois',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Hemorrhois hippocrepis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -254,9 +254,9 @@ Adultos de dorso pardo oliváceo uniforme; jóvenes muy manchados',
   s.taxon_genus = 'Malpolon',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Malpolon monspessulanus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -500,9 +500,9 @@ Canto en frase descendente que remata en un adorno',
   s.taxon_genus = 'Fringilla',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
   s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'barrancos-de-gebas' AND s.scientific_name = 'Fringilla coelebs';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -2967,7 +2967,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Zamenis',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'cabezo-gordo' AND s.scientific_name = 'Zamenis scalaris';
@@ -4510,9 +4510,9 @@ Peto sin bisagra: no puede cerrarse del todo',
   s.taxon_genus = 'Testudo',
   s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 1996)',
   s.iucn_spain = 'EN — En peligro (Lista Roja española, 2002)',
-  s.spain_status = 'Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexos II y IV; Reglamento CITES (CE) 338/97, Anexo A',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Testudo graeca';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -4579,7 +4579,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Coronella',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Coronella girondica';
@@ -4702,7 +4702,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Macroprotodon',
   s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Macroprotodon brevis';
@@ -5086,9 +5086,9 @@ Plumaje muy pálido, del color de la arena seca',
   s.taxon_genus = 'Charadrius',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
   s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
-  s.spain_status = 'Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; LESRPE (RD 139/2011); Ley 42/2007, Anexo IV',
-  s.rarity_score = 4,
-  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas (CEEA): Vulnerable","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'cabo-cope-puntas-calnegre' AND s.scientific_name = 'Charadrius alexandrinus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -6372,9 +6372,9 @@ Inofensiva para las personas',
   s.taxon_genus = 'Hemorrhois',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND s.scientific_name = 'Hemorrhois hippocrepis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -6493,7 +6493,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Coronella',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND s.scientific_name = 'Coronella girondica';
@@ -7173,7 +7173,7 @@ Corteza rojiza que se desprende en tiras finas',
   s.taxon_genus = 'Arbutus',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
   s.iucn_spain = NULL,
-  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto) · y 1 figura más en EIDOS (IEPNB)',
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND s.scientific_name = 'Arbutus unedo';
@@ -7718,7 +7718,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Zamenis',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND s.scientific_name = 'Zamenis scalaris';
@@ -7862,9 +7862,9 @@ Letrinas repetidas en el mismo punto elevado',
   s.taxon_genus = 'Genetta',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2015)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo V',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Anexo VI (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND s.scientific_name = 'Genetta genetta';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -8350,9 +8350,9 @@ Plumaje muy pálido, del color de la arena seca',
   s.taxon_genus = 'Charadrius',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
   s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
-  s.spain_status = 'Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; LESRPE (RD 139/2011); Ley 42/2007, Anexo IV',
-  s.rarity_score = 4,
-  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas (CEEA): Vulnerable","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND s.scientific_name = 'Charadrius alexandrinus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -8496,9 +8496,9 @@ Canto en frase descendente que remata en un adorno',
   s.taxon_genus = 'Fringilla',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
   s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'calblanque-monte-cenizas-pena-aguila' AND s.scientific_name = 'Fringilla coelebs';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -12723,7 +12723,7 @@ Corteza rojiza que se desprende en tiras finas',
   s.taxon_genus = 'Arbutus',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
   s.iucn_spain = NULL,
-  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto) · y 1 figura más en EIDOS (IEPNB)',
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Arbutus unedo';
@@ -14064,7 +14064,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Natrix',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Natrix maura';
@@ -15461,7 +15461,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Coronella',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Coronella girondica';
@@ -15787,9 +15787,9 @@ Inofensiva para las personas',
   s.taxon_genus = 'Hemorrhois',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Hemorrhois hippocrepis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -16483,7 +16483,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Zamenis',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'carrascoy-y-el-valle' AND s.scientific_name = 'Zamenis scalaris';
@@ -22788,7 +22788,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Natrix',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND s.scientific_name = 'Natrix maura';
@@ -24009,9 +24009,9 @@ Inofensiva para las personas',
   s.taxon_genus = 'Hemorrhois',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND s.scientific_name = 'Hemorrhois hippocrepis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -24514,7 +24514,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Zamenis',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND s.scientific_name = 'Zamenis scalaris';
@@ -24802,9 +24802,9 @@ Plumaje muy pálido, del color de la arena seca',
   s.taxon_genus = 'Charadrius',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
   s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
-  s.spain_status = 'Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; LESRPE (RD 139/2011); Ley 42/2007, Anexo IV',
-  s.rarity_score = 4,
-  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas (CEEA): Vulnerable","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND s.scientific_name = 'Charadrius alexandrinus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -26675,9 +26675,9 @@ Canto en frase descendente que remata en un adorno',
   s.taxon_genus = 'Fringilla',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
   s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND s.scientific_name = 'Fringilla coelebs';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -27126,9 +27126,9 @@ Prefiere los llanos salinos y las estepas más áridas',
   s.taxon_genus = 'Calandrella',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)',
   s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'espacios-abiertos-e-islas-del-mar-menor' AND s.scientific_name = 'Calandrella rufescens';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -28758,9 +28758,9 @@ Letrinas repetidas en el mismo punto elevado',
   s.taxon_genus = 'Genetta',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2015)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo V',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Anexo VI (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND s.scientific_name = 'Genetta genetta';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -28808,9 +28808,9 @@ Inofensiva para las personas',
   s.taxon_genus = 'Hemorrhois',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND s.scientific_name = 'Hemorrhois hippocrepis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -28858,9 +28858,9 @@ Adultos de dorso pardo oliváceo uniforme; jóvenes muy manchados',
   s.taxon_genus = 'Malpolon',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND s.scientific_name = 'Malpolon monspessulanus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -29006,7 +29006,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Natrix',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND s.scientific_name = 'Natrix maura';
@@ -29288,7 +29288,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Zamenis',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND s.scientific_name = 'Zamenis scalaris';
@@ -30142,9 +30142,9 @@ Canto en frase descendente que remata en un adorno',
   s.taxon_genus = 'Fringilla',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
   s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND s.scientific_name = 'Fringilla coelebs';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -31391,9 +31391,9 @@ Prefiere los llanos salinos y las estepas más áridas',
   s.taxon_genus = 'Calandrella',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2022)',
   s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND s.scientific_name = 'Calandrella rufescens';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -31416,9 +31416,9 @@ Plumaje muy pálido, del color de la arena seca',
   s.taxon_genus = 'Charadrius',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
   s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
-  s.spain_status = 'Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; LESRPE (RD 139/2011); Ley 42/2007, Anexo IV',
-  s.rarity_score = 4,
-  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas (CEEA): Vulnerable","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'humedal-del-ajauque-y-rambla-salada' AND s.scientific_name = 'Charadrius alexandrinus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -32827,7 +32827,7 @@ Corteza rojiza que se desprende en tiras finas',
   s.taxon_genus = 'Arbutus',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
   s.iucn_spain = NULL,
-  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto) · y 1 figura más en EIDOS (IEPNB)',
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Arbutus unedo';
@@ -33140,9 +33140,9 @@ Canto en frase descendente que remata en un adorno',
   s.taxon_genus = 'Fringilla',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
   s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Fringilla coelebs';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -34261,7 +34261,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Coronella',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Coronella girondica';
@@ -34478,9 +34478,9 @@ Letrinas repetidas en el mismo punto elevado',
   s.taxon_genus = 'Genetta',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2015)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo V',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Anexo VI (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Genetta genetta';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -34551,9 +34551,9 @@ Inofensiva para las personas',
   s.taxon_genus = 'Hemorrhois',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Hemorrhois hippocrepis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -34601,9 +34601,9 @@ Adultos de dorso pardo oliváceo uniforme; jóvenes muy manchados',
   s.taxon_genus = 'Malpolon',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Malpolon monspessulanus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -34722,7 +34722,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Natrix',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Natrix maura';
@@ -34745,9 +34745,9 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Natrix',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Natrix natrix';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -35386,7 +35386,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Zamenis',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'monte-arabi' AND s.scientific_name = 'Zamenis scalaris';
@@ -37903,7 +37903,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Coronella',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Coronella girondica';
@@ -38172,9 +38172,9 @@ Adultos de dorso pardo oliváceo uniforme; jóvenes muy manchados',
   s.taxon_genus = 'Malpolon',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Malpolon monspessulanus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -38243,7 +38243,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Natrix',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Natrix maura';
@@ -39557,9 +39557,9 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Cymodocea',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2010)',
   s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2010)',
-  s.spain_status = 'CEEA: Vulnerable (Orden AAA/1351) · LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
-  s.rarity_score = 4,
-  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Orden AAA/1351)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Cymodocea nodosa';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -40079,9 +40079,9 @@ Inofensiva para las personas',
   s.taxon_genus = 'Hemorrhois',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Hemorrhois hippocrepis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -42178,9 +42178,9 @@ Plumaje muy pálido, del color de la arena seca',
   s.taxon_genus = 'Charadrius',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
   s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
-  s.spain_status = 'Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; LESRPE (RD 139/2011); Ley 42/2007, Anexo IV',
-  s.rarity_score = 4,
-  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas (CEEA): Vulnerable","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Charadrius alexandrinus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -44093,9 +44093,9 @@ Canto en frase descendente que remata en un adorno',
   s.taxon_genus = 'Fringilla',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
   s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Fringilla coelebs';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -45093,7 +45093,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Zamenis',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'salinas-arenales-san-pedro-pinatar' AND s.scientific_name = 'Zamenis scalaris';
@@ -45800,7 +45800,7 @@ Corteza rojiza que se desprende en tiras finas',
   s.taxon_genus = 'Arbutus',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
   s.iucn_spain = NULL,
-  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto) · y 1 figura más en EIDOS (IEPNB)',
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Arbutus unedo';
@@ -46648,7 +46648,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Coronella',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Coronella girondica';
@@ -46838,9 +46838,9 @@ Letrinas repetidas en el mismo punto elevado',
   s.taxon_genus = 'Genetta',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2015)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo V',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Anexo VI (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Genetta genetta';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -47189,7 +47189,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Natrix',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Natrix maura';
@@ -47212,9 +47212,9 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Natrix',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Natrix natrix';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -51002,7 +51002,7 @@ Florece en pleno invierno, adelantándose al resto',
   s.taxon_genus = 'Ulex',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
   s.iucn_spain = NULL,
-  s.spain_status = 'CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto, por el que se regula el Catálogo español de especies exóticas invasoras. BOE 185 de 3 de agosto de 2013)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Ulex europaeus';
@@ -51167,9 +51167,9 @@ Canto en frase descendente que remata en un adorno',
   s.taxon_genus = 'Fringilla',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
   s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Fringilla coelebs';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -52749,9 +52749,9 @@ Inofensiva para las personas',
   s.taxon_genus = 'Hemorrhois',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Hemorrhois hippocrepis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -52820,7 +52820,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Macroprotodon',
   s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Macroprotodon brevis';
@@ -52845,9 +52845,9 @@ Adultos de dorso pardo oliváceo uniforme; jóvenes muy manchados',
   s.taxon_genus = 'Malpolon',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Malpolon monspessulanus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -53202,7 +53202,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Zamenis',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-el-carche' AND s.scientific_name = 'Zamenis scalaris';
@@ -54709,7 +54709,7 @@ Corteza rojiza que se desprende en tiras finas',
   s.taxon_genus = 'Arbutus',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
   s.iucn_spain = NULL,
-  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto) · y 1 figura más en EIDOS (IEPNB)',
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Arbutus unedo';
@@ -55396,7 +55396,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Zamenis',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Zamenis scalaris';
@@ -56317,7 +56317,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Coronella',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Coronella girondica';
@@ -56578,9 +56578,9 @@ Letrinas repetidas en el mismo punto elevado',
   s.taxon_genus = 'Genetta',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2015)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo V',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Anexo VI (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Genetta genetta';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -56699,9 +56699,9 @@ Inofensiva para las personas',
   s.taxon_genus = 'Hemorrhois',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Hemorrhois hippocrepis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -56887,7 +56887,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Macroprotodon',
   s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Macroprotodon brevis';
@@ -56912,9 +56912,9 @@ Adultos de dorso pardo oliváceo uniforme; jóvenes muy manchados',
   s.taxon_genus = 'Malpolon',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Malpolon monspessulanus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -57029,7 +57029,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Natrix',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Natrix maura';
@@ -60682,7 +60682,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Macroprotodon',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
-  s.spain_status = 'CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-la-pila' AND s.scientific_name = 'Macroprotodon cucullatus';
@@ -61466,9 +61466,9 @@ Peto sin bisagra: no puede cerrarse del todo',
   s.taxon_genus = 'Testudo',
   s.iucn_global = 'VU — Vulnerable (Lista Roja mundial de la UICN, 1996)',
   s.iucn_spain = 'EN — En peligro (Lista Roja española, 2002)',
-  s.spain_status = 'Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexos II y IV; Reglamento CITES (CE) 338/97, Anexo A',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas / LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero) · Anexo II (Ley 42/2007, de 13 de diciembre) · Anexo V (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 4,
+  s.rarity_basis = '{"categoria":"CEEA: Vulnerable (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Testudo graeca';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -61991,9 +61991,9 @@ Plumaje muy pálido, del color de la arena seca',
   s.taxon_genus = 'Charadrius',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
   s.iucn_spain = 'VU — Vulnerable (Lista Roja española, 2004)',
-  s.spain_status = 'Catálogo Español de Especies Amenazadas (CEEA): Vulnerable; LESRPE (RD 139/2011); Ley 42/2007, Anexo IV',
-  s.rarity_score = 4,
-  s.rarity_basis = '{"categoria":"Catálogo Español de Especies Amenazadas (CEEA): Vulnerable","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo IV (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-las-moreras' AND s.scientific_name = 'Charadrius alexandrinus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -62654,7 +62654,7 @@ Corteza rojiza que se desprende en tiras finas',
   s.taxon_genus = 'Arbutus',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
   s.iucn_spain = NULL,
-  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto) · y 1 figura más en EIDOS (IEPNB)',
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Arbutus unedo';
@@ -63303,9 +63303,9 @@ Canto en frase descendente que remata en un adorno',
   s.taxon_genus = 'Fringilla',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
   s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Fringilla coelebs';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -65092,7 +65092,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Coronella',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Coronella girondica';
@@ -65211,9 +65211,9 @@ Letrinas repetidas en el mismo punto elevado',
   s.taxon_genus = 'Genetta',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2015)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo V',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Anexo VI (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Genetta genetta';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -65261,9 +65261,9 @@ Inofensiva para las personas',
   s.taxon_genus = 'Hemorrhois',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Hemorrhois hippocrepis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -65357,7 +65357,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Macroprotodon',
   s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Macroprotodon brevis';
@@ -65382,9 +65382,9 @@ Adultos de dorso pardo oliváceo uniforme; jóvenes muy manchados',
   s.taxon_genus = 'Malpolon',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Malpolon monspessulanus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -65578,7 +65578,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Natrix',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Natrix maura';
@@ -65601,9 +65601,9 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Natrix',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Natrix natrix';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -66273,7 +66273,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Zamenis',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-de-salinas' AND s.scientific_name = 'Zamenis scalaris';
@@ -67940,9 +67940,9 @@ Letrinas repetidas en el mismo punto elevado',
   s.taxon_genus = 'Genetta',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2015)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo V',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Anexo VI (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Genetta genetta';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -68440,7 +68440,7 @@ Las vainas estallan con un chasquido en verano',
   s.taxon_genus = 'Cytisus',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto, por el que se regula el Catálogo español de especies exóticas invasoras. BOE 185 de 3 de agosto de 2013)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Cytisus scoparius';
@@ -68615,7 +68615,7 @@ Florece en pleno invierno, adelantándose al resto',
   s.taxon_genus = 'Ulex',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
   s.iucn_spain = NULL,
-  s.spain_status = 'CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto, por el que se regula el Catálogo español de especies exóticas invasoras. BOE 185 de 3 de agosto de 2013)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Ulex europaeus';
@@ -69540,7 +69540,7 @@ Corteza rojiza que se desprende en tiras finas',
   s.taxon_genus = 'Arbutus',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
   s.iucn_spain = NULL,
-  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto) · y 1 figura más en EIDOS (IEPNB)',
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Arbutus unedo';
@@ -71365,9 +71365,9 @@ Canto en frase descendente que remata en un adorno',
   s.taxon_genus = 'Fringilla',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
   s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Fringilla coelebs';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -72134,7 +72134,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Coronella',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Coronella girondica';
@@ -72157,7 +72157,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Natrix',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Natrix maura';
@@ -72255,9 +72255,9 @@ Inofensiva para las personas',
   s.taxon_genus = 'Hemorrhois',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Hemorrhois hippocrepis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -72278,7 +72278,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Zamenis',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Zamenis scalaris';
@@ -72374,7 +72374,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Macroprotodon',
   s.iucn_global = 'NT — Casi amenazada (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'NT — Casi amenazada (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sierra-espuna' AND s.scientific_name = 'Macroprotodon brevis';
@@ -73778,7 +73778,7 @@ Las vainas estallan con un chasquido en verano',
   s.taxon_genus = 'Cytisus',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto, por el que se regula el Catálogo español de especies exóticas invasoras. BOE 185 de 3 de agosto de 2013)',
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Cytisus scoparius';
@@ -73851,9 +73851,9 @@ Inofensiva para las personas',
   s.taxon_genus = 'Hemorrhois',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (RD 139/2011)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Hemorrhois hippocrepis';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -74016,7 +74016,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Zamenis',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Zamenis scalaris';
@@ -74252,7 +74252,7 @@ Corteza rojiza que se desprende en tiras finas',
   s.taxon_genus = 'Arbutus',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)',
   s.iucn_spain = NULL,
-  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto) · y 1 figura más en EIDOS (IEPNB)',
+  s.spain_status = 'ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 1,
   s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Arbutus unedo';
@@ -75079,9 +75079,9 @@ Letrinas repetidas en el mismo punto elevado',
   s.taxon_genus = 'Genetta',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2015)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2007)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo V',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Anexo VI (Ley 42/2007, de 13 de diciembre)',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Genetta genetta';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -75626,9 +75626,9 @@ Adultos de dorso pardo oliváceo uniforme; jóvenes muy manchados',
   s.taxon_genus = 'Malpolon',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Malpolon monspessulanus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -75989,7 +75989,7 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Natrix',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)',
   s.iucn_spain = 'LC — Preocupación menor (Lista Roja española, 2002)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
   s.rarity_score = 2,
   s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Natrix maura';
@@ -76012,9 +76012,9 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Natrix',
   s.iucn_global = 'No evaluada en la Lista Roja mundial de la UICN',
   s.iucn_spain = NULL,
-  s.spain_status = 'CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Natrix natrix';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -76578,9 +76578,9 @@ UPDATE species s JOIN parks p ON p.id = s.park_id SET
   s.taxon_genus = 'Regulus',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2016)',
   s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)',
-  s.rarity_score = 1,
-  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
+  s.rarity_score = 2,
+  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Regulus ignicapillus';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET
@@ -77574,9 +77574,9 @@ Canto en frase descendente que remata en un adorno',
   s.taxon_genus = 'Fringilla',
   s.iucn_global = 'LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)',
   s.iucn_spain = 'NE — No evaluada (Lista Roja española, 2004)',
-  s.spain_status = 'LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)',
-  s.rarity_score = 2,
-  s.rarity_basis = '{"categoria":"LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
+  s.spain_status = 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península',
+  s.rarity_score = 1,
+  s.rarity_basis = '{"categoria":"Sin figura de protección","ambito":"estatal","origen":"spainStatus del catálogo universal"}'
 WHERE p.slug = 'sotos-y-bosques-de-ribera-de-canaverosa' AND s.scientific_name = 'Fringilla coelebs';
 
 UPDATE species s JOIN parks p ON p.id = s.park_id SET

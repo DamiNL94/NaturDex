@@ -48,10 +48,12 @@
  * Calcularlo aquí sería una segunda copia del criterio, que es la regla nº 1 de `Tools/CLAUDE.md`.
  * El orden es: esta herramienta primero, `especies:rareza` detrás.
  *
- * **No escribe en la base de datos.** `regionalStatus`, `rarity_local` y `rarity_local_basis` son
- * columnas locales y no viajan en el `species-universal.sql` de `species:apply`: las redacta
- * `rareza-legal.js --sql`. Y la API manda sobre el paquete, así que sin ese SQL el usuario sigue
- * viendo el texto viejo (trampa nº 7 del `CLAUDE.md`).
+ * **Lo que sí escribe, desde el 2026-09-19, es el SQL de SU columna.** `regional_status` es local:
+ * no viaja en el `species-universal.sql` de `species:apply`, y `rareza-legal.js --sql` tampoco la
+ * lleva —escribe el tramo derivado, no el texto—, así que hasta esa fecha la corrección quedaba
+ * bien en el repositorio y vieja en la base, que es la que ve el usuario (trampa nº 7). La cabecera
+ * de esta herramienta afirmaba lo contrario, y una afirmación falsa en un comentario no la puede
+ * comprobar `validate`.
  *
  * Escribe con `escribeEspacio()`, que sube el manifiesto: un `park.json` reescrito sin subir la
  * versión deja al usuario que lo tenga guardado sin conexión con el dato viejo (trampa nº 11).
@@ -61,17 +63,58 @@
  * Uso:
  *     node Tools/catalogo-nacional/corrige-estado-autonomico.js            informe, sin escribir
  *     node Tools/catalogo-nacional/corrige-estado-autonomico.js --write    lo aplica
+ *       [--sql <ruta>]            escribe el UPDATE de `regional_status` para la base
  *       [--correcciones <ruta.json>]
  */
 
 const path = require('path');
 const { flag, arg } = require('../lib/cli');
+const fs = require('fs');
 const { CATALOGO_DIR, readJson, parkFiles, escribeEspacio, rel, fromRoot } = require('../lib/io');
+const { sqlStr, cabeceraSql } = require('../lib/sql');
 
 const WRITE = flag('write');
+const SQL = arg('sql') ? fromRoot(arg('sql')) : null;
 const RUTA = arg('correcciones')
   ? fromRoot(arg('correcciones'))
   : path.join(CATALOGO_DIR, 'data', 'estado-autonomico-correcciones.json');
+
+/*
+ * EL SQL, y por qué es un ESPEJO y no una cola.
+ *
+ * `regionalStatus` es una columna LOCAL (`species.regional_status`) y no viaja en el
+ * `species-universal.sql` de `species:apply`. La cabecera de esta herramienta decía que lo redactaba
+ * `rareza-legal.js --sql`, y **no es verdad**: ese fichero escribe `rarity_local`,
+ * `rarity_local_basis` e `is_featured`, que es el tramo derivado, no el texto. Así que hasta el
+ * 2026-09-19 una corrección aplicada aquí quedaba bien en el repositorio y vieja en la base — y la
+ * API manda sobre el paquete, así que el usuario seguía leyendo la negación que la norma desmiente.
+ * La única vía era regenerar el `-n2.sql` del espacio, que es la trampa nº 6.
+ *
+ * Se escribe como ESPEJO —todas las fichas que DEBEN tener el texto, estuvieran ya o no— y no como
+ * cola de lo que este pase acaba de cambiar. Es la lección del `--sql` de la auditoría de enlaces:
+ * un fichero generado que solo lleva lo del último pase pierde la cola pendiente en cuanto se
+ * regenera sin haberla aplicado. Como espejo, aplicarlo dos veces escribe lo mismo y regenerarlo
+ * nunca pierde nada.
+ */
+function escribeSql(ruta, filas) {
+  const L = [cabeceraSql('NaturDex · estado legal autonómico corregido (regional_status)')];
+  L.push('-- Generado por `node Tools/catalogo-nacional/corrige-estado-autonomico.js --sql <ruta>`.');
+  L.push('-- Cada UPDATE lleva la corrección que `data/estado-autonomico-correcciones.json` declara y');
+  L.push('-- que el cotejo contra EIDOS y el boletín respaldan. Solo toca esa columna: NO regenera la');
+  L.push('-- ficha (trampa nº 6). Idempotente, y espejo de lo que dice el repositorio.');
+  L.push('');
+  L.push('START TRANSACTION;');
+  let slug = null;
+  for (const f of filas) {
+    if (f.slug !== slug) { slug = f.slug; L.push('', `-- ── ${slug} ──`); }
+    L.push('UPDATE species sp JOIN parks pk ON pk.id = sp.park_id');
+    L.push(`   SET sp.regional_status = ${sqlStr(f.texto)}`);
+    L.push(` WHERE pk.slug = ${sqlStr(f.slug)} AND sp.scientific_name = ${sqlStr(f.sn)};`);
+  }
+  L.push('', 'COMMIT;', '');
+  fs.writeFileSync(ruta, L.join('\n'), 'utf8');
+  console.log(`+ ${rel(ruta)} (${filas.length} UPDATE)`);
+}
 
 const doc = readJson(RUTA);
 const correcciones = doc.correcciones || [];
@@ -81,6 +124,7 @@ console.log(`Correcciones declaradas en ${rel(RUTA)}: ${correcciones.length}`);
 
 const porEspacio = new Map();   // slug → { entrada, cambios: [] }
 const yaEstaban = [];
+const espejo = [];            // todas las fichas que DEBEN llevar el texto corregido
 const fueraDeCcaa = [];
 const noCoincideTexto = [];
 
@@ -97,7 +141,7 @@ for (const p of parkFiles()) {
       // El «ya está» va ANTES de la guarda de `textoAnterior`, o una corrección aplicada se
       // contaría en el segundo pase como «tiene otro texto»: cierto, pero ilegible — el otro texto
       // es justamente el que escribió esta entrada.
-      if (s.regionalStatus === c.regionalStatus) { yaEstaban.push({ slug: p.slug, sn: s.scientificName }); continue; }
+      if (s.regionalStatus === c.regionalStatus) { yaEstaban.push({ slug: p.slug, sn: s.scientificName }); espejo.push({ slug: p.slug, sn: s.scientificName, texto: c.regionalStatus }); continue; }
       // `textoAnterior`: la corrección solo alcanza a las fichas que SIGUEN diciendo lo que el
       // cotejo demostró falso. Sin esta guarda, una entrada escrita para arreglar un espacio pisa
       // el texto de los otros quince, que puede decir lo mismo con otra redacción — y el catálogo
@@ -110,6 +154,7 @@ for (const p of parkFiles()) {
         continue;
       }
       cambios.push({ ficha: s, sn: s.scientificName, antes: s.regionalStatus, despues: c.regionalStatus });
+      espejo.push({ slug: p.slug, sn: s.scientificName, texto: c.regionalStatus });
     }
   }
   if (cambios.length) porEspacio.set(p.slug, { entrada: p, doc: pj, cambios });
@@ -135,6 +180,13 @@ if (noCoincideTexto.length) {
 if (fueraDeCcaa.length) {
   console.log(`Fuera del ámbito de la corrección (otra comunidad): ${fueraDeCcaa.length}`);
   for (const f of fueraDeCcaa) console.log(`   · ${f.slug} · ${f.sn} (${f.ccaa})`);
+}
+
+// El espejo se escribe SIEMPRE que se pida, haya o no cambios en este pase: es el estado que la
+// base debe tener, no el diario de lo que acaba de pasar.
+if (SQL) {
+  espejo.sort((x, y) => x.slug.localeCompare(y.slug) || x.sn.localeCompare(y.sn));
+  escribeSql(SQL, espejo);
 }
 
 if (!total) { console.log('\nNada que escribir: los park.json ya están al día.'); process.exit(0); }

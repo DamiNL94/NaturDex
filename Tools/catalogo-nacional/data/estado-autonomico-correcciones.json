@@ -196,6 +196,41 @@
       "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "porque": "Las tres fichas NEGABAN por escrito una protección que el Decreto 50/2003 sí da. La auditoría lo había anotado y no se podía ejecutar porque el `eidosTaxonId` de la ficha era el **80097**, que en EIDOS es «Caralluma europaea var. maroccana» —una VARIEDAD marroquí, otro taxón—, y por ese identificador EIDOS no devuelve ninguna norma. Reanclada al 2866 el 2026-09-15 (que es el taxón bajo el que EIDOS archiva el binomio), v_estadolegal devuelve «Vulnerable — Decreto n.º 50/2003» y v_estadoconservacion «EN (2010)» de ámbito España. Sube de tramo local 1 a 4, así que pasa a destacable. Colas 1 y 2 de la auditoría del catálogo, últimas pendientes.",
       "fuente": "EIDOS (IEPNB), v_estadolegal, taxonid 2866, ámbito Región de Murcia · Decreto n.º 50/2003, de 30 de mayo (Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia)"
+    },
+    {
+      "scientificName": "Capra pyrenaica",
+      "ccaa": "Región de Murcia",
+      "regionalStatus": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+      "porque": "Clase B de `npm run especies:legal` en los CINCO espacios donde está fichada, con dos redacciones distintas de la misma negación («No incluida en el Catálogo Regional de especies protegidas» en cuatro y «No incluida en el Decreto 50/2003…» en Sierra Espuña, que además cita el catálogo de FLORA para un mamífero). El Anexo I de la Ley 7/1995 la enumera en su apartado B) «Especies vulnerables» —«Cabra montés-Capra pyrenaica»—, comprobado el 2026-09-19 en el texto consolidado del BOE, no solo en EIDOS. Sube de tramo local 1 a 4.",
+      "fuente": "BOE-A-1995-13301, texto consolidado de la Ley 7/1995, Anexo I «Catálogo de especies amenazadas de fauna silvestre de la Región de Murcia» (leído el 2026-09-19) · EIDOS (IEPNB), v_estadolegal, ámbito autonómico"
+    },
+    {
+      "scientificName": "Micromeria fruticosa",
+      "ccaa": "Región de Murcia",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "porque": "Clase B de `npm run especies:legal` en Sierra de Salinas, el único espacio donde está fichada: la ficha NIEGA por escrito los tres catálogos regionales y el Anexo I del Decreto n.º 50/2003 la enumera en su apartado 2 «Especies VULNERABLES» —«Micromeria fruticosa (Poleo blanco)», familia Labiadas—, leído en el BORM el 2026-09-19. Sube de tramo local 1 a 4.",
+      "fuente": "BORM n.º 131, de 10 de junio de 2003, Anexo I del Decreto n.º 50/2003 (descargado de www.borm.es y leído entero el 2026-09-19) · EIDOS (IEPNB), v_estadolegal, ámbito autonómico"
+    },
+    {
+      "scientificName": "Sambucus nigra",
+      "ccaa": "Región de Murcia",
+      "regionalStatus": "Vulnerable (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "porque": "Clase B de `npm run especies:legal` en Cañaverosa, el único espacio donde está fichado: la ficha decía «No incluida en el Catálogo Regional de especies protegidas» y el Anexo I del Decreto n.º 50/2003 lo enumera en su apartado 2 «Especies VULNERABLES» —«Sambucus nigra (Saúco, sabuco)», familia Caprifoliáceas—, leído en el BORM el 2026-09-19. En Murcia el saúco es una rareza de ribera, no el arbusto común de media España. Sube de tramo local 1 a 4.",
+      "fuente": "BORM n.º 131, de 10 de junio de 2003, Anexo I del Decreto n.º 50/2003 (descargado de www.borm.es y leído entero el 2026-09-19) · EIDOS (IEPNB), v_estadolegal, ámbito autonómico"
+    },
+    {
+      "scientificName": "Rhamnus pumila",
+      "ccaa": "Región de Murcia",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "porque": "Clase B de `npm run especies:legal` en los dos espacios donde está fichada (Sierra de El Carche y Sierra de Salinas): la ficha NIEGA los tres catálogos regionales y el Anexo I del Decreto n.º 50/2003 la enumera en su apartado 3 «Especies DE INTERES ESPECIAL» —«Rhamnus pumilus (Chopera)», familia Ramnáceas—, leído en el BORM el 2026-09-19. La norma la escribe en masculino; es el mismo taxón. Sube de tramo local 1 a 3.",
+      "fuente": "BORM n.º 131, de 10 de junio de 2003, Anexo I del Decreto n.º 50/2003 (descargado de www.borm.es y leído entero el 2026-09-19) · EIDOS (IEPNB), v_estadolegal, ámbito autonómico"
+    },
+    {
+      "scientificName": "Scilla autumnalis",
+      "ccaa": "Región de Murcia",
+      "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
+      "porque": "Clase B de `npm run especies:legal` en Espacios Abiertos e Islas del Mar Menor, el único espacio donde está fichada: la ficha decía «No incluida en el Catálogo Regional de especies protegidas» y el Anexo I del Decreto n.º 50/2003 la enumera en su apartado 3 «Especies DE INTERES ESPECIAL» —«Scilla autumnalis (Escila de otoño)», familia Liliáceas—, leído en el BORM el 2026-09-19. Sube de tramo local 1 a 3.",
+      "fuente": "BORM n.º 131, de 10 de junio de 2003, Anexo I del Decreto n.º 50/2003 (descargado de www.borm.es y leído entero el 2026-09-19) · EIDOS (IEPNB), v_estadolegal, ámbito autonómico"
     }
   ]
 }

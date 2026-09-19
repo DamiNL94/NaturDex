@@ -326,13 +326,13 @@
       "coordinates": null,
       "rarityScore": 2,
       "rarityBasis": {
-        "categoria": "LESRPE (RD 139/2011)",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "LESRPE (RD 139/2011)",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
@@ -347,7 +347,7 @@
         "genus": "Hemorrhois"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
-      "spainStatus": "LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -711,15 +711,15 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Culebra_bastarda_(Malpolon_monspessulanus)%2C_Nig%C3%BCella%2C_Zaragoza%2C_Espa%C3%B1a%2C_2017-05-24%2C_DD_07.jpg?width=1280",
       "imageAttribution": "Diego Delso (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "rarityBasis": {
-        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 2,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
@@ -734,7 +734,7 @@
         "genus": "Malpolon"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
-      "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -1248,15 +1248,15 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fringilla_coelebs_(chaffinch)%2C_male.jpg?width=1280",
       "imageAttribution": "Self: Commons user MichaelMaggs (CC BY-SA 2.5) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "rarityBasis": {
-        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 2,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
@@ -1271,7 +1271,7 @@
         "genus": "Fringilla"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,

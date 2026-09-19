@@ -92,6 +92,39 @@ function rangoPedido(sci) {
 }
 const rangoCoincide = (deLaFila, pedido) => !deLaFila || !pedido || norm(deLaFila) === norm(pedido);
 
+/*
+ * EL ÁMBITO DE POBLACIÓN DE UNA NORMA ESTATAL, y por qué hay que mirarlo.
+ *
+ * Una norma de ámbito «Nacional» no protege siempre en toda España, y EIDOS lo dice en un campo que
+ * el pipeline no leía: `observacionespoblacion`. El Anexo del RD 139/2011 tiene una columna
+ * «Población referida» y EIDOS la sirve ahí, literal. Sin ese filtro, la ficha AFIRMA una figura que
+ * en la península no existe:
+ *
+ *   · *Fringilla coelebs* — el Anexo lo lista SOLO con «Canarias», y el catálogo anunciaba «LESRPE»
+ *     a secas para el pinzón de Murcia. Tramo 2 donde toca 1.
+ *   · *Charadrius alexandrinus* y *Cymodocea nodosa* — el Anexo los lista DOS veces: «Península y
+ *     Baleares» sin categoría (LESRPE) y «Canarias» como **Vulnerable**. El catálogo se quedaba con
+ *     la segunda: CEEA Vulnerable, tramo 4 y destacada, por una población que está a 1.800 km.
+ *   · Ocho culebras nativas —la bastarda, la viperina, la de herradura…— anunciando «CEEEI:
+ *     Incluido», que es el catálogo de especies exóticas INVASORAS y se les aplica solo en
+ *     «Canarias, Ibiza y Formentera», donde están introducidas. Y con ellas el madroño, el tojo y la
+ *     escoba negra, que son los tres que la revisión de Sierra Espuña del 2026-08-09 ya corrigió **a
+ *     mano y en un solo park.json**: la causa estaba en el catálogo universal y volvió sola.
+ *
+ * Se filtra solo lo que queda ENTERAMENTE fuera de la península, que es lo único que este catálogo
+ * puede afirmar hoy. Un ámbito peninsular parcial («Excepto Galicia», «Mediterráneo») se conserva:
+ * decidir sobre él exige saber de qué territorio habla la ficha, y `spainStatus` es un campo
+ * universal.
+ */
+const SOLO_FUERA_DE_LA_PENINSULA =
+  /^(?:ámbito de aplicación:\s*)?(?:canarias|baleares|illes balears|ibiza|formentera)(?:\s*(?:,|y|e)\s*(?:canarias|baleares|illes balears|ibiza|formentera))*$/i;
+
+/** ¿La norma de esta fila se aplica en la península, o solo en Canarias/Baleares? */
+function aplicaEnPeninsula(fila) {
+  const obs = norm(fila && fila.observacionespoblacion);
+  return !obs || !SOLO_FUERA_DE_LA_PENINSULA.test(obs);
+}
+
 /**
  * Resuelve un nombre científico contra la nomenclatura de EIDOS.
  * @returns {Promise<{status:'ok'|'sinonimo'|'no-encontrada', taxonid:number|null, taxon:object|null,
@@ -111,29 +144,39 @@ async function resolveTaxon(sci, opts = {}) {
   const filas = await rows('v_taxonomia', [`name=like.${encodeURIComponent(sci)}*`, select], opts);
   if (!filas.length) return { status: 'no-encontrada', taxonid: null, taxon: null, acceptedName: null, synonymName: null };
 
-  const aceptados = filas.filter(r => r.nametype === 'Aceptado/válido');
-  // El rango que pide el nombre manda sobre el orden en que EIDOS devuelva las filas: ver la nota
-  // de `rangoPedido`. Sin este desempate, pedir una especie devuelve su subespecie si va delante.
+  // El rango que pide el nombre manda sobre el orden en que EIDOS devuelva las filas, y manda
+  // TAMBIÉN sobre si la fila está aceptada o es un sinónimo: ver la nota de `rangoPedido` y la de
+  // aquí arriba. Por eso el filtro por rango se aplica a todas las filas que casan por nombre y no
+  // solo a las aceptadas, que era la mitad que faltaba.
   const pedido = rangoPedido(sci);
-  const porNombre = aceptados.filter(r => nameMatches(r.name, sci));
-  const exacto = porNombre.find(r => rangoCoincide(r.taxonrank, pedido)) || porNombre[0] || aceptados[0];
-  if (exacto) {
+  const porNombre = filas.filter(r => nameMatches(r.name, sci));
+  const conRango = porNombre.filter(r => rangoCoincide(r.taxonrank, pedido));
+  const candidatas = conRango.length ? conRango : (porNombre.length ? porNombre : filas);
+
+  const aceptada = candidatas.find(r => r.nametype === 'Aceptado/válido');
+  if (aceptada) {
     return {
-      status: 'ok', taxonid: exacto.taxonid, taxon: exacto, acceptedName: exacto.name, synonymName: null,
-      rangoDistinto: !rangoCoincide(exacto.taxonrank, pedido),
+      status: 'ok', taxonid: aceptada.taxonid, taxon: aceptada, acceptedName: aceptada.name, synonymName: null,
+      rangoDistinto: !rangoCoincide(aceptada.taxonrank, pedido),
     };
   }
 
-  // Solo figura como sinónimo: se resuelve el nombre aceptado real por `acceptednameid`.
-  const syn = filas[0];
-  let acceptedName = null, taxonid = null;
-  if (syn.acceptednameid && syn.acceptednameid !== syn.nameid) {
-    try {
-      const acc = await rows('v_taxonomia', [`nameid=eq.${syn.acceptednameid}`, 'select=name,taxonid'], opts);
-      if (acc.length) { acceptedName = acc[0].name; taxonid = acc[0].taxonid; }
-    } catch (_) { /* si la segunda consulta falla, se informa del sinónimo sin el aceptado */ }
-  }
-  return { status: 'sinonimo', taxonid, taxon: syn, acceptedName, synonymName: syn.name };
+  // Ninguna candidata está aceptada: el nombre pedido es un sinónimo. El `taxonid` de un sinónimo YA
+  // es el del taxón al que pertenece —EIDOS agrupa todos los nombres de un taxón bajo el mismo—, así
+  // que de aquí sale el identificador; la segunda consulta es solo para poder decir con qué nombre
+  // lo llama hoy la fuente.
+  const syn = candidatas[0];
+  let acceptedName = null;
+  let taxonid = syn.taxonid || null;
+  try {
+    const hermanas = await rows('v_taxonomia', [`taxonid=eq.${syn.taxonid}`, 'select=name,taxonid,nametype,taxonrank'], opts);
+    const acc = hermanas.find(r => r.nametype === 'Aceptado/válido');
+    if (acc) { acceptedName = acc.name; taxonid = acc.taxonid; }
+  } catch (_) { /* si la segunda consulta falla, se informa del sinónimo sin el aceptado */ }
+  return {
+    status: 'sinonimo', taxonid, taxon: syn, acceptedName, synonymName: syn.name,
+    rangoDistinto: !rangoCoincide(syn.taxonrank, pedido),
+  };
 }
 
 /**
@@ -170,7 +213,7 @@ async function conservationByScope(idtaxon, opts = {}) {
  */
 async function legalStatus(idtaxon, ccaa = null, opts = {}) {
   const filas = await rows('v_estadolegal', [
-    `idtaxon=eq.${idtaxon}`, 'select=estadolegal,norma,ambito,ccaa,idvigente',
+    `idtaxon=eq.${idtaxon}`, 'select=estadolegal,norma,ambito,ccaa,idvigente,observacionespoblacion',
   ], opts);
   const vigentes = filas.filter(r => r.idvigente === 1);
   const re = ccaa ? new RegExp(ccaa.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i') : null;
@@ -210,6 +253,6 @@ async function commonName(idtaxon, opts = {}) {
 
 module.exports = {
   HOST, BASE_ESPECIE, BASE_CATALOGO, THROTTLE_MS,
-  q, rows, resolveTaxon, conservationByScope, legalStatus, commonName,
+  q, rows, resolveTaxon, conservationByScope, legalStatus, commonName, aplicaEnPeninsula,
   norm, nameMatches, binomial, rangoPedido, rangoCoincide, sleep,
 };

@@ -455,13 +455,13 @@
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 1,
+      "rarityLocal": 4,
       "rarityLocalBasis": {
-        "categoria": "Sin figura de protección",
-        "ambito": "estatal",
-        "origen": "spainStatus del park.json"
+        "categoria": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
+        "ambito": "autonómico",
+        "origen": "regionalStatus del park.json"
       },
-      "featured": false,
+      "featured": true,
       "source": "GBIF: 4 ocurrencias dentro de los polígonos de hábitat del espacio (1 hábitat; barrido de 2026-08-15); Decreto n.º 28/2025, de 10 de abril, Plan de gestión integral del Altiplano, volumen II §3.2.4.2 (BORM n.º 103, de 6 de mayo de 2025): la norma la enumera en el inventario de especies del propio Monumento Natural, que no solapa Red Natura 2000 y tiene por tanto el mismo perímetro que esta ficha; EIDOS (IEPNB, MITECO) para la taxonomía; sin figura de protección en la vista de normas",
       "taxonomy": {
         "kingdom": "Animalia",
@@ -473,7 +473,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2021)",
       "spainStatus": "Anexo VI (Ley 42/2007, de 13 de diciembre)",
-      "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+      "regionalStatus": "Vulnerable (Ley 7/1995, de 21 de abril, de la fauna silvestre, caza y pesca fluvial de la Región de Murcia.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
       "eidosTaxonId": 12055,
@@ -1113,7 +1113,7 @@
         "genus": "Arbutus"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2017)",
-      "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto) · y 1 figura más en EIDOS (IEPNB)",
+      "spainStatus": "ANEXO I. 1) Lista de especies forestales para la aprobación de unidades de conservación genética in situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO I. 2) Lista de taxones forestales para conservación ex situ (Real Decreto 159/2022, de 1 de marzo) · ANEXO XII. Especies a las que se refiere la disposición adicional tercera (otras especies forestales importantes para la selvicultura en España) (Real Decreto 289/2003, de 7 de marzo) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "Especies de interés especial (Decreto n.º 50/2003, de 30 de mayo por el que se crea el Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia y se dictan Normas para el aprovechamiento de diversas especies forestales.)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -1767,15 +1767,15 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Fringilla_coelebs_(chaffinch)%2C_male.jpg?width=1280",
       "imageAttribution": "Self: Commons user MichaelMaggs (CC BY-SA 2.5) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "rarityBasis": {
-        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 2,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+        "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
@@ -1790,7 +1790,7 @@
         "genus": "Fringilla"
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2019)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -4171,7 +4171,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
       "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -4606,15 +4606,15 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Genetta_genetta_felina_(Wroclaw_zoo).JPG?width=1280",
       "imageAttribution": "Guérin Nicolas (messages) (CC BY-SA 3.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "rarityBasis": {
-        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 2,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
@@ -4630,7 +4630,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2015)",
       "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2007)",
-      "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial); Directiva Hábitats 92/43/CEE, Anexo V",
+      "spainStatus": "Anexo VI (Ley 42/2007, de 13 de diciembre)",
       "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -4762,13 +4762,13 @@
       "coordinates": null,
       "rarityScore": 2,
       "rarityBasis": {
-        "categoria": "LESRPE (RD 139/2011)",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
       "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "LESRPE (RD 139/2011)",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
@@ -4784,7 +4784,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
       "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)",
-      "spainStatus": "LESRPE (RD 139/2011); Directiva Hábitats 92/43/CEE, Anexo IV",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · Anexo V (Ley 42/2007, de 13 de diciembre) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -4865,15 +4865,15 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Culebra_bastarda_(Malpolon_monspessulanus)%2C_Nig%C3%BCella%2C_Zaragoza%2C_Espa%C3%B1a%2C_2017-05-24%2C_DD_07.jpg?width=1280",
       "imageAttribution": "Diego Delso (CC BY-SA 4.0) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 2,
+      "rarityScore": 1,
       "rarityBasis": {
-        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 2,
+      "rarityLocal": 1,
       "rarityLocalBasis": {
-        "categoria": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+        "categoria": "Sin figura de protección",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
@@ -4889,7 +4889,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
       "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)",
-      "spainStatus": "LESRPE (Listado de Especies Silvestres en Régimen de Protección Especial)",
+      "spainStatus": "Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -5146,7 +5146,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
       "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -5171,15 +5171,15 @@
       "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Natrix_natrix_(Karl_L).jpg?width=1280",
       "imageAttribution": "Karl Larsaeus (CC BY 2.5) · Wikimedia Commons",
       "coordinates": null,
-      "rarityScore": 1,
+      "rarityScore": 2,
       "rarityBasis": {
-        "categoria": "Sin figura de protección",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del catálogo universal"
       },
-      "rarityLocal": 1,
+      "rarityLocal": 2,
       "rarityLocalBasis": {
-        "categoria": "Sin figura de protección",
+        "categoria": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero)",
         "ambito": "estatal",
         "origen": "spainStatus del park.json"
       },
@@ -5194,7 +5194,7 @@
         "genus": "Natrix"
       },
       "iucnGlobal": "No evaluada en la Lista Roja mundial de la UICN",
-      "spainStatus": "CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
@@ -6549,7 +6549,7 @@
       },
       "iucnGlobal": "LC — Preocupación menor (Lista Roja mundial de la UICN, 2009)",
       "iucnSpain": "LC — Preocupación menor (Lista Roja española, 2002)",
-      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · CEEEI: Incluido (Real Decreto 630/2013, de 2 de agosto)",
+      "spainStatus": "LESRPE: En régimen de protección especial (Real Decreto 139/2011, de 4 de febrero) · 1 norma estatal más en EIDOS (IEPNB), aplicable solo fuera de la península",
       "regionalStatus": "No incluida en Catálogo Regional de Flora Silvestre Protegida de la Región de Murcia ni en Catálogo Regional de Especies Amenazadas de la Fauna Silvestre de la Región de Murcia ni en Catalogación de la malvasía cabeciblanca (Región de Murcia)",
       "regionalCcaa": "Región de Murcia",
       "reviewNote": null,
