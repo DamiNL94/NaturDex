@@ -8,6 +8,64 @@
     "fuente": "la norma, citada para poder volver a comprobarlo",
     "textoAnterior": "OPCIONAL. Si está, la corrección solo alcanza a las fichas cuyo `regionalStatus` sea EXACTAMENTE este texto. Se usa cuando el error está en un espacio concreto y los demás dicen lo mismo con otra redacción: sin la guarda, la corrección por comunidad pisaría quince textos correctos. El catálogo tiene once redacciones distintas de la misma negación, así que no es una precaución teórica."
   },
+  "uniformacion": {
+    "_nota": "Las redacciones de la NEGACIÓN («no está en el catálogo autonómico») que hay que sustituir por la que compone hoy `lib/catalogos-regionales.js` desde `data/catalogos-regionales.json`. Es la deuda nº 44(b): las 2.580 fichas que niegan dicen lo mismo de trece formas distintas, todas dan tramo 1 y ninguna está mal — pero es un campo que el usuario LEE. Lo aplica `corrige-estado-autonomico.js --uniforma`.",
+    "_esquema": {
+      "<comunidad>": "lista de redacciones EQUIVALENTES a la negación de esa comunidad. La sustitución es por texto EXACTO y solo alcanza a las fichas cuyo `regionalCcaa` sea esa comunidad: nada se reescribe por parecido, y una redacción que no esté aquí no se toca.",
+      "textoAnterior": "el texto literal, tal y como está hoy en los `park.json`. Copiado de la medición, no escrito a mano.",
+      "de": "de dónde viene esa redacción y por qué es equivalente. Es lo que permite revisar la entrada dentro de seis meses."
+    },
+    "Región de Murcia": [
+      {
+        "textoAnterior": "No incluida en el Catálogo Regional de especies protegidas (Región de Murcia)",
+        "de": "La genérica que escribía el generador ANTES del 2026-08-27, cuando el campo se llamaba `murciaStatus` y la frase se componía a ciegas sin mirar cuántos catálogos tiene la comunidad ni cómo se llaman (deuda nº 2). Es la mayoritaria: doce espacios."
+      },
+      {
+        "textoAnterior": "No incluida en el Decreto 50/2003 de protección de especies silvestres de la Región de Murcia (EIDOS, consultado 2026-07-28)",
+        "de": "Sierra Espuña, del piloto. Cita **el catálogo de FLORA** —el Decreto n.º 50/2003— en fichas que en su mayoría son de fauna, y le pega una fecha de consulta que no es parte de la figura legal."
+      },
+      {
+        "textoAnterior": "No incluida en el Catálogo Regional de especies protegidas de la Región de Murcia",
+        "de": "Cuatro Calas. La genérica sin el paréntesis de la comunidad: el mismo texto con otra puntuación, que es justo lo que hace que once redacciones parezcan once criterios."
+      },
+      {
+        "textoAnterior": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); frecuente en la Región",
+        "de": "Sierra Espuña, del piloto. La coletilla que sigue al punto y coma **no es un estado legal** sino una nota ecológica, y este campo guarda la figura del catálogo autonómico. Se retira de aquí; queda escrita en el informe de la sesión 2026-09-19 por si alguien la quiere en la descripción."
+      },
+      {
+        "textoAnterior": "No catalogada regionalmente",
+        "de": "Sierra Espuña, del piloto. No nombra ninguna norma, así que no se puede comprobar contra nada."
+      },
+      {
+        "textoAnterior": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); muy común en la Región",
+        "de": "Sierra Espuña, del piloto. La coletilla que sigue al punto y coma **no es un estado legal** sino una nota ecológica, y este campo guarda la figura del catálogo autonómico. Se retira de aquí; queda escrita en el informe de la sesión 2026-09-19 por si alguien la quiere en la descripción."
+      },
+      {
+        "textoAnterior": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); muy extendida por la Región",
+        "de": "Sierra Espuña, del piloto. La coletilla que sigue al punto y coma **no es un estado legal** sino una nota ecológica, y este campo guarda la figura del catálogo autonómico. Se retira de aquí; queda escrita en el informe de la sesión 2026-09-19 por si alguien la quiere en la descripción."
+      },
+      {
+        "textoAnterior": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); muy frecuente en la Región",
+        "de": "Sierra Espuña, del piloto. La coletilla que sigue al punto y coma **no es un estado legal** sino una nota ecológica, y este campo guarda la figura del catálogo autonómico. Se retira de aquí; queda escrita en el informe de la sesión 2026-09-19 por si alguien la quiere en la descripción."
+      },
+      {
+        "textoAnterior": "No catalogada; frecuente en el matorral termomediterráneo del sureste",
+        "de": "Sierra Espuña, del piloto. La coletilla que sigue al punto y coma **no es un estado legal**: es una nota ecológica, y este campo guarda la figura del catálogo autonómico. Se retira de aquí; queda escrita en el informe de la sesión 2026-09-19 por si alguien la quiere en la descripción."
+      },
+      {
+        "textoAnterior": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); elemento iberoafricano característico del sureste árido",
+        "de": "Sierra Espuña, del piloto. La coletilla que sigue al punto y coma **no es un estado legal** sino una nota ecológica, y este campo guarda la figura del catálogo autonómico. Se retira de aquí; queda escrita en el informe de la sesión 2026-09-19 por si alguien la quiere en la descripción."
+      },
+      {
+        "textoAnterior": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); propia del sureste árido y la Región",
+        "de": "Sierra Espuña, del piloto. La coletilla que sigue al punto y coma **no es un estado legal** sino una nota ecológica, y este campo guarda la figura del catálogo autonómico. Se retira de aquí; queda escrita en el informe de la sesión 2026-09-19 por si alguien la quiere en la descripción."
+      },
+      {
+        "textoAnterior": "No incluida en el Catálogo Regional de Flora Silvestre Protegida (Decreto 50/2003); característica de las ramblas de la Región",
+        "de": "Sierra Espuña, del piloto. La coletilla que sigue al punto y coma **no es un estado legal** sino una nota ecológica, y este campo guarda la figura del catálogo autonómico. Se retira de aquí; queda escrita en el informe de la sesión 2026-09-19 por si alguien la quiere en la descripción."
+      }
+    ]
+  },
   "correcciones": [
     {
       "scientificName": "Pyrrhocorax pyrrhocorax",

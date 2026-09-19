@@ -1631,6 +1631,38 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     > fauna. Todas afirman lo mismo y todas dan tramo 1, así que no hay dato mal — hay once maneras
     > de decirlo en un campo que el usuario lee. Uniformarlo es un `--write` con `textoAnterior`
     > (ver `corrige-estado-autonomico.js`), no un criterio nuevo.
+    >
+    > **(b) PAGADA el 2026-09-19. Eran TRECE redacciones y 2.580 fichas** —la cuenta había crecido
+    > con las correcciones del mismo día—, y hoy es **una**. El reparto medido antes de tocar nada:
+    > 1.939 con la genérica de antes del 2026-08-27, 470 con la del generador, 81 en Sierra Espuña
+    > citando el Decreto de **flora** para fichas de fauna y con una fecha de consulta pegada
+    > detrás, 76 en Cuatro Calas con la genérica **sin el paréntesis de la comunidad**, «No
+    > catalogada regionalmente» en tres, y **nueve variantes sueltas del piloto** con una coletilla
+    > ecológica tras un punto y coma. Se sustituyen 2.110.
+    >
+    > Tres decisiones que conviene tener escritas:
+    > · **Va en su propia bandera (`--uniforma`) y no con las correcciones.** Una corrección cambia
+    >   lo que la ficha AFIRMA; esto solo cómo lo dice. Mezclarlas habría hecho imposible leer un
+    >   diff de 2.110 fichas buscando las diez que sí cambian un hecho.
+    > · **La frase de destino no se escribe en el uniformador.** Se compone en
+    >   `lib/catalogos-regionales.js`, extraída del generador, que es quien la escribía: con dos
+    >   copias la negación volvería a divergir en la primera comunidad nueva, que es exactamente de
+    >   donde se venía. Y la sustitución es por texto **EXACTO** contra una lista declarada en
+    >   `uniformacion.<comunidad>`, con de dónde viene cada redacción: nada se reescribe por
+    >   parecerse.
+    > · **Ninguna ficha cambia de tramo**, y se comprobó ANTES de escribir pasando las trece
+    >   redacciones por `lib/rareza.js`: las trece dan 1, igual que la canónica. `especies:rareza`
+    >   detrás lo confirma con **0 park.json tocados**, que es la prueba de que esto no ha movido
+    >   ningún dato.
+    >
+    > Lo que sí se pierde y hay que saberlo: las **once coletillas ecológicas** de Sierra Espuña
+    > («muy común en la Región», «elemento iberoafricano característico del sureste árido»…) salen
+    > de este campo, porque no son un estado legal. Están transcritas taxón a taxón en
+    > `rollout/sesiones/2026-09-19.md` por si alguien las quiere en la descripción, que es donde
+    > tendrían sitio.
+    >
+    > De paso, esto se lleva por delante **90 de las 188 fichas con textos del piloto de Sierra
+    > Espuña** que la nº 43 dejaba apuntadas como trabajo pendiente.
 
 45. ~~**`--refrescar-campos` conserva el valor viejo cuando la derivación nueva no trae el campo.**~~
     — **PAGADA el 2026-09-19, y eran TRES puertas, no una.** La distinción que pedía este apartado
