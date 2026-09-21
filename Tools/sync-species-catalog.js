@@ -406,7 +406,12 @@ function aplicar() {
           `  s.primary_habitat = ${sqlStr(u.habitat)},\n` +
           `  s.description = ${sqlStr(u.description)},\n` +
           `  s.description_source = ${sqlStr(u.descriptionSource)},\n` +
-          `  s.identification_tips = ${sqlStr((u.tips || []).join('\n'))},\n` +
+          // «; » y no salto de línea: es como lo escribe `build-park-sql.js` y como lo PARTE
+          // `park_payload.php` (`explode(";")`). Con `\n` no había ningún «;» que partir, así que las
+          // tres pistas de cada ficha llegaban a la app como UNA sola, y por la ruta que el runbook
+          // manda para toda corrección universal. Estuvo así hasta el 2026-09-21; si no rompió nada
+          // en la base fue porque la cola del 19 se aplicó por los n2 y no por este fichero.
+          `  s.identification_tips = ${sqlStr((u.tips || []).join('; ') || null)},\n` +
           `  s.seasonality = ${sqlStr(u.seasonality)},\n` +
           `  s.image_url = ${sqlStr(u.image)},\n` +
           `  s.image_attribution = ${sqlStr(u.imageAttribution)},\n` +
