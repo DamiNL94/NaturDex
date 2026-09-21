@@ -111,6 +111,9 @@
  *                     intacto. Es lo que se usa cuando se corrige la lectura de una fuente y hay que
  *                     propagarlo a lo ya escrito sin pisar nada curado, p. ej.:
  *                        --taxones "<…>" --refrescar --refrescar-campos spainStatus
+ *                     Un campo pedido que la derivación nueva NO trae se RETIRA (deuda nº 45, y la
+ *                     nota de `retira()`): la fuente ha contestado, así que conservar el valor viejo
+ *                     sería quedarse con un dato que ya no sostiene nadie. Se enumeran al final.
  *   --dry             no escribe nada
  *
  * Idempotente: un segundo pase con la misma caché no cambia un byte.
@@ -491,11 +494,63 @@ function normaCorta(norma) {
   return corta.length < n.length ? corta : n;
 }
 
+/*
+ * «VACÍO PORQUE LA FUENTE CALLA» NO ES «VACÍO PORQUE NO SE PUDO PREGUNTAR», y hasta el 2026-09-19
+ * esta herramienta trataba los dos igual.
+ *
+ * El parche de `--refrescar-campos` se aplicaba con `if (f[campo] !== undefined)`, así que un campo
+ * que la ficha nueva OMITE dejaba en pie el valor viejo. Y hay campos que se omiten a propósito
+ * —`iucnSpain`, cuando EIDOS no trae fila de ámbito España—, con lo que conservar significa quedarse
+ * con un dato que ya no sostiene nadie. Se vio al reanclar los identificadores del 2026-09-15:
+ * cuatro fichas siguieron anunciando la Lista Roja del taxón EQUIVOCADO —*Sambucus nigra* con el
+ * «CR en España» del saúco de La Palma— porque el taxón bueno no tiene esa fila. Se limpiaron a
+ * mano; esto es la causa.
+ *
+ * Por qué aquí sí se puede afirmar que la fuente ha contestado: el bucle de arriba pide EIDOS, GBIF
+ * y Wikimedia dentro de un mismo `try`, y **cualquier fallo saca al taxón del lote con `continue`**.
+ * Un taxón que llega a `fichas` es un taxón cuyas tres fuentes respondieron; que un campo no esté es
+ * entonces una respuesta, no un silencio. **Si algún día una fuente pasa a fallar campo a campo sin
+ * lanzar, esa distinción hay que traerla aquí** — es la misma que ya hacen `lib/fenologia.js` y la
+ * deuda nº 38.
+ *
+ * Solo se retiran los campos que esta herramienta DERIVA: lo que alguien haya añadido a mano a una
+ * entrada del catálogo no lo puede borrar un generador que no sabe de dónde salió.
+ */
+const DERIVADOS = [
+  'commonName', 'kingdom', 'group', 'habitat', 'seasonality', 'rarityScore', 'rarityBasis',
+  'description', 'descriptionSource', 'tips', 'taxonomy', 'iucnGlobal', 'iucnSpain', 'spainStatus',
+  'image', 'imageAttribution', 'eidosTaxonId',
+];
+
+function retira(fusionada, ficha, campos, sci, retirados) {
+  for (const campo of campos) {
+    if (!DERIVADOS.includes(campo)) continue;          // no es suyo: no lo toca
+    if (ficha[campo] !== undefined) continue;          // la fuente lo trae
+    if (!(campo in fusionada)) continue;               // no estaba: nada que retirar
+    retirados.push({ sci, campo, valor: fusionada[campo] });
+    delete fusionada[campo];
+  }
+  return fusionada;
+}
+
 function espanaDe(nacionales) {
-  if (!(nacionales || []).length) return 'Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)';
+  // Una norma de ámbito «Nacional» puede aplicarse SOLO en Canarias o Baleares, y entonces no
+  // describe el estado legal de una especie de la península: el criterio vive en
+  // `aplicaEnPeninsula` (lib/eidos.js), con las pruebas del BOE en su cabecera.
+  const todas = nacionales || [];
+  const aplican = todas.filter(eidos.aplicaEnPeninsula);
+  const fuera = todas.length - aplican.length;
+  // El hueco se DICE —una norma apartada no es una norma que no existe—, pero se dice SIN nombrar la
+  // figura: el tramo se deriva de este mismo texto con la escalera de `lib/rareza.js`, así que dejar
+  // caer aquí un «LESRPE» de Canarias devolvería por la puerta de atrás el tramo que el filtro
+  // acaba de quitar.
+  const nota = fuera
+    ? ` · ${fuera} norma${fuera === 1 ? '' : 's'} estatal${fuera === 1 ? '' : 'es'} más en EIDOS (IEPNB), aplicable${fuera === 1 ? '' : 's'} solo fuera de la península`
+    : '';
+  if (!aplican.length) return `Sin figura de protección de ámbito estatal (LESRPE/CEEA) en EIDOS (IEPNB)${nota}`;
   const vistos = new Set();
   const partes = [];
-  for (const r of [...nacionales].sort((a, b) => pesoDe(a) - pesoDe(b))) {
+  for (const r of [...aplican].sort((a, b) => pesoDe(a) - pesoDe(b))) {
     const txt = [r.estadolegal, r.norma ? `(${normaCorta(r.norma)})` : null].filter(Boolean).join(' ');
     if (!txt || vistos.has(txt)) continue;
     vistos.add(txt);
@@ -503,7 +558,7 @@ function espanaDe(nacionales) {
   }
   // Tres figuras bastan para situar a la especie; a partir de ahí la ficha deja de leerse.
   const sobran = partes.length - 3;
-  return partes.slice(0, 3).join(' · ') + (sobran > 0 ? ` · y ${sobran} figura${sobran === 1 ? '' : 's'} más en EIDOS (IEPNB)` : '');
+  return partes.slice(0, 3).join(' · ') + (sobran > 0 ? ` · y ${sobran} figura${sobran === 1 ? '' : 's'} más en EIDOS (IEPNB)` : '') + nota;
 }
 
 /**
@@ -760,14 +815,18 @@ async function main() {
   // El catálogo se ordena por nombre científico: es un fichero que se lee a mano y que crece con cada
   // espacio, y sin orden el diff de un alta se vuelve ilegible.
   const fusion = { ...universal };
+  const retirados = [];
   for (const [sci, f] of Object.entries(fichas)) {
     if (SOLO_CAMPOS && universal[sci]) {
       // Solo los campos pedidos; todo lo demás de la ficha existente se queda como está.
+      const campos = camposArrastrados(SOLO_CAMPOS);
       const parche = {};
-      for (const campo of camposArrastrados(SOLO_CAMPOS)) if (f[campo] !== undefined) parche[campo] = f[campo];
-      fusion[sci] = { ...universal[sci], ...parche };
+      for (const campo of campos) if (f[campo] !== undefined) parche[campo] = f[campo];
+      fusion[sci] = retira({ ...universal[sci], ...parche }, f, campos, sci, retirados);
+    } else if (REFRESCAR && universal[sci]) {
+      fusion[sci] = retira({ ...universal[sci], ...f }, f, DERIVADOS, sci, retirados);
     } else {
-      fusion[sci] = REFRESCAR && universal[sci] ? { ...universal[sci], ...f } : f;
+      fusion[sci] = f;
     }
   }
   const ordenado = Object.fromEntries(Object.keys(fusion).sort((a, b) => a.localeCompare(b)).map(k => [k, fusion[k]]));
@@ -798,6 +857,13 @@ async function main() {
   for (const c of ['commonName', 'group', 'habitat', 'seasonality', 'rarityScore', 'description', 'image', 'tips']) {
     const n = cuenta(c);
     if (n) console.log(`  · sin ${c}: ${n}`);
+  }
+  // Retirar un campo se DICE, siempre. Un borrado silencioso es el mismo fallo en verde que
+  // conservar un valor caducado, solo que en la otra dirección.
+  if (retirados.length) {
+    console.log(`\n⚠ ${retirados.length} campo(s) RETIRADO(s): la fuente ha contestado y ya no los trae,`);
+    console.log('  así que conservar el valor viejo sería quedarse con un dato que no sostiene nadie:');
+    for (const r of retirados) console.log(`   · ${r.sci} · ${r.campo}: ${JSON.stringify(String(r.valor).slice(0, 70))}`);
   }
   avisosCuracion.forEach(a => console.log('\n⚠ ' + a));
   if (sinonimos.length) {

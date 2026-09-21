@@ -162,6 +162,23 @@ valor que el paquete no tuviera (0 campos), así que el UPSERT solo suma.
 Resultado: **218 términos y 26 invasoras** (con el arruí, *Ammotragus lervia*, que solo estaba en el
 JSON). 218 y no 219 por el choque de collation que explica §4.
 
+### 3.4 bis El estado legal autonómico (`estado-autonomico.sql`)
+
+`regional_status` —el texto que cita el catálogo autonómico— es columna **LOCAL**: no viaja en el
+`species-universal.sql` de `species:apply`, y `rareza-local.sql` tampoco la lleva (ése escribe el
+tramo derivado: `rarity_local`, `rarity_local_basis` e `is_featured`). Hasta el 2026-09-19 no la
+escribía **nadie** salvo el `-n2.sql` del espacio entero, que es la trampa nº 6, así que cada
+corrección de esa cola se quedaba en el repositorio.
+
+Lo escribe ahora `node Tools/catalogo-nacional/corrige-estado-autonomico.js --sql
+Database/estado-autonomico.sql`. Es un **espejo**, no una cola: lleva todas las fichas que deben
+tener el texto que declara `data/estado-autonomico-correcciones.json`, estuvieran ya bien o no, así
+que regenerarlo nunca pierde lo que no se llegó a aplicar y aplicarlo dos veces escribe lo mismo.
+
+**Va DESPUÉS de los n2** si en esa tanda se regenera alguno: el n2 escribe todas las columnas de
+`species` desde el `park.json`, y el orden inverso no rompe nada pero deja el trabajo hecho dos
+veces. Y como cualquier otro, **cuenta las filas después**.
+
 ### 3.5 Lo que NO hace falta aplicar
 
 `species-universal.sql` (2.882 UPDATE) y `rareza-local.sql` (2.882 UPDATE) **quedan cubiertos por los
@@ -170,6 +187,124 @@ idempotentes— pero no añaden nada, salvo un matiz: sus `UPDATE` alcanzan tamb
 están en ningún `park.json` (restos de un renombrado), y el UPSERT del n2 no.
 
 ---
+
+## 3 bis. La cola del 2026-09-19 · APLICADA
+
+Tres sesiones de deuda (nº 43, 45 y 44(b)) dejaron cola. Se aplicó entera **regenerando los
+dieciséis n2 y aplicando solo eso**: `build-park-sql.js` escribe las 38 columnas de `species` desde
+el `park.json`, así que `species-universal.sql`, `rareza-local.sql` y `estado-autonomico.sql`
+**quedan cubiertos** (§3.5) — y de hecho el cotejo posterior lo confirma con 0 diferencias sin
+haberlos aplicado.
+
+Lo que costó y lo que enseñó:
+
+**1 · La copia ya no se escribe a mano.** Era la tercera vez que hacía falta un volcado PDO de
+Railway y las tres se había escrito y tirado. Ahora es `Tools/db-backup-remoto.php`:
+
+```bash
+railway run --service MySQL -- bash -c \
+  'php Tools/db-backup-remoto.php "$MYSQL_PUBLIC_URL" "$HOME/NaturDex-backups/railway-naturadex-<fecha>-pre-cola.sql"'
+```
+
+Instantánea coherente, manifiesto con filas y `sha1` al lado, y **fuera del repositorio** porque
+lleva correos y hashes. La del 19: 18 tablas, **10.384 filas, 12,2 MB**.
+
+**2 · Los dieciséis n2 versionados iban todos atrasados**, como manda §3.1 bis: se regeneran, sale
+`git status Database/` con los dieciséis modificados, y se aplican esos.
+
+**3 · El cotejo simétrico, y dos sesgos que casi lo estropean.** La pregunta es «¿tiene la base
+algún valor que el repositorio NO tenga?», porque el n2 es un UPSERT. La primera pasada dijo
+**11.426 diferencias** y **124 valores solo en la base**; las dos cifras estaban infladas por el
+comparador, no por la base:
+
+- **Las columnas JSON hay que canonizarlas en LOS DOS lados.** El runbook ya avisaba de que MySQL
+  reordena las claves, y aun así el script solo ordenaba las del repositorio: `rarity_basis` y
+  `rarity_local_basis` salían con **3.311 diferencias** cada una —el catálogo entero— donde las
+  reales eran 86 y 72.
+- **`identification_tips` se escribe con «; », no con salto de línea**, que es como lo parte
+  `park_payload.php`. Comparándolo mal salían **1.577** diferencias; las reales son **0**. Ojo, que
+  aquí hay una divergencia de verdad y conviene tenerla presente: `build-park-sql.js` une con «; »
+  y `sync-species-catalog.js --sql` une con `\n`. La base la manda el n2, que es el que escribe la
+  ficha entera.
+- Y un tercer sesgo sin consecuencia: `is_visible` sale como «valor solo en la base» en 106 fichas
+  porque el `park.json` **omite** `visible` cuando es cierto, y el generador escribe
+  `s.visible === undefined ? true`. No hay pérdida; lo que hay que mirar es el generador, no el
+  comparador.
+
+Corregido eso: **0 fichas en la base que no estén en el repositorio, 0 al revés**, y los únicos
+valores que la base tenía y el repositorio no eran los **18 `iucn_spain`** que la deuda nº 45
+retiró a propósito. Nadie había editado desde el AdminPanel.
+
+**4 · Después: 0 diferencias en 35 columnas.** Recuentos tras aplicar — 3.311 fichas, 6.411
+enlaces, 164 hábitats, 144 POIs, 16 espacios, **343 destacadas** (eran 345) y **una sola redacción**
+de la negación en `regional_status`, en 2.580 fichas.
+
+**5 · Y la comprobación que de verdad cierra el círculo: la API.** La base no es el final del
+camino, lo es lo que sirve el endpoint:
+
+```bash
+curl -s "https://naturdex-production-62b3.up.railway.app/Backend/Api/species.php?park=sierra-espuna"
+```
+
+—la ruta lleva `/Backend/Api/`, no `/api/`—. La cabra montés de Sierra Espuña sale con
+`rarityLocal 4`, destacada y «Vulnerable (Ley 7/1995…)»; el saúco de Cañaverosa, con `iucnSpain`
+en `null`.
+
+
+## 3 ter. PENDIENTE · Las pistas como array JSON, en dos tiempos
+
+**Por qué no se aplica de una vez.** Las pistas de identificación pasan de «; » a un array JSON en
+`species.identification_tips` (el porqué, en `Backend/Lib/species_tips.php`). Railway despliega el
+PHP **desde `main`**, y el `park_payload.php` que hay hoy en producción parte por `explode(";")`: un
+`["…","…"]` en la base antes de desplegar el lector nuevo saldría en la app como **UNA sola pista con
+los corchetes dentro**, en todas las fichas. El lector nuevo, en cambio, entiende los dos formatos.
+Así que el orden es el único que no deja ningún momento roto:
+
+**Primer tiempo — HECHO el 2026-09-21, a falta del despliegue.** El código está en la rama con
+`PISTAS_EN_JSON = false` en `Tools/lib/sql.js`: todos los generadores de Node siguen escribiendo «; »,
+que es lo que hay en la base y lo que entienden el PHP viejo y el nuevo. Los n2 regenerados con ese
+código salen **idénticos en datos** a los aplicados el 19 (comprobado: solo cambian comentarios y el
+formato del `ON DUPLICATE KEY UPDATE` de hábitats).
+
+0. **ANTES de fusionar: `Database/orden-columnas.sql` a Railway** (añadido el 2026-09-21, y no es
+   opcional). La misma rama trae el `park_payload.php` que ordena por la columna `orden` —manda el
+   orden del `park.json`, deuda nº 3—, y con el PHP nuevo y sin la columna **el SELECT falla y la API
+   deja de servir todos los espacios**. Al revés no pasa nada: el PHP viejo no la mira. Son tres
+   `ADD COLUMN` vacíos, sin `DELIMITER`, por `import-sql.php`; la comprobación va al final del
+   fichero y tiene que devolver las tres tablas.
+1. **Fusionar en `main` y empujar.** Railway construye el `Dockerfile` y despliega `species_tips.php`,
+   `park_payload.php`, `admin.php` y el bundle del panel.
+2. **Comprobar que el lector nuevo está vivo ANTES de seguir**:
+   ```bash
+   curl -s "https://naturdex-production-62b3.up.railway.app/Backend/Api/species.php?park=cabezo-gordo"
+   ```
+   El murciélago de cueva (*Miniopterus schreibersii*) sigue saliendo con **cuatro** pistas —la base
+   aún está en «; »—, pero ya sale por `speciesTipsDecode`. No hay forma de verlo desde fuera: el
+   comprobante es que el despliegue de Railway haya terminado con el commit que trae
+   `Backend/Lib/species_tips.php`.
+
+**Segundo tiempo — cuando el paso 2 esté hecho, no antes.**
+
+3. `PISTAS_EN_JSON = true` en `Tools/lib/sql.js`.
+4. `npm run ida-y-vuelta` → tiene que salir **entero en verde** (con el interruptor apagado enseña
+   33 fichas en 15 espacios que no vuelven iguales; encendido, ninguna — comprobado el 2026-09-21).
+5. Copia (`Tools/db-backup-remoto.php`), regenerar los dieciséis n2 y aplicarlos como en §3 bis.
+6. La API: el murciélago de cueva de Cabezo Gordo tiene que salir con **tres** pistas, y la segunda
+   entera: «Alas largas y estrechas; vuelo veloz y alto».
+7. Los `n3-pois-<slug>.sql` también, detrás de su n2: llevan el `orden` de los puntos. De paso ponen
+   al día el de Calblanque, que iba por detrás de su `park.json` (la foto de la playa).
+8. El orden: la API tiene que devolver hábitats, especies y puntos **en el orden del `park.json`**.
+   El primer hábitat de Cabezo Gordo en la API tiene que ser el primero de su `park.json`.
+
+**El paso 5 no espera a nada del orden**: hasta que se apliquen los n2, las columnas están vacías y
+la API sirve el orden de antes. Pero no hace falta esperar al segundo tiempo para rellenarlas, así que
+si el interruptor de las pistas se retrasa, los n2 pueden aplicarse con él apagado.
+
+`migrations.sql` trae además `naturdex_tips_a_json`, que convierte las filas viejas **en la propia
+base**. En Railway no hace falta —los n2 reescriben la columna de todas las fichas—, y además usa
+`DELIMITER`, así que **no pasa por `import-sql.php`** (§1). Es para el contenedor local y para
+instalaciones que no regeneren.
+
 
 ## 4. Lo que hay que mirar ANTES de aplicar
 

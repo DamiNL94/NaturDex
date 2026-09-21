@@ -37,11 +37,12 @@ node Tools/catalogo-nacional/merge-habitats.js --park <SLUG> \
      --official Tools/catalogo-nacional/out/<SLUG>-oficial.geojson [--reconcile 8230:8210]
 
 node Tools/catalogo-nacional/adopt-habitats.js --park <SLUG> --dry   # revisar
-node Tools/catalogo-nacional/adopt-habitats.js --park <SLUG>         # escribir
+node Tools/catalogo-nacional/adopt-habitats.js --park <SLUG> --sql   # escribir (y regenerar el n2)
 ```
 
 `merge-habitats` conserva lo curado a mano y actualiza desde la fuente lo que es dato. `adopt-habitats`
-lo lleva a `Frontend/`, sincroniza `park.json` y recalcula los contadores del manifiesto. Si aparecen
+lo lleva a `Frontend/`, sincroniza `park.json`, recalcula los contadores del manifiesto y sube su versión si cambió algo
+—también si solo cambió el geojson—; con `--sql` deja además regenerado `Database/<SLUG>-n2.sql`. Si aparecen
 códigos HIC nuevos, **amplía `data/hic-nombres.json` y `data/hic-prioritarios.json` antes** (ver [trampas](TRAMPAS-CONOCIDAS.md)).
 
 **Capa 3 · especies — el orden de prioridad de las fuentes**

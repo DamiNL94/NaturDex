@@ -3,7 +3,7 @@
 /*
  * adopt-habitats.js — adopta el <slug>-merged.geojson como la capa REAL del parque.
  *
- *   node Tools/catalogo-nacional/adopt-habitats.js --park <slug> [--dry]
+ *   node Tools/catalogo-nacional/adopt-habitats.js --park <slug> [--dry] [--sql] [--merged <ruta>]
  *
  * Es el paso §8.3 de la deuda técnica del rollout: hasta ahora `merge-habitats.js` dejaba su
  * resultado en `out/` para revisión manual y nadie lo llevaba a `Frontend/`. Esto lo cierra:
@@ -13,7 +13,18 @@
  *      (description, coordinates, color, image, audio, speciesIds, reviewNote) y actualiza desde la
  *      fuente oficial los que son dato (code, name, type, priority, hicSubtipos, fitosociologia).
  *      Los hábitats nuevos entran con la descripción oficial del Atlas y su centroide calculado.
- *   3. Recalcula los contadores del manifiesto.
+ *   3. Recalcula los contadores del manifiesto y, si algo del paquete cambió —el `park.json` O el
+ *      geojson—, sube su `version`, por `escribeEspacio()`. Hasta el 2026-09-21 escribía los tres
+ *      ficheros con su propio `writeFileSync` y no la subía nunca: un recinto redibujado no llegaba al
+ *      dispositivo que ya tenía el espacio guardado sin conexión.
+ *   4. Con `--sql`, regenera `Database/<slug>-n2.sql` (`build-park-sql.js`). Es la deuda nº 3: esto
+ *      escribía solo en `Frontend/`, y como la API manda sobre el paquete, el cambio no lo veía nadie
+ *      hasta que alguien se acordaba de pasar `park:sql`. Se regenera el n2 entero y no un fichero de
+ *      hábitats aparte porque el n2 es el ESPEJO del `park.json` —el que aplica la cola— y uno
+ *      parcial dejaría el n2 versionado por detrás de su paquete (§2 del CLAUDE.md). Regenerarlo es
+ *      seguro: se lee del `park.json` ya escrito, no de la selección (que es la trampa nº 6). Y como
+ *      es UPSERT, un recinto que salga del paquete NO se borra de la base — esta herramienta no retira
+ *      ninguno (los huérfanos se conservan), así que hoy no hace falta borrado.
  *
  * REGLA DE PRODUCTO: los hábitats marinos NO se adoptan. «La app no es útil en el mar», así que un
  * hábitat sumergido (type "Marino" en hic-nombres.json: praderas de Posidonia, fondos…) no entra en
@@ -27,11 +38,13 @@ const { resolvePark } = require('../lib/registry');
 const { ringArea, inRing } = require('../lib/geo');
 
 const { arg, flag, requireArgs } = require('../lib/cli');
-const { ROOT: RAIZ, FRONTEND } = require('../lib/io');
+const { ROOT: RAIZ, FRONTEND, escribeEspacio } = require('../lib/io');
+const { escribeN2 } = require('./build-park-sql');
 
 const DRY = flag('dry');
+const SQL = flag('sql');
 const PARK = arg('park');
-requireArgs('Uso: --park <slug> [--dry] [--merged <ruta>]', { park: PARK });
+requireArgs('Uso: --park <slug> [--dry] [--sql] [--merged <ruta>]', { park: PARK });
 
 const NOMBRES = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'hic-nombres.json'), 'utf8')).codigos;
 // Tipos que no se adoptan: lo que está bajo el agua no se explora a pie.
@@ -107,7 +120,9 @@ const colorDe = code => PALETA[[...String(code)].reduce((s, c) => s + c.charCode
 
 function main() {
   const park = resolvePark(RAIZ, PARK);
-  const mergedPath = flag('--merged') || path.join(__dirname, 'out', `${PARK}-merged.geojson`);
+  // `arg`, no `flag`: con `flag` la ruta que se pasaba era el booleano `true` y la opción documentada
+  // no había funcionado nunca.
+  const mergedPath = arg('merged') || path.join(__dirname, 'out', `${PARK}-merged.geojson`);
   if (!fs.existsSync(mergedPath)) { console.error(`No existe el merged: ${mergedPath}\nLánzalo antes con merge-habitats.js`); process.exit(2); }
 
   const merged = JSON.parse(fs.readFileSync(mergedPath, 'utf8'));
@@ -166,29 +181,40 @@ function main() {
 
   // 3) Escribir -------------------------------------------------------------------------------------
   const geo = { type: 'FeatureCollection', features: aceptados };
-  const manifestRel = path.relative(FRONTEND, park.habitatsPath).split(path.sep).join('/');
+  const geoRel = path.relative(FRONTEND, park.habitatsPath).split(path.sep).join('/');
   const manifestPath = path.join(path.dirname(park.geoDir), 'manifest.json');
-  const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-  manifest.geo = manifest.geo || {};
-  manifest.geo.habitats = manifestRel;
-  manifest.counts = manifest.counts || {};
-  manifest.counts.habitats = habitats.length;
-  manifest.counts.species = (doc.species || []).length;
-  manifest.counts.pointsOfInterest = (doc.pointsOfInterest || []).length;
 
-  const escribir = (p, txt) => {
-    const rel = path.relative(RAIZ, p);
-    if (fs.existsSync(p) && fs.readFileSync(p, 'utf8') === txt) return `= ${rel}`;
-    if (!DRY) { fs.mkdirSync(path.dirname(p), { recursive: true }); fs.writeFileSync(p, txt); }
-    return `${DRY ? '~' : '+'} ${rel}`;
-  };
-  console.log('\n' + escribir(park.habitatsPath, JSON.stringify(geo) + '\n'));
-  console.log(escribir(parkJsonPath, JSON.stringify(doc, null, 2) + '\n'));
-  console.log(escribir(manifestPath, JSON.stringify(manifest, null, 2) + '\n'));
+  // El geojson no es un `park.json` y se escribe aquí; el `park.json` y el manifiesto, juntos, por
+  // `escribeEspacio()` —con el cambio del geojson dicho—, que es la única puerta que sube la versión.
+  const geoTxt = JSON.stringify(geo) + '\n';
+  const geoCambia = !fs.existsSync(park.habitatsPath) || fs.readFileSync(park.habitatsPath, 'utf8') !== geoTxt;
+  if (geoCambia && !DRY) {
+    fs.mkdirSync(path.dirname(park.habitatsPath), { recursive: true });
+    fs.writeFileSync(park.habitatsPath, geoTxt);
+  }
+  console.log(`\n${!geoCambia ? '=' : DRY ? '~' : '+'} ${path.relative(RAIZ, park.habitatsPath)}`);
+  const { lineas } = escribeEspacio({
+    file: parkJsonPath, manifestFile: manifestPath, doc, write: !DRY,
+    otrosCambios: geoCambia, geo: { habitats: geoRel },
+    counts: {
+      habitats: habitats.length,
+      species: (doc.species || []).length,
+      pointsOfInterest: (doc.pointsOfInterest || []).length,
+    },
+  });
+  lineas.forEach(l => console.log(l));
+
+  // 4) El SQL -----------------------------------------------------------------------------------------
+  // En seco no se escribe: el n2 se redacta leyendo el `park.json` del disco, que en seco no ha cambiado.
+  if (SQL && !DRY) console.log(escribeN2(PARK).linea);
 
   console.log(`\n${habitats.length} hábitats · ${nuevos.length} nuevos · ${actualizados.length} refrescados desde la fuente`);
   nuevos.forEach(n => console.log(`   nuevo: ${n}`));
   if (DRY) console.log('\nSimulación: no se ha tocado nada.');
+  else if (!SQL) {
+    console.log('\nRecuerda: la API manda sobre el park.json empaquetado. Con backend desplegado, repite con');
+    console.log('--sql (o pasa `npm run park:sql -- --park ' + PARK + '`) y aplica el -n2.sql a la base.');
+  }
 }
 
 main();

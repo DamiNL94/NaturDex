@@ -2,8 +2,8 @@
   "slug": "cabo-cope-puntas-calnegre",
   "name": "Cabo Cope y Puntas de Calnegre",
   "apiSlug": "cabo-cope-puntas-calnegre",
-  "version": 30,
-  "updatedAt": "2026-09-14",
+  "version": 38,
+  "updatedAt": "2026-09-19",
   "data": "Data/parks/murcia/cabo-cope-puntas-calnegre/park.json",
   "geo": {
     "parque": "Data/parks/murcia/cabo-cope-puntas-calnegre/geo/parque-regional.geojson",

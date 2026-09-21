@@ -34,7 +34,7 @@ export const FIELDS: Record<Resource, FieldDef[]> = {
     { k: 'longitude', label: 'Longitud', type: 'number' },
     { k: 'is_featured', label: 'Especie prioritaria (destacada)', type: 'checkbox' },
     { k: 'description', label: 'Descripción', type: 'textarea', wide: true },
-    { k: 'identification_tips', label: 'Consejos de identificación', type: 'textarea', wide: true, hint: 'Separa cada consejo con punto y coma (;)' },
+    { k: 'identification_tips', label: 'Consejos de identificación', type: 'textarea', wide: true, hint: 'Un consejo por línea. El punto y coma ya no separa consejos: se guarda tal cual dentro de la frase.' },
     { k: 'taxon_phylum', label: 'Filo/División' },
     { k: 'taxon_class', label: 'Clase' },
     { k: 'taxon_order', label: 'Orden' },

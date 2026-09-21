@@ -211,7 +211,9 @@ Cada una se paga mejor ahora que en el espacio número treinta.
    Hace falta además una tabla **comunidad → norma** para que el campo no sea texto libre distinto en
    cada espacio. `Tools/eidos-diff.js` ya acepta `--ccaa`.
 3. **El pipeline de hábitats no escribe en la BD** — **la parte que BORRABA DATO está pagada el
-   2026-08-27; queda la de generar el SQL.** Lo que hacía provisional cualquier cambio del pipeline
+   2026-08-27, y la de generar el SQL y el ORDEN el 2026-09-21; lo que queda es APLICAR, y eso es
+   un despliegue en orden fijo (`runbook/APLICAR-A-RAILWAY.md` §3 ter): la columna `orden`, el PHP,
+   y el segundo tiempo de las pistas.** Lo que hacía provisional cualquier cambio del pipeline
    no era que no escribiera en la base: era que **la vuelta desde la base borraba campos que no
    tenían columna**. Eso ya no pasa, y ahora hay una comprobación que lo vigila.
    > **Los dos campos medidos tienen columna**: `species.gbif_occurrences` (el total de la especie en
@@ -246,12 +248,49 @@ Cada una se paga mejor ahora que en el espacio número treinta.
    > El relleno de la base está en `Database/ida-y-vuelta.sql` (**2.770 especies · 149 recintos**),
    > **pendiente de aplicar**, detrás de `migrations.sql`.
    >
-   > **Lo que sigue abierto, y son dos cosas distintas:** (1) `adopt-habitats.js` sigue sin generar
-   > SQL, así que un cambio suyo no llega a la base hasta que alguien pase `park:sql`; y (2) **el
-   > ORDEN**, que la comprobación no mira: el exportador ordena las especies por `is_featured,
-   > common_name` y los recintos por `name`, mientras el `park.json` los lleva en el orden del
-   > pipeline. Eso no pierde ningún dato pero produce un diff completo que esconde lo que sí cambió,
-   > y arreglarlo es decidir cuál de los dos órdenes manda.
+   > **Lo que seguía abierto eran dos cosas distintas:** (1) `adopt-habitats.js` sin generar
+   > SQL, así que un cambio suyo no llegaba a la base hasta que alguien pasara `park:sql` — **PAGADA
+   > el 2026-09-21**: `--sql` regenera el `<slug>-n2.sql` en el mismo paso, con la función que ahora
+   > exporta `build-park-sql.js` (los dieciséis n2 salen idénticos byte a byte con la refactorización).
+   > El n2 entero y no un fichero de hábitats aparte, porque el n2 es el espejo del `park.json` y uno
+   > parcial lo dejaría atrasado. Salieron de paso **dos silencios más** en la misma herramienta:
+   > escribía el `park.json` y el manifiesto con su propio `writeFileSync` y **no subía nunca la
+   > `version`** —la avería de la deuda nº 37, que se le había escapado a aquel recuento; ahora va por
+   > `escribeEspacio()`, que aprende `otrosCambios` porque aquí puede cambiar SOLO el geojson— y su
+   > `--merged <ruta>` documentado se leía con `flag()` y no había funcionado nunca. Y (2) **el
+   > ORDEN**: el exportador ordenaba las especies por `is_featured, common_name` y los recintos y
+   > puntos por `name`, mientras el `park.json` los lleva en el orden del pipeline. No perdía dato,
+   > pero cada export era un diff completo, y **el hábitat que la app abre por defecto** —el primero
+   > sin `reviewNote` (`app.js`), que no reordena— **salía distinto con conexión que sin ella**.
+   > **DECIDIDO y hecho el 2026-09-21: manda el del `park.json`.** La base no tenía dónde guardarlo
+   > (ids autoincrementales), así que hay una columna `orden` en las tres tablas: la escriben los
+   > generadores desde `lib/filas-bd.js` con la posición en la lista, y `park_payload.php` y
+   > `park_export.php` ordenan por `orden IS NULL, orden` y después como antes (lo creado desde el
+   > panel va al final). `npm run ida-y-vuelta` **ya compara el orden** —el simulador aplica el
+   > `ORDER BY` de verdad sobre filas invertidas, y con el `ORDER BY` viejo salta en los dieciséis—.
+   > Regenerados los dieciséis n2 y los n3: solo cambia la columna, salvo `n3-pois-calblanque`, que
+   > iba por detrás de su `park.json` (la foto de la playa). De paso `rel()` escribe siempre «/»: las
+   > cabeceras de los SQL salían con «\\» o «/» según la máquina que los generara.
+   > **Pendiente de aplicar, y el orden importa:** `Database/orden-columnas.sql` a Railway ANTES de
+   > fusionar en `main` —con el PHP nuevo y sin la columna, la API se cae—; ver
+   > `runbook/APLICAR-A-RAILWAY.md` §3 ter. Lo que no se ordena: `habitatIds` dentro de cada ficha,
+   > que la app no usa como orden.
+   >
+   > **Y la comprobación miraba CLAVES, no valores (2026-09-11).** Comparando la API de Railway con
+   > los `park.json`: `tips` tenía columna y volvía, pero **partido** —se escribía unido con «; » y
+   > `park_payload.php` lo partía por «;»—, así que las **24 fichas** (5 taxones, 13 espacios) cuya
+   > pista lleva un punto y coma propio volvían con una pista de más, y lo que `species-universal.sql`
+   > escribía con saltos de línea volvía con las tres en una. `npm run ida-y-vuelta`, en verde. El
+   > arreglo —la columna guarda un array JSON (`Backend/Lib/species_tips.php`) y la comprobación
+   > **simula el viaje entero y compara valor a valor**, con la vuelta hecha por el `park_payload.php`
+   > de verdad— se escribió ese día en un worktree que **nunca se comiteó**, y se portó el
+   > 2026-09-21. **Va en dos tiempos**: primero se despliega el lector, que entiende los dos formatos;
+   > luego se enciende `PISTAS_EN_JSON` y se regeneran y aplican los n2. Medido al portarlo, la
+   > pérdida ya no son 24 fichas sino **33 en 15 espacios**, y con el interruptor encendido la ida y
+   > vuelta sale **entera en verde**. **Pendiente: el despliegue y el segundo tiempo.**
+   > El relleno va en el mismo `Database/ida-y-vuelta.sql`, detrás de `migrations.sql`. De paso
+   > encontró un punto de interés con siete decimales que `DECIMAL(10,6)` redondea (~1 cm): queda como
+   > pérdida decidida, con una regla que solo admite ese redondeo.
 
    El diagnóstico anterior:
 
@@ -1436,6 +1475,89 @@ Cada una se paga mejor ahora que en el espacio número treinta.
 
 43. **Los estados legales del piloto están escritos a mano y contradicen a EIDOS, en las dos
     direcciones.**
+    > **LLEVADAS AL BOLETÍN — 2026-09-19.** De las quince discrepancias que dejó el barrido quedaban
+    > **catorce** (la del chumberillo de lobo era una acusación falsa de la caché, abajo). Se han
+    > cotejado **una a una contra el texto consolidado del BOE y contra el BORM**, no contra EIDOS:
+    > el Anexo del **RD 139/2011** (`BOE-A-2011-3582`), el Anexo I de la **Ley 7/1995** de Murcia
+    > (`BOE-A-1995-13301`) y el Anexo I del **Decreto n.º 50/2003** (BORM n.º 131, de 10 de junio de
+    > 2003, descargado entero por `services/boletin/ano/2003/numero/131/pdf`). **Trece corregidas y
+    > una que no había que tocar**:
+    >
+    > | Taxón | Lo que decía | Lo que dice el boletín | Tramo |
+    > |---|---|---|---|
+    > | *Testudo graeca* | LESRPE | **CEEA: Vulnerable**, sin restricción de población | 2 → **4** |
+    > | *Capra pyrenaica* | «no incluida» (5 espacios, 2 redacciones) | Ley 7/1995, Anexo I **B) vulnerables** | 1 → **4** |
+    > | *Sambucus nigra* | «no incluida» | D. 50/2003, Anexo I **2 VULNERABLES** | 1 → **4** |
+    > | *Micromeria fruticosa* | «no incluida» | D. 50/2003, Anexo I **2 VULNERABLES** | 1 → **4** |
+    > | *Rhamnus pumila* | «no incluida» (2 esp.) | D. 50/2003, Anexo I **3 INTERÉS ESPECIAL** («*Rhamnus pumilus*») | 1 → **3** |
+    > | *Scilla autumnalis* | «no incluida» | D. 50/2003, Anexo I **3 INTERÉS ESPECIAL** | 1 → **3** |
+    > | *Calandrella rufescens* | «sin figura estatal» | LESRPE (el Anexo lo escribe «Calandrela», con una ele) | 1 → **2** |
+    > | *Regulus ignicapillus* | «sin figura estatal» | LESRPE | 1 → **2** |
+    > | *Genetta genetta* | LESRPE (8 espacios) | **no figura en el Anexo**: solo Anexo VI de la Ley 42/2007 | 2 → **1** |
+    > | *Malpolon monspessulanus* | LESRPE (8 espacios) | **no figura en el Anexo** | 2 → **1** |
+    > | *Burhinus oedicnemus* | LESRPE (14 espacios) | **sí figura**, como *B. o. oedicnemus/insularum*, «Península, Baleares y Canarias Orientales» | **se queda** |
+    >
+    > El alcaraván es el que enseña por qué esto no se podía cerrar desde EIDOS: la clase A lo
+    > acusaba en **catorce espacios** porque EIDOS no trae para el taxón de rango ESPECIE ninguna
+    > norma nacional —el Anexo cataloga la **subespecie**—, y la ficha tenía razón. **La etiqueta de
+    > una autoridad dice lo que opina esa autoridad** (la lección de la nº 4), y aquí la que decide
+    > es el BOE.
+    >
+    > **Y la culebra de collar, por la misma puerta y al revés.** El Anexo lista «*Natrix natrix*»
+    > sin restricción de población; EIDOS la ha recombinado a *N. helvetica*, y ese registro no
+    > arrastra el LESRPE. Su `spainStatus` está escrito **contra el BOE**, a mano, y por eso ella y
+    > el alcaraván siguen saliendo en la clase A del informe: son las dos fichas del catálogo cuyo
+    > estado estatal **no es reproducible desde EIDOS**, y un `--refrescar-campos spainStatus`
+    > sobre cualquiera de las dos las estropea.
+    >
+    > **Y al ir al boletín salió lo que nadie buscaba: una norma estatal no siempre protege en toda
+    > España, y el pipeline no lo miraba.** El Anexo del RD 139/2011 tiene una columna «Población
+    > referida» y EIDOS la sirve en `observacionespoblacion`; `espanaDe()` no la leía. Catorce
+    > taxones del catálogo llevaban dentro una norma que **no se aplica en la península**:
+    > · *Charadrius alexandrinus* y *Cymodocea nodosa* anunciaban **CEEA: Vulnerable** —tramo 4 y
+    >   **destacadas**— por su población **canaria**, teniendo el Anexo una segunda fila
+    >   «Península y Baleares» que es solo LESRPE;
+    > · *Fringilla coelebs* anunciaba **LESRPE** cuando el Anexo lo lista SOLO con «Canarias»;
+    > · ocho culebras nativas —la bastarda, la viperina, la de herradura, la de collar…— anunciaban
+    >   **«CEEEI: Incluido»**, que es el catálogo de especies exóticas **INVASORAS** y se les aplica
+    >   en «Canarias, Ibiza y Formentera», donde están introducidas. Con ellas el **madroño**, el
+    >   **tojo** y la **escoba negra**, que son exactamente los tres que la revisión de Sierra Espuña
+    >   del **2026-08-09** ya había corregido **a mano y en un solo `park.json`**: la causa estaba en
+    >   el catálogo universal y volvió sola. Una corrección local sobre una causa universal se
+    >   deshace, y tarda trece meses en volver a verse.
+    >
+    > El criterio vive ahora en un solo sitio (`aplicaEnPeninsula`, en `lib/eidos.js`) y lo usan el
+    > generador y el cotejo. Se aparta **solo** lo que queda ENTERAMENTE fuera de la península, y el
+    > hueco se dice en la frase («1 norma estatal más en EIDOS, aplicable solo fuera de la
+    > península») **sin nombrar la figura**: el tramo se lee de ese mismo texto, así que dejar caer
+    > ahí un «LESRPE» de Canarias lo devolvería por la puerta de atrás.
+    >
+    > **Lo que queda de este apartado**, y ahora es corto:
+    > · ***Alyssum montanum*** (Sierra de El Carche) — **decisión, no trabajo**. EIDOS lo da por
+    >   sinónimo de *Alyssum fastigiatum* Heywood (taxonid 24299, siguiendo Flora iberica), y *A.
+    >   fastigiatum* **está en el CEEA como «En peligro de extinción»**: aceptar la sinonimia lleva
+    >   la ficha de tramo 1 a **5** y a destacada. Pero bajo ese mismo taxonid EIDOS mete también
+    >   *A. gadorense*, que es el endemismo de Sierra de Gádor, y tiene **aparte** aceptada la
+    >   subespecie *A. montanum* subsp. *montanum* (80821), **sin ninguna norma**. Y su Lista Roja
+    >   española dice **LC**, que con un «En peligro de extinción» estatal al lado no cuadra. El
+    >   nombre lo pone el **PRUG del Parque Regional** (Decreto 28/2025), que enumera «Alyssum
+    >   montanum». **No se ha tocado**: subir una ficha a tramo 5 por una sinonimia que la propia
+    >   fuente se contradice sería inventar el dato, y el hueco documentado vale más.
+    > · Los **16 textos de la clase D** y los **9 de la clase G** están a **0** desde el 2026-09-15.
+    > · Queda el **`regionalStatus` de Sierra Espuña**, que es lo de siempre: 188 fichas con textos
+    >   del piloto. Lo que ya se ha caído de esa lista son las once aves de la ZEPA ajena y los nueve
+    >   de la clase G.
+    >
+    > **Y tres averías de las que fallan en verde, encontradas por el camino y tapadas:** la caché
+    > del cotejo indexada por nombre (acusaba al chumberillo de lobo con las filas de un taxonid que
+    > ya no era el suyo), `resolveTaxon` desempatando por rango **solo entre las filas aceptadas**
+    > (pedir *Calandrella rufescens* devolvía su **subespecie** y pedir *Regulus ignicapillus* la
+    > **balearicus**, las dos con `status: 'ok'`), y `regional_status` **sin vía a la base**: la
+    > cabecera de `corrige-estado-autonomico.js` decía que ese SQL lo redactaba `rareza-legal.js` y
+    > no era verdad —ése escribe el tramo, no el texto—, así que las correcciones de esta cola
+    > quedaban bien en el repositorio y viejas en lo que ve el usuario. Ahora `--sql` lo escribe, y
+    > **como espejo**, no como cola.
+
     > **EL BARRIDO ESTÁ HECHO — 2026-08-29.** Lo hace `npm run especies:legal -- --online`
     > (`Tools/catalogo-nacional/coteja-estado-legal.js`) sobre **1.058 taxones de 2.882 fichas** en
     > los dieciséis espacios, y el resultado vive en
@@ -1523,3 +1645,111 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     > **Las tres se fueron en la poda de la nº 41**, así que si alguna de las tres tenía razón, se ha
     > perdido una ficha protegida. El cotejo sigue haciendo falta: decide de qué lado caen otras 23
     > del mismo espacio.
+
+44. ~~**Un `spainStatus` con una evaluación dentro cambia el tramo, y hay 11 redacciones de la misma
+    negación.**~~ — **CERRADA el 2026-09-21: las dos mitades estaban resueltas y el título seguía
+    diciendo «abiertas».** La (a) se DECIDIÓ el 2026-09-15 —la evaluación UICN no entra en la
+    escalera— y la (b) se PAGÓ el 2026-09-19. El 2026-09-15, al cerrar la cola 1 de la auditoría, se
+    vieron dos cosas que la auditoría no perseguía:
+    > **(a) La escalera lee evaluaciones del texto, y las lee por accidente.** `lib/rareza.js` tiene
+    > una tabla `EVALUACIONES` que asigna tramo **5** a «CR/EN» y **4** a «VU» cuando los ve junto a
+    > «Lista Roja» o «Libro Rojo». Con las redacciones reales eso no discrimina lo que pretende:
+    > «UICN España: **CR** (En peligro crítico)» sale **5** porque la frase contiene «En peligro
+    > crítico», y «UICN España: **EN** (En peligro)» sale **1** porque no contiene ninguna de las dos
+    > anclas. Mismo hecho, dos tramos, por qué palabras acierte a llevar la frase. Las 21 fichas cuyo
+    > `spainStatus` era una evaluación ya están corregidas —el dato vive en `iucnSpain`, que es un
+    > campo normalizado—, así que hoy **la escalera no lo lee de ninguna parte**: `iucnSpain` no
+    > entra en `tramoDeTexto`. **DECIDIDO el 2026-09-15: no entra.** Una evaluación de la UICN no es
+    > una figura de protección, y `iucnSpain` ya se enseña aparte en la ficha. Queda medido por si
+    > alguna vez se reabre: leerla habría subido de tramo **180 fichas** (el halcón peregrino de 3 a 5
+    > en 14 espacios, la lechuza común de 1 a 5 en 9) y las destacadas de 346 a unas 500, porque
+    > `featured = rarityLocal >= 4`.
+    >
+    > **(b) Once redacciones para la misma negación.** 2.577 fichas dicen «No incluida en…» de once
+    > formas distintas, y solo **461** usan la que escribe hoy el generador (`build-species-n2.js`,
+    > desde `data/catalogos-regionales.json`); 1.948 conservan la genérica de antes del 2026-08-27 y
+    > 82 citan «el Decreto 50/2003» a secas, que además es el catálogo de **flora** aplicado a
+    > fauna. Todas afirman lo mismo y todas dan tramo 1, así que no hay dato mal — hay once maneras
+    > de decirlo en un campo que el usuario lee. Uniformarlo es un `--write` con `textoAnterior`
+    > (ver `corrige-estado-autonomico.js`), no un criterio nuevo.
+    >
+    > **(b) PAGADA el 2026-09-19. Eran TRECE redacciones y 2.580 fichas** —la cuenta había crecido
+    > con las correcciones del mismo día—, y hoy es **una**. El reparto medido antes de tocar nada:
+    > 1.939 con la genérica de antes del 2026-08-27, 470 con la del generador, 81 en Sierra Espuña
+    > citando el Decreto de **flora** para fichas de fauna y con una fecha de consulta pegada
+    > detrás, 76 en Cuatro Calas con la genérica **sin el paréntesis de la comunidad**, «No
+    > catalogada regionalmente» en tres, y **nueve variantes sueltas del piloto** con una coletilla
+    > ecológica tras un punto y coma. Se sustituyen 2.110.
+    >
+    > Tres decisiones que conviene tener escritas:
+    > · **Va en su propia bandera (`--uniforma`) y no con las correcciones.** Una corrección cambia
+    >   lo que la ficha AFIRMA; esto solo cómo lo dice. Mezclarlas habría hecho imposible leer un
+    >   diff de 2.110 fichas buscando las diez que sí cambian un hecho.
+    > · **La frase de destino no se escribe en el uniformador.** Se compone en
+    >   `lib/catalogos-regionales.js`, extraída del generador, que es quien la escribía: con dos
+    >   copias la negación volvería a divergir en la primera comunidad nueva, que es exactamente de
+    >   donde se venía. Y la sustitución es por texto **EXACTO** contra una lista declarada en
+    >   `uniformacion.<comunidad>`, con de dónde viene cada redacción: nada se reescribe por
+    >   parecerse.
+    > · **Ninguna ficha cambia de tramo**, y se comprobó ANTES de escribir pasando las trece
+    >   redacciones por `lib/rareza.js`: las trece dan 1, igual que la canónica. `especies:rareza`
+    >   detrás lo confirma con **0 park.json tocados**, que es la prueba de que esto no ha movido
+    >   ningún dato.
+    >
+    > Lo que sí se pierde y hay que saberlo: las **once coletillas ecológicas** de Sierra Espuña
+    > («muy común en la Región», «elemento iberoafricano característico del sureste árido»…) salen
+    > de este campo, porque no son un estado legal. Están transcritas taxón a taxón en
+    > `rollout/sesiones/2026-09-19.md` por si alguien las quiere en la descripción, que es donde
+    > tendrían sitio.
+    >
+    > De paso, esto se lleva por delante **90 de las 188 fichas con textos del piloto de Sierra
+    > Espuña** que la nº 43 dejaba apuntadas como trabajo pendiente.
+
+45. ~~**`--refrescar-campos` conserva el valor viejo cuando la derivación nueva no trae el campo.**~~
+    — **PAGADA el 2026-09-19, y eran TRES puertas, no una.** La distinción que pedía este apartado
+    —«la fuente ha contestado y no lo trae» frente a «no se ha podido preguntar»— se puede afirmar
+    en las tres, y en las tres se estaba perdiendo:
+    > **1 · `build-species-universal.js --refrescar-campos`**, que es la que describía el apartado.
+    > Un campo pedido que la derivación nueva no trae ahora se **retira**, y se enumera al final del
+    > pase. Es legítimo porque el bucle pide EIDOS, GBIF y Wikimedia dentro del mismo `try` y
+    > **cualquier fallo saca al taxón del lote con `continue`**: un taxón que llega a `fichas` tiene
+    > sus tres fuentes contestadas. Queda escrito en `retira()` que si algún día una fuente pasa a
+    > fallar campo a campo sin lanzar, la distinción hay que traerla ahí.
+    >
+    > **2 · `lista-roja-espana.js`**, la otra herramienta que escribe el mismo campo, y solo sabía
+    > escribir: si la ficha traía `iucnSpain` y EIDOS —habiendo contestado— no daba fila de ámbito
+    > España, el valor viejo se quedaba. Lo que hacía falta para distinguir **ya estaba calculado
+    > ahí** y no se usaba: su `motivo` dice «no se ha podido preguntar» y esas fichas van a
+    > `sinResolver`, intactas. Dos retiradas: la **chova piquirroja**, que anunciaba «NT (Lista Roja
+    > española, 2004)» siendo una evaluación de ámbito **Península** de 2021 —un ámbito que este
+    > campo no recoge por diseño—, y ***Rhamnus pumila***, cuyo taxón aceptado (*Atadinus pumilus*)
+    > no tiene en EIDOS **ninguna** fila de conservación. La segunda conviene mirarla si alguien
+    > quiere recuperarla: la Lista Roja de la Flora Vascular Española es una publicación real, pero
+    > **la procedencia declarada de este campo es EIDOS** (`PROCEDENCIA-DE-CAMPOS.md`), y ahí no
+    > está.
+    >
+    > **3 · Y la que hacía inútiles a las otras dos: `species:apply` no sabía borrar.** Su bucle
+    > salta los campos que el catálogo universal no trae —correcto en 754 de los 1.115 taxones, donde
+    > «ausente» es «nadie lo ha rellenado»—, así que un campo **retirado** del catálogo sobrevivía en
+    > los `park.json`… y el `species:extract` que el runbook manda pasar detrás lo devolvía al
+    > catálogo. La prueba está en las cifras: la limpieza a mano del 2026-09-15 tocó **cuatro** fichas
+    > universales y **ninguna** de las fichas de los espacios, así que *Sambucus nigra* seguía
+    > anunciando en Cañaverosa el «CR en España» del **saúco de La Palma** cuatro días después. Con
+    > `--retira <campos>` —el que llama nombra los campos, no se adivina— salen **18 fichas de once
+    > espacios**: las cuatro de aquella limpieza (*Sambucus nigra*, *Iberis carnosa*, *Asplenium
+    > obovatum*, *Bucanetes githagineus*) y las dos nuevas.
+    >
+    > La lección que se generaliza, y que no es solo de este campo: **sincronizar es escribir Y
+    > retirar**. Una herramienta que solo sabe escribir convierte cualquier corrección que consista
+    > en quitar algo en una corrección que se deshace sola.
+
+    El texto original, para saber de dónde venía:
+    `build-species-universal.js` aplica el parche con `if (f[campo] !== undefined)`, y eso mezcla dos
+    situaciones que no son la misma: «no he podido preguntar» (donde conservar es lo correcto) y «he
+    preguntado y la fuente no lo tiene» (donde conservar es quedarse con un dato que ya no sostiene
+    nadie). Se vio al reanclar los identificadores del 2026-09-15: cuatro fichas conservaron el
+    `iucnSpain` que habían heredado del taxón equivocado —*Sambucus nigra* seguía anunciando «CR en
+    España», que es del saúco de La Palma— porque el taxón bueno no tiene fila de ámbito España.
+    Se limpiaron a mano esas cuatro; **la causa sigue ahí**. Arreglarlo pide que la ficha construida
+    distinga «vacío porque la fuente calla» de «vacío porque no se pudo preguntar», que es la misma
+    distinción que ya hacen `lib/fenologia.js` y la deuda nº 38.

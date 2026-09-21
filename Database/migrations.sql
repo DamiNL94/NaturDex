@@ -29,6 +29,7 @@ DROP PROCEDURE IF EXISTS naturdex_add_column;
 DROP PROCEDURE IF EXISTS naturdex_add_index;
 DROP PROCEDURE IF EXISTS naturdex_rename_column;
 DROP PROCEDURE IF EXISTS naturdex_drop_column;
+DROP PROCEDURE IF EXISTS naturdex_tips_a_json;
 
 DELIMITER $$
 
@@ -129,6 +130,59 @@ BEGIN
         EXECUTE stmt;
         DEALLOCATE PREPARE stmt;
     END IF;
+END$$
+
+-- Convierte `species.identification_tips` del formato viejo (pistas unidas con «;» o con saltos de
+-- línea) a un array JSON de cadenas. El porqué está en el bloque que lo llama, más abajo.
+--
+-- Va fila a fila con un cursor, y no con un UPDATE de REPLACE, porque el array lo tiene que construir
+-- JSON_ARRAY_APPEND: escapar a mano comillas, barras y caracteres de control depende del sql_mode
+-- (NO_BACKSLASH_ESCAPES), y un fallo ahí no da error — deja un texto que no es JSON y que la API leería
+-- otra vez como formato viejo. Y es un procedimiento y no una FUNCIÓN porque, con el binlog activo,
+-- MySQL exige SUPER (o log_bin_trust_function_creators) para crear una función; para esto, no.
+CREATE PROCEDURE naturdex_tips_a_json()
+BEGIN
+    DECLARE v_fin INT DEFAULT 0;
+    DECLARE v_id INT;
+    DECLARE v_pos INT;
+    DECLARE v_texto TEXT CHARACTER SET utf8mb4;
+    DECLARE v_resto TEXT CHARACTER SET utf8mb4;
+    DECLARE v_pieza TEXT CHARACTER SET utf8mb4;
+    DECLARE v_lista TEXT CHARACTER SET utf8mb4;
+    DECLARE c_viejas CURSOR FOR
+        SELECT id, identification_tips FROM species
+         WHERE identification_tips IS NOT NULL
+           AND NOT (JSON_VALID(identification_tips) AND LEFT(TRIM(identification_tips), 1) = '[');
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET v_fin = 1;
+
+    OPEN c_viejas;
+    fila: LOOP
+        FETCH c_viejas INTO v_id, v_texto;
+        IF v_fin = 1 THEN LEAVE fila; END IF;
+        -- La misma regla que speciesTipsDecode() de Backend/Lib/species_tips.php: se parte por «;» y
+        -- por salto de línea, se recortan espacios y tabuladores de los extremos y se tiran las piezas
+        -- vacías. Es lo que la API ya estaba sirviendo, así que convertir no cambia lo que se ve.
+        SET v_resto = REPLACE(REPLACE(v_texto, CHAR(13 USING utf8mb4), ''), CHAR(10 USING utf8mb4), ';');
+        SET v_lista = JSON_ARRAY();
+        WHILE v_resto IS NOT NULL DO
+            SET v_pos = LOCATE(';', v_resto);
+            IF v_pos = 0 THEN
+                SET v_pieza = v_resto;
+                SET v_resto = NULL;
+            ELSE
+                SET v_pieza = LEFT(v_resto, v_pos - 1);
+                SET v_resto = SUBSTRING(v_resto, v_pos + 1);
+            END IF;
+            SET v_pieza = TRIM(TRIM(BOTH CHAR(9 USING utf8mb4) FROM TRIM(v_pieza)));
+            IF v_pieza <> '' THEN
+                SET v_lista = JSON_ARRAY_APPEND(v_lista, '$', v_pieza);
+            END IF;
+        END WHILE;
+        UPDATE species
+           SET identification_tips = IF(JSON_LENGTH(v_lista) = 0, NULL, v_lista)
+         WHERE id = v_id;
+    END LOOP;
+    CLOSE c_viejas;
 END$$
 
 DELIMITER ;
@@ -302,6 +356,27 @@ CALL naturdex_add_column('habitats', 'fuentes', 'JSON NULL');
 CALL naturdex_add_column('habitats', 'solo_curada', 'BOOLEAN NULL');
 
 -- ------------------------------------------------------------------------------------------------
+-- Las pistas de identificación pasan a guardarse como array JSON (2026-09-11).
+--
+-- `tips` es una lista de frases e `identification_tips` una sola columna TEXT: se guardaban unidas con
+-- «; » (build-park-sql.js) o con saltos de línea (species-universal.sql), y park_payload.php las partía
+-- por «;». Una pista con un punto y coma propio —«Alas largas y estrechas; vuelo veloz y alto», del
+-- murciélago de cueva— volvía de la API partida en dos viñetas: 24 fichas de 5 taxones en 13
+-- espacios. Lo escrito con saltos de línea volvía peor: las tres pistas en una sola viñeta.
+--
+-- La columna SIGUE SIENDO TEXT, a propósito: `seed.sql` trae las pistas en el formato viejo y el
+-- contenedor lo carga en la primera instalación sin pasar por aquí. Con tipo JSON (o con un CHECK) una
+-- instalación limpia dejaría de arrancar. La API lee los dos formatos (Backend/Lib/species_tips.php).
+--
+-- Esto convierte en su sitio lo que ya hay, con la misma regla con la que la API lo leía: no cambia
+-- nada de lo que se ve. Lo que NO puede es adivinar qué «;» era de la pista y cuál separaba dos: eso lo
+-- arregla `Database/ida-y-vuelta.sql`, que va detrás y trae las pistas buenas del repositorio.
+--
+-- Idempotente: solo toca lo que todavía no es un array JSON; el segundo pase no encuentra nada.
+-- ------------------------------------------------------------------------------------------------
+CALL naturdex_tips_a_json();
+
+-- ------------------------------------------------------------------------------------------------
 -- Campos de cita/estado a TEXT: las atribuciones y los estados de conservación con referencia
 -- pueden superar los 500 caracteres. En MySQL con modo estricto (STRICT_TRANS_TABLES, por defecto
 -- en 8.0) un VARCHAR corto ABORTA la carga del seed en lugar de truncar en silencio como hace la
@@ -412,6 +487,20 @@ CALL naturdex_add_column('parks', 'weather_distance_km',  'DECIMAL(6,2) NULL');
 CALL naturdex_add_column('parks', 'weather_source',       'VARCHAR(255) NULL');
 
 -- ------------------------------------------------------------------------------------------------
+-- El orden del park.json (2026-09-21, deuda nº 3).
+-- ------------------------------------------------------------------------------------------------
+-- La API ordenaba las especies por `is_featured, common_name` y recintos y puntos por `name`, y el
+-- park.json los lleva en el orden del pipeline. Se decidió que mande el del park.json, y la base no
+-- tenía dónde guardarlo: los ids son autoincrementales. Las columnas las rellenan los generadores
+-- (`<slug>-n2.sql`, `n3-pois-<slug>.sql`) con la posición en la lista; la migración las crea vacías
+-- y, mientras lo estén, la API cae al orden de antes (`orden IS NULL` va detrás).
+--
+-- VA ANTES DE DESPLEGAR el park_payload.php que ordena por ellas: sin la columna, su SELECT falla.
+CALL naturdex_add_column('habitats',           'orden', 'INT NULL');
+CALL naturdex_add_column('species',            'orden', 'INT NULL');
+CALL naturdex_add_column('points_of_interest', 'orden', 'INT NULL');
+
+-- ------------------------------------------------------------------------------------------------
 -- Retirada de `species.conservation_status` (2026-09-14). BORRA DATO.
 -- ------------------------------------------------------------------------------------------------
 -- Era una etiqueta DERIVADA que producía `build-species-n2.js` a partir de la figura legal, y cuyo
@@ -436,6 +525,7 @@ DROP PROCEDURE IF EXISTS naturdex_add_column;
 DROP PROCEDURE IF EXISTS naturdex_add_index;
 DROP PROCEDURE IF EXISTS naturdex_rename_column;
 DROP PROCEDURE IF EXISTS naturdex_drop_column;
+DROP PROCEDURE IF EXISTS naturdex_tips_a_json;
 
 -- Limpieza de coordenadas de especies: la localización la aporta el usuario (GPS).
 UPDATE species SET latitude = NULL, longitude = NULL;

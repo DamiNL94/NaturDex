@@ -48,7 +48,8 @@
  * se toma dentro de una auditoría. `--umbral N` existe para tomarla a propósito el día que se tome.
  *
  * Idempotente: un segundo pase no cambia un byte. NO escribe en la base de datos (regla nº 2 de
- * Tools/CLAUDE.md): `--sql` deja el borrado redactado en `Database/enlaces-retirados-<slug>.sql`
+ * Tools/CLAUDE.md): `--sql` deja el borrado redactado —y ACUMULADO, ver `fusionaCola`— en
+ * `Database/enlaces-retirados-<slug>.sql`
  * para aplicarlo a mano, y hace falta porque `build-park-sql.js` **solo hace UPSERT** —regenerar el
  * `-n2.sql` da de alta los enlaces que quedan pero no retira ninguno— y la API manda sobre el
  * `park.json` empaquetado (§2 del CLAUDE.md).
@@ -351,16 +352,70 @@ function escribe(entrada, doc) {
  * Se borra por `scientific_name` + `slug` del hábitat dentro del parque, que son las claves estables
  * del esquema, y NUNCA por `id`: los de la base son autoincrementales y no tienen por qué coincidir
  * con los del `park.json`. Borrar por número sería borrar a ciegas.
+ *
+ * El fichero es una COLA, no un espejo del pase, y por eso se FUSIONA con el que ya hubiera. Un pase
+ * con --write quita los enlaces del `park.json`; el siguiente ya no los ve, porque los quitó él mismo,
+ * así que reescribir el fichero con «lo que veo hoy» los sacaba de la cola sin que nada lo dijera —y
+ * si no se había aplicado a la base, la BD se quedaba sirviendo unos enlaces que el repositorio da por
+ * retirados—. Pasó en Cabo Cope el 2026-08-28 (b): catorce sentencias de doce aves, rescatadas a mano.
+ *
+ * La regla de la fusión: se conserva todo borrado anterior **salvo el que el `park.json` vuelve a
+ * tener**. Un enlace que alguien ha vuelto a tender a propósito —`atlas:aplica`, una regeneración—
+ * ya no está retirado, y borrarlo de la base dejaría la BD por detrás del repositorio en la dirección
+ * contraria. Lo que ya se aplicó se queda en la cola sin coste: un DELETE que no encuentra fila no
+ * hace nada, y la comprobación del final sigue devolviendo 0.
  */
-function redactaSql(slug, retiradas) {
+const RE_BORRADO = new RegExp(
+  "WHERE pk\\.slug = '((?:[^']|'')*)' AND sp\\.scientific_name = '((?:[^']|'')*)'\\r?\\n" +
+  "  AND hb\\.slug = '((?:[^']|'')*)';  -- ([^:\\r\\n]*): ([^\\r\\n]*)", 'g');
+const deSqlStr = (s) => s.replace(/''/g, "'").replace(/\\\\/g, '\\');
+
+/** Los borrados que ya había en la cola de un espacio, en el orden del fichero. */
+function colaPrevia(slug, texto) {
+  const cola = [];
+  if (!texto) return cola;
+  for (const m of texto.matchAll(RE_BORRADO)) {
+    if (deSqlStr(m[1]) !== slug) continue;
+    cola.push({ especie: deSqlStr(m[2]), habitat: deSqlStr(m[3]), veredicto: m[4], motivo: m[5] });
+  }
+  return cola;
+}
+
+/**
+ * Cola previa + retiradas de este pase, sin los enlaces que el `park.json` vuelve a tener. Lo nuevo
+ * pisa el motivo de lo viejo (es el diagnóstico de hoy) pero no su posición, para que el diff enseñe
+ * solo lo que cambia.
+ */
+function fusionaCola(doc, previa, nuevas) {
+  const clave = (e) => `${e.especie}|${e.habitat}`;
+  const vigentes = new Set();
+  for (const s of doc.species || []) {
+    for (const h of s.habitatIds || []) vigentes.add(`${s.scientificName}|${h}`);
+  }
+  const porClave = new Map();
+  for (const e of [...previa, ...nuevas]) {
+    const { especie, habitat, veredicto, motivo } = e;
+    porClave.set(clave(e), { especie, habitat, veredicto, motivo });
+  }
+  const cola = [...porClave.values()].filter(e => !vigentes.has(clave(e)));
+  const reenlazados = previa.filter(e => vigentes.has(clave(e))).length;
+  return { cola, heredados: cola.filter(e => previa.some(p => clave(p) === clave(e)) &&
+    !nuevas.some(n => clave(n) === clave(e))).length, reenlazados };
+}
+
+function redactaSql(slug, retiradas, fecha = new Date().toISOString().slice(0, 10)) {
   const l = [];
   l.push('-- El juego de caracteres se fija SIEMPRE: el cliente `mysql` lo toma del entorno y en un');
   l.push('-- contenedor sin locale eso es latin1, que convierte cada tilde en mojibake sin dar error.');
   l.push('SET NAMES utf8mb4;');
   l.push('');
   l.push(`-- ${slug} · retirada de ${retiradas.length} enlace(s) especie↔hábitat`);
-  l.push(`-- Generado el ${new Date().toISOString().slice(0, 10)} por`);
+  l.push(`-- Generado el ${fecha} por`);
   l.push('-- Tools/catalogo-nacional/auditoria-especie-habitat.js. El motivo de cada uno va al lado.');
+  l.push('--');
+  l.push('-- Es una COLA ACUMULADA: lleva también los borrados de pases anteriores, que el park.json ya');
+  l.push('-- no tiene y la auditoría por eso ya no ve. Lo ya aplicado no cuesta nada: un DELETE sin fila');
+  l.push('-- no hace nada. Solo sale de la cola el enlace que el park.json vuelve a tener.');
   l.push('--');
   l.push('-- HACE FALTA porque build-park-sql.js solo hace UPSERT: regenerar el -n2.sql da de alta los');
   l.push('-- enlaces que quedan pero no retira ninguno. Sin este fichero la API sigue sirviéndolos.');
@@ -549,14 +604,33 @@ function main() {
     const avisos = r.enlaces.filter(e => ['constancia-minima', 'no-evaluable'].includes(e.veredicto)).length;
     console.log(`▶ ${entrada.slug}: ${r.enlaces.length} enlaces · ${quitados} retirado(s) · ${avisos} anotado(s)`);
     for (const l of lineas) console.log('   ' + l);
-    if (SQL && quitados) {
-      const retiradas = r.enlaces.filter(e => VEREDICTOS[e.veredicto].retira);
+    // Se recalcula en cada pase con --sql, retire éste algo o no: la cola también tiene que soltar
+    // el enlace que otra herramienta haya vuelto a tender desde el pase anterior.
+    if (SQL) {
       const destino = path.join(DATABASE, `enlaces-retirados-${entrada.slug}.sql`);
-      fs.mkdirSync(DATABASE, { recursive: true });
-      const texto = redactaSql(entrada.slug, retiradas);
       const previo = fs.existsSync(destino) ? fs.readFileSync(destino, 'utf8') : null;
-      fs.writeFileSync(destino, texto, 'utf8');
-      console.log(`   ${previo === texto ? '=' : '+'} ${rel(destino)}`);
+      const nuevas = r.enlaces.filter(e => VEREDICTOS[e.veredicto].retira);
+      const { cola, heredados, reenlazados } = fusionaCola(r.doc, colaPrevia(entrada.slug, previo), nuevas);
+      if (!cola.length) {
+        if (previo !== null) {
+          // Todo lo que había se ha vuelto a tender: una cola vacía no se deja como fichero, que
+          // aplicarlo no haría nada y leerlo haría pensar que hay algo pendiente.
+          fs.unlinkSync(destino);
+          console.log(`   - ${rel(destino)} (sus ${reenlazados} enlace(s) vuelven a estar en el park.json)`);
+        }
+      } else {
+        // La fecha solo cambia si cambia la cola: con la de hoy, un segundo pase reescribiría el
+        // fichero por la cabecera y dejaría de ser idempotente.
+        const fechaPrevia = previo && (previo.match(/^-- Generado el (\d{4}-\d{2}-\d{2}) por/m) || [])[1];
+        let texto = fechaPrevia ? redactaSql(entrada.slug, cola, fechaPrevia) : null;
+        if (texto !== previo) texto = redactaSql(entrada.slug, cola);
+        fs.mkdirSync(DATABASE, { recursive: true });
+        if (texto !== previo) fs.writeFileSync(destino, texto, 'utf8');
+        const notas = [heredados && `${heredados} heredado(s) de pases anteriores`,
+          reenlazados && `${reenlazados} soltado(s) porque el park.json vuelve a tenerlos`].filter(Boolean);
+        console.log(`   ${previo === texto ? '=' : '+'} ${rel(destino)} · ${cola.length} en cola` +
+          (notas.length ? ` (${notas.join('; ')})` : ''));
+      }
     }
   }
 

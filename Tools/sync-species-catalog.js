@@ -47,13 +47,18 @@
  *                                                  Además, genera los UPDATE para la base de datos
  *                                                  (necesario: Frontend/Js/data.js da PRIORIDAD a la
  *                                                  API sobre el park.json cuando hay backend).
+ *   node Tools/sync-species-catalog.js --apply --retira iucnSpain
+ *                                                  Borra de las fichas ese campo universal cuando el
+ *                                                  catálogo ya NO lo trae. Sin esto, un campo
+ *                                                  retirado del catálogo sobrevive en los park.json
+ *                                                  y el siguiente `--extract` lo devuelve (nº 45).
  */
 'use strict';
 
 const fs = require('fs');
 const path = require('path');
 const { arg, flag } = require('./lib/cli');
-const { sqlStr } = require('./lib/sql');
+const { sqlStr, sqlTips } = require('./lib/sql');
 const { ROOT, CATALOGO_DIR, rel, fromRoot, parkFiles, escribeEspacio } = require('./lib/io');
 
 const CATALOGO = path.join(CATALOGO_DIR, 'data', 'especies-universal.json');
@@ -323,6 +328,28 @@ function aplicar() {
   const sqlPath = val('--sql', null);
   const sql = [];
   let fichas = 0, cambiadas = 0, huerfanas = [];
+  /*
+   * `--retira <campos>`: la otra mitad de sincronizar, y la que faltaba (deuda nº 45).
+   *
+   * El bucle de abajo salta los campos que el catálogo universal no tiene, y eso es lo correcto casi
+   * siempre: «ausente» quiere decir «nadie lo ha rellenado todavía» en 754 de los 1.115 taxones, y
+   * borrarlos de las fichas por eso sería vaciar el catálogo. Pero hay un caso en que ausente
+   * significa lo contrario: cuando el campo se ha **retirado** a propósito porque la fuente, habiendo
+   * contestado, ya no lo sostiene — el `iucnSpain` de la chova piquirroja, que era una evaluación de
+   * ámbito *Península* colada en el campo de España. Ahí la ficha conserva el valor caducado, el
+   * `--extract` del runbook lo devuelve al catálogo universal en el pase siguiente, y la retirada se
+   * deshace sola sin que nada falle.
+   *
+   * No se adivina cuál de los dos casos es: **lo dice quien llama**, nombrando los campos. Es la
+   * misma forma que `--refrescar-campos` de `build-species-universal.js`, y por el mismo motivo.
+   */
+  const RETIRA = (val('--retira', '') || '').split(',').map(s => s.trim()).filter(Boolean);
+  const noUniversales = RETIRA.filter(c => !UNIVERSALES.includes(c));
+  if (noUniversales.length) {
+    console.error(`--retira solo admite campos UNIVERSALES; esto no lo es: ${noUniversales.join(', ')}`);
+    process.exit(1);
+  }
+  const retirados = [];
 
   for (const { slug, dir, file } of parkFiles()) {
     const park = leer(file);
@@ -338,6 +365,13 @@ function aplicar() {
         if (universal[campo] === undefined) continue;
         if (igual(sp[campo], universal[campo])) continue;
         sp[campo] = universal[campo];
+        cambia = true;
+      }
+      for (const campo of RETIRA) {
+        if (universal[campo] !== undefined) continue;   // el catálogo sí lo trae: no hay retirada
+        if (sp[campo] === undefined) continue;          // la ficha tampoco: nada que hacer
+        retirados.push({ slug, sci: sp.scientificName, campo, valor: sp[campo] });
+        delete sp[campo];
         cambia = true;
       }
       if (cambia) { cambiadas++; tocado = true; }
@@ -372,7 +406,11 @@ function aplicar() {
           `  s.primary_habitat = ${sqlStr(u.habitat)},\n` +
           `  s.description = ${sqlStr(u.description)},\n` +
           `  s.description_source = ${sqlStr(u.descriptionSource)},\n` +
-          `  s.identification_tips = ${sqlStr((u.tips || []).join('\n'))},\n` +
+          // Las pistas salen por `sqlTips` (lib/sql.js), el MISMO sitio que usan los n2 a través de
+          // `lib/filas-bd.js`. Aquí iban unidas con salto de línea mientras el n2 usaba «; » y
+          // park_payload.php partía por «;»: las tres pistas llegaban a la app como UNA. En qué
+          // formato salen —«; » o array JSON— lo decide un solo interruptor, `PISTAS_EN_JSON`.
+          `  s.identification_tips = ${sqlTips(u.tips)},\n` +
           `  s.seasonality = ${sqlStr(u.seasonality)},\n` +
           `  s.image_url = ${sqlStr(u.image)},\n` +
           `  s.image_attribution = ${sqlStr(u.imageAttribution)},\n` +
@@ -396,6 +434,12 @@ function aplicar() {
   }
 
   console.log(`\nFichas revisadas ${fichas} · actualizadas ${cambiadas}`);
+  // Retirar un campo se DICE, ficha a ficha: un borrado silencioso es el mismo fallo en verde que
+  // conservar el valor caducado, solo que en la otra dirección.
+  if (retirados.length) {
+    console.log(`\n⚠ ${retirados.length} campo(s) RETIRADO(s) de las fichas porque el catálogo universal ya no los trae:`);
+    for (const r of retirados) console.log(`   · ${r.slug} · ${r.sci} · ${r.campo}: ${JSON.stringify(String(r.valor).slice(0, 60))}`);
+  }
   if (huerfanas.length) {
     console.log(`\n⚠ ${huerfanas.length} fichas sin entrada en el catálogo universal (se dejan como estaban):`);
     huerfanas.slice(0, 20).forEach(h => console.log('  · ' + h));

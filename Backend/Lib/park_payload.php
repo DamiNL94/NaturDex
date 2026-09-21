@@ -7,6 +7,7 @@
 // offline y la API salen del mismo sitio y no pueden divergir (la BD es la fuente de verdad del
 // contenido; la geometría vive aparte en los GeoJSON).
 // ================================================================================================
+require_once __DIR__ . "/species_tips.php";
 
 /**
  * Construye el payload completo de un parque a partir de la base de datos.
@@ -21,8 +22,14 @@ function buildParkPayload($conn, $parkSlug) {
     $park = $parkStmt->get_result()->fetch_assoc();
     if (!$park) return null;
 
+    // EL ORDEN es el del park.json, guardado en la columna `orden` por los generadores de SQL
+    // (decidido el 2026-09-21, deuda nº 3). Por nombre, el hábitat que la app abre por defecto —el
+    // primero sin `reviewNote`— salía distinto con conexión que sin ella, y cada export desde la base
+    // reordenaba el paquete entero. Las filas sin `orden` (creadas desde el panel, o de una base aún
+    // sin regenerar) van DETRÁS y con el orden de antes, que es el que tenían.
+
     // --- Hábitats ---------------------------------------------------------------------------------
-    $habitatStmt = $conn->prepare("SELECT id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color, review_note, hic_subtipos, fitosociologia, audio_url, audio_transcript, image_url, image_attribution, image_note FROM habitats WHERE park_id = ? ORDER BY name");
+    $habitatStmt = $conn->prepare("SELECT id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color, review_note, hic_subtipos, fitosociologia, audio_url, audio_transcript, image_url, image_attribution, image_note FROM habitats WHERE park_id = ? ORDER BY orden IS NULL, orden, name");
     $habitatStmt->bind_param("i", $park["id"]);
     $habitatStmt->execute();
     $habitatResult = $habitatStmt->get_result();
@@ -86,7 +93,7 @@ function buildParkPayload($conn, $parkSlug) {
     }
 
     // --- Especies ---------------------------------------------------------------------------------
-    $speciesStmt = $conn->prepare("SELECT id, common_name, scientific_name, kingdom, family, primary_habitat, description, identification_tips, seasonality, image_url, image_attribution, description_source, latitude, longitude, rarity_score, rarity_basis, rarity_local, rarity_local_basis, is_featured, is_visible, hidden_reason, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, iucn_spain, spain_status, regional_status, regional_ccaa, review_note, eidos_taxonid, gbif_species_key, gbif_occurrences, zepa_site_code, is_migratory, site_presence FROM species WHERE park_id = ? ORDER BY is_featured DESC, common_name ASC");
+    $speciesStmt = $conn->prepare("SELECT id, common_name, scientific_name, kingdom, family, primary_habitat, description, identification_tips, seasonality, image_url, image_attribution, description_source, latitude, longitude, rarity_score, rarity_basis, rarity_local, rarity_local_basis, is_featured, is_visible, hidden_reason, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, iucn_spain, spain_status, regional_status, regional_ccaa, review_note, eidos_taxonid, gbif_species_key, gbif_occurrences, zepa_site_code, is_migratory, site_presence FROM species WHERE park_id = ? ORDER BY orden IS NULL, orden, is_featured DESC, common_name ASC");
     $speciesStmt->bind_param("i", $park["id"]);
     $speciesStmt->execute();
     $result = $speciesStmt->get_result();
@@ -102,7 +109,9 @@ function buildParkPayload($conn, $parkSlug) {
             "description" => $row["description"],
             // De dónde sale el texto: EIDOS o redacción propia. NULL en las heredadas sin trazar.
             "descriptionSource" => $row["description_source"] ?? null,
-            "tips" => array_values(array_filter(array_map("trim", explode(";", $row["identification_tips"] ?? "")))),
+            // Array JSON en una columna TEXT, no texto partido por «;»: una pista puede llevar un punto
+            // y coma propio, y volvía partida en dos (2026-09-11). Formato y porqué: species_tips.php.
+            "tips" => speciesTipsDecode($row["identification_tips"]),
             "seasonality" => $row["seasonality"],
             "image" => $row["image_url"],
             "imageAttribution" => $row["image_attribution"] ?? null,
@@ -171,7 +180,7 @@ function buildParkPayload($conn, $parkSlug) {
     }
 
     // --- Puntos de interés ------------------------------------------------------------------------
-    $poiStmt = $conn->prepare("SELECT slug, name, type, description, latitude, longitude, image_url, source, is_approx, audio_url, audio_transcript FROM points_of_interest WHERE park_id = ? ORDER BY name");
+    $poiStmt = $conn->prepare("SELECT slug, name, type, description, latitude, longitude, image_url, source, is_approx, audio_url, audio_transcript FROM points_of_interest WHERE park_id = ? ORDER BY orden IS NULL, orden, name");
     $poiStmt->bind_param("i", $park["id"]);
     $poiStmt->execute();
     $poiResult = $poiStmt->get_result();

@@ -68,7 +68,7 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
    deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).
 
-## 2. Treinta cosas que fallan EN VERDE
+## 2. Treinta y ocho cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
@@ -225,7 +225,11 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   la cola sin que nada lo diga**, y la BD se queda sirviendo unos enlaces que el repositorio da por
   retirados. Detectado el 2026-08-29 al regenerarlo en Cabo Cope: se perdían **14 sentencias** de
   doce aves. La regla es la de siempre —un fichero generado que es COLA y no espejo tiene que
-  fusionar— y hasta que se arregle: **mira el fichero viejo antes de regenerarlo**.
+  fusionar—. **Tapado el 2026-09-21**: `--sql` lee la cola que ya había y la fusiona con la de
+  hoy, y **solo suelta el enlace que el `park.json` vuelve a tener** (alguien lo ha tendido otra
+  vez a propósito, y borrarlo dejaría la BD por detrás en la dirección contraria). Lo ya aplicado se
+  queda en la cola sin coste: un DELETE sin fila no hace nada. Las 86 sentencias de los seis
+  ficheros sobreviven al regenerarlos, y el segundo pase no cambia un byte.
 - **EIDOS sirve los nombres comunes en las cuatro lenguas, y «el preferente en castellano» no lo era.**
   `lib/eidos.js` cerraba la cadena de reservas con `|| filas[0]`: si el taxón no tiene nombre
   castellano, devolvía **el primero en el idioma que fuera**, y quien llamaba se creía que era
@@ -336,6 +340,133 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   piquirroja el texto bueno es el del espacio que va solo. La regla general: **un campo local que
   describe algo territorial necesita su propia coherencia, agrupada por el territorio del que
   habla** — ni por parque ni globalmente.
+- **Pedir una especie y que te den su SUBESPECIE, con `status: 'ok'` y un identificador impecable.**
+  `resolveTaxon()` es «el corazón del modelo de datos» y empareja por prefijo para tolerar el autor
+  que EIDOS pega al nombre. Con eso, «Turdus merula» casa con la especie **y** con «Turdus merula
+  subsp. *cabrerae*» —el mirlo canario—; las dos están aceptadas, y `find` se quedaba con **la que
+  EIDOS listara primero**, que es la subespecie. De ese identificador colgaban después la Lista Roja,
+  la figura legal y la taxonomía de la ficha. Medido el 2026-09-15 sobre el catálogo entero: **24
+  taxones, 49 fichas**, y las 24 en la misma dirección. El saúco de Cañaverosa anunciaba «CEEA: En
+  peligro de extinción · Prioritaria» y un `rarityScore` de **5** porque llevaba las credenciales del
+  ***saúco de La Palma***; el paíño de Cuatro Calas decía «sin figura de protección estatal» teniendo
+  **LESRPE y Anexo IV**; la cabra montés publicaba el «EN (1992)» de la subespecie **extinta** del
+  Pirineo. Tapado en `lib/eidos.js` con el desempate por **rango** —el que pide el nombre contra el
+  `taxonrank` de la fuente— y reanclado con `npm run taxones:nomenclatura -- --online --write`. La
+  regla general: **un emparejamiento tolerante necesita un desempate, o la tolerancia se convierte en
+  una elección a ciegas que nadie ve.**
+- **Un identificador equivocado APAGA el detector de duplicados.** `scan-taxones-duplicados.js`
+  —`npm run taxones:duplicados`, que sale con código 1 mientras queden— busca el mismo
+  `eidosTaxonId` bajo dos nombres científicos. Salía en verde, y no porque no hubiera duplicados:
+  porque las fichas del nombre viejo apuntaban a una **subespecie** y las del nombre aceptado a la
+  especie, así que los identificadores no coincidían y no había nada que comparar. Al reanclarlos
+  (2026-09-15) aparecieron **siete pares**, todos reales y ninguno visible hasta entonces: *Bufo
+  bufo*/*B. spinosus*, *Anas strepera*/*Mareca strepera*, *Scilla autumnalis*/*Prospero autumnale*,
+  *Podarcis hispanica*/*P. hispanicus*, *Rhamnus pumila*/*Atadinus pumilus*, *Regulus
+  ignicapillus*/*R. ignicapilla* y *Dactylis glomerata*/*D. g.* subsp. *hispanica*. La lección:
+  **una comprobación que cruza por un identificador no puede validar ese identificador**, así que su
+  verde vale exactamente lo que valga el campo con el que cruza. Ninguno es visible dos veces en el
+  mismo espacio —en todos los pares la ficha del nombre viejo está oculta y vacía—, así que son
+  higiene de catálogo y no un fallo que vea el usuario; resolverlos es un renombrado.
+- **Una caché puede guardar lo que la fuente DICE, nunca la clave con la que se le vuelve a
+  preguntar.** Y tampoco una NEGATIVA indexada por el nombre: `lista-roja-espana.js` y
+  `lista-roja-mundial.js` guardaban «EIDOS lo da por sinónimo: se decide en la deuda nº 36» bajo la
+  clave del nombre científico, y esa respuesta solo vale mientras la ficha no tenga `eidosTaxonId`.
+  Rellenados 329 identificadores, las seis fichas bloqueadas siguieron bloqueadas: la caché las
+  contestaba antes de que nadie mirase el id nuevo. Desde el 2026-09-15 la clave lleva el id dentro. El primer `--write` del reanclaje de arriba escribió en cinco fichas de *Capra
+  pyrenaica* el taxonid que la caché de `out/nomenclatura-autoridades.json` daba por bueno para
+  «Capra pyrenaica H. R. Schinz, 1838». **EIDOS lo había renumerado**: ese número es hoy ***Rupicapra
+  pyrenaica***, el rebeco. Cinco cabras monteses apuntando a otro género, sin un solo aviso, mientras
+  se arreglaba exactamente esa avería. Un `taxonid` es lo único que la fuente puede renumerar, así
+  que ahora se **vuelve a preguntar en vivo** antes de escribirlo, y hay una clase nueva
+  (`id_de_otro_taxon`) que caza al que ya esté escrito: B2 miraba el rango y B1 el nombre, y por el
+  hueco de en medio cabía lo peor —un identificador de rango especie, aceptado, **de otra especie**—.
+- **`npm run red:check` puede dar por CERRADA una fuente que está abierta.** Sondeaba la **raíz** de
+  cada host con seis segundos de límite, y la portada de `iepnb.gob.es` —la de personas— tarda unos
+  diez; su API contesta en 100 ms. Resultado: el informe declaraba **EIDOS cerrado**, que es la fuente
+  principal del proyecto, y la sesión se pone a buscar cómo trabajar sin red. Un falso CERRADO no se
+  parece a un fallo: se parece a una limitación del entorno, y viene con un informe en rojo que lo
+  respalda. Cada host admite desde el 2026-09-15 una **ruta de sonda**, para preguntar por lo que de
+  verdad se va a llamar.
+- **Un `spainStatus` que no contiene ni un solo hecho legal, y la escalera de rareza leyéndolo
+  igual.** El campo guarda la **figura de protección estatal**, y en 21 fichas guardaba otra cosa:
+  una evaluación de la Lista Roja («UICN España: EN (En peligro) (2010)») o una negación sobre ella
+  («No catalogada en la Lista Roja de la Flora Vascular Española 2008»). No es un matiz de redacción,
+  porque de ese texto sale el tramo: «UICN España: **CR** (En peligro crítico)» da **5** y «UICN
+  España: **EN** (En peligro)» da **1**, según qué palabras acierte a contener — el mismo hecho con
+  dos tramos por un accidente de expresión. Y en dos fichas el texto **negaba** una figura que EIDOS
+  sí da: la sabina negral, en diez espacios, decía «no catalogada» teniendo tres normas estatales.
+  Corregido el 2026-09-15 con `--refrescar-campos spainStatus`. Lo que la evaluación necesitaba ya
+  existía y se llama `iucnSpain`.
+- **Una norma ESTATAL que solo se aplica en Canarias, dentro de la ficha de una especie de Murcia.**
+  El Anexo del RD 139/2011 tiene una columna «Población referida» y EIDOS la sirve en
+  `observacionespoblacion`; el pipeline no la leía, así que `spainStatus` se quedaba con la fila que
+  pesara más sin mirar **dónde** se aplica. Catorce taxones del catálogo: el **chorlitejo patinegro**
+  y la **seba** anunciaban «CEEA: Vulnerable» —tramo 4 y **destacadas**— por su población canaria,
+  teniendo el mismo Anexo una segunda fila «Península y Baleares» que es solo LESRPE; el **pinzón
+  vulgar** anunciaba LESRPE cuando el Anexo lo lista SOLO con «Canarias»; y ocho **culebras nativas**
+  llevaban «CEEEI: Incluido», que es el catálogo de especies exóticas **INVASORAS** y se les aplica
+  en «Canarias, Ibiza y Formentera». Con ellas el madroño, el tojo y la escoba negra — **los tres que
+  la revisión de Sierra Espuña del 2026-08-09 ya corrigió, a mano y en un solo `park.json`**: la
+  causa estaba en el catálogo universal y volvió sola. La lección que se generaliza: **una corrección
+  local sobre una causa universal se deshace**, y puede tardar un año en volver a verse. Tapado el
+  2026-09-19 con `aplicaEnPeninsula()` en `lib/eidos.js`, que usan el generador y el cotejo.
+- **Un desempate que solo mira la mitad de las filas.** `resolveTaxon` empareja por prefijo y desde
+  el 2026-09-15 desempata por rango… **entre las filas ACEPTADAS**. Cuando EIDOS no tiene aceptado el
+  rango que se pide, el nombre de rango bueno está en una fila de **sinónimo** y el desempate no lo
+  veía: pedir *Calandrella rufescens* devolvía su **subespecie** (`status: 'ok'`, rangoDistinto) en
+  vez del taxón que el catálogo ya tenía anclado, y pedir *Regulus ignicapillus* devolvía la
+  subespecie **balearicus**. Igual con *Caralluma europaea* (una **variedad** marroquí), *Scilla
+  autumnalis* y *Rhamnus pumila*. Nada fallaba: las cinco respuestas eran taxones reales con
+  identificador impecable. Arreglado el 2026-09-19 filtrando por rango **todas** las filas que casan
+  por nombre y prefiriendo la aceptada **después**; con eso los cinco nombres devuelven exactamente
+  el `eidosTaxonId` que las fichas ya llevaban. La lección: **un desempate aplicado a un subconjunto
+  no es un desempate**.
+- **Un campo corregido en el `park.json` que no tiene vía a la base, y una cabecera que juraba que sí
+  la tenía.** `regional_status` es columna LOCAL: no viaja en el `species-universal.sql` de
+  `species:apply`, y `rareza-legal.js --sql` **tampoco la lleva** —escribe `rarity_local`,
+  `rarity_local_basis` e `is_featured`, que es el tramo derivado, no el texto—. La cabecera de
+  `corrige-estado-autonomico.js` decía lo contrario, así que cada corrección de esa cola quedaba bien
+  en el repositorio y vieja en lo que ve el usuario, y la única vía era regenerar el `-n2.sql` del
+  espacio, que es la trampa nº 6. **Una afirmación falsa en un comentario no la puede comprobar
+  `validate`** (la lección de la nº 4, otra vez). Tapado el 2026-09-19: `--sql` escribe el UPDATE de
+  su columna, y lo escribe como **espejo** de lo que declara el fichero de correcciones, no como cola
+  de lo que ese pase acaba de cambiar — que es la avería del `--sql` de la auditoría de enlaces.
+- **Sincronizar era solo escribir, así que toda corrección que consistiera en QUITAR algo se
+  deshacía sola.** `species:apply` salta los campos que el catálogo universal no trae, y eso es lo
+  correcto en 754 de los 1.115 taxones, donde «ausente» quiere decir «nadie lo ha rellenado
+  todavía». Pero cuando el campo se ha **retirado** a propósito —porque la fuente, habiendo
+  contestado, ya no lo sostiene— «ausente» significa lo contrario, y ahí el valor caducado sobrevive
+  en los `park.json`; peor: el `species:extract` que el runbook manda pasar detrás lo **devuelve** al
+  catálogo universal. Se ve en las cifras del 2026-09-15: aquella limpieza a mano de `iucnSpain`
+  tocó **cuatro fichas universales y ninguna de los espacios**, así que *Sambucus nigra* seguía
+  anunciando en Cañaverosa el «CR en España» del **saúco de La Palma** cuatro días después, con el
+  dato ya bien en el catálogo. Los dos silencios de la misma familia estaban en las dos herramientas
+  que escriben ese campo: `build-species-universal.js --refrescar-campos` conservaba el valor viejo
+  cuando la derivación nueva omitía el campo, y `lista-roja-espana.js` solo sabía escribir teniendo
+  ya calculada la distinción que hacía falta (su `motivo` es «no se ha podido preguntar»). Tapado el
+  2026-09-19 en las tres puertas (deuda nº 45): las dos primeras retiran y lo enumeran, y
+  `species:apply --retira <campos>` propaga la retirada a las fichas — **nombrando los campos quien
+  llama**, que es lo único que distingue los dos significados de «ausente». Son 18 fichas de once
+  espacios. La lección general: **sincronizar es escribir Y retirar**, y una herramienta que solo
+  sabe escribir no sincroniza, acumula.
+- **Una lista guardada con un separador que puede ir DENTRO del texto, dos escritores que no se
+  ponían de acuerdo, y una comprobación que miraba claves y no valores.** Las pistas de
+  identificación (`tips`) viajaban a la base unidas con «; » desde `build-park-sql.js` y con **salto
+  de línea** desde `species-universal.sql`, y `park_payload.php` las partía por «;»: «Alas largas y
+  estrechas; vuelo veloz y alto», del murciélago de cueva, volvía de la API en **dos viñetas**, y lo
+  escrito con salto de línea en **una sola** con las tres pistas dentro —y eso último por la ruta que
+  el runbook manda para toda corrección universal—. Eran **24 fichas de 5 taxones en 13 espacios**
+  con `npm run ida-y-vuelta` en verde, porque solo comprobaba que la CLAVE tuviera columna. El
+  arreglo se escribió el 2026-09-11 en un worktree **que nunca se comiteó**, y se portó el
+  2026-09-21: la columna guarda un **array JSON** (`Backend/Lib/species_tips.php`; en Node,
+  `columnaTips` de `Tools/lib/sql.js`), sigue siendo TEXT porque `seed.sql` trae el formato viejo, y
+  la comprobación **simula el viaje entero** con la vuelta de verdad por PHP. **Y va en dos tiempos,
+  que es lo que hay que tener delante**: Railway despliega desde `main`, y el PHP que hay en
+  producción parte por «;», así que un array JSON en la base antes de desplegar el lector nuevo
+  enseñaría el `["…","…"]` crudo como UNA pista en cada ficha. Por eso los escritores de Node siguen
+  en «; » —que el lector nuevo también entiende— hasta que `PISTAS_EN_JSON` pase a `true` **después**
+  del despliegue. La lección general: **una ida y vuelta que no ejecuta la vuelta de verdad comprueba
+  la forma, no el dato; y un cambio de formato con dos puntas se despliega primero en la que lee.**
 
 ---
 
@@ -378,6 +509,8 @@ Para saltarse la exclusión puntualmente: `rg --no-ignore <patrón> <ruta>`.
 ```bash
 npm run validate            # BLOQUEA. Coherencia park.json ↔ manifest ↔ geojson, contadores,
                             # integridad especie↔hábitat, licencias de foto, presupuesto offline
+npm run ida-y-vuelta        # lo que se pierde o cambia de VALOR al regenerar el paquete desde la
+                            # base. Ejecuta park_payload.php de verdad: sin PHP sale con código 2
 npm test                    # reglas de presencia y progreso (PHP, sin BD)
 npm run typecheck           # tsc --noEmit sobre AdminPanel
 npm run taxones:duplicados  # sale con código 1 mientras queden

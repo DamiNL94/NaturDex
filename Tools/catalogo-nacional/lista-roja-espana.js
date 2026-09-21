@@ -26,6 +26,14 @@
  * una está respaldada. Es la misma regla que aplica `lib/fenologia.js` con las aves y la que
  * `lib/uicn.js` deja escrita.
  *
+ * **Pero sí RETIRA lo que ya no sostiene nadie, desde el 2026-09-19** (deuda nº 45). Hasta esa fecha
+ * esta herramienta solo sabía escribir: si la ficha traía un `iucnSpain` y EIDOS —habiendo
+ * contestado— no daba fila de ámbito España, el valor viejo se quedaba. Eso es lo que dejó a
+ * *Sambucus nigra* anunciando «CR en España», que es del **saúco de La Palma**, después de
+ * reanclarlo al taxón bueno. La distinción que lo hace legítimo ya estaba calculada aquí y no se
+ * usaba: `motivo` dice «no se ha podido preguntar» —esas fichas no se tocan, van a `sinResolver`— y
+ * su ausencia dice que la fuente ha contestado. Cada retirada se enumera en el informe.
+ *
  * **No toca `Península` ni `Canarias`.** Son evaluaciones subestatales y el catálogo no tiene un
  * campo con ese significado; escribirlas en el de España afirmaría un ámbito que la fuente no dice.
  * Se cuentan en el informe para que se sepa cuánto hay ahí esperando si algún día se abre su campo.
@@ -91,7 +99,13 @@ function cargaCache() {
     if (LIMITE && hechos >= LIMITE) break;
     hechos++;
     const ficha = catalogo[sci];
-    const clave = `sci:${sci}`;
+    // La clave de la caché lleva DENTRO el identificador con el que se va a resolver, y eso no es
+    // un detalle de implementación: una entrada guarda a veces una NEGATIVA —«EIDOS lo da por
+    // sinónimo… se decide en la deuda nº 36»— y esa negativa solo vale mientras la ficha no tenga
+    // `eidosTaxonId`. El 2026-09-15 se rellenaron 329 identificadores del catálogo universal y las
+    // seis fichas bloqueadas siguieron bloqueadas: la caché las contestaba por nombre antes de que
+    // nadie mirase el id nuevo. Con el id en la clave, rellenarlo invalida la entrada él solo.
+    const clave = ficha.eidosTaxonId ? `id:${ficha.eidosTaxonId}` : `sci:${sci}`;
 
     let entrada = cache[clave];
     if (!entrada) {
@@ -136,13 +150,27 @@ function cargaCache() {
   let escritas = 0, yaEstaban = 0, sinDato = 0;
   const porCategoria = new Map();
   const subestatales = [];
+  const retirados = [];
   const sinResolver = [];
 
   for (const r of resultados) {
     if (r.motivo) { sinResolver.push(r); continue; }
     // Lo que EIDOS tiene de Península o Canarias y este campo NO recoge, contado para que se sepa.
     if (!r.etiqueta && (r.ambitos.Península || r.ambitos.Canarias)) subestatales.push(r);
-    if (!r.etiqueta) { sinDato++; continue; }
+    // «La fuente no la trae» y «no se ha podido preguntar» NO son lo mismo, y la diferencia ya está
+    // decidida arriba: `r.motivo` es lo segundo y aquí no llega (se ha ido por `sinResolver`). Así
+    // que si la ficha SÍ tiene el campo y EIDOS, habiendo contestado, no da fila de ámbito España,
+    // lo que hay escrito es un dato que ya no sostiene nadie — típicamente heredado de un taxonid
+    // equivocado, como el «CR en España» del saúco de La Palma que arrastró *Sambucus nigra* hasta
+    // el 2026-09-15. Conservarlo era la deuda nº 45; se retira, y se dice cuál.
+    if (!r.etiqueta) {
+      sinDato++;
+      if (catalogo[r.sci].iucnSpain != null) {
+        retirados.push({ sci: r.sci, valor: catalogo[r.sci].iucnSpain });
+        delete catalogo[r.sci].iucnSpain;
+      }
+      continue;
+    }
     const cod = codigoDe(r.etiqueta) || '??';
     porCategoria.set(cod, (porCategoria.get(cod) || 0) + 1);
     if (catalogo[r.sci].iucnSpain === r.etiqueta) { yaEstaban++; continue; }
@@ -169,22 +197,29 @@ function cargaCache() {
     if (subestatales.length > 10) console.log(`    … y ${subestatales.length - 10} más`);
   }
 
+  // Retirar se DICE, y se dice aparte de «no se ha podido preguntar», que es la lista de abajo:
+  // confundir las dos es exactamente la deuda que esto cierra.
+  if (retirados.length) {
+    console.log(`\n⚠ ${retirados.length} ficha(s) con un \`iucnSpain\` que EIDOS ya no sostiene: se RETIRA`);
+    for (const r of retirados) console.log(`   · ${r.sci}: ${JSON.stringify(r.valor)}`);
+  }
+
   if (sinResolver.length) {
     console.log(`\nNo se ha podido preguntar por ${sinResolver.length} ficha(s):`);
     for (const r of sinResolver.slice(0, 15)) console.log(`  · ${r.sci}: ${r.motivo}`);
     if (sinResolver.length > 15) console.log(`  … y ${sinResolver.length - 15} más`);
   }
 
-  if (!escritas) {
+  if (!escritas && !retirados.length) {
     console.log('\nNada que escribir: el catálogo ya está al día.');
     return;
   }
   if (WRITE) {
     writeJson(CATALOGO, catalogo);
-    console.log(`\n+ ${rel(CATALOGO)} (${escritas} ficha(s))`);
+    console.log(`\n+ ${rel(CATALOGO)} (${escritas} escrita(s), ${retirados.length} retirada(s))`);
     console.log('Siguiente: `npm run species:apply` para repartirlo a los park.json y generar el SQL,');
     console.log('y ANTES de aplicar ese SQL, `Database/migrations.sql` — la columna `iucn_spain` es nueva.');
   } else {
-    console.log(`\nSimulación: ${escritas} ficha(s) cambiarían. Añade --write.`);
+    console.log(`\nSimulación: ${escritas} escrita(s) y ${retirados.length} retirada(s). Añade --write.`);
   }
 })();

@@ -23,8 +23,8 @@ silencio. **Ninguna de estas seis se detecta con un error: todas fallan en verde
    `node Tools/sync-species-catalog.js --extract --podar`, que las retira y las lista.
 4. **La API tiene prioridad sobre el `park.json` empaquetado** (`Frontend/Js/data.js`). Con backend
    desplegado, tocar solo los ficheros del frontend no cambia lo que ve el usuario: hay que generar y
-   aplicar también el SQL. Y al revés — `adopt-habitats.js` escribe en `Frontend/` y **no pasa por la
-   BD**: mientras el pipeline de hábitats siga así, un export desde la API borraría sus cambios.
+   aplicar también el SQL. `adopt-habitats.js` **escribía solo en `Frontend/`**; desde el 2026-09-21
+   `--sql` regenera el `<slug>-n2.sql` del espacio en el mismo paso, y es lo que hay que aplicar.
 
 5. **La auditoría de enlaces va DESPUÉS de `species:build`, y cada regeneración la deshace.**
    `auditoria-especie-habitat.js --write` retira los `habitatIds` que contradicen el medio de la

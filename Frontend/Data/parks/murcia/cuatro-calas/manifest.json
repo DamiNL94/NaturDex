@@ -2,8 +2,8 @@
   "slug": "cuatro-calas",
   "name": "Cuatro Calas",
   "apiSlug": "cuatro-calas",
-  "version": 21,
-  "updatedAt": "2026-09-15",
+  "version": 28,
+  "updatedAt": "2026-09-19",
   "data": "Data/parks/murcia/cuatro-calas/park.json",
   "geo": {
     "parque": "Data/parks/murcia/cuatro-calas/geo/parque.geojson",

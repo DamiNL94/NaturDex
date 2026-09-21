@@ -3,8 +3,12 @@
 SET NAMES utf8mb4;
 
 -- sierra-espuna · retirada de 3 enlace(s) especie↔hábitat
--- Generado el 2026-09-14 por
+-- Generado el 2026-09-21 por
 -- Tools/catalogo-nacional/auditoria-especie-habitat.js. El motivo de cada uno va al lado.
+--
+-- Es una COLA ACUMULADA: lleva también los borrados de pases anteriores, que el park.json ya
+-- no tiene y la auditoría por eso ya no ve. Lo ya aplicado no cuesta nada: un DELETE sin fila
+-- no hace nada. Solo sale de la cola el enlace que el park.json vuelve a tener.
 --
 -- HACE FALTA porque build-park-sql.js solo hace UPSERT: regenerar el -n2.sql da de alta los
 -- enlaces que quedan pero no retira ninguno. Sin este fichero la API sigue sirviéndolos.

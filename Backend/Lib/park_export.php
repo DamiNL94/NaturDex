@@ -74,7 +74,7 @@ function regenerateHabitatsGeojson($conn, $frontendDir, $manifest, $parkSlug) {
     if (!$parkRow) return true;
     $parkId = (int) $parkRow["id"];
 
-    $stmt = $conn->prepare("SELECT slug, code, name, habitat_type, is_priority, hic_subtipos, fitosociologia, origen, fuentes, solo_curada, geometry FROM habitats WHERE park_id = ? AND geometry IS NOT NULL ORDER BY name");
+    $stmt = $conn->prepare("SELECT slug, code, name, habitat_type, is_priority, hic_subtipos, fitosociologia, origen, fuentes, solo_curada, geometry FROM habitats WHERE park_id = ? AND geometry IS NOT NULL ORDER BY orden IS NULL, orden, name");
     $stmt->bind_param("i", $parkId);
     $stmt->execute();
     $result = $stmt->get_result();

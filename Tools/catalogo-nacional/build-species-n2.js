@@ -53,6 +53,7 @@ const { arg, flag, requireArgs, die } = require('../lib/cli');
 const { ROOT, FRONTEND, CATALOGO_DIR, OUT_DIR, readJson, rel, fromRoot, parkFiles, escribeEspacio } = require('../lib/io');
 const { clasificaPresenciaSitio } = require('../lib/fenologia');
 const { nameMatches } = require('../lib/eidos');
+const { fraseNoIncluida } = require('../lib/catalogos-regionales');
 
 const DRY = flag('dry');
 const PODAR = flag('podar');
@@ -371,12 +372,10 @@ function categoriaDe(normas, esNacional) {
 function estadoAutonomico(normas, comunidad, catalogos) {
   const auto = categoriaDe(normas, false);
   if (auto) return `${auto.categoria} (${auto.norma})`;
-  const ficha = catalogos[comunidad];
-  if (!ficha || !Array.isArray(ficha.catalogos) || !ficha.catalogos.length) return null;
-  // Sin artículo delante del nombre de la comunidad: «de la Región de Murcia» se lee bien pero
-  // «de la Andalucía» no, y este texto tiene que servir para las diecisiete.
-  const nombres = [...new Set(ficha.catalogos.map(c => c.nombre))];
-  return `No incluida en ${nombres.length === 1 ? 'el ' + nombres[0] : nombres.join(' ni en ')} (${comunidad})`;
+  // La frase de negación se compone en `lib/catalogos-regionales.js` y no aquí: desde la deuda
+  // nº 44(b) la escriben DOS herramientas —ésta al generar y el uniformador al corregir las trece
+  // redacciones que arrastra el catálogo—, y dos copias de esta frase divergen a la primera.
+  return fraseNoIncluida(comunidad, catalogos);
 }
 
 /*

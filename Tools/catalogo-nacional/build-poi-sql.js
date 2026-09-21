@@ -36,7 +36,8 @@ const path = require('path');
 
 const { DATABASE, readJson, rel, parkFiles } = require('../lib/io');
 const { arg, die } = require('../lib/cli');
-const { sqlStr, sqlStrOrNull, sqlNum } = require('../lib/sql');
+const { sqlStr } = require('../lib/sql');
+const { POI, literales, columnas, actualizables } = require('../lib/filas-bd');
 
 const slug = arg('park', null);
 if (!slug) die('falta --park <slug>');
@@ -50,22 +51,11 @@ if (!pois.length) die(`«${slug}» no tiene puntos de interés en su park.json`)
 
 const salida = arg("out", path.join(DATABASE, `n3-pois-${slug}.sql`));
 
-// Una fila del SELECT sintético. El orden de las columnas es el del INSERT de más abajo.
-const fila = (p, primera) => {
-  const alias = primera ? [' slug', ' name', ' type', ' description', ' latitude', ' longitude', ' image_url', ' source', ' is_approx'] : new Array(9).fill('');
-  const v = [
-    sqlStr(p.id),
-    sqlStr(p.name),
-    sqlStrOrNull(p.type),
-    sqlStrOrNull(p.description),
-    sqlNum(p.coordinates[0]),
-    sqlNum(p.coordinates[1]),
-    sqlStrOrNull(p.image),
-    sqlStrOrNull(p.source),
-    p.approx ? 'TRUE' : 'FALSE',
-  ];
-  return '    SELECT ' + v.map((x, i) => x + alias[i]).join(', ');
-};
+// Una fila del SELECT sintético. Las columnas, su orden y qué se escribe en cada una están en
+// lib/filas-bd.js, compartidas con build-park-sql.js y con la comprobación de ida y vuelta.
+const COLS = columnas(POI);
+const fila = (p, primera, orden) =>
+  '    SELECT ' + literales(POI, p, { orden }).map((x, i) => x + (primera ? ' ' + COLS[i] : '')).join(', ');
 
 const cabecera = `-- El juego de caracteres se fija SIEMPRE: el cliente mysql lo toma del entorno y en un
 -- contenedor sin locale eso es latin1, que convierte cada tilde en mojibake sin dar error.
@@ -91,22 +81,15 @@ SET NAMES utf8mb4;
 -- ================================================================================================
 
 -- ${pois.length} punto(s) de interés.
-INSERT INTO points_of_interest (park_id, slug, name, type, description, latitude, longitude, image_url, source, is_approx)
-SELECT p.id, poi.slug, poi.name, poi.type, poi.description, poi.latitude, poi.longitude, poi.image_url, poi.source, poi.is_approx
+INSERT INTO points_of_interest (park_id, ${COLS.join(', ')})
+SELECT p.id, ${COLS.map(c => 'poi.' + c).join(', ')}
 FROM parks p
 JOIN (
-${pois.map((p, i) => fila(p, i === 0)).join('\n    UNION ALL\n')}
+${pois.map((p, i) => fila(p, i === 0, i)).join('\n    UNION ALL\n')}
 ) poi
 WHERE p.slug = ${sqlStr(slug)}
 ON DUPLICATE KEY UPDATE
-    name = VALUES(name),
-    type = VALUES(type),
-    description = VALUES(description),
-    latitude = VALUES(latitude),
-    longitude = VALUES(longitude),
-    image_url = VALUES(image_url),
-    source = VALUES(source),
-    is_approx = VALUES(is_approx);
+${actualizables(POI).map(c => `    ${c} = VALUES(${c})`).join(',\n')};
 
 -- Comprobación posterior: debe devolver ${pois.length}.
 SELECT COUNT(*) AS pois_cargados FROM points_of_interest poi

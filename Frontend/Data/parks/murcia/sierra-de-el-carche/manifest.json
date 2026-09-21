@@ -2,8 +2,8 @@
   "slug": "sierra-de-el-carche",
   "name": "Sierra de El Carche",
   "apiSlug": "sierra-de-el-carche",
-  "version": 32,
-  "updatedAt": "2026-09-15",
+  "version": 45,
+  "updatedAt": "2026-09-19",
   "data": "Data/parks/murcia/sierra-de-el-carche/park.json",
   "geo": {
     "parque": "Data/parks/murcia/sierra-de-el-carche/geo/parque.geojson",
