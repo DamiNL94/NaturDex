@@ -225,7 +225,11 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   la cola sin que nada lo diga**, y la BD se queda sirviendo unos enlaces que el repositorio da por
   retirados. Detectado el 2026-08-29 al regenerarlo en Cabo Cope: se perdían **14 sentencias** de
   doce aves. La regla es la de siempre —un fichero generado que es COLA y no espejo tiene que
-  fusionar— y hasta que se arregle: **mira el fichero viejo antes de regenerarlo**.
+  fusionar—. **Tapado el 2026-09-21**: `--sql` lee la cola que ya había y la fusiona con la de
+  hoy, y **solo suelta el enlace que el `park.json` vuelve a tener** (alguien lo ha tendido otra
+  vez a propósito, y borrarlo dejaría la BD por detrás en la dirección contraria). Lo ya aplicado se
+  queda en la cola sin coste: un DELETE sin fila no hace nada. Las 86 sentencias de los seis
+  ficheros sobreviven al regenerarlos, y el segundo pase no cambia un byte.
 - **EIDOS sirve los nombres comunes en las cuatro lenguas, y «el preferente en castellano» no lo era.**
   `lib/eidos.js` cerraba la cadena de reservas con `|| filas[0]`: si el taxón no tiene nombre
   castellano, devolvía **el primero en el idioma que fuera**, y quien llamaba se creía que era
