@@ -387,10 +387,10 @@ function colaPrevia(slug, texto) {
  * solo lo que cambia.
  */
 function fusionaCola(doc, previa, nuevas) {
-  const clave = (e) => `${e.especie} ${e.habitat}`;
+  const clave = (e) => `${e.especie}|${e.habitat}`;
   const vigentes = new Set();
   for (const s of doc.species || []) {
-    for (const h of s.habitatIds || []) vigentes.add(`${s.scientificName} ${h}`);
+    for (const h of s.habitatIds || []) vigentes.add(`${s.scientificName}|${h}`);
   }
   const porClave = new Map();
   for (const e of [...previa, ...nuevas]) {

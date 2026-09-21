@@ -83,8 +83,14 @@ function parkFiles() {
  * `manifestFile` solo hace falta cuando el manifiesto NO es hermano del `park.json`: las
  * herramientas que localizan el espacio por el registro (`parks-index.json`) tienen las dos rutas y
  * no deben dar por hecha la convención de carpeta.
+ *
+ * `otrosCambios` es para la herramienta que además escribe OTRO fichero del paquete —el geojson de
+ * hábitats, en `adopt-habitats.js`—: el dispositivo guarda sin conexión el paquete entero, así que un
+ * recinto redibujado con el `park.json` intacto también tiene que subir la versión. `geo` fija las
+ * rutas de `manifest.geo` que esa herramienta sepa (se aplican como `counts`, sin subir versión solas).
  */
-function escribeEspacio({ dir, file, manifestFile, doc, counts = null, write = true }) {
+function escribeEspacio({ dir, file, manifestFile, doc, counts = null, geo = null, otrosCambios = false,
+  write = true }) {
   const parkPath = file || path.join(dir, 'park.json');
   const parkDir = dir || path.dirname(parkPath);
   const lineas = [];
@@ -108,7 +114,8 @@ function escribeEspacio({ dir, file, manifestFile, doc, counts = null, write = t
       if (valor !== null && valor !== undefined) manifest.counts[clave] = valor;
     }
   }
-  if (cambia) {
+  if (geo) manifest.geo = { ...(manifest.geo || {}), ...geo };
+  if (cambia || otrosCambios) {
     manifest.version = (Number(manifest.version) || 0) + 1;
     manifest.updatedAt = new Date().toISOString().slice(0, 10);
   }

@@ -211,7 +211,8 @@ Cada una se paga mejor ahora que en el espacio número treinta.
    Hace falta además una tabla **comunidad → norma** para que el campo no sea texto libre distinto en
    cada espacio. `Tools/eidos-diff.js` ya acepta `--ccaa`.
 3. **El pipeline de hábitats no escribe en la BD** — **la parte que BORRABA DATO está pagada el
-   2026-08-27; queda la de generar el SQL.** Lo que hacía provisional cualquier cambio del pipeline
+   2026-08-27 y la de generar el SQL el 2026-09-21; queda el ORDEN, que es una decisión, y el
+   segundo tiempo de las pistas, que es un despliegue.** Lo que hacía provisional cualquier cambio del pipeline
    no era que no escribiera en la base: era que **la vuelta desde la base borraba campos que no
    tenían columna**. Eso ya no pasa, y ahora hay una comprobación que lo vigila.
    > **Los dos campos medidos tienen columna**: `species.gbif_occurrences` (el total de la especie en
@@ -246,9 +247,17 @@ Cada una se paga mejor ahora que en el espacio número treinta.
    > El relleno de la base está en `Database/ida-y-vuelta.sql` (**2.770 especies · 149 recintos**),
    > **pendiente de aplicar**, detrás de `migrations.sql`.
    >
-   > **Lo que sigue abierto, y son dos cosas distintas:** (1) `adopt-habitats.js` sigue sin generar
-   > SQL, así que un cambio suyo no llega a la base hasta que alguien pase `park:sql`; y (2) **el
-   > ORDEN**, que la comprobación no mira: el exportador ordena las especies por `is_featured,
+   > **Lo que seguía abierto eran dos cosas distintas:** (1) `adopt-habitats.js` sin generar
+   > SQL, así que un cambio suyo no llegaba a la base hasta que alguien pasara `park:sql` — **PAGADA
+   > el 2026-09-21**: `--sql` regenera el `<slug>-n2.sql` en el mismo paso, con la función que ahora
+   > exporta `build-park-sql.js` (los dieciséis n2 salen idénticos byte a byte con la refactorización).
+   > El n2 entero y no un fichero de hábitats aparte, porque el n2 es el espejo del `park.json` y uno
+   > parcial lo dejaría atrasado. Salieron de paso **dos silencios más** en la misma herramienta:
+   > escribía el `park.json` y el manifiesto con su propio `writeFileSync` y **no subía nunca la
+   > `version`** —la avería de la deuda nº 37, que se le había escapado a aquel recuento; ahora va por
+   > `escribeEspacio()`, que aprende `otrosCambios` porque aquí puede cambiar SOLO el geojson— y su
+   > `--merged <ruta>` documentado se leía con `flag()` y no había funcionado nunca. Y (2) **el
+   > ORDEN**, sigue abierto, que la comprobación no mira: el exportador ordena las especies por `is_featured,
    > common_name` y los recintos por `name`, mientras el `park.json` los lleva en el orden del
    > pipeline. Eso no pierde ningún dato pero produce un diff completo que esconde lo que sí cambió,
    > y arreglarlo es decidir cuál de los dos órdenes manda.
@@ -1623,9 +1632,11 @@ Cada una se paga mejor ahora que en el espacio número treinta.
     > perdido una ficha protegida. El cotejo sigue haciendo falta: decide de qué lado caen otras 23
     > del mismo espacio.
 
-44. **Un `spainStatus` con una evaluación dentro cambia el tramo, y hay 11 redacciones de la misma
-    negación.** El 2026-09-15, al cerrar la cola 1 de la auditoría, se vieron dos cosas que la
-    auditoría no perseguía y que siguen abiertas:
+44. ~~**Un `spainStatus` con una evaluación dentro cambia el tramo, y hay 11 redacciones de la misma
+    negación.**~~ — **CERRADA el 2026-09-21: las dos mitades estaban resueltas y el título seguía
+    diciendo «abiertas».** La (a) se DECIDIÓ el 2026-09-15 —la evaluación UICN no entra en la
+    escalera— y la (b) se PAGÓ el 2026-09-19. El 2026-09-15, al cerrar la cola 1 de la auditoría, se
+    vieron dos cosas que la auditoría no perseguía:
     > **(a) La escalera lee evaluaciones del texto, y las lee por accidente.** `lib/rareza.js` tiene
     > una tabla `EVALUACIONES` que asigna tramo **5** a «CR/EN» y **4** a «VU» cuando los ve junto a
     > «Lista Roja» o «Libro Rojo». Con las redacciones reales eso no discrimina lo que pretende:
