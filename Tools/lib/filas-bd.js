@@ -51,6 +51,16 @@ function literal(tipo, valor) {
   return typeof valor === 'number' ? String(valor) : sqlStr(valor);
 }
 
+/*
+ * La POSICIÓN del objeto en su lista del `park.json`, que es el orden que manda (decidido el
+ * 2026-09-21, deuda nº 3). No sale del objeto sino de quien recorre la lista, así que llega por el
+ * contexto: `{ orden: i }`. La base no tenía cómo guardarlo —los ids son autoincrementales y una
+ * ficha dada de alta después no queda en su sitio—, y la API ordenaba por nombre: el hábitat que la
+ * app abre por defecto (el primero sin `reviewNote`) salía distinto con conexión que sin ella, y cada
+ * export desde la base reordenaba el paquete entero y enterraba en el diff lo que sí cambiaba.
+ */
+const ORDEN = ['orden', 'num', (o, c) => c.orden];
+
 // --- Las tablas -----------------------------------------------------------------------------------
 // Cada columna es [nombre, tipo, de dónde sale]. `claves` son las claves únicas de schema.sql (sin
 // `park_id`): son las que deciden si un INSERT … ON DUPLICATE KEY UPDATE crea fila o PISA una que ya
@@ -85,6 +95,7 @@ const HABITAT = {
     ['image_url', 'textoONull', h => h.image],
     ['image_attribution', 'textoONull', h => h.imageAttribution],
     ['image_note', 'textoONull', h => h.imageNote],
+    ORDEN,
   ],
 };
 
@@ -144,6 +155,7 @@ const ESPECIE = {
     // hecho, y la app usa justo esa diferencia para dejarlas en el catálogo general.
     ['is_migratory', 'bool', s => s.migratory],
     ['site_presence', 'json', s => s.sitePresence],
+    ORDEN,
   ],
 };
 
@@ -161,6 +173,7 @@ const POI = {
     ['image_url', 'textoONull', p => p.image],
     ['source', 'textoONull', p => p.source],
     ['is_approx', 'boolNoNulo', p => p.approx],
+    ORDEN,
   ],
 };
 

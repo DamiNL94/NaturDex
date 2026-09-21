@@ -101,6 +101,10 @@ CREATE TABLE IF NOT EXISTS habitats (
     -- explica con cuál y por qué, para que el lector sepa que la portada es una planta concreta y no
     -- una vista general del hábitat. Lo rellena Tools/catalogo-nacional/habitat-images.js.
     image_note VARCHAR(400),
+    -- La posición del recinto en el `park.json`, que es el orden que manda (2026-09-21, deuda nº 3).
+    -- La API ordena por aquí: por nombre, el hábitat que la app abre por defecto salía distinto con
+    -- conexión que sin ella. NULL = fila creada desde el panel, que va al final.
+    orden INT,
     FOREIGN KEY (park_id) REFERENCES parks(id) ON DELETE CASCADE,
     UNIQUE KEY unique_habitat_per_park (park_id, code),
     UNIQUE KEY unique_habitat_slug_per_park (park_id, slug)
@@ -233,6 +237,8 @@ CREATE TABLE IF NOT EXISTS species (
     -- sueltas por el mismo motivo que los dos `*_basis`: lo que hace falta es el round-trip
     -- exacto con el park.json. Sin este campo, la ficha diría «migratoria» sin nada debajo.
     site_presence JSON,
+    -- La posición de la ficha en el `park.json` (ver `habitats.orden`).
+    orden INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (park_id) REFERENCES parks(id) ON DELETE CASCADE,
@@ -276,6 +282,8 @@ CREATE TABLE IF NOT EXISTS points_of_interest (
     -- Audioguía explicativa del punto de interés (misma pareja de campos que habitats).
     audio_url VARCHAR(500),
     audio_transcript TEXT,
+    -- La posición del punto en el `park.json` (ver `habitats.orden`).
+    orden INT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (park_id) REFERENCES parks(id) ON DELETE CASCADE,
     UNIQUE KEY unique_poi_per_park (park_id, slug)

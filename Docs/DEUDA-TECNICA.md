@@ -211,8 +211,9 @@ Cada una se paga mejor ahora que en el espacio número treinta.
    Hace falta además una tabla **comunidad → norma** para que el campo no sea texto libre distinto en
    cada espacio. `Tools/eidos-diff.js` ya acepta `--ccaa`.
 3. **El pipeline de hábitats no escribe en la BD** — **la parte que BORRABA DATO está pagada el
-   2026-08-27 y la de generar el SQL el 2026-09-21; queda el ORDEN, que es una decisión, y el
-   segundo tiempo de las pistas, que es un despliegue.** Lo que hacía provisional cualquier cambio del pipeline
+   2026-08-27, y la de generar el SQL y el ORDEN el 2026-09-21; lo que queda es APLICAR, y eso es
+   un despliegue en orden fijo (`runbook/APLICAR-A-RAILWAY.md` §3 ter): la columna `orden`, el PHP,
+   y el segundo tiempo de las pistas.** Lo que hacía provisional cualquier cambio del pipeline
    no era que no escribiera en la base: era que **la vuelta desde la base borraba campos que no
    tenían columna**. Eso ya no pasa, y ahora hay una comprobación que lo vigila.
    > **Los dos campos medidos tienen columna**: `species.gbif_occurrences` (el total de la especie en
@@ -257,10 +258,23 @@ Cada una se paga mejor ahora que en el espacio número treinta.
    > `version`** —la avería de la deuda nº 37, que se le había escapado a aquel recuento; ahora va por
    > `escribeEspacio()`, que aprende `otrosCambios` porque aquí puede cambiar SOLO el geojson— y su
    > `--merged <ruta>` documentado se leía con `flag()` y no había funcionado nunca. Y (2) **el
-   > ORDEN**, sigue abierto, que la comprobación no mira: el exportador ordena las especies por `is_featured,
-   > common_name` y los recintos por `name`, mientras el `park.json` los lleva en el orden del
-   > pipeline. Eso no pierde ningún dato pero produce un diff completo que esconde lo que sí cambió,
-   > y arreglarlo es decidir cuál de los dos órdenes manda.
+   > ORDEN**: el exportador ordenaba las especies por `is_featured, common_name` y los recintos y
+   > puntos por `name`, mientras el `park.json` los lleva en el orden del pipeline. No perdía dato,
+   > pero cada export era un diff completo, y **el hábitat que la app abre por defecto** —el primero
+   > sin `reviewNote` (`app.js`), que no reordena— **salía distinto con conexión que sin ella**.
+   > **DECIDIDO y hecho el 2026-09-21: manda el del `park.json`.** La base no tenía dónde guardarlo
+   > (ids autoincrementales), así que hay una columna `orden` en las tres tablas: la escriben los
+   > generadores desde `lib/filas-bd.js` con la posición en la lista, y `park_payload.php` y
+   > `park_export.php` ordenan por `orden IS NULL, orden` y después como antes (lo creado desde el
+   > panel va al final). `npm run ida-y-vuelta` **ya compara el orden** —el simulador aplica el
+   > `ORDER BY` de verdad sobre filas invertidas, y con el `ORDER BY` viejo salta en los dieciséis—.
+   > Regenerados los dieciséis n2 y los n3: solo cambia la columna, salvo `n3-pois-calblanque`, que
+   > iba por detrás de su `park.json` (la foto de la playa). De paso `rel()` escribe siempre «/»: las
+   > cabeceras de los SQL salían con «\\» o «/» según la máquina que los generara.
+   > **Pendiente de aplicar, y el orden importa:** `Database/orden-columnas.sql` a Railway ANTES de
+   > fusionar en `main` —con el PHP nuevo y sin la columna, la API se cae—; ver
+   > `runbook/APLICAR-A-RAILWAY.md` §3 ter. Lo que no se ordena: `habitatIds` dentro de cada ficha,
+   > que la app no usa como orden.
    >
    > **Y la comprobación miraba CLAVES, no valores (2026-09-11).** Comparando la API de Railway con
    > los `park.json`: `tips` tenía columna y volvía, pero **partido** —se escribía unido con «; » y

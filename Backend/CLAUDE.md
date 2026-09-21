@@ -57,8 +57,11 @@ a MySQL de propina.
 
 - **La API tiene prioridad sobre el `park.json` empaquetado** (`Frontend/Js/data.js`). Con backend
   desplegado, tocar solo los ficheros del frontend no cambia lo que ve el usuario.
-- **El pipeline de hábitats no pasa por la BD**: `adopt-habitats.js` escribe en `Frontend/` y nada
-  más, así que un export desde la API borraría sus cambios. Deuda nº 2.
+- **El orden lo manda el `park.json`** (2026-09-21, deuda nº 3): hábitats, especies y puntos se
+  ordenan por la columna `orden`, que escriben los generadores de SQL, y detrás los que no la tienen
+  con el orden de antes. **Un `ORDER BY` nuevo sobre esas tablas lleva `orden IS NULL, orden`
+  delante**, o la app vuelve a abrir un hábitat distinto con conexión que sin ella. Y una consulta que
+  nombra `orden` exige que la base tenga la columna: `Database/orden-columnas.sql` va antes del PHP.
 - **Marcar algo escribe en DOS sitios**: `user_progress` (lo que la app lee, local-first) y
   `user_occurrences` (la capa científica en Darwin Core). El segundo va siempre en `try/catch`: si
   falla, el progreso del usuario ya está a salvo. Ver [`Docs/DARWIN-CORE.md`](../Docs/DARWIN-CORE.md).

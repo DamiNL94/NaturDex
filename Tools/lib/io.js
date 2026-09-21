@@ -37,7 +37,10 @@ function writeJson(file, value) {
 }
 
 /** Ruta relativa a la raíz del repo, para los mensajes de consola. */
-const rel = (file) => path.relative(ROOT, file);
+// Siempre con «/», también en Windows: `rel` acaba escrito DENTRO de ficheros versionados (la
+// cabecera de cada `-n2.sql` y `n3-pois-*.sql`), y con el separador de la plataforma el mismo
+// generador daba un diff distinto según la máquina — había cabeceras de los dos tipos en el repo.
+const rel = (file) => path.relative(ROOT, file).split(path.sep).join('/');
 
 /** Resuelve una ruta dada por el usuario: absoluta tal cual, relativa contra la raíz del repo. */
 const fromRoot = (p) => (path.isAbsolute(p) ? p : path.join(ROOT, p));

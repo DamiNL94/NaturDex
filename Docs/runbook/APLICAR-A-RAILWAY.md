@@ -266,6 +266,12 @@ que es lo que hay en la base y lo que entienden el PHP viejo y el nuevo. Los n2 
 código salen **idénticos en datos** a los aplicados el 19 (comprobado: solo cambian comentarios y el
 formato del `ON DUPLICATE KEY UPDATE` de hábitats).
 
+0. **ANTES de fusionar: `Database/orden-columnas.sql` a Railway** (añadido el 2026-09-21, y no es
+   opcional). La misma rama trae el `park_payload.php` que ordena por la columna `orden` —manda el
+   orden del `park.json`, deuda nº 3—, y con el PHP nuevo y sin la columna **el SELECT falla y la API
+   deja de servir todos los espacios**. Al revés no pasa nada: el PHP viejo no la mira. Son tres
+   `ADD COLUMN` vacíos, sin `DELIMITER`, por `import-sql.php`; la comprobación va al final del
+   fichero y tiene que devolver las tres tablas.
 1. **Fusionar en `main` y empujar.** Railway construye el `Dockerfile` y despliega `species_tips.php`,
    `park_payload.php`, `admin.php` y el bundle del panel.
 2. **Comprobar que el lector nuevo está vivo ANTES de seguir**:
@@ -285,6 +291,14 @@ formato del `ON DUPLICATE KEY UPDATE` de hábitats).
 5. Copia (`Tools/db-backup-remoto.php`), regenerar los dieciséis n2 y aplicarlos como en §3 bis.
 6. La API: el murciélago de cueva de Cabezo Gordo tiene que salir con **tres** pistas, y la segunda
    entera: «Alas largas y estrechas; vuelo veloz y alto».
+7. Los `n3-pois-<slug>.sql` también, detrás de su n2: llevan el `orden` de los puntos. De paso ponen
+   al día el de Calblanque, que iba por detrás de su `park.json` (la foto de la playa).
+8. El orden: la API tiene que devolver hábitats, especies y puntos **en el orden del `park.json`**.
+   El primer hábitat de Cabezo Gordo en la API tiene que ser el primero de su `park.json`.
+
+**El paso 5 no espera a nada del orden**: hasta que se apliquen los n2, las columnas están vacías y
+la API sirve el orden de antes. Pero no hace falta esperar al segundo tiempo para rellenarlas, así que
+si el interruptor de las pistas se retrasa, los n2 pueden aplicarse con él apagado.
 
 `migrations.sql` trae además `naturdex_tips_a_json`, que convierte las filas viejas **en la propia
 base**. En Railway no hace falta —los n2 reescriben la columna de todas las fichas—, y además usa

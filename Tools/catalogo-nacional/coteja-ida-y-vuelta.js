@@ -39,12 +39,18 @@
  *    y compara campo a campo con el `park.json`. Necesita `php` en el PATH o su ruta en la variable
  *    `PHP`; sin él NO da la comparación por buena: lo dice y sale con código 2.
  *
+ * 3. EL ORDEN (desde el 2026-09-21), que era la otra mitad de la deuda nº 3. El exportador ordenaba
+ *    las especies por `is_featured, common_name` y los recintos y puntos por `name`, mientras el
+ *    `park.json` los lleva en el orden del pipeline: no perdía ningún dato, pero cada export era un
+ *    diff completo que escondía lo que sí cambió, y el hábitat que la app abre por defecto salía
+ *    distinto con conexión que sin ella. **Se decidió que mande el del `park.json`**: los generadores
+ *    lo guardan en la columna `orden` (`filas-bd.js`) y el payload ordena por ella. Aquí se compara la
+ *    secuencia de cada lista, con la vuelta ordenando de verdad (ver `coteja-ida-y-vuelta.php`).
+ *
  * Lo que NO comprueba
  * -------------------
- * **El ORDEN**, que es la otra mitad de la deuda nº 3: el exportador ordena las especies por
- * `is_featured, common_name` y los recintos por `name`, mientras el `park.json` los lleva en el orden
- * del pipeline. Eso no pierde ningún dato pero produce un diff completo que esconde lo que sí cambió,
- * y arreglarlo es decidir cuál de los dos órdenes manda. Tampoco compara los valores del bloque `park`
+ * El orden DENTRO de `habitatIds`, que se sigue comparando como conjunto: `species_habitats` no tiene
+ * `orden`, y en la app ese orden no decide nada. Tampoco compara los valores del bloque `park`
  * (su límite es un trazado fijo en `park_payload.php`, y el tiempo llega por otro SQL), ni las
  * propiedades del `habitats.geojson`, ni lo que la base haga DESPUÉS de cargar: `migrations.sql` pone
  * a NULL las coordenadas de todas las especies en cada pase.
@@ -261,10 +267,10 @@ function ida(e, tipos) {
 
   const carga = (def, lista, contexto, nombreDe) => {
     const filas = tablas[def.tabla];
-    for (const obj of lista || []) {
+    for (const [orden, obj] of (lista || []).entries()) {
       const nombre = nombreDe(obj);
       let v;
-      try { v = valores(def, obj, contexto(obj)); }
+      try { v = valores(def, obj, { ...contexto(obj), orden }); }
       catch (err) { avisos.push({ tabla: def.tabla, nombre, motivo: `el generador de SQL falla con esta ficha (${err.message})` }); continue; }
       const fila = {};
       for (const [col, val] of Object.entries(v)) {
@@ -366,6 +372,15 @@ function comparaValores(espacios) {
         const regla = VALORES_ACEPTADOS[k];
         anota(bloque, k, slug, nombreDe(o), `${muestra(a)} → ${muestra(b)}`, regla && regla.admite(a, b) ? regla.motivo : null);
       }
+    }
+    // EL ORDEN (desde el 2026-09-21): manda el del park.json. Se compara la secuencia de lo que vuelve,
+    // una vez por lista, y el detalle es la primera posición en la que se separan.
+    const ida = (originales || []).map(clave);
+    const vuelto = (vueltos || []).map(clave).filter(k => ida.includes(k));
+    const i = ida.filter(k => vuelto.includes(k)).findIndex((k, n) => k !== vuelto[n]);
+    if (i >= 0) {
+      const esperado = ida.filter(k => vuelto.includes(k));
+      anota(bloque, '(el orden de la lista)', slug, `posición ${i + 1}`, `se esperaba ${esperado[i]} y vuelve ${vuelto[i]}`);
     }
   };
 

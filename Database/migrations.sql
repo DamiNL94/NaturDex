@@ -487,6 +487,20 @@ CALL naturdex_add_column('parks', 'weather_distance_km',  'DECIMAL(6,2) NULL');
 CALL naturdex_add_column('parks', 'weather_source',       'VARCHAR(255) NULL');
 
 -- ------------------------------------------------------------------------------------------------
+-- El orden del park.json (2026-09-21, deuda nº 3).
+-- ------------------------------------------------------------------------------------------------
+-- La API ordenaba las especies por `is_featured, common_name` y recintos y puntos por `name`, y el
+-- park.json los lleva en el orden del pipeline. Se decidió que mande el del park.json, y la base no
+-- tenía dónde guardarlo: los ids son autoincrementales. Las columnas las rellenan los generadores
+-- (`<slug>-n2.sql`, `n3-pois-<slug>.sql`) con la posición en la lista; la migración las crea vacías
+-- y, mientras lo estén, la API cae al orden de antes (`orden IS NULL` va detrás).
+--
+-- VA ANTES DE DESPLEGAR el park_payload.php que ordena por ellas: sin la columna, su SELECT falla.
+CALL naturdex_add_column('habitats',           'orden', 'INT NULL');
+CALL naturdex_add_column('species',            'orden', 'INT NULL');
+CALL naturdex_add_column('points_of_interest', 'orden', 'INT NULL');
+
+-- ------------------------------------------------------------------------------------------------
 -- Retirada de `species.conservation_status` (2026-09-14). BORRA DATO.
 -- ------------------------------------------------------------------------------------------------
 -- Era una etiqueta DERIVADA que producía `build-species-n2.js` a partir de la figura legal, y cuyo

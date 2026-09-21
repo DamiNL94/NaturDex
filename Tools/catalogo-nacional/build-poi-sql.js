@@ -54,8 +54,8 @@ const salida = arg("out", path.join(DATABASE, `n3-pois-${slug}.sql`));
 // Una fila del SELECT sintético. Las columnas, su orden y qué se escribe en cada una están en
 // lib/filas-bd.js, compartidas con build-park-sql.js y con la comprobación de ida y vuelta.
 const COLS = columnas(POI);
-const fila = (p, primera) =>
-  '    SELECT ' + literales(POI, p).map((x, i) => x + (primera ? ' ' + COLS[i] : '')).join(', ');
+const fila = (p, primera, orden) =>
+  '    SELECT ' + literales(POI, p, { orden }).map((x, i) => x + (primera ? ' ' + COLS[i] : '')).join(', ');
 
 const cabecera = `-- El juego de caracteres se fija SIEMPRE: el cliente mysql lo toma del entorno y en un
 -- contenedor sin locale eso es latin1, que convierte cada tilde en mojibake sin dar error.
@@ -85,7 +85,7 @@ INSERT INTO points_of_interest (park_id, ${COLS.join(', ')})
 SELECT p.id, ${COLS.map(c => 'poi.' + c).join(', ')}
 FROM parks p
 JOIN (
-${pois.map((p, i) => fila(p, i === 0)).join('\n    UNION ALL\n')}
+${pois.map((p, i) => fila(p, i === 0, i)).join('\n    UNION ALL\n')}
 ) poi
 WHERE p.slug = ${sqlStr(slug)}
 ON DUPLICATE KEY UPDATE

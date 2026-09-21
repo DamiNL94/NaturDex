@@ -191,7 +191,7 @@ function redactaN2(slug, salida = path.join(DATABASE, `${slug}-n2.sql`)) {
   L.push('SELECT pk.id, ' + COLS_H.map(c => 'h.' + c).join(', '));
   L.push('FROM parks pk JOIN (');
   habitats.forEach((h, i) => {
-    L.push('    SELECT ' + alias(literales(HABITAT, h, contextoDe(h.id)), i === 0 ? COLS_H : null));
+    L.push('    SELECT ' + alias(literales(HABITAT, h, { ...contextoDe(h.id), orden: i }), i === 0 ? COLS_H : null));
     if (i < habitats.length - 1) L.push('    UNION ALL');
   });
   L.push(`) h WHERE pk.slug = ${sqlStr(slug)}`);
@@ -211,7 +211,7 @@ function redactaN2(slug, salida = path.join(DATABASE, `${slug}-n2.sql`)) {
   L.push('SELECT pk.id, ' + COLS_S.map(c => 's.' + c).join(', '));
   L.push('FROM parks pk JOIN (');
   species.forEach((s, i) => {
-    L.push('    SELECT ' + alias(literales(ESPECIE, s), i === 0 ? COLS_S : null));
+    L.push('    SELECT ' + alias(literales(ESPECIE, s, { orden: i }), i === 0 ? COLS_S : null));
     if (i < species.length - 1) L.push('    UNION ALL');
   });
   L.push(`) s WHERE pk.slug = ${sqlStr(slug)}`);
