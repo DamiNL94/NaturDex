@@ -42,17 +42,28 @@ FROM parks pk JOIN (
     SELECT 'pendientes-rocosas-calcicolas-8210', '8210', 'Pendientes rocosas calcícolas con vegetación casmofítica', 'Roquedos', 'Paredes y cortados de roca caliza en los que la vegetación no vive sobre el suelo, sino dentro de las fisuras. Son plantas de raíz larguísima y crecimiento lentísimo, agarradas a la grieta, que aprovechan el agua que escurre por la pared. Los roquedos han quedado a salvo del arado y del ganado durante milenios, y por eso concentran una proporción altísima de especies que no existen en ningún otro lugar.', 0, 38.698073, -1.281768, '#daa520', '{"type":"Polygon","coordinates":[[[-1.284185,38.693936],[-1.284022,38.693739],[-1.283469,38.693848],[-1.282933,38.694084],[-1.282236,38.694353],[-1.281485,38.694865],[-1.280951,38.695235],[-1.280388,38.695722],[-1.280135,38.69648],[-1.280104,38.697385],[-1.280332,38.698118],[-1.280295,38.698713],[-1.280509,38.699401],[-1.280863,38.699775],[-1.281045,38.700323],[-1.280746,38.70085],[-1.280386,38.701224],[-1.280478,38.701563],[-1.280917,38.7017],[-1.281414,38.701797],[-1.281797,38.702069],[-1.282253,38.702386],[-1.282766,38.70261],[-1.283251,38.702847],[-1.283436,38.702534],[-1.283256,38.702113],[-1.282836,38.701201],[-1.282377,38.699608],[-1.282006,38.697976],[-1.282371,38.696851],[-1.283227,38.69535],[-1.283986,38.69437],[-1.284185,38.693936]]]}', NULL, '["8210"]', '["Jasonio glutinosae-Teucrietum thymifolii Rigual, Esteve & Rivas Goday 1963 corr. Alcaraz & De la Torre 1988"]', 'anadido_desde_oficial', NULL, NULL, NULL, NULL, NULL, NULL, NULL
 ) h WHERE pk.slug = 'monte-arabi'
 ON DUPLICATE KEY UPDATE
-    name = VALUES(name), habitat_type = VALUES(habitat_type), description = VALUES(description),
-    is_priority = VALUES(is_priority), latitude = VALUES(latitude), longitude = VALUES(longitude),
-    color = VALUES(color), geometry = VALUES(geometry), review_note = VALUES(review_note),
-    hic_subtipos = VALUES(hic_subtipos), fitosociologia = VALUES(fitosociologia),
-    origen = VALUES(origen), fuentes = VALUES(fuentes), solo_curada = VALUES(solo_curada),
-    audio_url = VALUES(audio_url), audio_transcript = VALUES(audio_transcript),
-    image_url = VALUES(image_url), image_attribution = VALUES(image_attribution),
+    name = VALUES(name),
+    habitat_type = VALUES(habitat_type),
+    description = VALUES(description),
+    is_priority = VALUES(is_priority),
+    latitude = VALUES(latitude),
+    longitude = VALUES(longitude),
+    color = VALUES(color),
+    geometry = VALUES(geometry),
+    review_note = VALUES(review_note),
+    hic_subtipos = VALUES(hic_subtipos),
+    fitosociologia = VALUES(fitosociologia),
+    origen = VALUES(origen),
+    fuentes = VALUES(fuentes),
+    solo_curada = VALUES(solo_curada),
+    audio_url = VALUES(audio_url),
+    audio_transcript = VALUES(audio_transcript),
+    image_url = VALUES(image_url),
+    image_attribution = VALUES(image_attribution),
     image_note = VALUES(image_note);
 
 -- ------------------------------------------------------------------------------------------------
--- 3. Especies (170). `identification_tips` va como texto separado por «; », que es como lo parte park_payload.php.
+-- 3. Especies (170). `identification_tips` va unido con «; », el formato que lee el PHP desplegado. Pasa a array JSON cuando `PISTAS_EN_JSON` (Tools/lib/sql.js) se encienda, DESPUÉS de desplegar species_tips.php.
 -- ------------------------------------------------------------------------------------------------
 INSERT INTO species (park_id, common_name, scientific_name, kingdom, family, primary_habitat, description, description_source, identification_tips, seasonality, image_url, image_attribution, latitude, longitude, rarity_score, rarity_basis, rarity_local, rarity_local_basis, is_featured, is_visible, hidden_reason, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, iucn_spain, spain_status, regional_status, regional_ccaa, review_note, eidos_taxonid, gbif_species_key, gbif_occurrences, zepa_site_code, is_migratory, site_presence)
 SELECT pk.id, s.common_name, s.scientific_name, s.kingdom, s.family, s.primary_habitat, s.description, s.description_source, s.identification_tips, s.seasonality, s.image_url, s.image_attribution, s.latitude, s.longitude, s.rarity_score, s.rarity_basis, s.rarity_local, s.rarity_local_basis, s.is_featured, s.is_visible, s.hidden_reason, s.source, s.taxon_phylum, s.taxon_class, s.taxon_order, s.taxon_family, s.taxon_genus, s.iucn_global, s.iucn_spain, s.spain_status, s.regional_status, s.regional_ccaa, s.review_note, s.eidos_taxonid, s.gbif_species_key, s.gbif_occurrences, s.zepa_site_code, s.is_migratory, s.site_presence

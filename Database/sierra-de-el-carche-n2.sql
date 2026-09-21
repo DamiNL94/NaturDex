@@ -60,17 +60,28 @@ FROM parks pk JOIN (
     SELECT 'pinares-sub-mediterraneos-9530', '9530', 'Pinares (sub-)mediterráneos de pinos negros endémicos', 'Bosque', 'Pinares de montaña de pino salgareño o laricio (Pinus nigra), de tronco recto y corteza gris agrietada, sobre crestas y laderas calizas de suelo escaso. Aguantan el frío, el viento y la nieve donde otros árboles no llegan, y los ejemplares de los cantiles pueden tener cientos o más de mil años. Su madera registra en los anillos la historia del clima, lo que convierte a estos bosques en archivos vivos.', 1, 38.426472, -1.173206, '#8fbc8f', '{"type":"Polygon","coordinates":[[[-1.174487,38.424219],[-1.174045,38.423447],[-1.173338,38.422944],[-1.173234,38.422871],[-1.173162,38.422838],[-1.173072,38.422828],[-1.172988,38.422853],[-1.172926,38.422907],[-1.172917,38.422929],[-1.172899,38.422974],[-1.172913,38.423046],[-1.172965,38.423101],[-1.173713,38.42364],[-1.174078,38.424276],[-1.173993,38.424973],[-1.173752,38.425533],[-1.173426,38.426001],[-1.172704,38.426715],[-1.171946,38.427167],[-1.171024,38.4275],[-1.170049,38.42784],[-1.169202,38.428178],[-1.168545,38.428344],[-1.167997,38.42843],[-1.167286,38.428581],[-1.166677,38.428932],[-1.166315,38.429237],[-1.165707,38.429462],[-1.164984,38.429658],[-1.164287,38.429796],[-1.163662,38.429732],[-1.162637,38.429553],[-1.161868,38.429582],[-1.161335,38.429596],[-1.160486,38.429686],[-1.160045,38.429765],[-1.159246,38.429784],[-1.158778,38.429754],[-1.158457,38.42965],[-1.158002,38.429418],[-1.157917,38.429394],[-1.157828,38.429401],[-1.157751,38.429441],[-1.157704,38.429498],[-1.157695,38.42957],[-1.157726,38.429638],[-1.157785,38.429684],[-1.158269,38.429926],[-1.158681,38.430068],[-1.159236,38.430099],[-1.160097,38.430081],[-1.160558,38.429994],[-1.161369,38.429912],[-1.161885,38.429898],[-1.162603,38.429868],[-1.163594,38.430046],[-1.164312,38.430116],[-1.165098,38.429957],[-1.165858,38.429753],[-1.166555,38.429493],[-1.166943,38.42917],[-1.167463,38.428872],[-1.168088,38.428738],[-1.168646,38.428652],[-1.169355,38.428469],[-1.17022,38.428122],[-1.171189,38.42779],[-1.172153,38.427441],[-1.172986,38.426944],[-1.17376,38.426177],[-1.17412,38.42566],[-1.174388,38.425042],[-1.174487,38.424219]]]}', NULL, '["9530"]', '["Junipero phoeniceae-Pinetum clusianae F. Valle, Mota & Gómez-Mercado 1989 corr. Rivas-Martínez, T.E. Díaz, Fernández-González, Izco, Loidi, Lousã & Penas 2002"]', 'anadido_desde_oficial', NULL, NULL, NULL, NULL, 'https://commons.wikimedia.org/wiki/Special:FilePath/Pino_secolare_-_Castelleone_di_Suasa.JPG?width=1280', 'Accurimbono (CC BY-SA 3.0) · Wikimedia Commons', 'Portada ilustrada con Pino carrasco (Pinus halepensis), la especie que da nombre al hábitat.'
 ) h WHERE pk.slug = 'sierra-de-el-carche'
 ON DUPLICATE KEY UPDATE
-    name = VALUES(name), habitat_type = VALUES(habitat_type), description = VALUES(description),
-    is_priority = VALUES(is_priority), latitude = VALUES(latitude), longitude = VALUES(longitude),
-    color = VALUES(color), geometry = VALUES(geometry), review_note = VALUES(review_note),
-    hic_subtipos = VALUES(hic_subtipos), fitosociologia = VALUES(fitosociologia),
-    origen = VALUES(origen), fuentes = VALUES(fuentes), solo_curada = VALUES(solo_curada),
-    audio_url = VALUES(audio_url), audio_transcript = VALUES(audio_transcript),
-    image_url = VALUES(image_url), image_attribution = VALUES(image_attribution),
+    name = VALUES(name),
+    habitat_type = VALUES(habitat_type),
+    description = VALUES(description),
+    is_priority = VALUES(is_priority),
+    latitude = VALUES(latitude),
+    longitude = VALUES(longitude),
+    color = VALUES(color),
+    geometry = VALUES(geometry),
+    review_note = VALUES(review_note),
+    hic_subtipos = VALUES(hic_subtipos),
+    fitosociologia = VALUES(fitosociologia),
+    origen = VALUES(origen),
+    fuentes = VALUES(fuentes),
+    solo_curada = VALUES(solo_curada),
+    audio_url = VALUES(audio_url),
+    audio_transcript = VALUES(audio_transcript),
+    image_url = VALUES(image_url),
+    image_attribution = VALUES(image_attribution),
     image_note = VALUES(image_note);
 
 -- ------------------------------------------------------------------------------------------------
--- 3. Especies (365). `identification_tips` va como texto separado por «; », que es como lo parte park_payload.php.
+-- 3. Especies (365). `identification_tips` va unido con «; », el formato que lee el PHP desplegado. Pasa a array JSON cuando `PISTAS_EN_JSON` (Tools/lib/sql.js) se encienda, DESPUÉS de desplegar species_tips.php.
 -- ------------------------------------------------------------------------------------------------
 INSERT INTO species (park_id, common_name, scientific_name, kingdom, family, primary_habitat, description, description_source, identification_tips, seasonality, image_url, image_attribution, latitude, longitude, rarity_score, rarity_basis, rarity_local, rarity_local_basis, is_featured, is_visible, hidden_reason, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, iucn_spain, spain_status, regional_status, regional_ccaa, review_note, eidos_taxonid, gbif_species_key, gbif_occurrences, zepa_site_code, is_migratory, site_presence)
 SELECT pk.id, s.common_name, s.scientific_name, s.kingdom, s.family, s.primary_habitat, s.description, s.description_source, s.identification_tips, s.seasonality, s.image_url, s.image_attribution, s.latitude, s.longitude, s.rarity_score, s.rarity_basis, s.rarity_local, s.rarity_local_basis, s.is_featured, s.is_visible, s.hidden_reason, s.source, s.taxon_phylum, s.taxon_class, s.taxon_order, s.taxon_family, s.taxon_genus, s.iucn_global, s.iucn_spain, s.spain_status, s.regional_status, s.regional_ccaa, s.review_note, s.eidos_taxonid, s.gbif_species_key, s.gbif_occurrences, s.zepa_site_code, s.is_migratory, s.site_presence

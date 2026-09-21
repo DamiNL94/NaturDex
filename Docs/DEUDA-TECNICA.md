@@ -252,6 +252,22 @@ Cada una se paga mejor ahora que en el espacio número treinta.
    > common_name` y los recintos por `name`, mientras el `park.json` los lleva en el orden del
    > pipeline. Eso no pierde ningún dato pero produce un diff completo que esconde lo que sí cambió,
    > y arreglarlo es decidir cuál de los dos órdenes manda.
+   >
+   > **Y la comprobación miraba CLAVES, no valores (2026-09-11).** Comparando la API de Railway con
+   > los `park.json`: `tips` tenía columna y volvía, pero **partido** —se escribía unido con «; » y
+   > `park_payload.php` lo partía por «;»—, así que las **24 fichas** (5 taxones, 13 espacios) cuya
+   > pista lleva un punto y coma propio volvían con una pista de más, y lo que `species-universal.sql`
+   > escribía con saltos de línea volvía con las tres en una. `npm run ida-y-vuelta`, en verde. El
+   > arreglo —la columna guarda un array JSON (`Backend/Lib/species_tips.php`) y la comprobación
+   > **simula el viaje entero y compara valor a valor**, con la vuelta hecha por el `park_payload.php`
+   > de verdad— se escribió ese día en un worktree que **nunca se comiteó**, y se portó el
+   > 2026-09-21. **Va en dos tiempos**: primero se despliega el lector, que entiende los dos formatos;
+   > luego se enciende `PISTAS_EN_JSON` y se regeneran y aplican los n2. Medido al portarlo, la
+   > pérdida ya no son 24 fichas sino **33 en 15 espacios**, y con el interruptor encendido la ida y
+   > vuelta sale **entera en verde**. **Pendiente: el despliegue y el segundo tiempo.**
+   > El relleno va en el mismo `Database/ida-y-vuelta.sql`, detrás de `migrations.sql`. De paso
+   > encontró un punto de interés con siete decimales que `DECIMAL(10,6)` redondea (~1 cm): queda como
+   > pérdida decidida, con una regla que solo admite ese redondeo.
 
    El diagnóstico anterior:
 

@@ -68,7 +68,7 @@ después cargues **solo** el documento o la carpeta que la tarea necesite. No le
    generaliza igual: «nadie lo ha mirado» no es «no está amenazada», y publicar de más no se puede
    deshacer. Ver [`Docs/DARWIN-CORE.md`](Docs/DARWIN-CORE.md).
 
-## 2. Treinta y siete cosas que fallan EN VERDE
+## 2. Treinta y ocho cosas que fallan EN VERDE
 
 Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
 [`Docs/runbook/ORDEN-DE-OPERACIONES.md`](Docs/runbook/ORDEN-DE-OPERACIONES.md).
@@ -445,6 +445,24 @@ Sin error, sin aviso, deshaciendo trabajo en silencio. Detalle en
   llama**, que es lo único que distingue los dos significados de «ausente». Son 18 fichas de once
   espacios. La lección general: **sincronizar es escribir Y retirar**, y una herramienta que solo
   sabe escribir no sincroniza, acumula.
+- **Una lista guardada con un separador que puede ir DENTRO del texto, dos escritores que no se
+  ponían de acuerdo, y una comprobación que miraba claves y no valores.** Las pistas de
+  identificación (`tips`) viajaban a la base unidas con «; » desde `build-park-sql.js` y con **salto
+  de línea** desde `species-universal.sql`, y `park_payload.php` las partía por «;»: «Alas largas y
+  estrechas; vuelo veloz y alto», del murciélago de cueva, volvía de la API en **dos viñetas**, y lo
+  escrito con salto de línea en **una sola** con las tres pistas dentro —y eso último por la ruta que
+  el runbook manda para toda corrección universal—. Eran **24 fichas de 5 taxones en 13 espacios**
+  con `npm run ida-y-vuelta` en verde, porque solo comprobaba que la CLAVE tuviera columna. El
+  arreglo se escribió el 2026-09-11 en un worktree **que nunca se comiteó**, y se portó el
+  2026-09-21: la columna guarda un **array JSON** (`Backend/Lib/species_tips.php`; en Node,
+  `columnaTips` de `Tools/lib/sql.js`), sigue siendo TEXT porque `seed.sql` trae el formato viejo, y
+  la comprobación **simula el viaje entero** con la vuelta de verdad por PHP. **Y va en dos tiempos,
+  que es lo que hay que tener delante**: Railway despliega desde `main`, y el PHP que hay en
+  producción parte por «;», así que un array JSON en la base antes de desplegar el lector nuevo
+  enseñaría el `["…","…"]` crudo como UNA pista en cada ficha. Por eso los escritores de Node siguen
+  en «; » —que el lector nuevo también entiende— hasta que `PISTAS_EN_JSON` pase a `true` **después**
+  del despliegue. La lección general: **una ida y vuelta que no ejecuta la vuelta de verdad comprueba
+  la forma, no el dato; y un cambio de formato con dos puntas se despliega primero en la que lee.**
 
 ---
 
@@ -487,6 +505,8 @@ Para saltarse la exclusión puntualmente: `rg --no-ignore <patrón> <ruta>`.
 ```bash
 npm run validate            # BLOQUEA. Coherencia park.json ↔ manifest ↔ geojson, contadores,
                             # integridad especie↔hábitat, licencias de foto, presupuesto offline
+npm run ida-y-vuelta        # lo que se pierde o cambia de VALOR al regenerar el paquete desde la
+                            # base. Ejecuta park_payload.php de verdad: sin PHP sale con código 2
 npm test                    # reglas de presencia y progreso (PHP, sin BD)
 npm run typecheck           # tsc --noEmit sobre AdminPanel
 npm run taxones:duplicados  # sale con código 1 mientras queden

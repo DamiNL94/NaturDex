@@ -31,6 +31,7 @@ preflight, sesión, `respond()`); si escribes uno nuevo, empieza por ahí.
 | `api_cors.php` | 20 | Cabeceras CORS de la API pública |
 | `park_payload.php` | 198 | **Forma canónica del JSON de un parque.** Compartida con el exportador |
 | `park_export.php` | 239 | Vuelca un parque de la BD al `park.json` empaquetado (`npm run export:park`) |
+| `species_tips.php` | 60 | **Cómo se guardan las pistas de identificación**: un array JSON en `species.identification_tips`, que es TEXT. Hasta el 2026-09-11 iban unidas con «; » y se leían partiendo por «;», así que una pista con un punto y coma propio volvía partida en dos (24 fichas, con `npm run ida-y-vuelta` en verde). La columna **no** es de tipo JSON porque `seed.sql` trae el formato viejo y el contenedor lo carga sin pasar por las migraciones: por eso la lectura acepta los dos. La usan el payload y `admin.php`, que las edita una por línea **Lee los DOS formatos, y eso es lo que permite desplegarla ANTES que el dato**: hasta que se encienda `PISTAS_EN_JSON` (Tools/lib/sql.js) la base sigue en «; » (2026-09-21) |
 | `glossary_payload.php` · `invasoras_payload.php` | 32 · 57 | Ídem para glosario e invasoras |
 | `presence.php` | 371 | **Verificación de presencia real** (antitrampas). Ver [`Docs/VERIFICACION-Y-ANTITRAMPAS.md`](../Docs/VERIFICACION-Y-ANTITRAMPAS.md) |
 | `account_progress.php` | 443 | Progreso de cuenta y evaluación del catálogo de logros |
@@ -68,4 +69,6 @@ a MySQL de propina.
   parado). Sigue pasando por `apiBoot()` —cabeceras, CORS, preflight—: lo que se apaga es la
   conexión, no el prólogo común.
 
-Pruebas sin BD: `npm test` → `Tools/test-presence-rules.php` + `Tools/test-dwc-rules.php` + `Tools/test-tiempo-rules.php` (las dos trampas de AEMET que ya fallaron en verde: la codificación mezclada y el 0 del tramo 00-24; `validate` no puede verlas, porque es dato en vivo que no se escribe en ningún `park.json`).
+Pruebas sin BD: `npm test` → `Tools/test-presence-rules.php` + `Tools/test-dwc-rules.php` + `Tools/test-tiempo-rules.php` (las dos trampas de AEMET que ya fallaron en verde: la codificación mezclada y el 0 del tramo 00-24; `validate` no puede verlas, porque es dato en vivo que no se escribe en ningún `park.json`) + `Tools/test-tips-rules.php` (las pistas de identificación: el formato nuevo, el viejo que aún trae `seed.sql` y el del panel, una por línea).
+
+La otra prueba sin BD de esta carpeta no está en `npm test` porque necesita los `park.json`: `npm run ida-y-vuelta` ejecuta el `buildParkPayload()` de verdad sobre las filas que dejarían los generadores de SQL (con una conexión simulada) y compara valor a valor. Si cambias cómo se lee una columna aquí, pásala.

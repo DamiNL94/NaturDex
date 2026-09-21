@@ -119,6 +119,10 @@ CREATE TABLE IF NOT EXISTS species (
     -- legal vive en `spain_status` / `regional_status` / `regional_ccaa` y la evaluación de la UICN
     -- en `iucn_global` / `iucn_spain`.
     description TEXT,
+    -- Pistas de identificación: un ARRAY JSON de cadenas —`["…","…"]`— en una columna TEXT. No van
+    -- unidas con «;» porque una pista puede llevar un punto y coma propio, y volvía de la API partida
+    -- en dos (2026-09-11). No es de tipo JSON a propósito: seed.sql trae el formato viejo y se carga
+    -- sobre este esquema sin pasar por migrations.sql. Lectura y escritura: Backend/Lib/species_tips.php.
     identification_tips TEXT,
     seasonality VARCHAR(160),
     image_url VARCHAR(500),

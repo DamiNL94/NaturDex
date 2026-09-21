@@ -251,6 +251,47 @@ curl -s "https://naturdex-production-62b3.up.railway.app/Backend/Api/species.php
 en `null`.
 
 
+## 3 ter. PENDIENTE · Las pistas como array JSON, en dos tiempos
+
+**Por qué no se aplica de una vez.** Las pistas de identificación pasan de «; » a un array JSON en
+`species.identification_tips` (el porqué, en `Backend/Lib/species_tips.php`). Railway despliega el
+PHP **desde `main`**, y el `park_payload.php` que hay hoy en producción parte por `explode(";")`: un
+`["…","…"]` en la base antes de desplegar el lector nuevo saldría en la app como **UNA sola pista con
+los corchetes dentro**, en todas las fichas. El lector nuevo, en cambio, entiende los dos formatos.
+Así que el orden es el único que no deja ningún momento roto:
+
+**Primer tiempo — HECHO el 2026-09-21, a falta del despliegue.** El código está en la rama con
+`PISTAS_EN_JSON = false` en `Tools/lib/sql.js`: todos los generadores de Node siguen escribiendo «; »,
+que es lo que hay en la base y lo que entienden el PHP viejo y el nuevo. Los n2 regenerados con ese
+código salen **idénticos en datos** a los aplicados el 19 (comprobado: solo cambian comentarios y el
+formato del `ON DUPLICATE KEY UPDATE` de hábitats).
+
+1. **Fusionar en `main` y empujar.** Railway construye el `Dockerfile` y despliega `species_tips.php`,
+   `park_payload.php`, `admin.php` y el bundle del panel.
+2. **Comprobar que el lector nuevo está vivo ANTES de seguir**:
+   ```bash
+   curl -s "https://naturdex-production-62b3.up.railway.app/Backend/Api/species.php?park=cabezo-gordo"
+   ```
+   El murciélago de cueva (*Miniopterus schreibersii*) sigue saliendo con **cuatro** pistas —la base
+   aún está en «; »—, pero ya sale por `speciesTipsDecode`. No hay forma de verlo desde fuera: el
+   comprobante es que el despliegue de Railway haya terminado con el commit que trae
+   `Backend/Lib/species_tips.php`.
+
+**Segundo tiempo — cuando el paso 2 esté hecho, no antes.**
+
+3. `PISTAS_EN_JSON = true` en `Tools/lib/sql.js`.
+4. `npm run ida-y-vuelta` → tiene que salir **entero en verde** (con el interruptor apagado enseña
+   33 fichas en 15 espacios que no vuelven iguales; encendido, ninguna — comprobado el 2026-09-21).
+5. Copia (`Tools/db-backup-remoto.php`), regenerar los dieciséis n2 y aplicarlos como en §3 bis.
+6. La API: el murciélago de cueva de Cabezo Gordo tiene que salir con **tres** pistas, y la segunda
+   entera: «Alas largas y estrechas; vuelo veloz y alto».
+
+`migrations.sql` trae además `naturdex_tips_a_json`, que convierte las filas viejas **en la propia
+base**. En Railway no hace falta —los n2 reescriben la columna de todas las fichas—, y además usa
+`DELIMITER`, así que **no pasa por `import-sql.php`** (§1). Es para el contenedor local y para
+instalaciones que no regeneren.
+
+
 ## 4. Lo que hay que mirar ANTES de aplicar
 
 **La pregunta que importa no es «¿qué va a cambiar?» sino la simétrica: ¿hay en la base algún valor

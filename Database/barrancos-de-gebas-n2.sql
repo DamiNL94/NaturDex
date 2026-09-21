@@ -44,17 +44,28 @@ FROM parks pk JOIN (
     SELECT 'galerias-y-matorrales-92D0', '92D0', 'Galerías y matorrales ribereños termomediterráneos (Nerio-Tamaricetea)', 'Ribera', 'La vegetación leñosa de ramblas, arroyos y ríos de caudal irregular, que unos meses llevan agua y otros son un lecho de piedras: adelfares y tarayales. La adelfa (Nerium oleander), de hojas coriáceas y flores rosas, y los tarays (Tamarix), de ramillas finas y flores en espiga, resisten tanto las avenidas violentas como meses de sequía. Toda la adelfa es muy tóxica, incluidas hojas y ramas secas.', 0, 37.887778, -1.383451, '#2e8b57', '{"type":"Polygon","coordinates":[[[-1.388664,37.889569],[-1.388657,37.889501],[-1.388613,37.889438],[-1.388232,37.889117],[-1.387591,37.888784],[-1.386335,37.888663],[-1.385562,37.888549],[-1.384999,37.888586],[-1.38493,37.888562],[-1.384662,37.888365],[-1.384292,37.888067],[-1.383974,37.887815],[-1.38331,37.887531],[-1.382599,37.887318],[-1.382156,37.887258],[-1.381759,37.887311],[-1.381368,37.887373],[-1.381136,37.887298],[-1.380791,37.887118],[-1.380623,37.887057],[-1.380081,37.886856],[-1.379309,37.886575],[-1.378016,37.886133],[-1.376655,37.88585],[-1.376654,37.885857],[-1.37666,37.885897],[-1.376687,37.885944],[-1.376727,37.886005],[-1.376799,37.886052],[-1.376976,37.886153],[-1.37703,37.886187],[-1.377166,37.886275],[-1.377178,37.886283],[-1.377886,37.886429],[-1.379147,37.886861],[-1.379913,37.887142],[-1.380254,37.887268],[-1.380597,37.887394],[-1.380949,37.88758],[-1.381327,37.887702],[-1.381831,37.887623],[-1.382154,37.887578],[-1.382495,37.887623],[-1.383145,37.887817],[-1.383732,37.888073],[-1.384386,37.888591],[-1.384616,37.888761],[-1.384701,37.888825],[-1.384871,37.888891],[-1.38489,37.8889],[-1.384913,37.888918],[-1.385543,37.888868],[-1.386275,37.888973],[-1.38745,37.889088],[-1.387974,37.889361],[-1.388323,37.889654],[-1.388391,37.889691],[-1.388479,37.889706],[-1.388565,37.889685],[-1.388631,37.889636],[-1.388664,37.889569]]]}', 'Sin ninguna especie asociada, y el hueco es real. Son 4,0 ha —el 0,2 % del espacio— de tarayal en una cinta de rambla, y el barrido de GBIF del 2026-08-22 no encuentra DENTRO de ese polígono un solo registro: ni una especie, ni una ocurrencia. El Atlas de Hábitats tampoco da para el 92D0 ninguna característica que esté fichada aquí. Con el orden de fuentes del proyecto no hay con qué tender un enlace, y ponerle las especies del matorral de al lado sería inventarlo.', '["92D0"]', '["Agrostio stoloniferae-Tamaricetum canariensis Cirujano 1981"]', 'anadido_desde_oficial', NULL, NULL, NULL, NULL, NULL, NULL, NULL
 ) h WHERE pk.slug = 'barrancos-de-gebas'
 ON DUPLICATE KEY UPDATE
-    name = VALUES(name), habitat_type = VALUES(habitat_type), description = VALUES(description),
-    is_priority = VALUES(is_priority), latitude = VALUES(latitude), longitude = VALUES(longitude),
-    color = VALUES(color), geometry = VALUES(geometry), review_note = VALUES(review_note),
-    hic_subtipos = VALUES(hic_subtipos), fitosociologia = VALUES(fitosociologia),
-    origen = VALUES(origen), fuentes = VALUES(fuentes), solo_curada = VALUES(solo_curada),
-    audio_url = VALUES(audio_url), audio_transcript = VALUES(audio_transcript),
-    image_url = VALUES(image_url), image_attribution = VALUES(image_attribution),
+    name = VALUES(name),
+    habitat_type = VALUES(habitat_type),
+    description = VALUES(description),
+    is_priority = VALUES(is_priority),
+    latitude = VALUES(latitude),
+    longitude = VALUES(longitude),
+    color = VALUES(color),
+    geometry = VALUES(geometry),
+    review_note = VALUES(review_note),
+    hic_subtipos = VALUES(hic_subtipos),
+    fitosociologia = VALUES(fitosociologia),
+    origen = VALUES(origen),
+    fuentes = VALUES(fuentes),
+    solo_curada = VALUES(solo_curada),
+    audio_url = VALUES(audio_url),
+    audio_transcript = VALUES(audio_transcript),
+    image_url = VALUES(image_url),
+    image_attribution = VALUES(image_attribution),
     image_note = VALUES(image_note);
 
 -- ------------------------------------------------------------------------------------------------
--- 3. Especies (86). `identification_tips` va como texto separado por «; », que es como lo parte park_payload.php.
+-- 3. Especies (86). `identification_tips` va unido con «; », el formato que lee el PHP desplegado. Pasa a array JSON cuando `PISTAS_EN_JSON` (Tools/lib/sql.js) se encienda, DESPUÉS de desplegar species_tips.php.
 -- ------------------------------------------------------------------------------------------------
 INSERT INTO species (park_id, common_name, scientific_name, kingdom, family, primary_habitat, description, description_source, identification_tips, seasonality, image_url, image_attribution, latitude, longitude, rarity_score, rarity_basis, rarity_local, rarity_local_basis, is_featured, is_visible, hidden_reason, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, iucn_spain, spain_status, regional_status, regional_ccaa, review_note, eidos_taxonid, gbif_species_key, gbif_occurrences, zepa_site_code, is_migratory, site_presence)
 SELECT pk.id, s.common_name, s.scientific_name, s.kingdom, s.family, s.primary_habitat, s.description, s.description_source, s.identification_tips, s.seasonality, s.image_url, s.image_attribution, s.latitude, s.longitude, s.rarity_score, s.rarity_basis, s.rarity_local, s.rarity_local_basis, s.is_featured, s.is_visible, s.hidden_reason, s.source, s.taxon_phylum, s.taxon_class, s.taxon_order, s.taxon_family, s.taxon_genus, s.iucn_global, s.iucn_spain, s.spain_status, s.regional_status, s.regional_ccaa, s.review_note, s.eidos_taxonid, s.gbif_species_key, s.gbif_occurrences, s.zepa_site_code, s.is_migratory, s.site_presence

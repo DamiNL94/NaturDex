@@ -17,6 +17,7 @@
 //   POST export                           → body {park}: regenera park.json + contadores (offline)
 // ================================================================================================
 require_once __DIR__ . "/../Lib/api.php";
+require_once __DIR__ . "/../Lib/species_tips.php";
 // `cors: false` a propósito: el panel se sirve del mismo origen y esta API no debe anunciarse a
 // ningún otro (a diferencia de la API pública de lectura).
 $conn = apiBoot(["cors" => false, "session" => true]);
@@ -179,7 +180,12 @@ if ($method === "GET" && $action === "list") {
         $map = [];
         $relResult = $rel->get_result();
         while ($row = $relResult->fetch_assoc()) $map[(int) $row["species_id"]][] = (int) $row["habitat_id"];
-        foreach ($items as &$item) $item["habitat_ids"] = $map[(int) $item["id"]] ?? [];
+        foreach ($items as &$item) {
+            $item["habitat_ids"] = $map[(int) $item["id"]] ?? [];
+            // Las pistas viven como array JSON; el formulario las edita UNA POR LÍNEA, porque el «;»
+            // puede ir dentro de una pista y ya no separa nada (Lib/species_tips.php).
+            $item["identification_tips"] = speciesTipsToLines(speciesTipsDecode($item["identification_tips"]));
+        }
         respond(["items" => $items]);
     }
     respond(["error" => "Recurso no reconocido."], 400);
@@ -245,7 +251,9 @@ if ($method === "POST" && $action === "save") {
         if ($rarity < 1 || $rarity > 5) respond(["error" => "La rareza debe estar entre 1 y 5."], 400);
         $family = sOrNull($item, "family"); $pHab = sOrNull($item, "primary_habitat");
         $desc = sOrNull($item, "description");
-        $tips = sOrNull($item, "identification_tips"); $season = sOrNull($item, "seasonality");
+        // Una pista por línea en el formulario → array JSON en la columna (Lib/species_tips.php).
+        $tips = speciesTipsEncode(speciesTipsFromLines($item["identification_tips"] ?? ""));
+        $season = sOrNull($item, "seasonality");
         $img = sOrNull($item, "image_url");
         $lat = numOrNull($item, "latitude"); $lng = numOrNull($item, "longitude");
         $featured = !empty($item["is_featured"]) ? 1 : 0; $source = sOrNull($item, "source");

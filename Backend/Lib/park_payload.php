@@ -7,6 +7,7 @@
 // offline y la API salen del mismo sitio y no pueden divergir (la BD es la fuente de verdad del
 // contenido; la geometría vive aparte en los GeoJSON).
 // ================================================================================================
+require_once __DIR__ . "/species_tips.php";
 
 /**
  * Construye el payload completo de un parque a partir de la base de datos.
@@ -102,7 +103,9 @@ function buildParkPayload($conn, $parkSlug) {
             "description" => $row["description"],
             // De dónde sale el texto: EIDOS o redacción propia. NULL en las heredadas sin trazar.
             "descriptionSource" => $row["description_source"] ?? null,
-            "tips" => array_values(array_filter(array_map("trim", explode(";", $row["identification_tips"] ?? "")))),
+            // Array JSON en una columna TEXT, no texto partido por «;»: una pista puede llevar un punto
+            // y coma propio, y volvía partida en dos (2026-09-11). Formato y porqué: species_tips.php.
+            "tips" => speciesTipsDecode($row["identification_tips"]),
             "seasonality" => $row["seasonality"],
             "image" => $row["image_url"],
             "imageAttribution" => $row["image_attribution"] ?? null,

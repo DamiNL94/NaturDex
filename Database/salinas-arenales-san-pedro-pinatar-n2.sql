@@ -68,17 +68,28 @@ FROM parks pk JOIN (
     SELECT 'matorrales-halonitrofilos-pegano-1430', '1430', 'Matorrales halonitrófilos (Pegano-Salsoletea)', 'Matorral', 'Matorral de suelos salinos removidos y cargados de nitrógeno: bordes de camino y de cultivo, márgenes de rambla, corrales y escombreras viejas. Lo forman matas robustas de hoja gris o carnosa —orgazas, sosas, bojas y cambroneras— que rebrotan enseguida tras cualquier alteración. Aunque nace de terrenos trastocados, es vegetación propia de los ambientes áridos del sureste y a menudo el último refugio de plantas escasas.', 0, 37.778914, -0.744623, '#9acd32', '{"type":"Polygon","coordinates":[[[-0.746267,37.780421],[-0.745246,37.7795],[-0.745204,37.779153],[-0.745257,37.779135],[-0.745211,37.778823],[-0.745163,37.778843],[-0.744541,37.778224],[-0.744146,37.7781],[-0.744097,37.77806],[-0.743332,37.777728],[-0.743198,37.777734],[-0.742989,37.777751],[-0.742927,37.777988],[-0.74297,37.778068],[-0.743056,37.778137],[-0.743105,37.778182],[-0.743207,37.778229],[-0.743272,37.778229],[-0.743311,37.778217],[-0.743388,37.778193],[-0.743504,37.778148],[-0.74359,37.77808],[-0.743735,37.778022],[-0.74385,37.778047],[-0.743966,37.778103],[-0.744038,37.778183],[-0.744095,37.778263],[-0.744182,37.778355],[-0.744268,37.778458],[-0.744369,37.77855],[-0.744426,37.778666],[-0.744446,37.778737],[-0.744454,37.778768],[-0.744498,37.778861],[-0.74454,37.778952],[-0.744584,37.779043],[-0.744596,37.779063],[-0.744651,37.779152],[-0.744655,37.779159],[-0.744684,37.779272],[-0.744715,37.779348],[-0.744741,37.779411],[-0.744813,37.779547],[-0.744885,37.779652],[-0.744923,37.779697],[-0.744971,37.779756],[-0.745058,37.779825],[-0.745173,37.779881],[-0.745274,37.779939],[-0.745389,37.779996],[-0.745504,37.780077],[-0.745649,37.780145],[-0.74575,37.780225],[-0.745865,37.780284],[-0.745966,37.780329],[-0.746067,37.780398],[-0.746092,37.780404],[-0.746211,37.780433],[-0.746267,37.780421]]]}', NULL, '["1430"]', '["Withanio frutescentis-Lycietum intricati Alcaraz, P. Sánchez, De la Torre, Ríos & J. Alvarez 1991"]', 'anadido_desde_oficial', NULL, NULL, NULL, NULL, NULL, NULL, NULL
 ) h WHERE pk.slug = 'salinas-arenales-san-pedro-pinatar'
 ON DUPLICATE KEY UPDATE
-    name = VALUES(name), habitat_type = VALUES(habitat_type), description = VALUES(description),
-    is_priority = VALUES(is_priority), latitude = VALUES(latitude), longitude = VALUES(longitude),
-    color = VALUES(color), geometry = VALUES(geometry), review_note = VALUES(review_note),
-    hic_subtipos = VALUES(hic_subtipos), fitosociologia = VALUES(fitosociologia),
-    origen = VALUES(origen), fuentes = VALUES(fuentes), solo_curada = VALUES(solo_curada),
-    audio_url = VALUES(audio_url), audio_transcript = VALUES(audio_transcript),
-    image_url = VALUES(image_url), image_attribution = VALUES(image_attribution),
+    name = VALUES(name),
+    habitat_type = VALUES(habitat_type),
+    description = VALUES(description),
+    is_priority = VALUES(is_priority),
+    latitude = VALUES(latitude),
+    longitude = VALUES(longitude),
+    color = VALUES(color),
+    geometry = VALUES(geometry),
+    review_note = VALUES(review_note),
+    hic_subtipos = VALUES(hic_subtipos),
+    fitosociologia = VALUES(fitosociologia),
+    origen = VALUES(origen),
+    fuentes = VALUES(fuentes),
+    solo_curada = VALUES(solo_curada),
+    audio_url = VALUES(audio_url),
+    audio_transcript = VALUES(audio_transcript),
+    image_url = VALUES(image_url),
+    image_attribution = VALUES(image_attribution),
     image_note = VALUES(image_note);
 
 -- ------------------------------------------------------------------------------------------------
--- 3. Especies (372). `identification_tips` va como texto separado por «; », que es como lo parte park_payload.php.
+-- 3. Especies (372). `identification_tips` va unido con «; », el formato que lee el PHP desplegado. Pasa a array JSON cuando `PISTAS_EN_JSON` (Tools/lib/sql.js) se encienda, DESPUÉS de desplegar species_tips.php.
 -- ------------------------------------------------------------------------------------------------
 INSERT INTO species (park_id, common_name, scientific_name, kingdom, family, primary_habitat, description, description_source, identification_tips, seasonality, image_url, image_attribution, latitude, longitude, rarity_score, rarity_basis, rarity_local, rarity_local_basis, is_featured, is_visible, hidden_reason, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, iucn_spain, spain_status, regional_status, regional_ccaa, review_note, eidos_taxonid, gbif_species_key, gbif_occurrences, zepa_site_code, is_migratory, site_presence)
 SELECT pk.id, s.common_name, s.scientific_name, s.kingdom, s.family, s.primary_habitat, s.description, s.description_source, s.identification_tips, s.seasonality, s.image_url, s.image_attribution, s.latitude, s.longitude, s.rarity_score, s.rarity_basis, s.rarity_local, s.rarity_local_basis, s.is_featured, s.is_visible, s.hidden_reason, s.source, s.taxon_phylum, s.taxon_class, s.taxon_order, s.taxon_family, s.taxon_genus, s.iucn_global, s.iucn_spain, s.spain_status, s.regional_status, s.regional_ccaa, s.review_note, s.eidos_taxonid, s.gbif_species_key, s.gbif_occurrences, s.zepa_site_code, s.is_migratory, s.site_presence

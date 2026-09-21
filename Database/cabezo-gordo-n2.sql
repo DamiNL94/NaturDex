@@ -46,17 +46,28 @@ FROM parks pk JOIN (
     SELECT 'zonas-subestepicas-de-6220', '6220', 'Zonas subestépicas de gramíneas y anuales del Thero-Brachypodietea', 'Pastos', 'Pastizales secos en los que conviven gramíneas vivaces de mata dura, como el lastón (Brachypodium retusum) o el esparto, con una multitud de plantas anuales diminutas que nacen con las lluvias y se secan antes del verano. En agosto parecen un erial pardo; en abril pueden reunir cuarenta especies distintas en un metro cuadrado. Esa riqueza escondida es la razón de que sea un hábitat prioritario.', 1, 37.799582, -0.901636, '#66cdaa', '{"type":"Polygon","coordinates":[[[-0.906833,37.800417],[-0.906703,37.800324],[-0.906256,37.800107],[-0.906329,37.799867],[-0.905679,37.799718],[-0.905246,37.799717],[-0.904944,37.799466],[-0.904627,37.799112],[-0.904281,37.798849],[-0.903761,37.798826],[-0.903111,37.798837],[-0.902982,37.798699],[-0.902433,37.798561],[-0.902203,37.79848],[-0.901813,37.798618],[-0.901321,37.798674],[-0.90086,37.798731],[-0.900369,37.798535],[-0.900152,37.798628],[-0.899676,37.79889],[-0.899415,37.799005],[-0.899083,37.79906],[-0.898578,37.799037],[-0.898476,37.799347],[-0.897942,37.799414],[-0.897307,37.799414],[-0.89696,37.799664],[-0.896685,37.799916],[-0.896665,37.800134],[-0.896728,37.800156],[-0.897146,37.800305],[-0.897305,37.800432],[-0.89734,37.800552],[-0.897362,37.800627],[-0.897723,37.800671],[-0.897858,37.800577],[-0.8982,37.800342],[-0.89859,37.800112],[-0.899312,37.799918],[-0.899832,37.799817],[-0.900554,37.799841],[-0.900929,37.800057],[-0.901391,37.800059],[-0.901665,37.799967],[-0.902055,37.799933],[-0.902459,37.800024],[-0.902849,37.800139],[-0.903383,37.800288],[-0.903815,37.800438],[-0.904566,37.800541],[-0.90461,37.800382],[-0.905318,37.800358],[-0.906054,37.800405],[-0.906833,37.800417]]]}', 'Sin especies enlazadas, y el hueco es real, no una pérdida de enlaces. El Atlas cartografía este hábitat en el segundo recinto del espacio —10,8 ha, el 4 % de las 272 ha—, separado del recinto grande que lleva a la vez el 5330, el 5220 y el 8210. El barrido de GBIF solo encontró cuatro especies dentro de su polígono, y tres son aves, que no se adscriben a hábitats por la regla de vuelo; la cuarta, Coronilla juncea, tiene un único registro y no llega al umbral de presencia. Las 58 fichas del espacio entran por el anexo normativo del Plan del Mar Menor, que inventaría la ZEC entera sin decir en qué hábitat está cada especie, así que no hay de dónde sacar el enlace sin inventarlo. Lo que falta para cerrarlo es trabajo de campo o una fuente que adscriba las gramíneas anuales de este pastizal al recinto.', '["6220"]', '["Teucrio pseudochamaepityos-Brachypodietum ramosi O. Bolòs 1957"]', 'anadido_desde_oficial', NULL, NULL, NULL, NULL, NULL, NULL, NULL
 ) h WHERE pk.slug = 'cabezo-gordo'
 ON DUPLICATE KEY UPDATE
-    name = VALUES(name), habitat_type = VALUES(habitat_type), description = VALUES(description),
-    is_priority = VALUES(is_priority), latitude = VALUES(latitude), longitude = VALUES(longitude),
-    color = VALUES(color), geometry = VALUES(geometry), review_note = VALUES(review_note),
-    hic_subtipos = VALUES(hic_subtipos), fitosociologia = VALUES(fitosociologia),
-    origen = VALUES(origen), fuentes = VALUES(fuentes), solo_curada = VALUES(solo_curada),
-    audio_url = VALUES(audio_url), audio_transcript = VALUES(audio_transcript),
-    image_url = VALUES(image_url), image_attribution = VALUES(image_attribution),
+    name = VALUES(name),
+    habitat_type = VALUES(habitat_type),
+    description = VALUES(description),
+    is_priority = VALUES(is_priority),
+    latitude = VALUES(latitude),
+    longitude = VALUES(longitude),
+    color = VALUES(color),
+    geometry = VALUES(geometry),
+    review_note = VALUES(review_note),
+    hic_subtipos = VALUES(hic_subtipos),
+    fitosociologia = VALUES(fitosociologia),
+    origen = VALUES(origen),
+    fuentes = VALUES(fuentes),
+    solo_curada = VALUES(solo_curada),
+    audio_url = VALUES(audio_url),
+    audio_transcript = VALUES(audio_transcript),
+    image_url = VALUES(image_url),
+    image_attribution = VALUES(image_attribution),
     image_note = VALUES(image_note);
 
 -- ------------------------------------------------------------------------------------------------
--- 3. Especies (58). `identification_tips` va como texto separado por «; », que es como lo parte park_payload.php.
+-- 3. Especies (58). `identification_tips` va unido con «; », el formato que lee el PHP desplegado. Pasa a array JSON cuando `PISTAS_EN_JSON` (Tools/lib/sql.js) se encienda, DESPUÉS de desplegar species_tips.php.
 -- ------------------------------------------------------------------------------------------------
 INSERT INTO species (park_id, common_name, scientific_name, kingdom, family, primary_habitat, description, description_source, identification_tips, seasonality, image_url, image_attribution, latitude, longitude, rarity_score, rarity_basis, rarity_local, rarity_local_basis, is_featured, is_visible, hidden_reason, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, iucn_spain, spain_status, regional_status, regional_ccaa, review_note, eidos_taxonid, gbif_species_key, gbif_occurrences, zepa_site_code, is_migratory, site_presence)
 SELECT pk.id, s.common_name, s.scientific_name, s.kingdom, s.family, s.primary_habitat, s.description, s.description_source, s.identification_tips, s.seasonality, s.image_url, s.image_attribution, s.latitude, s.longitude, s.rarity_score, s.rarity_basis, s.rarity_local, s.rarity_local_basis, s.is_featured, s.is_visible, s.hidden_reason, s.source, s.taxon_phylum, s.taxon_class, s.taxon_order, s.taxon_family, s.taxon_genus, s.iucn_global, s.iucn_spain, s.spain_status, s.regional_status, s.regional_ccaa, s.review_note, s.eidos_taxonid, s.gbif_species_key, s.gbif_occurrences, s.zepa_site_code, s.is_migratory, s.site_presence

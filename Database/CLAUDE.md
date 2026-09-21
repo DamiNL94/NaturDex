@@ -28,7 +28,7 @@ silencio.
 | `poda-recombinaciones.sql` | 12 K | `npm run taxones:recombinaciones -- --write --sql Database/poda-recombinaciones.sql`. Retira los VEINTE nombres viejos que dejó el renombrado de recombinaciones del 2026-08-28 (deuda nº 36) en once espacios. Va DESPUÉS de los `-n2.sql`, que son quienes dan de alta el nombre nuevo; el UPSERT no puede retirar el viejo. Respeta las fichas con observaciones de usuario y lo dice antes con un SELECT. Idempotente |
 | `poda-exclusiones-<slug>.sql` | — | `npm run especies:exclusiones -- --write --sql auto` (`aplica-exclusiones.js`). **Borrados** de las fichas que `data/exclusiones-especies.json` excluye a mano y que se habían publicado antes de que se escribiera la exclusión. Lleva dentro el motivo copiado del fichero de exclusiones, y **un SELECT ANTES del DELETE** que dice cuántas filas de `observations` se llevaría la cascada. Va DESPUÉS del `-n2.sql` del espacio |
 | `poda-renombrados-<slug>.sql` | — | Escrito a mano, una vez, con la lista revisada delante. Retira las fichas que un renombrado dejó huérfanas en la base y el UPSERT no puede tocar |
-| `ida-y-vuelta.sql` | — | `npm run ida-y-vuelta -- --sql Database/ida-y-vuelta.sql`. Rellena las cuatro columnas que se abrieron el 2026-08-27 para que la exportación desde la API deje de borrar dato (deuda nº 3): `species.gbif_occurrences` y `habitats.origen` / `fuentes` / `solo_curada`. Va DESPUÉS de `migrations.sql`, que es quien las crea |
+| `ida-y-vuelta.sql` | — | `npm run ida-y-vuelta -- --sql Database/ida-y-vuelta.sql`. Rellena las cuatro columnas que se abrieron el 2026-08-27 para que la exportación desde la API deje de borrar dato (deuda nº 3): `species.gbif_occurrences` y `habitats.origen` / `fuentes` / `solo_curada`. Desde el 2026-09-11 lleva también las **pistas de identificación** de las 1.408 fichas que tienen, en su formato nuevo (array JSON): `migrations.sql` convierte en su sitio lo que ya había, pero no puede saber qué «;» era de la pista y cuál separaba dos, y el dato bueno está en el repositorio. Va DESPUÉS de `migrations.sql`, que es quien crea las columnas y convierte el formato |
 | `regional-ccaa.sql` | 4 K | `node Tools/catalogo-nacional/migra-estado-regional.js --write --sql Database/regional-ccaa.sql`. Rellena `regional_ccaa` (deuda nº 2), **una sentencia por espacio y no por ficha**: la comunidad es del espacio, no del taxón. Va DESPUÉS de `migrations.sql`, que es quien renombra la columna conservando los textos |
 | `rareza-local.sql` | — | `npm run especies:rareza -- --destacadas --sql Database/rareza-local.sql`. Los tres campos LOCALES del tramo de rareza (`rarity_local`, `rarity_local_basis`, `is_featured`), que **NO viajan en `species-universal.sql`** porque ése solo lleva los universales. Existe para no tener que regenerar el `-n2.sql` entero de un espacio publicado, que es la trampa nº 6 del CLAUDE.md. Una ficha sin tramo se pone a NULL a propósito. Idempotente |
 | `identificadores-taxonomicos.sql` | 4 K | `npm run taxones:identificadores -- --write --sql Database/identificadores-taxonomicos.sql`. Realinea `eidos_taxonid` y `gbif_species_key` en siete fichas de dos espacios (deuda nº 4). **No borra nada**: no hay renombrado, así que no deja fila huérfana. Va DESPUÉS del `-n2.sql` de cada espacio. Idempotente |
@@ -82,6 +82,16 @@ sesión, no un script reejecutable en cualquier estado.
    de `user_progress` y de `user_invasive_sightings`, que siguen siendo lo que la app lee. Antes de
    aplicar su migración, `npm run db:backup`: toca datos de usuario. Ver
    [`Docs/DARWIN-CORE.md`](../Docs/DARWIN-CORE.md).
+6. **`species.identification_tips` guarda un array JSON dentro de una columna TEXT**, no las pistas
+   unidas con «;»: una pista puede llevar un punto y coma propio, y volvía de la API partida en dos
+   (2026-09-11). **No la pases a tipo JSON ni le pongas un CHECK**: `seed.sql` trae el formato viejo y
+   el contenedor lo carga en la primera instalación sin pasar por `migrations.sql` —y `db-sync push` lo
+   reaplica—, así que la base dejaría de arrancar. Por eso la API lee los dos formatos
+   (`Backend/Lib/species_tips.php`). Un `.sql` escrito a mano con pistas va con `sqlTips()` de
+   `Tools/lib/sql.js`, nunca con un `join`. **Y ojo, que el cambio va en dos tiempos** (2026-09-21):
+   el lector que entiende los dos formatos se despliega primero, y solo después `PISTAS_EN_JSON` de
+   `Tools/lib/sql.js` pasa a `true` y los generadores empiezan a escribir JSON. Mientras esté en
+   `false`, la base sigue en «; » a propósito. El procedimiento está en `Docs/runbook/APLICAR-A-RAILWAY.md`.
 
 ## Aplicar
 

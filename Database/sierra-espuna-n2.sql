@@ -64,17 +64,28 @@ FROM parks pk JOIN (
     SELECT 'bosques-galeria-de-92A0', '92A0', 'Bosques galería de Salix alba y Populus alba', 'Ribera', 'Alamedas y saucedas: la banda de árboles de hoja caduca que acompaña a los ríos, con el álamo blanco de envés plateado, chopos y sauces de raíces dentro del agua. Dan sombra al cauce, sujetan las orillas en las crecidas y sostienen una fauna que no aparece a veinte metros de allí. Es un bosque estrecho y alargado que funciona además como corredor entre sierras.', 0, 37.859793, -1.531608, '#6b8e23', '{"type":"Polygon","coordinates":[[[-1.543272,37.858099],[-1.543254,37.858081],[-1.54323,37.858069],[-1.542854,37.857975],[-1.542371,37.85807],[-1.541688,37.858449],[-1.541385,37.858693],[-1.540563,37.858782],[-1.539142,37.859073],[-1.538036,37.858951],[-1.536814,37.858801],[-1.535542,37.858695],[-1.535011,37.858709],[-1.53446,37.858722],[-1.533205,37.858954],[-1.53222,37.859435],[-1.531474,37.8598],[-1.530739,37.859967],[-1.529916,37.859864],[-1.529159,37.859866],[-1.528587,37.860062],[-1.528163,37.860245],[-1.52788,37.860866],[-1.527745,37.861295],[-1.527512,37.861643],[-1.527002,37.861822],[-1.526391,37.861839],[-1.525893,37.861715],[-1.52564,37.861455],[-1.525477,37.860978],[-1.525252,37.860432],[-1.524851,37.860064],[-1.524305,37.860024],[-1.523667,37.860214],[-1.523112,37.860288],[-1.522655,37.860273],[-1.52212,37.860294],[-1.521671,37.860446],[-1.520915,37.860648],[-1.520915,37.860649],[-1.520894,37.860654],[-1.520866,37.860665],[-1.520847,37.860681],[-1.520846,37.860698],[-1.520848,37.860726],[-1.520869,37.860755],[-1.520899,37.860766],[-1.520937,37.860759],[-1.520948,37.860754],[-1.521719,37.860546],[-1.522151,37.860402],[-1.522656,37.860382],[-1.523121,37.860396],[-1.523702,37.860318],[-1.524323,37.860132],[-1.524784,37.860167],[-1.525131,37.860485],[-1.525347,37.861008],[-1.525515,37.861503],[-1.525812,37.861809],[-1.526372,37.861947],[-1.527033,37.86193],[-1.52761,37.861726],[-1.527873,37.861332],[-1.52801,37.860899],[-1.528273,37.860319],[-1.528647,37.860157],[-1.529188,37.859974],[-1.529905,37.859972],[-1.530747,37.86008],[-1.531531,37.8599],[-1.532292,37.859526],[-1.533258,37.859054],[-1.534478,37.85883],[-1.535014,37.858817],[-1.535537,37.858803],[-1.536796,37.858909],[-1.538016,37.859059],[-1.53915,37.859181],[-1.540589,37.858891],[-1.54145,37.858798],[-1.541777,37.858531],[-1.542428,37.85817],[-1.542849,37.858087],[-1.543188,37.858173],[-1.543219,37.858175],[-1.543248,37.858167],[-1.543268,37.858149],[-1.543272,37.858099]]]}', NULL, '["92A0"]', '["Erico mediterraneae-Salicetum pedicellatae Esteve 1973"]', 'anadido_desde_oficial', '["MITECO/BDN — Cartografía Hábitat Directiva 92/43/CEE (1997); recintos disueltos y recortados al parque, ETRS89 UTM→WGS84","MITECO/BDN Directiva Hábitat 1997 (HIC, asociación fitosociológica)"]', NULL, NULL, NULL, 'https://commons.wikimedia.org/wiki/Special:FilePath/Salix_pedicellata_Habitus_2009-9-27_CampoCalatrava.jpg?width=1280', 'javier martin (Public domain) · Wikimedia Commons', 'Portada ilustrada con Mimbre (Salix pedicellata), la especie que da nombre al hábitat.'
 ) h WHERE pk.slug = 'sierra-espuna'
 ON DUPLICATE KEY UPDATE
-    name = VALUES(name), habitat_type = VALUES(habitat_type), description = VALUES(description),
-    is_priority = VALUES(is_priority), latitude = VALUES(latitude), longitude = VALUES(longitude),
-    color = VALUES(color), geometry = VALUES(geometry), review_note = VALUES(review_note),
-    hic_subtipos = VALUES(hic_subtipos), fitosociologia = VALUES(fitosociologia),
-    origen = VALUES(origen), fuentes = VALUES(fuentes), solo_curada = VALUES(solo_curada),
-    audio_url = VALUES(audio_url), audio_transcript = VALUES(audio_transcript),
-    image_url = VALUES(image_url), image_attribution = VALUES(image_attribution),
+    name = VALUES(name),
+    habitat_type = VALUES(habitat_type),
+    description = VALUES(description),
+    is_priority = VALUES(is_priority),
+    latitude = VALUES(latitude),
+    longitude = VALUES(longitude),
+    color = VALUES(color),
+    geometry = VALUES(geometry),
+    review_note = VALUES(review_note),
+    hic_subtipos = VALUES(hic_subtipos),
+    fitosociologia = VALUES(fitosociologia),
+    origen = VALUES(origen),
+    fuentes = VALUES(fuentes),
+    solo_curada = VALUES(solo_curada),
+    audio_url = VALUES(audio_url),
+    audio_transcript = VALUES(audio_transcript),
+    image_url = VALUES(image_url),
+    image_attribution = VALUES(image_attribution),
     image_note = VALUES(image_note);
 
 -- ------------------------------------------------------------------------------------------------
--- 3. Especies (250). `identification_tips` va como texto separado por «; », que es como lo parte park_payload.php.
+-- 3. Especies (250). `identification_tips` va unido con «; », el formato que lee el PHP desplegado. Pasa a array JSON cuando `PISTAS_EN_JSON` (Tools/lib/sql.js) se encienda, DESPUÉS de desplegar species_tips.php.
 -- ------------------------------------------------------------------------------------------------
 INSERT INTO species (park_id, common_name, scientific_name, kingdom, family, primary_habitat, description, description_source, identification_tips, seasonality, image_url, image_attribution, latitude, longitude, rarity_score, rarity_basis, rarity_local, rarity_local_basis, is_featured, is_visible, hidden_reason, source, taxon_phylum, taxon_class, taxon_order, taxon_family, taxon_genus, iucn_global, iucn_spain, spain_status, regional_status, regional_ccaa, review_note, eidos_taxonid, gbif_species_key, gbif_occurrences, zepa_site_code, is_migratory, site_presence)
 SELECT pk.id, s.common_name, s.scientific_name, s.kingdom, s.family, s.primary_habitat, s.description, s.description_source, s.identification_tips, s.seasonality, s.image_url, s.image_attribution, s.latitude, s.longitude, s.rarity_score, s.rarity_basis, s.rarity_local, s.rarity_local_basis, s.is_featured, s.is_visible, s.hidden_reason, s.source, s.taxon_phylum, s.taxon_class, s.taxon_order, s.taxon_family, s.taxon_genus, s.iucn_global, s.iucn_spain, s.spain_status, s.regional_status, s.regional_ccaa, s.review_note, s.eidos_taxonid, s.gbif_species_key, s.gbif_occurrences, s.zepa_site_code, s.is_migratory, s.site_presence

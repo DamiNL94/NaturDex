@@ -21,8 +21,10 @@
  *   3. `species`          — la ficha completa, incluidas las claves maestras de reconciliación.
  *   4. `species_habitats` — el vínculo, resuelto por nombre científico y slug de hábitat.
  *
- * El mapeo de campos es el inverso EXACTO de `Backend/Lib/park_payload.php`, que es la única
- * definición de la forma del JSON de un parque. Si allí cambia un nombre de columna, cambia aquí.
+ * El mapeo columna ↔ campo del `park.json` vive en `Tools/lib/filas-bd.js`, compartido con
+ * `build-poi-sql.js` y con `coteja-ida-y-vuelta.js`, que comprueba —valor a valor, no solo clave a
+ * clave— que es el inverso de `Backend/Lib/park_payload.php`, la única definición de la forma del
+ * JSON de un parque. Si allí cambia un nombre de columna, cambia en filas-bd.js.
  *
  * LA EVIDENCIA DEL VÍNCULO ESPECIE↔HÁBITAT
  * ----------------------------------------
@@ -68,7 +70,8 @@ const path = require('path');
 
 const { DATABASE, FRONTEND, OUT_DIR, readJson, readJsonIf, rel, parkFiles } = require('../lib/io');
 const { arg, die } = require('../lib/cli');
-const { sqlStr, sqlStrOrNull, sqlNum, sqlBool, sqlJson } = require('../lib/sql');
+const { sqlStr, sqlStrOrNull, sqlNum, PISTAS_EN_JSON } = require('../lib/sql');
+const { HABITAT, ESPECIE, literales, columnas, actualizables, contextoHabitats } = require('../lib/filas-bd');
 
 const slug = arg('park', null);
 if (!slug) die('falta --park <slug>');
@@ -83,24 +86,13 @@ const habitats = park.habitats || [];
 const species = park.species || [];
 const salida = arg('out', path.join(DATABASE, `${slug}-n2.sql`));
 
-// --- Geometría de los hábitats -------------------------------------------------------------------
-// Vive en el geojson, no en el park.json. Es la columna que hace que el mapa dibuje el polígono real
-// en vez del círculo aproximado de latitude/longitude.
+// --- Lo que el recinto lleva en el geojson y no en el park.json ------------------------------------
+// La geometría —sin ella el mapa dibuja el círculo aproximado de latitude/longitude— y la PROCEDENCIA
+// de cada recinto (`origen`, `fuentes`, `solo_curada`), que hasta el 2026-08-27 no tenía columna y la
+// ida y vuelta por la API borraba (deuda nº 3). La lectura está en lib/filas-bd.js.
 const geoRel = manifest.geo && manifest.geo.habitats;
 const geo = geoRel ? readJsonIf(path.join(FRONTEND, geoRel)) : null;
-const geometriaPorSlug = new Map();
-// La PROCEDENCIA de cada recinto (regla nº 1 del CLAUDE.md). Viaja en el geojson y hasta el
-// 2026-08-27 no tenía columna, así que la ida y vuelta por la API la borraba (deuda nº 3).
-const origenPorSlug = new Map();
-// Y las propiedades enteras del recinto, para las otras dos que tampoco tenían columna: `fuentes`
-// (las DOS citas de un recinto fundido) y `solo_curada` (el que no tiene equivalente oficial).
-const propsPorSlug = new Map();
-for (const f of (geo && geo.features) || []) {
-  const s = f.properties && f.properties.slug;
-  if (s && f.geometry) geometriaPorSlug.set(s, f.geometry);
-  if (s && f.properties.origen) origenPorSlug.set(s, f.properties.origen);
-  if (s) propsPorSlug.set(s, f.properties);
-}
+const contextoDe = contextoHabitats(geo);
 
 // --- Evidencia del vínculo (ver cabecera) ---------------------------------------------------------
 // Los enlaces que afirma el Atlas se identifican uno a uno, y por eso van aparte: son `caracteristica`
@@ -186,86 +178,40 @@ L.push('    longitude = VALUES(longitude), status = VALUES(status);');
 
 // 2) Hábitats --------------------------------------------------------------------------------------
 seccion(`2. Hábitats (${habitats.length}). \`geometry\` sale del geojson; sin ella el mapa dibuja un círculo.`);
-L.push('INSERT INTO habitats (park_id, slug, code, name, habitat_type, description, is_priority, latitude, longitude, color, geometry, review_note, hic_subtipos, fitosociologia, origen, fuentes, solo_curada, audio_url, audio_transcript, image_url, image_attribution, image_note)');
-L.push('SELECT pk.id, h.slug, h.code, h.name, h.habitat_type, h.description, h.is_priority, h.latitude, h.longitude, h.color, h.geometry, h.review_note, h.hic_subtipos, h.fitosociologia, h.origen, h.fuentes, h.solo_curada, h.audio_url, h.audio_transcript, h.image_url, h.image_attribution, h.image_note');
-L.push('FROM parks pk JOIN (');
+// Las columnas y su valor salen de lib/filas-bd.js; la lista del `ON DUPLICATE KEY UPDATE` también
+// (todo menos las dos claves únicas, `slug` y `code`), para que no haya una tercera lista que olvidar.
 const alias = (arr, primera) => arr.map((v, i) => v + (primera ? ' ' + primera[i] : '')).join(', ');
-const COLS_H = ['slug', 'code', 'name', 'habitat_type', 'description', 'is_priority', 'latitude', 'longitude', 'color', 'geometry', 'review_note', 'hic_subtipos', 'fitosociologia', 'origen', 'fuentes', 'solo_curada', 'audio_url', 'audio_transcript', 'image_url', 'image_attribution', 'image_note'];
+const COLS_H = columnas(HABITAT);
+L.push('INSERT INTO habitats (park_id, ' + COLS_H.join(', ') + ')');
+L.push('SELECT pk.id, ' + COLS_H.map(c => 'h.' + c).join(', '));
+L.push('FROM parks pk JOIN (');
 habitats.forEach((h, i) => {
-  const v = [
-    sqlStr(h.id), sqlStrOrNull(h.code), sqlStr(h.name), sqlStrOrNull(h.type), sqlStrOrNull(h.description),
-    sqlBool(h.priority),
-    sqlNum(h.coordinates && h.coordinates[0]), sqlNum(h.coordinates && h.coordinates[1]),
-    sqlStrOrNull(h.color),
-    geometriaPorSlug.has(h.id) ? sqlJson(geometriaPorSlug.get(h.id)) : 'NULL',
-    sqlStrOrNull(h.reviewNote), sqlJson(h.hicSubtipos), sqlJson(h.fitosociologia),
-    // El origen vive en el geojson, como la geometría: es una propiedad del RECINTO, no de la ficha.
-    sqlStrOrNull(origenPorSlug.get(h.id)),
-    sqlJson(propsPorSlug.get(h.id) && propsPorSlug.get(h.id).fuentes),
-    sqlBool(propsPorSlug.get(h.id) && propsPorSlug.get(h.id).solo_curada),
-    sqlStrOrNull(h.audio), sqlStrOrNull(h.audioTranscript),
-    sqlStrOrNull(h.image), sqlStrOrNull(h.imageAttribution), sqlStrOrNull(h.imageNote),
-  ];
-  L.push('    SELECT ' + alias(v, i === 0 ? COLS_H : null) + (i < habitats.length - 1 ? '' : ''));
+  L.push('    SELECT ' + alias(literales(HABITAT, h, contextoDe(h.id)), i === 0 ? COLS_H : null));
   if (i < habitats.length - 1) L.push('    UNION ALL');
 });
 L.push(`) h WHERE pk.slug = ${sqlStr(slug)}`);
 L.push('ON DUPLICATE KEY UPDATE');
-L.push('    name = VALUES(name), habitat_type = VALUES(habitat_type), description = VALUES(description),');
-L.push('    is_priority = VALUES(is_priority), latitude = VALUES(latitude), longitude = VALUES(longitude),');
-L.push('    color = VALUES(color), geometry = VALUES(geometry), review_note = VALUES(review_note),');
-L.push('    hic_subtipos = VALUES(hic_subtipos), fitosociologia = VALUES(fitosociologia),');
-L.push('    origen = VALUES(origen), fuentes = VALUES(fuentes), solo_curada = VALUES(solo_curada),');
-L.push('    audio_url = VALUES(audio_url), audio_transcript = VALUES(audio_transcript),');
-L.push('    image_url = VALUES(image_url), image_attribution = VALUES(image_attribution),');
-L.push('    image_note = VALUES(image_note);');
+L.push(actualizables(HABITAT).map(c => `    ${c} = VALUES(${c})`).join(',\n') + ';');
 
 // 3) Especies --------------------------------------------------------------------------------------
-seccion(`3. Especies (${species.length}). \`identification_tips\` va como texto separado por «; », que es como lo parte park_payload.php.`);
-const COLS_S = ['common_name', 'scientific_name', 'kingdom', 'family', 'primary_habitat', 'description', 'description_source', 'identification_tips', 'seasonality', 'image_url', 'image_attribution', 'latitude', 'longitude', 'rarity_score', 'rarity_basis', 'rarity_local', 'rarity_local_basis', 'is_featured', 'is_visible', 'hidden_reason', 'source', 'taxon_phylum', 'taxon_class', 'taxon_order', 'taxon_family', 'taxon_genus', 'iucn_global', 'iucn_spain', 'spain_status', 'regional_status', 'regional_ccaa', 'review_note', 'eidos_taxonid', 'gbif_species_key', 'gbif_occurrences', 'zepa_site_code', 'is_migratory', 'site_presence'];
-// Los dos `*_basis` son columnas JSON y se escriben con `sqlJson` de lib/sql (ya lo usan los
-// hábitats): así vuelven del viaje siendo el mismo objeto que hay en el park.json, en vez de una
-// cadena. `park_payload.php` los decodifica al otro lado.
+// El comentario del SQL dice el formato que DE VERDAD lleva este fichero: con el interruptor apagado
+// afirmar «array JSON» sería mentir en la cabecera de algo que se va a aplicar a la base.
+seccion(`3. Especies (${species.length}). \`identification_tips\` va ${PISTAS_EN_JSON
+  ? 'como array JSON: una pista puede llevar «;» (Backend/Lib/species_tips.php).'
+  : 'unido con «; », el formato que lee el PHP desplegado. Pasa a array JSON cuando `PISTAS_EN_JSON` (Tools/lib/sql.js) se encienda, DESPUÉS de desplegar species_tips.php.'}`);
+// Columna a columna, qué se escribe y por qué (los NULL que no son 0 ni FALSE, los `*_basis` como
+// JSON…) está en lib/filas-bd.js, junto a la definición de cada una.
+const COLS_S = columnas(ESPECIE);
 L.push('INSERT INTO species (park_id, ' + COLS_S.join(', ') + ')');
 L.push('SELECT pk.id, ' + COLS_S.map(c => 's.' + c).join(', '));
 L.push('FROM parks pk JOIN (');
 species.forEach((s, i) => {
-  const t = s.taxonomy || {};
-  const v = [
-    sqlStr(s.commonName), sqlStr(s.scientificName), sqlStr(s.kingdom),
-    sqlStrOrNull(s.group), sqlStrOrNull(s.habitat),
-    sqlStrOrNull(s.description), sqlStrOrNull(s.descriptionSource),
-    sqlStrOrNull((s.tips || []).join('; ')), sqlStrOrNull(s.seasonality),
-    sqlStrOrNull(s.image), sqlStrOrNull(s.imageAttribution),
-    sqlNum(s.coordinates && s.coordinates[0]), sqlNum(s.coordinates && s.coordinates[1]),
-    sqlNum(s.rarityScore == null ? 1 : s.rarityScore), sqlJson(s.rarityBasis),
-    // `rarity_local` va a NULL cuando la ficha no lo tiene, y NO a 1: son las que quedaron sin tramo
-    // porque su estado legal dice «pendiente de confirmar». Un 1 afirmaría una comprobación que nadie
-    // hizo (Tools/catalogo-nacional/out/rareza-por-contrastar.md).
-    sqlNum(s.rarityLocal), sqlJson(s.rarityLocalBasis),
-    sqlBool(s.featured),
-    sqlBool(s.visible === undefined ? true : s.visible),
-    sqlStrOrNull(s.hiddenReason),
-    sqlStrOrNull(s.source),
-    sqlStrOrNull(t.phylum), sqlStrOrNull(t.class), sqlStrOrNull(t.order), sqlStrOrNull(t.family), sqlStrOrNull(t.genus),
-    sqlStrOrNull(s.iucnGlobal), sqlStrOrNull(s.iucnSpain), sqlStrOrNull(s.spainStatus), sqlStrOrNull(s.regionalStatus), sqlStrOrNull(s.regionalCcaa), sqlStrOrNull(s.reviewNote),
-    sqlNum(s.eidosTaxonId), sqlNum(s.gbifSpeciesKey),
-    // `sqlNum` deja NULL lo que no es número, y aquí eso es lo correcto: NULL («nadie barrió») y 0
-    // («se barrió y no cayó ninguna») dicen cosas distintas, y la auditoría de enlaces las trata
-    // distinto (a una ficha sin este dato NO le retira ningún enlace por el silencio de GBIF).
-    sqlNum(s.gbifOccurrences),
-    sqlStrOrNull(s.zepaSiteCode),
-    // `is_migratory` va a NULL —y no a FALSE— cuando la ficha no trae el campo: son las aves que
-    // ningún formulario oficial nombra. Escribir FALSE afirmaría una comprobación que nadie ha
-    // hecho, y la app usa justo esa diferencia para dejarlas en el catálogo general.
-    sqlBool(s.migratory), sqlJson(s.sitePresence),
-  ];
-  L.push('    SELECT ' + alias(v, i === 0 ? COLS_S : null));
+  L.push('    SELECT ' + alias(literales(ESPECIE, s), i === 0 ? COLS_S : null));
   if (i < species.length - 1) L.push('    UNION ALL');
 });
 L.push(`) s WHERE pk.slug = ${sqlStr(slug)}`);
 L.push('ON DUPLICATE KEY UPDATE');
-L.push(COLS_S.filter(c => c !== 'scientific_name').map(c => `    ${c} = VALUES(${c})`).join(',\n') + ';');
+L.push(actualizables(ESPECIE).map(c => `    ${c} = VALUES(${c})`).join(',\n') + ';');
 
 // 4) Vínculos --------------------------------------------------------------------------------------
 const pares = [];
@@ -299,6 +245,6 @@ L.push(`    (SELECT COUNT(*) FROM species s JOIN parks p ON p.id = s.park_id WHE
 L.push(`    (SELECT COUNT(*) FROM species_habitats sh JOIN species s ON s.id = sh.species_id JOIN parks p ON p.id = s.park_id WHERE p.slug = ${sqlStr(slug)}) AS vinculos;`);
 
 fs.writeFileSync(salida, L.join('\n') + '\n', 'utf8');
-const conGeo = habitats.filter(h => geometriaPorSlug.has(h.id)).length;
+const conGeo = habitats.filter(h => contextoDe(h.id).geometria).length;
 console.log(`→ ${rel(salida)}`);
 console.log(`   1 espacio · ${habitats.length} hábitats (${conGeo} con geometría) · ${species.length} especies · ${pares.length} vínculos`);

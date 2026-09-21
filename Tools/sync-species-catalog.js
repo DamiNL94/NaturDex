@@ -58,7 +58,7 @@
 const fs = require('fs');
 const path = require('path');
 const { arg, flag } = require('./lib/cli');
-const { sqlStr } = require('./lib/sql');
+const { sqlStr, sqlTips } = require('./lib/sql');
 const { ROOT, CATALOGO_DIR, rel, fromRoot, parkFiles, escribeEspacio } = require('./lib/io');
 
 const CATALOGO = path.join(CATALOGO_DIR, 'data', 'especies-universal.json');
@@ -406,12 +406,11 @@ function aplicar() {
           `  s.primary_habitat = ${sqlStr(u.habitat)},\n` +
           `  s.description = ${sqlStr(u.description)},\n` +
           `  s.description_source = ${sqlStr(u.descriptionSource)},\n` +
-          // «; » y no salto de línea: es como lo escribe `build-park-sql.js` y como lo PARTE
-          // `park_payload.php` (`explode(";")`). Con `\n` no había ningún «;» que partir, así que las
-          // tres pistas de cada ficha llegaban a la app como UNA sola, y por la ruta que el runbook
-          // manda para toda corrección universal. Estuvo así hasta el 2026-09-21; si no rompió nada
-          // en la base fue porque la cola del 19 se aplicó por los n2 y no por este fichero.
-          `  s.identification_tips = ${sqlStr((u.tips || []).join('; ') || null)},\n` +
+          // Las pistas salen por `sqlTips` (lib/sql.js), el MISMO sitio que usan los n2 a través de
+          // `lib/filas-bd.js`. Aquí iban unidas con salto de línea mientras el n2 usaba «; » y
+          // park_payload.php partía por «;»: las tres pistas llegaban a la app como UNA. En qué
+          // formato salen —«; » o array JSON— lo decide un solo interruptor, `PISTAS_EN_JSON`.
+          `  s.identification_tips = ${sqlTips(u.tips)},\n` +
           `  s.seasonality = ${sqlStr(u.seasonality)},\n` +
           `  s.image_url = ${sqlStr(u.image)},\n` +
           `  s.image_attribution = ${sqlStr(u.imageAttribution)},\n` +
