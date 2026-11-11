@@ -5,12 +5,7 @@ funciona sin cobertura: mapa con los límites oficiales, catálogo de hábitats 
 divulgativas, y una mecánica tipo pokédex en la que descubrir una especie exige **estar allí** (la
 posición se verifica contra el límite oficial del espacio).
 
-> **Este README es la portada y el índice.** Lo que antes venía aquí entero —el modelo de datos, la
-> procedencia de cada campo, el runbook, las trampas— vive ahora en `Docs/`, un documento por tema.
-> Así se lee (y se carga en una sesión de IA) solo lo que hace falta. El mapa completo está en
-> [§4 Dónde está cada cosa](#4-dónde-está-cada-cosa).
->
-> Si estás retomando el proyecto: lee `CLAUDE.md` primero — es el resumen operativo en dos páginas.
+
 
 ## Estado (2026-08-10)
 
